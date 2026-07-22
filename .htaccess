@@ -1,0 +1,6 @@
+# Always revalidate CSS/JS/images so edits propagate without stale caches.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|webp)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
