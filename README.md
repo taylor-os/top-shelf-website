@@ -27,3 +27,5 @@ auto-deploy the repo root to `public_html`.
 
 Design: deep espresso + gold "luxury" system, real Top Shelf logo, GSAP motion. Third-party
 runtime deps are CDN-loaded (Google Fonts, GSAP) — no build step, pure static.
+
+<!-- Live at https://topshelfsolutions.io via Hostinger GitHub auto-deploy. -->
