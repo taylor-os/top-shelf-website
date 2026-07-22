@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marketing &amp; Reviews | Top Shelf Business Solutions</title>
-  <meta name="description" content="More reviews → higher ranking → more customers → more reviews. We build the flywheel: automated review requests, smart routing, SMS and win-back campaigns. 69% review when asked; only ~1% do unprompted." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing &amp; Reviews | Top Shelf Business Solutions</title>
+<meta name="description" content="More reviews → higher ranking → more customers → more reviews. We build the flywheel: automated review requests, smart routing, SMS and win-back campaigns. 69% review when asked; only ~1% do unprompted.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -46,250 +46,218 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container">
-    <p class="subhead text-gold mb-16">Marketing &amp; Reviews</p>
-    <h1 class="display-xl mb-24">
-      More Reviews → Higher Ranking<br>
-      <span class="text-gold">→ More Customers → More Reviews.</span>
-    </h1>
-    <p class="hero-sub">
-      You already did the hard part — you won the customer. You just never built the system to capture the review, the repeat visit, and the referral. The fix isn't more hustle. It's a flywheel that runs automatically: every job becomes a fresh 5-star review, which lifts your ranking, which brings the next customer, who becomes the next review.
-    </p>
-    <div class="cta-actions" style="margin-top:2.5rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Audit</a>
-      <a href="#what-we-do" class="btn btn-outline btn-lg">See What We Do</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+    <span class="eyebrow reveal">Marketing &amp; Reviews</span>
+    <h1 class="display display-lg reveal">More Reviews &rarr; Higher Ranking &rarr; <em>More Customers &rarr; More Reviews</em></h1>
+    <p class="page-hero-sub reveal">You already did the hard part &mdash; you won the customer. You just never built the system to capture the review, the repeat visit, and the referral. The fix isn&rsquo;t more hustle. It&rsquo;s a flywheel that runs automatically: every job becomes a fresh 5-star review, which lifts your ranking, which brings the next customer, who becomes the next review.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="#what-we-do" class="btn btn-line">See What We Do</a>
     </div>
   </div>
 </section>
 
-<!-- STAT TILES -->
-<section class="section-sm bg-charcoal">
+<!-- ============================ STAT STRIP ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="grid-4">
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">97%</div>
-        <div class="stat-tile-label">Of consumers read reviews before choosing a local business</div>
+    <div class="stat-strip">
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="97" data-suffix="%">97%</span>
+        <p class="stat-cell-label">Of consumers read reviews before choosing a local business</p>
       </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">69%</div>
-        <div class="stat-tile-label">Leave a review when asked — vs. ~1% who do it unprompted</div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="69" data-suffix="%">69%</span>
+        <p class="stat-cell-label">Leave a review when asked &mdash; vs. ~1% who do it unprompted</p>
       </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">57%</div>
-        <div class="stat-tile-label">Won't even consider a business rated below 4 stars</div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="57" data-suffix="%">57%</span>
+        <p class="stat-cell-label">Won&rsquo;t even consider a business rated below 4 stars</p>
       </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">44%</div>
-        <div class="stat-tile-label">More conversions per full star of rating improvement</div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="44" data-suffix="%">44%</span>
+        <p class="stat-cell-label">More conversions per full star of rating improvement</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THE COST -->
-<section class="section">
-  <div class="container" style="max-width:820px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">What It's Costing You</p>
-      <h2 class="display-md mb-24">Reviews Aren't a "Nice to Have." They're a P&amp;L Line.</h2>
+<!-- ============================ THE COST ============================ -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">What It&rsquo;s Costing You</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Reviews Aren&rsquo;t a &ldquo;Nice to Have.&rdquo; <em>They&rsquo;re a P&amp;L Line.</em></h2>
     </div>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;margin-bottom:1.4rem;">
-      97% of consumers read reviews before choosing a local business, and they read about 10 of them, spending 13–14 minutes, before they'll trust you. 57% won't even consider a business under 4 stars, and the share demanding 4.5+ is climbing. Old, sparse, or negative reviews actively repel the customers actively looking for you — and 74–85% of consumers consider a review older than three months irrelevant, so a pile of stale five-stars doesn't save you.
-    </p>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;">
-      The core insight: only ~0.5–1.2% of customers review unprompted, but 69% review when simply asked. Most owners forget to ask, and when they do it's maybe 5% of customers. Meanwhile only ~5% of businesses respond to reviews while 89% of consumers expect a response. Every one of those gaps is revenue: review signals are ~15–17% of Google's local ranking weight, and the Local Pack drives 126% more traffic and 93% more calls than positions 4–10. Automation is what closes all of it — at scale, on autopilot.
-    </p>
+    <p class="lead reveal" style="margin-bottom:1.6rem">97% of consumers read reviews before choosing a local business, and they read about 10 of them, spending 13&ndash;14 minutes, before they&rsquo;ll trust you. 57% won&rsquo;t even consider a business under 4 stars, and the share demanding 4.5+ is climbing. Old, sparse, or negative reviews actively repel the customers actively looking for you &mdash; and 74&ndash;85% of consumers consider a review older than three months irrelevant, so a pile of stale five-stars doesn&rsquo;t save you.</p>
+    <p class="lead reveal">The core insight: only ~0.5&ndash;1.2% of customers review unprompted, but 69% review when simply asked. Most owners forget to ask, and when they do it&rsquo;s maybe 5% of customers. Meanwhile only ~5% of businesses respond to reviews while 89% of consumers expect a response. Every one of those gaps is revenue: review signals are ~15&ndash;17% of Google&rsquo;s local ranking weight, and the Local Pack drives 126% more traffic and 93% more calls than positions 4&ndash;10. Automation is what closes all of it &mdash; at scale, on autopilot.</p>
   </div>
 </section>
 
-<!-- WHAT WE DO / BENEFIT CHAINS -->
-<section id="what-we-do" class="section bg-charcoal">
+<!-- ============================ WHAT WE DO ============================ -->
+<section id="what-we-do" class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">What We Do</p>
-      <h2 class="display-md mb-24">We Build the Flywheel — and Run It for You</h2>
-      <p class="text-muted" style="max-width:640px;margin:0 auto;line-height:1.7;">
-        Every capability below answers one question: <em>and here's what that gets you.</em>
-      </p>
+    <div class="section-head">
+      <span class="eyebrow reveal">What We Do</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">We Build the Flywheel &mdash; <em>and Run It for You</em></h2>
+      <p class="reveal">Every capability below answers one question: and here&rsquo;s what that gets you.</p>
     </div>
-
-    <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem;">
-
-      <div class="benefit-row">
-        <div class="benefit-icon">⭐</div>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
         <div>
-          <div class="benefit-title">Automated Review Requests After Every Job</div>
-          <div class="benefit-body">
-            The moment a job is marked complete, an invoice is paid, or a ticket closes, the system fires a text and email with a one-tap link straight to your Google review form — plus timed follow-ups.
-          </div>
-          <div class="benefit-result">
-            ⭐ More reviews: you convert the 69% who review when asked, and a 3-touch sequence collects ~4.1x more than a single ask — volume climbs from ~15 to 200+, always fresh. 📈 Higher ranking: pushes you into the Map Pack. 💰 More money: a 3-to-5-star jump earns ~25% more clicks and ~44% higher conversion per star.
-          </div>
+          <p class="feature-row-title">Automated Review Requests After Every Job</p>
+          <p class="feature-row-body">The moment a job is marked complete, an invoice is paid, or a ticket closes, the system fires a text and email with a one-tap link straight to your Google review form &mdash; plus timed follow-ups.</p>
+          <span class="feature-row-result">More reviews: you convert the 69% who review when asked, and a 3-touch sequence collects ~4.1x more than a single ask &mdash; volume climbs from ~15 to 200+, always fresh. Higher ranking: pushes you into the Map Pack. More money: a 3-to-5-star jump earns ~25% more clicks and ~44% higher conversion per star.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🛡️</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 19.5 6v6c0 5-3.3 8.2-7.5 10-4.2-1.8-7.5-5-7.5-10V6Z"/></svg></span>
         <div>
-          <div class="benefit-title">Smart Routing — Catch Unhappy Customers First</div>
-          <div class="benefit-body">
-            The system asks "how did we do?" first. Happy customers route to Google and public sites; unhappy ones route to a private inbox so you fix it before it becomes a public 1-star.
-          </div>
-          <div class="benefit-result">
-            📈 Higher rating: protects the 57% of buyers who skip anything under 4 stars, and avoids the conversion cliff (a 5.0 → 4.0 slide can drop conversions 30–50%). 😌 Less headache: a would-be 1-star becomes a service-recovery win, automatically.
-          </div>
+          <p class="feature-row-title">Smart Routing &mdash; Catch Unhappy Customers First</p>
+          <p class="feature-row-body">The system asks &ldquo;how did we do?&rdquo; first. Happy customers route to Google and public sites; unhappy ones route to a private inbox so you fix it before it becomes a public 1-star.</p>
+          <span class="feature-row-result">Higher rating: protects the 57% of buyers who skip anything under 4 stars, and avoids the conversion cliff (a 5.0 &rarr; 4.0 slide can drop conversions 30&ndash;50%). Less headache: a would-be 1-star becomes a service-recovery win, automatically.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">💬</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.2C4 7.7 7.8 4 12.5 4S21 7.7 21 12.2 17.2 20.4 12.5 20.4c-1 0-2-.2-2.9-.5L4 21.5l1.6-4.2c-1-1.3-1.6-2.9-1.6-4.6Z"/></svg></span>
         <div>
-          <div class="benefit-title">Automated, AI-Assisted Review Responses</div>
-          <div class="benefit-body">
-            Every review gets a fast, on-brand reply automatically — no owner writing responses at 9pm.
-          </div>
-          <div class="benefit-result">
-            💰 More money: businesses that reply to 25%+ of reviews average ~35% more revenue, and people spend up to 49% more at businesses that respond. ⭐ More reviews: starting to respond raises average rating +0.12 stars and brings 12% more reviews over time (HBR). 🤖 Fully hands-off.
-          </div>
+          <p class="feature-row-title">Automated, AI-Assisted Review Responses</p>
+          <p class="feature-row-body">Every review gets a fast, on-brand reply automatically &mdash; no owner writing responses at 9pm.</p>
+          <span class="feature-row-result">More money: businesses that reply to 25%+ of reviews average ~35% more revenue, and people spend up to 49% more at businesses that respond. More reviews: starting to respond raises average rating +0.12 stars and brings 12% more reviews over time (HBR). Fully hands-off.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">📩</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="1.8"/><polyline points="3,6 12,13 21,6"/></svg></span>
         <div>
-          <div class="benefit-title">Email + SMS Follow-Up &amp; Win-Back Campaigns</div>
-          <div class="benefit-body">
-            Every lead and past customer enters an automated sequence, and customers who haven't returned in X days get an automated win-back offer. SMS gets a 98% open rate.
-          </div>
-          <div class="benefit-result">
-            💰 More money: SMS marketing returns $21–$71 per $1 spent; win-back sequences reactivate 12–18% of lapsed customers at 5–7x lower cost than new acquisition. 🔄 Repeat business: unlocks the 65% of revenue that repeat customers typically drive. 🤖 Runs on triggers and timers.
-          </div>
+          <p class="feature-row-title">Email + SMS Follow-Up &amp; Win-Back Campaigns</p>
+          <p class="feature-row-body">Every lead and past customer enters an automated sequence, and customers who haven&rsquo;t returned in X days get an automated win-back offer. SMS gets a 98% open rate.</p>
+          <span class="feature-row-result">More money: SMS marketing returns $21&ndash;$71 per $1 spent; win-back sequences reactivate 12&ndash;18% of lapsed customers at 5&ndash;7x lower cost than new acquisition. Repeat business: unlocks the 65% of revenue that repeat customers typically drive. Runs on triggers and timers.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">📣</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5v3a1.3 1.3 0 0 0 1.3 1.3H6l2.5 5 1.4-.5-2-4.5h1.6L18 19V6l-9 4h-4.7A1.3 1.3 0 0 0 3 10.5Z"/><path d="M20 9.5a4 4 0 0 1 0 6"/></svg></span>
         <div>
-          <div class="benefit-title">Consistent Social + One-Click Promotions</div>
-          <div class="benefit-body">
-            Scheduled posts keep you visible and top-of-mind, and one-click broadcast offers let you fill a slow week on demand — templated, not a daily chore.
-          </div>
-          <div class="benefit-result">
-            👥 More customers: proof-of-life kills the "are they still in business?" doubt. 💰 More money: turns "we're slow this month" into a revenue lever you can pull any week. 😌 Less headache: it's scheduled, not another thing you have to remember.
-          </div>
+          <p class="feature-row-title">Consistent Social + One-Click Promotions</p>
+          <p class="feature-row-body">Scheduled posts keep you visible and top-of-mind, and one-click broadcast offers let you fill a slow week on demand &mdash; templated, not a daily chore.</p>
+          <span class="feature-row-result">More customers: proof-of-life kills the &ldquo;are they still in business?&rdquo; doubt. More money: turns &ldquo;we&rsquo;re slow this month&rdquo; into a revenue lever you can pull any week. Less headache: it&rsquo;s scheduled, not another thing you have to remember.</span>
         </div>
       </div>
-
     </div>
-    <p style="text-align:center;margin-top:2.5rem;font-size:0.95rem;color:var(--muted);">
-      The flywheel: more jobs → more review requests → more fresh 5-star reviews → higher rating + ranking → more clicks and calls → more jobs. <span class="text-gold">All running without you lifting a finger.</span>
-    </p>
+    <p class="pricing-note reveal">The flywheel: more jobs &rarr; more review requests &rarr; more fresh 5-star reviews &rarr; higher rating + ranking &rarr; more clicks and calls &rarr; more jobs. <a href="pricing.html">All running without you lifting a finger.</a></p>
   </div>
 </section>
 
-<!-- BEFORE / AFTER ACROSS INDUSTRIES -->
-<section class="section">
+<!-- ============================ BEFORE / AFTER ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Across Every Industry We Serve</p>
-      <h2 class="display-md mb-32">Before &amp; After, In Plain English</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">Across Every Industry We Serve</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Before &amp; After, <em>In Plain English</em></h2>
     </div>
-
-    <div class="before-after">
-      <div class="ba-before">
-        <div class="ba-label">Before Top Shelf</div>
-        <div class="ba-title">Invisible, Below 4 Stars, Stale</div>
-        <ul class="ba-items">
-          <li class="ba-item">Bar/Restaurant: 22 reviews, 3.9 stars, last one 5 months ago — below the line where 57% won't consider them.</li>
-          <li class="ba-item">Dental: 31 reviews, 4.2 stars, no follow-up on lapsed patients, front desk "too busy to ask."</li>
-          <li class="ba-item">Home Services: 18 reviews vs. a competitor's 300+; loses the "emergency plumber near me" click.</li>
-          <li class="ba-item">Auto: 40 reviews but hasn't asked anyone in a year (recency-dead), never replies to reviews.</li>
-        </ul>
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">Before Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.2rem 0 1.4rem">Invisible, Below 4 Stars, Stale</h3>
+        <div class="feature-list" style="border-top:none">
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Bar/Restaurant: 22 reviews, 3.9 stars, last one 5 months ago &mdash; below the line where 57% won&rsquo;t consider them.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Dental: 31 reviews, 4.2 stars, no follow-up on lapsed patients, front desk &ldquo;too busy to ask.&rdquo;</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Home Services: 18 reviews vs. a competitor&rsquo;s 300+; loses the &ldquo;emergency plumber near me&rdquo; click.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Auto: 40 reviews but hasn&rsquo;t asked anyone in a year (recency-dead), never replies to reviews.</p></div>
+        </div>
       </div>
-      <div class="ba-after">
-        <div class="ba-label">After Top Shelf</div>
-        <div class="ba-title">Top-3 Map Pack, 4.7★+, Fresh Weekly</div>
-        <ul class="ba-items">
-          <li class="ba-item">Bar/Restaurant: 190 reviews, 4.6 stars, fresh weekly; a Thursday SMS to 1,400 past guests fills slow nights.</li>
-          <li class="ba-item">Dental: 240+ reviews, 4.8 stars, owns the local pack; win-back reactivates 12–18% of lapsed patients.</li>
-          <li class="ba-item">Home Services: 250 reviews, 4.7 stars, in the Map Pack — more calls at 2am with zero extra ad spend.</li>
-          <li class="ba-item">Auto: continuous requests + AI responses align with ~35% more revenue; service-interval texts drive repeat visits.</li>
-        </ul>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">After Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.2rem 0 1.4rem;color:var(--gold-bright)">Top-3 Map Pack, 4.7&#9733;+, Fresh Weekly</h3>
+        <div class="feature-list" style="border-top:none">
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Bar/Restaurant: 190 reviews, 4.6 stars, fresh weekly; a Thursday SMS to 1,400 past guests fills slow nights.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Dental: 240+ reviews, 4.8 stars, owns the local pack; win-back reactivates 12&ndash;18% of lapsed patients.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Home Services: 250 reviews, 4.7 stars, in the Map Pack &mdash; more calls at 2am with zero extra ad spend.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Auto: continuous requests + AI responses align with ~35% more revenue; service-interval texts drive repeat visits.</p></div>
+        </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:var(--muted);">Illustrative scenarios grounded in the statistics above — realistic, not guaranteed numbers.</p>
+    <p class="pricing-note reveal" style="font-size:.82rem;color:var(--ink-4)">Illustrative scenarios grounded in the statistics above &mdash; realistic, not guaranteed numbers.</p>
   </div>
 </section>
 
-<!-- CROSS-LINKS -->
-<section class="section-sm bg-charcoal">
+<!-- ============================ CROSS-LINKS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="crosslink-strip">
-      <div class="crosslink-label">See This Work in Your Industry</div>
-      <div class="crosslink-items">
-        <a href="industry-bars.html" class="crosslink-item"><span>🍺</span> Bars &amp; Restaurants</a>
-        <a href="industry-dental.html" class="crosslink-item"><span>🦷</span> Dental &amp; Medical</a>
-        <a href="industry-home-services.html" class="crosslink-item"><span>🔧</span> Home Services</a>
-        <a href="industry-auto.html" class="crosslink-item"><span>🚗</span> Auto &amp; Tire</a>
-        <a href="solution-websites-seo.html" class="crosslink-item"><span>🌐</span> Pair With Websites &amp; SEO</a>
-        <a href="solution-crm.html" class="crosslink-item"><span>🔄</span> Pair With CRM</a>
-      </div>
+    <div class="section-head" style="text-align:center;max-width:none;margin-inline:auto">
+      <span class="eyebrow reveal" style="justify-content:center">See This Work in Your Industry</span>
+    </div>
+    <div class="mini-grid cols-3 reveal">
+      <a href="industry-bars.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 8.5v6.5"/><line x1="9" y1="4" x2="15" y2="4"/><line x1="8.5" y1="21" x2="15.5" y2="21"/><line x1="12" y1="19" x2="12" y2="21"/></svg></span>
+        <p class="mini-card-title">Bars &amp; Restaurants</p>
+        <p class="mini-card-body">Fresh reviews weekly and one text that fills slow nights.</p>
+        <span class="tlink mini-card-link">See the solution <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="industry-dental.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.4 0-3.3 1.5-4.9 1.5C5 4.5 4 6.4 4 8.6c0 2.6.9 4.7 1.6 7 .5 1.7.9 4.9 2.2 4.9 1.5 0 1.4-4.2 2.5-4.2s1 4.2 2.5 4.2c1.3 0 1.7-3.2 2.2-4.9.7-2.3 1.6-4.4 1.6-7 0-2.2-1-4.1-3.1-4.1C15.3 4.5 14.4 3 12 3Z"/></svg></span>
+        <p class="mini-card-title">Dental &amp; Medical</p>
+        <p class="mini-card-body">Own the local pack and reactivate lapsed patients.</p>
+        <span class="tlink mini-card-link">See the solution <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="industry-home-services.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3 17.5 6.5 21l6.3-6.3a4 4 0 0 0 4.9-5.4l-2.8 2.8-2.1-.6-.6-2.1 2.5-2.1Z"/></svg></span>
+        <p class="mini-card-title">Home Services</p>
+        <p class="mini-card-body">Out-review the competitor and win the 2am emergency click.</p>
+        <span class="tlink mini-card-link">See the solution <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="industry-auto.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3.2c0-.5.2-.9.5-1.2l1.8-1.8c.3-.3.7-.5 1.2-.5h9c.5 0 .9.2 1.2.5l1.8 1.8c.3.3.5.7.5 1.2V16"/><path d="M3.3 16h17.4a.7.7 0 0 1 .7.7v1.6a.7.7 0 0 1-.7.7H3.3a.7.7 0 0 1-.7-.7v-1.6a.7.7 0 0 1 .7-.7Z"/><circle cx="7.5" cy="18.7" r="1.5"/><circle cx="16.5" cy="18.7" r="1.5"/></svg></span>
+        <p class="mini-card-title">Auto &amp; Tire</p>
+        <p class="mini-card-body">Continuous requests plus service-interval texts drive repeats.</p>
+        <span class="tlink mini-card-link">See the solution <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-websites-seo.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <p class="mini-card-title">Pair With Websites &amp; SEO</p>
+        <p class="mini-card-body">Reviews feed ranking and ranking feeds the next review.</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-crm.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <p class="mini-card-title">Pair With CRM</p>
+        <p class="mini-card-body">Trigger every review request off a completed, tracked job.</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
   <div class="container">
-    <p class="subhead text-gold mb-16">Free. No Obligation. No Pressure.</p>
-    <h2 class="cta-title">Get Your Free Reputation Audit</h2>
-    <p class="cta-sub">
-      We'll check your review count, rating, recency, response rate, and where you rank against local competitors — and show you exactly what it's costing you and what the flywheel is worth. Real numbers, whether you work with us or not.
-    </p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get My Free Audit</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Free. No Obligation. No Pressure.</span>
+    <h2 class="cta-title reveal">Get Your Free<br><em>Reputation Audit</em></h2>
+    <p class="cta-sub reveal">We&rsquo;ll check your review count, rating, recency, response rate, and where you rank against local competitors &mdash; and show you exactly what it&rsquo;s costing you and what the flywheel is worth. Real numbers, whether you work with us or not.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
     </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your business.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -317,34 +285,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

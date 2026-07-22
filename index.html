@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Shelf Business Solutions — We Solve. You Grow.</title>
-  <meta name="description" content="One-stop digital modernization for local businesses. Websites, SEO, AI phone, CRM, POS, marketing & reviews. No long contracts. You own everything.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Shelf Business Solutions — We Solve. You Grow.</title>
+<meta name="description" content="One-stop digital modernization for local businesses. Websites, SEO, AI phone, CRM, POS, marketing & reviews. No long contracts. You own everything.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -31,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -43,323 +46,291 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
-<section class="hero section-lg">
-  <div class="container">
-    <p class="subhead hero-eyebrow">We Solve. You Grow.</p>
-    <h1 class="display-xl hero-title">
-      Stop Losing Money<br>
-      to <span class="text-gold">Leaks You<br>Can't See</span>
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <img src="assets/logo-mark.png" alt="" class="hero-mark" aria-hidden="true">
+  <div class="container hero-inner">
+    <span class="eyebrow hero-eyebrow reveal">We Solve. You Grow.</span>
+    <h1 class="display display-hero hero-title">
+      <span class="reveal" style="display:block">Stop Losing Money</span>
+      <span class="reveal" style="display:block">to <em>Leaks You Can&rsquo;t See</em></span>
     </h1>
-    <p class="hero-sub">You're not losing money because your work is bad. You're losing it to the leaks — the missed calls, the forgotten follow-ups, the reviews you never asked for. We plug the leaks and automate the fixes, so you make more while doing less.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Business Audit →</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <p class="hero-sub reveal">You&rsquo;re not losing money because your work is bad. You&rsquo;re losing it to the leaks &mdash; the missed calls, the forgotten follow-ups, the reviews you never asked for. We plug the leaks and automate the fixes, so you make more while doing less.</p>
+    <div class="hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Business Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
     </div>
   </div>
 
-  <!-- STAT BAR -->
-  <div class="hero-stat-bar" style="margin-top:80px;">
-    <div class="hero-stat">
-      <span class="hero-stat-num">62%</span>
-      <p class="hero-stat-label">of calls to local businesses go unanswered — each one handed to a competitor</p>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">$49K+</span>
-      <p class="hero-stat-label">average annual revenue lost to missed calls at a single local business</p>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">97%</span>
-      <p class="hero-stat-label">of buyers check reviews before choosing — and 57% won't consider under 4 stars</p>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">73%</span>
-      <p class="hero-stat-label">of leads are never followed up after the first touch. The sale goes to whoever does</p>
+  <div class="container">
+    <div class="hero-stats">
+      <div class="hero-stat reveal">
+        <span class="hero-stat-num" data-count="62" data-suffix="%">62%</span>
+        <p class="hero-stat-label">of calls to local businesses go unanswered &mdash; each one handed to a competitor</p>
+      </div>
+      <div class="hero-stat reveal">
+        <span class="hero-stat-num" data-count="49" data-prefix="$" data-suffix="K+">$49K+</span>
+        <p class="hero-stat-label">average annual revenue lost to missed calls at a single local business</p>
+      </div>
+      <div class="hero-stat reveal">
+        <span class="hero-stat-num" data-count="97" data-suffix="%">97%</span>
+        <p class="hero-stat-label">of buyers check reviews before choosing &mdash; and 57% won&rsquo;t consider under 4 stars</p>
+      </div>
+      <div class="hero-stat reveal">
+        <span class="hero-stat-num" data-count="73" data-suffix="%">73%</span>
+        <p class="hero-stat-label">of leads are never followed up after the first touch. The sale goes to whoever does</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section bg-charcoal" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+<!-- ============================ PROCESS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <span class="subhead">The Process</span>
-      <h2 class="display-md">From Leaky to <span class="text-gold">Unstoppable</span> in Three Steps</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">The Process</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">From Leaky to <em>Unstoppable</em> in Three Steps</h2>
     </div>
     <div class="steps">
-      <div class="step">
-        <span class="step-num">01</span>
-        <div class="step-content">
-          <div class="step-icon">🔍</div>
-          <p class="step-title">Free Business Audit</p>
-          <p class="step-body">We dig into your current setup — calls, reviews, website, follow-up, POS — and show you exactly where money is leaking out. No obligation, no pressure, no jargon.</p>
-        </div>
+      <div class="step reveal">
+        <span class="step-num">I.</span>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/></svg></div>
+        <p class="step-title">Free Business Audit</p>
+        <p class="step-body">We dig into your current setup &mdash; calls, reviews, website, follow-up, POS &mdash; and show you exactly where money is leaking out. No obligation, no pressure, no jargon.</p>
       </div>
-      <div class="step">
-        <span class="step-num">02</span>
-        <div class="step-content">
-          <div class="step-icon">⚙️</div>
-          <p class="step-title">Build & Launch</p>
-          <p class="step-body">We build and configure your full digital stack — website, AI phone, CRM, reviews, POS, marketing. Fast setup, no tech headache for you. You own every piece of it.</p>
-        </div>
+      <div class="step reveal">
+        <span class="step-num">II.</span>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></div>
+        <p class="step-title">Build &amp; Launch</p>
+        <p class="step-body">We build and configure your full digital stack &mdash; website, AI phone, CRM, reviews, POS, marketing. Fast setup, no tech headache for you. You own every piece of it.</p>
       </div>
-      <div class="step">
-        <span class="step-num">03</span>
-        <div class="step-content">
-          <div class="step-icon">📈</div>
-          <p class="step-title">Watch It Grow</p>
-          <p class="step-body">Leads get captured, follow-ups go out, reviews roll in, and your ranking climbs — automatically. You get a plain-English dashboard showing exactly what every dollar does.</p>
-        </div>
+      <div class="step reveal">
+        <span class="step-num">III.</span>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,17 9.5,10.5 14,15 21,7"/><polyline points="15,7 21,7 21,13"/></svg></div>
+        <p class="step-title">Watch It Grow</p>
+        <p class="step-body">Leads get captured, follow-ups go out, reviews roll in, and your ranking climbs &mdash; automatically. You get a plain-English dashboard showing exactly what every dollar does.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<section class="section">
+<!-- ============================ INDUSTRIES ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <span class="subhead">Built for Your Industry</span>
-      <h2 class="display-md">We Know Your <span class="text-gold">Business</span></h2>
-      <p>Generic solutions don't work. We specialize in four verticals and know the exact leaks each one springs — and how to plug them.</p>
+    <div class="section-head">
+      <span class="eyebrow reveal">Built for Your Industry</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">We Know Your <em>Business</em></h2>
+      <p class="reveal">Generic solutions don&rsquo;t work. We specialize in four verticals and know the exact leaks each one springs &mdash; and how to plug them.</p>
     </div>
-    <div class="grid-4">
-      <a href="industry-bars.html" class="industry-card">
-        <span class="industry-card-emoji">🍺</span>
-        <p class="industry-card-title">Bars &amp; Restaurants</p>
-        <p class="industry-card-hook">Losing $18K–$24K/yr to shrinkage alone</p>
-        <p class="industry-card-body">Margins run 3–5%. Every leak is existential — liquor shrinkage, no-shows, delivery app commissions, and slow nights with no way to fill seats.</p>
-        <span class="industry-card-cta">See the solution →</span>
+    <div class="rowlist">
+      <a href="industry-bars.html" class="rowitem reveal">
+        <span class="row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 8.5v6.5"/><line x1="9" y1="4" x2="15" y2="4"/><line x1="8.5" y1="21" x2="15.5" y2="21"/><line x1="12" y1="19" x2="12" y2="21"/></svg></span>
+        <div class="row-titlewrap"><p class="row-title">Bars &amp; Restaurants</p><p class="row-hook">Losing $18K&ndash;$24K/yr to shrinkage alone</p></div>
+        <p class="row-body">Margins run 3&ndash;5%. Every leak is existential &mdash; liquor shrinkage, no-shows, delivery app commissions, and slow nights with no way to fill seats.</p>
+        <span class="row-cta tlink">See the solution <span class="arr">&rarr;</span></span>
       </a>
-      <a href="industry-dental.html" class="industry-card">
-        <span class="industry-card-emoji">🦷</span>
-        <p class="industry-card-title">Dental &amp; Medical</p>
-        <p class="industry-card-hook">$500K in unscheduled treatment sitting idle</p>
-        <p class="industry-card-body">Your practice management software isn't a CRM. Missed new-patient calls ($850 each + $5K LTV), no-shows, and lapsed patients are six-figure leaks hiding in plain sight.</p>
-        <span class="industry-card-cta">See the solution →</span>
+      <a href="industry-dental.html" class="rowitem reveal">
+        <span class="row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.4 0-3.3 1.5-4.9 1.5C5 4.5 4 6.4 4 8.6c0 2.6.9 4.7 1.6 7 .5 1.7.9 4.9 2.2 4.9 1.5 0 1.4-4.2 2.5-4.2s1 4.2 2.5 4.2c1.3 0 1.7-3.2 2.2-4.9.7-2.3 1.6-4.4 1.6-7 0-2.2-1-4.1-3.1-4.1C15.3 4.5 14.4 3 12 3Z"/></svg></span>
+        <div class="row-titlewrap"><p class="row-title">Dental &amp; Medical</p><p class="row-hook">$500K in unscheduled treatment sitting idle</p></div>
+        <p class="row-body">Your practice management software isn&rsquo;t a CRM. Missed new-patient calls ($850 each + $5K LTV), no-shows, and lapsed patients are six-figure leaks hiding in plain sight.</p>
+        <span class="row-cta tlink">See the solution <span class="arr">&rarr;</span></span>
       </a>
-      <a href="industry-home-services.html" class="industry-card">
-        <span class="industry-card-emoji">🔧</span>
-        <p class="industry-card-title">Home Services</p>
-        <p class="industry-card-hook">62% of calls go unanswered — 86% never call back</p>
-        <p class="industry-card-body">Plumbers, HVAC, electricians, roofers: the business that answers wins. Missing the 6pm burst-pipe call is missing $600+ and a lifelong customer worth $8K–$15K.</p>
-        <span class="industry-card-cta">See the solution →</span>
+      <a href="industry-home-services.html" class="rowitem reveal">
+        <span class="row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3 17.5 6.5 21l6.3-6.3a4 4 0 0 0 4.9-5.4l-2.8 2.8-2.1-.6-.6-2.1 2.5-2.1Z"/></svg></span>
+        <div class="row-titlewrap"><p class="row-title">Home Services</p><p class="row-hook">62% of calls go unanswered &mdash; 86% never call back</p></div>
+        <p class="row-body">Plumbers, HVAC, electricians, roofers: the business that answers wins. Missing the 6pm burst-pipe call is missing $600+ and a lifelong customer worth $8K&ndash;$15K.</p>
+        <span class="row-cta tlink">See the solution <span class="arr">&rarr;</span></span>
       </a>
-      <a href="industry-auto.html" class="industry-card">
-        <span class="industry-card-emoji">🚗</span>
-        <p class="industry-card-title">Auto &amp; Tire</p>
-        <p class="industry-card-hook">43% of leads mishandled. 78% buy from first responder</p>
-        <p class="industry-card-body">Tire shops, repair, dealerships: demand is there — "tire shop near me" is searched 2.7M times/month. The shops that capture and convert win. Most don't.</p>
-        <span class="industry-card-cta">See the solution →</span>
+      <a href="industry-auto.html" class="rowitem reveal">
+        <span class="row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3.2c0-.5.2-.9.5-1.2l1.8-1.8c.3-.3.7-.5 1.2-.5h9c.5 0 .9.2 1.2.5l1.8 1.8c.3.3.5.7.5 1.2V16"/><path d="M3.3 16h17.4a.7.7 0 0 1 .7.7v1.6a.7.7 0 0 1-.7.7H3.3a.7.7 0 0 1-.7-.7v-1.6a.7.7 0 0 1 .7-.7Z"/><circle cx="7.5" cy="18.7" r="1.5"/><circle cx="16.5" cy="18.7" r="1.5"/></svg></span>
+        <div class="row-titlewrap"><p class="row-title">Auto &amp; Tire</p><p class="row-hook">43% of leads mishandled. 78% buy from first responder</p></div>
+        <p class="row-body">Tire shops, repair, dealerships: demand is there &mdash; &ldquo;tire shop near me&rdquo; is searched 2.7M times/month. The shops that capture and convert win. Most don&rsquo;t.</p>
+        <span class="row-cta tlink">See the solution <span class="arr">&rarr;</span></span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- SOLUTIONS GRID -->
-<section class="section bg-charcoal" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+<!-- ============================ SOLUTIONS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <span class="subhead">The Stack</span>
-      <h2 class="display-md">Five Services. <span class="text-gold">One Flywheel.</span></h2>
-      <p>Each service plugs a specific leak. Together, they build a growth machine that runs whether you're on a job, at home, or asleep.</p>
+    <div class="section-head">
+      <span class="eyebrow reveal">The Stack</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Services. <em>One Flywheel.</em></h2>
+      <p class="reveal">Each service plugs a specific leak. Together, they build a growth machine that runs whether you&rsquo;re on a job, at home, or asleep.</p>
     </div>
-    <div class="grid-5" style="gap:20px;">
-      <a href="solution-websites-seo.html" class="card" style="text-decoration:none;">
-        <span class="card-icon">🌐</span>
-        <p class="card-title">Websites &amp; SEO</p>
-        <p class="card-body">Get found. Get trusted. Rank in the Map Pack where 44% of local clicks go — then convert them with a site that works on any phone in under 3 seconds.</p>
-        <span class="card-link">Learn more →</span>
+    <div class="index5">
+      <a href="solution-websites-seo.html" class="index-item reveal">
+        <span class="index-num">01</span>
+        <span class="index-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <div><p class="index-title">Websites &amp; SEO</p><p class="index-body">Get found. Get trusted. Rank in the Map Pack where 44% of local clicks go &mdash; then convert them with a site that works on any phone in under 3 seconds.</p></div>
+        <span class="index-cta tlink">Learn more <span class="arr">&rarr;</span></span>
       </a>
-      <a href="solution-ai-phone.html" class="card" style="text-decoration:none;">
-        <span class="card-icon">📞</span>
-        <p class="card-title">AI Phone &amp; Chat</p>
-        <p class="card-body">Never miss another call or web lead — 24/7, nights and weekends. AI answers, books, and texts back in seconds. One recovered call covers months of service.</p>
-        <span class="card-link">Learn more →</span>
+      <a href="solution-ai-phone.html" class="index-item reveal">
+        <span class="index-num">02</span>
+        <span class="index-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
+        <div><p class="index-title">AI Phone &amp; Chat</p><p class="index-body">Never miss another call or web lead &mdash; 24/7, nights and weekends. AI answers, books, and texts back in seconds. One recovered call covers months of service.</p></div>
+        <span class="index-cta tlink">Learn more <span class="arr">&rarr;</span></span>
       </a>
-      <a href="solution-crm.html" class="card" style="text-decoration:none;">
-        <span class="card-icon">🔄</span>
-        <p class="card-title">CRM &amp; Follow-Up</p>
-        <p class="card-body">78% buy from the first responder. Catch every lead, text them back in seconds, follow up automatically, and reactivate past customers — cheapest revenue you'll ever make.</p>
-        <span class="card-link">Learn more →</span>
+      <a href="solution-crm.html" class="index-item reveal">
+        <span class="index-num">03</span>
+        <span class="index-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <div><p class="index-title">CRM &amp; Follow-Up</p><p class="index-body">78% buy from the first responder. Catch every lead, text them back in seconds, follow up automatically, and reactivate past customers &mdash; cheapest revenue you&rsquo;ll ever make.</p></div>
+        <span class="index-cta tlink">Learn more <span class="arr">&rarr;</span></span>
       </a>
-      <a href="solution-pos.html" class="card" style="text-decoration:none;">
-        <span class="card-icon">💳</span>
-        <p class="card-title">POS &amp; Inventory</p>
-        <p class="card-body">Stop guessing what's on the shelf. Real-time inventory tracking, automated reordering, lower processing fees, and integrated loyalty — your register becomes a profit engine.</p>
-        <span class="card-link">Learn more →</span>
+      <a href="solution-pos.html" class="index-item reveal">
+        <span class="index-num">04</span>
+        <span class="index-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
+        <div><p class="index-title">POS &amp; Inventory</p><p class="index-body">Stop guessing what&rsquo;s on the shelf. Real-time inventory tracking, automated reordering, lower processing fees, and integrated loyalty &mdash; your register becomes a profit engine.</p></div>
+        <span class="index-cta tlink">Learn more <span class="arr">&rarr;</span></span>
       </a>
-      <a href="solution-marketing.html" class="card" style="text-decoration:none;">
-        <span class="card-icon">⭐</span>
-        <p class="card-title">Marketing &amp; Reviews</p>
-        <p class="card-body">More reviews → higher ranking → more customers → more reviews. We build the flywheel: automated review requests, SMS campaigns, win-back sequences, social.</p>
-        <span class="card-link">Learn more →</span>
+      <a href="solution-marketing.html" class="index-item reveal">
+        <span class="index-num">05</span>
+        <span class="index-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <div><p class="index-title">Marketing &amp; Reviews</p><p class="index-body">More reviews &rarr; higher ranking &rarr; more customers &rarr; more reviews. We build the flywheel: automated review requests, SMS campaigns, win-back sequences, social.</p></div>
+        <span class="index-cta tlink">Learn more <span class="arr">&rarr;</span></span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- THE 3 PROMISES -->
-<section class="section">
+<!-- ============================ PROMISES ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <span class="subhead">The Top Shelf Standard</span>
-      <h2 class="display-md">Three Promises We <span class="text-gold">Keep</span></h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">The Top Shelf Standard</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Three Promises We <em>Keep</em></h2>
     </div>
-    <div class="promises-grid">
-      <div class="promise-card">
-        <span class="promise-icon">🔑</span>
+    <div class="promises">
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6.5" r="3.5"/><circle cx="12" cy="6.5" r="1" fill="currentColor" stroke="none"/><line x1="12" y1="10" x2="12" y2="20.5"/><line x1="12" y1="15.5" x2="15.5" y2="15.5"/><line x1="12" y1="18.5" x2="14.5" y2="18.5"/></svg></span>
         <p class="promise-title">You Own Everything</p>
-        <p class="promise-body">Your website, domain, Google Business Profile, phone number, customer list, ad accounts — every asset we build or manage is yours from day one. If you ever leave, you take it all with you. No hostages.</p>
+        <p class="promise-body">Your website, domain, Google Business Profile, phone number, customer list, ad accounts &mdash; every asset we build or manage is yours from day one. If you ever leave, you take it all with you. No hostages.</p>
       </div>
-      <div class="promise-card">
-        <span class="promise-icon">🤝</span>
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.8h8l4 4v13.4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3.8a1 1 0 0 1 1-1Z"/><polyline points="14,2.8 14,6.8 18,6.8"/><line x1="8" y1="11" x2="14.5" y2="11"/><line x1="8" y1="14" x2="14.5" y2="14"/><path d="M8 17.4c1-.8 2-.8 3 0 .9.7 1.9.7 2.9-.1"/></svg></span>
         <p class="promise-title">No Long Contracts</p>
-        <p class="promise-body">We earn your business every single month. No 12-month lock-ins, no early-termination fees, no holding your assets ransom. We stay because we perform — and that's the only reason.</p>
+        <p class="promise-body">We earn your business every single month. No 12-month lock-ins, no early-termination fees, no holding your assets ransom. We stay because we perform &mdash; and that&rsquo;s the only reason.</p>
       </div>
-      <div class="promise-card">
-        <span class="promise-icon">📊</span>
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="5.5"/><circle cx="12" cy="8.5" r="2.2"/><path d="M8.6 13.2 7 21l5-2.6L17 21l-1.6-7.8"/></svg></span>
         <p class="promise-title">Plain-English Reporting</p>
-        <p class="promise-body">No jargon dashboards. You see calls captured, leads followed up, reviews earned, money recovered — in plain language. You'll know exactly what every dollar we spend does for your business.</p>
+        <p class="promise-body">No jargon dashboards. You see calls captured, leads followed up, reviews earned, money recovered &mdash; in plain language. You&rsquo;ll know exactly what every dollar we spend does for your business.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING TEASER -->
-<section class="section bg-charcoal" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+<!-- ============================ PRICING ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <span class="subhead">Simple, Transparent Pricing</span>
-      <h2 class="display-md">Flat Monthly Rate. <span class="text-gold">No Surprises.</span></h2>
-      <p>All plans include your setup. No hidden fees, no long contracts, and you own every asset. Start where it makes sense and add more as you grow.</p>
+    <div class="section-head">
+      <span class="eyebrow reveal">Simple, Transparent Pricing</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Flat Monthly Rate. <em>No Surprises.</em></h2>
+      <p class="reveal">All plans include your setup. No hidden fees, no long contracts, and you own every asset. Start where it makes sense and add more as you grow.</p>
     </div>
     <div class="pricing-grid">
-      <div class="pricing-card">
-        <p class="pricing-tier">Starter</p>
+      <div class="pricing-card reveal">
         <p class="pricing-name">Starter</p>
-        <p class="pricing-price"><sup>$</sup>699<span style="font-size:1.2rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;">/mo</span></p>
-        <p class="pricing-price-label">No contract · You own everything</p>
+        <p class="pricing-price"><sup>$</sup>699<span class="pricing-price-note">/mo</span></p>
+        <p class="pricing-price-label">No contract &middot; You own everything</p>
         <div class="pricing-divider"></div>
         <div class="pricing-features">
-          <div class="pricing-feature">Professional website (mobile-first, fast)</div>
-          <div class="pricing-feature">Google Business Profile optimization</div>
-          <div class="pricing-feature">Automated review requests</div>
-          <div class="pricing-feature">Monthly plain-English dashboard</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Professional website (mobile-first, fast)</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Google Business Profile optimization</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Automated review requests</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Monthly plain-English dashboard</div>
         </div>
-        <a href="contact.html" class="btn btn-outline w-full" style="justify-content:center;">Get Started →</a>
+        <a href="contact.html" class="btn btn-line w-full">Get Started</a>
       </div>
-      <div class="pricing-card featured">
+      <div class="pricing-card featured reveal">
         <span class="pricing-badge">Most Popular</span>
-        <p class="pricing-tier">Growth</p>
         <p class="pricing-name">Growth</p>
-        <p class="pricing-price"><sup>$</sup>1,199<span style="font-size:1.2rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;">/mo</span></p>
-        <p class="pricing-price-label">No contract · You own everything</p>
+        <p class="pricing-price"><sup>$</sup>1,199<span class="pricing-price-note">/mo</span></p>
+        <p class="pricing-price-label">No contract &middot; You own everything</p>
         <div class="pricing-divider"></div>
         <div class="pricing-features">
-          <div class="pricing-feature">Everything in Starter</div>
-          <div class="pricing-feature">Local SEO (rank in the Map Pack)</div>
-          <div class="pricing-feature">AI phone answering 24/7</div>
-          <div class="pricing-feature">CRM + automated follow-up pipeline</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Everything in Starter</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Local SEO (rank in the Map Pack)</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>AI phone answering 24/7</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>CRM + automated follow-up pipeline</div>
         </div>
-        <a href="contact.html" class="btn btn-gold w-full" style="justify-content:center;">Get Started →</a>
+        <a href="contact.html" class="btn btn-gold w-full">Get Started</a>
       </div>
-      <div class="pricing-card">
-        <p class="pricing-tier">Total Presence</p>
+      <div class="pricing-card reveal">
         <p class="pricing-name">Total Presence</p>
-        <p class="pricing-price"><sup>$</sup>1,997<span style="font-size:1.2rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;">/mo</span></p>
-        <p class="pricing-price-label">No contract · You own everything</p>
+        <p class="pricing-price"><sup>$</sup>1,997<span class="pricing-price-note">/mo</span></p>
+        <p class="pricing-price-label">No contract &middot; You own everything</p>
         <div class="pricing-divider"></div>
         <div class="pricing-features">
-          <div class="pricing-feature">Everything in Growth</div>
-          <div class="pricing-feature">Google Ads management</div>
-          <div class="pricing-feature">Social media (2 platforms)</div>
-          <div class="pricing-feature">Email &amp; SMS automation</div>
-          <div class="pricing-feature">Quarterly strategy call</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Everything in Growth</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Google Ads management</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Social media (2 platforms)</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Email &amp; SMS automation</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Quarterly strategy call</div>
         </div>
-        <a href="contact.html" class="btn btn-outline w-full" style="justify-content:center;">Get Started →</a>
+        <a href="contact.html" class="btn btn-line w-full">Get Started</a>
       </div>
     </div>
-    <p style="text-align:center;margin-top:32px;font-size:0.88rem;color:var(--muted);">Not sure which fits? <a href="contact.html" style="color:var(--gold);">Get a free audit</a> — we'll tell you exactly what you need and what you don't. <a href="pricing.html" style="color:var(--gold);">See full pricing details →</a></p>
+    <p class="pricing-note reveal">Not sure which fits? <a href="contact.html">Get a free audit</a> &mdash; we&rsquo;ll tell you exactly what you need and what you don&rsquo;t. <a href="pricing.html">See full pricing details &rarr;</a></p>
   </div>
 </section>
 
-<!-- RESULTS STRIP -->
-<section class="section">
+<!-- ============================ RESULTS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <span class="subhead">Real Results</span>
-      <h2 class="display-md">What Plugging the Leaks <span class="text-gold">Actually Looks Like</span></h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">Real Results</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Plugging the Leaks <em>Actually Looks Like</em></h2>
     </div>
-    <div class="grid-3">
-      <div class="card">
-        <span class="num-callout">$24K</span>
-        <p class="section-title mb-12">Bar Recovered Per Year</p>
-        <p class="card-body">A neighborhood bar doing $50K/month was losing 15% of its liquor to over-pours. POS-linked pour tracking cut shrinkage to single digits — $1,800–$2,400 back every month, and they stopped doing 2am bottle counts.</p>
+    <div class="results">
+      <div class="result reveal">
+        <span class="result-num">$24K</span>
+        <p class="result-title">Bar Recovered Per Year</p>
+        <p class="result-body">A neighborhood bar doing $50K/month was losing 15% of its liquor to over-pours. POS-linked pour tracking cut shrinkage to single digits &mdash; $1,800&ndash;$2,400 back every month, and they stopped doing 2am bottle counts.</p>
       </div>
-      <div class="card">
-        <span class="num-callout">260</span>
-        <p class="section-title mb-12">Reviews in 6 Months</p>
-        <p class="card-body">A two-bay auto repair shop had 14 Google reviews and sat #7 in the Map Pack. Automated review requests after every ticket: 260 reviews at 4.8★, #2 in the pack, 40 more calls a month — ~$20K in new work.</p>
+      <div class="result reveal">
+        <span class="result-num">260</span>
+        <p class="result-title">Reviews in 6 Months</p>
+        <p class="result-body">A two-bay auto repair shop had 14 Google reviews and sat #7 in the Map Pack. Automated review requests after every ticket: 260 reviews at 4.8&#9733;, #2 in the pack, 40 more calls a month &mdash; ~$20K in new work.</p>
       </div>
-      <div class="card">
-        <span class="num-callout">$144K</span>
-        <p class="section-title mb-12">Dental Practice Revenue Recovered</p>
-        <p class="card-body">An $800K dental practice had $480K in diagnosed-but-unscheduled treatment. Automated 48-hour follow-up on unaccepted treatment plans recovered 30% — $144K — from patients who already said yes to the exam.</p>
+      <div class="result reveal">
+        <span class="result-num">$144K</span>
+        <p class="result-title">Dental Practice Revenue Recovered</p>
+        <p class="result-body">An $800K dental practice had $480K in diagnosed-but-unscheduled treatment. Automated 48-hour follow-up on unaccepted treatment plans recovered 30% &mdash; $144K &mdash; from patients who already said yes to the exam.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
   <div class="container">
-    <span class="subhead" style="display:block;margin-bottom:20px;">Free. No Obligation. No Pressure.</span>
-    <h2 class="cta-title">Get Your Free<br><span class="text-gold">Business Audit</span></h2>
-    <p class="cta-sub">We'll show you exactly where your business is leaking money — your calls, your reviews, your follow-up, your rankings. You'll walk away with real numbers whether you work with us or not.</p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get My Free Audit →</a>
-      <a href="why-us.html" class="btn btn-outline btn-lg">Why Top Shelf</a>
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Free. No Obligation. No Pressure.</span>
+    <h2 class="cta-title reveal">Get Your Free<br><em>Business Audit</em></h2>
+    <p class="cta-sub reveal">We&rsquo;ll show you exactly where your business is leaking money &mdash; your calls, your reviews, your follow-up, your rankings. You&rsquo;ll walk away with real numbers whether you work with us or not.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="why-us.html" class="btn btn-line">Why Top Shelf</a>
     </div>
-    <p style="margin-top:32px;font-size:0.82rem;color:var(--muted);">No credit card. No commitment. Just clear answers about your business.</p>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your business.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -392,25 +363,16 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

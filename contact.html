@@ -1,35 +1,31 @@
-<!-- SETUP REQUIRED: Replace FORMSPREE_ID with your actual Formspree form ID from formspree.io.
-     Free tier allows 50 submissions/month. Create account at formspree.io, create a form, copy the ID (looks like "xpwzabcd").
-     Example: action="https://formspree.io/f/xpwzabcd"
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Your Free Audit | Top Shelf Business Solutions</title>
-  <meta name="description" content="Get a free, no-obligation audit of your business. We'll tell you exactly where you're leaking money — your calls, reviews, follow-up, and rankings. Real numbers, whether you work with us or not." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Your Free Audit — Top Shelf Business Solutions</title>
+<meta name="description" content="Get a free, no-obligation audit of your business. We'll tell you exactly where you're leaking money — your calls, reviews, follow-up, and rankings. Real numbers, whether you work with us or not.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -38,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -50,63 +46,49 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container" style="text-align:center;max-width:820px;margin:0 auto;">
-    <p class="subhead text-gold mb-16">Free. No Obligation. No Pressure.</p>
-    <h1 class="display-xl mb-24">Get Your Free<br><span class="text-gold">Business Audit</span></h1>
-    <p class="hero-sub" style="margin-left:auto;margin-right:auto;">
-      Tell us a little about your business and we'll show you exactly where it's leaking money — your calls, your reviews, your follow-up, your rankings. You'll walk away with real numbers whether you work with us or not.
-    </p>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="1.8"/><polyline points="3,6 12,13 21,6"/></svg>
+    </span>
+    <span class="eyebrow page-hero-eyebrow reveal">Free. No Obligation. No Pressure.</span>
+    <h1 class="display display-lg reveal">Get Your Free <em>Business Audit</em></h1>
+    <p class="page-hero-sub reveal">Tell us a little about your business and we&rsquo;ll show you exactly where it&rsquo;s leaking money &mdash; your calls, your reviews, your follow-up, your rankings. You&rsquo;ll walk away with real numbers whether you work with us or not.</p>
   </div>
 </section>
 
-<!-- FORM + WHAT HAPPENS NEXT -->
-<section class="section">
+<!-- ============================ FORM + WHAT HAPPENS NEXT ============================ -->
+<section class="section" style="padding-top:0;">
   <div class="container">
-    <div class="grid-2" style="gap:48px;align-items:start;">
+    <div class="two-col">
 
       <!-- FORM -->
-      <div class="card" style="padding:40px 36px;">
-        <p class="section-title mb-8" style="color:var(--gold);">Request Your Free Audit</p>
-        <p class="card-body mb-24">Takes about 60 seconds. No credit card, no commitment.</p>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem;">Request Your Free Audit</span>
+        <p style="color:var(--ink-3); font-size:.9rem; margin-bottom:2.4rem;">Takes about 60 seconds. No credit card, no commitment.</p>
         <form id="audit-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
           <input type="hidden" name="_subject" value="New Free Audit Request — Top Shelf Business Solutions" />
           <input type="hidden" name="_next" value="thank-you.html" />
           <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label" for="name">Your Name</label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+            <div class="field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
             </div>
-            <div class="form-group">
-              <label class="form-label" for="business">Business Name</label>
-              <input class="form-input" type="text" id="business" name="business" placeholder="Smith's Auto &amp; Tire" required />
+            <div class="field">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business" placeholder="Smith's Auto &amp; Tire" required />
             </div>
-            <div class="form-group full">
-              <label class="form-label" for="type">Business Type</label>
-              <select class="form-select" id="type" name="type" required>
+            <div class="field full">
+              <label for="type">Business Type</label>
+              <select id="type" name="type" required>
                 <option value="" disabled selected>Select your industry…</option>
                 <option value="bars-restaurants">Bar / Restaurant</option>
                 <option value="dental-medical">Dental / Medical</option>
@@ -117,64 +99,57 @@
                 <option value="other">Other Local Business</option>
               </select>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone</label>
-              <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
             </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email</label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="you@business.com" required />
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@business.com" required />
             </div>
-            <div class="form-group full">
-              <label class="form-label" for="challenge">Your Biggest Challenge Right Now</label>
-              <textarea class="form-textarea" id="challenge" name="challenge" placeholder="e.g. We miss calls when we're busy, our reviews are thin, or we're just not showing up on Google…"></textarea>
+            <div class="field full">
+              <label for="challenge">Your Biggest Challenge Right Now</label>
+              <textarea id="challenge" name="challenge" placeholder="e.g. We miss calls when we're busy, our reviews are thin, or we're just not showing up on Google…"></textarea>
             </div>
           </div>
-          <button type="submit" class="btn btn-gold btn-lg w-full" style="justify-content:center;margin-top:24px;">Get My Free Audit →</button>
-          <p style="margin-top:16px;font-size:0.8rem;color:var(--muted);text-align:center;">We'll never share your info. No credit card. No commitment.</p>
+          <button type="submit" class="btn btn-gold w-full" style="margin-top:1.8rem;">Get My Free Audit <span class="arr">&rarr;</span></button>
+          <p style="margin-top:1.2rem; font-size:.78rem; color:var(--ink-4); text-align:center; letter-spacing:.03em;">We&rsquo;ll never share your info. No credit card. No commitment.</p>
         </form>
-        <div id="form-success" style="display:none;text-align:center;padding:20px 0;">
-          <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
-          <p class="section-title mb-12" style="color:var(--gold);">Request Received</p>
-          <p class="card-body">Thanks — we've got your details. A Top Shelf specialist will reach out within one business day to book your free audit. Keep an eye on your phone and email.</p>
-        </div>
       </div>
 
       <!-- WHAT HAPPENS NEXT -->
-      <div>
-        <p class="subhead text-gold mb-16">What Happens Next</p>
-        <h2 class="display-sm mb-32">Three Simple Steps</h2>
-        <div class="benefit-chain">
-          <div class="benefit-row">
-            <div class="benefit-icon">1</div>
-            <div class="benefit-content">
-              <div class="benefit-title">You Send the Form</div>
-              <div class="benefit-body">Tell us your business type and biggest headache. That's all we need to get started — no prep, no paperwork.</div>
-              <div class="benefit-result">Takes 60 seconds.</div>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem;">What Happens Next</span>
+        <h2 class="display display-lg" style="margin-bottom:2.4rem;">Three Simple <em>Steps</em></h2>
+        <div class="feature-list">
+          <div class="feature-row">
+            <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.8h9l4 4v13.4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3.8a1 1 0 0 1 1-1Z"/><polyline points="15,2.8 15,6.8 19,6.8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="15.5" x2="16" y2="15.5"/></svg></span>
+            <div>
+              <p class="feature-row-title">You Send the Form</p>
+              <p class="feature-row-body">Tell us your business type and biggest headache. That&rsquo;s all we need to get started &mdash; no prep, no paperwork.</p>
+              <span class="feature-row-result">Takes 60 seconds</span>
             </div>
           </div>
-          <div class="benefit-row">
-            <div class="benefit-icon">2</div>
-            <div class="benefit-content">
-              <div class="benefit-title">We Dig Into Your Numbers</div>
-              <div class="benefit-body">We look at your calls, reviews, Google ranking, website speed, and follow-up — and pinpoint exactly where money is leaking out and what it's worth.</div>
-              <div class="benefit-result">Within one business day.</div>
+          <div class="feature-row">
+            <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/></svg></span>
+            <div>
+              <p class="feature-row-title">We Dig Into Your Numbers</p>
+              <p class="feature-row-body">We look at your calls, reviews, Google ranking, website speed, and follow-up &mdash; and pinpoint exactly where money is leaking out and what it&rsquo;s worth.</p>
+              <span class="feature-row-result">Within one business day</span>
             </div>
           </div>
-          <div class="benefit-row">
-            <div class="benefit-icon">3</div>
-            <div class="benefit-content">
-              <div class="benefit-title">You Get the Real Numbers</div>
-              <div class="benefit-body">We walk you through what we found in plain English and show you what fixing it is worth — no pitch, no pressure. The numbers are yours whether you hire us or not.</div>
-              <div class="benefit-result">Free, no obligation.</div>
+          <div class="feature-row">
+            <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="19" y1="20" x2="19" y2="15"/><line x1="2.5" y1="20" x2="21.5" y2="20"/></svg></span>
+            <div>
+              <p class="feature-row-title">You Get the Real Numbers</p>
+              <p class="feature-row-body">We walk you through what we found in plain English and show you what fixing it is worth &mdash; no pitch, no pressure. The numbers are yours whether you hire us or not.</p>
+              <span class="feature-row-result">Free, no obligation</span>
             </div>
           </div>
         </div>
 
-        <div class="card" style="margin-top:32px;background:rgba(201,162,39,0.05);border-color:rgba(201,162,39,0.25);">
-          <p class="card-body" style="color:var(--text);">
-            <span class="text-gold" style="font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:0.5px;">Prefer to talk?</span> Mention your best time to reach you in the challenge box and we'll call you then. Every audit is handled by a real Top Shelf specialist — never a call center.
-          </p>
+        <div style="margin-top:2.6rem; background:rgba(201,168,106,.05); border:1px solid var(--hairline); border-radius:var(--r-lg); padding:1.8rem 2rem;">
+          <p style="font-size:.92rem; color:var(--ink-2); line-height:1.75; font-weight:300;"><span style="font-family:var(--sans); font-weight:500; color:var(--gold-bright); letter-spacing:.02em;">Prefer to talk?</span> Mention your best time to reach you in the challenge box and we&rsquo;ll call you then. Every audit is handled by a real Top Shelf specialist &mdash; never a call center.</p>
         </div>
       </div>
 
@@ -182,39 +157,12 @@
   </div>
 </section>
 
-<!-- REASSURANCE STRIP -->
-<section class="section-sm bg-charcoal">
-  <div class="container">
-    <div class="grid-3">
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">🔑</div>
-        <div class="stat-tile-label">You own everything we build</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">🤝</div>
-        <div class="stat-tile-label">No long contracts, cancel anytime</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">📊</div>
-        <div class="stat-tile-label">Plain-English reporting, always</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -242,31 +190,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  // Form submission handled by Formspree (see form action attribute).
-  // Replace FORMSPREE_ID in the form action with your actual Formspree form ID.
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

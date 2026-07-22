@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dental &amp; Medical | Top Shelf Business Solutions</title>
-  <meta name="description" content="Stop losing six figures a year to missed calls, no-shows, and dormant patients. AI phone, CRM, reviews, and local SEO — built for dental and medical practices." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental &amp; Medical | Top Shelf Business Solutions</title>
+<meta name="description" content="Stop losing six figures a year to missed calls, no-shows, and dormant patients. AI phone, CRM, reviews, and local SEO — built for dental and medical practices.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -46,309 +46,295 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container">
-    <p class="subhead text-gold">Dental &amp; Medical</p>
-    <h1 class="display-xl">Your Practice Is Leaking Six Figures.<br><span class="text-gold">And Your PMS Can't Fix It.</span></h1>
-    <p class="hero-sub">The average dental practice misses 30–38% of its inbound calls. Each one that hangs up is worth $850 today and up to $8,000 over their lifetime. Meanwhile, $500,000 in unscheduled treatment is sitting in your charts — and nobody's following up.</p>
-    <div class="cta-actions" style="margin-top:2rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Practice Audit</a>
-      <a href="#solutions" class="btn btn-outline btn-lg">See How We Fix It</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.4 0-3.3 1.5-4.9 1.5C5 4.5 4 6.4 4 8.6c0 2.6.9 4.7 1.6 7 .5 1.7.9 4.9 2.2 4.9 1.5 0 1.4-4.2 2.5-4.2s1 4.2 2.5 4.2c1.3 0 1.7-3.2 2.2-4.9.7-2.3 1.6-4.4 1.6-7 0-2.2-1-4.1-3.1-4.1C15.3 4.5 14.4 3 12 3Z"/></svg></span>
+    <span class="eyebrow reveal">Dental &amp; Medical</span>
+    <h1 class="display display-lg reveal">Your Practice Is Leaking Six Figures. <em>And Your PMS Can&rsquo;t Fix It.</em></h1>
+    <p class="page-hero-sub reveal">The average dental practice misses 30&ndash;38% of its inbound calls. Each one that hangs up is worth $850 today and up to $8,000 over their lifetime. Meanwhile, $500,000 in unscheduled treatment is sitting in your charts &mdash; and nobody&rsquo;s following up.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Practice Audit <span class="arr">&rarr;</span></a>
+      <a href="#solutions" class="btn btn-line">See How We Fix It</a>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="section-sm bg-charcoal">
-  <div class="container">
-    <div class="grid-4">
-      <div class="stat-tile">
-        <div class="stat-tile-num">30–38%</div>
-        <div class="stat-tile-label">Of inbound calls missed during business hours — and 80% of them are booking requests</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num">$105K–$240K</div>
-        <div class="stat-tile-label">Lost every year to no-shows and last-minute cancellations per single-doctor practice</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num">$500K–$1M</div>
-        <div class="stat-tile-label">Sitting in patient charts as diagnosed-but-unscheduled treatment — on average</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num">800–2,000</div>
-        <div class="stat-tile-label">Dormant patients per average practice who haven't been in for 12+ months</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PAIN POINTS -->
+<!-- ============================ STAT STRIP ============================ -->
 <section class="section">
   <div class="container">
-    <p class="subhead text-gold section-title">Where Your Revenue Is Going</p>
-    <h2 class="display-md" style="margin-bottom:2.5rem;">Five Leaks Draining the Average Practice</h2>
-    <div class="pain-list">
-
-      <div class="pain-item">
-        <div class="pain-icon">📞</div>
-        <div>
-          <div class="pain-title">The Phone Rings — Nobody Answers</div>
-          <div class="pain-cost">$80,000–$300,000/year in missed new-patient revenue</div>
-          <div class="pain-body">The front desk is checking in patients, verifying insurance, collecting payment — and when the phone rings during all that, it loses every time. The average practice misses 30–38% of inbound calls during business hours, and that number climbs to 68% at some offices. 80% of those missed calls are booking requests, not vendor spam. 78% of the callers who don't get an answer just hang up and call the next dentist on Google. Each missed new-patient call is worth ~$850 in immediate revenue and $5,000–$8,000 in lifetime value. Six missed calls a month at $4,500 average LTV = $324,000/year of exposure.</div>
-        </div>
+    <div class="stat-strip">
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="30" data-suffix="–38%">30–38%</span>
+        <p class="stat-cell-label">Of inbound calls missed during business hours &mdash; 80% are booking requests</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🪑</div>
-        <div>
-          <div class="pain-title">Empty Chairs Are the Loudest Sound in a Dental Office</div>
-          <div class="pain-cost">$200–$375 per no-show; $105,000–$240,000/year for a single-doctor practice</div>
-          <div class="pain-body">The average dental practice loses 15–20% of its confirmed appointments to no-shows and last-minute cancellations. 36% of them are simple forgetfulness — the most fixable cause there is. One missed chair hour is $300–$800 in lost production. A three-doctor practice can lose $500,000–$700,000 per year to empty chairs. And your current reminder system — if you have one — probably isn't sending texts at the right moments.</div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="105" data-prefix="$" data-suffix="K–$240K">$105K–$240K</span>
+        <p class="stat-cell-label">Lost every year to no-shows for a single-doctor practice</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">📋</div>
-        <div>
-          <div class="pain-title">Half the Treatment You Diagnosed Never Gets Scheduled</div>
-          <div class="pain-cost">$320,000–$480,000 sitting unscheduled in an $800K practice</div>
-          <div class="pain-body">The average practice has $500,000–$1,000,000 in diagnosed-but-unscheduled treatment in patient charts. 40–60% of what gets diagnosed never gets scheduled — and 60–70% of practices do zero systematic follow-up. Following up within 48 hours recovers 20–35% of declined cases. Without that follow-up, the treatment plan sits in the chart while the patient assumes you don't really need them to come in.</div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="500" data-prefix="$" data-suffix="K–$1M">$500K–$1M</span>
+        <p class="stat-cell-label">Sitting in charts as diagnosed-but-unscheduled treatment</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🔁</div>
-        <div>
-          <div class="pain-title">One in Four of Your Patients Walks Out the Door Every Year</div>
-          <div class="pain-cost">25% annual patient attrition; 800–2,000 dormant patients per practice</div>
-          <div class="pain-body">The average practice loses 25% of its active patient base every year to attrition. At any given moment, 30–40% of patients due for hygiene haven't come back on schedule. The average practice carries 800–2,000 patients who haven't been in for 12+ months. Reactivating 10–15% of those dormant patients generates $40,000–$100,000 per year at zero ad spend — from patients who already paid you once. Nobody at the front desk has time to make those calls.</div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="800" data-suffix="–2,000">800–2,000</span>
+        <p class="stat-cell-label">Dormant patients per practice, 12+ months inactive</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">💻</div>
-        <div>
-          <div class="pain-title">Your Practice Management System Is Not a CRM — And That Gap Is Costing You</div>
-          <div class="pain-cost">Dentrix/Eaglesoft do schedules. They don't do follow-up, recall, or patient marketing.</div>
-          <div class="pain-body">Dentrix, Eaglesoft, and Open Dental hold 50%+ of North American installs — and none of them natively run missed-call recovery, new-patient nurture, multi-step reactivation sequences, or cross-channel follow-up. Those are expensive bolt-on modules or third-party tools. 72% of people won't consider a healthcare provider rated under 4 stars, but reviews aren't in the PMS either. There's a $5,000–$8,000 LTV gap between every new patient your competitors capture and the ones you're missing.</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- SOLUTIONS -->
-<section class="section bg-charcoal" id="solutions">
+<!-- ============================ PAIN BREAKDOWN ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <p class="subhead text-gold section-title">How We Fix It</p>
-    <h2 class="display-md" style="margin-bottom:2.5rem;">Five Systems That Close the Leaks</h2>
-
-    <div class="benefit-row">
-      <div class="benefit-icon">🤖</div>
-      <div>
-        <div class="benefit-title">AI Front Desk — 24/7 Call Answering + Missed-Call Text-Back</div>
-        <div class="benefit-body">Every call answered automatically — days, evenings, weekends, and holidays. Missed calls get an instant text: "Sorry we missed you — tap here to book." No voicemail, no callbacks, no lost patients.</div>
-        <div class="benefit-result">Practices deploying AI answering report 85% fewer missed calls and 15–25% more bookings per month. Recovering 6 new-patient calls per month at $4,500 LTV = $324,000 in recovered lifetime value annually.</div>
-      </div>
+    <div class="section-head">
+      <span class="eyebrow reveal">Where Your Revenue Is Going</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Leaks Draining the <em>Average Practice</em></h2>
     </div>
-
-    <div class="benefit-row">
-      <div class="benefit-icon">📅</div>
-      <div>
-        <div class="benefit-title">Automated Appointment Reminders — Multi-Touch SMS + Email</div>
-        <div class="benefit-body">Multi-touch reminder sequences go out at 72 hours, 24 hours, and 2 hours before every appointment — by text and email. The system knows when patients reschedule and adjusts automatically.</div>
-        <div class="benefit-result">Peer-reviewed research: 22.95% fewer no-shows from automated reminders. At $200–$375 per no-show, a practice losing 15 chairs a week recovers $3,000–$5,600/month with zero front-desk effort.</div>
-      </div>
-    </div>
-
-    <div class="benefit-row">
-      <div class="benefit-icon">🔁</div>
-      <div>
-        <div class="benefit-title">Automated Recall + Reactivation Sequences</div>
-        <div class="benefit-body">An automated 90-day, 8–10 touch sequence goes out to every patient who is overdue for hygiene or hasn't been in for 12+ months. Smart timing, HIPAA-compliant texts and emails, with one-tap online booking.</div>
-        <div class="benefit-result">Reactivating 15–25% of 1,400 dormant patients at $300/hygiene visit = $63,000–$105,000 in recovered production — without a single front-desk phone call. Reactivation costs $15–35/patient vs. $150–400 to acquire a new one.</div>
-      </div>
-    </div>
-
-    <div class="benefit-row">
-      <div class="benefit-icon">⭐</div>
-      <div>
-        <div class="benefit-title">Automated Review Requests + Google Business Profile</div>
-        <div class="benefit-body">Every checked-out patient gets an automatic post-visit review request by text. Unhappy patients are routed to a private channel first. Full GBP audit and rebuild: photos, services, categories, posts.</div>
-        <div class="benefit-result">72% of patients won't consider a provider under 4 stars. Automation drives 3–5x more review volume. One practice went from 38 reviews at 3.9 stars to 190 reviews at 4.8 stars in 6 months — and into the top-3 local pack. A 1-star increase drives 5–9% revenue growth.</div>
-      </div>
-    </div>
-
-    <div class="benefit-row">
-      <div class="benefit-icon">📋</div>
-      <div>
-        <div class="benefit-title">Treatment Plan Follow-Up Automation</div>
-        <div class="benefit-body">Within 48 hours of any unaccepted treatment plan, an automated sequence follows up — texts, emails, educational context — re-engaging the patient while their concern is still fresh.</div>
-        <div class="benefit-result">Following up within 48 hours recovers 20–35% of declined cases. On $480,000 in unscheduled treatment (typical $800K practice), recovering 30% = $144,000 in revenue from patients who already said yes to the exam.</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BEFORE / AFTER -->
-<section class="section">
-  <div class="container">
-    <p class="subhead text-gold section-title">Real-World Impact</p>
-    <h2 class="display-md" style="margin-bottom:2.5rem;">What Changes When the Leaks Are Sealed</h2>
-    <div class="before-after">
-      <div class="ba-before">
-        <div class="ba-label">Before Top Shelf</div>
-        <div class="ba-title">The 1,200-Patient Practice Leaving $300K on the Table</div>
-        <div class="ba-items">
-          <div class="ba-item">Phone rings during check-in rush — rolls to voicemail 35% of the time. 80% of those callers are gone forever.</div>
-          <div class="ba-item">18% no-show rate. Three empty chairs every Wednesday. No systematic reminder system.</div>
-          <div class="ba-item">$420,000 in diagnosed crown, implant, and restorative work sitting unscheduled in Dentrix. Nobody's called about it.</div>
-          <div class="ba-item">1,100 patients who haven't been in for 14+ months. The front desk has no time to chase them.</div>
-          <div class="ba-item">41 Google reviews at 4.1 stars. Invisible in local search. New patient volume flat for 18 months.</div>
-          <div class="ba-item">The office manager is buried in phone tag, insurance verification, and paper intake forms.</div>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">The Phone Rings &mdash; Nobody Answers</p>
+          <p class="feature-row-body">The front desk is checking in patients, verifying insurance, collecting payment &mdash; and when the phone rings during all that, it loses every time. The average practice misses 30&ndash;38% of inbound calls during business hours, and that number climbs to 68% at some offices. 80% of those missed calls are booking requests, not vendor spam. 78% of the callers who don&rsquo;t get an answer just hang up and call the next dentist on Google. Each missed new-patient call is worth ~$850 in immediate revenue and $5,000&ndash;$8,000 in lifetime value. Six missed calls a month at $4,500 average LTV = $324,000/year of exposure.</p>
+          <span class="feature-row-result">$80K&ndash;$300K/yr</span>
         </div>
       </div>
-      <div class="ba-after">
-        <div class="ba-label">After Top Shelf</div>
-        <div class="ba-title">The Same Practice — Eight Months Later</div>
-        <div class="ba-items">
-          <div class="ba-item">AI answering + missed-call text-back: only 3% of calls go unanswered. New-patient bookings up 19%.</div>
-          <div class="ba-item">Automated reminders cut no-shows to 8%. Three recaptured chair hours per week = $1,800–$4,800/month recovered.</div>
-          <div class="ba-item">Treatment plan follow-up: 31% of unscheduled cases booked within 6 weeks = $130,000 in production unlocked.</div>
-          <div class="ba-item">90-day reactivation sequence reached 1,100 dormant patients. 210 rebooked hygiene appointments = $63,000.</div>
-          <div class="ba-item">218 Google reviews at 4.9 stars. Top-2 in local search for "dentist near me."</div>
-          <div class="ba-item">The office manager reviews a morning dashboard. The systems do the follow-up. She goes home on time.</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12V6.5A2.5 2.5 0 0 1 8.5 4h7A2.5 2.5 0 0 1 18 6.5V12"/><path d="M4.5 12h15v4a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 16Z"/><line x1="6" y1="17.5" x2="6" y2="20.5"/><line x1="18" y1="17.5" x2="18" y2="20.5"/></svg></span>
+        <div>
+          <p class="feature-row-title">Empty Chairs Are the Loudest Sound in a Dental Office</p>
+          <p class="feature-row-body">The average dental practice loses 15&ndash;20% of its confirmed appointments to no-shows and last-minute cancellations. 36% of them are simple forgetfulness &mdash; the most fixable cause there is. One missed chair hour is $300&ndash;$800 in lost production. A three-doctor practice can lose $500,000&ndash;$700,000 per year to empty chairs. And your current reminder system &mdash; if you have one &mdash; probably isn&rsquo;t sending texts at the right moments.</p>
+          <span class="feature-row-result">$105K&ndash;$240K/yr</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="1.8"/><rect x="9" y="2.3" width="6" height="3" rx="1"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="14.5" x2="16" y2="14.5"/><line x1="8" y1="18" x2="13" y2="18"/></svg></span>
+        <div>
+          <p class="feature-row-title">Half the Treatment You Diagnosed Never Gets Scheduled</p>
+          <p class="feature-row-body">The average practice has $500,000&ndash;$1,000,000 in diagnosed-but-unscheduled treatment in patient charts. 40&ndash;60% of what gets diagnosed never gets scheduled &mdash; and 60&ndash;70% of practices do zero systematic follow-up. Following up within 48 hours recovers 20&ndash;35% of declined cases. Without that follow-up, the treatment plan sits in the chart while the patient assumes you don&rsquo;t really need them to come in.</p>
+          <span class="feature-row-result">$320K&ndash;$480K unscheduled</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <div>
+          <p class="feature-row-title">One in Four Patients Walks Out the Door Every Year</p>
+          <p class="feature-row-body">The average practice loses 25% of its active patient base every year to attrition. At any given moment, 30&ndash;40% of patients due for hygiene haven&rsquo;t come back on schedule. The average practice carries 800&ndash;2,000 patients who haven&rsquo;t been in for 12+ months. Reactivating 10&ndash;15% of those dormant patients generates $40,000&ndash;$100,000 per year at zero ad spend &mdash; from patients who already paid you once. Nobody at the front desk has time to make those calls.</p>
+          <span class="feature-row-result">25% annual attrition</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="10" rx="1.3"/><path d="M2.5 18.5h19l-1.6-3H4.1Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">Your PMS Is Not a CRM &mdash; And That Gap Is Costing You</p>
+          <p class="feature-row-body">Dentrix, Eaglesoft, and Open Dental hold 50%+ of North American installs &mdash; and none of them natively run missed-call recovery, new-patient nurture, multi-step reactivation sequences, or cross-channel follow-up. Those are expensive bolt-on modules or third-party tools. 72% of people won&rsquo;t consider a healthcare provider rated under 4 stars, but reviews aren&rsquo;t in the PMS either. There&rsquo;s a $5,000&ndash;$8,000 LTV gap between every new patient your competitors capture and the ones you&rsquo;re missing.</p>
+          <span class="feature-row-result">$5K&ndash;$8K LTV gap</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TAILOR SECTION -->
-<section class="section-sm bg-charcoal">
-  <div class="container" style="max-width:760px;margin-left:auto;margin-right:auto;">
-    <p class="subhead text-gold section-title">No Two Practices Have the Same Leaks</p>
-    <h2 class="display-md" style="margin-bottom:1.5rem;">We Build Around Your Specific Practice, Not a Template</h2>
-    <p style="margin-bottom:1rem;">A solo general dentist with 900 patients has different problems than a 4-doctor multi-specialty group. A Medicaid-heavy practice has different no-show rates than a fee-for-service cosmetic practice. We start with a free audit of your actual numbers — call volume, no-show rate, recall percentage, Google ranking, review velocity — and tell you exactly which leaks are costing you the most.</p>
-    <p style="margin-bottom:1rem;">Then we fix those first. No modules you don't need. No software your staff won't use. Just the systems your specific practice actually requires, implemented and managed for you.</p>
-    <a href="contact.html" class="btn btn-gold btn-lg" style="margin-top:1rem;">Start With a Free Practice Audit</a>
-  </div>
-</section>
-
-<!-- CROSSLINK STRIP -->
-<div class="crosslink-strip">
+<!-- ============================ SOLUTIONS ============================ -->
+<section id="solutions" class="section rule-top">
   <div class="container">
-    <span class="crosslink-label">Solutions We Deploy for Dental &amp; Medical Practices</span>
-    <div class="crosslink-items">
-      <a href="solution-ai-phone.html" class="crosslink-item">
-        <span class="card-icon">🤖</span>
-        <span class="card-title">AI Phone &amp; Chat</span>
-        <span class="card-body">24/7 answering and missed-call recovery</span>
-      </a>
-      <a href="solution-crm.html" class="crosslink-item">
-        <span class="card-icon">💬</span>
-        <span class="card-title">CRM &amp; Follow-Up</span>
-        <span class="card-body">Recall, reactivation, and treatment follow-up</span>
-      </a>
-      <a href="solution-marketing.html" class="crosslink-item">
-        <span class="card-icon">⭐</span>
-        <span class="card-title">Marketing &amp; Reviews</span>
-        <span class="card-body">Automate reviews and dominate local search</span>
-      </a>
-      <a href="solution-websites-seo.html" class="crosslink-item">
-        <span class="card-icon">🌐</span>
-        <span class="card-title">Websites &amp; SEO</span>
-        <span class="card-body">Get found when patients search near me</span>
-      </a>
+    <div class="section-head">
+      <span class="eyebrow reveal">How We Fix It</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Systems That <em>Close the Leaks</em></h2>
     </div>
-  </div>
-</div>
-
-<!-- FAQ -->
-<section class="section bg-charcoal">
-  <div class="container" style="max-width:780px;margin-left:auto;margin-right:auto;">
-    <p class="subhead text-gold section-title">Common Questions</p>
-    <h2 class="display-md" style="margin-bottom:2rem;">What Practice Owners Ask Before They Start</h2>
-
-    <div class="faq-item">
-      <button class="faq-q">Does this integrate with Dentrix or Eaglesoft?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Yes. We integrate with Dentrix, Eaglesoft, Open Dental, Carestream, and most major practice management systems. We add the AI answering, recall, review, and follow-up layer on top — your scheduling and clinical workflows stay exactly as they are. We're not replacing your PMS, we're filling the gaps it doesn't cover.</div>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11" rx="3"/><line x1="12" y1="4.5" x2="12" y2="8"/><circle cx="12" cy="3.3" r="1.1" fill="currentColor" stroke="none"/><circle cx="9" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><line x1="9" y1="17" x2="15" y2="17"/></svg></span>
+        <div>
+          <p class="feature-row-title">AI Front Desk &mdash; 24/7 Call Answering + Missed-Call Text-Back</p>
+          <p class="feature-row-body">Every call answered automatically &mdash; days, evenings, weekends, and holidays. Missed calls get an instant text: &ldquo;Sorry we missed you &mdash; tap here to book.&rdquo; No voicemail, no callbacks, no lost patients.</p>
+          <span class="feature-row-result">Result: Practices deploying AI answering report 85% fewer missed calls and 15&ndash;25% more bookings per month. Recovering 6 new-patient calls per month at $4,500 LTV = $324,000 in recovered lifetime value annually.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7.5" y1="2.5" x2="7.5" y2="6.5"/><line x1="16.5" y1="2.5" x2="16.5" y2="6.5"/></svg></span>
+        <div>
+          <p class="feature-row-title">Automated Appointment Reminders &mdash; Multi-Touch SMS + Email</p>
+          <p class="feature-row-body">Multi-touch reminder sequences go out at 72 hours, 24 hours, and 2 hours before every appointment &mdash; by text and email. The system knows when patients reschedule and adjusts automatically.</p>
+          <span class="feature-row-result">Result: Peer-reviewed research shows 22.95% fewer no-shows from automated reminders. At $200&ndash;$375 per no-show, a practice losing 15 chairs a week recovers $3,000&ndash;$5,600/month with zero front-desk effort.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <div>
+          <p class="feature-row-title">Automated Recall + Reactivation Sequences</p>
+          <p class="feature-row-body">An automated 90-day, 8&ndash;10 touch sequence goes out to every patient who is overdue for hygiene or hasn&rsquo;t been in for 12+ months. Smart timing, HIPAA-compliant texts and emails, with one-tap online booking.</p>
+          <span class="feature-row-result">Result: Reactivating 15&ndash;25% of 1,400 dormant patients at $300/hygiene visit = $63,000&ndash;$105,000 in recovered production &mdash; without a single front-desk phone call. Reactivation costs $15&ndash;35/patient vs. $150&ndash;400 to acquire a new one.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">Automated Review Requests + Google Business Profile</p>
+          <p class="feature-row-body">Every checked-out patient gets an automatic post-visit review request by text. Unhappy patients are routed to a private channel first. Full GBP audit and rebuild: photos, services, categories, posts.</p>
+          <span class="feature-row-result">Result: 72% of patients won&rsquo;t consider a provider under 4 stars. Automation drives 3&ndash;5x more review volume. One practice went from 38 reviews at 3.9 stars to 190 reviews at 4.8 stars in 6 months &mdash; and into the top-3 local pack. A 1-star increase drives 5&ndash;9% revenue growth.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="1.8"/><rect x="9" y="2.3" width="6" height="3" rx="1"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="14.5" x2="16" y2="14.5"/><line x1="8" y1="18" x2="13" y2="18"/></svg></span>
+        <div>
+          <p class="feature-row-title">Treatment Plan Follow-Up Automation</p>
+          <p class="feature-row-body">Within 48 hours of any unaccepted treatment plan, an automated sequence follows up &mdash; texts, emails, educational context &mdash; re-engaging the patient while their concern is still fresh.</p>
+          <span class="feature-row-result">Result: Following up within 48 hours recovers 20&ndash;35% of declined cases. On $480,000 in unscheduled treatment (typical $800K practice), recovering 30% = $144,000 in revenue from patients who already said yes to the exam.</span>
+        </div>
+      </div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Is automated texting HIPAA and TCPA compliant?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Yes. Every message runs through a HIPAA-compliant platform with signed BAAs, minimum-necessary PHI, and proper opt-out handling. TCPA compliance is built into the consent flow at intake. You never touch the compliance side — we own it.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">How long before we see results?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Review volume picks up within 2–3 weeks. Recall appointments start flowing within the first 30 days. No-show reduction is measurable by the second month. Most practices see meaningful ranking improvements (0.3–0.5 stars) within 90 days and map-pack movement within 4–6 months.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">We already have a reminder system through our PMS. Why isn't it working?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">PMS reminder modules are built for one-touch, one-channel notifications. They don't run multi-step sequences, don't handle declined treatment follow-up, and most don't do two-way texting. If you're still at 15–20% no-shows, the system isn't doing its job — and the fix isn't a different PMS, it's a smarter automation layer on top of the one you already have.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Is there a long-term contract?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">No. Month-to-month after setup. You own everything we build — your website, your patient communication sequences, your review profiles. If we're not delivering results you can measure, you can leave. We don't count on contracts to keep clients. We count on results.</div>
-    </div>
-
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ BEFORE / AFTER ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <p class="subhead text-gold">Ready to Stop Leaving Money in the Charts?</p>
-    <h2 class="cta-title">Get a Free Audit of Your Practice</h2>
-    <p class="cta-sub">We'll dig into your call volume, no-show rate, recall percentage, Google ranking, and review velocity — and tell you exactly where your biggest leaks are and what closing them is worth. No pitch, no obligation. Just the numbers.</p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Book My Free Audit</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Real-World Impact</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Changes When the <em>Leaks Are Sealed</em></h2>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">Before Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.4rem 0 1.6rem">The 1,200-Patient Practice Leaving $300K on the Table</h3>
+        <div class="feature-list">
+          <div class="feature-row"><div><p class="feature-row-body">Phone rings during check-in rush &mdash; rolls to voicemail 35% of the time. 80% of those callers are gone forever.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">18% no-show rate. Three empty chairs every Wednesday. No systematic reminder system.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">$420,000 in diagnosed crown, implant, and restorative work sitting unscheduled in Dentrix. Nobody&rsquo;s called about it.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">1,100 patients who haven&rsquo;t been in for 14+ months. The front desk has no time to chase them.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">41 Google reviews at 4.1 stars. Invisible in local search. New patient volume flat for 18 months.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">The office manager is buried in phone tag, insurance verification, and paper intake forms.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">After Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.4rem 0 1.6rem;color:var(--gold-bright)">The Same Practice &mdash; Eight Months Later</h3>
+        <div class="feature-list">
+          <div class="feature-row"><div><p class="feature-row-body">AI answering + missed-call text-back: only 3% of calls go unanswered. New-patient bookings up 19%.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Automated reminders cut no-shows to 8%. Three recaptured chair hours per week = $1,800&ndash;$4,800/month recovered.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Treatment plan follow-up: 31% of unscheduled cases booked within 6 weeks = $130,000 in production unlocked.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">90-day reactivation sequence reached 1,100 dormant patients. 210 rebooked hygiene appointments = $63,000.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">218 Google reviews at 4.9 stars. Top-2 in local search for &ldquo;dentist near me.&rdquo;</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">The office manager reviews a morning dashboard. The systems do the follow-up. She goes home on time.</p></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ CROSS-LINKS ============================ -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Solutions We Deploy</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Built for Dental <em>&amp; Medical Practices</em></h2>
+    </div>
+    <div class="mini-grid cols-4">
+      <a href="solution-ai-phone.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11" rx="3"/><line x1="12" y1="4.5" x2="12" y2="8"/><circle cx="12" cy="3.3" r="1.1" fill="currentColor" stroke="none"/><circle cx="9" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><line x1="9" y1="17" x2="15" y2="17"/></svg></span>
+        <p class="mini-card-title">AI Phone &amp; Chat</p>
+        <p class="mini-card-body">24/7 answering and missed-call recovery</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-crm.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.2C4 7.7 7.8 4 12.5 4S21 7.7 21 12.2 17.2 20.4 12.5 20.4c-1 0-2-.2-2.9-.5L4 21.5l1.6-4.2c-1-1.3-1.6-2.9-1.6-4.6Z"/></svg></span>
+        <p class="mini-card-title">CRM &amp; Follow-Up</p>
+        <p class="mini-card-body">Recall, reactivation, and treatment follow-up</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-marketing.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <p class="mini-card-title">Marketing &amp; Reviews</p>
+        <p class="mini-card-body">Automate reviews and dominate local search</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-websites-seo.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <p class="mini-card-title">Websites &amp; SEO</p>
+        <p class="mini-card-body">Get found when patients search near me</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section rule-top">
+  <div class="container" style="max-width:820px;margin-inline:auto">
+    <div class="section-head">
+      <span class="eyebrow reveal">Common Questions</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Practice Owners Ask <em>Before They Start</em></h2>
+    </div>
+    <div class="qa-list">
+      <div class="qa-row reveal">
+        <span class="qa-num">I.</span>
+        <div>
+          <p class="qa-q">Does this integrate with Dentrix or Eaglesoft?</p>
+          <p class="qa-a">Yes. We integrate with Dentrix, Eaglesoft, Open Dental, Carestream, and most major practice management systems. We add the AI answering, recall, review, and follow-up layer on top &mdash; your scheduling and clinical workflows stay exactly as they are. We&rsquo;re not replacing your PMS, we&rsquo;re filling the gaps it doesn&rsquo;t cover.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">II.</span>
+        <div>
+          <p class="qa-q">Is automated texting HIPAA and TCPA compliant?</p>
+          <p class="qa-a">Yes. Every message runs through a HIPAA-compliant platform with signed BAAs, minimum-necessary PHI, and proper opt-out handling. TCPA compliance is built into the consent flow at intake. You never touch the compliance side &mdash; we own it.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">III.</span>
+        <div>
+          <p class="qa-q">How long before we see results?</p>
+          <p class="qa-a">Review volume picks up within 2&ndash;3 weeks. Recall appointments start flowing within the first 30 days. No-show reduction is measurable by the second month. Most practices see meaningful ranking improvements (0.3&ndash;0.5 stars) within 90 days and map-pack movement within 4&ndash;6 months.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">IV.</span>
+        <div>
+          <p class="qa-q">We already have a reminder system through our PMS. Why isn&rsquo;t it working?</p>
+          <p class="qa-a">PMS reminder modules are built for one-touch, one-channel notifications. They don&rsquo;t run multi-step sequences, don&rsquo;t handle declined treatment follow-up, and most don&rsquo;t do two-way texting. If you&rsquo;re still at 15&ndash;20% no-shows, the system isn&rsquo;t doing its job &mdash; and the fix isn&rsquo;t a different PMS, it&rsquo;s a smarter automation layer on top of the one you already have.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">V.</span>
+        <div>
+          <p class="qa-q">Is there a long-term contract?</p>
+          <p class="qa-a">No. Month-to-month after setup. You own everything we build &mdash; your website, your patient communication sequences, your review profiles. If we&rsquo;re not delivering results you can measure, you can leave. We don&rsquo;t count on contracts to keep clients. We count on results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
+  <div class="container">
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Ready to Stop Leaving Money in the Charts?</span>
+    <h2 class="cta-title reveal">Get a Free Audit<br><em>of Your Practice</em></h2>
+    <p class="cta-sub reveal">We&rsquo;ll dig into your call volume, no-show rate, recall percentage, Google ranking, and review velocity &mdash; and tell you exactly where your biggest leaks are and what closing them is worth. No pitch, no obligation. Just the numbers.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Book My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
+    </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your practice.</p>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -376,34 +362,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auto &amp; Tire | Top Shelf Business Solutions</title>
-  <meta name="description" content="Tire shops, repair shops, and dealerships don't have a demand problem — they have a capture-and-convert problem. Stop losing $49K–$135K/yr to missed calls, mishandled leads, and stale reviews." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto &amp; Tire | Top Shelf Business Solutions</title>
+<meta name="description" content="Tire shops, repair shops, and dealerships don't have a demand problem — they have a capture-and-convert problem. Stop losing $49K–$135K/yr to missed calls, mishandled leads, and stale reviews.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -46,373 +46,303 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container">
-    <p class="subhead text-gold mb-16">Auto &amp; Tire — Repair, Tire Shops &amp; Dealerships</p>
-    <h1 class="display-xl mb-24">
-      You Don't Have a Demand Problem.<br>
-      <span class="text-gold">You Have a Capture Problem.</span>
-    </h1>
-    <p class="hero-sub">
-      People search "tire shop near me" 2.7 million times a month and every car eventually breaks. The demand is there. But the phone rings and nobody answers, the 9pm lead sits until tomorrow, and the shop down the street has 340 reviews while you have 14. Every one of those is a leak — and every one is fixable.
-    </p>
-    <div class="cta-actions" style="margin-top:2.5rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Shop Audit</a>
-      <a href="#solutions" class="btn btn-outline btn-lg">See How We Fix It</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3.2c0-.5.2-.9.5-1.2l1.8-1.8c.3-.3.7-.5 1.2-.5h9c.5 0 .9.2 1.2.5l1.8 1.8c.3.3.5.7.5 1.2V16"/><path d="M3.3 16h17.4a.7.7 0 0 1 .7.7v1.6a.7.7 0 0 1-.7.7H3.3a.7.7 0 0 1-.7-.7v-1.6a.7.7 0 0 1 .7-.7Z"/><circle cx="7.5" cy="18.7" r="1.5"/><circle cx="16.5" cy="18.7" r="1.5"/></svg></span>
+    <span class="eyebrow reveal">Auto &amp; Tire &mdash; Repair, Tire Shops &amp; Dealerships</span>
+    <h1 class="display display-lg reveal">You Don&rsquo;t Have a Demand Problem. <em>You Have a Capture Problem.</em></h1>
+    <p class="page-hero-sub reveal">People search &ldquo;tire shop near me&rdquo; 2.7 million times a month and every car eventually breaks. The demand is there. But the phone rings and nobody answers, the 9pm lead sits until tomorrow, and the shop down the street has 340 reviews while you have 14. Every one of those is a leak &mdash; and every one is fixable.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Shop Audit <span class="arr">&rarr;</span></a>
+      <a href="#solutions" class="btn btn-line">See How We Fix It</a>
     </div>
   </div>
 </section>
 
-<!-- STAT TILES -->
-<section class="section-sm bg-charcoal">
-  <div class="container">
-    <div class="grid-4">
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">$49K–$135K</div>
-        <div class="stat-tile-label">Lost per year to unanswered calls at a typical shop</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">43%</div>
-        <div class="stat-tile-label">Of dealership sales leads are mishandled or never followed up</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">14 vs 340</div>
-        <div class="stat-tile-label">Your reviews vs. the shop that owns the map pack</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">$20K–$25K</div>
-        <div class="stat-tile-label">Lost every month an idle service bay sits empty</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PAIN BREAKDOWN -->
+<!-- ============================ STAT STRIP ============================ -->
 <section class="section">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Where the Money Is Going</p>
-      <h2 class="display-md mb-24">Five Leaks Draining the Average Shop</h2>
-      <p class="text-muted" style="max-width:640px;margin:0 auto;line-height:1.7;">
-        These aren't small inefficiencies. A single mid-size shop realistically leaks $50K–$150K a year across missed calls, deferred work, and no-shows — and a single-rooftop dealer leaks into seven figures. The cost of fixing it is a rounding error against that.
-      </p>
-    </div>
-
-    <div class="pain-list">
-
-      <div class="pain-item">
-        <div class="pain-icon">📞</div>
-        <div>
-          <div class="pain-title">The Phone Is the Business — and It's Bleeding</div>
-          <div class="pain-cost">$49,000–$135,000/year in missed-call revenue</div>
-          <div class="pain-body">
-            Up to 21–24% of calls to auto service businesses go unanswered during business hours — and independent-garage analyses put it as high as 38%. When the phone isn't answered, ~60% of callers won't wait on hold more than a minute; they don't leave a voicemail, they just call the next shop on Google. Worse: 56–60% of calls arrive after hours, when your door is locked and you're invisible to more than half your potential customers. A shop missing ~10 calls a week, converting half at a $400 average ticket, forfeits more than $40,000 a year. Higher-volume shops lose ~$135,000. Dealerships miss 60% of service calls at peak — up to $1M+ a year per store.
-          </div>
-        </div>
+    <div class="stat-strip">
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="49" data-prefix="$" data-suffix="K–$135K">$49K–$135K</span>
+        <p class="stat-cell-label">Lost per year to unanswered calls at a typical shop</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🎯</div>
-        <div>
-          <div class="pain-title">Leads Come In — and Fall Through the Cracks</div>
-          <div class="pain-cost">43.2% of dealership sales leads mishandled; 14.1% never logged at all</div>
-          <div class="pain-body">
-            The 2025 Foureyes benchmark found 43.2% of dealership sales leads are mishandled — missed calls, never entered in the CRM, lapsed follow-up. 65% of returning web leads don't hear back within 24 hours; 61.6% aren't contacted for 8+ days — yet 60% of buyers purchase within 3 days and 78% buy from the first business that responds. Respond in under 5 minutes and you're up to 21–100x more likely to convert. Most shops still measure response time in hours to days while the window is minutes. Every hour of delay is measurable lost gross.
-          </div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="43" data-suffix="%">43%</span>
+        <p class="stat-cell-label">Of dealership sales leads are mishandled or never followed up</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">⭐</div>
-        <div>
-          <div class="pain-title">14 Reviews vs. the Competitor's 340</div>
-          <div class="pain-cost">Businesses at 4.0★+ appear in the local pack 58% more often</div>
-          <div class="pain-body">
-            98% of consumers read reviews for local businesses and 68% won't consider a business rated below 4 stars. Review quantity, recency, and response rate are direct Google ranking signals — a shop with 200 fresh reviews consistently outranks one with 40 stale ones. If you're not in the top-3 map pack, you're effectively invisible to the 70%+ of local searchers who never scroll past it. Map-pack shops get 126% more traffic and 93% more calls than the shops on page two. Your competitor with 340 reviews isn't better than you — they just asked.
-          </div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="14" data-suffix=" vs 340">14 vs 340</span>
+        <p class="stat-cell-label">Your reviews vs. the shop that owns the map pack</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🔧</div>
-        <div>
-          <div class="pain-title">Deferred Work Nobody Follows Up On</div>
-          <div class="pain-cost">~$4,200/month in recoverable declined-service revenue</div>
-          <div class="pain-body">
-            You quote the brakes. The customer says "next month." Then it's forgotten — pure margin left on the table. Recovering declined-service rate from ~11% to ~24% was worth ~$4,200/month extra in one cited example, at an average deferred ticket of ~$280. And digital vehicle inspections (photo/video the customer approves from their phone) lift average repair order from $612 to $741 (+21%) — one documented shop went from $583 to $1,000+. Many shops own the feature and never use it, chasing approvals by phone tag instead.
-          </div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="20" data-prefix="$" data-suffix="K–$25K">$20K–$25K</span>
+        <p class="stat-cell-label">Lost every month an idle service bay sits empty</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🅿️</div>
-        <div>
-          <div class="pain-title">Idle Bays &amp; No-Shows</div>
-          <div class="pain-cost">$20,000–$25,000/month per idle bay; 15–20% no-show rate</div>
-          <div class="pain-body">
-            An empty service bay costs $20,000–$25,000 a month in lost billable hours, and the average shop runs a 15–20% appointment no-show rate — pegged at roughly $30,000/year in scheduling friction for a typical shop. Meanwhile the technician shortage is the #1 stated pain (31% of owners name it their top challenge; 88% say hiring is hard), which makes every wasted labor hour chasing parts, phone tag, and re-quoting even more expensive. You can't hire your way out — you have to plug the leaks.
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- SOLUTION MAP -->
-<section id="solutions" class="section bg-charcoal">
+<!-- ============================ PAIN BREAKDOWN ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">The Fix</p>
-      <h2 class="display-md mb-24">Five Systems. One Stack. Measurable Results.</h2>
-      <p class="text-muted" style="max-width:640px;margin:0 auto;line-height:1.7;">
-        We don't sell software. We solve the specific problem each leak is causing and show you the math before we start — and almost none of it requires you to work harder.
-      </p>
+    <div class="section-head">
+      <span class="eyebrow reveal">Where the Money Is Going</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Leaks Draining the <em>Average Shop</em></h2>
+      <p class="reveal">These aren&rsquo;t small inefficiencies. A single mid-size shop realistically leaks $50K&ndash;$150K a year across missed calls, deferred work, and no-shows &mdash; and a single-rooftop dealer leaks into seven figures. The cost of fixing it is a rounding error against that.</p>
     </div>
-
-    <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem;">
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🤖</div>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
         <div>
-          <div class="benefit-title">24/7 AI Phone Answering + Missed-Call Text-Back</div>
-          <div class="benefit-body">
-            An AI receptionist answers every call — nights, weekends, and while your advisors are under a car. It answers "do you have my tire size," "how much for brakes," "are you open," and books the appointment. Any missed call gets an instant text back within seconds.
-          </div>
-          <div class="benefit-result">
-            Recover the ~25% of calls you lose today — at a $400–$450 average ticket that's $49K–$135K/yr back for a shop, up to $1M+ for a dealer. Captures the 56–60% of after-hours leads you're invisible to now. Zero added payroll, vs. $3,500–$4,500/mo for a BDC hire.
-          </div>
+          <p class="feature-row-title">The Phone Is the Business &mdash; and It&rsquo;s Bleeding</p>
+          <p class="feature-row-body">Up to 21&ndash;24% of calls to auto service businesses go unanswered during business hours &mdash; and independent-garage analyses put it as high as 38%. When the phone isn&rsquo;t answered, ~60% of callers won&rsquo;t wait on hold more than a minute; they don&rsquo;t leave a voicemail, they just call the next shop on Google. Worse: 56&ndash;60% of calls arrive after hours, when your door is locked and you&rsquo;re invisible to more than half your potential customers. A shop missing ~10 calls a week, converting half at a $400 average ticket, forfeits more than $40,000 a year. Higher-volume shops lose ~$135,000. Dealerships miss 60% of service calls at peak &mdash; up to $1M+ a year per store.</p>
+          <span class="feature-row-result">$49K&ndash;$135K/yr</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">⚡</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></span>
         <div>
-          <div class="benefit-title">Instant Lead Capture + Speed-to-Lead Follow-Up</div>
-          <div class="benefit-body">
-            Every web, form, and call lead is auto-logged in the CRM and responded to in under 5 minutes, 24/7, with automated multi-touch follow-up until a human takes over. No lead ever falls through the cracks or dies in a voicemail box overnight.
-          </div>
-          <div class="benefit-result">
-            Under-5-minute response = up to 21–100x more likely to convert. Capture the 43% of leads currently mishandled and the 14% never logged. Beat the "first responder wins 78%" effect on every lead — and replace a $180K/yr BDC team's grunt work.
-          </div>
+          <p class="feature-row-title">Leads Come In &mdash; and Fall Through the Cracks</p>
+          <p class="feature-row-body">The 2025 Foureyes benchmark found 43.2% of dealership sales leads are mishandled &mdash; missed calls, never entered in the CRM, lapsed follow-up. 65% of returning web leads don&rsquo;t hear back within 24 hours; 61.6% aren&rsquo;t contacted for 8+ days &mdash; yet 60% of buyers purchase within 3 days and 78% buy from the first business that responds. Respond in under 5 minutes and you&rsquo;re up to 21&ndash;100x more likely to convert. Most shops still measure response time in hours to days while the window is minutes. Every hour of delay is measurable lost gross.</p>
+          <span class="feature-row-result">43.2% mishandled</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">⭐</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
         <div>
-          <div class="benefit-title">Automated Review Requests After Every Ticket</div>
-          <div class="benefit-body">
-            A review request fires by text automatically the moment an RO closes or a car is delivered, with smart timing and follow-up. Happy customers get routed to Google; unhappy ones to a private channel first.
-          </div>
-          <div class="benefit-result">
-            Go from 14 to 200+ fresh reviews and climb into the top-3 map pack — where shops get 126% more traffic and 93% more calls than positions 4–10. Cross the 4.0★ threshold and appear in the pack 58% more often. More calls (that Solution A then catches) — with you doing nothing.
-          </div>
+          <p class="feature-row-title">14 Reviews vs. the Competitor&rsquo;s 340</p>
+          <p class="feature-row-body">98% of consumers read reviews for local businesses and 68% won&rsquo;t consider a business rated below 4 stars. Review quantity, recency, and response rate are direct Google ranking signals &mdash; a shop with 200 fresh reviews consistently outranks one with 40 stale ones. If you&rsquo;re not in the top-3 map pack, you&rsquo;re effectively invisible to the 70%+ of local searchers who never scroll past it. Map-pack shops get 126% more traffic and 93% more calls than the shops on page two. Your competitor with 340 reviews isn&rsquo;t better than you &mdash; they just asked.</p>
+          <span class="feature-row-result">58% more pack visibility</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🔧</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3 17.5 6.5 21l6.3-6.3a4 4 0 0 0 4.9-5.4l-2.8 2.8-2.1-.6-.6-2.1 2.5-2.1Z"/></svg></span>
         <div>
-          <div class="benefit-title">Automated Declined-Service &amp; Digital Inspection Follow-Up</div>
-          <div class="benefit-body">
-            Every declined line item and every maintenance-due date gets an automatic one-tap-rebook text. Techs send photo/video digital inspections the customer approves from their phone — no phone tag.
-          </div>
-          <div class="benefit-result">
-            Lift declined-service recovery from ~11% to ~24% ≈ ~$4,200/month in pure recovered margin — no new customers needed. Digital inspections lift average repair order from $612 to $741 (+21%, up to 77% in real cases) on cars already in your bay — the cheapest revenue there is.
-          </div>
+          <p class="feature-row-title">Deferred Work Nobody Follows Up On</p>
+          <p class="feature-row-body">You quote the brakes. The customer says &ldquo;next month.&rdquo; Then it&rsquo;s forgotten &mdash; pure margin left on the table. Recovering declined-service rate from ~11% to ~24% was worth ~$4,200/month extra in one cited example, at an average deferred ticket of ~$280. And digital vehicle inspections (photo/video the customer approves from their phone) lift average repair order from $612 to $741 (+21%) &mdash; one documented shop went from $583 to $1,000+. Many shops own the feature and never use it, chasing approvals by phone tag instead.</p>
+          <span class="feature-row-result">~$4,200/mo recoverable</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🗓️</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s7-6.6 7-12A7 7 0 0 0 5 9.5c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9.3" r="2.4"/></svg></span>
         <div>
-          <div class="benefit-title">Online Booking + Reminders + Local SEO</div>
-          <div class="benefit-body">
-            Self-scheduling with automated confirmation and reminder texts fills your bays and cuts no-shows. Google Business Profile optimization, NAP consistency, and "near me" targeting put you at the top when someone searches.
-          </div>
-          <div class="benefit-result">
-            Recover part of the $20K–$25K/month an idle bay costs and smooth out the 15–20% no-show rate. Own the map pack for "tire shop near me" (2.7M searches/mo) and "brake repair near me" — 126% more traffic than the shops buried on page two, feeding calls back into the system.
-          </div>
+          <p class="feature-row-title">Idle Bays &amp; No-Shows</p>
+          <p class="feature-row-body">An empty service bay costs $20,000&ndash;$25,000 a month in lost billable hours, and the average shop runs a 15&ndash;20% appointment no-show rate &mdash; pegged at roughly $30,000/year in scheduling friction for a typical shop. Meanwhile the technician shortage is the #1 stated pain (31% of owners name it their top challenge; 88% say hiring is hard), which makes every wasted labor hour chasing parts, phone tag, and re-quoting even more expensive. You can&rsquo;t hire your way out &mdash; you have to plug the leaks.</p>
+          <span class="feature-row-result">$20K&ndash;$25K/mo per bay</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="section">
+<!-- ============================ SOLUTION MAP ============================ -->
+<section id="solutions" class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Real-World Impact</p>
-      <h2 class="display-md mb-32">What Changes When You Plug All Five Leaks</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">The Fix</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Systems. One Stack. <em>Measurable Results.</em></h2>
+      <p class="reveal">We don&rsquo;t sell software. We solve the specific problem each leak is causing and show you the math before we start &mdash; and almost none of it requires you to work harder.</p>
     </div>
-
-    <div class="before-after">
-      <div class="ba-before">
-        <div class="ba-label">Before Top Shelf</div>
-        <div class="ba-title">The Two-Bay Shop Leaving Money on the Table</div>
-        <ul class="ba-items">
-          <li class="ba-item">The 6:40pm tire call rings four times and hits voicemail — the customer books with the shop that answered.</li>
-          <li class="ba-item">~25% of calls missed during the day; 56% of demand arrives after hours to a locked door.</li>
-          <li class="ba-item">14 Google reviews, sitting at #7 in the map pack, invisible for "tire shop near me."</li>
-          <li class="ba-item">Every "I'll do the brakes next month" is forgotten the second the car leaves.</li>
-          <li class="ba-item">Approvals happen by phone tag; average repair order stuck at $612.</li>
-          <li class="ba-item">Two bays sit idle three afternoons a week and nobody chases the no-shows.</li>
-        </ul>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11" rx="3"/><line x1="12" y1="4.5" x2="12" y2="8"/><circle cx="12" cy="3.3" r="1.1" fill="currentColor" stroke="none"/><circle cx="9" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><line x1="9" y1="17" x2="15" y2="17"/></svg></span>
+        <div>
+          <p class="feature-row-title">24/7 AI Phone Answering + Missed-Call Text-Back</p>
+          <p class="feature-row-body">An AI receptionist answers every call &mdash; nights, weekends, and while your advisors are under a car. It answers &ldquo;do you have my tire size,&rdquo; &ldquo;how much for brakes,&rdquo; &ldquo;are you open,&rdquo; and books the appointment. Any missed call gets an instant text back within seconds.</p>
+          <span class="feature-row-result">Result: Recover the ~25% of calls you lose today &mdash; at a $400&ndash;$450 average ticket that&rsquo;s $49K&ndash;$135K/yr back for a shop, up to $1M+ for a dealer. Captures the 56&ndash;60% of after-hours leads you&rsquo;re invisible to now. Zero added payroll, vs. $3,500&ndash;$4,500/mo for a BDC hire.</span>
+        </div>
       </div>
-      <div class="ba-after">
-        <div class="ba-label">After Top Shelf</div>
-        <div class="ba-title">The Same Shop — Six Months Later</div>
-        <ul class="ba-items">
-          <li class="ba-item">AI answers the 6:40pm call, confirms the tire's in stock, and books 8am — a $180 tire plus a $120 mount/balance/TPMS attach.</li>
-          <li class="ba-item">Missed-call text-back recovers the daytime and after-hours calls the shop used to lose.</li>
-          <li class="ba-item">260 reviews at 4.8★, #2 in the map pack, ~40 more calls a month ≈ $20K in new work.</li>
-          <li class="ba-item">Automated declined-work texts recover ~$4,200/month in deferred brakes, belts, and tires.</li>
-          <li class="ba-item">Digital inspections lift average repair order from $612 to $741 — approvals in minutes.</li>
-          <li class="ba-item">Online booking + reminders fill the bays and cut no-shows; the owner sees it all on one dashboard.</li>
-        </ul>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12.5 2.5 4.5 13.5h6l-1 8 8.5-11h-6.5Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">Instant Lead Capture + Speed-to-Lead Follow-Up</p>
+          <p class="feature-row-body">Every web, form, and call lead is auto-logged in the CRM and responded to in under 5 minutes, 24/7, with automated multi-touch follow-up until a human takes over. No lead ever falls through the cracks or dies in a voicemail box overnight.</p>
+          <span class="feature-row-result">Result: Under-5-minute response = up to 21&ndash;100x more likely to convert. Capture the 43% of leads currently mishandled and the 14% never logged. Beat the &ldquo;first responder wins 78%&rdquo; effect on every lead &mdash; and replace a $180K/yr BDC team&rsquo;s grunt work.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">Automated Review Requests After Every Ticket</p>
+          <p class="feature-row-body">A review request fires by text automatically the moment an RO closes or a car is delivered, with smart timing and follow-up. Happy customers get routed to Google; unhappy ones to a private channel first.</p>
+          <span class="feature-row-result">Result: Go from 14 to 200+ fresh reviews and climb into the top-3 map pack &mdash; where shops get 126% more traffic and 93% more calls than positions 4&ndash;10. Cross the 4.0&#9733; threshold and appear in the pack 58% more often. More calls (that Solution A then catches) &mdash; with you doing nothing.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3 17.5 6.5 21l6.3-6.3a4 4 0 0 0 4.9-5.4l-2.8 2.8-2.1-.6-.6-2.1 2.5-2.1Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">Automated Declined-Service &amp; Digital Inspection Follow-Up</p>
+          <p class="feature-row-body">Every declined line item and every maintenance-due date gets an automatic one-tap-rebook text. Techs send photo/video digital inspections the customer approves from their phone &mdash; no phone tag.</p>
+          <span class="feature-row-result">Result: Lift declined-service recovery from ~11% to ~24% &asymp; ~$4,200/month in pure recovered margin &mdash; no new customers needed. Digital inspections lift average repair order from $612 to $741 (+21%, up to 77% in real cases) on cars already in your bay &mdash; the cheapest revenue there is.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7.5" y1="2.5" x2="7.5" y2="6.5"/><line x1="16.5" y1="2.5" x2="16.5" y2="6.5"/></svg></span>
+        <div>
+          <p class="feature-row-title">Online Booking + Reminders + Local SEO</p>
+          <p class="feature-row-body">Self-scheduling with automated confirmation and reminder texts fills your bays and cuts no-shows. Google Business Profile optimization, NAP consistency, and &ldquo;near me&rdquo; targeting put you at the top when someone searches.</p>
+          <span class="feature-row-result">Result: Recover part of the $20K&ndash;$25K/month an idle bay costs and smooth out the 15&ndash;20% no-show rate. Own the map pack for &ldquo;tire shop near me&rdquo; (2.7M searches/mo) and &ldquo;brake repair near me&rdquo; &mdash; 126% more traffic than the shops buried on page two, feeding calls back into the system.</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WE TAILOR EVERYTHING -->
-<section class="section-sm bg-charcoal">
-  <div class="container" style="text-align:center;max-width:760px;margin:0 auto;">
-    <p class="subhead text-gold mb-16">No Two Shops Are the Same</p>
-    <h2 class="display-sm mb-24">We Build Around Your Operation, Not a Template</h2>
-    <p style="color:var(--text);line-height:1.8;font-size:1.05rem;">
-      A high-volume tire shop chasing the mount/balance attach has different leaks than a two-bay repair shop or a single-rooftop dealer with a leaking service drive. We start with a free audit of your actual numbers — your missed-call rate, your review count and recency, your average repair order, your no-show rate, your Google ranking — and we tell you exactly which leaks are costing you the most. Then we fix those first. No bloated retainers, no software you don't use, no juggling three tools that don't talk to each other. We sit on top of your Tekmetric, Shopmonkey, Mitchell1, or dealer CRM and fill the gaps they leave.
-    </p>
-    <a href="contact.html" class="btn btn-gold btn-lg" style="margin-top:2rem;">Start With a Free Audit</a>
-  </div>
-</section>
-
-<!-- CROSS-LINKS -->
-<section class="section-sm">
+<!-- ============================ BEFORE / AFTER ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="crosslink-strip">
-      <div class="crosslink-label">Solutions We Deploy for Auto &amp; Tire</div>
-      <div class="crosslink-items">
-        <a href="solution-ai-phone.html" class="crosslink-item">
-          <span class="crosslink-item-icon">📞</span>
-          <span class="crosslink-item-title">AI Phone &amp; Chat</span>
-          <span class="crosslink-item-desc">Answer every call, 24/7, and text back the ones you miss</span>
-        </a>
-        <a href="solution-crm.html" class="crosslink-item">
-          <span class="crosslink-item-icon">🔄</span>
-          <span class="crosslink-item-title">CRM &amp; Follow-Up</span>
-          <span class="crosslink-item-desc">Catch every lead and recover deferred work automatically</span>
-        </a>
-        <a href="solution-marketing.html" class="crosslink-item">
-          <span class="crosslink-item-icon">⭐</span>
-          <span class="crosslink-item-title">Marketing &amp; Reviews</span>
-          <span class="crosslink-item-desc">Go from 14 reviews to 260 and own the map pack</span>
-        </a>
-        <a href="solution-pos.html" class="crosslink-item">
-          <span class="crosslink-item-icon">💳</span>
-          <span class="crosslink-item-title">POS &amp; Inventory</span>
-          <span class="crosslink-item-desc">Shop-management, DVI, and parts/tire inventory</span>
-        </a>
-        <a href="solution-websites-seo.html" class="crosslink-item">
-          <span class="crosslink-item-icon">🌐</span>
-          <span class="crosslink-item-title">Websites &amp; SEO</span>
-          <span class="crosslink-item-desc">Get found for "near me" and book cars online</span>
-        </a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Real-World Impact</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Changes When You Plug <em>All Five Leaks</em></h2>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">Before Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.4rem 0 1.6rem">The Two-Bay Shop Leaving Money on the Table</h3>
+        <div class="feature-list">
+          <div class="feature-row"><div><p class="feature-row-body">The 6:40pm tire call rings four times and hits voicemail &mdash; the customer books with the shop that answered.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">~25% of calls missed during the day; 56% of demand arrives after hours to a locked door.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">14 Google reviews, sitting at #7 in the map pack, invisible for &ldquo;tire shop near me.&rdquo;</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Every &ldquo;I&rsquo;ll do the brakes next month&rdquo; is forgotten the second the car leaves.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Approvals happen by phone tag; average repair order stuck at $612.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Two bays sit idle three afternoons a week and nobody chases the no-shows.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">After Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.4rem 0 1.6rem;color:var(--gold-bright)">The Same Shop &mdash; Six Months Later</h3>
+        <div class="feature-list">
+          <div class="feature-row"><div><p class="feature-row-body">AI answers the 6:40pm call, confirms the tire&rsquo;s in stock, and books 8am &mdash; a $180 tire plus a $120 mount/balance/TPMS attach.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Missed-call text-back recovers the daytime and after-hours calls the shop used to lose.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">260 reviews at 4.8&#9733;, #2 in the map pack, ~40 more calls a month &asymp; $20K in new work.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Automated declined-work texts recover ~$4,200/month in deferred brakes, belts, and tires.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Digital inspections lift average repair order from $612 to $741 &mdash; approvals in minutes.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Online booking + reminders fill the bays and cut no-shows; the owner sees it all on one dashboard.</p></div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section bg-charcoal">
-  <div class="container" style="max-width:780px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Common Questions</p>
-      <h2 class="display-sm mb-40">What Shop Owners Ask Before They Start</h2>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Do I have to replace Tekmetric, Shopmonkey, or my dealer CRM?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">No. We sit on top of your shop-management system and fill the gaps it leaves — the 24/7 answering, the missed-call recovery, the declined-work follow-up, the review automation. Your repair-order workflow stays exactly as it is. We're adding the layer those tools don't have, not replacing the tool.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Will an AI answering the phone annoy my customers?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">The alternative is voicemail — and ~60% of callers won't wait on hold a minute, let alone leave a message. The AI answers instantly, sounds natural, handles the common questions ("do you have my tire size," "how much for brakes," "are you open"), and books the appointment or hands off to a human. Customers far prefer an instant answer at 6:40pm to a recording.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">How fast can we get from 14 reviews to hundreds?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">The first batch of new reviews shows up within the first two weeks. A documented two-bay shop went from 14 reviews to 260 at 4.8★ in six months, moving from #7 to #2 in the map pack. The engine fires a request after every closed ticket — you stop relying on the one customer in a hundred who reviews unprompted.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">We're a dealership, not a corner shop. Does this scale?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Yes — the leaks are bigger at your scale. 43.2% of dealership sales leads are mishandled and 60% of service calls go unanswered at peak, which is why a single rooftop leaks into seven figures. Automated speed-to-lead and 24/7 answering do the grunt work of a $180K/yr BDC team, log every lead, and never sleep — sales floor and service drive both.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Is there a long-term contract?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">No. Month-to-month after the initial setup. You own everything we build — your website, your phone number, your customer list, your review profiles. We earn your business every month with results you can measure on a dashboard.</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ CROSS-LINKS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <p class="subhead text-gold mb-16">Ready to Stop Handing Cars to the Competition?</p>
-    <h2 class="cta-title">Get a Free Audit of Your Shop</h2>
-    <p class="cta-sub">
-      We'll dig into your real numbers — missed-call rate, review count and recency, average repair order, no-show rate, Google ranking — and tell you exactly where your biggest leaks are and what fixing them is worth. No pitch, no commitment. Just the math.
-    </p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Book My Free Audit</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Solutions We Deploy</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Built for Auto <em>&amp; Tire</em></h2>
+    </div>
+    <div class="mini-grid cols-4">
+      <a href="solution-ai-phone.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
+        <p class="mini-card-title">AI Phone &amp; Chat</p>
+        <p class="mini-card-body">Answer every call, 24/7, and text back the ones you miss</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-crm.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <p class="mini-card-title">CRM &amp; Follow-Up</p>
+        <p class="mini-card-body">Catch every lead and recover deferred work automatically</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-marketing.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <p class="mini-card-title">Marketing &amp; Reviews</p>
+        <p class="mini-card-body">Go from 14 reviews to 260 and own the map pack</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-pos.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
+        <p class="mini-card-title">POS &amp; Inventory</p>
+        <p class="mini-card-body">Shop-management, DVI, and parts/tire inventory</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-websites-seo.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <p class="mini-card-title">Websites &amp; SEO</p>
+        <p class="mini-card-body">Get found for &ldquo;near me&rdquo; and book cars online</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FAQ ============================ -->
+<section class="section rule-top">
+  <div class="container" style="max-width:820px;margin-inline:auto">
+    <div class="section-head">
+      <span class="eyebrow reveal">Common Questions</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Shop Owners Ask <em>Before They Start</em></h2>
+    </div>
+    <div class="qa-list">
+      <div class="qa-row reveal">
+        <span class="qa-num">I.</span>
+        <div>
+          <p class="qa-q">Do I have to replace Tekmetric, Shopmonkey, or my dealer CRM?</p>
+          <p class="qa-a">No. We sit on top of your shop-management system and fill the gaps it leaves &mdash; the 24/7 answering, the missed-call recovery, the declined-work follow-up, the review automation. Your repair-order workflow stays exactly as it is. We&rsquo;re adding the layer those tools don&rsquo;t have, not replacing the tool.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">II.</span>
+        <div>
+          <p class="qa-q">Will an AI answering the phone annoy my customers?</p>
+          <p class="qa-a">The alternative is voicemail &mdash; and ~60% of callers won&rsquo;t wait on hold a minute, let alone leave a message. The AI answers instantly, sounds natural, handles the common questions (&ldquo;do you have my tire size,&rdquo; &ldquo;how much for brakes,&rdquo; &ldquo;are you open&rdquo;), and books the appointment or hands off to a human. Customers far prefer an instant answer at 6:40pm to a recording.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">III.</span>
+        <div>
+          <p class="qa-q">How fast can we get from 14 reviews to hundreds?</p>
+          <p class="qa-a">The first batch of new reviews shows up within the first two weeks. A documented two-bay shop went from 14 reviews to 260 at 4.8&#9733; in six months, moving from #7 to #2 in the map pack. The engine fires a request after every closed ticket &mdash; you stop relying on the one customer in a hundred who reviews unprompted.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">IV.</span>
+        <div>
+          <p class="qa-q">We&rsquo;re a dealership, not a corner shop. Does this scale?</p>
+          <p class="qa-a">Yes &mdash; the leaks are bigger at your scale. 43.2% of dealership sales leads are mishandled and 60% of service calls go unanswered at peak, which is why a single rooftop leaks into seven figures. Automated speed-to-lead and 24/7 answering do the grunt work of a $180K/yr BDC team, log every lead, and never sleep &mdash; sales floor and service drive both.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">V.</span>
+        <div>
+          <p class="qa-q">Is there a long-term contract?</p>
+          <p class="qa-a">No. Month-to-month after the initial setup. You own everything we build &mdash; your website, your phone number, your customer list, your review profiles. We earn your business every month with results you can measure on a dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
+  <div class="container">
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Ready to Stop Handing Cars to the Competition?</span>
+    <h2 class="cta-title reveal">Get a Free Audit<br><em>of Your Shop</em></h2>
+    <p class="cta-sub reveal">We&rsquo;ll dig into your real numbers &mdash; missed-call rate, review count and recency, average repair order, no-show rate, Google ranking &mdash; and tell you exactly where your biggest leaks are and what fixing them is worth. No pitch, no commitment. Just the math.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Book My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
+    </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your shop.</p>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -440,34 +370,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

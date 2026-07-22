@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why Top Shelf | Top Shelf Business Solutions</title>
-  <meta name="description" content="The other guys lock you into contracts, hold your assets hostage, and hide behind jargon. We do the opposite: you own everything, no long contracts, plain-English reporting. Here's the contrast — and 10 questions to ask any agency." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Top Shelf | Top Shelf Business Solutions</title>
+<meta name="description" content="The other guys lock you into contracts, hold your assets hostage, and hide behind jargon. We do the opposite: you own everything, no long contracts, plain-English reporting. Here's the contrast — and 10 questions to ask any agency.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -44,120 +44,99 @@
         </div>
       </div>
       <a href="pricing.html" class="nav-link">Pricing</a>
-      <a href="why-us.html" class="nav-link active">Why Us</a>
+      <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container">
-    <p class="subhead text-gold mb-16">Why Top Shelf</p>
-    <h1 class="display-xl mb-24">
-      You've Been Burned<br>
-      <span class="text-gold">by an Agency Before.</span>
-    </h1>
-    <p class="hero-sub">
-      Maybe it was Hibu. Maybe Thryv. You signed a contract, they built you a website you didn't really own, the reporting was a wall of numbers that meant nothing, and when you tried to leave you found out they held the keys. We built Top Shelf to be the exact opposite of that experience.
-    </p>
-    <div class="cta-actions" style="margin-top:2.5rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Audit</a>
-      <a href="#compare" class="btn btn-outline btn-lg">Them vs. Top Shelf</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15.5" r="4"/><path d="M11 12.5 19.5 4M17 6.5l2 2M14.5 9l2 2"/></svg></span>
+    <span class="eyebrow reveal">Why Top Shelf</span>
+    <h1 class="display display-lg reveal">You&rsquo;ve Been Burned <em>by an Agency Before.</em></h1>
+    <p class="page-hero-sub reveal">Maybe it was Hibu. Maybe Thryv. You signed a contract, they built you a website you didn&rsquo;t really own, the reporting was a wall of numbers that meant nothing, and when you tried to leave you found out they held the keys. We built Top Shelf to be the exact opposite of that experience.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="#compare" class="btn btn-line">Them vs. Top Shelf</a>
     </div>
   </div>
 </section>
 
-<!-- THE COMPETITOR CONTRAST -->
-<section class="section">
-  <div class="container" style="max-width:820px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">The Problem With the Other Guys</p>
-      <h2 class="display-md mb-24">Lock-In, Opacity, and Hostage Assets</h2>
+<!-- ============================ THE COMPETITOR CONTRAST ============================ -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">The Problem With the Other Guys</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Lock-In, Opacity, and <em>Hostage Assets</em></h2>
     </div>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;margin-bottom:1.4rem;">
-      The big all-in-one marketing companies built their business model on friction. They lock you into long contracts because they know their results won't keep you on their own. They build your website on their platform — so the site, the domain, and sometimes even your Google profile technically belong to them. When you decide to leave, you don't leave with anything. You start over from scratch, and they're betting that's painful enough that you'll just keep paying.
-    </p>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;">
-      Then there's the reporting. You get a dashboard full of impressions, sessions, and vanity metrics that never answer the only question that matters: <em>did this make me money?</em> The jargon isn't an accident — it's cover. If you can't tell whether it's working, you can't tell whether to cancel. We think that's backwards. You should be able to see exactly what every dollar does, own everything we build, and stay only because it's working.
-    </p>
+    <div class="two-col">
+      <p class="reveal">The big all-in-one marketing companies built their business model on friction. They lock you into long contracts because they know their results won&rsquo;t keep you on their own. They build your website on their platform &mdash; so the site, the domain, and sometimes even your Google profile technically belong to them. When you decide to leave, you don&rsquo;t leave with anything. You start over from scratch, and they&rsquo;re betting that&rsquo;s painful enough that you&rsquo;ll just keep paying.</p>
+      <p class="reveal">Then there&rsquo;s the reporting. You get a dashboard full of impressions, sessions, and vanity metrics that never answer the only question that matters: <em style="font-style:italic;color:var(--gold-bright)">did this make me money?</em> The jargon isn&rsquo;t an accident &mdash; it&rsquo;s cover. If you can&rsquo;t tell whether it&rsquo;s working, you can&rsquo;t tell whether to cancel. We think that&rsquo;s backwards. You should be able to see exactly what every dollar does, own everything we build, and stay only because it&rsquo;s working.</p>
+    </div>
   </div>
 </section>
 
-<!-- THEM VS TOP SHELF TABLE -->
-<section id="compare" class="section bg-charcoal">
+<!-- ============================ THEM VS TOP SHELF TABLE ============================ -->
+<section id="compare" class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Side by Side</p>
-      <h2 class="display-md mb-24">The Other Guys vs. Top Shelf</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">Side by Side</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">The Other Guys vs. <em>Top Shelf</em></h2>
     </div>
-    <div style="overflow-x:auto;">
-      <table class="compare-table">
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="cmp">
         <thead>
           <tr>
-            <th style="min-width:220px;">The Question</th>
-            <th>The Other Guys<br><span style="color:#ef4444;">(Hibu / Thryv-style)</span></th>
-            <th>Top Shelf<br><span style="color:var(--gold);">We Solve. You Grow.</span></th>
+            <th style="min-width:240px;">The Question</th>
+            <th>The Other Guys (Hibu / Thryv-style)</th>
+            <th class="col-us">Top Shelf &mdash; We Solve. You Grow.</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="good">Who owns your website &amp; domain?</td>
-            <td class="bad">They do — built on their platform</td>
-            <td class="text-gold">You do — from day one</td>
+            <td>Who owns your website &amp; domain?</td>
+            <td>They do &mdash; built on their platform</td>
+            <td class="col-us">You do &mdash; from day one</td>
           </tr>
           <tr>
-            <td class="good">Who owns your customer list &amp; data?</td>
-            <td class="bad">Locked in their system</td>
-            <td class="text-gold">Yours, exportable anytime</td>
+            <td>Who owns your customer list &amp; data?</td>
+            <td>Locked in their system</td>
+            <td class="col-us">Yours, exportable anytime</td>
           </tr>
           <tr>
-            <td class="good">Contract length</td>
-            <td class="bad">12-month lock-in + termination fees</td>
-            <td class="text-gold">Month-to-month, cancel anytime</td>
+            <td>Contract length</td>
+            <td>12-month lock-in + termination fees</td>
+            <td class="col-us">Month-to-month, cancel anytime</td>
           </tr>
           <tr>
-            <td class="good">What happens if you leave?</td>
-            <td class="bad">You start over with nothing</td>
-            <td class="text-gold">You take every asset with you</td>
+            <td>What happens if you leave?</td>
+            <td>You start over with nothing</td>
+            <td class="col-us">You take every asset with you</td>
           </tr>
           <tr>
-            <td class="good">Reporting</td>
-            <td class="bad">Jargon dashboards, vanity metrics</td>
-            <td class="text-gold">Plain English — money in, money recovered</td>
+            <td>Reporting</td>
+            <td>Jargon dashboards, vanity metrics</td>
+            <td class="col-us">Plain English &mdash; money in, money recovered</td>
           </tr>
           <tr>
-            <td class="good">Number of vendors to juggle</td>
-            <td class="bad">Often several that don't talk</td>
-            <td class="text-gold">One integrated stack, one point of contact</td>
+            <td>Number of vendors to juggle</td>
+            <td>Often several that don&rsquo;t talk</td>
+            <td class="col-us">One integrated stack, one point of contact</td>
           </tr>
           <tr>
-            <td class="good">Setup fee</td>
-            <td class="bad">Often thousands up front</td>
-            <td class="text-gold">Included in every plan</td>
+            <td>Setup fee</td>
+            <td>Often thousands up front</td>
+            <td class="col-us">Included in every plan</td>
           </tr>
           <tr>
-            <td class="good">Why they keep you</td>
-            <td class="bad">The contract and the hostage assets</td>
-            <td class="text-gold">Results you can measure every month</td>
+            <td>Why they keep you</td>
+            <td>The contract and the hostage assets</td>
+            <td class="col-us">Results you can measure every month</td>
           </tr>
         </tbody>
       </table>
@@ -165,189 +144,187 @@
   </div>
 </section>
 
-<!-- THE 3 PROMISES -->
-<section class="section">
+<!-- ============================ THE 3 PROMISES ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">The Top Shelf Standard</p>
-      <h2 class="display-md mb-24">Three Promises We Keep</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">The Top Shelf Standard</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Three Promises We <em>Keep</em></h2>
     </div>
-    <div class="promises-grid">
-      <div class="promise-card">
-        <span class="promise-icon">🔑</span>
+    <div class="promises">
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15.5" r="4"/><path d="M11 12.5 19.5 4M17 6.5l2 2M14.5 9l2 2"/></svg></span>
         <p class="promise-title">You Own Everything</p>
-        <p class="promise-body">Your website, domain, Google Business Profile, phone number, customer list, review profiles, and ad accounts — every asset we build or manage is yours from day one. If you ever leave, you take it all with you. No hostages, ever.</p>
+        <p class="promise-body">Your website, domain, Google Business Profile, phone number, customer list, review profiles, and ad accounts &mdash; every asset we build or manage is yours from day one. If you ever leave, you take it all with you. No hostages, ever.</p>
       </div>
-      <div class="promise-card">
-        <span class="promise-icon">🤝</span>
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 11.5 6 8.3c.5-.5 1.3-.6 1.9-.2l3 2"/><path d="M21.5 11.5 18 8.3c-.5-.5-1.3-.6-1.9-.2l-3 2-2.6 2.1c-.6.5-.6 1.4 0 1.9.5.4 1.2.4 1.7 0l1.9-1.5"/><path d="M10.9 12.1l2.4 2c.5.4 1.3.4 1.8-.1.5-.5.5-1.2.1-1.7"/><path d="M2.5 11.5v6M21.5 11.5v6"/></svg></span>
         <p class="promise-title">No Long Contracts</p>
-        <p class="promise-body">We earn your business every single month. No 12-month lock-ins, no early-termination fees, no holding your assets ransom. We stay because we perform — and that's the only reason we ever want you to.</p>
+        <p class="promise-body">We earn your business every single month. No 12-month lock-ins, no early-termination fees, no holding your assets ransom. We stay because we perform &mdash; and that&rsquo;s the only reason we ever want you to.</p>
       </div>
-      <div class="promise-card">
-        <span class="promise-icon">📊</span>
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="19" y1="20" x2="19" y2="15"/><line x1="2.5" y1="20" x2="21.5" y2="20"/></svg></span>
         <p class="promise-title">Plain-English Reporting</p>
-        <p class="promise-body">No jargon dashboards. You see calls captured, leads followed up, reviews earned, and money recovered — in plain language. You'll always know exactly what every dollar we spend does for your business.</p>
+        <p class="promise-body">No jargon dashboards. You see calls captured, leads followed up, reviews earned, and money recovered &mdash; in plain language. You&rsquo;ll always know exactly what every dollar we spend does for your business.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OUR APPROACH -->
-<section class="section bg-charcoal">
-  <div class="container" style="max-width:820px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Our Approach</p>
-      <h2 class="display-md mb-24">We Fix the Leak That's Costing You the Most — First</h2>
-    </div>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;margin-bottom:1.4rem;">
-      We don't start by selling you a bundle. We start with a free audit of your real numbers — your missed-call rate, your review count and recency, your Google ranking, your follow-up, your no-show rate — and we tell you exactly which leaks are costing you the most. Then we fix those first. No bloated retainers, no software you'll never use, no juggling three tools that don't talk to each other.
-    </p>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;">
-      Everything we build is one integrated stack — website, SEO, AI phone, CRM, POS, marketing, and reviews — so each piece feeds the next. Get found, make a great impression, capture every lead, turn customers into reviews, rank even higher. That's the flywheel, and we run it for you so you make more while doing less.
-    </p>
-  </div>
-</section>
-
-<!-- 10 QUESTIONS -->
-<section class="section">
-  <div class="container" style="max-width:900px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Before You Sign Anything</p>
-      <h2 class="display-md mb-24">10 Questions to Ask Any Agency</h2>
-      <p class="text-muted" style="max-width:620px;margin:0 auto;line-height:1.7;">
-        Ask us. Ask the other guys. The answers tell you everything. (We've put our answer under each one.)
-      </p>
-    </div>
-
-    <div class="benefit-chain" style="margin-top:2.5rem;">
-      <div class="benefit-row">
-        <div class="benefit-icon">1</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Do I own my website and domain outright?</div>
-          <div class="benefit-body">If you leave, do you keep the site or does it disappear?</div>
-          <div class="benefit-result">Top Shelf: Yes — it's in your name from day one.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">2</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Do I own my customer list and can I export it anytime?</div>
-          <div class="benefit-body">Your customer data is your most valuable asset. Who controls it?</div>
-          <div class="benefit-result">Top Shelf: Yours, exportable anytime, no permission needed.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">3</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Is there a long-term contract or early-termination fee?</div>
-          <div class="benefit-body">Are they betting on results or on lock-in to keep you?</div>
-          <div class="benefit-result">Top Shelf: Month-to-month. No termination fee. Ever.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">4</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Who controls my Google Business Profile and phone number?</div>
-          <div class="benefit-body">These drive your local ranking and every call. Are they in your name?</div>
-          <div class="benefit-result">Top Shelf: You own both — we optimize, you keep the keys.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">5</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Can you show me reporting that ties to actual revenue?</div>
-          <div class="benefit-body">Not impressions and sessions — money in, jobs booked, money recovered.</div>
-          <div class="benefit-result">Top Shelf: Plain-English dashboard, tied to dollars.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">6</div>
-        <div class="benefit-content">
-          <div class="benefit-title">What exactly is included, and what costs extra?</div>
-          <div class="benefit-body">Watch for setup fees, per-feature add-ons, and hidden junk charges.</div>
-          <div class="benefit-result">Top Shelf: Setup included; only pass-through telecom is extra.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">7</div>
-        <div class="benefit-content">
-          <div class="benefit-title">How fast do you respond to leads and calls on my behalf?</div>
-          <div class="benefit-body">78% of buyers pick the first responder. Minutes matter.</div>
-          <div class="benefit-result">Top Shelf: AI answers 24/7; leads texted back in seconds.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">8</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Will I have one point of contact or a call center?</div>
-          <div class="benefit-body">Who actually picks up when something needs fixing?</div>
-          <div class="benefit-result">Top Shelf: One integrated stack, one team that knows you.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">9</div>
-        <div class="benefit-content">
-          <div class="benefit-title">Do you specialize in businesses like mine?</div>
-          <div class="benefit-body">Generic solutions miss the leaks specific to your industry.</div>
-          <div class="benefit-result">Top Shelf: Built for bars, dental, home services &amp; auto.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-icon">10</div>
-        <div class="benefit-content">
-          <div class="benefit-title">What happens to everything if I decide to leave?</div>
-          <div class="benefit-body">The most important question — and the one they hate most.</div>
-          <div class="benefit-result">Top Shelf: You walk away with every asset. No hostages.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CROSS-LINKS -->
-<section class="section-sm bg-charcoal">
+<!-- ============================ OUR APPROACH ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="crosslink-strip">
-      <div class="crosslink-label">See Exactly What You'd Get</div>
-      <div class="crosslink-items">
-        <a href="pricing.html" class="crosslink-item"><span>💵</span> Pricing &amp; Plans</a>
-        <a href="solution-websites-seo.html" class="crosslink-item"><span>🌐</span> Websites &amp; SEO</a>
-        <a href="solution-ai-phone.html" class="crosslink-item"><span>📞</span> AI Phone &amp; Chat</a>
-        <a href="solution-crm.html" class="crosslink-item"><span>🔄</span> CRM &amp; Follow-Up</a>
-        <a href="solution-marketing.html" class="crosslink-item"><span>⭐</span> Marketing &amp; Reviews</a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Our Approach</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">We Fix the Leak That&rsquo;s Costing You <em>the Most &mdash; First</em></h2>
+    </div>
+    <div class="two-col">
+      <p class="reveal">We don&rsquo;t start by selling you a bundle. We start with a free audit of your real numbers &mdash; your missed-call rate, your review count and recency, your Google ranking, your follow-up, your no-show rate &mdash; and we tell you exactly which leaks are costing you the most. Then we fix those first. No bloated retainers, no software you&rsquo;ll never use, no juggling three tools that don&rsquo;t talk to each other.</p>
+      <p class="reveal">Everything we build is one integrated stack &mdash; website, SEO, AI phone, CRM, POS, marketing, and reviews &mdash; so each piece feeds the next. Get found, make a great impression, capture every lead, turn customers into reviews, rank even higher. That&rsquo;s the flywheel, and we run it for you so you make more while doing less.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 10 QUESTIONS ============================ -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Before You Sign Anything</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">10 Questions to Ask <em>Any Agency</em></h2>
+      <p class="reveal">Ask us. Ask the other guys. The answers tell you everything. (We&rsquo;ve put our answer under each one.)</p>
+    </div>
+    <div class="qa-list">
+      <div class="qa-row reveal">
+        <span class="qa-num">01</span>
+        <div>
+          <p class="qa-q">Do I own my website and domain outright?</p>
+          <p class="qa-a">If you leave, do you keep the site or does it disappear? <br><span style="color:var(--gold)">Top Shelf: Yes &mdash; it&rsquo;s in your name from day one.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">02</span>
+        <div>
+          <p class="qa-q">Do I own my customer list and can I export it anytime?</p>
+          <p class="qa-a">Your customer data is your most valuable asset. Who controls it? <br><span style="color:var(--gold)">Top Shelf: Yours, exportable anytime, no permission needed.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">03</span>
+        <div>
+          <p class="qa-q">Is there a long-term contract or early-termination fee?</p>
+          <p class="qa-a">Are they betting on results or on lock-in to keep you? <br><span style="color:var(--gold)">Top Shelf: Month-to-month. No termination fee. Ever.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">04</span>
+        <div>
+          <p class="qa-q">Who controls my Google Business Profile and phone number?</p>
+          <p class="qa-a">These drive your local ranking and every call. Are they in your name? <br><span style="color:var(--gold)">Top Shelf: You own both &mdash; we optimize, you keep the keys.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">05</span>
+        <div>
+          <p class="qa-q">Can you show me reporting that ties to actual revenue?</p>
+          <p class="qa-a">Not impressions and sessions &mdash; money in, jobs booked, money recovered. <br><span style="color:var(--gold)">Top Shelf: Plain-English dashboard, tied to dollars.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">06</span>
+        <div>
+          <p class="qa-q">What exactly is included, and what costs extra?</p>
+          <p class="qa-a">Watch for setup fees, per-feature add-ons, and hidden junk charges. <br><span style="color:var(--gold)">Top Shelf: Setup included; only pass-through telecom is extra.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">07</span>
+        <div>
+          <p class="qa-q">How fast do you respond to leads and calls on my behalf?</p>
+          <p class="qa-a">78% of buyers pick the first responder. Minutes matter. <br><span style="color:var(--gold)">Top Shelf: AI answers 24/7; leads texted back in seconds.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">08</span>
+        <div>
+          <p class="qa-q">Will I have one point of contact or a call center?</p>
+          <p class="qa-a">Who actually picks up when something needs fixing? <br><span style="color:var(--gold)">Top Shelf: One integrated stack, one team that knows you.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">09</span>
+        <div>
+          <p class="qa-q">Do you specialize in businesses like mine?</p>
+          <p class="qa-a">Generic solutions miss the leaks specific to your industry. <br><span style="color:var(--gold)">Top Shelf: Built for bars, dental, home services &amp; auto.</span></p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">10</span>
+        <div>
+          <p class="qa-q">What happens to everything if I decide to leave?</p>
+          <p class="qa-a">The most important question &mdash; and the one they hate most. <br><span style="color:var(--gold)">Top Shelf: You walk away with every asset. No hostages.</span></p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ CROSS-LINKS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <p class="subhead text-gold mb-16">Free. No Obligation. No Pressure.</p>
-    <h2 class="cta-title">See the Difference for Yourself</h2>
-    <p class="cta-sub">
-      Get a free audit of your business. We'll show you where you're leaking money and exactly what we'd do about it — no contract, no jargon, and you own everything from day one.
-    </p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get My Free Audit</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <div class="section-head">
+      <span class="eyebrow reveal">See Exactly What You&rsquo;d Get</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Explore the <em>Stack</em></h2>
+    </div>
+    <div class="mini-grid cols-4">
+      <a href="pricing.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="11" rx="1.8"/><circle cx="12" cy="12" r="2.6"/><line x1="5.5" y1="9.5" x2="5.5" y2="9.5"/><line x1="18.5" y1="14.5" x2="18.5" y2="14.5"/></svg></span>
+        <p class="mini-card-title">Pricing &amp; Plans</p>
+        <p class="mini-card-body">Flat monthly rate, no surprises. See exactly what each plan includes.</p>
+        <span class="mini-card-link tlink">See pricing <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-websites-seo.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <p class="mini-card-title">Websites &amp; SEO</p>
+        <p class="mini-card-body">Get found in the Map Pack and convert with a fast, mobile-first site.</p>
+        <span class="mini-card-link tlink">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-ai-phone.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
+        <p class="mini-card-title">AI Phone &amp; Chat</p>
+        <p class="mini-card-body">Never miss another call or web lead &mdash; answered 24/7, nights and weekends.</p>
+        <span class="mini-card-link tlink">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-crm.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <p class="mini-card-title">CRM &amp; Follow-Up</p>
+        <p class="mini-card-body">Catch every lead, text back in seconds, and reactivate past customers.</p>
+        <span class="mini-card-link tlink">Learn more <span class="arr">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
+  <div class="container">
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Free. No Obligation. No Pressure.</span>
+    <h2 class="cta-title reveal">See the <em>Difference</em><br>for Yourself</h2>
+    <p class="cta-sub reveal">Get a free audit of your business. We&rsquo;ll show you where you&rsquo;re leaking money and exactly what we&rsquo;d do about it &mdash; no contract, no jargon, and you own everything from day one.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
+    </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your business.</p>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -375,34 +352,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

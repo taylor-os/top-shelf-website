@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>POS &amp; Inventory | Top Shelf Business Solutions</title>
-  <meta name="description" content="Stop guessing what's on the shelf. Real-time inventory, automated reordering, lower processing fees, and built-in loyalty turn your register into a profit engine. Poor inventory alone costs 8–12% of revenue." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POS &amp; Inventory | Top Shelf Business Solutions</title>
+<meta name="description" content="Stop guessing what's on the shelf. Real-time inventory, automated reordering, lower processing fees, and built-in loyalty turn your register into a profit engine. Poor inventory alone costs 8–12% of revenue.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -46,249 +46,212 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container">
-    <p class="subhead text-gold mb-16">POS &amp; Inventory</p>
-    <h1 class="display-xl mb-24">
-      Stop Guessing<br>
-      <span class="text-gold">What's on the Shelf.</span>
-    </h1>
-    <p class="hero-sub">
-      A dumb register plus a spreadsheet for inventory is a money leak you can't see. Product walks out the door as shrinkage, cash sits trapped in dead stock, you overpay on every card swipe, and you have no idea which items actually make you money. We turn your register into a profit engine — real-time inventory, automated reordering, lower fees, and loyalty built in.
-    </p>
-    <div class="cta-actions" style="margin-top:2.5rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Audit</a>
-      <a href="#what-we-do" class="btn btn-outline btn-lg">See What We Do</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
+    <span class="eyebrow reveal">POS &amp; Inventory</span>
+    <h1 class="display display-lg reveal">Stop Guessing <em>What&rsquo;s on the Shelf</em></h1>
+    <p class="page-hero-sub reveal">A dumb register plus a spreadsheet for inventory is a money leak you can&rsquo;t see. Product walks out the door as shrinkage, cash sits trapped in dead stock, you overpay on every card swipe, and you have no idea which items actually make you money. We turn your register into a profit engine &mdash; real-time inventory, automated reordering, lower fees, and loyalty built in.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="#what-we-do" class="btn btn-line">See What We Do</a>
     </div>
   </div>
 </section>
 
-<!-- STAT TILES -->
-<section class="section-sm bg-charcoal">
+<!-- ============================ STAT STRIP ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="grid-4">
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">8–12%</div>
-        <div class="stat-tile-label">Of annual revenue lost to poor inventory management <span style="font-size:0.7rem;">(industry estimate)</span></div>
+    <div class="stat-strip">
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num">8&ndash;12%</span>
+        <p class="stat-cell-label">Of annual revenue lost to poor inventory management (industry estimate)</p>
       </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">~20%</div>
-        <div class="stat-tile-label">Of bar liquor inventory never converts to a sale (range 15–30%)</div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num">~20%</span>
+        <p class="stat-cell-label">Of bar liquor inventory never converts to a sale (range 15&ndash;30%)</p>
       </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">65%</div>
-        <div class="stat-tile-label">Of customers go to a competitor when a product is out of stock</div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="65" data-suffix="%">65%</span>
+        <p class="stat-cell-label">Of customers go to a competitor when a product is out of stock</p>
       </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">2.5–3.5%</div>
-        <div class="stat-tile-label">Effective card-processing rate the typical small business overpays</div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num">2.5&ndash;3.5%</span>
+        <p class="stat-cell-label">Effective card-processing rate the typical small business overpays</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THE COST -->
-<section class="section">
-  <div class="container" style="max-width:820px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">What It's Costing You</p>
-      <h2 class="display-md mb-24">The Leaks You Can't See on a Register</h2>
+<!-- ============================ THE COST ============================ -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">What It&rsquo;s Costing You</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">The Leaks You Can&rsquo;t See <em>on a Register</em></h2>
     </div>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;margin-bottom:1.4rem;">
-      Roughly 46% of small-to-mid businesses either don't track inventory or track it manually on spreadsheets and paper — and the average store's records are only about 65% accurate (industry estimates). That gap is the daylight between what the system says you have and what's actually on the shelf. Shrinkage from theft, overpour, and paperwork error runs 1.6% of sales industry-wide, and for bars it hits ~20% of liquor. When you run out of a product, 65% of customers go to a competitor; when you over-order, carrying costs run 20–35% of that inventory's value per year in cash you can't use.
-    </p>
-    <p style="color:var(--text);line-height:1.85;font-size:1.05rem;">
-      Then there's the register itself. U.S. merchants paid a record $187.2 billion in card-processing fees in 2024, and the typical small business pays an effective 2.5–3.5% because it's on flat-rate pricing with no leverage — plus $500–$2,000/yr in hidden junk fees buried in the statement. Add it up and poor inventory management alone is estimated to cost small businesses 8–12% of annual revenue. Most of it is invisible until someone connects the register to the shelf.
-    </p>
+    <p class="lead reveal" style="margin-bottom:1.6rem">Roughly 46% of small-to-mid businesses either don&rsquo;t track inventory or track it manually on spreadsheets and paper &mdash; and the average store&rsquo;s records are only about 65% accurate (industry estimates). That gap is the daylight between what the system says you have and what&rsquo;s actually on the shelf. Shrinkage from theft, overpour, and paperwork error runs 1.6% of sales industry-wide, and for bars it hits ~20% of liquor. When you run out of a product, 65% of customers go to a competitor; when you over-order, carrying costs run 20&ndash;35% of that inventory&rsquo;s value per year in cash you can&rsquo;t use.</p>
+    <p class="lead reveal">Then there&rsquo;s the register itself. U.S. merchants paid a record $187.2 billion in card-processing fees in 2024, and the typical small business pays an effective 2.5&ndash;3.5% because it&rsquo;s on flat-rate pricing with no leverage &mdash; plus $500&ndash;$2,000/yr in hidden junk fees buried in the statement. Add it up and poor inventory management alone is estimated to cost small businesses 8&ndash;12% of annual revenue. Most of it is invisible until someone connects the register to the shelf.</p>
   </div>
 </section>
 
-<!-- WHAT WE DO / BENEFIT CHAINS -->
-<section id="what-we-do" class="section bg-charcoal">
+<!-- ============================ WHAT WE DO ============================ -->
+<section id="what-we-do" class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">What We Do</p>
-      <h2 class="display-md mb-24">Plug the Leaks. Automate the Counts.</h2>
-      <p class="text-muted" style="max-width:640px;margin:0 auto;line-height:1.7;">
-        Every capability below answers one question: <em>and here's what that gets you.</em>
-      </p>
+    <div class="section-head">
+      <span class="eyebrow reveal">What We Do</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Plug the Leaks. <em>Automate the Counts.</em></h2>
+      <p class="reveal">Every capability below answers one question: and here&rsquo;s what that gets you.</p>
     </div>
-
-    <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem;">
-
-      <div class="benefit-row">
-        <div class="benefit-icon">📦</div>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20.5 7.5v9L12 21 3.5 16.5v-9Z"/><polyline points="3.5,7.5 12,12 20.5,7.5"/><line x1="12" y1="12" x2="12" y2="21"/></svg></span>
         <div>
-          <div class="benefit-title">Real-Time Inventory Tracking</div>
-          <div class="benefit-body">
-            Every sale, return, and adjustment updates stock instantly, and barcode scanning replaces hand-keying. For bars, POS-linked pour tracking counts every bottle against every drink sold.
-          </div>
-          <div class="benefit-result">
-            💰 More money: connected tracking moves accuracy from ~65% toward 97%+; real cases cut merchandise shrink from 10–15% to ~6%. 🤖 Automation: software cuts inventory-taking time up to 80% — the midnight count disappears. 😌 Less headache: barcode scanning means 90%+ fewer stock-record errors.
-          </div>
+          <p class="feature-row-title">Real-Time Inventory Tracking</p>
+          <p class="feature-row-body">Every sale, return, and adjustment updates stock instantly, and barcode scanning replaces hand-keying. For bars, POS-linked pour tracking counts every bottle against every drink sold.</p>
+          <span class="feature-row-result">More money: connected tracking moves accuracy from ~65% toward 97%+; real cases cut merchandise shrink from 10&ndash;15% to ~6%. Automation: software cuts inventory-taking time up to 80% &mdash; the midnight count disappears. Less headache: barcode scanning means 90%+ fewer stock-record errors.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🔄</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
         <div>
-          <div class="benefit-title">Automated Reordering &amp; Low-Stock Alerts</div>
-          <div class="benefit-body">
-            Set a reorder point and the system flags or reorders before you run out — and stops you from over-ordering the slow movers.
-          </div>
-          <div class="benefit-result">
-            👥 More customers: never lose the sale — automated triggers cut stockout frequency sharply, and stockouts are what send 65% of customers to a competitor. 📉 Lower overhead: order to real demand, freeing the cash trapped in the 20–35%-of-value carrying cost of dead stock.
-          </div>
+          <p class="feature-row-title">Automated Reordering &amp; Low-Stock Alerts</p>
+          <p class="feature-row-body">Set a reorder point and the system flags or reorders before you run out &mdash; and stops you from over-ordering the slow movers.</p>
+          <span class="feature-row-result">More customers: never lose the sale &mdash; automated triggers cut stockout frequency sharply, and stockouts are what send 65% of customers to a competitor. Lower overhead: order to real demand, freeing the cash trapped in the 20&ndash;35%-of-value carrying cost of dead stock.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">💳</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
         <div>
-          <div class="benefit-title">Lower Processing Fees + Faster Checkout</div>
-          <div class="benefit-body">
-            We move you off padded flat-rate pricing to interchange-plus, kill the junk fees, and offer surcharge or cash-discount options — with one integrated system for the sale and the payment.
-          </div>
-          <div class="benefit-result">
-            💰 More money: 15–30% off processing is realistic in the first billing cycle — roughly $2,250–$4,500/yr saved on $500K in card volume, plus $500–$2,000/yr in eliminated junk fees. 📉 Lower overhead: integrated payments cut ~5 hours/week of manual reconciliation. ⚡ Faster: handheld integrated POS turns tables 15–20% faster.
-          </div>
+          <p class="feature-row-title">Lower Processing Fees + Faster Checkout</p>
+          <p class="feature-row-body">We move you off padded flat-rate pricing to interchange-plus, kill the junk fees, and offer surcharge or cash-discount options &mdash; with one integrated system for the sale and the payment.</p>
+          <span class="feature-row-result">More money: 15&ndash;30% off processing is realistic in the first billing cycle &mdash; roughly $2,250&ndash;$4,500/yr saved on $500K in card volume, plus $500&ndash;$2,000/yr in eliminated junk fees. Lower overhead: integrated payments cut ~5 hours/week of manual reconciliation. Faster: handheld integrated POS turns tables 15&ndash;20% faster.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">📈</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,17 9.5,10.5 14,15 21,7"/><polyline points="15,7 21,7 21,13"/></svg></span>
         <div>
-          <div class="benefit-title">Sales Reporting &amp; Analytics</div>
-          <div class="benefit-body">
-            Real-time dashboards on what sells, what's profitable, and when — so you stop reordering slow movers and under-ordering winners.
-          </div>
-          <div class="benefit-result">
-            💰 More margin: product-mix optimization off POS data has delivered 3–8% revenue lifts and up to 5% cost-of-goods cuts (~$50K/yr on $1M in sales, industry estimates). 📉 Lower overhead: data-driven scheduling trims labor cost 2–5% without hurting service. 😌 Less guesswork on every reorder.
-          </div>
+          <p class="feature-row-title">Sales Reporting &amp; Analytics</p>
+          <p class="feature-row-body">Real-time dashboards on what sells, what&rsquo;s profitable, and when &mdash; so you stop reordering slow movers and under-ordering winners.</p>
+          <span class="feature-row-result">More margin: product-mix optimization off POS data has delivered 3&ndash;8% revenue lifts and up to 5% cost-of-goods cuts (~$50K/yr on $1M in sales, industry estimates). Lower overhead: data-driven scheduling trims labor cost 2&ndash;5% without hurting service. Less guesswork on every reorder.</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🎁</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="9.5" width="17" height="11" rx="1.3"/><rect x="2.5" y="6.3" width="19" height="3.6" rx="1"/><line x1="12" y1="6.3" x2="12" y2="20.5"/><path d="M12 6.3c0-2.2-1.6-3.8-3.2-3.8-1.4 0-2.3 1-2.3 2.1 0 1 1 1.7 2.3 1.7Z"/><path d="M12 6.3c0-2.2 1.6-3.8 3.2-3.8 1.4 0 2.3 1 2.3 2.1 0 1-1 1.7-2.3 1.7Z"/></svg></span>
         <div>
-          <div class="benefit-title">Built-In Loyalty, Online Ordering &amp; QuickBooks Sync</div>
-          <div class="benefit-body">
-            Loyalty funded by the data you already capture at checkout, an online store that shares one inventory and customer list, and automatic sync to your books.
-          </div>
-          <div class="benefit-result">
-            💰 More repeat revenue: a 5% retention lift raises profit 25–95%, and loyalty customers spend 46% more and visit 57% more often (Square data). 👥 More valuable customers: online orders run ~23% larger checks. 📉 Lower overhead: 10–20 hours/week of manual bookkeeping eliminated.
-          </div>
+          <p class="feature-row-title">Built-In Loyalty, Online Ordering &amp; QuickBooks Sync</p>
+          <p class="feature-row-body">Loyalty funded by the data you already capture at checkout, an online store that shares one inventory and customer list, and automatic sync to your books.</p>
+          <span class="feature-row-result">More repeat revenue: a 5% retention lift raises profit 25&ndash;95%, and loyalty customers spend 46% more and visit 57% more often (Square data). More valuable customers: online orders run ~23% larger checks. Lower overhead: 10&ndash;20 hours/week of manual bookkeeping eliminated.</span>
         </div>
       </div>
-
     </div>
-    <p style="text-align:center;margin-top:2.5rem;font-size:0.95rem;color:var(--muted);">
-      Properly implemented POS + inventory systems are commonly cited at <span class="text-gold">300–500% first-year ROI</span>, most reaching positive ROI in 3–6 months (industry estimates).
-    </p>
+    <p class="pricing-note reveal">Properly implemented POS + inventory systems are commonly cited at <a href="pricing.html">300&ndash;500% first-year ROI</a>, most reaching positive ROI in 3&ndash;6 months (industry estimates).</p>
   </div>
 </section>
 
-<!-- BEFORE / AFTER ACROSS INDUSTRIES -->
-<section class="section">
+<!-- ============================ BEFORE / AFTER ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Across the Industries We Serve</p>
-      <h2 class="display-md mb-32">Before &amp; After, In Plain English</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">Across the Industries We Serve</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Before &amp; After, <em>In Plain English</em></h2>
     </div>
-
-    <div class="before-after">
-      <div class="ba-before">
-        <div class="ba-label">Before Top Shelf</div>
-        <div class="ba-title">The Register That Only Rings Sales</div>
-        <ul class="ba-items">
-          <li class="ba-item">Bar: keg yield in the 50s, pour cost near 13%, ~20% of liquor lost to overpour and theft, 2am bottle counts.</li>
-          <li class="ba-item">Restaurant: no product-mix data, tables turning slow, no idea which menu items bleed margin.</li>
-          <li class="ba-item">Auto/Tire: parts and tire inventory tracked by memory, average repair order stuck low, no DVI.</li>
-          <li class="ba-item">Retail: 10–15% merchandise shrink, once-a-year store-closing count, overselling online.</li>
-        </ul>
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">Before Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.2rem 0 1.4rem">The Register That Only Rings Sales</h3>
+        <div class="feature-list" style="border-top:none">
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Bar: keg yield in the 50s, pour cost near 13%, ~20% of liquor lost to overpour and theft, 2am bottle counts.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Restaurant: no product-mix data, tables turning slow, no idea which menu items bleed margin.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Auto/Tire: parts and tire inventory tracked by memory, average repair order stuck low, no DVI.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Retail: 10&ndash;15% merchandise shrink, once-a-year store-closing count, overselling online.</p></div>
+        </div>
       </div>
-      <div class="ba-after">
-        <div class="ba-label">After Top Shelf</div>
-        <div class="ba-title">The Register as a Profit Engine</div>
-        <ul class="ba-items">
-          <li class="ba-item">Bar: one brewpub took keg yield from 54.6% to 85% and pour cost from 12.8% to 7.6% in three weeks.</li>
-          <li class="ba-item">Restaurant: Toast handhelds case — +$500K annual revenue, tables turning 15–20% faster.</li>
-          <li class="ba-item">Auto/Tire: Tekmetric shop went from $583 to $1,000+ average repair order; parts lookup saves ~15 min/RO.</li>
-          <li class="ba-item">Retail: an 80-store chain cut cash shrink from ~6% to 1% and merch shrink from 10–15% to ~6%.</li>
-        </ul>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">After Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.2rem 0 1.4rem;color:var(--gold-bright)">The Register as a Profit Engine</h3>
+        <div class="feature-list" style="border-top:none">
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Bar: one brewpub took keg yield from 54.6% to 85% and pour cost from 12.8% to 7.6% in three weeks.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Restaurant: Toast handhelds case &mdash; +$500K annual revenue, tables turning 15&ndash;20% faster.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Auto/Tire: Tekmetric shop went from $583 to $1,000+ average repair order; parts lookup saves ~15 min/RO.</p></div>
+          <div class="feature-row" style="grid-template-columns:1fr"><p class="feature-row-body">Retail: an 80-store chain cut cash shrink from ~6% to 1% and merch shrink from 10&ndash;15% to ~6%.</p></div>
+        </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:var(--muted);">Named-customer figures are vendor-published, self-reported outcomes — real customers, not guaranteed results.</p>
+    <p class="pricing-note reveal" style="font-size:.82rem;color:var(--ink-4)">Named-customer figures are vendor-published, self-reported outcomes &mdash; real customers, not guaranteed results.</p>
   </div>
 </section>
 
-<!-- CROSS-LINKS -->
-<section class="section-sm bg-charcoal">
+<!-- ============================ CROSS-LINKS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="crosslink-strip">
-      <div class="crosslink-label">See This Work in Your Industry</div>
-      <div class="crosslink-items">
-        <a href="industry-bars.html" class="crosslink-item"><span>🍺</span> Bars &amp; Restaurants</a>
-        <a href="industry-auto.html" class="crosslink-item"><span>🚗</span> Auto &amp; Tire</a>
-        <a href="solution-crm.html" class="crosslink-item"><span>🔄</span> Pair With CRM</a>
-        <a href="solution-marketing.html" class="crosslink-item"><span>⭐</span> Pair With Marketing &amp; Reviews</a>
-        <a href="solution-websites-seo.html" class="crosslink-item"><span>🌐</span> Pair With Websites &amp; SEO</a>
-      </div>
+    <div class="section-head" style="text-align:center;max-width:none;margin-inline:auto">
+      <span class="eyebrow reveal" style="justify-content:center">See This Work in Your Industry</span>
+    </div>
+    <div class="mini-grid cols-3 reveal">
+      <a href="industry-bars.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 8.5v6.5"/><line x1="9" y1="4" x2="15" y2="4"/><line x1="8.5" y1="21" x2="15.5" y2="21"/><line x1="12" y1="19" x2="12" y2="21"/></svg></span>
+        <p class="mini-card-title">Bars &amp; Restaurants</p>
+        <p class="mini-card-body">Pour tracking and product-mix data turn margin back on.</p>
+        <span class="tlink mini-card-link">See the solution <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="industry-auto.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3.2c0-.5.2-.9.5-1.2l1.8-1.8c.3-.3.7-.5 1.2-.5h9c.5 0 .9.2 1.2.5l1.8 1.8c.3.3.5.7.5 1.2V16"/><path d="M3.3 16h17.4a.7.7 0 0 1 .7.7v1.6a.7.7 0 0 1-.7.7H3.3a.7.7 0 0 1-.7-.7v-1.6a.7.7 0 0 1 .7-.7Z"/><circle cx="7.5" cy="18.7" r="1.5"/><circle cx="16.5" cy="18.7" r="1.5"/></svg></span>
+        <p class="mini-card-title">Auto &amp; Tire</p>
+        <p class="mini-card-body">Parts tracking and DVI lift the average repair order.</p>
+        <span class="tlink mini-card-link">See the solution <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-crm.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <p class="mini-card-title">Pair With CRM</p>
+        <p class="mini-card-body">Turn checkout data into repeat visits and reactivation.</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-marketing.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <p class="mini-card-title">Pair With Marketing &amp; Reviews</p>
+        <p class="mini-card-body">Fund loyalty and win-back offers off real sales data.</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-websites-seo.html" class="mini-card">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <p class="mini-card-title">Pair With Websites &amp; SEO</p>
+        <p class="mini-card-body">Share one inventory across the register and the online store.</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
   <div class="container">
-    <p class="subhead text-gold mb-16">Free. No Obligation. No Pressure.</p>
-    <h2 class="cta-title">Get Your Free POS &amp; Fee Audit</h2>
-    <p class="cta-sub">
-      Send us a recent processing statement and we'll show you what you're overpaying, plus where inventory and shrinkage are quietly draining margin. Real numbers, whether you work with us or not.
-    </p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get My Free Audit</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Free. No Obligation. No Pressure.</span>
+    <h2 class="cta-title reveal">Get Your Free<br><em>POS &amp; Fee Audit</em></h2>
+    <p class="cta-sub reveal">Send us a recent processing statement and we&rsquo;ll show you what you&rsquo;re overpaying, plus where inventory and shrinkage are quietly draining margin. Real numbers, whether you work with us or not.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
     </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your business.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -316,34 +279,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

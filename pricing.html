@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing | Top Shelf Business Solutions</title>
-  <meta name="description" content="Flat monthly pricing, no surprises. Starter $699, Growth $1,199, Total Presence $1,997. No long contracts, you own everything, plain-English reporting. Not sure which fits? Get a free audit." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | Top Shelf Business Solutions</title>
+<meta name="description" content="Flat monthly pricing, no surprises. Starter $699, Growth $1,199, Total Presence $1,997. No long contracts, you own everything, plain-English reporting. Not sure which fits? Get a free audit.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -43,286 +43,271 @@
           <a href="solution-marketing.html">Marketing &amp; Reviews</a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link active">Pricing</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container" style="text-align:center;max-width:820px;margin:0 auto;">
-    <p class="subhead text-gold mb-16">Simple, Transparent Pricing</p>
-    <h1 class="display-xl mb-24">Flat Monthly Rate.<br><span class="text-gold">No Surprises.</span></h1>
-    <p class="hero-sub" style="margin-left:auto;margin-right:auto;">
-      Every plan includes your setup. No hidden fees, no long contracts, and you own every asset we build. Start where it makes sense and add more as you grow. Not sure which fits? Get a free audit and we'll tell you exactly what you need — and what you don't.
-    </p>
-    <div class="cta-actions" style="justify-content:center;margin-top:2rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Audit</a>
-      <a href="#compare" class="btn btn-outline btn-lg">Compare Plans</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="11" rx="1.8"/><circle cx="12" cy="12" r="2.6"/><line x1="5.5" y1="9.5" x2="5.5" y2="9.5"/><line x1="18.5" y1="14.5" x2="18.5" y2="14.5"/></svg></span>
+    <span class="eyebrow reveal">Simple, Transparent Pricing</span>
+    <h1 class="display display-lg reveal">Flat Monthly Rate. <em>No Surprises.</em></h1>
+    <p class="page-hero-sub reveal">Every plan includes your setup. No hidden fees, no long contracts, and you own every asset we build. Start where it makes sense and add more as you grow. Not sure which fits? Get a free audit and we&rsquo;ll tell you exactly what you need &mdash; and what you don&rsquo;t.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="#compare" class="btn btn-line">Compare Plans</a>
     </div>
   </div>
 </section>
 
-<!-- PRICING CARDS -->
-<section class="section">
+<!-- ============================ PRICING CARDS ============================ -->
+<section class="section rule-top">
   <div class="container">
     <div class="pricing-grid">
-      <div class="pricing-card">
-        <p class="pricing-tier">Starter</p>
+      <div class="pricing-card reveal">
         <p class="pricing-name">Starter</p>
-        <p class="pricing-price"><sup>$</sup>699<span style="font-size:1.2rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;">/mo</span></p>
-        <p class="pricing-price-label">No contract · You own everything</p>
+        <p class="pricing-price"><sup>$</sup>699<span class="pricing-price-note">/mo</span></p>
+        <p class="pricing-price-label">No contract &middot; You own everything</p>
         <div class="pricing-divider"></div>
         <div class="pricing-features">
-          <div class="pricing-feature">Professional website (mobile-first, fast, built to convert)</div>
-          <div class="pricing-feature">Google Business Profile optimization</div>
-          <div class="pricing-feature">Automated review requests after every job</div>
-          <div class="pricing-feature">Online booking &amp; lead-capture forms</div>
-          <div class="pricing-feature">Monthly plain-English dashboard</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Professional website (mobile-first, fast, built to convert)</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Google Business Profile optimization</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Automated review requests after every job</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Online booking &amp; lead-capture forms</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Monthly plain-English dashboard</div>
         </div>
-        <a href="contact.html" class="btn btn-outline w-full pricing-cta" style="justify-content:center;">Get Started →</a>
+        <a href="contact.html" class="btn btn-line w-full">Get Started</a>
       </div>
-      <div class="pricing-card featured">
+      <div class="pricing-card featured reveal">
         <span class="pricing-badge">Most Popular</span>
-        <p class="pricing-tier">Growth</p>
         <p class="pricing-name">Growth</p>
-        <p class="pricing-price"><sup>$</sup>1,199<span style="font-size:1.2rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;">/mo</span></p>
-        <p class="pricing-price-label">No contract · You own everything</p>
+        <p class="pricing-price"><sup>$</sup>1,199<span class="pricing-price-note">/mo</span></p>
+        <p class="pricing-price-label">No contract &middot; You own everything</p>
         <div class="pricing-divider"></div>
         <div class="pricing-features">
-          <div class="pricing-feature">Everything in Starter</div>
-          <div class="pricing-feature">Local SEO — rank in the Map Pack</div>
-          <div class="pricing-feature">AI phone answering, 24/7 + missed-call text-back</div>
-          <div class="pricing-feature">CRM + automated follow-up pipeline</div>
-          <div class="pricing-feature">Database reactivation campaigns</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Everything in Starter</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Local SEO &mdash; rank in the Map Pack</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>AI phone answering, 24/7 + missed-call text-back</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>CRM + automated follow-up pipeline</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Database reactivation campaigns</div>
         </div>
-        <a href="contact.html" class="btn btn-gold w-full pricing-cta" style="justify-content:center;">Get Started →</a>
+        <a href="contact.html" class="btn btn-gold w-full">Get Started</a>
       </div>
-      <div class="pricing-card">
-        <p class="pricing-tier">Total Presence</p>
+      <div class="pricing-card reveal">
         <p class="pricing-name">Total Presence</p>
-        <p class="pricing-price"><sup>$</sup>1,997<span style="font-size:1.2rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;">/mo</span></p>
-        <p class="pricing-price-label">No contract · You own everything</p>
+        <p class="pricing-price"><sup>$</sup>1,997<span class="pricing-price-note">/mo</span></p>
+        <p class="pricing-price-label">No contract &middot; You own everything</p>
         <div class="pricing-divider"></div>
         <div class="pricing-features">
-          <div class="pricing-feature">Everything in Growth</div>
-          <div class="pricing-feature">Google Ads management</div>
-          <div class="pricing-feature">Social media (2 platforms)</div>
-          <div class="pricing-feature">Email &amp; SMS marketing automation</div>
-          <div class="pricing-feature">Quarterly strategy call</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Everything in Growth</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Google Ads management</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Social media (2 platforms)</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Email &amp; SMS marketing automation</div>
+          <div class="pricing-feature"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,12.5 9.5,18 20,6"/></svg></span>Quarterly strategy call</div>
         </div>
-        <a href="contact.html" class="btn btn-outline w-full pricing-cta" style="justify-content:center;">Get Started →</a>
+        <a href="contact.html" class="btn btn-line w-full">Get Started</a>
       </div>
     </div>
-    <p style="text-align:center;margin-top:32px;font-size:0.9rem;color:var(--muted);">
-      POS &amp; Inventory is available as an add-on to any plan — <a href="contact.html" style="color:var(--gold);">ask about it in your free audit</a>. Messaging and telecom usage (phone numbers, SMS) is billed at pass-through cost, same as everywhere in the industry.
-    </p>
+    <p class="pricing-note reveal">POS &amp; Inventory is available as an add-on to any plan &mdash; <a href="contact.html">ask about it in your free audit</a>. Messaging and telecom usage (phone numbers, SMS) is billed at pass-through cost, same as everywhere in the industry.</p>
   </div>
 </section>
 
-<!-- COMPARISON TABLE -->
-<section id="compare" class="section bg-charcoal">
+<!-- ============================ COMPARISON TABLE ============================ -->
+<section id="compare" class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Compare Every Plan</p>
-      <h2 class="display-md mb-24">Exactly What You Get</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">Compare Every Plan</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Exactly What You <em>Get</em></h2>
     </div>
-    <div style="overflow-x:auto;">
-      <table class="compare-table">
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="cmp">
         <thead>
           <tr>
-            <th style="min-width:220px;">Feature</th>
-            <th>Starter<br><span style="color:var(--gold);">$699/mo</span></th>
-            <th>Growth<br><span style="color:var(--gold);">$1,199/mo</span></th>
-            <th>Total Presence<br><span style="color:var(--gold);">$1,997/mo</span></th>
+            <th style="min-width:240px;">Feature</th>
+            <th>Starter &middot; $699/mo</th>
+            <th class="col-us">Growth &middot; $1,199/mo</th>
+            <th>Total Presence &middot; $1,997/mo</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="good">Professional mobile-first website</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Professional mobile-first website</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Google Business Profile optimization</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Google Business Profile optimization</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Automated review requests + monitoring</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Automated review requests + monitoring</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Online booking &amp; lead-capture forms</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Online booking &amp; lead-capture forms</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Monthly plain-English dashboard</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Monthly plain-English dashboard</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Local SEO (Map Pack ranking)</td>
-            <td>—</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Local SEO (Map Pack ranking)</td>
+            <td>&mdash;</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">AI phone answering 24/7 + text-back</td>
-            <td>—</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>AI phone answering 24/7 + text-back</td>
+            <td>&mdash;</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">CRM + automated follow-up pipeline</td>
-            <td>—</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>CRM + automated follow-up pipeline</td>
+            <td>&mdash;</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Database reactivation campaigns</td>
-            <td>—</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+            <td>Database reactivation campaigns</td>
+            <td>&mdash;</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Google Ads management</td>
-            <td>—</td><td>—</td><td class="text-gold">✓</td>
+            <td>Google Ads management</td>
+            <td>&mdash;</td><td class="col-us">&mdash;</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Social media management (2 platforms)</td>
-            <td>—</td><td>—</td><td class="text-gold">✓</td>
+            <td>Social media management (2 platforms)</td>
+            <td>&mdash;</td><td class="col-us">&mdash;</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Email &amp; SMS marketing automation</td>
-            <td>—</td><td>—</td><td class="text-gold">✓</td>
+            <td>Email &amp; SMS marketing automation</td>
+            <td>&mdash;</td><td class="col-us">&mdash;</td><td class="cmp-check">✓</td>
           </tr>
           <tr>
-            <td class="good">Quarterly strategy call</td>
-            <td>—</td><td>—</td><td class="text-gold">✓</td>
+            <td>Quarterly strategy call</td>
+            <td>&mdash;</td><td class="col-us">&mdash;</td><td class="cmp-check">✓</td>
           </tr>
-          <tr class="vs-us">
-            <td class="good">No long contract — month-to-month</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+          <tr>
+            <td>No long contract &mdash; month-to-month</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
-          <tr class="vs-us">
-            <td class="good">You own every asset</td>
-            <td class="text-gold">✓</td><td class="text-gold">✓</td><td class="text-gold">✓</td>
+          <tr>
+            <td>You own every asset</td>
+            <td class="cmp-check">✓</td><td class="cmp-check col-us">✓</td><td class="cmp-check">✓</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Not Sure Which Fits? Get a Free Audit →</a>
+    <div class="reveal" style="text-align:center;margin-top:clamp(2.4rem,4vw,3.2rem);">
+      <a href="contact.html" class="btn btn-gold">Not Sure Which Fits? Get a Free Audit <span class="arr">&rarr;</span></a>
     </div>
   </div>
 </section>
 
-<!-- WHY FLAT PRICING -->
-<section class="section">
+<!-- ============================ THREE THINGS THAT NEVER CHANGE ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Every Plan, Every Time</p>
-      <h2 class="display-md mb-24">Three Things That Never Change</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">Every Plan, Every Time</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Three Things That <em>Never Change</em></h2>
     </div>
-    <div class="promises-grid">
-      <div class="promise-card">
-        <span class="promise-icon">🔑</span>
+    <div class="promises">
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15.5" r="4"/><path d="M11 12.5 19.5 4M17 6.5l2 2M14.5 9l2 2"/></svg></span>
         <p class="promise-title">You Own Everything</p>
-        <p class="promise-body">Your website, domain, Google profile, phone number, customer list, ad accounts — yours from day one. Leave anytime and take it all with you. No hostages.</p>
+        <p class="promise-body">Your website, domain, Google profile, phone number, customer list, ad accounts &mdash; yours from day one. Leave anytime and take it all with you. No hostages.</p>
       </div>
-      <div class="promise-card">
-        <span class="promise-icon">🤝</span>
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 11.5 6 8.3c.5-.5 1.3-.6 1.9-.2l3 2"/><path d="M21.5 11.5 18 8.3c-.5-.5-1.3-.6-1.9-.2l-3 2-2.6 2.1c-.6.5-.6 1.4 0 1.9.5.4 1.2.4 1.7 0l1.9-1.5"/><path d="M10.9 12.1l2.4 2c.5.4 1.3.4 1.8-.1.5-.5.5-1.2.1-1.7"/><path d="M2.5 11.5v6M21.5 11.5v6"/></svg></span>
         <p class="promise-title">No Long Contracts</p>
-        <p class="promise-body">Month-to-month after setup. No 12-month lock-ins, no early-termination fees. We stay because we perform — and that's the only reason.</p>
+        <p class="promise-body">Month-to-month after setup. No 12-month lock-ins, no early-termination fees. We stay because we perform &mdash; and that&rsquo;s the only reason.</p>
       </div>
-      <div class="promise-card">
-        <span class="promise-icon">📊</span>
+      <div class="promise reveal">
+        <span class="promise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="19" y1="20" x2="19" y2="15"/><line x1="2.5" y1="20" x2="21.5" y2="20"/></svg></span>
         <p class="promise-title">Plain-English Reporting</p>
-        <p class="promise-body">No jargon dashboards. You see calls captured, leads followed up, reviews earned, money recovered — in plain language, every month.</p>
+        <p class="promise-body">No jargon dashboards. You see calls captured, leads followed up, reviews earned, money recovered &mdash; in plain language, every month.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section bg-charcoal">
-  <div class="container" style="max-width:780px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Pricing Questions</p>
-      <h2 class="display-sm mb-40">What Owners Ask Before They Start</h2>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Is there a setup fee or a long-term contract?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Setup is included in every plan — no separate onboarding fee like the $3,000 some platforms charge. And there's no long-term contract. We operate month-to-month after setup, so we earn your business every single month.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">What does "you own everything" actually mean?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Your website, domain, Google Business Profile, phone number, customer list, review profiles, and ad accounts are all in your name from day one. If you ever leave us, you keep every asset. Unlike Hibu or Thryv, we don't hold your website or data hostage to keep you paying.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Which plan should I start with?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Most businesses start with Growth because it covers the biggest leaks — getting found (SEO), never missing a call (AI phone), and following up every lead (CRM). But the honest answer is: get a free audit first. We'll look at your real numbers and tell you which plan fits, and if Starter is all you need right now, we'll say so.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Can I add or remove services later?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">Yes. Plans are designed to scale with you. Start with Starter and add SEO, AI phone, and CRM when you're ready by moving up to Growth — or add POS &amp; Inventory as an add-on to any tier. Since there's no contract, you're never locked into a level that stopped fitting.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">How fast will this pay for itself?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">The math is usually straightforward. One recovered missed call, one reactivated past customer, or one saved job a month often covers the plan — and the system saves you dozens. For most local businesses a single AI-captured after-hours job or a handful of recovered leads pays the monthly fee many times over. Your free audit puts real numbers to it for your business.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Are there extra costs on top of the monthly rate?<span class="faq-chevron">▾</span></button>
-      <div class="faq-a">The only pass-through cost is telecom usage — phone numbers and SMS segments billed at cost, standard industry-wide. On Total Presence, your Google Ads budget is separate (it goes to Google, not us) and you set it. No hidden junk fees, no surprise line items. Everything is on the plain-English dashboard.</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ FAQ ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <p class="subhead text-gold mb-16">Free. No Obligation. No Pressure.</p>
-    <h2 class="cta-title">Get Your Free Business Audit</h2>
-    <p class="cta-sub">
-      We'll show you exactly where your business is leaking money and which plan actually fits — with real numbers, whether you work with us or not. No credit card, no commitment.
-    </p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get My Free Audit</a>
-      <a href="why-us.html" class="btn btn-outline btn-lg">Why Top Shelf</a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Pricing Questions</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Owners Ask <em>Before They Start</em></h2>
+    </div>
+    <div class="qa-list">
+      <div class="qa-row reveal">
+        <span class="qa-num">01</span>
+        <div>
+          <p class="qa-q">Is there a setup fee or a long-term contract?</p>
+          <p class="qa-a">Setup is included in every plan &mdash; no separate onboarding fee like the $3,000 some platforms charge. And there&rsquo;s no long-term contract. We operate month-to-month after setup, so we earn your business every single month.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">02</span>
+        <div>
+          <p class="qa-q">What does &ldquo;you own everything&rdquo; actually mean?</p>
+          <p class="qa-a">Your website, domain, Google Business Profile, phone number, customer list, review profiles, and ad accounts are all in your name from day one. If you ever leave us, you keep every asset. Unlike Hibu or Thryv, we don&rsquo;t hold your website or data hostage to keep you paying.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">03</span>
+        <div>
+          <p class="qa-q">Which plan should I start with?</p>
+          <p class="qa-a">Most businesses start with Growth because it covers the biggest leaks &mdash; getting found (SEO), never missing a call (AI phone), and following up every lead (CRM). But the honest answer is: get a free audit first. We&rsquo;ll look at your real numbers and tell you which plan fits, and if Starter is all you need right now, we&rsquo;ll say so.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">04</span>
+        <div>
+          <p class="qa-q">Can I add or remove services later?</p>
+          <p class="qa-a">Yes. Plans are designed to scale with you. Start with Starter and add SEO, AI phone, and CRM when you&rsquo;re ready by moving up to Growth &mdash; or add POS &amp; Inventory as an add-on to any tier. Since there&rsquo;s no contract, you&rsquo;re never locked into a level that stopped fitting.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">05</span>
+        <div>
+          <p class="qa-q">How fast will this pay for itself?</p>
+          <p class="qa-a">The math is usually straightforward. One recovered missed call, one reactivated past customer, or one saved job a month often covers the plan &mdash; and the system saves you dozens. For most local businesses a single AI-captured after-hours job or a handful of recovered leads pays the monthly fee many times over. Your free audit puts real numbers to it for your business.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">06</span>
+        <div>
+          <p class="qa-q">Are there extra costs on top of the monthly rate?</p>
+          <p class="qa-a">The only pass-through cost is telecom usage &mdash; phone numbers and SMS segments billed at cost, standard industry-wide. On Total Presence, your Google Ads budget is separate (it goes to Google, not us) and you set it. No hidden junk fees, no surprise line items. Everything is on the plain-English dashboard.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
+  <div class="container">
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Free. No Obligation. No Pressure.</span>
+    <h2 class="cta-title reveal">Get Your Free<br><em>Business Audit</em></h2>
+    <p class="cta-sub reveal">We&rsquo;ll show you exactly where your business is leaking money and which plan actually fits &mdash; with real numbers, whether you work with us or not. No credit card, no commitment.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="why-us.html" class="btn btn-line">Why Top Shelf</a>
+    </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your business.</p>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -350,34 +335,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

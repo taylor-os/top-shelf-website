@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bars &amp; Restaurants | Top Shelf Business Solutions</title>
-  <meta name="description" content="Stop losing $60K–$150K/yr to bar and restaurant leaks. POS, inventory, reviews, marketing, and CRM — built for the hospitality business." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bars &amp; Restaurants | Top Shelf Business Solutions</title>
+<meta name="description" content="Stop losing $60K–$150K/yr to bar and restaurant leaks. POS, inventory, reviews, marketing, and CRM — built for the hospitality business.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-stack">
-        <span class="logo-top">TOP</span>
-        <span class="logo-divider"></span>
-        <span class="logo-shelf">SHELF</span>
-        <span class="logo-tagline">Business Solutions</span>
-      </div>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
-        <a href="#" class="nav-link">Industries <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="industry-bars.html">Bars &amp; Restaurants</a>
           <a href="industry-dental.html">Dental &amp; Medical</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▼</span></a>
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">▾</span></a>
         <div class="nav-dropdown">
           <a href="solution-websites-seo.html">Websites &amp; SEO</a>
           <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
@@ -46,377 +46,297 @@
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="why-us.html" class="nav-link">Why Us</a>
     </div>
-    <a href="contact.html" class="btn btn-gold btn-sm nav-cta">Get Free Audit</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <a href="industry-bars.html" class="sub">Bars &amp; Restaurants</a>
-  <a href="industry-dental.html" class="sub">Dental &amp; Medical</a>
-  <a href="industry-home-services.html" class="sub">Home Services</a>
-  <a href="industry-auto.html" class="sub">Auto &amp; Tire</a>
-  <a href="solution-websites-seo.html" class="sub">Websites &amp; SEO</a>
-  <a href="solution-ai-phone.html" class="sub">AI Phone &amp; Chat</a>
-  <a href="solution-crm.html" class="sub">CRM &amp; Follow-Up</a>
-  <a href="solution-pos.html" class="sub">POS &amp; Inventory</a>
-  <a href="solution-marketing.html" class="sub">Marketing &amp; Reviews</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="why-us.html">Why Us</a>
-  <a href="contact.html" class="btn btn-gold mobile-cta" style="text-align:center;margin-top:8px;">Get Free Audit →</a>
-</nav>
-<div class="nav-spacer"></div>
 
-<!-- HERO -->
+<!-- ============================ PAGE HERO ============================ -->
 <section class="page-hero">
-  <div class="container">
-    <p class="subhead text-gold mb-16">Bars &amp; Restaurants</p>
-    <h1 class="display-xl mb-24">
-      You Keep $3–$5 of Every $100.<br>
-      <span class="text-gold">Every Leak Is Existential.</span>
-    </h1>
-    <p class="display-sm text-muted" style="max-width:700px;font-family:'Inter',sans-serif;font-size:1.15rem;font-weight:400;line-height:1.7;">
-      Liquor shrinkage, no-shows, delivery app commissions, slow nights you can't fill — restaurants run on 3–5% net margins. A few plugged leaks can double your take-home.
-    </p>
-    <div class="cta-actions" style="margin-top:2.5rem;">
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Your Free Audit</a>
-      <a href="#solutions" class="btn btn-outline btn-lg">See How We Fix It</a>
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 8.5v6.5"/><line x1="9" y1="4" x2="15" y2="4"/><line x1="8.5" y1="21" x2="15.5" y2="21"/><line x1="12" y1="19" x2="12" y2="21"/></svg></span>
+    <span class="eyebrow reveal">Bars &amp; Restaurants</span>
+    <h1 class="display display-lg reveal">You Keep $3&ndash;$5 of Every $100. <em>Every Leak Is Existential.</em></h1>
+    <p class="page-hero-sub reveal">Liquor shrinkage, no-shows, delivery app commissions, slow nights you can&rsquo;t fill &mdash; restaurants run on 3&ndash;5% net margins. A few plugged leaks can double your take-home.</p>
+    <div class="page-hero-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="#solutions" class="btn btn-line">See How We Fix It</a>
     </div>
   </div>
 </section>
 
-<!-- STAT TILES -->
-<section class="section-sm bg-charcoal">
-  <div class="container">
-    <div class="grid-4">
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">3–5%</div>
-        <div class="stat-tile-label">Average restaurant net margin</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">20–30%</div>
-        <div class="stat-tile-label">Avg liquor inventory lost to shrinkage</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">$39K–$78K</div>
-        <div class="stat-tile-label">Annual revenue lost to no-shows</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile-num text-gold">875%</div>
-        <div class="stat-tile-label">Rise in "near me" restaurant searches</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PAIN BREAKDOWN -->
+<!-- ============================ STAT STRIP ============================ -->
 <section class="section">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Where the Money Is Going</p>
-      <h2 class="display-md mb-24">Five Leaks That Are Bleeding You Dry</h2>
-      <p class="text-muted" style="max-width:620px;margin:0 auto;line-height:1.7;">
-        These aren't small inefficiencies. On a 3–5% margin, any one of these can wipe out an entire year of profit. Most owners are dealing with all five at once.
-      </p>
-    </div>
-
-    <div class="pain-list">
-
-      <div class="pain-item">
-        <div class="pain-icon">🥃</div>
-        <div>
-          <div class="pain-title">Liquor Shrinkage</div>
-          <div class="pain-cost">$18,000–$24,000/year</div>
-          <div class="pain-body">
-            The average bar loses 20–30% of its inventory value to over-pouring, spillage, and theft. A bar with $10,000/month in product costs at 15% shrinkage is hemorrhaging $1,500 every month — $18,000 a year — before a single customer walks in. Every 1% of shrinkage wipes out 2.5% of your already razor-thin profit. Your bartenders are pouring 15% more alcohol than you're charging for, and your current POS has no idea.
-          </div>
-        </div>
+    <div class="stat-strip">
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="3" data-suffix="–5%">3–5%</span>
+        <p class="stat-cell-label">Average restaurant net margin</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🪑</div>
-        <div>
-          <div class="pain-title">No-Shows &amp; Last-Minute Cancellations</div>
-          <div class="pain-cost">$39,000–$78,000/year</div>
-          <div class="pain-body">
-            10–20% of your reservations don't show. A single no-show costs $28–$120 per cover — lost food prep, staffed tables, and a seat that couldn't be given to a walk-in. On 100 weekly reservations at 10% no-shows, you're looking at $39,000–$78,000 in lost revenue annually. Peanut Park Trattoria lost 52 covers on Valentine's Day — roughly $3,000 in a single night — to no-shows with no recourse.
-          </div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="20" data-suffix="–30%">20–30%</span>
+        <p class="stat-cell-label">Avg liquor inventory lost to shrinkage</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">📱</div>
-        <div>
-          <div class="pain-title">Delivery App Commission Tax</div>
-          <div class="pain-cost">30–40% of every delivery order</div>
-          <div class="pain-body">
-            DoorDash, Grubhub, and Uber Eats are marketing platforms that charge restaurant prices. Their effective commission — after processing fees, promotional requirements, and refunds — routinely hits 30–40% per order. On a restaurant already running 10–15% margins, that eliminates every dollar of profit on delivery. Worse, you don't own the customer. They're DoorDash's customer. You cooked the food and got nothing.
-          </div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="39" data-prefix="$" data-suffix="K–$78K">$39K–$78K</span>
+        <p class="stat-cell-label">Annual revenue lost to no-shows</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">🔍</div>
-        <div>
-          <div class="pain-title">Invisible on Google</div>
-          <div class="pain-cost">64% of diners Google before they visit</div>
-          <div class="pain-body">
-            91% of diners avoid restaurants under 4 stars. 73% only trust reviews written in the last 30 days. "Near me" restaurant searches have surged 875%. If your Google Business Profile is thin, your photos are old, and your reviews haven't been updated since 2023 — you are functionally invisible to the customers actively looking for you right now. A competitor with 4.7 stars and fresh reviews is taking your reservation.
-          </div>
-        </div>
+      <div class="stat-cell reveal">
+        <span class="stat-cell-num" data-count="875" data-suffix="%">875%</span>
+        <p class="stat-cell-label">Rise in &ldquo;near me&rdquo; restaurant searches</p>
       </div>
-
-      <div class="pain-item">
-        <div class="pain-icon">📭</div>
-        <div>
-          <div class="pain-title">No System to Bring Customers Back</div>
-          <div class="pain-cost">Repeat guests = 60% of revenue — and you can't reach them</div>
-          <div class="pain-body">
-            Most independent bars and restaurants have no loyalty system, no email or SMS list, and no way to fill a slow Tuesday without offering a blanket discount that kills your margin. Your regulars want to come back — they just forgot. You have no way to remind them. Meanwhile, you're spending on Instagram ads to reach strangers when your best customers' phone numbers are sitting in a POS you can't export.
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- SOLUTION MAP -->
-<section id="solutions" class="section bg-charcoal">
+<!-- ============================ PAIN BREAKDOWN ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">The Fix</p>
-      <h2 class="display-md mb-24">Five Systems. One Stack. Measurable Results.</h2>
-      <p class="text-muted" style="max-width:620px;margin:0 auto;line-height:1.7;">
-        We don't sell software. We solve the specific problem each leak is causing and show you the math before we start.
-      </p>
+    <div class="section-head">
+      <span class="eyebrow reveal">Where the Money Is Going</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Leaks That Are <em>Bleeding You Dry</em></h2>
+      <p class="reveal">These aren&rsquo;t small inefficiencies. On a 3&ndash;5% margin, any one of these can wipe out an entire year of profit. Most owners are dealing with all five at once.</p>
     </div>
-
-    <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem;">
-
-      <div class="benefit-row">
-        <div class="benefit-icon">📊</div>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 8.5v6.5"/><line x1="9" y1="4" x2="15" y2="4"/><line x1="8.5" y1="21" x2="15.5" y2="21"/><line x1="12" y1="19" x2="12" y2="21"/></svg></span>
         <div>
-          <div class="benefit-title">Modern POS + Real-Time Liquor Tracking</div>
-          <div class="benefit-body">
-            We connect your POS to pour-cost tracking and automated inventory reconciliation. Every bottle is counted against every drink sold — in real time.
-          </div>
-          <div class="benefit-result">
-            Cut shrinkage from 20–30% to single digits. Recover $1,000–$1,500/month. Real-time alerts flag over-pours and missing bottles before they become a trend. Your 2 a.m. bottle count becomes a 5-minute exception report.
-          </div>
+          <p class="feature-row-title">Liquor Shrinkage</p>
+          <p class="feature-row-body">The average bar loses 20&ndash;30% of its inventory value to over-pouring, spillage, and theft. A bar with $10,000/month in product costs at 15% shrinkage is hemorrhaging $1,500 every month &mdash; $18,000 a year &mdash; before a single customer walks in. Every 1% of shrinkage wipes out 2.5% of your already razor-thin profit. Your bartenders are pouring 15% more alcohol than you&rsquo;re charging for, and your current POS has no idea.</p>
+          <span class="feature-row-result">$18,000&ndash;$24,000/yr</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">📅</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12V6.5A2.5 2.5 0 0 1 8.5 4h7A2.5 2.5 0 0 1 18 6.5V12"/><path d="M4.5 12h15v4a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 16Z"/><line x1="6" y1="17.5" x2="6" y2="20.5"/><line x1="18" y1="17.5" x2="18" y2="20.5"/></svg></span>
         <div>
-          <div class="benefit-title">Reservation System + Automated Reminders + Card Holds</div>
-          <div class="benefit-body">
-            Automated multi-touch reminders (SMS + email) go out 48 hours and 2 hours before the reservation. Credit card holds deter habitual no-shows.
-          </div>
-          <div class="benefit-result">
-            Cut no-shows 30%+ on confirmed reservations. On a busy Friday of 80 covers, that's $450–$900 recovered — per night. One Valentine's Day is now protected.
-          </div>
+          <p class="feature-row-title">No-Shows &amp; Last-Minute Cancellations</p>
+          <p class="feature-row-body">10&ndash;20% of your reservations don&rsquo;t show. A single no-show costs $28&ndash;$120 per cover &mdash; lost food prep, staffed tables, and a seat that couldn&rsquo;t be given to a walk-in. On 100 weekly reservations at 10% no-shows, you&rsquo;re looking at $39,000&ndash;$78,000 in lost revenue annually. Peanut Park Trattoria lost 52 covers on Valentine&rsquo;s Day &mdash; roughly $3,000 in a single night &mdash; to no-shows with no recourse.</p>
+          <span class="feature-row-result">$39,000&ndash;$78,000/yr</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">🌐</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><line x1="10.5" y1="19" x2="13.5" y2="19"/></svg></span>
         <div>
-          <div class="benefit-title">Branded Online Ordering (Commission-Free)</div>
-          <div class="benefit-body">
-            Your own ordering page — your branding, your domain, your customers. We build and integrate it with your kitchen workflow so there's zero friction for your staff.
-          </div>
-          <div class="benefit-result">
-            Keep the 25–35% you were handing to DoorDash on direct orders. You own every customer's name, email, and order history — so you can market to them next time without paying a middleman.
-          </div>
+          <p class="feature-row-title">Delivery App Commission Tax</p>
+          <p class="feature-row-body">DoorDash, Grubhub, and Uber Eats are marketing platforms that charge restaurant prices. Their effective commission &mdash; after processing fees, promotional requirements, and refunds &mdash; routinely hits 30&ndash;40% per order. On a restaurant already running 10&ndash;15% margins, that eliminates every dollar of profit on delivery. Worse, you don&rsquo;t own the customer. They&rsquo;re DoorDash&rsquo;s customer. You cooked the food and got nothing.</p>
+          <span class="feature-row-result">30&ndash;40% of every order</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">⭐</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/></svg></span>
         <div>
-          <div class="benefit-title">Google Business Profile Optimization + Review Automation</div>
-          <div class="benefit-body">
-            Full GBP audit and rebuild: photos, hours, attributes, posts. Automated post-visit review requests sent via SMS — to the right customers at the right moment.
-          </div>
-          <div class="benefit-result">
-            Every 1-star increase in rating drives a 5–9% revenue lift. Crossing 4.5 stars puts you in the Google local pack, where 875% more searchers are looking. Fresh reviews mean 73% of diners actually trust what they read.
-          </div>
+          <p class="feature-row-title">Invisible on Google</p>
+          <p class="feature-row-body">91% of diners avoid restaurants under 4 stars. 73% only trust reviews written in the last 30 days. &ldquo;Near me&rdquo; restaurant searches have surged 875%. If your Google Business Profile is thin, your photos are old, and your reviews haven&rsquo;t been updated since 2023 &mdash; you are functionally invisible to the customers actively looking for you right now. A competitor with 4.7 stars and fresh reviews is taking your reservation.</p>
+          <span class="feature-row-result">64% Google before visiting</span>
         </div>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-icon">💬</div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="1.8"/><polyline points="3,6 12,13 21,6"/></svg></span>
         <div>
-          <div class="benefit-title">CRM + Loyalty Program + Slow-Night SMS Campaigns</div>
-          <div class="benefit-body">
-            We pull your customer data out of your POS and turn it into a real contact list. Loyalty programs, birthday offers, and targeted SMS campaigns to your own audience — not strangers.
-          </div>
-          <div class="benefit-result">
-            Fill slow Tuesdays with guests who already love you — without a blanket discount. Loyalty members spend 12–18% more per visit. A Tuesday SMS to 1,200 regulars with a specific offer costs pennies and fills tables within hours.
-          </div>
+          <p class="feature-row-title">No System to Bring Customers Back</p>
+          <p class="feature-row-body">Most independent bars and restaurants have no loyalty system, no email or SMS list, and no way to fill a slow Tuesday without offering a blanket discount that kills your margin. Your regulars want to come back &mdash; they just forgot. You have no way to remind them. Meanwhile, you&rsquo;re spending on Instagram ads to reach strangers when your best customers&rsquo; phone numbers are sitting in a POS you can&rsquo;t export.</p>
+          <span class="feature-row-result">Repeat guests = 60% of revenue</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="section">
+<!-- ============================ SOLUTION MAP ============================ -->
+<section id="solutions" class="section rule-top">
   <div class="container">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Real-World Impact</p>
-      <h2 class="display-md mb-32">What Changes When You Plug All Five Leaks</h2>
+    <div class="section-head">
+      <span class="eyebrow reveal">The Fix</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Five Systems. One Stack. <em>Measurable Results.</em></h2>
+      <p class="reveal">We don&rsquo;t sell software. We solve the specific problem each leak is causing and show you the math before we start.</p>
     </div>
-
-    <div class="before-after">
-      <div class="ba-before">
-        <div class="ba-label">Before Top Shelf</div>
-        <div class="ba-title">The $50K/Month Bar-Restaurant Bleeding Money</div>
-        <ul class="ba-items">
-          <li class="ba-item">Liquor shrinkage at 22% — $2,200/month walking out the door undetected</li>
-          <li class="ba-item">No-show system: none. Lost $3,000 on Valentine's Day alone.</li>
-          <li class="ba-item">32% commission paid to DoorDash on every delivery order</li>
-          <li class="ba-item">3.9 stars on Google, last review 4 months ago, invisible in local search</li>
-          <li class="ba-item">No customer list, no way to target slow nights, Tuesday = empty tables</li>
-          <li class="ba-item">The GM has no idea which shift is most profitable or which items are bleeding margin</li>
-        </ul>
+    <div class="feature-list">
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="19" y1="20" x2="19" y2="15"/><line x1="2.5" y1="20" x2="21.5" y2="20"/></svg></span>
+        <div>
+          <p class="feature-row-title">Modern POS + Real-Time Liquor Tracking</p>
+          <p class="feature-row-body">We connect your POS to pour-cost tracking and automated inventory reconciliation. Every bottle is counted against every drink sold &mdash; in real time.</p>
+          <span class="feature-row-result">Result: Cut shrinkage from 20&ndash;30% to single digits. Recover $1,000&ndash;$1,500/month. Real-time alerts flag over-pours and missing bottles before they become a trend. Your 2 a.m. bottle count becomes a 5-minute exception report.</span>
+        </div>
       </div>
-      <div class="ba-after">
-        <div class="ba-label">After Top Shelf</div>
-        <div class="ba-title">The Same Bar — Six Months Later</div>
-        <ul class="ba-items">
-          <li class="ba-item">Pour tracking brings shrinkage to 6% — $2,000+/month recovered, automatically</li>
-          <li class="ba-item">Reservation reminders + card holds cut no-shows 31%. Valentine's Day: fully protected.</li>
-          <li class="ba-item">Branded ordering handles 40% of deliveries commission-free. Rest still on apps.</li>
-          <li class="ba-item">4.6 stars, 94 fresh reviews in 6 months, ranking in the local top 3</li>
-          <li class="ba-item">1,200-person SMS list. Tuesday campaigns consistently bring in 40+ covers.</li>
-          <li class="ba-item">The GM reviews a daily dashboard on her phone at 9 a.m. and goes home on time.</li>
-        </ul>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7.5" y1="2.5" x2="7.5" y2="6.5"/><line x1="16.5" y1="2.5" x2="16.5" y2="6.5"/></svg></span>
+        <div>
+          <p class="feature-row-title">Reservation System + Automated Reminders + Card Holds</p>
+          <p class="feature-row-body">Automated multi-touch reminders (SMS + email) go out 48 hours and 2 hours before the reservation. Credit card holds deter habitual no-shows.</p>
+          <span class="feature-row-result">Result: Cut no-shows 30%+ on confirmed reservations. On a busy Friday of 80 covers, that&rsquo;s $450&ndash;$900 recovered &mdash; per night. One Valentine&rsquo;s Day is now protected.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <div>
+          <p class="feature-row-title">Branded Online Ordering (Commission-Free)</p>
+          <p class="feature-row-body">Your own ordering page &mdash; your branding, your domain, your customers. We build and integrate it with your kitchen workflow so there&rsquo;s zero friction for your staff.</p>
+          <span class="feature-row-result">Result: Keep the 25&ndash;35% you were handing to DoorDash on direct orders. You own every customer&rsquo;s name, email, and order history &mdash; so you can market to them next time without paying a middleman.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">Google Business Profile Optimization + Review Automation</p>
+          <p class="feature-row-body">Full GBP audit and rebuild: photos, hours, attributes, posts. Automated post-visit review requests sent via SMS &mdash; to the right customers at the right moment.</p>
+          <span class="feature-row-result">Result: Every 1-star increase in rating drives a 5&ndash;9% revenue lift. Crossing 4.5 stars puts you in the Google local pack, where 875% more searchers are looking. Fresh reviews mean 73% of diners actually trust what they read.</span>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.2C4 7.7 7.8 4 12.5 4S21 7.7 21 12.2 17.2 20.4 12.5 20.4c-1 0-2-.2-2.9-.5L4 21.5l1.6-4.2c-1-1.3-1.6-2.9-1.6-4.6Z"/></svg></span>
+        <div>
+          <p class="feature-row-title">CRM + Loyalty Program + Slow-Night SMS Campaigns</p>
+          <p class="feature-row-body">We pull your customer data out of your POS and turn it into a real contact list. Loyalty programs, birthday offers, and targeted SMS campaigns to your own audience &mdash; not strangers.</p>
+          <span class="feature-row-result">Result: Fill slow Tuesdays with guests who already love you &mdash; without a blanket discount. Loyalty members spend 12&ndash;18% more per visit. A Tuesday SMS to 1,200 regulars with a specific offer costs pennies and fills tables within hours.</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WE TAILOR EVERYTHING -->
-<section class="section-sm bg-charcoal">
-  <div class="container" style="text-align:center;max-width:760px;margin:0 auto;">
-    <p class="subhead text-gold mb-16">No Two Kitchens Are the Same</p>
-    <h2 class="display-sm mb-24">We Build Around Your Operation, Not a Template</h2>
-    <p style="color:var(--text);line-height:1.8;font-size:1.05rem;">
-      A dive bar with 200 seats and a craft cocktail program has different problems than a 40-seat BYOB restaurant. We start with a free audit of your actual numbers — your POS data, your Google profile, your reservation history — and we tell you exactly which leaks are costing you the most. Then we fix those first. No bloated retainers. No software you don't use. Just the systems your specific operation actually needs.
-    </p>
-    <a href="contact.html" class="btn btn-gold btn-lg" style="margin-top:2rem;">Start With a Free Audit</a>
-  </div>
-</section>
-
-<!-- CROSS-LINKS -->
-<section class="section-sm">
+<!-- ============================ BEFORE / AFTER ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <div class="crosslink-strip">
-      <div class="crosslink-label">Solutions We Deploy for Bars &amp; Restaurants</div>
-      <div class="crosslink-items">
-        <a href="solution-pos.html" class="crosslink-item">
-          <span class="crosslink-item-icon">🖥️</span>
-          <span class="crosslink-item-title">POS &amp; Inventory</span>
-          <span class="crosslink-item-desc">Real-time pour tracking and cost control</span>
-        </a>
-        <a href="solution-marketing.html" class="crosslink-item">
-          <span class="crosslink-item-icon">⭐</span>
-          <span class="crosslink-item-title">Marketing &amp; Reviews</span>
-          <span class="crosslink-item-desc">Automate reviews and fill slow nights</span>
-        </a>
-        <a href="solution-websites-seo.html" class="crosslink-item">
-          <span class="crosslink-item-icon">🌐</span>
-          <span class="crosslink-item-title">Websites &amp; SEO</span>
-          <span class="crosslink-item-desc">Own your online ordering and local search</span>
-        </a>
-        <a href="solution-crm.html" class="crosslink-item">
-          <span class="crosslink-item-icon">💬</span>
-          <span class="crosslink-item-title">CRM &amp; Follow-Up</span>
-          <span class="crosslink-item-desc">Turn guests into a repeat-revenue engine</span>
-        </a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Real-World Impact</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Changes When You Plug <em>All Five Leaks</em></h2>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">Before Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.4rem 0 1.6rem">The $50K/Month Bar-Restaurant Bleeding Money</h3>
+        <div class="feature-list">
+          <div class="feature-row"><div><p class="feature-row-body">Liquor shrinkage at 22% &mdash; $2,200/month walking out the door undetected</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">No-show system: none. Lost $3,000 on Valentine&rsquo;s Day alone.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">32% commission paid to DoorDash on every delivery order</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">3.9 stars on Google, last review 4 months ago, invisible in local search</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">No customer list, no way to target slow nights, Tuesday = empty tables</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">The GM has no idea which shift is most profitable or which items are bleeding margin</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem">After Top Shelf</span>
+        <h3 class="feature-row-title" style="margin:1.4rem 0 1.6rem;color:var(--gold-bright)">The Same Bar &mdash; Six Months Later</h3>
+        <div class="feature-list">
+          <div class="feature-row"><div><p class="feature-row-body">Pour tracking brings shrinkage to 6% &mdash; $2,000+/month recovered, automatically</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Reservation reminders + card holds cut no-shows 31%. Valentine&rsquo;s Day: fully protected.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">Branded ordering handles 40% of deliveries commission-free. Rest still on apps.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">4.6 stars, 94 fresh reviews in 6 months, ranking in the local top 3</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">1,200-person SMS list. Tuesday campaigns consistently bring in 40+ covers.</p></div></div>
+          <div class="feature-row"><div><p class="feature-row-body">The GM reviews a daily dashboard on her phone at 9 a.m. and goes home on time.</p></div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section bg-charcoal">
-  <div class="container" style="max-width:780px;margin:0 auto;">
-    <div class="section-header">
-      <p class="subhead text-gold mb-16">Common Questions</p>
-      <h2 class="display-sm mb-40">What Owners Ask Before They Start</h2>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Do I have to replace my existing POS?</button>
-      <div class="faq-a">
-        Not always. We integrate with most major POS systems (Toast, Square, Lightspeed, Clover) and add the tracking layer on top. If your current POS is genuinely causing problems, we'll tell you honestly — and only then recommend switching.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">How fast will we see results from review automation?</button>
-      <div class="faq-a">
-        Most clients see their first batch of new reviews within the first two weeks. A meaningful rating increase (0.3–0.5 stars) typically takes 60–90 days of consistent volume. The local search ranking improvement follows shortly after.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">We're already on OpenTable. Do we still need a reservation system?</button>
-      <div class="faq-a">
-        OpenTable charges per cover and owns your guest data. We can either integrate automated reminders into your OpenTable flow or migrate you to a commission-free system where you own everything. We'll show you the cost comparison and let you decide.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Can you actually track liquor pours down to the ounce?</button>
-      <div class="faq-a">
-        Yes — through a combination of POS recipe costing, digital pour sensors (optional), and periodic automated inventory reconciliation. You don't need a sensor on every bottle to get a clear picture. Most of our clients use the recipe + inventory method and catch their biggest shrinkage issues within the first 30 days.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Is there a long-term contract?</button>
-      <div class="faq-a">
-        No. We operate month-to-month after the initial setup. You own everything we build — your website, your customer list, your systems. We earn your business every month.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="cta-section">
+<!-- ============================ CROSS-LINKS ============================ -->
+<section class="section rule-top">
   <div class="container">
-    <p class="subhead text-gold mb-16">Ready to Stop Bleeding Margin?</p>
-    <h2 class="cta-title">Get a Free Audit of Your Operation</h2>
-    <p class="cta-sub">
-      We'll dig into your real numbers — POS data, Google profile, review velocity, reservation history — and tell you exactly where your biggest leaks are and what fixing them is worth. No pitch, no commitment. Just the math.
-    </p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Book My Free Audit</a>
-      <a href="pricing.html" class="btn btn-outline btn-lg">See Pricing</a>
+    <div class="section-head">
+      <span class="eyebrow reveal">Solutions We Deploy</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Built for Bars <em>&amp; Restaurants</em></h2>
+    </div>
+    <div class="mini-grid cols-4">
+      <a href="solution-pos.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
+        <p class="mini-card-title">POS &amp; Inventory</p>
+        <p class="mini-card-body">Real-time pour tracking and cost control</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-marketing.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <p class="mini-card-title">Marketing &amp; Reviews</p>
+        <p class="mini-card-body">Automate reviews and fill slow nights</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-websites-seo.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <p class="mini-card-title">Websites &amp; SEO</p>
+        <p class="mini-card-body">Own your online ordering and local search</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
+      <a href="solution-crm.html" class="mini-card reveal">
+        <span class="mini-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.2C4 7.7 7.8 4 12.5 4S21 7.7 21 12.2 17.2 20.4 12.5 20.4c-1 0-2-.2-2.9-.5L4 21.5l1.6-4.2c-1-1.3-1.6-2.9-1.6-4.6Z"/></svg></span>
+        <p class="mini-card-title">CRM &amp; Follow-Up</p>
+        <p class="mini-card-body">Turn guests into a repeat-revenue engine</p>
+        <span class="tlink mini-card-link">Learn more <span class="arr">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============================ FAQ ============================ -->
+<section class="section rule-top">
+  <div class="container" style="max-width:820px;margin-inline:auto">
+    <div class="section-head">
+      <span class="eyebrow reveal">Common Questions</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Owners Ask <em>Before They Start</em></h2>
+    </div>
+    <div class="qa-list">
+      <div class="qa-row reveal">
+        <span class="qa-num">I.</span>
+        <div>
+          <p class="qa-q">Do I have to replace my existing POS?</p>
+          <p class="qa-a">Not always. We integrate with most major POS systems (Toast, Square, Lightspeed, Clover) and add the tracking layer on top. If your current POS is genuinely causing problems, we&rsquo;ll tell you honestly &mdash; and only then recommend switching.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">II.</span>
+        <div>
+          <p class="qa-q">How fast will we see results from review automation?</p>
+          <p class="qa-a">Most clients see their first batch of new reviews within the first two weeks. A meaningful rating increase (0.3&ndash;0.5 stars) typically takes 60&ndash;90 days of consistent volume. The local search ranking improvement follows shortly after.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">III.</span>
+        <div>
+          <p class="qa-q">We&rsquo;re already on OpenTable. Do we still need a reservation system?</p>
+          <p class="qa-a">OpenTable charges per cover and owns your guest data. We can either integrate automated reminders into your OpenTable flow or migrate you to a commission-free system where you own everything. We&rsquo;ll show you the cost comparison and let you decide.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">IV.</span>
+        <div>
+          <p class="qa-q">Can you actually track liquor pours down to the ounce?</p>
+          <p class="qa-a">Yes &mdash; through a combination of POS recipe costing, digital pour sensors (optional), and periodic automated inventory reconciliation. You don&rsquo;t need a sensor on every bottle to get a clear picture. Most of our clients use the recipe + inventory method and catch their biggest shrinkage issues within the first 30 days.</p>
+        </div>
+      </div>
+      <div class="qa-row reveal">
+        <span class="qa-num">V.</span>
+        <div>
+          <p class="qa-q">Is there a long-term contract?</p>
+          <p class="qa-a">No. We operate month-to-month after the initial setup. You own everything we build &mdash; your website, your customer list, your systems. We earn your business every month.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta rule-top">
+  <div class="container">
+    <img src="assets/logo-mark.png" alt="" class="cta-mark reveal">
+    <span class="eyebrow reveal">Ready to Stop Bleeding Margin?</span>
+    <h2 class="cta-title reveal">Get a Free Audit<br><em>of Your Operation</em></h2>
+    <p class="cta-sub reveal">We&rsquo;ll dig into your real numbers &mdash; POS data, Google profile, review velocity, reservation history &mdash; and tell you exactly where your biggest leaks are and what fixing them is worth. No pitch, no commitment. Just the math.</p>
+    <div class="cta-actions reveal">
+      <a href="contact.html" class="btn btn-gold">Book My Free Audit <span class="arr">&rarr;</span></a>
+      <a href="pricing.html" class="btn btn-line">See Pricing</a>
+    </div>
+    <p class="cta-fine reveal">No credit card. No commitment. Just clear answers about your business.</p>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-stack">
-            <span class="logo-top">TOP</span>
-            <span class="logo-divider"></span>
-            <span class="logo-shelf">SHELF</span>
-            <span class="logo-tagline">Business Solutions</span>
-          </div>
-        </a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. You own everything. No long contracts. Plain-English results.</p>
       </div>
       <div>
@@ -444,35 +364,21 @@
           <a href="pricing.html">Pricing</a>
           <a href="why-us.html">Why Top Shelf</a>
           <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
       <span class="footer-tagline">We Solve. You Grow.</span>
     </div>
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navMobile.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.faq-item').classList.toggle('open');
-    });
-  });
-</script>
+</div><!-- /#page -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
