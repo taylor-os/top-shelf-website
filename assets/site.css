@@ -636,3 +636,8 @@ body.mm-open{ overflow:hidden; }
   .stat-cell:first-child{ border-top:none; }
   .feature-row{ grid-template-columns:1fr; }
 }
+
+/* Footer contact (added 2026-07) */
+.footer-contact{ display:flex; flex-direction:column; gap:.4rem; margin-top:1.2rem; }
+.footer-contact a{ color:var(--gold); font-size:.92rem; letter-spacing:.02em; transition:color .2s var(--ease); }
+.footer-contact a:hover{ color:var(--gold-bright); }
