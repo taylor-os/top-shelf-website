@@ -243,3 +243,83 @@
   });
   window.__tsChat = api;
 })();
+
+/* ===== Website assistant — retrieval engine ===== */
+(function () {
+  var panel = document.getElementById('tsChatPanel');
+  if (!panel) return;
+  var body = panel.querySelector('.tsc-body');
+  var quick = panel.querySelector('.tsc-quick');
+  var form = panel.querySelector('.tsc-foot');
+  var input = form.querySelector('input');
+
+  var VAULT = { services: [], sections: [] };
+  fetch('assets/services-vault.json').then(function (r) { return r.json(); })
+    .then(function (d) { VAULT = d; }).catch(function () {});
+
+  var STOP = ' the a an and or for of to your you with we our is are on in do does can ';
+  function score(text, keywords) {
+    var t = ' ' + text.toLowerCase() + ' ', s = 0;
+    keywords.forEach(function (k) { if (t.indexOf(k) !== -1) s += k.length; });
+    return s;
+  }
+
+  // Site-level intents (checked before the vault)
+  var INTENTS = [
+    { k: ['hello','hi','hey','help','start'], a: function () { return "Hi! I'm the Top Shelf concierge. I can walk you through what we do — websites, marketing, CRM, AI phone answering, payments and a lot more — and help you get a free audit. What kind of business do you run?"; } },
+    { k: ['price','pricing','cost','how much','quote','rate','fee','afford','budget'], a: function () { return "Every business is different, so we don't do one-size-fits-all pricing — we run a quick <strong>free audit</strong> of your business and build you a custom plan that fits. Want me to set that up? I'll just grab your details."; } },
+    { k: ['who are you','what is top shelf','about','why you','why top shelf','trust'], a: function () { return "Top Shelf Business Solutions is your all-in-one growth partner — we handle the tech and marketing that get you more customers, so you can run your business. We tailor everything to your trade and you keep what we build for you."; } },
+    { k: ['how does it work','how it works','process','get started','start','next step'], a: function () { return "Simple: we do a free audit of where you're losing customers, show you exactly what we'd fix, and build a custom plan — no guesswork. Want me to get you on the list for an audit?"; } },
+    { k: ['contact','talk','human','call','phone','reach','speak','email'], a: function () { return "Happy to connect you with a real person. Drop your info and we'll reach out fast — what's your name?"; } },
+    { k: ['services','what do you offer','what do you do','offerings','list','everything'], a: function () { return "We cover a lot — grouped into: " + (VAULT.sections.join(', ') || 'web presence, marketing, CRM, phone & communications, payments, and more') + ". Which area is on your mind? Or tell me your biggest headache and I'll point you to the fix."; } },
+  ];
+
+  function findAnswer(text) {
+    var best = null, bs = 0;
+    INTENTS.forEach(function (it) { var s = score(text, it.k); if (s > bs) { bs = s; best = { a: it.a(), cta: /audit|reach out|on the list|your name|your details/i.test(it.a()) }; } });
+    VAULT.services.forEach(function (sv) {
+      var s = score(text, sv.keywords) + score(text, [sv.name.toLowerCase()]) * 1.5;
+      if (s > bs) { bs = s; best = { a: '<strong>' + sv.name + '.</strong> ' + sv.blurb + (sv.great_for ? ' <em>Great for ' + sv.great_for + '.</em>' : '') + ' Want a free audit to see what this looks like for your business?', cta: true }; }
+    });
+    if (!best) return { a: "Great question — the fastest way to a solid answer is a quick free audit tailored to your business. Want me to grab your info so a Top Shelf specialist can follow up?", cta: true };
+    return best;
+  }
+
+  function el(html, cls) { var d = document.createElement('div'); d.className = cls; d.innerHTML = html; body.appendChild(d); body.scrollTop = body.scrollHeight; return d; }
+  function botTyping() { return el('<div class="tsc-typing"><span></span><span></span><span></span></div>', 'tsc-msg tsc-msg--bot'); }
+  function botReply(html, delay) { var t = botTyping(); setTimeout(function () { t.innerHTML = html; body.scrollTop = body.scrollHeight; }, delay || 650); }
+  function userMsg(text) { el(escapeHtml(text), 'tsc-msg tsc-msg--user'); }
+  function escapeHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  window.__tsChatBotReply = botReply; window.__tsChatUserMsg = userMsg; window.__tsChatEscape = escapeHtml;
+
+  window.__tsChatGreet = function () {
+    botReply("Hi! I'm the <strong>Top Shelf concierge</strong>. Ask me anything about how we help businesses grow — or tell me your trade and I'll point you to the right fix. 👋", 400);
+    setQuick(['What do you offer?', 'Help me get more customers', 'Book a free audit']);
+  };
+
+  function setQuick(items) {
+    quick.innerHTML = '';
+    items.forEach(function (label) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = label;
+      b.addEventListener('click', function () { handle(label); });
+      quick.appendChild(b);
+    });
+  }
+  window.__tsChatSetQuick = setQuick;
+
+  // Base responder — Task 5 wraps this to add lead capture.
+  window.__tsChatRespond = function (text) {
+    var res = findAnswer(text);
+    botReply(res.a, 700);
+    return res; // { a, cta }
+  };
+
+  function handle(text) {
+    if (!text || !text.trim()) return;
+    userMsg(text);
+    (window.__tsChatHandle || window.__tsChatRespond)(text);
+  }
+  window.__tsChatHandleInput = handle;
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); var v = input.value; input.value = ''; handle(v); });
+})();
