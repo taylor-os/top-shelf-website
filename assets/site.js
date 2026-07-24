@@ -323,3 +323,59 @@
 
   form.addEventListener('submit', function (e) { e.preventDefault(); var v = input.value; input.value = ''; handle(v); });
 })();
+
+/* ===== Website assistant — lead capture + submit ===== */
+(function () {
+  if (!window.__tsChatRespond) return;
+  var LEAD_ENDPOINT = 'https://top-shelf-production.up.railway.app/api/website-lead';
+  var FORMSPREE = 'https://formspree.io/f/FORMSPREE_ID'; // fallback (same id as the contact form)
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var PHONE_RE = /(\d[\s\-().]*){10,}/;
+
+  var lead = { active: false, step: 0, name: '', business: '', contact: '', need: '' };
+
+  function ask(q, delay) { window.__tsChatBotReply(q, delay || 450); }
+
+  function start(need) {
+    lead = { active: true, step: 1, name: '', business: '', contact: '', need: need || '' };
+    window.__tsChatSetQuick([]);
+    ask("Love it — let's get you a free audit. First, what's your name?");
+  }
+  window.__tsChatStartCapture = start;
+
+  function submit() {
+    var payload = { name: lead.name, business: lead.business, need: lead.need, page: location.href };
+    if (EMAIL_RE.test(lead.contact)) payload.email = lead.contact; else payload.phone = lead.contact;
+    var done = function () {
+      ask("You're all set, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! ✅ A Top Shelf specialist will reach out shortly about your free audit. Prefer email? <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a>.", 500);
+      lead.active = false;
+    };
+    fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
+      .then(done)
+      .catch(function () {
+        // Fallback so a lead is never lost.
+        fetch(FORMSPREE, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+          .then(done).catch(done);
+      });
+  }
+
+  function step(text) {
+    if (lead.step === 1) { lead.name = text.trim(); lead.step = 2; ask("Thanks, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! What's your business or trade?"); return; }
+    if (lead.step === 2) { lead.business = text.trim(); lead.step = 3; ask("Got it. What's the best email or phone to reach you?"); return; }
+    if (lead.step === 3) {
+      if (!EMAIL_RE.test(text) && !PHONE_RE.test(text)) { ask("Hmm, that doesn't look like an email or a full phone number — mind sending one so we can reach you?"); return; }
+      lead.contact = text.trim(); lead.step = 4;
+      ask("Perfect. Anything specific you're hoping to fix or grow? (Optional — you can say 'not sure'.)"); return;
+    }
+    if (lead.step === 4) { if (!lead.need) lead.need = text.trim(); lead.step = 0; submit(); return; }
+  }
+
+  var wantsCapture = /(call me|reach out|contact me|leave|my (name|number|info)|get (an )?audit|book|sign me up|yes|get started|interested)/i;
+
+  window.__tsChatHandle = function (text) {
+    if (lead.active) { step(text); return; }
+    var res = window.__tsChatRespond(text); // renders the answer
+    if (res && (res.cta || wantsCapture.test(text))) { setTimeout(function () { if (!lead.active) start(text); }, 1500); }
+  };
+})();
