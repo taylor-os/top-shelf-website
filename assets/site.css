@@ -641,3 +641,20 @@ body.mm-open{ overflow:hidden; }
 .footer-contact{ display:flex; flex-direction:column; gap:.4rem; margin-top:1.2rem; }
 .footer-contact a{ color:var(--gold); font-size:.92rem; letter-spacing:.02em; transition:color .2s var(--ease); }
 .footer-contact a:hover{ color:var(--gold-bright); }
+
+/* ============ industry story pages (v20260724) ============ */
+.ih{position:relative;overflow:hidden}
+.ih-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.30}
+.ih-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,6,.55),rgba(11,9,6,.93))}
+.ih .container{position:relative}
+.meet{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:center}
+.meet-photo{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--hairline)}
+.meet-photo img{width:100%;display:block}
+@media(max-width:820px){.meet{grid-template-columns:1fr;gap:1.6rem}}
+.pain-scene{font-style:italic;color:var(--ink-2);margin:.2rem 0 1rem}
+.pain-stat{display:flex;align-items:baseline;gap:.7rem;margin:1rem 0;padding-left:1rem;border-left:2px solid var(--gold)}
+.pain-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1;color:var(--gold-bright);font-weight:600;white-space:nowrap}
+.pain-stat-claim{font-size:.9rem;color:var(--ink-2);font-weight:300}
+.pain-src{font-size:.66rem;color:var(--ink-4);border-bottom:1px solid var(--hairline);white-space:nowrap}
+.pain-how strong{color:var(--gold)}
+.outcome-vision{font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1.5;color:var(--ink);font-weight:300;max-width:40ch}
