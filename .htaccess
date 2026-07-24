@@ -4,3 +4,8 @@
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
+
+# Keep internal planning docs private: no HTTP access, no directory listing.
+Options -Indexes
+RedirectMatch 404 ^/docs(/|$)
+RedirectMatch 404 ^/.+\.(md)$
