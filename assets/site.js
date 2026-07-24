@@ -209,3 +209,37 @@
   // Close automatically if resized up to desktop
   window.matchMedia('(min-width: 861px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
 })();
+
+/* ===== Website assistant (concierge) — shell (markup + open/close) ===== */
+(function () {
+  if (document.getElementById('tsChatFab')) return;
+  var fab = document.createElement('button');
+  fab.className = 'tsc-fab'; fab.id = 'tsChatFab'; fab.setAttribute('aria-label', 'Chat with Top Shelf');
+  fab.innerHTML = '<svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>';
+  var panel = document.createElement('section');
+  panel.className = 'tsc-panel'; panel.id = 'tsChatPanel'; panel.setAttribute('aria-label', 'Top Shelf assistant');
+  panel.innerHTML =
+    '<div class="tsc-head"><div class="tsc-av"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>'
+    + '<div><b>Top Shelf Concierge</b><span>Typically replies instantly</span></div>'
+    + '<button type="button" aria-label="Close">×</button></div>'
+    + '<div class="tsc-body"></div>'
+    + '<div class="tsc-quick"></div>'
+    + '<form class="tsc-foot"><input type="text" placeholder="Ask about our services…" aria-label="Message" autocomplete="off"><button type="submit">Send</button></form>';
+  document.body.appendChild(fab); document.body.appendChild(panel);
+
+  var greeted = false;
+  var api = {
+    open: function () {
+      panel.classList.add('open'); fab.style.display = 'none';
+      if (!greeted && window.__tsChatGreet) { greeted = true; window.__tsChatGreet(); }
+      setTimeout(function () { var i = panel.querySelector('.tsc-foot input'); if (i) i.focus(); }, 250);
+    },
+    close: function () { panel.classList.remove('open'); fab.style.display = 'grid'; }
+  };
+  fab.addEventListener('click', api.open);
+  panel.querySelector('.tsc-head button').addEventListener('click', api.close);
+  document.querySelectorAll('[data-open-chat]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); api.open(); });
+  });
+  window.__tsChat = api;
+})();
