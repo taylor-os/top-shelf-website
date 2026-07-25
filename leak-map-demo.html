@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leak Map — Top Shelf (template)</title>
+<style>
+  body{margin:0;font-family:system-ui,sans-serif;background:#0e0b07;color:#8a8378;min-height:100vh}
+  .demo{max-width:760px;margin:0 auto;padding:80px 24px;text-align:center}
+  .demo h1{font-family:Georgia,serif;color:#cfc7b8;font-weight:400}
+  .demo button{margin-top:20px;background:#C9A86A;border:0;color:#0B0906;padding:12px 22px;border-radius:10px;font-size:15px;cursor:pointer}
+</style>
+</head>
+<body>
+  <div class="demo">
+    <h1>Your website content sits here.</h1>
+    <p>The Leak Map pops up automatically (≈6s / exit-intent / scroll), or open it manually:</p>
+    <button onclick="TSLeak.open()">Open the Leak Map</button>
+  </div>
+
+<!-- ============================================================
+     TOP SHELF — LEAK MAP (Quiz C)   ·  reusable template
+     To rebrand: edit ONLY the CONFIG object below (identical to the
+     Leak Finder's config, plus a `web` block for the node layout).
+     ============================================================ -->
+<script>
+(function(){
+"use strict";
+
+/* ======================= CONFIG (edit this) ======================= */
+var CONFIG = {
+  brand: {
+    name:"Top Shelf", logoText:"TOP SHELF", logoUrl:"", kicker:"Leak Map",
+    colors:{ground:"#0B0906",surface:"#100C08",gold:"#C9A86A",goldBright:"#E4C98A",ink:"#F4F0E8",ink2:"#CFC7B8",ink3:"#98907F",ink4:"#6E675A",hairline:"rgba(201,168,106,.20)"},
+    fontImport:"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap",
+    fontDisplay:"'Cormorant Garamond',Georgia,serif", fontBody:"'Jost',system-ui,sans-serif"
+  },
+  behavior:{ triggerSeconds:6, scrollPercent:40, exitIntent:true, oncePerSession:true, dismissDays:7,
+    showDollars:true, currency:"$", leadEndpoint:"", reopen:true, reopenLabel:"Find your leaks" },
+  intro:{ eyebrow:"Tap what's true for you", headline:"See how your leaks <em>feed each other</em>",
+    sub:"Tap the problems you recognize. Watch them light up and connect — and watch what they're costing add up." },
+  /* Each AREA = one node. Node value = the sum of its symptoms' monthly leak. */
+  areas:[
+    { eyebrow:"Getting found", icon:"map-pin", solution:"Websites & Local SEO", solutionUrl:"solution-websites-seo.html",
+      symptoms:[{label:"Not on page 1 for 'near me'",monthly:1400},{label:"Website dated or missing",monthly:900},{label:"Not in the Map Pack",monthly:1200}]},
+    { eyebrow:"Thin reviews", icon:"star", solution:"Reviews & Reputation", solutionUrl:"solution-reviews.html",
+      symptoms:[{label:"Fewer reviews than competitors",monthly:1100},{label:"Reviews old & stale",monthly:600}]},
+    { eyebrow:"Missed calls", icon:"phone", solution:"AI Phone & Receptionist", solutionUrl:"solution-ai-phone.html",
+      symptoms:[{label:"Calls go to voicemail",monthly:1800},{label:"Nobody answers after hours",monthly:1500}]},
+    { eyebrow:"Lost leads", icon:"route", solution:"Lead Capture & CRM", solutionUrl:"solution-crm.html",
+      symptoms:[{label:"Quotes go cold",monthly:1700},{label:"Leads slip through the cracks",monthly:1400}]},
+    { eyebrow:"One-time customers", icon:"refresh", solution:"Memberships & Loyalty", solutionUrl:"solution-memberships.html",
+      symptoms:[{label:"Customers buy once & vanish",monthly:1200},{label:"No memberships or loyalty",monthly:800}]},
+    { eyebrow:"Buried in admin", icon:"clock", solution:"AI & Automation", solutionUrl:"solution-automation.html",
+      symptoms:[{label:"Doing the job of five people",monthly:900}]}
+  ],
+  web:{ edges:[[0,1],[1,2],[2,3],[3,4],[0,3],[5,2],[5,3]],
+    pairText:{ "2-3":"Missed calls feed lost leads — two leaks compounding.", "0-1":"No visibility starves your reviews.",
+      "3-4":"Lost leads mean no repeat customers.", "0-3":"If they can't find you, the leads never even start.",
+      "1-2":"Weak reviews mean fewer found-you callers actually dial.", "5-2":"No time to answer = missed calls.",
+      "5-3":"No time to follow up = leads die." } },
+  industries:["Home services","Restaurant / bar","Medical / dental","Law firm","Retail / local","Auto","Salon / spa / fitness","Other"],
+  thankYou:{ title:"Thank you — this is exactly what we needed.",
+    body:"We've mapped your leaks. A Top Shelf specialist will reach out within one business day to walk you through what each one is costing you — and how we'd plug it. No pressure, just your numbers.",
+    note:"Keep an eye on your phone. Your leak report is on the way." }
+};
+/* ===================== END CONFIG ===================== */
+
+var ICONS={
+ "map-pin":'<path d="M12 21.5s7-6.6 7-12A7 7 0 0 0 5 9.5c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9.3" r="2.4"/>',
+ "star":'<path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/>',
+ "phone":'<path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/>',
+ "route":'<circle cx="6" cy="19" r="2.4"/><circle cx="18" cy="5" r="2.4"/><path d="M8.4 19h6.1a3 3 0 0 0 0-6h-5a3 3 0 0 1 0-6H15.6"/>',
+ "refresh":'<path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/>',
+ "clock":'<circle cx="12" cy="12" r="8.5"/><polyline points="12,7 12,12 15.5,14"/>',
+ "check":'<polyline points="4,12.5 9,17.5 20,6.5"/>',"x":'<line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/>',
+ "report":'<rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>'
+};
+function svg(n,s){return '<svg viewBox="0 0 24 24" width="'+(s||20)+'" height="'+(s||20)+'" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[n]||ICONS.star)+'</svg>';}
+
+var B=CONFIG.brand,C=B.colors,BE=CONFIG.behavior;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function nodeVal(a){return a.symptoms.reduce(function(t,s){return t+s.monthly;},0);}
+var MAX=0;CONFIG.areas.forEach(function(a){MAX+=nodeVal(a);});
+var on={},shown=0,root,head,board,svgEl,moneyEl,opened=false,phase="map";
+
+function css(){
+  if(!document.getElementById('tslm-fonts')){var l=document.createElement('link');l.id='tslm-fonts';l.rel='stylesheet';l.href=B.fontImport;document.head.appendChild(l);}
+  var s=document.createElement('style');s.textContent=
+  '#tslm,#tslm *{box-sizing:border-box}'+
+  '#tslm{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:rgba(6,5,3,.62);padding:20px;font-family:'+B.fontBody+'}'+
+  '#tslm.show{display:flex}'+
+  '.tslm-card{width:100%;max-width:600px;max-height:94vh;overflow:auto;background:'+C.ground+';border:1px solid '+C.hairline+';border-radius:18px;padding:24px;color:'+C.ink2+'}'+
+  '.tslm-eb{font-weight:500;font-size:11px;letter-spacing:2.4px;color:'+C.gold+';text-transform:uppercase}'+
+  '.tslm-h{font-family:'+B.fontDisplay+';font-weight:500;color:'+C.ink+';margin:6px 0 0;line-height:1.15}'+
+  '.tslm-node{position:absolute;transform:translate(-50%,-50%);width:98px;text-align:center;cursor:pointer}'+
+  '.tslm-disc{width:52px;height:52px;border-radius:50%;border:1px solid rgba(201,168,106,.3);display:flex;align-items:center;justify-content:center;margin:0 auto;color:'+C.ink3+';background:'+C.ground+';transition:all .3s}'+
+  '.tslm-lb{font-size:11.5px;color:'+C.ink4+';margin-top:6px;line-height:1.25;transition:color .3s}'+
+  '.tslm-node.on .tslm-disc{border-color:'+C.gold+';color:'+C.ground+';background:'+C.gold+'}'+
+  '.tslm-node.on .tslm-lb{color:'+C.ink+'}'+
+  '.tslm-btn{font-family:'+B.fontBody+';font-weight:500;font-size:14px;border-radius:11px;padding:12px 20px;cursor:pointer;border:1px solid transparent}'+
+  '.tslm-gold{background:'+C.gold+';color:'+C.ground+'}.tslm-gold:hover{background:'+C.goldBright+'}'+
+  '.tslm-line{background:transparent;border:1px solid rgba(201,168,106,.35);color:'+C.gold+'}.tslm-line:hover{background:rgba(201,168,106,.08)}'+
+  '.tslm-in{width:100%;background:'+C.surface+';border:1px solid rgba(201,168,106,.25);border-radius:10px;padding:11px 12px;color:'+C.ink+';font-family:'+B.fontBody+';font-size:14px;margin-top:8px}'+
+  '#tslm-tab{position:fixed;right:16px;bottom:16px;z-index:99998;background:'+C.gold+';color:'+C.ground+';border:0;border-radius:30px;padding:11px 16px;font-family:'+B.fontBody+';font-weight:500;font-size:13px;cursor:pointer;display:none;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}'+
+  '@media(max-width:620px){.tslm-card{max-width:100%;min-height:100vh;max-height:100vh;border-radius:0}#tslm{padding:0}}';
+  document.head.appendChild(s);
+}
+function build(){
+  root=document.createElement('div');root.id='tslm';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Leak map');
+  var logo=B.logoUrl?'<img src="'+B.logoUrl+'" alt="'+B.name+'" style="height:22px">':'<span style="font-weight:500;letter-spacing:1.5px;color:'+C.ink+';font-size:14px">'+B.logoText+'</span>';
+  root.innerHTML='<div class="tslm-card">'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><div style="display:flex;align-items:center;gap:9px"><span style="color:'+C.gold+'">'+svg("route",18)+'</span>'+logo+'<span style="color:'+C.ink4+';font-size:12px">· '+B.kicker+'</span></div><button id="tslm-close" aria-label="Close" style="background:none;border:0;color:'+C.ink4+';cursor:pointer">'+svg("x",18)+'</button></div>'+
+    '<div id="tslm-head"></div>'+
+    '<div id="tslm-body"></div>'+
+    '<div id="tslm-nav" style="text-align:center;margin-top:14px"></div>'+
+  '</div>';
+  document.body.appendChild(root);
+  head=root.querySelector('#tslm-head');
+  root.querySelector('#tslm-close').onclick=close;
+  root.addEventListener('click',function(e){if(e.target===root)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened)close();});
+  if(BE.reopen){var t=document.createElement('button');t.id='tslm-tab';t.textContent=BE.reopenLabel;t.onclick=open;document.body.appendChild(t);}
+}
+function fmt(n){return BE.currency+Math.round(n).toLocaleString();}
+function total(){var t=0;for(var i in on)if(on[i])t+=nodeVal(CONFIG.areas[i]);return t;}
+function tween(to){if(!moneyEl)return;if(reduce){shown=to;moneyEl.textContent=fmt(to);return;}var f=shown,st=performance.now();function fr(now){var p=Math.min(1,(now-st)/450);var v=f+(to-f)*(p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2);moneyEl.textContent=fmt(v);if(p<1)requestAnimationFrame(fr);else{shown=to;moneyEl.textContent=fmt(to);}}requestAnimationFrame(fr);}
+
+function renderMap(){phase="map";
+  head.innerHTML='<div class="tslm-eb">'+CONFIG.intro.eyebrow+'</div><h3 class="tslm-h" style="font-size:22px">'+CONFIG.intro.headline+'</h3>'+
+    (BE.showDollars?'<div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:12px;border-top:1px solid rgba(201,168,106,.15);padding-top:10px"><span style="color:'+C.ink3+';font-size:12.5px">Estimated leak / month</span><span id="tslm-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:30px;color:'+C.goldBright+'">'+fmt(total())+'</span></div>':'');
+  var W=500,H=360,cx=250,cy=182,r=138,N=CONFIG.areas.length,pos=[];
+  for(var i=0;i<N;i++){var ang=(-90+i*360/N)*Math.PI/180;pos.push([cx+r*Math.cos(ang),cy+r*Math.sin(ang)]);}
+  var bodyEl=root.querySelector('#tslm-body');
+  var edges='';CONFIG.web.edges.forEach(function(e){edges+='<line data-k="'+e[0]+'-'+e[1]+'" x1="'+pos[e[0]][0]+'" y1="'+pos[e[0]][1]+'" x2="'+pos[e[1]][0]+'" y2="'+pos[e[1]][1]+'" stroke="'+C.gold+'" stroke-width="1" stroke-opacity=".12" style="transition:all .35s"/>';});
+  var nodes='';CONFIG.areas.forEach(function(a,i){nodes+='<div class="tslm-node'+(on[i]?' on':'')+'" data-i="'+i+'" style="left:'+(pos[i][0]/W*100)+'%;top:'+(pos[i][1]/H*100)+'%"><div class="tslm-disc">'+svg(a.icon,22)+'</div><div class="tslm-lb">'+a.eyebrow+'</div></div>';});
+  bodyEl.innerHTML='<div style="position:relative;width:100%;height:'+H+'px;margin:6px 0 2px"><svg id="tslm-svg" width="100%" height="'+H+'" viewBox="0 0 '+W+' '+H+'" style="position:absolute;inset:0">'+edges+'</svg>'+nodes+'</div>'+
+    '<p id="tslm-narr" style="text-align:center;color:'+C.gold+';font-size:13px;font-style:italic;min-height:20px;margin:0">Tap the problems you recognize — watch them connect.</p>';
+  moneyEl=root.querySelector('#tslm-money');svgEl=root.querySelector('#tslm-svg');
+  bodyEl.querySelectorAll('.tslm-node').forEach(function(n){n.onclick=function(){var i=+n.getAttribute('data-i');on[i]=!on[i];n.classList.toggle('on');refresh();};});
+  root.querySelector('#tslm-nav').innerHTML='<button class="tslm-btn tslm-gold" id="tslm-go">See my leak report →</button>';
+  root.querySelector('#tslm-go').onclick=report;
+  refresh();
+}
+function refresh(){tween(total());
+  var live=[];svgEl&&svgEl.querySelectorAll('line').forEach(function(l){var k=l.getAttribute('data-k').split('-');if(on[k[0]]&&on[k[1]]){l.setAttribute('stroke-opacity',reduce?'.85':'.85');l.setAttribute('stroke-width','2');live.push(l.getAttribute('data-k'));}else{l.setAttribute('stroke-opacity','.12');l.setAttribute('stroke-width','1');}});
+  var narr=root.querySelector('#tslm-narr');if(!narr)return;
+  var pt=CONFIG.web.pairText;var msg=null;for(var j=live.length-1;j>=0;j--){if(pt[live[j]]){msg=pt[live[j]];break;}}
+  if(msg)narr.textContent='"'+msg+'"';else{var c=0;for(var i in on)if(on[i])c++;narr.textContent=c?c+' leak'+(c>1?'s':'')+' selected — tap more, or get your report.':'Tap the problems you recognize — watch them connect.';}
+}
+function report(){phase="report";var t=total(),act=[];for(var i in on)if(on[i])act.push(i);act.sort(function(a,b){return nodeVal(CONFIG.areas[b])-nodeVal(CONFIG.areas[a]);});
+  var h='<div class="tslm-eb">'+svg("report",14)+' Your leak report</div><h3 class="tslm-h" style="font-size:23px">You&rsquo;re likely leaking <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:12.5px;margin:6px 0 12px">≈ '+fmt(t*12)+' a year — a rough estimate from what you tapped.</p>';
+  if(act.length){h+='<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px">';act.forEach(function(i){var a=CONFIG.areas[i];h+='<div style="display:flex;justify-content:space-between;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:9px 12px"><span style="color:'+C.ink+';font-size:13px">'+a.eyebrow+' <span style="color:'+C.ink4+'">→ '+a.solution+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:17px">'+fmt(nodeVal(a))+'</span></div>';});h+='</div>';}
+  else h+='<p style="color:'+C.ink3+'">Nothing tapped yet — most owners light up at least a couple. Go back and take a look.</p>';
+  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:14px"><p style="color:'+C.ink+';font-size:14px;font-weight:500;margin:0 0 2px">Get your free leak audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We turn this map into your real numbers — no obligation.</p>'+
+    '<input class="tslm-in" id="tslm-name" placeholder="Your name"><input class="tslm-in" id="tslm-biz" placeholder="Business name"><select class="tslm-in" id="tslm-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tslm-in" id="tslm-contact" placeholder="Phone or email"></div>';
+  head.innerHTML='';root.querySelector('#tslm-body').innerHTML=h;
+  root.querySelector('#tslm-nav').innerHTML='<div style="display:flex;gap:10px;justify-content:center"><button class="tslm-btn tslm-line" id="tslm-bk">Back</button><button class="tslm-btn tslm-gold" id="tslm-submit">Send my leak report →</button></div>';
+  root.querySelector('#tslm-bk').onclick=renderMap;root.querySelector('#tslm-submit').onclick=submit;
+}
+function val(id){var e=root.querySelector('#'+id);return e?e.value:'';}
+function submit(){var lead={name:val('tslm-name'),business:val('tslm-biz'),industry:val('tslm-ind'),contact:val('tslm-contact'),
+   total_monthly:total(),total_annual:total()*12,currency:BE.currency,leaks:[],source:location.href,ts:new Date().toISOString(),quiz:"leak-map-C"};
+  for(var i in on)if(on[i]){var a=CONFIG.areas[i];lead.leaks.push({area:a.eyebrow,solution:a.solution,monthly:nodeVal(a)});}
+  if(BE.leadEndpoint){try{fetch(BE.leadEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(lead)}).catch(function(){});}catch(e){}}
+  else console.log("[Leak Map] demo mode — lead captured:",lead);
+  thanks();
+}
+function thanks(){head.innerHTML='';root.querySelector('#tslm-nav').innerHTML='';
+  root.querySelector('#tslm-body').innerHTML='<div style="text-align:center;padding:16px 6px"><div style="width:54px;height:54px;border-radius:50%;border:1px solid '+C.gold+';display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:'+C.gold+'">'+svg("check",26)+'</div><h3 class="tslm-h" style="font-size:24px">'+CONFIG.thankYou.title+'</h3><p style="color:'+C.ink2+';font-size:14px;line-height:1.65;margin:12px auto 0;max-width:400px;font-family:'+B.fontBody+'">'+CONFIG.thankYou.body+'</p><p style="color:'+C.ink4+';font-size:12px;margin-top:14px">'+CONFIG.thankYou.note+'</p><button class="tslm-btn tslm-gold" style="margin-top:18px" id="tslm-done">Close</button></div>';
+  root.querySelector('#tslm-done').onclick=close;
+}
+function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tslm-tab');if(t)t.style.display='none';if(phase!=="report")renderMap();}
+function close(){opened=false;root.classList.remove('show');document.documentElement.style.overflow='';try{localStorage.setItem('tslm_dismissed',Date.now());}catch(e){}if(BE.reopen){var t=document.getElementById('tslm-tab');if(t)t.style.display='block';}}
+function armTriggers(){var fired=false;function go(){if(fired)return;fired=true;try{sessionStorage.setItem('tslm_shown','1');}catch(e){}open();}
+  try{var d=+localStorage.getItem('tslm_dismissed');if(d&&(Date.now()-d)<BE.dismissDays*864e5){if(BE.reopen){var t=document.getElementById('tslm-tab');if(t)t.style.display='block';}return;}}catch(e){}
+  if(BE.oncePerSession){try{if(sessionStorage.getItem('tslm_shown')){if(BE.reopen){var tb=document.getElementById('tslm-tab');if(tb)tb.style.display='block';}return;}}catch(e){}}
+  if(BE.triggerSeconds!=null)setTimeout(go,BE.triggerSeconds*1000);
+  if(BE.scrollPercent)window.addEventListener('scroll',function ons(){var sp=scrollY/(document.body.scrollHeight-innerHeight)*100;if(sp>=BE.scrollPercent){go();window.removeEventListener('scroll',ons);}},{passive:true});
+  if(BE.exitIntent)document.addEventListener('mouseout',function(e){if(e.clientY<=0)go();});
+}
+function init(){css();build();armTriggers();window.TSLeak={open:open,close:close};}
+if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+</body>
+</html>
