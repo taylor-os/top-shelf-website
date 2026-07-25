@@ -571,12 +571,12 @@ body.mm-open{ overflow:hidden; }
 .two-col.narrow-left{ grid-template-columns:.85fr 1.15fr; }
 
 /* --- Simple responsive card grid for interior cross-links / feature tiles --- */
-.mini-grid{ display:grid; gap:2px; background:var(--hairline); border:1px solid var(--hairline); border-radius:var(--r-lg); overflow:hidden; }
+.mini-grid{ display:grid; gap:clamp(0.85rem,1.4vw,1.1rem); }
 .mini-grid.cols-2{ grid-template-columns:repeat(2,1fr); }
 .mini-grid.cols-3{ grid-template-columns:repeat(3,1fr); }
 .mini-grid.cols-4{ grid-template-columns:repeat(4,1fr); }
-.mini-card{ background:var(--surface); padding:clamp(1.8rem,2.6vw,2.4rem); transition:background 320ms var(--ease-out); text-decoration:none; display:block; }
-.mini-card:hover{ background:var(--surface-2); }
+.mini-card{ background:transparent; border:1px solid var(--hairline); border-radius:16px; padding:clamp(1.7rem,2.5vw,2.2rem); transition:transform 380ms var(--ease-out), border-color 380ms var(--ease-out), background 380ms var(--ease-out), box-shadow 380ms var(--ease-out); text-decoration:none; display:block; }
+.mini-card:hover{ background:rgba(201,168,106,0.05); border-color:var(--gold); transform:translateY(-4px); box-shadow:0 22px 46px -28px rgba(0,0,0,.72); }
 .mini-card-icon{ color:var(--gold); margin-bottom:1.2rem; }
 .mini-card-icon svg{ width:26px; height:26px; }
 .mini-card-title{ font-family:var(--serif); font-size:1.25rem; color:var(--ink); font-weight:400; margin-bottom:.6rem; }
