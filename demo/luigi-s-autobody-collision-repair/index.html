@@ -1,715 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Luigi&#x27;s Autobody &amp; Collision Repair — Denton&#x27;s family-owned body shop. Fair prices, and work good enough that folks send their friends.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <style>
-/* ── Reset & custom properties ───────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --primary: #C0392B;
-  --accent: #E74C3C;
-  --bg: #1C1C1E;
-  --text: #F5F5F5;
-  --card-bg: rgba(255,255,255,0.07);
-  --card-border: rgba(255,255,255,0.12);
-  --muted: rgba(255,255,255,0.55);
-  --font-heading: "Barlow Condensed", system-ui, sans-serif;
-  --font-body: "Barlow", system-ui, sans-serif;
-  --hero-overlay: rgba(0,0,0,0.55);
-  --hero-text: #FFFFFF;
-  --radius: 12px;
-  --shadow: 0 4px 24px rgba(0,0,0,0.10);
-  --shadow-card: 0 2px 12px rgba(0,0,0,0.08);
-}
-
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-img { max-width: 100%; height: auto; display: block; }
-a { color: inherit; text-decoration: none; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-
-/* ── Type scale ───────────────────────────────────────────── */
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-h1 { font-size: clamp(2.2rem, 6vw, 4rem); }
-h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); margin-bottom: 0.5rem; }
-h3 { font-size: 1.15rem; font-weight: 600; }
-
-.eyebrow {
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.65;
-  margin-bottom: 0.75rem;
-  display: block;
-}
-
-/* ── Layout utilities ─────────────────────────────────────── */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
-
-section { padding: 5rem 0; }
-
-/* ── Navigation ───────────────────────────────────────────── */
-#site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--primary);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  gap: 1rem;
-}
-
-.nav-wordmark {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0.25rem;
-  align-items: center;
-}
-.nav-links a {
-  color: rgba(255,255,255,0.82);
-  font-size: 0.88rem;
-  font-weight: 500;
-  padding: 0.45rem 0.75rem;
-  border-radius: 6px;
-  transition: color 0.2s, background 0.2s;
-}
-.nav-links a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.12);
-}
-
-.nav-cta {
-  background: var(--accent);
-  color: var(--primary) !important;
-  border-radius: 6px;
-  padding: 0.5rem 1.1rem !important;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
-  transition: opacity 0.2s !important;
-}
-.nav-cta:hover { opacity: 0.88; background: var(--accent) !important; }
-
-/* Mobile hamburger */
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 6px;
-}
-.nav-hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
-  transition: transform 0.25s, opacity 0.25s;
-}
-.nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-@media (max-width: 760px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--primary);
-    padding: 1rem 1.25rem 1.5rem;
-    gap: 0.15rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Luigi's Autobody &amp; Collision Repair · Denton, TX</title>
+<meta name="description" content="Family-owned auto body and collision repair in Denton, TX. Honest pricing, straight answers, and repairs that hold up. Rated 4.9 stars.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#131417;
+    --ink-2:#1b1d22;
+    --surface:#202329;
+    --line:rgba(255,255,255,.09);
+    --line-2:rgba(255,255,255,.14);
+    --text:#e9e7e3;
+    --text-soft:#b0aea9;
+    --text-mute:#8b8983;
+    --amber:#f0842a;
+    --amber-soft:#f6a15a;
+    --amber-ink:#3a2410;
+    --r-lg:22px;
+    --ease:cubic-bezier(.2,.8,.2,1);
+    --ease-out:cubic-bezier(.16,1,.3,1);
+    --maxw:1180px;
   }
-  .nav-links.is-open { display: flex; }
-  .nav-links a { padding: 0.65rem 1rem; font-size: 0.95rem; }
-  .nav-hamburger { display: flex; }
-  .nav-cta { margin-top: 0.5rem; }
-  #site-header { position: relative; }
-  body { position: relative; }
-}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    background:var(--ink);
+    color:var(--text);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:clamp(16px,1.05vw,17px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:"Bricolage Grotesque","Inter",sans-serif;
+    line-height:1.02;
+    letter-spacing:-.03em;
+    text-wrap:balance;
+    font-weight:700;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--amber);color:var(--amber-ink)}
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,5vw,44px)}
+  .eyebrow{
+    font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--amber-soft);display:inline-flex;align-items:center;gap:.6em;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--amber);opacity:.7}
 
-/* ── Hero ─────────────────────────────────────────────────── */
-#home {
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background-color: var(--primary);
-  background-image: url(https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1600&amp;q=80); background-size: cover; background-position: center;
-}
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;inset:0 0 auto 0;z-index:50;
+    transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(19,20,23,.72);
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-.02em}
+  .brand .mark{
+    width:34px;height:34px;border-radius:9px;flex:none;
+    background:linear-gradient(150deg,var(--amber-soft),var(--amber));
+    color:var(--amber-ink);display:grid;place-items:center;font-weight:800;font-size:1.05rem;
+    box-shadow:0 6px 18px -6px rgba(240,132,42,.6);
+  }
+  .brand small{display:block;font-family:"Inter";font-weight:500;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);margin-top:1px}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-size:.92rem;color:var(--text-soft);font-weight:500;transition:color .2s var(--ease);position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:1.5px;width:0;background:var(--amber);transition:width .28s var(--ease)}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:var(--amber-ink);
+    font-weight:600;font-size:.9rem;padding:.6rem 1.1rem;border-radius:999px;
+    transition:transform .18s var(--ease),box-shadow .25s var(--ease);
+    box-shadow:0 8px 22px -10px rgba(240,132,42,.7);
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 12px 28px -10px rgba(240,132,42,.85)}
+  .nav-cta:active{transform:translateY(0) scale(.98)}
+  .nav-cta svg{width:16px;height:16px}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line-2);border-radius:10px;width:44px;height:44px;color:var(--text);cursor:pointer;align-items:center;justify-content:center}
+  .nav-toggle svg{width:22px;height:22px}
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--hero-overlay);
-  z-index: 0;
-}
+  @media(max-width:860px){
+    .nav-links{
+      position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(19,20,23,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+      padding:1rem clamp(20px,5vw,44px) 1.6rem;border-bottom:1px solid var(--line);
+      transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease);
+    }
+    .nav-links.open{opacity:1;transform:none;pointer-events:auto}
+    .nav-links a{padding:.85rem 0;border-bottom:1px solid var(--line);font-size:1.02rem;color:var(--text)}
+    .nav-links a::after{display:none}
+    .nav-links .nav-cta{justify-content:center;margin-top:1rem;padding:.85rem;border-bottom:none;color:var(--amber-ink)}
+    .nav-toggle{display:flex}
+  }
 
-/* Accent shape — the design signature */
-#home::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--accent);
-  opacity: 0.12;
-  clip-path: polygon(0 0, 6px 0, 6px 100%, 0 100%);
-  z-index: 0;
-  pointer-events: none;
-}
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100dvh;display:flex;align-items:center;padding-top:72px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:#0e0f12}
+  .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.3) contrast(1.05) brightness(.6)}
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 80% 6%,rgba(240,132,42,.17),transparent 46%),
+      linear-gradient(180deg,rgba(19,20,23,.7) 0%,rgba(19,20,23,.52) 42%,rgba(19,20,23,.95) 96%),
+      linear-gradient(90deg,rgba(19,20,23,.92) 0%,rgba(19,20,23,.34) 56%,transparent 100%);
+  }
+  .hero-inner{position:relative;z-index:2;padding-block:clamp(4rem,10vh,6.5rem)}
+  .hero h1{
+    font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-.04em;max-width:16ch;
+    margin:1.4rem 0 0;
+  }
+  .hero h1 .accent{color:var(--amber-soft)}
+  .hero .lede{
+    margin-top:1.5rem;max-width:47ch;font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--text-soft);
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.4rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.6rem;font-weight:600;border-radius:999px;
+    padding:.95rem 1.6rem;font-size:1rem;cursor:pointer;border:1px solid transparent;white-space:nowrap;
+    transition:transform .18s var(--ease),box-shadow .25s var(--ease),background .2s var(--ease),border-color .2s var(--ease);
+  }
+  .btn-primary{background:var(--amber);color:var(--amber-ink);box-shadow:0 12px 30px -12px rgba(240,132,42,.75)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px -12px rgba(240,132,42,.9)}
+  .btn-primary:active{transform:translateY(0) scale(.98)}
+  .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line-2);color:var(--text)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px}
+  .hero-trust{
+    display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem 1.9rem;margin-top:3rem;
+    padding-top:1.8rem;border-top:1px solid var(--line);max-width:600px;
+  }
+  .trust-item{display:flex;align-items:center;gap:.7rem}
+  .stars{display:inline-flex;gap:2px;color:var(--amber)}
+  .stars svg{width:17px;height:17px}
+  .trust-item .big{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.28rem;letter-spacing:-.02em;line-height:1}
+  .trust-item .sub{font-size:.8rem;color:var(--text-mute);margin-top:2px}
+  .trust-sep{width:1px;height:34px;background:var(--line);align-self:center}
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 5rem 0;
-  max-width: 720px;
-}
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal[data-d="1"]{transition-delay:.08s}
+  .reveal[data-d="2"]{transition-delay:.16s}
+  .reveal[data-d="3"]{transition-delay:.24s}
+  .reveal[data-d="4"]{transition-delay:.32s}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  }
 
-.hero-content h1 {
-  color: var(--hero-text);
-  margin-bottom: 1rem;
-}
+  section{position:relative}
+  .section-pad{padding-block:clamp(5rem,11vh,8.5rem)}
+  .sec-head{max-width:52ch}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,3.2rem);margin-top:1.1rem;font-weight:700}
+  .sec-head p{margin-top:1.1rem;color:var(--text-soft);font-size:1.08rem;max-width:48ch}
 
-.hero-tagline {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: var(--hero-text);
-  opacity: 0.88;
-  margin-bottom: 2.25rem;
-  max-width: 560px;
-  line-height: 1.55;
-}
+  /* ---------- SERVICES ---------- */
+  #services{background:linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%)}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.1rem;margin-top:3.2rem}
+  .svc{
+    position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+    padding:1.9rem 1.7rem 1.8rem;overflow:hidden;
+    transition:transform .35s var(--ease),border-color .35s var(--ease),background .35s var(--ease);
+  }
+  .svc::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 100% 0,rgba(240,132,42,.14),transparent 55%);
+    opacity:0;transition:opacity .35s var(--ease);
+  }
+  .svc:hover{transform:translateY(-6px);border-color:var(--line-2);background:#252931}
+  .svc:hover::before{opacity:1}
+  .svc-ico{
+    position:relative;z-index:1;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(150deg,rgba(240,132,42,.22),rgba(240,132,42,.08));
+    border:1px solid rgba(240,132,42,.3);color:var(--amber-soft);
+  }
+  .svc-ico svg{width:24px;height:24px}
+  .svc h3{position:relative;z-index:1;font-size:1.28rem;margin:1.3rem 0 .5rem;letter-spacing:-.02em}
+  .svc p{position:relative;z-index:1;color:var(--text-soft);font-size:.98rem}
+  .svc .num{position:absolute;top:1.4rem;right:1.5rem;z-index:1;font-family:"Bricolage Grotesque";font-weight:700;font-size:.9rem;color:var(--text-mute)}
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
+  /* ---------- ABOUT ---------- */
+  #about{background:var(--ink-2)}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
+  .about-copy h2{font-size:clamp(2rem,4.2vw,3.1rem);margin-top:1.1rem;font-weight:700}
+  .about-copy p{margin-top:1.3rem;color:var(--text-soft);font-size:1.08rem;max-width:52ch}
+  .about-copy p strong{color:var(--text);font-weight:600}
+  .about-points{display:grid;gap:1rem;margin-top:2.2rem}
+  .point{display:flex;gap:.9rem;align-items:flex-start}
+  .point .tick{flex:none;width:26px;height:26px;border-radius:8px;background:rgba(240,132,42,.14);border:1px solid rgba(240,132,42,.3);display:grid;place-items:center;color:var(--amber-soft);margin-top:2px}
+  .point .tick svg{width:15px;height:15px}
+  .point b{font-weight:600;color:var(--text)}
+  .point span{color:var(--text-mute);font-size:.94rem;display:block;margin-top:1px}
+  .about-visual{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:linear-gradient(150deg,#2a2e36,#181a1f)}
+  .about-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2) contrast(1.03) brightness(.82)}
+  .about-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(19,20,23,.72))}
+  .about-badge{
+    position:absolute;left:1.3rem;bottom:1.3rem;z-index:2;
+    background:rgba(19,20,23,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border:1px solid var(--line-2);border-radius:14px;padding:.9rem 1.15rem;
+  }
+  .about-badge .t{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
+  .about-badge .s{font-size:.8rem;color:var(--text-soft);margin-top:2px}
+  @media(max-width:820px){
+    .about-grid{grid-template-columns:1fr}
+    .about-visual{aspect-ratio:16/11;order:-1}
+  }
 
-/* ── Buttons ─────────────────────────────────────────────── */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.75rem;
-  border-radius: 8px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.18s, box-shadow 0.18s, opacity 0.18s;
-}
-.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
-.btn-primary {
-  background: var(--accent);
-  color: var(--primary);
-}
-.btn-outline {
-  background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255,255,255,0.6);
-}
-.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
-.btn-solid {
-  background: var(--primary);
-  color: #fff;
-}
+  /* ---------- REVIEWS ---------- */
+  #reviews{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%)}
+  .rev-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem}
+  .rev-score{display:flex;align-items:center;gap:1rem}
+  .rev-score .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:3rem;letter-spacing:-.03em;line-height:1;color:var(--amber-soft)}
+  .rev-score .meta .stars{margin-bottom:3px}
+  .rev-score .meta small{color:var(--text-mute);font-size:.86rem}
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;margin-top:3rem}
+  .rev{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem 1.7rem;
+    display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s var(--ease);
+  }
+  .rev:hover{transform:translateY(-4px);border-color:var(--line-2)}
+  .rev .quote-mark{font-family:"Bricolage Grotesque";font-size:2.6rem;line-height:.6;color:rgba(240,132,42,.45);height:1rem}
+  .rev blockquote{font-size:1.06rem;color:var(--text);margin:1.3rem 0 1.5rem;line-height:1.55;font-weight:400}
+  .rev .who{margin-top:auto;display:flex;align-items:center;gap:.75rem;padding-top:1.1rem;border-top:1px solid var(--line)}
+  .rev .who .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(150deg,var(--amber-soft),var(--amber));color:var(--amber-ink);display:grid;place-items:center;font-family:"Bricolage Grotesque";font-weight:700;font-size:1rem;flex:none}
+  .rev .who .name{font-weight:600;font-size:.94rem}
+  .rev .who .stars{margin-top:2px}
+  .rev .who .stars svg{width:13px;height:13px}
 
-/* ── Section headings ────────────────────────────────────── */
-.section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.section-header h2 { color: var(--primary); }
-.section-divider {
-  display: inline-block;
-  width: 48px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
-  margin: 0.85rem auto 0;
-}
+  /* ---------- CONTACT ---------- */
+  #contact{background:var(--ink)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:stretch}
+  .contact-copy h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-top:1.1rem;font-weight:700;max-width:14ch}
+  .contact-copy p{margin-top:1.2rem;color:var(--text-soft);font-size:1.1rem;max-width:42ch}
+  .cta-call{
+    display:inline-flex;align-items:center;gap:.9rem;margin-top:2rem;
+    background:var(--amber);color:var(--amber-ink);font-weight:700;font-family:"Bricolage Grotesque";
+    font-size:clamp(1.25rem,2.4vw,1.65rem);letter-spacing:-.02em;padding:1.05rem 1.7rem;border-radius:16px;
+    box-shadow:0 16px 40px -14px rgba(240,132,42,.8);
+    transition:transform .18s var(--ease),box-shadow .25s var(--ease);
+  }
+  .cta-call:hover{transform:translateY(-2px);box-shadow:0 22px 50px -14px rgba(240,132,42,.95)}
+  .cta-call:active{transform:translateY(0) scale(.99)}
+  .cta-call svg{width:26px;height:26px}
+  .info-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:2rem 1.9rem;
+    display:flex;flex-direction:column;gap:1.4rem;
+  }
+  .info-row{display:flex;gap:1rem;align-items:flex-start}
+  .info-row .ic{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(240,132,42,.12);border:1px solid rgba(240,132,42,.28);display:grid;place-items:center;color:var(--amber-soft)}
+  .info-row .ic svg{width:20px;height:20px}
+  .info-row .lbl{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mute);font-weight:600}
+  .info-row .val{font-size:1.05rem;color:var(--text);margin-top:3px;font-weight:500;line-height:1.4}
+  .info-row a.val:hover{color:var(--amber-soft)}
+  .info-note{font-size:.86rem;color:var(--text-mute);border-top:1px solid var(--line);padding-top:1.1rem}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
 
-/* ── Services grid ───────────────────────────────────────── */
-#services { background: var(--bg); }
+  /* ---------- FOOTER ---------- */
+  footer.site{background:var(--ink);border-top:1px solid var(--line);padding-block:2.6rem 2.4rem}
+  .foot-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.4rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+  .foot-brand{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.05rem}
+  .foot-brand .mark{width:30px;height:30px;border-radius:8px;flex:none;background:linear-gradient(150deg,var(--amber-soft),var(--amber));color:var(--amber-ink);display:grid;place-items:center;font-weight:800}
+  .foot-nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+  .foot-nav a{font-size:.9rem;color:var(--text-soft);transition:color .2s}
+  .foot-nav a:hover{color:var(--amber-soft)}
+  .foot-legal{font-size:.82rem;color:var(--text-mute);margin-top:1.6rem;line-height:1.6}
+  .attribution{
+    margin-top:1.6rem;padding-top:1.5rem;border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;opacity:.72;
+  }
+  .attribution img{height:20px;width:auto;opacity:.85}
+  .attribution .txt{font-size:.78rem;color:var(--text-mute);line-height:1.5}
+  .attribution .txt a{color:var(--text-soft);text-decoration:underline;text-underline-offset:2px}
+  .attribution .txt a:hover{color:var(--amber-soft)}
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.service-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 1.75rem 1.5rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: var(--shadow-card);
-}
-.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-
-.service-icon {
-  width: 42px;
-  height: 42px;
-  background: var(--accent);
-  opacity: 0.22;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-.service-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-.service-card p { font-size: 0.92rem; opacity: 0.82; line-height: 1.6; }
-
-/* ── About ───────────────────────────────────────────────── */
-#about {
-  background: rgba(255,255,255,0.04);
-}
-
-.about-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-@media (max-width: 700px) {
-  .about-inner { grid-template-columns: 1fr; gap: 2rem; }
-}
-.about-text p { font-size: 1.05rem; line-height: 1.8; opacity: 0.90; margin-bottom: 1rem; }
-.about-text p:last-child { margin-bottom: 0; }
-.about-image { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; }
-.about-image img { width: 100%; height: 100%; object-fit: cover; }
-.about-placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  opacity: 0.18;
-}
-
-/* ── Reviews ────────────────────────────────────────────── */
-#reviews { background: var(--bg); }
-
-.rating-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--primary);
-  color: #fff;
-  padding: 0.65rem 1.25rem;
-  border-radius: 50px;
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-}
-.rating-badge .stars { color: #FCD34D; letter-spacing: 2px; }
-.rating-count { font-size: 0.85rem; opacity: 0.82; font-weight: 400; font-family: var(--font-body); }
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.review-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  position: relative;
-  box-shadow: var(--shadow-card);
-}
-.review-card::before {
-  content: '"';
-  position: absolute;
-  top: -0.5rem;
-  left: 1.25rem;
-  font-size: 5rem;
-  font-family: var(--font-heading);
-  color: var(--accent);
-  opacity: 0.25;
-  line-height: 1;
-  pointer-events: none;
-}
-.review-text { font-size: 0.97rem; line-height: 1.72; margin-bottom: 1.1rem; opacity: 0.9; font-style: italic; }
-.review-author {
-  font-size: 0.82rem;
-  font-weight: 700;
-  font-family: var(--font-heading);
-  letter-spacing: 0.05em;
-  color: var(--primary);
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-/* ── Contact ────────────────────────────────────────────── */
-#contact {
-  background: var(--primary);
-  color: #fff;
-}
-#contact h2 { color: #fff; }
-#contact .eyebrow { color: var(--accent); opacity: 1; }
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-@media (max-width: 700px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-}
-
-.contact-detail {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
-  margin-bottom: 1.5rem;
-}
-.contact-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--accent);
-  border-radius: 8px;
-  flex-shrink: 0;
-  opacity: 0.28;
-}
-.contact-detail-text h4 {
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-bottom: 0.2rem;
-  font-weight: 600;
-}
-.contact-detail-text p, .contact-detail-text a {
-  font-size: 1.05rem;
-  color: #fff;
-  opacity: 0.92;
-  line-height: 1.5;
-}
-.contact-detail-text a:hover { opacity: 1; text-decoration: underline; }
-
-.hours-list { list-style: none; }
-.hours-list li {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.92rem;
-  opacity: 0.85;
-  padding: 0.35rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.hours-list li:last-child { border-bottom: none; }
-.hours-day { font-weight: 600; }
-
-.contact-cta-box {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: var(--radius);
-  padding: 2.25rem;
-}
-.contact-cta-box h3 {
-  color: #fff;
-  margin-bottom: 0.65rem;
-  font-size: 1.35rem;
-}
-.contact-cta-box p {
-  opacity: 0.78;
-  margin-bottom: 1.5rem;
-  font-size: 0.97rem;
-  line-height: 1.65;
-}
-
-/* ── Footer ─────────────────────────────────────────────── */
-footer {
-  background: rgba(0,0,0,0.4);
-  color: rgba(255,255,255,0.7);
-  padding: 3rem 0 2rem;
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-.footer-brand { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
-.footer-tagline { font-size: 0.85rem; opacity: 0.6; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
-.footer-links a { font-size: 0.88rem; opacity: 0.7; transition: opacity 0.15s; }
-.footer-links a:hover { opacity: 1; }
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.8rem;
-  opacity: 0.6;
-}
-
-/* ── Attribution (Top Shelf — subtle) ───────────────────── */
-.attribution-block {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.72rem;
-  opacity: 0.45;
-  color: rgba(255,255,255,0.7);
-}
-.attribution-block img {
-  width: 16px;
-  height: 16px;
-  opacity: 0.5;
-  flex-shrink: 0;
-}
-.attribution-block a { color: inherit; text-decoration: underline; }
-.attribution-block a:hover { opacity: 0.8; }
-
-  </style>
+  @media(max-width:560px){
+    .hero-trust{gap:1.1rem 1.4rem}
+    .trust-sep{display:none}
+    .rev-top{align-items:flex-start}
+  }
+</style>
 </head>
 <body>
 
-<header id="site-header" role="banner">
-  <div class="container nav-inner">
-    <span class="nav-wordmark">Luigi&#x27;s Autobody &amp; Collision Repair</span>
-    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); document.getElementById('nav-menu').classList.toggle('is-open');">
-      <span></span><span></span><span></span>
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="brand" aria-label="Luigi's Autobody and Collision Repair, home">
+      <span class="mark" aria-hidden="true">L</span>
+      <span>Luigi's Autobody<small>Collision Repair · Denton, TX</small></span>
+    </a>
+    <nav class="nav-links" id="menu" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+12142817685" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (214) 281-7685
+      </a>
+    </nav>
+    <button class="nav-toggle" id="toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <ul class="nav-links" id="nav-menu" role="list">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="tel:+12142817685" class="nav-cta">Call (214) 281-7685</a></li>
-    </ul>
   </div>
 </header>
-<main>
 
-<section id="home" aria-label="Hero" style="background-image:url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1600&amp;q=80'); background-size:cover; background-position:center;">
-  <div class="hero-overlay" aria-hidden="true"></div>
-  <div class="container">
-    <div class="hero-content">
-      <h1>Luigi&#x27;s Autobody &amp; Collision Repair</h1>
-      <p class="hero-tagline">Denton&#x27;s family-owned body shop. Fair prices, and work good enough that folks send their friends.</p>
-      <div class="hero-actions">
-        <a href="tel:+12142817685" class="btn btn-primary">Call (214) 281-7685</a>
-        <a href="tel:+12142817685" class="btn btn-outline">&#9742; (214) 281-7685</a>
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1920&q=80" alt="" loading="eager">
+    </div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow reveal in">Family-owned in Denton since day one</span>
+      <h1 class="reveal in" data-d="1">Wrecked bumper or full collision, <span class="accent">you leave with your car right.</span></h1>
+      <p class="lede reveal in" data-d="2">Denton's family-owned body shop. Honest prices, straight answers, and repairs that hold up, whether it's a scraped bumper or a car that's been through a serious wreck.</p>
+      <div class="hero-actions reveal in" data-d="3">
+        <a href="tel:+12142817685" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 281-7685
+        </a>
+        <a href="#services" class="btn btn-ghost">See what we fix</a>
+      </div>
+      <div class="hero-trust reveal in" data-d="4">
+        <div class="trust-item">
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          </span>
+          <div><div class="big">4.9 / 5</div><div class="sub">142 Google reviews</div></div>
+        </div>
+        <span class="trust-sep" aria-hidden="true"></span>
+        <div class="trust-item"><div><div class="big">Family-owned</div><div class="sub">Treated like a neighbor</div></div></div>
+        <span class="trust-sep" aria-hidden="true"></span>
+        <div class="trust-item"><div><div class="big">Upfront pricing</div><div class="sub">No runaround, no surprises</div></div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="services" aria-label="Services">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">What We Do</span>
-      <h2>Our Services</h2>
-      <span class="section-divider" aria-hidden="true"></span>
-    </div>
-    <div class="services-grid">
-      <article class="service-card">
-        <div class="service-icon" aria-hidden="true"></div>
-        <h3>Collision Repair</h3>
-        <p>Full collision and frame work to put your car back to how it should be.</p>
-      </article>
-      <article class="service-card">
-        <div class="service-icon" aria-hidden="true"></div>
-        <h3>Bumper Repair</h3>
-        <p>Scuffs, dents, and cracked bumpers made right.</p>
-      </article>
-      <article class="service-card">
-        <div class="service-icon" aria-hidden="true"></div>
-        <h3>Paint Matching</h3>
-        <p>Color-matched paint so the repair disappears into your finish.</p>
-      </article>
-      <article class="service-card">
-        <div class="service-icon" aria-hidden="true"></div>
-        <h3>Dent Removal</h3>
-        <p>Clean dent and ding removal without the dealership price.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="about" aria-label="About us">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-text">
-        <span class="eyebrow">Who We Are</span>
-        <h2>About Us</h2>
-        <span class="section-divider" aria-hidden="true"></span>
-        <br>
-        <p>Luigi&#x27;s Autobody is a small, family-owned collision shop on East McKinney here in Denton. Neighbors have trusted us for years with everything from a scuffed bumper to a full collision repair, and they keep sending their friends our way.</p>
-<p>We keep our pricing fair, we&#x27;re upfront about cost and timing, and we treat you like family from the first call.</p>
+  <!-- SERVICES -->
+  <section id="services" class="section-pad">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What we fix</span>
+        <h2>Body work that gets your car back to how it drove.</h2>
+        <p>From a light tap in a parking lot to heavy collision damage, the shop handles the repair start to finish.</p>
       </div>
-      <div class="about-image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&amp;q=80" alt="About {}" loading="lazy"></div>
+      <div class="svc-grid">
+        <article class="svc reveal" data-d="1">
+          <span class="num">01</span>
+          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></div>
+          <h3>Collision Repair</h3>
+          <p>From a light fender-bender to heavy damage, we get your car back to how it drove before the wreck.</p>
+        </article>
+        <article class="svc reveal" data-d="2">
+          <span class="num">02</span>
+          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M4 16h16a1 1 0 0 0 1-1v-3H3v3a1 1 0 0 0 1 1z"/><path d="M7 16v2M17 16v2"/></svg></div>
+          <h3>Bumper Repair</h3>
+          <p>Cracked, scuffed, or hanging loose? We repair or replace it and blend it back in so it looks right.</p>
+        </article>
+        <article class="svc reveal" data-d="3">
+          <span class="num">03</span>
+          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a5 5 0 0 0 0 10 3 3 0 0 1 0 6"/><circle cx="8.5" cy="8.5" r=".7" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="9" cy="15.5" r=".7" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Paint Matching</h3>
+          <p>We match your car's exact color so the fixed panel disappears into the rest of the body.</p>
+        </article>
+        <article class="svc reveal" data-d="4">
+          <span class="num">04</span>
+          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V5s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></div>
+          <h3>Dent Removal</h3>
+          <p>Door dings and dents pulled out clean, keeping your original paint wherever we can.</p>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="reviews" aria-label="Reviews">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">What People Say</span>
-      <h2>Customer Reviews</h2>
-      <span class="section-divider" aria-hidden="true"></span>
-    </div>
-    
-    <div style="text-align:center; margin-bottom:2.5rem;">
-      <span class="rating-badge" aria-label="4.9 out of 5 stars, 142 Google reviews">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        4.9&nbsp;
-        <span class="rating-count">· 142 Google reviews</span>
-      </span>
-    </div>
-    <div class="reviews-grid">
-      <article class="review-card">
-        <p class="review-text">Small, family owned place that makes you feel like family.</p>
-        <span class="review-author">Google review</span>
-      </article>
-      <article class="review-card">
-        <p class="review-text">Absolutely my go-to body shop in Denton. Good pricing and great repairs.</p>
-        <span class="review-author">Gavin D.</span>
-      </article>
-      <article class="review-card">
-        <p class="review-text">Upfront about costs and timing, and an amazing job for a very reasonable price.</p>
-        <span class="review-author">Lucy H.</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="contact" aria-label="Contact us">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Reach Out</span>
-      <h2>Get in Touch</h2>
-      <span class="section-divider" aria-hidden="true" style="background:rgba(255,255,255,0.5);"></span>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true"></div>
-        <div class="contact-detail-text">
-          <h4>Phone</h4>
-          <p><a href="tel:+12142817685">(214) 281-7685</a></p>
+  <!-- ABOUT -->
+  <section id="about" class="section-pad">
+    <div class="wrap about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">Who you're dealing with</span>
+        <h2>A neighbor with a paint booth, not a chain shop.</h2>
+        <p>Luigi's started the way most good body shops do. One family, a set of tools, and a simple rule: <strong>treat every car like it belongs to a neighbor.</strong></p>
+        <p>Bring in a dented bumper or a car that's been through a serious wreck, and you get the same thing either way. An honest look at what it costs, a real answer on how long it takes, and work that lasts. Most people in Denton find us the same way. Someone they trust sent them here.</p>
+        <div class="about-points">
+          <div class="point">
+            <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>Upfront on cost and timing</b><span>You hear the real number and the real timeline before we start.</span></div>
+          </div>
+          <div class="point">
+            <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>Family-owned and easy to talk to</b><span>The people who quote your car are the people who fix it.</span></div>
+          </div>
+          <div class="point">
+            <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>Everyone's welcome here</b><span>A friendly, LGBTQ+ friendly shop where you're treated like family.</span></div>
+          </div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true"></div>
-        <div class="contact-detail-text">
-          <h4>Address</h4>
-          <p>4401 E McKinney St, Denton, TX 76208</p>
+      <div class="about-visual reveal" data-d="1">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=80" alt="A car being worked on inside an auto body repair shop" loading="lazy">
+        <div class="about-badge">
+          <div class="t">4.9 stars, 142 reviews</div>
+          <div class="s">Denton, Texas</div>
         </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true"></div>
-        <div class="contact-detail-text">
-          <h4>Directions</h4>
-          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Luigi%27s+Autobody+4401+E+McKinney+St+Denton+TX" target="_blank" rel="noopener noreferrer">Get directions ↗</a></p>
-        </div>
-      </div>
-        
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true"></div>
-        <div class="contact-detail-text">
-          <h4>Hours</h4>
-          <p>Opens 9:00 AM weekdays — give us a call to confirm.</p>
-        </div>
-      </div>
-      </div>
-      <div class="contact-cta-box">
-        <h3>Ready to get started?</h3>
-        <p>Reach out today and a member of our team will get back to you promptly. We look forward to serving you.</p>
-        <a href="tel:+12142817685" class="btn btn-primary">Call (214) 281-7685</a>
-        <br><br><a href="tel:+12142817685" class="btn btn-outline" style="margin-top:0.5rem;">&#9742; Call (214) 281-7685</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section-pad">
+    <div class="wrap">
+      <div class="rev-top reveal">
+        <div class="sec-head" style="margin:0">
+          <h2 style="margin-top:0">What Denton drivers say.</h2>
+        </div>
+        <div class="rev-score">
+          <div class="n">4.9</div>
+          <div class="meta">
+            <span class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+            </span>
+            <small>Based on 142 Google reviews</small>
+          </div>
+        </div>
+      </div>
+      <div class="rev-grid">
+        <article class="rev reveal" data-d="1">
+          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>Absolutely my go-to body shop in Denton. Good pricing and great repairs.</blockquote>
+          <div class="who">
+            <span class="av" aria-hidden="true">G</span>
+            <div>
+              <div class="name">Gavin D.</div>
+              <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="rev reveal" data-d="2">
+          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>Upfront about costs and timing, and an amazing job for a very reasonable price.</blockquote>
+          <div class="who">
+            <span class="av" aria-hidden="true">L</span>
+            <div>
+              <div class="name">Lucy H.</div>
+              <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="rev reveal" data-d="3">
+          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>Small, family owned place that makes you feel like family.</blockquote>
+          <div class="who">
+            <span class="av" aria-hidden="true">D</span>
+            <div>
+              <div class="name">Denton customer</div>
+              <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-pad">
+    <div class="wrap contact-grid">
+      <div class="contact-copy reveal">
+        <h2 style="margin-top:0">Ready when your car needs us.</h2>
+        <p>Call the shop and talk to the people who'll actually do the work. We'll give you an honest read on the damage and what it takes to fix it.</p>
+        <a href="tel:+12142817685" class="cta-call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (214) 281-7685
+        </a>
+      </div>
+      <div class="info-card reveal" data-d="1">
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><div class="lbl">Shop</div><a class="val" href="https://maps.google.com/?q=4401+E+McKinney+St,+Denton,+TX+76208" target="_blank" rel="noopener">4401 E McKinney St<br>Denton, TX 76208</a></div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><div class="lbl">Phone</div><a class="val" href="tel:+12142817685">(214) 281-7685</a></div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>
+          <div><div class="lbl">Hours</div><div class="val">Opens 9 AM on weekdays</div></div>
+        </div>
+        <p class="info-note">Give us a call to confirm hours before you head over.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer role="contentinfo">
-  <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Luigi&#x27;s Autobody &amp; Collision Repair</div>
-        <div class="footer-tagline">Denton&#x27;s family-owned body shop. Fair prices, and work good enough that folks send their friends.</div>
-      </div>
-      <nav aria-label="Footer navigation">
-        <ul class="footer-links" role="list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#home" class="foot-brand"><span class="mark" aria-hidden="true">L</span> Luigi's Autobody &amp; Collision Repair</a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+12142817685">Call</a>
       </nav>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; Luigi's Autobody & Collision Repair. Sample site for demonstration purposes.</span>
-      <!-- Top Shelf sample attribution -->
-      <div class="attribution-block" aria-label="Site prepared by Top Shelf Business Solutions">
-        <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf" width="16" height="16">
-        <span>This website was prepared by Top Shelf Business Solutions. <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener noreferrer">View our business solutions at topshelfsolutions.io</a></span>
-      </div>
-      <!-- /Top Shelf sample attribution -->
+    <p class="foot-legal">4401 E McKinney St, Denton, TX 76208 · (214) 281-7685 · Family-owned auto body &amp; collision repair.</p>
+    <div class="attribution">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions logo">
+      <span class="txt">This website was prepared by Top Shelf Business Solutions. <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a></span>
     </div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var nav=document.getElementById('nav');
+    var onScroll=function(){ if(window.scrollY>24){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');} };
+    onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+    var toggle=document.getElementById('toggle'), menu=document.getElementById('menu');
+    toggle.addEventListener('click',function(){
+      var open=menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+      toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){ menu.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+    });
+
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items=document.querySelectorAll('.reveal:not(.in)');
+    if(reduce||!('IntersectionObserver' in window)){
+      items.forEach(function(el){el.classList.add('in');});
+    }else{
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+      },{rootMargin:'0px 0px -10% 0px',threshold:.12});
+      items.forEach(function(el){io.observe(el);});
+    }
+  })();
+</script>
 </body>
 </html>
