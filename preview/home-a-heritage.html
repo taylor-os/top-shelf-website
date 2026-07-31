@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf Business Solutions — We Solve. You Grow. [Direction A · Heritage]</title>
+<meta name="description" content="One-stop digital modernization for local businesses. Websites, SEO, AI phone, CRM, POS, marketing & reviews. You own everything.">
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOP SHELF — DIRECTION A · "HERITAGE"
+   Identity preserved: espresso ground, gold accent,
+   Cormorant Garamond + Jost.
+   Rebuilt composition: split hero with real imagery, marginalia
+   leak ledger, a gold-drenched process movement, photographic
+   industry mosaic, a receipt-form comparison. One kicker, once.
+   ============================================================ */
+
+:root{
+  /* Ground + surfaces */
+  --ground:        #0B0906;
+  --surface:       #100C08;
+  --surface-2:     #15100B;
+  --hairline:      rgba(201,168,106,.16);
+  --hairline-soft: rgba(233,228,218,.09);
+  --hairline-strong: rgba(201,168,106,.32);
+
+  /* Ink ramp */
+  --ink:      #F4F0E8;
+  --ink-2:    #CFC7B8;   /* body — 11.4:1 on ground */
+  --ink-3:    #A79E8C;   /* muted — 7.2:1 on ground */
+  --ink-4:    #857C6C;   /* large text / decorative only */
+
+  /* Gold */
+  --gold:        #C9A86A;
+  --gold-bright: #E4C98A;
+  --gold-deep:   #A98A4E;
+  --on-gold:     #16110A;   /* ink for gold-drenched surfaces — 8.2:1 */
+
+  --maxw: 1240px;
+  --gutter: clamp(1.5rem, 5vw, 4.5rem);
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans:  "Jost", system-ui, -apple-system, sans-serif;
+
+  --ease:      cubic-bezier(.22,1,.36,1);   /* out-quint */
+  --ease-expo: cubic-bezier(.16,1,.3,1);
+
+  --r: 2px;
+  --r-lg: 4px;
+
+  /* z-scale */
+  --z-base: 1;
+  --z-raised: 5;
+  --z-sticky: 40;
+  --z-nav: 60;
+  --z-overlay: 80;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  background:var(--ground);
+  color:var(--ink-2);
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:16px;
+  line-height:1.7;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+:focus-visible{ outline:2px solid var(--gold-bright); outline-offset:3px; }
+
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); }
+.wide{ max-width:1560px; }
+
+/* Fixed atmospheric wash — no scroll repaint */
+.wash{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(80% 55% at 78% 8%,  rgba(201,168,106,.09), transparent 62%),
+    radial-gradient(70% 60% at 8% 92%,  rgba(201,168,106,.045), transparent 60%);
+}
+#page{ position:relative; z-index:var(--z-base); }
+
+/* ---------- Type primitives ---------- */
+.display{
+  font-family:var(--serif);
+  font-weight:500;
+  color:var(--ink);
+  line-height:1.02;
+  letter-spacing:-0.022em;
+  text-wrap:balance;
+}
+.display em{ font-style:italic; font-weight:500; color:var(--gold-bright); }
+.d-hero{ font-size:clamp(2.7rem, 5.1vw, 4.5rem); }
+.d-lg{   font-size:clamp(2.2rem, 4.4vw, 3.5rem); }
+.d-md{   font-size:clamp(1.6rem, 2.6vw, 2.3rem); }
+
+.lead{ color:var(--ink-2); font-size:clamp(1.02rem,1.3vw,1.16rem); line-height:1.8; max-width:60ch; text-wrap:pretty; }
+.muted{ color:var(--ink-3); font-size:.95rem; line-height:1.75; text-wrap:pretty; }
+
+/* The single brand kicker. Used once, in the hero. */
+.kicker{
+  font-family:var(--sans); font-weight:400; font-size:.75rem;
+  letter-spacing:.34em; text-transform:uppercase; color:var(--gold);
+  display:inline-flex; align-items:center; gap:.9rem;
+}
+.kicker::before{ content:""; width:30px; height:1px; background:var(--gold); opacity:.65; }
+
+/* Section rhythm — deliberately uneven */
+.sec{ position:relative; z-index:2; padding-block:clamp(5.5rem, 11vw, 10rem); }
+.sec-tight{ padding-block:clamp(4rem, 7vw, 6.5rem); }
+.ruled{ border-top:1px solid var(--hairline); }
+
+/* Section opener: a rule, a heading, a lead. No repeated eyebrow. */
+.opener{ max-width:64ch; margin-bottom:clamp(2.8rem,5vw,4.5rem); }
+.opener .lead{ margin-top:1.5rem; }
+
+/* ---------- Buttons ---------- */
+.btn{
+  position:relative; display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  font-family:var(--sans); font-weight:400; font-size:.9rem; letter-spacing:.06em;
+  padding:1.05rem 2.1rem; border:1px solid transparent; cursor:pointer;
+  overflow:hidden; isolation:isolate; border-radius:var(--r);
+  transition:transform 200ms var(--ease), border-color 300ms var(--ease), color 300ms var(--ease);
+  white-space:nowrap; line-height:1;
+}
+.btn .arr{ transition:transform .5s var(--ease); position:relative; z-index:1; }
+.btn:hover .arr{ transform:translateX(5px); }
+.btn:active{ transform:scale(.975); }
+
+.btn-gold{ background:var(--gold); color:var(--on-gold); border-color:var(--gold); }
+.btn-gold::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(180deg,#F3E2B7,var(--gold-bright));
+  clip-path:inset(0 100% 0 0); transition:clip-path 460ms var(--ease-expo);
+}
+.btn-gold:hover{ border-color:var(--gold-bright); transform:translateY(-2px); }
+.btn-gold:hover::before{ clip-path:inset(0 0 0 0); }
+
+.btn-line{ background:transparent; color:var(--ink); border-color:var(--hairline-strong); }
+.btn-line::before{
+  content:""; position:absolute; inset:0; z-index:-1; background:var(--gold);
+  clip-path:inset(0 100% 0 0); transition:clip-path 420ms var(--ease-expo);
+}
+.btn-line:hover{ color:var(--on-gold); border-color:var(--gold); transform:translateY(-2px); }
+.btn-line:hover::before{ clip-path:inset(0 0 0 0); }
+
+/* Inverted set, for the gold-drenched movement */
+.btn-ink{ background:var(--on-gold); color:var(--gold-bright); border-color:var(--on-gold); }
+.btn-ink:hover{ transform:translateY(-2px); color:#F7EBCB; }
+.btn-ink-line{ background:transparent; color:var(--on-gold); border-color:rgba(22,17,10,.4); }
+.btn-ink-line:hover{ border-color:var(--on-gold); transform:translateY(-2px); }
+
+.btn-sm{ padding:.74rem 1.4rem; font-size:.82rem; }
+.w-full{ width:100%; }
+
+.tlink{ position:relative; color:var(--gold); font-size:.86rem; letter-spacing:.05em; display:inline-flex; gap:.5rem; align-items:center; }
+.tlink::after{
+  content:""; position:absolute; left:0; bottom:-4px; height:1px; width:100%;
+  background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .55s var(--ease);
+}
+.tlink:hover::after{ transform:scaleX(1); }
+.tlink .arr{ transition:transform .5s var(--ease); }
+.tlink:hover .arr{ transform:translateX(5px); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+#nav{
+  position:fixed; inset:0 0 auto 0; z-index:var(--z-nav); height:80px;
+  display:flex; align-items:center; border-bottom:1px solid transparent;
+  transition:background .5s var(--ease), border-color .5s var(--ease), height .5s var(--ease);
+}
+#nav.scrolled{
+  height:68px;
+  background:rgba(11,9,6,.78);
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border-bottom-color:var(--hairline);
+}
+.nav-inner{
+  width:100%; max-width:1560px; margin-inline:auto; padding-inline:var(--gutter);
+  display:flex; align-items:center; justify-content:space-between; gap:2rem;
+}
+.nav-logo img{ height:46px; width:auto; transition:height .5s var(--ease); }
+#nav.scrolled .nav-logo img{ height:38px; }
+.nav-links{ display:flex; align-items:center; gap:2.4rem; }
+.nav-item{ position:relative; }
+.nav-link{
+  font-size:.86rem; letter-spacing:.05em; color:var(--ink-2); font-weight:300;
+  display:inline-flex; align-items:center; gap:.42rem; padding-block:.55rem;
+  transition:color .35s var(--ease); background:none; border:0; cursor:pointer; font-family:var(--sans);
+}
+.nav-link:hover{ color:var(--ink); }
+.nav-arrow{ font-size:.55rem; color:var(--ink-4); transition:transform .4s var(--ease), color .4s var(--ease); }
+.nav-item:hover .nav-arrow{ transform:rotate(180deg); color:var(--gold); }
+.nav-dropdown{
+  position:absolute; top:calc(100% + 15px); left:50%; transform:translateX(-50%) translateY(7px);
+  min-width:238px; background:rgba(16,12,8,.97);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  border:1px solid var(--hairline); padding:.45rem; border-radius:var(--r-lg);
+  opacity:0; visibility:hidden;
+  transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s linear .32s;
+}
+.nav-dropdown::before{ content:""; position:absolute; left:0; right:0; top:-19px; height:19px; }
+.nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  opacity:1; visibility:visible; transform:translateX(-50%) translateY(0);
+  transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s;
+}
+.nav-dropdown a{
+  display:block; padding:.68rem 1rem; font-size:.84rem; color:var(--ink-2); border-radius:var(--r);
+  transition:color .28s var(--ease), background .28s var(--ease);
+}
+.nav-dropdown a:hover{ color:var(--gold-bright); background:rgba(201,168,106,.07); }
+.nav-cta{ display:flex; align-items:center; gap:1.5rem; }
+.nav-menu-btn{ display:none; }
+
+.mobile-menu{
+  position:fixed; inset:80px 0 0 0; z-index:var(--z-overlay);
+  background:rgba(11,9,6,.985);
+  backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+  border-top:1px solid var(--hairline);
+  padding:1.4rem var(--gutter) 3.5rem; overflow-y:auto;
+  display:flex; flex-direction:column;
+  opacity:0; visibility:hidden; transform:translateY(-10px);
+  transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s linear .32s;
+}
+.mobile-menu.open{ opacity:1; visibility:visible; transform:none; transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s; }
+.mm-title{ font-size:.72rem; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); margin:1.7rem 0 .3rem; }
+.mm-title:first-child{ margin-top:.3rem; }
+.mobile-menu a{ display:block; padding:.8rem 0; border-bottom:1px solid var(--hairline-soft); color:var(--ink); }
+.mobile-menu a.mm-lead{ font-family:var(--serif); font-size:1.6rem; font-weight:500; }
+.mobile-menu a.mm-sub{ font-size:.98rem; color:var(--ink-2); }
+.mobile-menu .btn{ margin-top:2rem; }
+body.mm-open{ overflow:hidden; }
+
+/* ============================================================
+   HERO — asymmetric split. Type left, the top shelf itself right.
+   ============================================================ */
+.hero{
+  position:relative; z-index:2; min-height:100svh;
+  display:grid; grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);
+  align-items:center; overflow:hidden;
+}
+.hero-type{
+  padding:clamp(8rem,11vh,9.5rem) clamp(2rem,4vw,4rem) clamp(3rem,6vh,4.5rem) var(--gutter);
+  max-width:880px; justify-self:end; width:100%;
+}
+.hero-kicker{ margin-bottom:1.7rem; }
+.hero-title{ margin-bottom:1.7rem; }
+.hero-line{ display:block; overflow:hidden; }
+.hero-line > span{ display:block; }
+.hero-sub{ color:var(--ink-2); max-width:50ch; font-size:clamp(1rem,1.15vw,1.1rem); line-height:1.8; margin-bottom:2.2rem; text-wrap:pretty; }
+.hero-actions{ display:flex; flex-wrap:wrap; gap:1rem; }
+.hero-trust{
+  margin-top:2.2rem; padding-top:1.5rem; border-top:1px solid var(--hairline-soft);
+  display:flex; flex-wrap:wrap; gap:.6rem 2rem; font-size:.82rem; color:var(--ink-3); letter-spacing:.04em;
+}
+.hero-trust span{ display:inline-flex; align-items:center; gap:.55rem; }
+.hero-trust span::before{ content:""; width:4px; height:4px; border-radius:50%; background:var(--gold); flex:none; }
+
+.hero-figure{ position:relative; height:100svh; overflow:hidden; }
+.hero-figure img{
+  width:100%; height:100%; object-fit:cover; object-position:52% 50%;
+  transform:scale(1.06); will-change:transform;
+}
+/* Feather the photo into the ground on its left and bottom edges */
+.hero-figure::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    linear-gradient(90deg, var(--ground) 0%, rgba(11,9,6,.86) 9%, rgba(11,9,6,.42) 30%, rgba(11,9,6,0) 62%),
+    linear-gradient(0deg,  var(--ground) 0%, rgba(11,9,6,0) 26%),
+    linear-gradient(180deg, rgba(11,9,6,.72) 0%, rgba(11,9,6,0) 24%);
+}
+.hero-caption{
+  position:absolute; right:clamp(1.2rem,2.4vw,2.4rem); bottom:clamp(1.4rem,3vh,2.4rem);
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-3);
+  writing-mode:vertical-rl; text-orientation:mixed;
+}
+.scroll-cue{
+  position:absolute; left:var(--gutter); bottom:clamp(1.6rem,3.5vh,2.6rem); z-index:3;
+  display:inline-flex; align-items:center; gap:.8rem;
+  font-size:.7rem; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-4);
+}
+.scroll-cue i{ display:block; width:52px; height:1px; background:var(--hairline-strong); position:relative; overflow:hidden; }
+.scroll-cue i::after{
+  content:""; position:absolute; inset:0; background:var(--gold);
+  transform:translateX(-100%); animation:cue 2.6s var(--ease) infinite;
+}
+@keyframes cue{ 0%{transform:translateX(-100%)} 55%{transform:translateX(100%)} 100%{transform:translateX(100%)} }
+
+/* ============================================================
+   THE LEAKS — marginalia, not a metric bar.
+   Figures sit in the margin like footnotes to the argument.
+   ============================================================ */
+.leaks{ display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:clamp(2.5rem,6vw,6rem); align-items:start; }
+.leaks-aside{ position:sticky; top:130px; }
+.leaks-note{
+  margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--hairline-soft);
+  font-size:.8rem; color:var(--ink-3); letter-spacing:.03em; max-width:34ch;
+}
+.leak-list{ border-top:1px solid var(--hairline); }
+.leak{
+  display:grid; grid-template-columns:minmax(7.5rem,10rem) minmax(0,1fr);
+  gap:clamp(1.2rem,3vw,2.6rem); align-items:baseline;
+  padding:clamp(1.7rem,3vw,2.4rem) 0; border-bottom:1px solid var(--hairline-soft);
+}
+.leak-fig{
+  font-family:var(--serif); font-weight:400; font-size:clamp(2.6rem,4.2vw,3.6rem);
+  color:var(--gold-bright); line-height:.9; letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right;
+}
+.leak-name{ font-family:var(--serif); font-size:clamp(1.25rem,1.9vw,1.6rem); color:var(--ink); font-weight:500; margin-bottom:.5rem; letter-spacing:-.01em; }
+.leak-body{ font-size:.93rem; color:var(--ink-2); line-height:1.75; max-width:56ch; text-wrap:pretty; }
+
+/* ============================================================
+   PROCESS — the gold-drenched movement. A different world.
+   ============================================================ */
+.drench{
+  position:relative; z-index:2; background:var(--gold); color:var(--on-gold);
+  padding-block:clamp(5.5rem,10vw,8.5rem); overflow:hidden;
+}
+.drench::before{
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background:
+    radial-gradient(120% 80% at 15% 0%, rgba(255,246,224,.85), transparent 58%),
+    radial-gradient(90% 70% at 92% 100%, rgba(150,116,58,.42), transparent 62%);
+}
+.drench > *{ position:relative; z-index:1; }
+.drench .display{ color:var(--on-gold); }
+.drench .display em{ color:#6B4E1E; }
+.drench-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:2.5rem; flex-wrap:wrap; margin-bottom:clamp(3rem,5vw,4.5rem); }
+.drench-head p{ color:rgba(22,17,10,.72); max-width:38ch; font-size:.97rem; line-height:1.75; }
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid rgba(22,17,10,.24); }
+.step{ padding:clamp(2.2rem,3.4vw,3rem) clamp(1.4rem,2.4vw,2.4rem) 0; border-left:1px solid rgba(22,17,10,.18); }
+.step:first-child{ border-left:0; padding-left:0; }
+.step-num{
+  font-family:var(--serif); font-style:italic; font-weight:500; font-size:1.5rem;
+  color:rgba(22,17,10,.55); display:block; margin-bottom:1.4rem;
+}
+.step-title{ font-family:var(--serif); font-weight:600; font-size:clamp(1.5rem,2.2vw,1.95rem); color:var(--on-gold); margin-bottom:.9rem; letter-spacing:-.012em; }
+.step-body{ color:rgba(22,17,10,.76); font-size:.94rem; line-height:1.75; text-wrap:pretty; }
+.drench-foot{ margin-top:clamp(3rem,5vw,4.2rem); display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
+.drench-foot .fine{ font-size:.84rem; color:rgba(22,17,10,.66); letter-spacing:.03em; }
+
+/* ============================================================
+   INDUSTRIES — photographic mosaic
+   ============================================================ */
+.mosaic{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.6rem,1vw,1rem); }
+.tile{
+  position:relative; display:block; overflow:hidden; border-radius:var(--r-lg);
+  aspect-ratio:3/4; background:var(--surface); isolation:isolate;
+}
+.tile img{
+  width:100%; height:100%; object-fit:cover;
+  transform:scale(1.02); transition:transform 1.1s var(--ease), filter .8s var(--ease);
+  filter:saturate(.95) brightness(.95);
+}
+.tile:hover img{ transform:scale(1.075); filter:saturate(1.05) brightness(1.04); }
+.tile::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(0deg, rgba(11,9,6,.94) 0%, rgba(11,9,6,.62) 36%, rgba(11,9,6,0) 68%);
+}
+.tile-body{
+  position:absolute; left:0; right:0; bottom:0; z-index:1;
+  padding:clamp(1.1rem,1.6vw,1.6rem); display:flex; flex-direction:column; gap:.5rem;
+}
+.tile-name{ font-family:var(--serif); font-size:clamp(1.2rem,1.6vw,1.5rem); font-weight:500; color:var(--ink); letter-spacing:-.01em; line-height:1.15; }
+.tile-hook{ font-size:.8rem; color:var(--gold); line-height:1.5; text-wrap:pretty; }
+.tile-go{
+  font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3);
+  display:inline-flex; align-items:center; gap:.5rem; margin-top:.2rem;
+  transition:color .45s var(--ease), gap .45s var(--ease);
+}
+.tile:hover .tile-go, .tile:focus-visible .tile-go{ color:var(--gold-bright); gap:.85rem; }
+.mosaic-foot{ margin-top:clamp(2.2rem,4vw,3.2rem); text-align:center; }
+
+/* ============================================================
+   THE STACK — an index, no numbers (the process owns the numbers)
+   ============================================================ */
+.stack{ border-top:1px solid var(--hairline); }
+.stack-row{
+  position:relative; display:grid;
+  grid-template-columns:3.2rem minmax(0,.85fr) minmax(0,1.5fr) auto;
+  gap:clamp(1.2rem,3vw,2.8rem); align-items:center;
+  padding:clamp(1.7rem,2.8vw,2.4rem) 0; border-bottom:1px solid var(--hairline-soft);
+  transition:transform .55s var(--ease);
+}
+.stack-row:hover{ transform:translateX(.9rem); }
+.stack-icon{ color:var(--gold); transition:color .45s var(--ease); }
+.stack-icon svg{ width:30px; height:30px; }
+.stack-row:hover .stack-icon{ color:var(--gold-bright); }
+.stack-name{ font-family:var(--serif); font-size:clamp(1.35rem,2vw,1.8rem); color:var(--ink); font-weight:500; letter-spacing:-.012em; transition:color .45s var(--ease); }
+.stack-row:hover .stack-name{ color:var(--gold-bright); }
+.stack-body{ font-size:.91rem; color:var(--ink-2); line-height:1.7; text-wrap:pretty; }
+.stack-go{ justify-self:end; white-space:nowrap; }
+
+/* ============================================================
+   THE TAB — the comparison as a running bill
+   ============================================================ */
+.tab-wrap{
+  background:var(--surface); border:1px solid var(--hairline); border-radius:var(--r-lg);
+  padding:clamp(1.6rem,3.4vw,3.2rem);
+}
+.tab{ width:100%; border-collapse:collapse; }
+.tab caption{
+  caption-side:top; text-align:left; padding-bottom:1.6rem;
+  font-family:var(--serif); font-size:clamp(1.2rem,1.7vw,1.5rem); color:var(--ink); font-weight:500;
+}
+.tab th, .tab td{ text-align:left; padding:clamp(.85rem,1.4vw,1.15rem) 0; vertical-align:baseline; font-weight:300; }
+.tab thead th{
+  font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold);
+  font-weight:400; border-bottom:1px solid var(--hairline); padding-bottom:1rem;
+}
+.tab td + td, .tab th + th{ padding-left:clamp(1rem,2.5vw,2.4rem); }
+.tab .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.tab tbody tr{ border-bottom:1px solid var(--hairline-soft); }
+.tab tbody td:first-child{ color:var(--ink-2); font-size:.94rem; }
+.tab .cost{ color:var(--ink-3); font-size:.94rem; }
+.tab .ours{ color:var(--ink); font-size:.94rem; }
+.tab .ours .yes{ color:var(--gold); margin-left:.5rem; }
+.tab .aside{ display:block; color:var(--ink-4); font-size:.82rem; margin-top:.2rem; }
+.tab tfoot td{ padding-top:1.5rem; border-top:1px solid var(--hairline-strong); }
+.tab tfoot .label{ font-family:var(--serif); font-size:1.25rem; color:var(--ink); font-weight:500; }
+.tab tfoot .total-them{ font-family:var(--serif); font-size:clamp(1.5rem,2.4vw,2rem); color:var(--ink); font-variant-numeric:tabular-nums; letter-spacing:-.02em; }
+.tab tfoot .total-us{ font-family:var(--serif); font-size:clamp(1.5rem,2.4vw,2rem); color:var(--gold-bright); font-variant-numeric:tabular-nums; letter-spacing:-.02em; }
+.tab tfoot .sub{ display:block; font-family:var(--sans); font-size:.82rem; color:var(--ink-3); letter-spacing:.03em; margin-top:.45rem; }
+.tab-note{ margin-top:1.8rem; font-size:.88rem; color:var(--ink-3); }
+.tab-note a{ color:var(--gold); border-bottom:1px solid var(--hairline-strong); }
+.tab-note a:hover{ color:var(--gold-bright); border-color:var(--gold-bright); }
+
+/* ============================================================
+   PRICING — listings, not SaaS cards
+   ============================================================ */
+.plans{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,1.6vw,1.4rem); align-items:stretch; }
+.plan{
+  position:relative; display:flex; flex-direction:column;
+  background:var(--surface); border:1px solid var(--hairline); border-radius:var(--r-lg);
+  padding:clamp(1.9rem,2.8vw,2.6rem);
+  transition:transform 340ms var(--ease), border-color 340ms var(--ease), background 340ms var(--ease);
+}
+.plan:hover{ transform:translateY(-5px); border-color:var(--hairline-strong); background:var(--surface-2); }
+.plan.pick{ border-color:var(--gold); background:linear-gradient(180deg,var(--surface-2),var(--surface)); }
+.plan.pick:hover{ transform:translateY(-7px); }
+.plan-flag{
+  position:absolute; top:-11px; left:clamp(1.9rem,2.8vw,2.6rem);
+  background:var(--gold); color:var(--on-gold);
+  font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; font-weight:500;
+  padding:.4rem .85rem; border-radius:100px;
+}
+.plan-name{ font-family:var(--serif); font-size:1.55rem; font-weight:500; color:var(--gold-bright); margin-bottom:1.1rem; }
+.plan-price{ font-family:var(--serif); font-weight:400; font-size:clamp(3rem,4.2vw,3.6rem); line-height:1; color:var(--ink); display:flex; align-items:flex-start; gap:2px; letter-spacing:-.03em; }
+.plan-price sup{ font-size:1.5rem; margin-top:.42rem; color:var(--ink-2); }
+.plan-per{ font-family:var(--sans); font-size:.92rem; color:var(--ink-3); align-self:flex-end; margin:0 0 .5rem .3rem; }
+.plan-vs{ font-size:.82rem; color:var(--ink-3); margin-top:.7rem; }
+.plan-vs s{ color:var(--gold); text-decoration-thickness:1px; }
+.plan-own{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-top:1rem; }
+.plan-rule{ height:1px; background:var(--hairline); margin:1.7rem 0; }
+.plan-list{ display:flex; flex-direction:column; gap:.9rem; margin-bottom:2rem; flex:1; }
+.plan-list li{ list-style:none; display:flex; gap:.75rem; font-size:.9rem; color:var(--ink-2); line-height:1.55; }
+.plan-list svg{ width:16px; height:16px; flex:none; color:var(--gold); margin-top:.22rem; }
+.custom{
+  margin-top:clamp(1.4rem,2.4vw,2rem);
+  border:1px solid var(--hairline); border-radius:var(--r-lg); background:var(--surface);
+  padding:clamp(1.7rem,3vw,2.6rem);
+  display:flex; gap:clamp(1.4rem,3vw,2.6rem); align-items:center; justify-content:space-between; flex-wrap:wrap;
+}
+.plans-note{ text-align:center; color:var(--ink-3); font-size:.92rem; margin-top:2.4rem; }
+.plans-note a{ color:var(--gold-bright); border-bottom:1px solid var(--hairline-strong); }
+
+/* ============================================================
+   PROOF — case notes, figure inline
+   ============================================================ */
+.proof{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--hairline); }
+.case{ padding:clamp(2.2rem,3.2vw,3rem) clamp(1.4rem,2.4vw,2.4rem) 0; border-left:1px solid var(--hairline-soft); }
+.case:first-child{ border-left:0; padding-left:0; }
+.case-head{ display:flex; align-items:baseline; gap:.9rem; margin-bottom:1.1rem; flex-wrap:wrap; }
+.case-fig{ font-family:var(--serif); font-weight:400; font-size:clamp(2.4rem,3.6vw,3.1rem); color:var(--gold-bright); line-height:.9; letter-spacing:-.03em; }
+.case-what{ font-family:var(--serif); font-size:1.2rem; color:var(--ink); font-weight:500; }
+.case-body{ font-size:.92rem; color:var(--ink-2); line-height:1.75; text-wrap:pretty; }
+
+/* ============================================================
+   CLOSE
+   ============================================================ */
+.close{ position:relative; z-index:2; text-align:center; padding-block:clamp(6.5rem,12vw,11rem); overflow:hidden; }
+.close::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(58% 62% at 50% 42%, rgba(201,168,106,.13), transparent 68%);
+}
+.close > *{ position:relative; }
+.close-mark{ width:clamp(58px,6vw,82px); margin:0 auto 2.2rem; opacity:.9; }
+.close-title{ font-family:var(--serif); font-weight:500; font-size:clamp(2.6rem,6vw,4.6rem); color:var(--ink); line-height:1.03; letter-spacing:-.025em; margin-bottom:1.7rem; text-wrap:balance; }
+.close-title em{ font-style:italic; color:var(--gold-bright); }
+.close-sub{ color:var(--ink-2); max-width:54ch; margin:0 auto 2.6rem; font-size:clamp(1rem,1.25vw,1.14rem); line-height:1.85; text-wrap:pretty; }
+.close-actions{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
+.close-fine{ margin-top:2.2rem; font-size:.84rem; color:var(--ink-3); letter-spacing:.03em; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{ position:relative; z-index:2; border-top:1px solid var(--hairline); padding-block:clamp(3.5rem,6vw,5.5rem) 2.5rem; }
+.footer-grid{ display:grid; grid-template-columns:1.7fr 1fr 1fr 1fr; gap:clamp(2rem,4vw,4rem); margin-bottom:3.5rem; }
+.footer-logo img{ height:40px; width:auto; margin-bottom:1.5rem; }
+.footer-brand p{ font-size:.87rem; color:var(--ink-3); max-width:34ch; line-height:1.75; }
+.footer-contact{ display:flex; flex-direction:column; gap:.4rem; margin-top:1.2rem; }
+.footer-contact a{ color:var(--gold); font-size:.92rem; }
+.footer-contact a:hover{ color:var(--gold-bright); }
+.footer-col-title{ font-size:.7rem; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); margin-bottom:1.3rem; }
+.footer-links{ display:flex; flex-direction:column; gap:.8rem; }
+.footer-links a{ font-size:.88rem; color:var(--ink-2); transition:color .3s var(--ease); width:fit-content; }
+.footer-links a:hover{ color:var(--gold-bright); }
+.footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:2.2rem; border-top:1px solid var(--hairline-soft); gap:1rem; flex-wrap:wrap; }
+.footer-bottom p{ font-size:.81rem; color:var(--ink-3); }
+.footer-tagline{ font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--gold); }
+
+/* ============================================================
+   MOTION — visible by default; JS animates FROM hidden
+   ============================================================ */
+.js-motion [data-rise]{ opacity:0; transform:translateY(26px); }
+.js-motion [data-mask] > span{ transform:translateY(102%); }
+.js-motion [data-figure] img{ opacity:0; }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  .js-motion [data-rise]{ opacity:1 !important; transform:none !important; }
+  .js-motion [data-mask] > span{ transform:none !important; }
+  .js-motion [data-figure] img{ opacity:1 !important; }
+  .scroll-cue i::after{ animation:none; transform:none; }
+  *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; }
+  .tile img, .stack-row, .plan, .btn{ transition-duration:.15s !important; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1180px){
+  .mosaic{ grid-template-columns:repeat(3,1fr); }
+  .stack-row{ grid-template-columns:2.6rem minmax(0,1fr); grid-template-areas:"icon name" "body body" "go go"; row-gap:.9rem; }
+  .stack-icon{ grid-area:icon; } .stack-name{ grid-area:name; } .stack-body{ grid-area:body; } .stack-go{ grid-area:go; justify-self:start; }
+}
+@media (max-width:1024px){
+  .hero{ grid-template-columns:1fr; min-height:0; }
+  .hero-type{ order:2; padding:clamp(2.5rem,6vw,4rem) var(--gutter) clamp(3.5rem,7vw,5rem); justify-self:start; max-width:none; }
+  .hero-figure{ order:1; height:min(62svh,540px); }
+  .hero-figure::after{
+    background:
+      linear-gradient(0deg, var(--ground) 0%, rgba(11,9,6,.25) 42%, rgba(11,9,6,0) 72%),
+      linear-gradient(180deg, rgba(11,9,6,.82) 0%, rgba(11,9,6,0) 40%);
+  }
+  .hero-caption{ display:none; }
+  .scroll-cue{ display:none; }
+  .leaks{ grid-template-columns:1fr; }
+  .leaks-aside{ position:static; }
+}
+@media (max-width:860px){
+  .nav-links, .nav-cta .btn{ display:none; }
+  .nav-menu-btn{ display:inline-flex; }
+  .steps, .plans, .proof{ grid-template-columns:1fr; }
+  .step, .case{ border-left:0; padding-left:0; padding-top:clamp(1.8rem,4vw,2.4rem); }
+  .step + .step, .case + .case{ border-top:1px solid rgba(22,17,10,.18); }
+  .case + .case{ border-top-color:var(--hairline-soft); }
+  .mosaic{ grid-template-columns:repeat(2,1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+  .tab thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  .tab tbody tr{ display:grid; grid-template-columns:1fr; gap:.3rem; padding-block:1.1rem; }
+  .tab tbody td{ padding:0 !important; }
+  .tab tbody td:first-child{ color:var(--ink); font-size:1rem; }
+  .tab .num{ text-align:left; }
+  .tab tfoot tr{ display:grid; gap:.5rem; }
+  .tab tfoot td{ padding-left:0 !important; }
+}
+@media (max-width:560px){
+  .leak{ grid-template-columns:1fr; gap:.7rem; }
+  .leak-fig{ font-size:2.6rem; }
+  .mosaic{ grid-template-columns:1fr; }
+  .tile{ aspect-ratio:16/11; }
+  .footer-grid{ grid-template-columns:1fr; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; }
+  .custom{ flex-direction:column; align-items:flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="wash" aria-hidden="true"></div>
+
+<div id="page">
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-link" aria-expanded="false">Industries <span class="nav-arrow" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown">
+          <a href="../industry-home-services.html">Home Services</a>
+          <a href="../industry-restaurants.html">Restaurants &amp; Bars</a>
+          <a href="../industry-medical-dental.html">Medical &amp; Dental</a>
+          <a href="../industry-legal.html">Law Firms</a>
+          <a href="../industry-retail.html">Retail &amp; Local</a>
+          <a href="../industry-auto.html">Auto</a>
+          <a href="../industry-salon-spa-fitness.html">Salon, Spa &amp; Fitness</a>
+          <a href="../industry-custom.html">Your Business</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-link" aria-expanded="false">Solutions <span class="nav-arrow" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown">
+          <a href="../solution-websites-seo.html">Websites &amp; SEO</a>
+          <a href="../solution-ai-phone.html">AI Phone &amp; Chat</a>
+          <a href="../solution-crm.html">CRM &amp; Follow-Up</a>
+          <a href="../solution-reviews.html">Reviews &amp; Reputation</a>
+          <a href="../solution-marketing.html">Marketing &amp; Social</a>
+          <a href="../solution-booking.html">Online Booking</a>
+          <a href="../solution-payments.html">Payments &amp; Financing</a>
+          <a href="../solution-automation.html">AI &amp; Automation</a>
+          <a href="../solution-memberships.html">Memberships &amp; Loyalty</a>
+          <a href="../solution-pos.html">POS &amp; Inventory</a>
+        </div>
+      </div>
+      <a href="../pricing.html" class="nav-link">Pricing</a>
+      <a href="../why-us.html" class="nav-link">Why Us</a>
+    </div>
+    <div class="nav-cta">
+      <a href="../contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <button class="nav-link nav-menu-btn" aria-expanded="false" aria-label="Open menu">Menu</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero">
+  <div class="hero-type">
+    <span class="kicker hero-kicker" data-rise>We Solve. You Grow.</span>
+    <h1 class="display d-hero hero-title">
+      <span class="hero-line" data-mask><span>Stop Losing Money</span></span>
+      <span class="hero-line" data-mask><span>to <em>Leaks You Can&rsquo;t See</em></span></span>
+    </h1>
+    <p class="hero-sub" data-rise>You&rsquo;re not losing money because your work is bad. You&rsquo;re losing it to the leaks &mdash; missed calls, forgotten follow-ups, reviews you never asked for. We plug the leaks and grow what&rsquo;s left, so you take home more while doing less.</p>
+    <div class="hero-actions" data-rise>
+      <a href="../contact.html" class="btn btn-gold">Get Your Free Business Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a href="../pricing.html" class="btn btn-line">See Pricing</a>
+    </div>
+    <p class="hero-trust" data-rise>
+      <span>You own every asset</span>
+      <span>One team, one bill</span>
+      <span>Plain-English reporting</span>
+    </p>
+  </div>
+
+  <figure class="hero-figure" data-figure>
+    <img src="../assets/img/industry/restaurants.jpg" alt="A wood-panelled back bar at service time, the top shelf lit warm above the taps">
+    <figcaption class="hero-caption">Top Shelf Business Solutions</figcaption>
+  </figure>
+
+  <span class="scroll-cue" aria-hidden="true"><i></i> Where it goes</span>
+</header>
+
+<!-- ============================ THE LEAKS ============================ -->
+<section class="sec ruled">
+  <div class="container">
+    <div class="leaks">
+      <div class="leaks-aside">
+        <h2 class="display d-lg" data-rise>Four Leaks, and <em>Nobody Sends a Bill</em></h2>
+        <p class="lead" data-rise style="margin-top:1.5rem">Nothing here shows up in your books as a loss. It just quietly never becomes revenue &mdash; and that&rsquo;s why it can run for years before anybody catches it.</p>
+        <p class="leaks-note" data-rise>Figures are industry averages for local businesses, not projections for yours. Your audit uses your own numbers.</p>
+      </div>
+
+      <div class="leak-list">
+        <article class="leak" data-rise>
+          <p class="leak-fig">62%</p>
+          <div>
+            <h3 class="leak-name">The Phone Nobody Answers</h3>
+            <p class="leak-body">Nearly two out of three calls to local businesses go unanswered. Every one of them is a customer who dials the next name on the list &mdash; and that competitor picks up.</p>
+          </div>
+        </article>
+        <article class="leak" data-rise>
+          <p class="leak-fig">$49K+</p>
+          <div>
+            <h3 class="leak-name">What Those Calls Are Worth</h3>
+            <p class="leak-body">The average annual revenue a single local business loses to missed calls. Not a rounding error &mdash; that&rsquo;s a truck, a hire, or a year of your own pay.</p>
+          </div>
+        </article>
+        <article class="leak" data-rise>
+          <p class="leak-fig">97%</p>
+          <div>
+            <h3 class="leak-name">The Reviews You Never Asked For</h3>
+            <p class="leak-body">97% of buyers read reviews before they choose, and 57% won&rsquo;t even consider a business under four stars. Your happiest customers would leave one. Nobody ever asks them.</p>
+          </div>
+        </article>
+        <article class="leak" data-rise>
+          <p class="leak-fig">73%</p>
+          <div>
+            <h3 class="leak-name">The Follow-Up That Never Happened</h3>
+            <p class="leak-body">Nearly three quarters of leads are never contacted again after the first touch. The job doesn&rsquo;t go to the best quote. It goes to whoever followed up.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROCESS (drenched) ============================ -->
+<section class="drench">
+  <div class="container">
+    <div class="drench-head">
+      <h2 class="display d-lg" data-rise style="max-width:16ch">From Leaky to <em>Unstoppable</em> in Three Steps</h2>
+      <p data-rise>No retainer to sign before you find out what&rsquo;s wrong. Step one costs you nothing and you keep the findings either way.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step" data-rise>
+        <span class="step-num">I.</span>
+        <h3 class="step-title">Free Business Audit</h3>
+        <p class="step-body">We go through your calls, reviews, website, follow-up and POS, and show you exactly where the money is running out. No obligation, no pressure, no jargon.</p>
+      </article>
+      <article class="step" data-rise>
+        <span class="step-num">II.</span>
+        <h3 class="step-title">Build &amp; Launch</h3>
+        <p class="step-body">We build and configure the whole stack &mdash; website, AI phone, CRM, reviews, POS, marketing. Fast setup, no tech headache for you. You own every piece of it.</p>
+      </article>
+      <article class="step" data-rise>
+        <span class="step-num">III.</span>
+        <h3 class="step-title">Watch It Grow</h3>
+        <p class="step-body">Leads get captured, follow-ups go out, reviews roll in, your ranking climbs. You get a plain-English dashboard showing what every dollar actually did.</p>
+      </article>
+    </div>
+
+    <div class="drench-foot" data-rise>
+      <a href="../contact.html" class="btn btn-ink">Start With the Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <span class="fine">Takes about 20 minutes of your time.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ INDUSTRIES ============================ -->
+<section id="industries" class="sec">
+  <div class="container wide">
+    <div class="opener">
+      <h2 class="display d-lg" data-rise>Find <em>Your Industry</em></h2>
+      <p class="lead" data-rise>Pick your world and we&rsquo;ll show you the exact leaks costing businesses like yours &mdash; what they run to, how we plug them, and what it does to your bottom line.</p>
+    </div>
+
+    <div class="mosaic">
+      <a href="../industry-home-services.html" class="tile" data-rise>
+        <img src="../assets/img/industry/home-services.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Home Services</h3>
+          <p class="tile-hook">You can&rsquo;t answer the phone from under a sink.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-restaurants.html" class="tile" data-rise>
+        <img src="../assets/img/industry/restaurants.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Restaurants &amp; Bars</h3>
+          <p class="tile-hook">Every empty seat is gone forever.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-medical-dental.html" class="tile" data-rise>
+        <img src="../assets/img/industry/medical-dental.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Medical &amp; Dental</h3>
+          <p class="tile-hook">The new patient who gets voicemail books elsewhere.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-legal.html" class="tile" data-rise>
+        <img src="../assets/img/industry/legal.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Law Firms</h3>
+          <p class="tile-hook">The 6pm case signs with whoever answered.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-retail.html" class="tile" data-rise>
+        <img src="../assets/img/industry/retail.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Retail &amp; Local</h3>
+          <p class="tile-hook">They browse your shelves, then buy it on Amazon.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-auto.html" class="tile" data-rise>
+        <img src="../assets/img/industry/auto.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Auto</h3>
+          <p class="tile-hook">The call you miss wrist-deep in an engine.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-salon-spa-fitness.html" class="tile" data-rise>
+        <img src="../assets/img/industry/salon-spa-fitness.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Salon, Spa &amp; Fitness</h3>
+          <p class="tile-hook">The Saturday no-show you could&rsquo;ve filled five times.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a href="../industry-custom.html" class="tile" data-rise>
+        <img src="../assets/img/industry/custom.jpg" alt="">
+        <div class="tile-body">
+          <h3 class="tile-name">Your Business</h3>
+          <p class="tile-hook">Don&rsquo;t see your exact trade? Start here.</p>
+          <span class="tile-go">See the playbook <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+
+    <p class="mosaic-foot muted" data-rise style="max-width:60ch;margin-inline:auto">Every business is different, which is why every plan starts with a <a class="tlink" href="../contact.html">free audit</a> and gets built from scratch for you.</p>
+  </div>
+</section>
+
+<!-- ============================ THE STACK ============================ -->
+<section class="sec ruled">
+  <div class="container">
+    <div class="opener">
+      <h2 class="display d-lg" data-rise>Five Services. <em>One Flywheel.</em></h2>
+      <p class="lead" data-rise>Each one plugs a specific leak. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+
+    <div class="stack">
+      <a href="../solution-websites-seo.html" class="stack-row" data-rise>
+        <span class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <h3 class="stack-name">Websites &amp; SEO</h3>
+        <p class="stack-body">Get found, then get trusted. Rank in the Map Pack where 44% of local clicks go, and convert them with a site that loads on any phone in under three seconds.</p>
+        <span class="stack-go tlink">Learn more <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-ai-phone.html" class="stack-row" data-rise>
+        <span class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
+        <h3 class="stack-name">AI Phone &amp; Chat</h3>
+        <p class="stack-body">Never miss another call or web lead, including nights and weekends. It answers, books, and texts back in seconds. One recovered call covers months of service.</p>
+        <span class="stack-go tlink">Learn more <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-crm.html" class="stack-row" data-rise>
+        <span class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <h3 class="stack-name">CRM &amp; Follow-Up</h3>
+        <p class="stack-body">78% of people buy from whoever responds first. Catch every lead, text back in seconds, follow up on its own, and wake up past customers &mdash; the cheapest revenue you&rsquo;ll ever make.</p>
+        <span class="stack-go tlink">Learn more <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-pos.html" class="stack-row" data-rise>
+        <span class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
+        <h3 class="stack-name">POS &amp; Inventory</h3>
+        <p class="stack-body">Stop guessing what&rsquo;s on the shelf. Live inventory, automatic reordering, lower processing fees, and loyalty built into the same system your register already runs on.</p>
+        <span class="stack-go tlink">Learn more <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-marketing.html" class="stack-row" data-rise>
+        <span class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <h3 class="stack-name">Marketing &amp; Reviews</h3>
+        <p class="stack-body">More reviews lift your ranking, ranking brings customers, customers leave reviews. We build that loop: automatic review requests, SMS campaigns, win-back sequences, social.</p>
+        <span class="stack-go tlink">Learn more <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THE TAB ============================ -->
+<section class="sec ruled">
+  <div class="container">
+    <div class="opener" style="max-width:60ch">
+      <h2 class="display d-lg" data-rise>Every Piece Is Someone&rsquo;s <em>Full-Time Job</em></h2>
+      <p class="lead" data-rise>The work we do is work other businesses pay a whole team to handle. Here&rsquo;s what it runs to hire it out, against one bill from us.</p>
+    </div>
+
+    <div class="tab-wrap" data-rise>
+      <table class="tab">
+        <caption>What it costs to cover this yourself</caption>
+        <thead>
+          <tr>
+            <th scope="col">What you need</th>
+            <th scope="col" class="num">Hire it yourself</th>
+            <th scope="col">With Top Shelf</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Answer every call, 24/7</td>
+            <td class="num cost">Receptionist &mdash; $3,390+/mo <span class="aside">Clocks out at five</span></td>
+            <td class="ours">AI answers day and night <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Run your Google, socials &amp; promos</td>
+            <td class="num cost">Social media manager &mdash; $2,260/mo</td>
+            <td class="ours">Managed for you <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Build &amp; maintain your website</td>
+            <td class="num cost">Web developer &mdash; $1,130+/mo</td>
+            <td class="ours">Built &amp; hosted <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Rank in local search</td>
+            <td class="num cost">SEO agency &mdash; $1,695/mo</td>
+            <td class="ours">Included <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Earn &amp; manage reviews</td>
+            <td class="num cost">Reputation service &mdash; $452/mo</td>
+            <td class="ours">Automated <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Follow up every lead</td>
+            <td class="num cost">CRM + a VA &mdash; $678/mo</td>
+            <td class="ours">On autopilot <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="label">Every month</td>
+            <td class="num total-them">$9,605+<span class="sub">and five logins to juggle</span></td>
+            <td class="total-us">From $699<span class="sub">one bill, one team</span></td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="tab-note">You own every asset. Nobody calls in sick. <a href="../contact.html">Get your free audit &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICING ============================ -->
+<section class="sec ruled">
+  <div class="container">
+    <div class="opener">
+      <h2 class="display d-lg" data-rise>Flat Monthly Rate. <em>No Surprises.</em></h2>
+      <p class="lead" data-rise>Setup is included, there are no hidden fees, and you own every asset. These three cover most businesses. If none of them fit, we build the plan around you instead.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan" data-rise>
+        <h3 class="plan-name">Starter</h3>
+        <p class="plan-price"><sup>$</sup>699<span class="plan-per">/mo</span></p>
+        <p class="plan-vs">vs <s>$2,260/mo</s> to hire it out</p>
+        <p class="plan-own">You own everything</p>
+        <div class="plan-rule"></div>
+        <ul class="plan-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Professional website, mobile-first and fast</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Google Business Profile optimization</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Automated review requests</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Monthly plain-English dashboard</li>
+        </ul>
+        <a href="../contact.html" class="btn btn-line w-full">Get Started</a>
+      </article>
+
+      <article class="plan pick" data-rise>
+        <span class="plan-flag">Most Popular</span>
+        <h3 class="plan-name">Growth</h3>
+        <p class="plan-price"><sup>$</sup>1,199<span class="plan-per">/mo</span></p>
+        <p class="plan-vs">vs <s>$6,215/mo</s> to hire it out</p>
+        <p class="plan-own">You own everything</p>
+        <div class="plan-rule"></div>
+        <ul class="plan-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Everything in Starter</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Local SEO &mdash; rank in the Map Pack</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>AI phone answering, 24/7</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>CRM and automated follow-up pipeline</li>
+        </ul>
+        <a href="../contact.html" class="btn btn-gold w-full">Get Started</a>
+      </article>
+
+      <article class="plan" data-rise>
+        <h3 class="plan-name">Total Presence</h3>
+        <p class="plan-price"><sup>$</sup>1,997<span class="plan-per">/mo</span></p>
+        <p class="plan-vs">vs <s>$10,170/mo</s> to hire it out</p>
+        <p class="plan-own">You own everything</p>
+        <div class="plan-rule"></div>
+        <ul class="plan-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Everything in Growth</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Google Ads management</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Social media on two platforms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Email and SMS automation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Quarterly strategy call</li>
+        </ul>
+        <a href="../contact.html" class="btn btn-line w-full">Get Started</a>
+      </article>
+    </div>
+
+    <div class="custom" data-rise>
+      <div style="max-width:58ch">
+        <p class="display d-md" style="margin-bottom:.7rem">Want a Plan Built Around Just Your Business?</p>
+        <p class="muted">These packages cover most businesses, but nothing here is one-size-fits-all. After your free audit we build a plan around what you actually need: add what matters, drop what doesn&rsquo;t, pay for what moves the needle.</p>
+      </div>
+      <a href="../contact.html" class="btn btn-gold" style="flex-shrink:0">Build a Custom Plan <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+
+    <p class="plans-note" data-rise>Not sure which fits? <a href="../contact.html">Get a free audit</a> and we&rsquo;ll tell you what you need and what you don&rsquo;t. <a href="../pricing.html">Full pricing details &rarr;</a></p>
+  </div>
+</section>
+
+<!-- ============================ PROOF ============================ -->
+<section class="sec ruled">
+  <div class="container">
+    <div class="opener">
+      <h2 class="display d-lg" data-rise>What Plugging the Leaks <em>Actually Looks Like</em></h2>
+    </div>
+    <div class="proof">
+      <article class="case" data-rise>
+        <div class="case-head">
+          <span class="case-fig">$24K</span>
+          <h3 class="case-what">back, per year</h3>
+        </div>
+        <p class="case-body">A neighborhood bar doing $50K a month was losing 15% of its liquor to over-pours. POS-linked pour tracking took shrinkage down to single digits: $1,800&ndash;$2,400 back every month, and they stopped doing 2am bottle counts.</p>
+      </article>
+      <article class="case" data-rise>
+        <div class="case-head">
+          <span class="case-fig">260</span>
+          <h3 class="case-what">reviews in six months</h3>
+        </div>
+        <p class="case-body">A two-bay auto shop had 14 Google reviews and sat seventh in the Map Pack. We asked after every ticket, automatically: 260 reviews at 4.8&#9733;, second in the pack, 40 more calls a month &mdash; around $20K in new work.</p>
+      </article>
+      <article class="case" data-rise>
+        <div class="case-head">
+          <span class="case-fig">$144K</span>
+          <h3 class="case-what">recovered in one practice</h3>
+        </div>
+        <p class="case-body">An $800K dental practice was sitting on $480K of diagnosed but unscheduled treatment. Automatic 48-hour follow-up on unaccepted plans brought back 30% of it &mdash; from people who&rsquo;d already agreed to the exam.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CLOSE ============================ -->
+<section class="close ruled">
+  <div class="container">
+    <img src="../assets/logo-mark.png" alt="" class="close-mark" data-rise>
+    <h2 class="close-title" data-rise>Get Your Free<br><em>Business Audit</em></h2>
+    <p class="close-sub" data-rise>We&rsquo;ll show you where your business is leaking money &mdash; your calls, your reviews, your follow-up, your rankings. You walk away with real numbers whether you hire us or not.</p>
+    <div class="close-actions" data-rise>
+      <a href="../contact.html" class="btn btn-gold">Get My Free Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a href="../why-us.html" class="btn btn-line">Why Top Shelf</a>
+    </div>
+    <p class="close-fine" data-rise>No credit card. No commitment. Just clear answers about your business.</p>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-logo"><img src="../assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
+        <p>One-stop digital modernization for local businesses. You own everything we build for you. Plain-English results.</p>
+        <p class="footer-contact">
+          <a href="tel:+14698333033">(469) 833-3033</a>
+          <a href="mailto:contact@topshelfsolutions.io">contact@topshelfsolutions.io</a>
+        </p>
+      </div>
+      <div>
+        <p class="footer-col-title">Industries</p>
+        <div class="footer-links">
+          <a href="../industry-home-services.html">Home Services</a>
+          <a href="../industry-restaurants.html">Restaurants &amp; Bars</a>
+          <a href="../industry-medical-dental.html">Medical &amp; Dental</a>
+          <a href="../industry-legal.html">Law Firms</a>
+          <a href="../industry-retail.html">Retail &amp; Local</a>
+          <a href="../industry-auto.html">Auto</a>
+          <a href="../industry-salon-spa-fitness.html">Salon, Spa &amp; Fitness</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Solutions</p>
+        <div class="footer-links">
+          <a href="../solution-websites-seo.html">Websites &amp; SEO</a>
+          <a href="../solution-ai-phone.html">AI Phone &amp; Chat</a>
+          <a href="../solution-crm.html">CRM &amp; Follow-Up</a>
+          <a href="../solution-pos.html">POS &amp; Inventory</a>
+          <a href="../solution-marketing.html">Marketing &amp; Reviews</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <div class="footer-links">
+          <a href="../pricing.html">Pricing</a>
+          <a href="../why-us.html">Why Top Shelf</a>
+          <a href="../contact.html">Free Audit</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <span class="footer-tagline">We Solve. You Grow.</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ---------- Nav: scrolled state + mobile panel ---------- */
+(function () {
+  var nav = document.getElementById('nav');
+  function setNav(){ nav.classList.toggle('scrolled', (window.scrollY || 0) > 20); }
+  setNav();
+  window.addEventListener('scroll', setNav, { passive:true });
+
+  var btn = nav.querySelector('.nav-menu-btn');
+  var links = nav.querySelector('.nav-links');
+  var panel = document.createElement('div');
+  panel.className = 'mobile-menu';
+  panel.setAttribute('aria-hidden', 'true');
+  links.querySelectorAll(':scope > .nav-item, :scope > .nav-link').forEach(function (node) {
+    if (node.classList.contains('nav-item')) {
+      var head = node.querySelector('.nav-link');
+      var t = document.createElement('p');
+      t.className = 'mm-title';
+      t.textContent = (head ? head.textContent : '').replace(/[▾▼]/g, '').trim();
+      panel.appendChild(t);
+      node.querySelectorAll('.nav-dropdown a').forEach(function (a) {
+        var c = a.cloneNode(true); c.className = 'mm-sub'; panel.appendChild(c);
+      });
+    } else {
+      var c = node.cloneNode(true); c.className = 'mm-lead'; panel.appendChild(c);
+    }
+  });
+  var cta = nav.querySelector('.nav-cta .btn');
+  if (cta) { var cc = cta.cloneNode(true); cc.className = 'btn btn-gold'; panel.appendChild(cc); }
+  document.body.appendChild(panel);
+
+  function setOpen(open) {
+    panel.classList.toggle('open', open);
+    document.body.classList.toggle('mm-open', open);
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Close' : 'Menu';
+  }
+  btn.addEventListener('click', function () { setOpen(!panel.classList.contains('open')); });
+  panel.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  window.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  window.matchMedia('(min-width:861px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
+
+  /* Keyboard access for the hover dropdowns */
+  nav.querySelectorAll('.nav-item > .nav-link').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var open = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', open ? 'false' : 'true');
+      trigger.parentElement.classList.toggle('force-open', !open);
+    });
+  });
+})();
+
+/* ---------- Motion ---------- */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+
+  document.documentElement.classList.add('js-motion');
+  gsap.registerPlugin(ScrollTrigger);
+
+  var EASE = 'power3.out';
+
+  /* Hero: photo settles, headline lines slide up out of their masks,
+     then the supporting elements. One orchestrated load, not a per-section reflex. */
+  var tl = gsap.timeline({ delay: .12 });
+  tl.to('.hero-figure img', { opacity: 1, scale: 1, duration: 1.9, ease: 'power2.out' }, 0)
+    .to('.hero-kicker', { opacity: 1, y: 0, duration: .9, ease: EASE }, .18)
+    .to('[data-mask] > span', { y: '0%', duration: 1.15, ease: 'power4.out', stagger: .1 }, .28)
+    .to(['.hero-sub', '.hero-actions', '.hero-trust'], { opacity: 1, y: 0, duration: 1, ease: EASE, stagger: .09 }, .72);
+
+  /* Slow parallax drift on the hero photo while it's on screen */
+  gsap.to('.hero-figure img', {
+    yPercent: 7, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 }
+  });
+
+  /* Section entrances, grouped so related elements move together
+     rather than each one firing its own identical fade. */
+  function group(selector, opts) {
+    opts = opts || {};
+    gsap.utils.toArray(selector).forEach(function (root) {
+      var items = root.matches('[data-rise]') ? [root] : gsap.utils.toArray('[data-rise]', root);
+      if (!items.length) return;
+      gsap.to(items, {
+        opacity: 1, y: 0, duration: opts.duration || .95, ease: EASE,
+        stagger: opts.stagger === undefined ? .085 : opts.stagger,
+        scrollTrigger: { trigger: root, start: opts.start || 'top 84%', once: true }
+      });
+    });
+  }
+
+  group('.leaks-aside', { stagger: .1 });
+  group('.leak');                       /* each leak ticks in on its own line */
+  group('.drench .drench-head', { stagger: .12 });
+  group('.steps', { stagger: .13 });
+  group('.drench-foot');
+  group('.mosaic', { stagger: .07, duration: 1.05 });
+  group('.stack-row');
+  group('.plans', { stagger: .1 });
+  group('.proof', { stagger: .12 });
+  gsap.utils.toArray('.opener, .tab-wrap, .custom, .plans-note, .mosaic-foot, .close').forEach(function (root) {
+    group(root, { stagger: .1 });
+  });
+
+  /* Failsafe: nothing stays hidden if a trigger never fires */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      gsap.utils.toArray('[data-rise]').forEach(function (el) {
+        if (getComputedStyle(el).opacity === '0') gsap.set(el, { opacity: 1, y: 0 });
+      });
+      gsap.set('[data-mask] > span', { y: '0%' });
+      gsap.set('.hero-figure img', { opacity: 1 });
+      ScrollTrigger.refresh();
+    }, 1600);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf — Homepage Redesign, 3 Directions</title>
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@88..112,400..800&family=Source+Serif+4:opsz,wght@8..60,300..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#F5F6F8; --surface:#fff;
+  --ink:#16181F; --ink-2:#4A5060; --ink-3:#656C7F;
+  --line:#D3D8E2; --line-strong:#B4BCCB;
+  --sans:"Archivo",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--ground); color:var(--ink-2);
+  font-family:var(--serif); font-size:17px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; padding:clamp(2.5rem,7vw,5rem) clamp(1.25rem,5vw,3.5rem);
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid #2B4BB8;outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto}
+
+header{max-width:64ch;margin-bottom:clamp(2.5rem,5vw,3.5rem)}
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#2B4BB8;display:block;margin-bottom:.9rem}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.035em;line-height:1.05;color:var(--ink);margin-bottom:1rem;text-wrap:balance}
+header p{color:var(--ink-2);text-wrap:pretty}
+header p + p{margin-top:.8rem}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.6rem)}
+.opt{
+  display:flex;flex-direction:column;background:var(--surface);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  transition:transform .32s var(--ease),box-shadow .32s var(--ease),border-color .32s var(--ease);
+}
+.opt:hover{transform:translateY(-5px);box-shadow:0 24px 52px -30px rgba(22,24,31,.35);border-color:var(--line-strong)}
+.swatch{height:112px;display:flex;align-items:flex-end;gap:0;position:relative}
+.swatch i{flex:1;height:100%}
+.swatch span{
+  position:absolute;left:14px;bottom:12px;font-family:var(--sans);font-weight:700;
+  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.3rem .6rem;border-radius:100px;background:rgba(255,255,255,.92);color:var(--ink);
+}
+.body{padding:clamp(1.3rem,2.2vw,1.7rem);display:flex;flex-direction:column;flex:1}
+.opt h2{font-family:var(--sans);font-weight:700;font-size:1.28rem;letter-spacing:-.025em;color:var(--ink);margin-bottom:.15rem}
+.kind{font-family:var(--sans);font-weight:600;font-size:.8rem;color:var(--ink-3);margin-bottom:.9rem}
+.opt p{font-size:.97rem;color:var(--ink-2);line-height:1.6;text-wrap:pretty}
+dl{margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--line);display:grid;gap:.5rem;flex:1}
+dl div{display:grid;grid-template-columns:5.2rem 1fr;gap:.7rem;align-items:baseline}
+dt{font-family:var(--sans);font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+dd{font-size:.9rem;color:var(--ink-2);line-height:1.5}
+.go{
+  margin-top:1.3rem;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--sans);font-weight:600;font-size:.94rem;padding:.9rem 1.3rem;border-radius:4px;
+  background:var(--ink);color:#fff;transition:background .25s var(--ease),gap .25s var(--ease);
+}
+.opt:hover .go{background:#000;gap:.75rem}
+
+footer{margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:1.6rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.9rem;color:var(--ink-3);display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:space-between}
+footer a{color:#2B4BB8;font-weight:600}
+
+@media (max-width:900px){ .grid{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){ .opt,.go{transition-duration:.01ms} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Top Shelf Business Solutions</span>
+  <h1>Homepage redesign &mdash; three directions</h1>
+  <p>Same content, same facts, three different answers to &ldquo;how far do we move off the current identity?&rdquo; Each one is a complete, working homepage, not a mock-up. Open them, scroll them, resize the window.</p>
+  <p>Nothing here touches the live site. These live in <code>/preview/</code> and are set to noindex.</p>
+</header>
+
+<div class="grid">
+
+  <a class="opt" href="home-a-heritage.html">
+    <span class="swatch" aria-hidden="true">
+      <i style="background:#0B0906"></i><i style="background:#100C08"></i><i style="background:#C9A86A"></i><i style="background:#E4C98A"></i>
+      <span>A &middot; Heritage</span>
+    </span>
+    <span class="body">
+      <h2>Heritage</h2>
+      <p class="kind">Identity preserved</p>
+      <p>The current espresso-and-gold identity, with the AI scaffolding taken out: no eyebrow above every section, one numbered sequence instead of two, and real photography where the logo used to repeat.</p>
+      <dl>
+        <div><dt>Palette</dt><dd>Unchanged &mdash; espresso ground, gold accent</dd></div>
+        <div><dt>Type</dt><dd>Unchanged &mdash; Cormorant Garamond + Jost</dd></div>
+        <div><dt>New</dt><dd>Split hero on the back-bar photo, leaks set as margin notes, a gold-drenched process section, the comparison rebuilt as a running tab</dd></div>
+        <div><dt>Risk</dt><dd>Lowest &mdash; consistent with the other 25 pages today</dd></div>
+      </dl>
+      <span class="go">Open Direction A <span aria-hidden="true">&rarr;</span></span>
+    </span>
+  </a>
+
+  <a class="opt" href="home-b-label.html">
+    <span class="swatch" aria-hidden="true">
+      <i style="background:#0B0906"></i><i style="background:#15100B"></i><i style="background:#A98A4E"></i><i style="background:#C9A86A"></i>
+      <span>B &middot; Label</span>
+    </span>
+    <span class="body">
+      <h2>Label</h2>
+      <p class="kind">Palette kept, type replaced</p>
+      <p>Same espresso and gold, but Cormorant swapped for Bodoni Moda &mdash; the didone that actually appears on spirits labels &mdash; paired with Archivo. The whole page is composed as a label: centred, framed, engraved.</p>
+      <dl>
+        <div><dt>Palette</dt><dd>Unchanged &mdash; espresso ground, gold accent</dd></div>
+        <div><dt>Type</dt><dd>Bodoni Moda + Archivo</dd></div>
+        <div><dt>New</dt><dd>Framed hero over an engine-turned rosette, leaks as a back-label column, industries as bottles on a shelf</dd></div>
+        <div><dt>Risk</dt><dd>Medium &mdash; the other pages would need the same type to match</dd></div>
+      </dl>
+      <span class="go">Open Direction B <span aria-hidden="true">&rarr;</span></span>
+    </span>
+  </a>
+
+  <a class="opt" href="home-c-daylight.html">
+    <span class="swatch" aria-hidden="true">
+      <i style="background:#F5F6F8"></i><i style="background:#9A3218"></i><i style="background:#E2502A"></i><i style="background:#2B4BB8"></i>
+      <span>C &middot; Daylight</span>
+    </span>
+    <span class="body">
+      <h2>Daylight</h2>
+      <p class="kind">Open season</p>
+      <p>Built for a specific moment: a shop owner at the kitchen table at 9:40pm, tired, deciding in ten seconds whether this is real. That wants daylight and hard numbers, not another dark luxury page.</p>
+      <dl>
+        <div><dt>Palette</dt><dd>Cool off-white, vermilion for the loss, cobalt for the fix, ink for structure</dd></div>
+        <div><dt>Type</dt><dd>Archivo + Source Serif 4</dd></div>
+        <div><dt>New</dt><dd>Vermilion-drenched hero with a where-the-money-goes diagram, the comparison built as a real invoice</dd></div>
+        <div><dt>Risk</dt><dd>Highest &mdash; a new brand, and the gold logo needs a dark chip to read</dd></div>
+      </dl>
+      <span class="go">Open Direction C <span aria-hidden="true">&rarr;</span></span>
+    </span>
+  </a>
+
+</div>
+
+<footer>
+  <span>Every figure on all three pages is carried over from the live site. Nothing was invented.</span>
+  <a href="../index.html">Current live homepage &rarr;</a>
+</footer>
+
+</div>
+</body>
+</html>

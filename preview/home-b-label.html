@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf Business Solutions — We Solve. You Grow. [Direction B · Label]</title>
+<meta name="description" content="One-stop digital modernization for local businesses. Websites, SEO, AI phone, CRM, POS, marketing & reviews. You own everything.">
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Archivo:wdth,wght@75..112,300..700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOP SHELF — DIRECTION B · "LABEL"
+   Palette preserved (espresso ground, gold accent).
+   Type replaced: Bodoni Moda (didone — the typography of a
+   spirits label) + Archivo (American grotesque — the typography
+   of a signage plate). Composition is centred and framed, the
+   way a label is, rather than editorial-asymmetric.
+   ============================================================ */
+
+:root{
+  --ground:        #0B0906;
+  --surface:       #100C08;
+  --surface-2:     #15100B;
+  --hairline:      rgba(201,168,106,.18);
+  --hairline-soft: rgba(233,228,218,.10);
+  --hairline-strong: rgba(201,168,106,.38);
+
+  --ink:      #F4F0E8;
+  --ink-2:    #CFC7B8;
+  --ink-3:    #A79E8C;
+  --ink-4:    #857C6C;
+
+  --gold:        #C9A86A;
+  --gold-bright: #E4C98A;
+  --gold-deep:   #A98A4E;
+  --on-gold:     #16110A;
+
+  --maxw: 1180px;
+  --gutter: clamp(1.5rem, 5vw, 4rem);
+
+  --didone: "Bodoni Moda", Didot, "Bodoni MT", Georgia, serif;
+  --grot:   "Archivo", system-ui, -apple-system, sans-serif;
+
+  --ease:      cubic-bezier(.22,1,.36,1);
+  --ease-expo: cubic-bezier(.16,1,.3,1);
+
+  --z-base:1; --z-sticky:40; --z-nav:60; --z-overlay:80;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  background:var(--ground);
+  color:var(--ink-2);
+  font-family:var(--grot);
+  font-weight:300; font-size:16px; line-height:1.72; letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+:focus-visible{ outline:2px solid var(--gold-bright); outline-offset:3px; }
+
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); }
+.narrow{ max-width:760px; }
+.wide{ max-width:1440px; }
+
+/* Engraved line texture — the fine intaglio hatching of a printed label.
+   Fixed, pointer-none, so it never repaints on scroll. */
+.engrave{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    linear-gradient(58deg, rgba(201,168,106,.055) 0 1px, transparent 1px) 0 0 / 8px 8px,
+    linear-gradient(-58deg, rgba(201,168,106,.04) 0 1px, transparent 1px) 0 0 / 11px 11px,
+    radial-gradient(85% 55% at 50% 0%, rgba(201,168,106,.07), transparent 62%);
+}
+#page{ position:relative; z-index:var(--z-base); }
+
+/* ---------- Type ---------- */
+/* Bodoni is a high-contrast didone: never below 22px, or the hairlines vanish. */
+.dd{
+  font-family:var(--didone); font-optical-sizing:auto;
+  font-weight:500; color:var(--ink); line-height:1.06; letter-spacing:-.012em;
+  text-wrap:balance;
+}
+.dd em{ font-style:italic; font-weight:500; color:var(--gold-bright); }
+.dd-hero{ font-size:clamp(2.3rem, 4.6vw, 4rem); font-weight:600; }
+.dd-lg{   font-size:clamp(2rem, 3.9vw, 3.1rem); }
+.dd-md{   font-size:clamp(1.45rem, 2.3vw, 1.95rem); }
+
+/* Archivo carries every small size. Plate lettering: tracked caps. */
+.plate{
+  font-family:var(--grot); font-weight:500; font-size:.7rem;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--gold);
+}
+.lead{ font-size:clamp(1rem,1.2vw,1.1rem); line-height:1.8; color:var(--ink-2); max-width:62ch; text-wrap:pretty; }
+.muted{ font-size:.93rem; line-height:1.75; color:var(--ink-3); text-wrap:pretty; }
+
+/* The double rule — a label border, used as the section divider */
+.rule2{ position:relative; height:4px; }
+.rule2::before, .rule2::after{ content:""; position:absolute; left:0; right:0; height:1px; background:var(--hairline); }
+.rule2::before{ top:0; }
+.rule2::after{ top:3px; opacity:.5; }
+
+.sec{ position:relative; z-index:2; padding-block:clamp(5rem, 9.5vw, 8.5rem); }
+.sec-head{ text-align:center; max-width:60ch; margin:0 auto clamp(2.8rem,5vw,4.2rem); }
+.sec-head .plate{ display:block; margin-bottom:1.5rem; }
+.sec-head .lead{ margin:1.4rem auto 0; }
+
+/* ---------- Buttons — stamped plates ---------- */
+.btn{
+  position:relative; display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  font-family:var(--grot); font-weight:500; font-size:.76rem; letter-spacing:.18em; text-transform:uppercase;
+  padding:1.1rem 2.1rem; border:1px solid transparent; cursor:pointer; border-radius:1px;
+  overflow:hidden; isolation:isolate; white-space:nowrap; line-height:1;
+  transition:transform 200ms var(--ease), color 300ms var(--ease), border-color 300ms var(--ease);
+}
+.btn .arr{ position:relative; z-index:1; transition:transform .5s var(--ease); }
+.btn:hover .arr{ transform:translateX(5px); }
+.btn:active{ transform:scale(.976); }
+.btn-gold{ background:var(--gold); color:var(--on-gold); border-color:var(--gold); }
+.btn-gold::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(180deg,#F5E5BC,var(--gold-bright));
+  clip-path:inset(0 100% 0 0); transition:clip-path 460ms var(--ease-expo);
+}
+.btn-gold:hover{ transform:translateY(-2px); border-color:var(--gold-bright); }
+.btn-gold:hover::before{ clip-path:inset(0 0 0 0); }
+.btn-line{ background:transparent; color:var(--ink); border-color:var(--hairline-strong); }
+.btn-line::before{
+  content:""; position:absolute; inset:0; z-index:-1; background:var(--gold);
+  clip-path:inset(0 100% 0 0); transition:clip-path 420ms var(--ease-expo);
+}
+.btn-line:hover{ color:var(--on-gold); border-color:var(--gold); transform:translateY(-2px); }
+.btn-line:hover::before{ clip-path:inset(0 0 0 0); }
+.btn-sm{ padding:.72rem 1.3rem; font-size:.68rem; letter-spacing:.16em; }
+.w-full{ width:100%; }
+
+.tlink{
+  position:relative; color:var(--gold); font-family:var(--grot);
+  font-size:.7rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+  display:inline-flex; gap:.55rem; align-items:center;
+}
+.tlink::after{ content:""; position:absolute; left:0; bottom:-5px; height:1px; width:100%; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .55s var(--ease); }
+.tlink:hover::after{ transform:scaleX(1); }
+.tlink .arr{ transition:transform .5s var(--ease); }
+.tlink:hover .arr{ transform:translateX(5px); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+#nav{
+  position:fixed; inset:0 0 auto 0; z-index:var(--z-nav); height:78px;
+  display:flex; align-items:center; border-bottom:1px solid transparent;
+  transition:background .5s var(--ease), border-color .5s var(--ease), height .5s var(--ease);
+}
+#nav.scrolled{
+  height:66px; background:rgba(11,9,6,.8);
+  backdrop-filter:blur(18px) saturate(150%); -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border-bottom-color:var(--hairline);
+}
+.nav-inner{ width:100%; max-width:1440px; margin-inline:auto; padding-inline:var(--gutter);
+  display:flex; align-items:center; justify-content:space-between; gap:2rem; }
+.nav-logo img{ height:44px; width:auto; transition:height .5s var(--ease); }
+#nav.scrolled .nav-logo img{ height:36px; }
+.nav-links{ display:flex; align-items:center; gap:2.3rem; }
+.nav-item{ position:relative; }
+.nav-link{
+  font-family:var(--grot); font-size:.71rem; font-weight:500; letter-spacing:.19em; text-transform:uppercase;
+  color:var(--ink-2); display:inline-flex; align-items:center; gap:.45rem; padding-block:.55rem;
+  background:none; border:0; cursor:pointer; transition:color .35s var(--ease);
+}
+.nav-link:hover{ color:var(--gold-bright); }
+.nav-arrow{ font-size:.5rem; color:var(--ink-4); transition:transform .4s var(--ease), color .4s var(--ease); }
+.nav-item:hover .nav-arrow{ transform:rotate(180deg); color:var(--gold); }
+.nav-dropdown{
+  position:absolute; top:calc(100% + 15px); left:50%; transform:translateX(-50%) translateY(7px);
+  min-width:242px; background:rgba(16,12,8,.97);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  border:1px solid var(--hairline); padding:.4rem; border-radius:1px;
+  opacity:0; visibility:hidden;
+  transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s linear .32s;
+}
+.nav-dropdown::before{ content:""; position:absolute; left:0; right:0; top:-19px; height:19px; }
+.nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  opacity:1; visibility:visible; transform:translateX(-50%) translateY(0);
+  transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s;
+}
+.nav-dropdown a{ display:block; padding:.66rem 1rem; font-size:.82rem; font-weight:300; color:var(--ink-2); transition:color .28s var(--ease), background .28s var(--ease); }
+.nav-dropdown a:hover{ color:var(--gold-bright); background:rgba(201,168,106,.07); }
+.nav-cta{ display:flex; align-items:center; gap:1.4rem; }
+.nav-menu-btn{ display:none; }
+
+.mobile-menu{
+  position:fixed; inset:78px 0 0 0; z-index:var(--z-overlay);
+  background:rgba(11,9,6,.985); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+  border-top:1px solid var(--hairline); padding:1.4rem var(--gutter) 3.5rem;
+  overflow-y:auto; display:flex; flex-direction:column;
+  opacity:0; visibility:hidden; transform:translateY(-10px);
+  transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s linear .32s;
+}
+.mobile-menu.open{ opacity:1; visibility:visible; transform:none; transition:opacity .32s var(--ease), transform .32s var(--ease), visibility 0s; }
+.mm-title{ font-family:var(--grot); font-size:.66rem; font-weight:500; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin:1.7rem 0 .3rem; }
+.mm-title:first-child{ margin-top:.3rem; }
+.mobile-menu a{ display:block; padding:.78rem 0; border-bottom:1px solid var(--hairline-soft); color:var(--ink); }
+.mobile-menu a.mm-lead{ font-family:var(--didone); font-size:1.6rem; font-weight:600; }
+.mobile-menu a.mm-sub{ font-size:.95rem; font-weight:300; color:var(--ink-2); }
+.mobile-menu .btn{ margin-top:2rem; }
+body.mm-open{ overflow:hidden; }
+
+/* ============================================================
+   HERO — a label, struck on the dark
+   ============================================================ */
+.hero{
+  position:relative; z-index:2; min-height:100svh;
+  display:grid; place-items:center; overflow:hidden;
+  padding:clamp(7.5rem,13vh,10rem) var(--gutter) clamp(3.5rem,7vh,5.5rem);
+}
+.hero-bg{ position:absolute; inset:0; z-index:-2; }
+.hero-bg img{ width:100%; height:100%; object-fit:cover; object-position:50% 46%; transform:scale(1.05); }
+.hero-bg::after{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(66% 62% at 50% 46%, rgba(11,9,6,.42), rgba(11,9,6,.86) 74%),
+    linear-gradient(180deg, rgba(11,9,6,.82) 0%, rgba(11,9,6,.12) 32%, rgba(11,9,6,.62) 78%, var(--ground) 100%);
+}
+/* Rosette: the engine-turned medallion behind the mark */
+.rosette{
+  position:absolute; top:50%; left:50%; z-index:-1;
+  width:min(120vh,900px); aspect-ratio:1; transform:translate(-50%,-52%);
+  opacity:.16; pointer-events:none; color:var(--gold);
+}
+.hero-label{
+  position:relative; text-align:center; max-width:900px; width:100%;
+  padding:clamp(2.4rem,4.5vw,3.8rem) clamp(1.4rem,4vw,3.4rem);
+  border:1px solid var(--hairline-strong); border-radius:2px;
+  background:rgba(11,9,6,.34);
+  backdrop-filter:blur(2px); -webkit-backdrop-filter:blur(2px);
+}
+/* inner keyline — the second rule every good label has */
+.hero-label::before{
+  content:""; position:absolute; inset:6px; border:1px solid var(--hairline); border-radius:1px; pointer-events:none;
+}
+.hero-mark{ width:clamp(46px,5vw,62px); margin:0 auto 1.5rem; opacity:.95; }
+.hero-plate{ display:block; margin-bottom:1.5rem; }
+.hero-title{ margin-bottom:1.5rem; }
+.hero-line{ display:block; overflow:hidden; }
+.hero-line > span{ display:block; }
+.hero-sub{ color:var(--ink-2); max-width:56ch; margin:0 auto 2.2rem; font-size:clamp(.98rem,1.15vw,1.08rem); line-height:1.8; text-wrap:pretty; }
+.hero-actions{ display:flex; flex-wrap:wrap; gap:.9rem; justify-content:center; }
+.hero-est{
+  margin-top:2.1rem; padding-top:1.4rem; border-top:1px solid var(--hairline);
+  font-family:var(--grot); font-size:.66rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3);
+}
+
+/* ============================================================
+   THE LEAKS — the back label. One narrow centred column.
+   ============================================================ */
+.backlabel{ max-width:640px; margin-inline:auto; }
+.entry{ padding-block:clamp(2rem,3.6vw,2.8rem); border-top:1px solid var(--hairline-soft); text-align:center; }
+.entry:first-child{ border-top:0; }
+.entry-fig{
+  font-family:var(--didone); font-optical-sizing:auto; font-weight:500;
+  font-size:clamp(3.2rem,6vw,4.6rem); line-height:1; letter-spacing:-.02em;
+  color:var(--gold-bright); display:block; margin-bottom:.9rem; font-variant-numeric:lining-nums;
+}
+.entry-name{ font-family:var(--grot); font-weight:500; font-size:.72rem; letter-spacing:.26em; text-transform:uppercase; color:var(--ink); margin-bottom:.85rem; }
+.entry-body{ font-size:.94rem; color:var(--ink-2); line-height:1.8; max-width:52ch; margin-inline:auto; text-wrap:pretty; }
+.backlabel-note{ margin-top:2.4rem; padding-top:1.5rem; border-top:1px solid var(--hairline); text-align:center; font-size:.8rem; color:var(--ink-3); }
+
+/* ============================================================
+   PROCESS — three struck medallions
+   ============================================================ */
+.medallions{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.8rem); }
+.med{
+  position:relative; text-align:center;
+  border:1px solid var(--hairline); border-radius:2px; background:var(--surface);
+  padding:clamp(2.2rem,3.4vw,3rem) clamp(1.3rem,2.2vw,2rem);
+  transition:border-color 380ms var(--ease), background 380ms var(--ease), transform 380ms var(--ease);
+}
+.med:hover{ border-color:var(--hairline-strong); background:var(--surface-2); transform:translateY(-4px); }
+.med-seal{
+  width:66px; height:66px; margin:0 auto 1.6rem; border-radius:50%;
+  border:1px solid var(--hairline-strong); display:grid; place-items:center;
+  font-family:var(--didone); font-optical-sizing:auto; font-size:1.35rem; font-weight:500; font-style:italic; color:var(--gold);
+  background:radial-gradient(circle at 50% 32%, rgba(201,168,106,.13), transparent 68%);
+  transition:border-color 380ms var(--ease), color 380ms var(--ease);
+}
+.med:hover .med-seal{ border-color:var(--gold); color:var(--gold-bright); }
+.med-title{ font-family:var(--didone); font-optical-sizing:auto; font-size:clamp(1.4rem,2vw,1.75rem); font-weight:600; color:var(--ink); margin-bottom:.9rem; letter-spacing:-.01em; }
+.med-body{ font-size:.92rem; color:var(--ink-2); line-height:1.75; text-wrap:pretty; }
+.med-foot{ margin-top:clamp(2.4rem,4vw,3.4rem); text-align:center; }
+.med-foot .muted{ margin-top:1.1rem; font-size:.84rem; }
+
+/* ============================================================
+   INDUSTRIES — bottles on the shelf. Caption plate below.
+   ============================================================ */
+.shelf{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(1.1rem,2.2vw,2rem); }
+.bottle{ display:block; text-align:center; }
+.bottle-frame{
+  display:block; position:relative; overflow:hidden; aspect-ratio:3/4.2; border-radius:1px;
+  border:1px solid var(--hairline); background:var(--surface);
+}
+.bottle-frame img{
+  width:100%; height:100%; object-fit:cover;
+  filter:saturate(.95) brightness(.95);
+  transform:scale(1.02); transition:transform 1.1s var(--ease), filter .8s var(--ease);
+}
+.bottle:hover .bottle-frame img{ transform:scale(1.08); filter:saturate(1.06) brightness(1.05); }
+.bottle-frame::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  border:1px solid rgba(201,168,106,0); transition:border-color .45s var(--ease);
+  box-shadow:inset 0 -70px 70px -50px rgba(11,9,6,.9);
+}
+.bottle:hover .bottle-frame::after{ border-color:var(--hairline-strong); }
+.bottle-plate{ display:block; padding-top:1.1rem; }
+.bottle-name{ display:block; font-family:var(--didone); font-optical-sizing:auto; font-size:clamp(1.15rem,1.5vw,1.4rem); font-weight:600; color:var(--ink); letter-spacing:-.005em; transition:color .4s var(--ease); }
+.bottle:hover .bottle-name{ color:var(--gold-bright); }
+.bottle-hook{ display:block; font-size:.83rem; color:var(--ink-3); line-height:1.55; margin-top:.45rem; text-wrap:pretty; min-height:3.1em; }
+.bottle-go{
+  display:inline-flex; align-items:center; gap:.5rem; margin-top:.8rem;
+  font-family:var(--grot); font-size:.63rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-deep);
+  transition:color .4s var(--ease), gap .4s var(--ease);
+}
+.bottle:hover .bottle-go{ color:var(--gold-bright); gap:.85rem; }
+.shelf-foot{ margin-top:clamp(2.6rem,4.5vw,3.6rem); text-align:center; }
+
+/* ============================================================
+   THE STACK — contents panel
+   ============================================================ */
+.contents{ max-width:900px; margin-inline:auto; border:1px solid var(--hairline); border-radius:2px; padding:clamp(1.4rem,3vw,2.6rem); background:var(--surface); }
+.content-row{
+  display:grid; grid-template-columns:2.6rem minmax(0,1fr) auto;
+  gap:clamp(1rem,2.2vw,1.9rem); align-items:center;
+  padding:clamp(1.4rem,2.4vw,1.9rem) 0; border-top:1px solid var(--hairline-soft);
+  transition:padding-left .5s var(--ease);
+}
+.content-row:first-of-type{ border-top:0; }
+.content-row:hover{ padding-left:.8rem; }
+.content-icon{ color:var(--gold); transition:color .4s var(--ease); }
+.content-icon svg{ width:26px; height:26px; }
+.content-row:hover .content-icon{ color:var(--gold-bright); }
+.content-text{ display:block; }
+.content-name{ display:block; font-family:var(--didone); font-optical-sizing:auto; font-size:clamp(1.3rem,1.8vw,1.6rem); font-weight:600; color:var(--ink); margin-bottom:.4rem; transition:color .4s var(--ease); }
+.content-row:hover .content-name{ color:var(--gold-bright); }
+.content-body{ display:block; font-size:.9rem; color:var(--ink-2); line-height:1.7; max-width:66ch; text-wrap:pretty; }
+.content-go{ justify-self:end; white-space:nowrap; }
+
+/* ============================================================
+   THE BILL
+   ============================================================ */
+.bill{ max-width:900px; margin-inline:auto; border:1px solid var(--hairline); border-radius:2px; background:var(--surface); padding:clamp(1.5rem,3.2vw,3rem); }
+.bill table{ width:100%; border-collapse:collapse; }
+.bill th, .bill td{ text-align:left; padding:clamp(.85rem,1.4vw,1.1rem) 0; vertical-align:baseline; font-weight:300; }
+.bill thead th{ font-family:var(--grot); font-size:.63rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--hairline); padding-bottom:1rem; }
+.bill td + td, .bill th + th{ padding-left:clamp(1rem,2.4vw,2.2rem); }
+.bill .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.bill tbody tr{ border-bottom:1px solid var(--hairline-soft); }
+.bill tbody td:first-child{ color:var(--ink); font-size:.93rem; }
+.bill .cost{ color:var(--ink-3); font-size:.92rem; }
+.bill .ours{ color:var(--ink-2); font-size:.92rem; }
+.bill .ours .yes{ color:var(--gold); margin-left:.45rem; }
+.bill .aside{ display:block; color:var(--ink-4); font-size:.8rem; margin-top:.15rem; }
+.bill tfoot td{ padding-top:1.5rem; border-top:1px solid var(--hairline-strong); }
+.bill tfoot .label{ font-family:var(--grot); font-size:.68rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--ink); }
+.bill tfoot .big{ font-family:var(--didone); font-optical-sizing:auto; font-size:clamp(1.5rem,2.3vw,1.95rem); font-weight:500; letter-spacing:-.02em; font-variant-numeric:tabular-nums; color:var(--ink); }
+.bill tfoot .big.us{ color:var(--gold-bright); }
+.bill tfoot .sub{ display:block; font-family:var(--grot); font-size:.78rem; font-weight:300; color:var(--ink-3); letter-spacing:.02em; margin-top:.4rem; text-transform:none; }
+.bill-note{ margin-top:1.7rem; font-size:.86rem; color:var(--ink-3); text-align:center; }
+.bill-note a{ color:var(--gold); border-bottom:1px solid var(--hairline-strong); }
+.bill-note a:hover{ color:var(--gold-bright); border-color:var(--gold-bright); }
+
+/* ============================================================
+   PRICING — three label panels
+   ============================================================ */
+.tiers{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,1.8vw,1.5rem); align-items:stretch; }
+.tier{
+  position:relative; display:flex; flex-direction:column; text-align:center;
+  border:1px solid var(--hairline); border-radius:2px; background:var(--surface);
+  padding:clamp(2rem,3vw,2.7rem) clamp(1.3rem,2.2vw,2rem);
+  transition:transform 360ms var(--ease), border-color 360ms var(--ease), background 360ms var(--ease);
+}
+.tier::before{ content:""; position:absolute; inset:6px; border:1px solid var(--hairline-soft); border-radius:1px; pointer-events:none; opacity:0; transition:opacity 360ms var(--ease); }
+.tier:hover{ transform:translateY(-5px); border-color:var(--hairline-strong); background:var(--surface-2); }
+.tier:hover::before{ opacity:1; }
+.tier.pick{ border-color:var(--gold); }
+.tier.pick::before{ opacity:1; border-color:var(--hairline); }
+.tier-flag{
+  position:absolute; top:-10px; left:50%; transform:translateX(-50%);
+  background:var(--gold); color:var(--on-gold); border-radius:1px;
+  font-family:var(--grot); font-size:.6rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  padding:.38rem .9rem; white-space:nowrap;
+}
+.tier-name{ font-family:var(--grot); font-size:.68rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:1.3rem; }
+.tier-price{ font-family:var(--didone); font-optical-sizing:auto; font-weight:500; font-size:clamp(2.8rem,4vw,3.5rem); line-height:1; color:var(--ink); letter-spacing:-.025em; display:flex; align-items:flex-start; justify-content:center; gap:2px; }
+.tier-price sup{ font-size:1.35rem; margin-top:.4rem; color:var(--ink-2); }
+.tier-per{ font-family:var(--grot); font-size:.85rem; font-weight:300; color:var(--ink-3); align-self:flex-end; margin:0 0 .45rem .25rem; }
+.tier-vs{ font-size:.8rem; color:var(--ink-3); margin-top:.7rem; }
+.tier-vs s{ color:var(--gold); text-decoration-thickness:1px; }
+.tier-own{ font-family:var(--grot); font-size:.62rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:1rem; }
+.tier-rule{ height:1px; background:var(--hairline); margin:1.6rem 0; }
+.tier-list{ display:flex; flex-direction:column; gap:.85rem; margin-bottom:1.9rem; flex:1; text-align:left; }
+.tier-list li{ list-style:none; display:flex; gap:.7rem; font-size:.88rem; color:var(--ink-2); line-height:1.55; }
+.tier-list svg{ width:15px; height:15px; flex:none; color:var(--gold); margin-top:.25rem; }
+.bespoke{
+  margin-top:clamp(1.3rem,2.2vw,1.8rem); border:1px solid var(--hairline); border-radius:2px; background:var(--surface);
+  padding:clamp(1.7rem,3vw,2.5rem); text-align:center;
+}
+.bespoke .dd-md{ margin-bottom:.8rem; }
+.bespoke .muted{ max-width:64ch; margin:0 auto 1.7rem; }
+.tiers-note{ text-align:center; color:var(--ink-3); font-size:.88rem; margin-top:2.2rem; }
+.tiers-note a{ color:var(--gold-bright); border-bottom:1px solid var(--hairline-strong); }
+
+/* ============================================================
+   PROOF
+   ============================================================ */
+.marks{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.8rem); }
+.mark{ text-align:center; border:1px solid var(--hairline); border-radius:2px; padding:clamp(2rem,3.2vw,2.8rem) clamp(1.3rem,2.2vw,2rem); background:var(--surface); }
+.mark-fig{ font-family:var(--didone); font-optical-sizing:auto; font-weight:500; font-size:clamp(2.6rem,4vw,3.4rem); line-height:1; letter-spacing:-.025em; color:var(--gold-bright); display:block; margin-bottom:.9rem; }
+.mark-what{ font-family:var(--grot); font-size:.66rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--ink); margin-bottom:1.1rem; }
+.mark-body{ font-size:.9rem; color:var(--ink-2); line-height:1.75; text-wrap:pretty; }
+
+/* ============================================================
+   CLOSE
+   ============================================================ */
+.close{ position:relative; z-index:2; padding-block:clamp(5.5rem,10vw,9rem); overflow:hidden; }
+.close::before{ content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(55% 60% at 50% 45%, rgba(201,168,106,.13), transparent 68%); }
+.close-label{
+  position:relative; text-align:center; max-width:760px; margin-inline:auto;
+  border:1px solid var(--hairline-strong); border-radius:2px; background:rgba(16,12,8,.5);
+  padding:clamp(2.6rem,5vw,4.2rem) clamp(1.4rem,4vw,3.4rem);
+}
+.close-label::before{ content:""; position:absolute; inset:6px; border:1px solid var(--hairline); border-radius:1px; pointer-events:none; }
+.close-mark{ width:clamp(50px,5.5vw,68px); margin:0 auto 1.8rem; opacity:.92; }
+.close-title{ font-family:var(--didone); font-optical-sizing:auto; font-weight:600; font-size:clamp(2.3rem,4.8vw,3.7rem); line-height:1.06; color:var(--ink); letter-spacing:-.02em; margin-bottom:1.5rem; text-wrap:balance; }
+.close-title em{ font-style:italic; color:var(--gold-bright); }
+.close-sub{ color:var(--ink-2); max-width:52ch; margin:0 auto 2.2rem; font-size:clamp(.98rem,1.15vw,1.08rem); line-height:1.8; text-wrap:pretty; }
+.close-actions{ display:flex; flex-wrap:wrap; gap:.9rem; justify-content:center; }
+.close-fine{ margin-top:1.9rem; padding-top:1.4rem; border-top:1px solid var(--hairline); font-family:var(--grot); font-size:.65rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{ position:relative; z-index:2; border-top:1px solid var(--hairline); padding-block:clamp(3.5rem,6vw,5rem) 2.4rem; }
+.footer-grid{ display:grid; grid-template-columns:1.7fr 1fr 1fr 1fr; gap:clamp(2rem,4vw,3.6rem); margin-bottom:3.2rem; }
+.footer-logo img{ height:38px; width:auto; margin-bottom:1.4rem; }
+.footer-brand p{ font-size:.86rem; color:var(--ink-3); max-width:34ch; line-height:1.75; }
+.footer-contact{ display:flex; flex-direction:column; gap:.35rem; margin-top:1.1rem; }
+.footer-contact a{ color:var(--gold); font-size:.9rem; }
+.footer-contact a:hover{ color:var(--gold-bright); }
+.footer-col-title{ font-family:var(--grot); font-size:.63rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); margin-bottom:1.3rem; }
+.footer-links{ display:flex; flex-direction:column; gap:.75rem; }
+.footer-links a{ font-size:.87rem; color:var(--ink-2); transition:color .3s var(--ease); width:fit-content; }
+.footer-links a:hover{ color:var(--gold-bright); }
+.footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:2.1rem; border-top:1px solid var(--hairline-soft); gap:1rem; flex-wrap:wrap; }
+.footer-bottom p{ font-size:.79rem; color:var(--ink-3); }
+.footer-tagline{ font-family:var(--didone); font-optical-sizing:auto; font-style:italic; font-weight:500; font-size:1.15rem; color:var(--gold); }
+
+/* ============================================================
+   MOTION
+   ============================================================ */
+.js-motion [data-rise]{ opacity:0; transform:translateY(24px); }
+.js-motion [data-mask] > span{ transform:translateY(102%); }
+.js-motion .hero-bg img{ opacity:0; }
+.js-motion .rosette{ opacity:0; }
+.js-motion .hero-label{ opacity:0; transform:scale(.985); }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  .js-motion [data-rise]{ opacity:1 !important; transform:none !important; }
+  .js-motion [data-mask] > span{ transform:none !important; }
+  .js-motion .hero-bg img, .js-motion .hero-label{ opacity:1 !important; transform:none !important; }
+  .js-motion .rosette{ opacity:.16 !important; }
+  *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; }
+  .bottle-frame img, .content-row, .tier, .med, .btn{ transition-duration:.15s !important; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1080px){
+  .shelf{ grid-template-columns:repeat(3,1fr); }
+  .content-row{ grid-template-columns:2.2rem minmax(0,1fr); grid-template-areas:"icon name" "body body" "go go"; row-gap:.7rem; }
+  .content-icon{ grid-area:icon; } .content-text{ grid-area:name; } .content-go{ grid-area:go; justify-self:start; }
+}
+@media (max-width:860px){
+  .nav-links, .nav-cta .btn{ display:none; }
+  .nav-menu-btn{ display:inline-flex; }
+  .medallions, .tiers, .marks{ grid-template-columns:1fr; }
+  .shelf{ grid-template-columns:repeat(2,1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+  .bill thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  .bill tbody tr{ display:grid; gap:.25rem; padding-block:1.05rem; }
+  .bill tbody td{ padding:0 !important; }
+  .bill tbody td:first-child{ font-size:1rem; }
+  .bill .num{ text-align:left; }
+  .bill tfoot tr{ display:grid; gap:.45rem; }
+  .bill tfoot td{ padding-left:0 !important; }
+}
+@media (max-width:560px){
+  .shelf{ grid-template-columns:1fr; }
+  .bottle-frame{ aspect-ratio:16/10; }
+  .footer-grid{ grid-template-columns:1fr; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; }
+  .hero-label{ padding-inline:1.2rem; }
+  .hero-label::before{ inset:5px; }
+}
+</style>
+</head>
+<body>
+
+<div class="engrave" aria-hidden="true"></div>
+
+<div id="page">
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-link" aria-expanded="false">Industries <span class="nav-arrow" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown">
+          <a href="../industry-home-services.html">Home Services</a>
+          <a href="../industry-restaurants.html">Restaurants &amp; Bars</a>
+          <a href="../industry-medical-dental.html">Medical &amp; Dental</a>
+          <a href="../industry-legal.html">Law Firms</a>
+          <a href="../industry-retail.html">Retail &amp; Local</a>
+          <a href="../industry-auto.html">Auto</a>
+          <a href="../industry-salon-spa-fitness.html">Salon, Spa &amp; Fitness</a>
+          <a href="../industry-custom.html">Your Business</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-link" aria-expanded="false">Solutions <span class="nav-arrow" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown">
+          <a href="../solution-websites-seo.html">Websites &amp; SEO</a>
+          <a href="../solution-ai-phone.html">AI Phone &amp; Chat</a>
+          <a href="../solution-crm.html">CRM &amp; Follow-Up</a>
+          <a href="../solution-reviews.html">Reviews &amp; Reputation</a>
+          <a href="../solution-marketing.html">Marketing &amp; Social</a>
+          <a href="../solution-booking.html">Online Booking</a>
+          <a href="../solution-payments.html">Payments &amp; Financing</a>
+          <a href="../solution-automation.html">AI &amp; Automation</a>
+          <a href="../solution-memberships.html">Memberships &amp; Loyalty</a>
+          <a href="../solution-pos.html">POS &amp; Inventory</a>
+        </div>
+      </div>
+      <a href="../pricing.html" class="nav-link">Pricing</a>
+      <a href="../why-us.html" class="nav-link">Why Us</a>
+    </div>
+    <div class="nav-cta">
+      <a href="../contact.html" class="btn btn-gold btn-sm">Free Audit</a>
+      <button class="nav-link nav-menu-btn" aria-expanded="false" aria-label="Open menu">Menu</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="../assets/img/industry/restaurants.jpg" alt="">
+  </div>
+  <svg class="rosette" viewBox="0 0 400 400" aria-hidden="true" fill="none" stroke="currentColor" stroke-width=".45">
+    <g>
+      <circle cx="200" cy="200" r="196"/><circle cx="200" cy="200" r="188"/>
+      <circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="146"/>
+      <circle cx="200" cy="200" r="98"/><circle cx="200" cy="200" r="60"/>
+      <!-- engine-turned guilloche: offset circles swept around the centre -->
+      <g id="gl"></g>
+    </g>
+  </svg>
+
+  <div class="hero-label">
+    <img src="../assets/logo-mark.png" alt="" class="hero-mark" data-rise>
+    <span class="plate hero-plate" data-rise>We Solve &middot; You Grow</span>
+    <h1 class="dd dd-hero hero-title">
+      <span class="hero-line" data-mask><span>Stop Losing Money</span></span>
+      <span class="hero-line" data-mask><span>to <em>Leaks You Can&rsquo;t See</em></span></span>
+    </h1>
+    <p class="hero-sub" data-rise>You&rsquo;re not losing money because your work is bad. You&rsquo;re losing it to the leaks &mdash; missed calls, forgotten follow-ups, reviews you never asked for. We plug the leaks and grow what&rsquo;s left.</p>
+    <div class="hero-actions" data-rise>
+      <a href="../contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a href="../pricing.html" class="btn btn-line">See Pricing</a>
+    </div>
+    <p class="hero-est" data-rise>You own every asset &middot; One team, one bill</p>
+  </div>
+</header>
+
+<!-- ============================ THE LEAKS ============================ -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head">
+      <span class="plate" data-rise>What&rsquo;s Running Out</span>
+      <h2 class="dd dd-lg" data-rise>Four Leaks, and <em>Nobody Sends a Bill</em></h2>
+      <p class="lead" data-rise>Nothing here shows up in your books as a loss. It just quietly never becomes revenue &mdash; and that&rsquo;s why it can run for years before anybody catches it.</p>
+    </div>
+
+    <div class="backlabel">
+      <article class="entry" data-rise>
+        <span class="entry-fig">62%</span>
+        <h3 class="entry-name">The Phone Nobody Answers</h3>
+        <p class="entry-body">Nearly two out of three calls to local businesses go unanswered. Every one of them is a customer who dials the next name on the list &mdash; and that competitor picks up.</p>
+      </article>
+      <article class="entry" data-rise>
+        <span class="entry-fig">$49K+</span>
+        <h3 class="entry-name">What Those Calls Are Worth</h3>
+        <p class="entry-body">The average annual revenue a single local business loses to missed calls. Not a rounding error &mdash; that&rsquo;s a truck, a hire, or a year of your own pay.</p>
+      </article>
+      <article class="entry" data-rise>
+        <span class="entry-fig">97%</span>
+        <h3 class="entry-name">The Reviews You Never Asked For</h3>
+        <p class="entry-body">97% of buyers read reviews before they choose, and 57% won&rsquo;t even consider a business under four stars. Your happiest customers would leave one. Nobody ever asks them.</p>
+      </article>
+      <article class="entry" data-rise>
+        <span class="entry-fig">73%</span>
+        <h3 class="entry-name">The Follow-Up That Never Happened</h3>
+        <p class="entry-body">Nearly three quarters of leads are never contacted again after the first touch. The job doesn&rsquo;t go to the best quote. It goes to whoever followed up.</p>
+      </article>
+      <p class="backlabel-note" data-rise>Figures are industry averages for local businesses, not projections for yours. Your audit uses your own numbers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROCESS ============================ -->
+<section class="sec">
+  <div class="container">
+    <div class="rule2" data-rise aria-hidden="true" style="margin-bottom:clamp(3rem,5vw,4.5rem)"></div>
+    <div class="sec-head">
+      <h2 class="dd dd-lg" data-rise>From Leaky to <em>Unstoppable</em> in Three Steps</h2>
+      <p class="lead" data-rise>No retainer to sign before you find out what&rsquo;s wrong. Step one costs you nothing and you keep the findings either way.</p>
+    </div>
+
+    <div class="medallions">
+      <article class="med" data-rise>
+        <span class="med-seal" aria-hidden="true">I</span>
+        <h3 class="med-title">Free Business Audit</h3>
+        <p class="med-body">We go through your calls, reviews, website, follow-up and POS, and show you exactly where the money is running out. No obligation, no pressure, no jargon.</p>
+      </article>
+      <article class="med" data-rise>
+        <span class="med-seal" aria-hidden="true">II</span>
+        <h3 class="med-title">Build &amp; Launch</h3>
+        <p class="med-body">We build and configure the whole stack &mdash; website, AI phone, CRM, reviews, POS, marketing. Fast setup, no tech headache for you. You own every piece of it.</p>
+      </article>
+      <article class="med" data-rise>
+        <span class="med-seal" aria-hidden="true">III</span>
+        <h3 class="med-title">Watch It Grow</h3>
+        <p class="med-body">Leads get captured, follow-ups go out, reviews roll in, your ranking climbs. You get a plain-English dashboard showing what every dollar actually did.</p>
+      </article>
+    </div>
+
+    <div class="med-foot" data-rise>
+      <a href="../contact.html" class="btn btn-gold">Start With the Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <p class="muted">Takes about 20 minutes of your time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ INDUSTRIES ============================ -->
+<section id="industries" class="sec">
+  <div class="container wide">
+    <div class="rule2" data-rise aria-hidden="true" style="margin-bottom:clamp(3rem,5vw,4.5rem)"></div>
+    <div class="sec-head">
+      <span class="plate" data-rise>Start Here</span>
+      <h2 class="dd dd-lg" data-rise>Find <em>Your Industry</em></h2>
+      <p class="lead" data-rise>Pick your world and we&rsquo;ll show you the exact leaks costing businesses like yours &mdash; what they run to, how we plug them, and what it does to your bottom line.</p>
+    </div>
+
+    <div class="shelf">
+      <a href="../industry-home-services.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/home-services.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Home Services</span>
+          <span class="bottle-hook">You can&rsquo;t answer the phone from under a sink.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-restaurants.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/restaurants.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Restaurants &amp; Bars</span>
+          <span class="bottle-hook">Every empty seat is gone forever.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-medical-dental.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/medical-dental.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Medical &amp; Dental</span>
+          <span class="bottle-hook">The new patient who gets voicemail books elsewhere.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-legal.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/legal.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Law Firms</span>
+          <span class="bottle-hook">The 6pm case signs with whoever answered.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-retail.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/retail.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Retail &amp; Local</span>
+          <span class="bottle-hook">They browse your shelves, then buy it on Amazon.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-auto.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/auto.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Auto</span>
+          <span class="bottle-hook">The call you miss wrist-deep in an engine.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-salon-spa-fitness.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/salon-spa-fitness.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Salon, Spa &amp; Fitness</span>
+          <span class="bottle-hook">The Saturday no-show you could&rsquo;ve filled five times.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+      <a href="../industry-custom.html" class="bottle" data-rise>
+        <span class="bottle-frame"><img src="../assets/img/industry/custom.jpg" alt=""></span>
+        <span class="bottle-plate">
+          <span class="bottle-name">Your Business</span>
+          <span class="bottle-hook">Don&rsquo;t see your exact trade? Start here.</span>
+          <span class="bottle-go">Playbook <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
+    </div>
+
+    <p class="shelf-foot muted" data-rise style="max-width:60ch;margin-inline:auto">Every business is different, which is why every plan starts with a <a class="tlink" href="../contact.html">free audit</a> and gets built from scratch for you.</p>
+  </div>
+</section>
+
+<!-- ============================ THE STACK ============================ -->
+<section class="sec">
+  <div class="container">
+    <div class="rule2" data-rise aria-hidden="true" style="margin-bottom:clamp(3rem,5vw,4.5rem)"></div>
+    <div class="sec-head">
+      <span class="plate" data-rise>Contents</span>
+      <h2 class="dd dd-lg" data-rise>Five Services. <em>One Flywheel.</em></h2>
+      <p class="lead" data-rise>Each one plugs a specific leak. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+
+    <div class="contents">
+      <a href="../solution-websites-seo.html" class="content-row" data-rise>
+        <span class="content-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M4.5 7h15M4.5 17h15"/></svg></span>
+        <span class="content-text">
+          <span class="content-name">Websites &amp; SEO</span>
+          <span class="content-body">Get found, then get trusted. Rank in the Map Pack where 44% of local clicks go, and convert them with a site that loads on any phone in under three seconds.</span>
+        </span>
+        <span class="content-go tlink">More <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-ai-phone.html" class="content-row" data-rise>
+        <span class="content-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span>
+        <span class="content-text">
+          <span class="content-name">AI Phone &amp; Chat</span>
+          <span class="content-body">Never miss another call or web lead, including nights and weekends. It answers, books, and texts back in seconds. One recovered call covers months of service.</span>
+        </span>
+        <span class="content-go tlink">More <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-crm.html" class="content-row" data-rise>
+        <span class="content-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span>
+        <span class="content-text">
+          <span class="content-name">CRM &amp; Follow-Up</span>
+          <span class="content-body">78% of people buy from whoever responds first. Catch every lead, text back in seconds, follow up on its own, and wake up past customers &mdash; the cheapest revenue you&rsquo;ll ever make.</span>
+        </span>
+        <span class="content-go tlink">More <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-pos.html" class="content-row" data-rise>
+        <span class="content-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="5.5" y1="14.5" x2="10" y2="14.5"/></svg></span>
+        <span class="content-text">
+          <span class="content-name">POS &amp; Inventory</span>
+          <span class="content-body">Stop guessing what&rsquo;s on the shelf. Live inventory, automatic reordering, lower processing fees, and loyalty built into the same system your register already runs on.</span>
+        </span>
+        <span class="content-go tlink">More <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="../solution-marketing.html" class="content-row" data-rise>
+        <span class="content-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+        <span class="content-text">
+          <span class="content-name">Marketing &amp; Reviews</span>
+          <span class="content-body">More reviews lift your ranking, ranking brings customers, customers leave reviews. We build that loop: automatic review requests, SMS campaigns, win-back sequences, social.</span>
+        </span>
+        <span class="content-go tlink">More <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THE BILL ============================ -->
+<section class="sec">
+  <div class="container">
+    <div class="rule2" data-rise aria-hidden="true" style="margin-bottom:clamp(3rem,5vw,4.5rem)"></div>
+    <div class="sec-head">
+      <h2 class="dd dd-lg" data-rise>Every Piece Is Someone&rsquo;s <em>Full-Time Job</em></h2>
+      <p class="lead" data-rise>The work we do is work other businesses pay a whole team to handle. Here&rsquo;s what it runs to hire it out, against one bill from us.</p>
+    </div>
+
+    <div class="bill" data-rise>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">What you need</th>
+            <th scope="col" class="num">Hire it yourself</th>
+            <th scope="col">With Top Shelf</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Answer every call, 24/7</td>
+            <td class="num cost">Receptionist &mdash; $3,390+/mo <span class="aside">Clocks out at five</span></td>
+            <td class="ours">AI answers day and night <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Run your Google, socials &amp; promos</td>
+            <td class="num cost">Social media manager &mdash; $2,260/mo</td>
+            <td class="ours">Managed for you <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Build &amp; maintain your website</td>
+            <td class="num cost">Web developer &mdash; $1,130+/mo</td>
+            <td class="ours">Built &amp; hosted <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Rank in local search</td>
+            <td class="num cost">SEO agency &mdash; $1,695/mo</td>
+            <td class="ours">Included <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Earn &amp; manage reviews</td>
+            <td class="num cost">Reputation service &mdash; $452/mo</td>
+            <td class="ours">Automated <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Follow up every lead</td>
+            <td class="num cost">CRM + a VA &mdash; $678/mo</td>
+            <td class="ours">On autopilot <span class="yes" aria-hidden="true">&#10003;</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="label">Every month</td>
+            <td class="num big">$9,605+<span class="sub">and five logins to juggle</span></td>
+            <td class="big us">From $699<span class="sub">one bill, one team</span></td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="bill-note">You own every asset. Nobody calls in sick. <a href="../contact.html">Get your free audit &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICING ============================ -->
+<section class="sec">
+  <div class="container">
+    <div class="rule2" data-rise aria-hidden="true" style="margin-bottom:clamp(3rem,5vw,4.5rem)"></div>
+    <div class="sec-head">
+      <span class="plate" data-rise>Simple, Transparent Pricing</span>
+      <h2 class="dd dd-lg" data-rise>Flat Monthly Rate. <em>No Surprises.</em></h2>
+      <p class="lead" data-rise>Setup is included, there are no hidden fees, and you own every asset. These three cover most businesses. If none of them fit, we build the plan around you instead.</p>
+    </div>
+
+    <div class="tiers">
+      <article class="tier" data-rise>
+        <h3 class="tier-name">Starter</h3>
+        <p class="tier-price"><sup>$</sup>699<span class="tier-per">/mo</span></p>
+        <p class="tier-vs">vs <s>$2,260/mo</s> to hire it out</p>
+        <p class="tier-own">You own everything</p>
+        <div class="tier-rule"></div>
+        <ul class="tier-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Professional website, mobile-first and fast</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Google Business Profile optimization</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Automated review requests</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Monthly plain-English dashboard</li>
+        </ul>
+        <a href="../contact.html" class="btn btn-line w-full">Get Started</a>
+      </article>
+
+      <article class="tier pick" data-rise>
+        <span class="tier-flag">Most Popular</span>
+        <h3 class="tier-name">Growth</h3>
+        <p class="tier-price"><sup>$</sup>1,199<span class="tier-per">/mo</span></p>
+        <p class="tier-vs">vs <s>$6,215/mo</s> to hire it out</p>
+        <p class="tier-own">You own everything</p>
+        <div class="tier-rule"></div>
+        <ul class="tier-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Everything in Starter</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Local SEO &mdash; rank in the Map Pack</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>AI phone answering, 24/7</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>CRM and automated follow-up pipeline</li>
+        </ul>
+        <a href="../contact.html" class="btn btn-gold w-full">Get Started</a>
+      </article>
+
+      <article class="tier" data-rise>
+        <h3 class="tier-name">Total Presence</h3>
+        <p class="tier-price"><sup>$</sup>1,997<span class="tier-per">/mo</span></p>
+        <p class="tier-vs">vs <s>$10,170/mo</s> to hire it out</p>
+        <p class="tier-own">You own everything</p>
+        <div class="tier-rule"></div>
+        <ul class="tier-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Everything in Growth</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Google Ads management</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Social media on two platforms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Email and SMS automation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12.5 9.5,18 20,6"/></svg>Quarterly strategy call</li>
+        </ul>
+        <a href="../contact.html" class="btn btn-line w-full">Get Started</a>
+      </article>
+    </div>
+
+    <div class="bespoke" data-rise>
+      <p class="dd dd-md">Want a Plan Built Around Just Your Business?</p>
+      <p class="muted">These packages cover most businesses, but nothing here is one-size-fits-all. After your free audit we build a plan around what you actually need: add what matters, drop what doesn&rsquo;t, pay for what moves the needle.</p>
+      <a href="../contact.html" class="btn btn-gold">Build a Custom Plan <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+
+    <p class="tiers-note" data-rise>Not sure which fits? <a href="../contact.html">Get a free audit</a> and we&rsquo;ll tell you what you need and what you don&rsquo;t. <a href="../pricing.html">Full pricing details &rarr;</a></p>
+  </div>
+</section>
+
+<!-- ============================ PROOF ============================ -->
+<section class="sec">
+  <div class="container">
+    <div class="rule2" data-rise aria-hidden="true" style="margin-bottom:clamp(3rem,5vw,4.5rem)"></div>
+    <div class="sec-head">
+      <span class="plate" data-rise>On Record</span>
+      <h2 class="dd dd-lg" data-rise>What Plugging the Leaks <em>Actually Looks Like</em></h2>
+    </div>
+    <div class="marks">
+      <article class="mark" data-rise>
+        <span class="mark-fig">$24K</span>
+        <h3 class="mark-what">Back, per year</h3>
+        <p class="mark-body">A neighborhood bar doing $50K a month was losing 15% of its liquor to over-pours. POS-linked pour tracking took shrinkage down to single digits: $1,800&ndash;$2,400 back every month, and they stopped doing 2am bottle counts.</p>
+      </article>
+      <article class="mark" data-rise>
+        <span class="mark-fig">260</span>
+        <h3 class="mark-what">Reviews in six months</h3>
+        <p class="mark-body">A two-bay auto shop had 14 Google reviews and sat seventh in the Map Pack. We asked after every ticket, automatically: 260 reviews at 4.8&#9733;, second in the pack, 40 more calls a month &mdash; around $20K in new work.</p>
+      </article>
+      <article class="mark" data-rise>
+        <span class="mark-fig">$144K</span>
+        <h3 class="mark-what">Recovered in one practice</h3>
+        <p class="mark-body">An $800K dental practice was sitting on $480K of diagnosed but unscheduled treatment. Automatic 48-hour follow-up on unaccepted plans brought back 30% of it &mdash; from people who&rsquo;d already agreed to the exam.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CLOSE ============================ -->
+<section class="close">
+  <div class="container">
+    <div class="close-label" data-rise>
+      <img src="../assets/logo-mark.png" alt="" class="close-mark">
+      <h2 class="close-title">Get Your Free<br><em>Business Audit</em></h2>
+      <p class="close-sub">We&rsquo;ll show you where your business is leaking money &mdash; your calls, your reviews, your follow-up, your rankings. You walk away with real numbers whether you hire us or not.</p>
+      <div class="close-actions">
+        <a href="../contact.html" class="btn btn-gold">Get My Free Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
+        <a href="../why-us.html" class="btn btn-line">Why Top Shelf</a>
+      </div>
+      <p class="close-fine">No credit card &middot; No commitment</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-logo"><img src="../assets/logo-full.png" alt="Top Shelf Business Solutions"></a>
+        <p>One-stop digital modernization for local businesses. You own everything we build for you. Plain-English results.</p>
+        <p class="footer-contact">
+          <a href="tel:+14698333033">(469) 833-3033</a>
+          <a href="mailto:contact@topshelfsolutions.io">contact@topshelfsolutions.io</a>
+        </p>
+      </div>
+      <div>
+        <p class="footer-col-title">Industries</p>
+        <div class="footer-links">
+          <a href="../industry-home-services.html">Home Services</a>
+          <a href="../industry-restaurants.html">Restaurants &amp; Bars</a>
+          <a href="../industry-medical-dental.html">Medical &amp; Dental</a>
+          <a href="../industry-legal.html">Law Firms</a>
+          <a href="../industry-retail.html">Retail &amp; Local</a>
+          <a href="../industry-auto.html">Auto</a>
+          <a href="../industry-salon-spa-fitness.html">Salon, Spa &amp; Fitness</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Solutions</p>
+        <div class="footer-links">
+          <a href="../solution-websites-seo.html">Websites &amp; SEO</a>
+          <a href="../solution-ai-phone.html">AI Phone &amp; Chat</a>
+          <a href="../solution-crm.html">CRM &amp; Follow-Up</a>
+          <a href="../solution-pos.html">POS &amp; Inventory</a>
+          <a href="../solution-marketing.html">Marketing &amp; Reviews</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <div class="footer-links">
+          <a href="../pricing.html">Pricing</a>
+          <a href="../why-us.html">Why Top Shelf</a>
+          <a href="../contact.html">Free Audit</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <span class="footer-tagline">We Solve. You Grow.</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ---------- Guilloche: build the engine-turned rosette ---------- */
+(function () {
+  var g = document.getElementById('gl');
+  if (!g) return;
+  var NS = 'http://www.w3.org/2000/svg';
+  for (var i = 0; i < 28; i++) {
+    var a = (i / 28) * Math.PI * 2;
+    var c = document.createElementNS(NS, 'circle');
+    c.setAttribute('cx', (200 + Math.cos(a) * 52).toFixed(2));
+    c.setAttribute('cy', (200 + Math.sin(a) * 52).toFixed(2));
+    c.setAttribute('r', '124');
+    g.appendChild(c);
+  }
+})();
+
+/* ---------- Nav ---------- */
+(function () {
+  var nav = document.getElementById('nav');
+  function setNav(){ nav.classList.toggle('scrolled', (window.scrollY || 0) > 20); }
+  setNav();
+  window.addEventListener('scroll', setNav, { passive:true });
+
+  var btn = nav.querySelector('.nav-menu-btn');
+  var links = nav.querySelector('.nav-links');
+  var panel = document.createElement('div');
+  panel.className = 'mobile-menu';
+  panel.setAttribute('aria-hidden', 'true');
+  links.querySelectorAll(':scope > .nav-item, :scope > .nav-link').forEach(function (node) {
+    if (node.classList.contains('nav-item')) {
+      var head = node.querySelector('.nav-link');
+      var t = document.createElement('p');
+      t.className = 'mm-title';
+      t.textContent = (head ? head.textContent : '').replace(/[▾▼]/g, '').trim();
+      panel.appendChild(t);
+      node.querySelectorAll('.nav-dropdown a').forEach(function (a) {
+        var c = a.cloneNode(true); c.className = 'mm-sub'; panel.appendChild(c);
+      });
+    } else {
+      var c = node.cloneNode(true); c.className = 'mm-lead'; panel.appendChild(c);
+    }
+  });
+  var cta = nav.querySelector('.nav-cta .btn');
+  if (cta) { var cc = cta.cloneNode(true); cc.className = 'btn btn-gold'; panel.appendChild(cc); }
+  document.body.appendChild(panel);
+
+  function setOpen(open) {
+    panel.classList.toggle('open', open);
+    document.body.classList.toggle('mm-open', open);
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Close' : 'Menu';
+  }
+  btn.addEventListener('click', function () { setOpen(!panel.classList.contains('open')); });
+  panel.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  window.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  window.matchMedia('(min-width:861px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
+})();
+
+/* ---------- Motion ---------- */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+
+  document.documentElement.classList.add('js-motion');
+  gsap.registerPlugin(ScrollTrigger);
+  var EASE = 'power3.out';
+
+  /* The label is struck: photo resolves, rosette turns in behind it,
+     the plate settles, then the didone lines rise. */
+  var tl = gsap.timeline({ delay: .1 });
+  tl.to('.hero-bg img', { opacity: 1, scale: 1, duration: 2.1, ease: 'power2.out' }, 0)
+    .to('.rosette', { opacity: .16, duration: 1.8, ease: 'power2.out' }, .1)
+    .to('.hero-label', { opacity: 1, scale: 1, duration: 1.2, ease: EASE }, .25)
+    .to(['.hero-mark', '.hero-plate'], { opacity: 1, y: 0, duration: .85, ease: EASE, stagger: .1 }, .45)
+    .to('[data-mask] > span', { y: '0%', duration: 1.15, ease: 'power4.out', stagger: .1 }, .6)
+    .to(['.hero-sub', '.hero-actions', '.hero-est'], { opacity: 1, y: 0, duration: .95, ease: EASE, stagger: .09 }, 1);
+
+  gsap.to('.hero-bg img', {
+    yPercent: 6, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 }
+  });
+
+  function group(root, opts) {
+    opts = opts || {};
+    var items = gsap.utils.toArray('[data-rise]', root);
+    if (root.matches && root.matches('[data-rise]')) items = [root];
+    if (!items.length) return;
+    gsap.to(items, {
+      opacity: 1, y: 0, duration: opts.duration || .95, ease: EASE,
+      stagger: opts.stagger === undefined ? .09 : opts.stagger,
+      scrollTrigger: { trigger: root, start: 'top 85%', once: true }
+    });
+  }
+  gsap.utils.toArray('.sec-head, .backlabel, .medallions, .med-foot, .shelf, .shelf-foot, .contents, .bill, .tiers, .bespoke, .tiers-note, .marks, .close-label, .rule2')
+    .forEach(function (root) { group(root, root.classList.contains('shelf') ? { stagger:.07, duration:1.05 } : {}); });
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      gsap.utils.toArray('[data-rise]').forEach(function (el) {
+        if (getComputedStyle(el).opacity === '0') gsap.set(el, { opacity: 1, y: 0 });
+      });
+      gsap.set('[data-mask] > span', { y: '0%' });
+      gsap.set('.hero-bg img', { opacity: 1 });
+      gsap.set('.hero-label', { opacity: 1, scale: 1 });
+      ScrollTrigger.refresh();
+    }, 1800);
+  });
+})();
+</script>
+</body>
+</html>
