@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf — Flywheel Section, 5 Refined Ideas</title>
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=20260731b">
+<style>
+/* ============================================================
+   Five refinements of the "ten services, one flywheel" section.
+   Existing tokens only. Every version fixes the same four faults
+   in the first ring: unreadable labels, uncontained icons, a dead
+   centre, and no sense that the thing turns.
+   ============================================================ */
+
+.fw svg { display:block; }
+.fw-note{ margin-top:2.4rem; text-align:center; font-size:.92rem; color:var(--ink-3); max-width:54ch; margin-inline:auto; }
+
+/* icon chips — shared shape language with .step-icon already on the site */
+.orb-ic, .dial-ic, .go-ic, .tk-ic{ display:grid; place-items:center; }
+.orb-ic svg, .dial-ic svg, .go-ic svg, .tk-ic svg{ width:24px; height:24px; }
+
+/* ============================================================
+   1 · ORBIT + LIVE CENTRE
+   ============================================================ */
+.fw-orbit{ display:grid; place-items:center; }
+.orb-stage{ position:relative; width:min(720px,88vw); aspect-ratio:1; --r:calc(min(720px,88vw)/2 - 86px); }
+.orb-stage::before,
+.orb-stage::after{
+  content:""; position:absolute; inset:86px; border-radius:50%; pointer-events:none;
+}
+.orb-stage::before{ border:1px solid var(--hairline); }
+.orb-stage::after{
+  border:1px dashed rgba(201,168,106,.22);
+  inset:76px; animation:orbSpin 64s linear infinite;
+}
+@keyframes orbSpin{ to{ transform:rotate(360deg); } }
+
+.orb-centre{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:246px; height:246px; border-radius:50%; display:grid; place-items:center; text-align:center;
+  padding:1.6rem; border:1px solid var(--hairline-strong);
+  background:radial-gradient(circle at 50% 34%, rgba(201,168,106,.14), rgba(16,12,8,.9) 72%);
+}
+.orb-rest, .orb-detail{ grid-area:1/1; transition:opacity .35s var(--ease), transform .35s var(--ease); }
+.orb-detail{ opacity:0; transform:translateY(6px); pointer-events:none; }
+.orb-centre.is-on .orb-rest{ opacity:0; transform:translateY(-6px); }
+.orb-centre.is-on .orb-detail{ opacity:1; transform:none; }
+.orb-n{ display:block; font-family:var(--serif); font-size:3.6rem; line-height:1; color:var(--gold-bright); }
+.orb-l{ display:block; margin-top:.6rem; font-size:.68rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); line-height:1.8; }
+.orb-d-t{ display:block; font-family:var(--serif); font-size:1.32rem; color:var(--gold-bright); line-height:1.2; margin-bottom:.6rem; }
+.orb-d-b{ display:block; font-size:.83rem; color:var(--ink-2); line-height:1.6; }
+.orb-d-go{ display:block; margin-top:.8rem; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); }
+
+.orb-node{
+  position:absolute; top:50%; left:50%; width:150px; margin:-56px 0 0 -75px;
+  transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+  display:grid; justify-items:center; gap:.6rem; text-align:center;
+}
+.orb-chip{
+  width:54px; height:54px; border-radius:50%; display:grid; place-items:center;
+  border:1px solid var(--hairline-strong); color:var(--gold); background:var(--ground);
+  transition:border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
+}
+.orb-node:hover .orb-chip, .orb-node:focus-visible .orb-chip{
+  border-color:var(--gold); color:var(--gold-bright); background:var(--surface-2); transform:translateY(-3px);
+}
+.orb-name{ font-size:.82rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
+.orb-node:hover .orb-name{ color:var(--gold-bright); }
+
+/* ============================================================
+   2 · SEGMENTED DIAL
+   ============================================================ */
+.fw-dial{ display:grid; place-items:center; }
+.dial-stage{ position:relative; width:min(720px,88vw); aspect-ratio:1; --r:calc(min(720px,88vw)/2 - 44px); }
+.dial-svg{ position:absolute; inset:0; width:100%; height:100%; }
+.dial-track{ stroke:rgba(233,228,218,.05); }
+.dial-seg{ stroke:var(--gold-deep); opacity:.34; transition:opacity .3s var(--ease), stroke .3s var(--ease); }
+.dial-seg.is-on{ opacity:1; stroke:var(--gold-bright); }
+.dial-centre{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;
+  width:210px; height:210px; border-radius:50%; display:grid; place-content:center;
+  border:1px solid var(--hairline); background:radial-gradient(circle at 50% 34%, rgba(201,168,106,.1), transparent 72%);
+}
+.dial-n{ display:block; font-family:var(--serif); font-size:3.4rem; line-height:1; color:var(--gold-bright); }
+.dial-l{ display:block; margin-top:.55rem; font-size:.66rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); line-height:1.8; }
+.dial-node{
+  position:absolute; top:50%; left:50%; width:132px; margin:-46px 0 0 -66px;
+  transform:rotate(var(--a)) translate(calc(var(--r) - 62px)) rotate(calc(-1 * var(--a)));
+  display:grid; justify-items:center; gap:.45rem; text-align:center;
+}
+.dial-ic{ width:26px; height:26px; color:var(--gold); transition:color .3s var(--ease), transform .3s var(--ease); }
+.dial-node:hover .dial-ic{ color:var(--gold-bright); transform:scale(1.12); }
+.dial-name{ font-size:.78rem; line-height:1.3; color:var(--ink-2); transition:color .3s var(--ease); }
+.dial-node:hover .dial-name{ color:var(--gold-bright); }
+
+/* ============================================================
+   3 · MOMENTUM LOOP
+   ============================================================ */
+.fw-momentum{ display:grid; place-items:center; }
+.mom-stage{ position:relative; width:min(700px,88vw); aspect-ratio:1; --r:calc(min(700px,88vw)/2 - 52px); }
+.mom-svg{ position:absolute; inset:0; width:100%; height:100%; }
+.mom-track{ stroke:var(--hairline); }
+/* a short lit arc that travels the loop: this is the "it turns" cue */
+.mom-run{
+  stroke:var(--gold-bright); stroke-linecap:round;
+  stroke-dasharray:150 906; filter:drop-shadow(0 0 6px rgba(228,201,138,.5));
+  animation:momRun 9s linear infinite;
+}
+@keyframes momRun{ from{ stroke-dashoffset:1056; } to{ stroke-dashoffset:0; } }
+.mom-centre{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; width:230px;
+}
+.mom-l{ display:block; font-family:var(--serif); font-style:italic; font-size:2.1rem; color:var(--gold-bright); line-height:1.1; }
+.mom-b{ display:block; margin-top:.7rem; font-size:.84rem; color:var(--ink-3); line-height:1.6; }
+.mom-node{
+  position:absolute; top:50%; left:50%; width:146px; margin:-30px 0 0 -73px;
+  transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+  display:grid; justify-items:center; gap:.3rem; text-align:center;
+}
+.mom-num{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--gold-deep); transition:color .3s var(--ease); }
+.mom-node:hover .mom-num{ color:var(--gold-bright); }
+.mom-name{ font-size:.82rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
+.mom-node:hover .mom-name{ color:var(--gold-bright); }
+
+/* ============================================================
+   4 · GROUPED ORBIT
+   ============================================================ */
+.fw-go{ display:grid; place-items:center; }
+.go-stage{ position:relative; width:min(760px,90vw); aspect-ratio:1; --r:calc(min(760px,90vw)/2 - 78px); --rg:calc(min(760px,90vw)/2 - 190px); }
+.go-stage::before{ content:""; position:absolute; inset:78px; border:1px solid var(--hairline); border-radius:50%; }
+.go-stage::after{ content:""; position:absolute; inset:190px; border:1px solid var(--hairline-soft); border-radius:50%; }
+.go-centre{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;
+  width:150px; height:150px; border-radius:50%; display:grid; place-content:center;
+  border:1px solid var(--hairline-strong); background:radial-gradient(circle at 50% 34%, rgba(201,168,106,.13), transparent 72%);
+}
+.go-n{ display:block; font-family:var(--serif); font-size:2.8rem; line-height:1; color:var(--gold-bright); }
+.go-l{ display:block; margin-top:.35rem; font-size:.62rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); }
+.go-grp{
+  position:absolute; top:50%; left:50%; width:150px; margin:-11px 0 0 -75px;
+  transform:rotate(var(--a)) translate(var(--rg)) rotate(calc(-1 * var(--a)));
+  text-align:center; font-family:var(--serif); font-style:italic; font-size:1.02rem; color:var(--gold); line-height:1.25;
+}
+.go-node{
+  position:absolute; top:50%; left:50%; width:140px; margin:-52px 0 0 -70px;
+  transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+  display:grid; justify-items:center; gap:.5rem; text-align:center;
+}
+.go-ic{ width:44px; height:44px; border-radius:50%; border:1px solid var(--hairline); color:var(--gold);
+  background:var(--ground); transition:border-color .3s var(--ease), color .3s var(--ease), transform .3s var(--ease); }
+.go-node:hover .go-ic{ border-color:var(--gold); color:var(--gold-bright); transform:translateY(-3px); }
+.go-name{ font-size:.78rem; line-height:1.3; color:var(--ink-2); transition:color .3s var(--ease); }
+.go-node:hover .go-name{ color:var(--gold-bright); }
+
+/* ============================================================
+   5 · CONTINUOUS TRACK
+   ============================================================ */
+.fw-track{ margin-inline:calc(-1 * var(--gutter)); }
+.tk-rail{ overflow:hidden; border-block:1px solid var(--hairline); padding-block:clamp(1.6rem,2.6vw,2.2rem);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent); }
+.tk-run{ display:flex; align-items:stretch; gap:0; width:max-content; animation:tkRun 68s linear infinite; }
+.tk-rail:hover .tk-run{ animation-play-state:paused; }
+@keyframes tkRun{ to{ transform:translateX(-50%); } }
+.tk-item{
+  width:246px; flex:none; padding:0 clamp(1rem,1.6vw,1.4rem);
+  display:grid; justify-items:start; gap:.55rem; align-content:start;
+}
+.tk-ic{ width:46px; height:46px; border-radius:var(--r); border:1px solid var(--hairline-strong); color:var(--gold);
+  background:linear-gradient(180deg,rgba(201,168,106,.06),transparent);
+  transition:border-color .3s var(--ease), color .3s var(--ease), transform .3s var(--ease); }
+.tk-item:hover .tk-ic{ border-color:var(--gold); color:var(--gold-bright); transform:translateY(-3px); }
+.tk-t{ font-family:var(--serif); font-size:1.16rem; color:var(--ink); line-height:1.2; transition:color .3s var(--ease); }
+.tk-item:hover .tk-t{ color:var(--gold-bright); }
+.tk-b{ font-size:.8rem; color:var(--ink-3); line-height:1.55; }
+.tk-arrow{ flex:none; align-self:center; color:var(--gold-deep); opacity:.5; font-size:1rem; }
+
+/* ============================================================
+   RESPONSIVE — a ring is unreadable on a phone. Every circular
+   variant degrades to a plain two-column list.
+   ============================================================ */
+@media (max-width:820px){
+  .orb-stage, .dial-stage, .mom-stage, .go-stage{
+    width:100%; aspect-ratio:auto; display:grid; grid-template-columns:1fr 1fr; gap:1.6rem 1rem;
+  }
+  .orb-stage::before, .orb-stage::after, .go-stage::before, .go-stage::after{ display:none; }
+  .dial-svg, .mom-svg{ display:none; }
+  .orb-centre, .dial-centre, .mom-centre, .go-centre{
+    position:static; transform:none; grid-column:1 / -1; width:auto; height:auto;
+    border-radius:var(--r-lg); padding:1.5rem; margin-bottom:.4rem; place-content:center;
+  }
+  .orb-centre .orb-detail{ display:none; }
+  .orb-node, .dial-node, .mom-node, .go-node{
+    position:static; width:auto; margin:0; transform:none; justify-items:center;
+  }
+  .go-grp{ position:static; width:auto; margin:0; transform:none; grid-column:1 / -1;
+    text-align:left; font-size:1.1rem; padding-top:.8rem; border-top:1px solid var(--hairline); }
+  .tk-item{ width:220px; }
+}
+@media (max-width:480px){
+  .orb-stage, .dial-stage, .mom-stage, .go-stage{ grid-template-columns:1fr; }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .orb-stage::after, .mom-run, .tk-run{ animation:none; }
+  .mom-run{ stroke-dasharray:none; opacity:.35; }
+  .tk-run{ flex-wrap:wrap; width:auto; justify-content:center; }
+  .tk-rail{ -webkit-mask-image:none; mask-image:none; }
+}
+
+/* ---------- picker chrome (not part of the design) ---------- */
+.vpicker{
+  position:fixed; left:50%; bottom:1.1rem; transform:translateX(-50%); z-index:200;
+  display:flex; gap:.35rem; padding:.5rem; flex-wrap:wrap; justify-content:center;
+  background:rgba(11,9,6,.92); border:1px solid var(--hairline-strong); border-radius:100px;
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 18px 44px rgba(0,0,0,.6); max-width:calc(100vw - 2rem);
+}
+.vpicker button{
+  font-family:var(--sans); font-size:.75rem; letter-spacing:.04em; cursor:pointer;
+  padding:.58rem .95rem; border-radius:100px; border:1px solid transparent;
+  background:transparent; color:var(--ink-2); transition:all .25s var(--ease); white-space:nowrap;
+}
+.vpicker button:hover{ color:var(--ink); border-color:var(--hairline); }
+.vpicker button[aria-pressed="true"]{ background:var(--gold); color:#16110A; border-color:var(--gold); font-weight:500; }
+.vpicker .lbl{ font-family:var(--sans); font-size:.66rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-3); align-self:center; padding-inline:.7rem .3rem; }
+.vnote{
+  position:fixed; left:50%; bottom:4.8rem; transform:translateX(-50%); z-index:200;
+  font-family:var(--sans); font-size:.76rem; color:var(--ink-3); background:rgba(11,9,6,.88);
+  padding:.42rem .9rem; border-radius:100px; white-space:nowrap;
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+}
+@media (max-width:760px){ .vpicker .lbl{ display:none; } .vnote{ display:none; } }
+
+</style>
+</head>
+<body>
+<div id="page">
+<section class="sec rule-top variant" id="v-orbit">
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="fw fw-orbit">
+  <div class="orb-stage">
+    <div class="orb-centre" id="orbCentre">
+      <span class="orb-rest">
+        <span class="orb-n">10</span>
+        <span class="orb-l">services<br>one flywheel</span>
+      </span>
+      <span class="orb-detail" aria-live="polite">
+        <span class="orb-d-t"></span><span class="orb-d-b"></span>
+        <span class="orb-d-go">Learn more &rarr;</span>
+      </span>
+    </div>
+    <a class="orb-node" style="--a:-90.0deg" href="../solution-websites-seo.html" data-t="Websites &amp; SEO" data-b="Get found first, then earn the click with a site that loads in under three seconds."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span></span><span class="orb-name">Websites &amp; SEO</span></a>
+    <a class="orb-node" style="--a:-54.0deg" href="../solution-ai-phone.html" data-t="AI Phone &amp; Chat" data-b="Every call answered, day or night. It books the job and texts back in seconds."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span></span><span class="orb-name">AI Phone &amp; Chat</span></a>
+    <a class="orb-node" style="--a:-18.0deg" href="../solution-crm.html" data-t="CRM &amp; Follow-Up" data-b="Catch every lead and follow up on its own. 78% buy from whoever answers first."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span></span><span class="orb-name">CRM &amp; Follow-Up</span></a>
+    <a class="orb-node" style="--a:18.0deg" href="../solution-reviews.html" data-t="Reviews &amp; Reputation" data-b="The wall of 5-star reviews that makes you the obvious, safe choice."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span></span><span class="orb-name">Reviews &amp; Reputation</span></a>
+    <a class="orb-node" style="--a:54.0deg" href="../solution-marketing.html" data-t="Marketing &amp; Social" data-b="Stay in front of the people who already know you, without thinking about it."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span></span><span class="orb-name">Marketing &amp; Social</span></a>
+    <a class="orb-node" style="--a:90.0deg" href="../solution-booking.html" data-t="Online Booking" data-b="Let them book at 11pm while you sleep, then cut no-shows with reminders."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span></span><span class="orb-name">Online Booking</span></a>
+    <a class="orb-node" style="--a:126.0deg" href="../solution-payments.html" data-t="Payments &amp; Financing" data-b="Tap, card-on-file and one-tap invoices, plus financing so big jobs close."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span></span><span class="orb-name">Payments &amp; Financing</span></a>
+    <a class="orb-node" style="--a:162.0deg" href="../solution-automation.html" data-t="AI &amp; Automation" data-b="The busywork that eats your evenings, handled quietly in the background."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span></span><span class="orb-name">AI &amp; Automation</span></a>
+    <a class="orb-node" style="--a:198.0deg" href="../solution-memberships.html" data-t="Memberships &amp; Loyalty" data-b="Turn one-time customers into monthly revenue you can actually count on."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span></span><span class="orb-name">Memberships &amp; Loyalty</span></a>
+    <a class="orb-node" style="--a:234.0deg" href="../solution-pos.html" data-t="POS &amp; Inventory" data-b="Know what's on the shelf, what's selling, and what to reorder. No guessing."><span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span></span><span class="orb-name">POS &amp; Inventory</span></a>
+  </div>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-dial" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="fw fw-dial">
+  <div class="dial-stage">
+    <svg class="dial-svg" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="180" class="dial-track" fill="none" stroke-width="14"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="0" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-0.00" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="1" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-113.10" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="2" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-226.19" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="3" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-339.29" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="4" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-452.39" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="5" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-565.49" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="6" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-678.58" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="7" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-791.68" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="8" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-904.78" transform="rotate(-90 200 200)"/>
+      <circle cx="200" cy="200" r="180" class="dial-seg" data-i="9" fill="none" stroke-width="14" stroke-linecap="butt" stroke-dasharray="103.10 1027.88" stroke-dashoffset="-1017.88" transform="rotate(-90 200 200)"/>
+    </svg>
+    <div class="dial-centre"><span class="dial-n">10</span><span class="dial-l">services<br>one flywheel</span></div>
+    <a class="dial-node" style="--a:-72.0deg" data-i="0" href="../solution-websites-seo.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="dial-name">Websites &amp; SEO</span></a>
+    <a class="dial-node" style="--a:-36.0deg" data-i="1" href="../solution-ai-phone.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="dial-name">AI Phone &amp; Chat</span></a>
+    <a class="dial-node" style="--a:0.0deg" data-i="2" href="../solution-crm.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="dial-name">CRM &amp; Follow-Up</span></a>
+    <a class="dial-node" style="--a:36.0deg" data-i="3" href="../solution-reviews.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="dial-name">Reviews &amp; Reputation</span></a>
+    <a class="dial-node" style="--a:72.0deg" data-i="4" href="../solution-marketing.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="dial-name">Marketing &amp; Social</span></a>
+    <a class="dial-node" style="--a:108.0deg" data-i="5" href="../solution-booking.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="dial-name">Online Booking</span></a>
+    <a class="dial-node" style="--a:144.0deg" data-i="6" href="../solution-payments.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="dial-name">Payments &amp; Financing</span></a>
+    <a class="dial-node" style="--a:180.0deg" data-i="7" href="../solution-automation.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="dial-name">AI &amp; Automation</span></a>
+    <a class="dial-node" style="--a:216.0deg" data-i="8" href="../solution-memberships.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="dial-name">Memberships &amp; Loyalty</span></a>
+    <a class="dial-node" style="--a:252.0deg" data-i="9" href="../solution-pos.html"><span class="dial-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="dial-name">POS &amp; Inventory</span></a>
+  </div>
+  <p class="fw-note">Ten segments, one wheel. Each one closes a different gap.</p>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-momentum" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="fw fw-momentum">
+  <div class="mom-stage">
+    <svg class="mom-svg" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="168" class="mom-track" fill="none" stroke-width="1"/>
+      <circle cx="200" cy="200" r="168" class="mom-run" fill="none" stroke-width="2"/>
+    </svg>
+    <div class="mom-centre"><span class="mom-l">It compounds</span><span class="mom-b">Every service feeds the next one</span></div>
+    <a class="mom-node" style="--a:-90.0deg" href="../solution-websites-seo.html"><span class="mom-num">01</span><span class="mom-name">Websites &amp; SEO</span></a>
+    <a class="mom-node" style="--a:-54.0deg" href="../solution-ai-phone.html"><span class="mom-num">02</span><span class="mom-name">AI Phone &amp; Chat</span></a>
+    <a class="mom-node" style="--a:-18.0deg" href="../solution-crm.html"><span class="mom-num">03</span><span class="mom-name">CRM &amp; Follow-Up</span></a>
+    <a class="mom-node" style="--a:18.0deg" href="../solution-reviews.html"><span class="mom-num">04</span><span class="mom-name">Reviews &amp; Reputation</span></a>
+    <a class="mom-node" style="--a:54.0deg" href="../solution-marketing.html"><span class="mom-num">05</span><span class="mom-name">Marketing &amp; Social</span></a>
+    <a class="mom-node" style="--a:90.0deg" href="../solution-booking.html"><span class="mom-num">06</span><span class="mom-name">Online Booking</span></a>
+    <a class="mom-node" style="--a:126.0deg" href="../solution-payments.html"><span class="mom-num">07</span><span class="mom-name">Payments &amp; Financing</span></a>
+    <a class="mom-node" style="--a:162.0deg" href="../solution-automation.html"><span class="mom-num">08</span><span class="mom-name">AI &amp; Automation</span></a>
+    <a class="mom-node" style="--a:198.0deg" href="../solution-memberships.html"><span class="mom-num">09</span><span class="mom-name">Memberships &amp; Loyalty</span></a>
+    <a class="mom-node" style="--a:234.0deg" href="../solution-pos.html"><span class="mom-num">10</span><span class="mom-name">POS &amp; Inventory</span></a>
+  </div>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-grouped" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="fw fw-go">
+  <div class="go-stage">
+    <div class="go-centre"><span class="go-n">10</span><span class="go-l">services</span></div>
+    <span class="go-grp" style="--a:-36.0deg">Get found</span>
+    <a class="go-node" style="--a:-72.0deg" href="../solution-websites-seo.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="go-name">Websites &amp; SEO</span></a>
+    <a class="go-node" style="--a:-36.0deg" href="../solution-marketing.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="go-name">Marketing &amp; Social</span></a>
+    <a class="go-node" style="--a:0.0deg" href="../solution-reviews.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="go-name">Reviews &amp; Reputation</span></a>
+    <span class="go-grp" style="--a:72.0deg">Never miss a lead</span>
+    <a class="go-node" style="--a:36.0deg" href="../solution-ai-phone.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="go-name">AI Phone &amp; Chat</span></a>
+    <a class="go-node" style="--a:72.0deg" href="../solution-booking.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="go-name">Online Booking</span></a>
+    <a class="go-node" style="--a:108.0deg" href="../solution-crm.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="go-name">CRM &amp; Follow-Up</span></a>
+    <span class="go-grp" style="--a:162.0deg">Get paid faster</span>
+    <a class="go-node" style="--a:144.0deg" href="../solution-payments.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="go-name">Payments &amp; Financing</span></a>
+    <a class="go-node" style="--a:180.0deg" href="../solution-pos.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="go-name">POS &amp; Inventory</span></a>
+    <span class="go-grp" style="--a:234.0deg">Keep them coming back</span>
+    <a class="go-node" style="--a:216.0deg" href="../solution-memberships.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="go-name">Memberships &amp; Loyalty</span></a>
+    <a class="go-node" style="--a:252.0deg" href="../solution-automation.html"><span class="go-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="go-name">AI &amp; Automation</span></a>
+  </div>
+  <p class="fw-note">Four jobs to be done. Ten services doing them.</p>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-track" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="fw fw-track">
+  <div class="tk-rail">
+    <div class="tk-run">
+      <a class="tk-item" href="../solution-websites-seo.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="tk-t">Websites &amp; SEO</span><span class="tk-b">Get found first, then earn the click with a site that loads in under three seconds.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-ai-phone.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="tk-t">AI Phone &amp; Chat</span><span class="tk-b">Every call answered, day or night. It books the job and texts back in seconds.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-crm.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="tk-t">CRM &amp; Follow-Up</span><span class="tk-b">Catch every lead and follow up on its own. 78% buy from whoever answers first.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-reviews.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="tk-t">Reviews &amp; Reputation</span><span class="tk-b">The wall of 5-star reviews that makes you the obvious, safe choice.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-marketing.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="tk-t">Marketing &amp; Social</span><span class="tk-b">Stay in front of the people who already know you, without thinking about it.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-booking.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="tk-t">Online Booking</span><span class="tk-b">Let them book at 11pm while you sleep, then cut no-shows with reminders.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-payments.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="tk-t">Payments &amp; Financing</span><span class="tk-b">Tap, card-on-file and one-tap invoices, plus financing so big jobs close.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-automation.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="tk-t">AI &amp; Automation</span><span class="tk-b">The busywork that eats your evenings, handled quietly in the background.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-memberships.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="tk-t">Memberships &amp; Loyalty</span><span class="tk-b">Turn one-time customers into monthly revenue you can actually count on.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-pos.html"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="tk-t">POS &amp; Inventory</span><span class="tk-b">Know what's on the shelf, what's selling, and what to reorder. No guessing.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-websites-seo.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="tk-t">Websites &amp; SEO</span><span class="tk-b">Get found first, then earn the click with a site that loads in under three seconds.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-ai-phone.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="tk-t">AI Phone &amp; Chat</span><span class="tk-b">Every call answered, day or night. It books the job and texts back in seconds.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-crm.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="tk-t">CRM &amp; Follow-Up</span><span class="tk-b">Catch every lead and follow up on its own. 78% buy from whoever answers first.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-reviews.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="tk-t">Reviews &amp; Reputation</span><span class="tk-b">The wall of 5-star reviews that makes you the obvious, safe choice.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-marketing.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="tk-t">Marketing &amp; Social</span><span class="tk-b">Stay in front of the people who already know you, without thinking about it.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-booking.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="tk-t">Online Booking</span><span class="tk-b">Let them book at 11pm while you sleep, then cut no-shows with reminders.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-payments.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="tk-t">Payments &amp; Financing</span><span class="tk-b">Tap, card-on-file and one-tap invoices, plus financing so big jobs close.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-automation.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="tk-t">AI &amp; Automation</span><span class="tk-b">The busywork that eats your evenings, handled quietly in the background.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-memberships.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="tk-t">Memberships &amp; Loyalty</span><span class="tk-b">Turn one-time customers into monthly revenue you can actually count on.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+      <a class="tk-item" href="../solution-pos.html" aria-hidden="true" tabindex="-1"><span class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="tk-t">POS &amp; Inventory</span><span class="tk-b">Know what's on the shelf, what's selling, and what to reorder. No guessing.</span></a>
+      <span class="tk-arrow" aria-hidden="true">&rarr;</span>
+    </div>
+  </div>
+  <p class="fw-note">It only stops when you do. Hover to hold it still.</p>
+</div>
+  </div>
+</section>
+</div>
+
+<p class="vnote">Five refinements of the same idea &mdash; ten services, one wheel.</p>
+<div class="vpicker" role="group" aria-label="Flywheel style options">
+  <span class="lbl">Idea</span>
+  <button data-v="orbit" aria-pressed="true">1 &middot; Orbit + live centre</button>
+  <button data-v="dial" aria-pressed="false">2 &middot; Segmented dial</button>
+  <button data-v="momentum" aria-pressed="false">3 &middot; Momentum loop</button>
+  <button data-v="grouped" aria-pressed="false">4 &middot; Grouped orbit</button>
+  <button data-v="track" aria-pressed="false">5 &middot; Continuous track</button>
+</div>
+
+<script>
+(function () {
+  var btns = [].slice.call(document.querySelectorAll('.vpicker button'));
+  function show(k) {
+    document.querySelectorAll('.variant').forEach(function (s) { s.hidden = (s.id !== 'v-' + k); });
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === k)); });
+    try { history.replaceState(null, '', '#' + k); } catch (e) {}
+    window.scrollTo(0, 0);
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.v); }); });
+  var h = location.hash.replace('#', '');
+  if (h && document.getElementById('v-' + h)) show(h);
+  window.addEventListener('keydown', function (e) {
+    var i = btns.findIndex(function (b) { return b.getAttribute('aria-pressed') === 'true'; });
+    if (e.key === 'ArrowRight') show(btns[(i + 1) % btns.length].dataset.v);
+    if (e.key === 'ArrowLeft')  show(btns[(i - 1 + btns.length) % btns.length].dataset.v);
+  });
+
+  /* 1 · orbit — the centre reports whichever node has hover or focus */
+  var centre = document.getElementById('orbCentre');
+  if (centre) {
+    var t = centre.querySelector('.orb-d-t'), b = centre.querySelector('.orb-d-b');
+    document.querySelectorAll('.orb-node').forEach(function (n) {
+      function on() { t.innerHTML = n.dataset.t; b.textContent = n.dataset.b; centre.classList.add('is-on'); }
+      function off() { centre.classList.remove('is-on'); }
+      n.addEventListener('mouseenter', on); n.addEventListener('focus', on);
+      n.addEventListener('mouseleave', off); n.addEventListener('blur', off);
+    });
+  }
+
+  /* 2 · dial — hovering a label lights its matching arc, and vice versa */
+  document.querySelectorAll('.fw-dial').forEach(function (root) {
+    var segs = root.querySelectorAll('.dial-seg');
+    root.querySelectorAll('.dial-node').forEach(function (n) {
+      function on() { segs.forEach(function (s) { s.classList.toggle('is-on', s.dataset.i === n.dataset.i); }); }
+      function off() { segs.forEach(function (s) { s.classList.remove('is-on'); }); }
+      n.addEventListener('mouseenter', on); n.addEventListener('focus', on);
+      n.addEventListener('mouseleave', off); n.addEventListener('blur', off);
+    });
+  });
+})();
+</script>
+</body>
+</html>
