@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf — Solutions Section, 5 Style Options</title>
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=20260731b">
+<style>
+/* ============================================================
+   Five candidate treatments for the ten-service "One Flywheel"
+   section. All use the existing site tokens; nothing new added
+   to the palette or type scale.
+   ============================================================ */
+
+.ic svg, .gi-ic svg, .bn-ic svg, .nd-ic svg, .ix-ic svg { width:100%; height:100%; }
+
+/* ---------- 1 · Grouped by outcome ---------- */
+.v-grouped{ display:grid; gap:clamp(2.2rem,4vw,3.4rem); }
+.grp{ display:grid; grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr); gap:clamp(1.5rem,4vw,3.5rem);
+  padding-top:clamp(1.6rem,2.6vw,2.2rem); border-top:1px solid var(--hairline); align-items:start; }
+.grp-head h3{ font-family:var(--serif); font-weight:500; font-size:clamp(1.5rem,2.4vw,2rem);
+  color:var(--ink); letter-spacing:-.01em; line-height:1.1; }
+.grp-head p{ margin-top:.7rem; font-size:.9rem; color:var(--ink-3); line-height:1.65; max-width:34ch; }
+.grp-items{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px;
+  background:var(--hairline-soft); border:1px solid var(--hairline-soft); border-radius:var(--r); overflow:hidden; }
+.gi{ background:var(--surface); padding:clamp(1.2rem,2vw,1.6rem);
+  transition:background .3s var(--ease); display:block; }
+.gi:hover{ background:var(--surface-2); }
+.gi-ic{ display:block; width:24px; height:24px; color:var(--gold); margin-bottom:.9rem; }
+.gi:hover .gi-ic{ color:var(--gold-bright); }
+.gi-t{ display:block; font-family:var(--serif); font-size:1.18rem; color:var(--ink); margin-bottom:.4rem; }
+.gi:hover .gi-t{ color:var(--gold-bright); }
+.gi-b{ display:block; font-size:.85rem; color:var(--ink-3); line-height:1.6; }
+
+/* ---------- 2 · Bento grid ---------- */
+.v-bento{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.7rem,1.2vw,1rem); grid-auto-flow:dense; }
+.bn{ position:relative; display:flex; flex-direction:column; background:var(--surface);
+  border:1px solid var(--hairline); border-radius:var(--r-lg); padding:clamp(1.3rem,2.2vw,1.9rem);
+  transition:transform .34s var(--ease), border-color .34s var(--ease), background .34s var(--ease); min-height:190px; }
+.bn:hover{ transform:translateY(-4px); border-color:var(--hairline-strong); background:var(--surface-2); }
+.bn.wide{ grid-column:span 2; }
+.bn.tall{ grid-row:span 2; }
+.bn-ic{ display:block; width:26px; height:26px; color:var(--gold); margin-bottom:1rem; }
+.bn:hover .bn-ic{ color:var(--gold-bright); }
+.bn-t{ display:block; font-family:var(--serif); font-size:clamp(1.2rem,1.6vw,1.45rem); color:var(--ink); margin-bottom:.5rem; letter-spacing:-.005em; }
+.bn:hover .bn-t{ color:var(--gold-bright); }
+.bn-b{ display:block; font-size:.86rem; color:var(--ink-3); line-height:1.65; flex:1; }
+.bn-go{ display:block; margin-top:1rem; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep); transition:color .3s var(--ease); }
+.bn:hover .bn-go{ color:var(--gold-bright); }
+
+/* ---------- 3 · Flywheel ring ---------- */
+.v-ring{ display:grid; place-items:center; }
+.ring-stage{ position:relative; width:min(680px,86vw); aspect-ratio:1; --r:calc(min(680px,86vw)/2 - 74px); }
+.ring-stage::before{ content:""; position:absolute; inset:74px; border:1px solid var(--hairline); border-radius:50%; }
+.ring-core{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;
+  width:190px; height:190px; border-radius:50%; display:grid; place-content:center;
+  border:1px solid var(--hairline-strong);
+  background:radial-gradient(circle at 50% 35%, rgba(201,168,106,.12), transparent 70%); }
+.ring-core-n{ display:block; font-family:var(--serif); font-size:3.4rem; line-height:1; color:var(--gold-bright); }
+.ring-core-l{ display:block; margin-top:.5rem; font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-3); line-height:1.7; }
+.node{ position:absolute; top:50%; left:50%; width:118px; margin:-59px 0 0 -59px;
+  transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+  display:grid; place-items:center; text-align:center; gap:.5rem; }
+.nd-ic{ width:26px; height:26px; color:var(--gold); transition:color .3s var(--ease), transform .3s var(--ease); }
+.node:hover .nd-ic{ color:var(--gold-bright); transform:scale(1.15); }
+.nd-t{ font-size:.76rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
+.node:hover .nd-t{ color:var(--gold-bright); }
+.ring-note{ margin-top:2.2rem; text-align:center; font-size:.9rem; color:var(--ink-3); max-width:52ch; }
+@media (max-width:720px){
+  /* a ring is unreadable on a phone: fall back to a plain two-column list */
+  .ring-stage{ width:100%; aspect-ratio:auto; display:grid; grid-template-columns:1fr 1fr; gap:1.4rem 1rem; }
+  .ring-stage::before{ display:none; }
+  .ring-core{ position:static; transform:none; grid-column:1 / -1; width:auto; height:auto;
+    border-radius:var(--r-lg); padding:1.4rem; margin-bottom:.6rem; }
+  .node{ position:static; width:auto; margin:0; transform:none; }
+}
+
+/* ---------- 4 · Photo mosaic ---------- */
+.v-photo{ display:grid; grid-template-columns:repeat(5,1fr); gap:clamp(.7rem,1.2vw,1rem); }
+.ph{ display:block; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--hairline);
+  background:var(--surface); transition:transform .34s var(--ease), border-color .34s var(--ease); }
+.ph:hover{ transform:translateY(-4px); border-color:var(--hairline-strong); }
+.ph-img{ display:block; position:relative; aspect-ratio:16/10; overflow:hidden; }
+.ph-img img{ width:100%; height:100%; object-fit:cover; transform:scale(1.02);
+  transition:transform 1s var(--ease); filter:saturate(.95) brightness(.95); }
+.ph:hover .ph-img img{ transform:scale(1.08); filter:saturate(1.05) brightness(1.05); }
+.ph-body{ display:block; padding:clamp(.9rem,1.4vw,1.15rem); }
+.ph-t{ display:block; font-family:var(--serif); font-size:1.08rem; color:var(--ink); margin-bottom:.35rem; line-height:1.2; }
+.ph:hover .ph-t{ color:var(--gold-bright); }
+.ph-b{ display:block; font-size:.8rem; color:var(--ink-3); line-height:1.55; }
+@media (max-width:1080px){ .v-photo{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:720px){  .v-photo{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:480px){  .v-photo{ grid-template-columns:1fr; } }
+
+/* ---------- 5 · Numbered index, two columns ---------- */
+.v-index{ display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(2rem,4vw,4rem); border-top:1px solid var(--hairline); }
+.ix{ display:grid; grid-template-columns:2.4rem 1.6rem minmax(0,1fr) auto; gap:.4rem 1rem;
+  align-items:center; padding:clamp(1.1rem,1.8vw,1.5rem) 0; border-bottom:1px solid var(--hairline-soft);
+  transition:padding-left .45s var(--ease); }
+.ix:hover{ padding-left:.7rem; }
+.ix-n{ font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--ink-4); transition:color .3s var(--ease); }
+.ix:hover .ix-n{ color:var(--gold); }
+.ix-ic{ width:22px; height:22px; color:var(--gold); }
+.ix:hover .ix-ic{ color:var(--gold-bright); }
+.ix-t{ font-family:var(--serif); font-size:1.2rem; color:var(--ink); transition:color .3s var(--ease); }
+.ix:hover .ix-t{ color:var(--gold-bright); }
+.ix-b{ grid-column:3 / -1; font-size:.83rem; color:var(--ink-3); line-height:1.6; }
+.ix-go{ color:var(--gold-deep); transition:transform .3s var(--ease), color .3s var(--ease); }
+.ix:hover .ix-go{ color:var(--gold-bright); transform:translateX(4px); }
+@media (max-width:860px){ .v-index{ grid-template-columns:1fr; } }
+
+/* ---------- shared responsive ---------- */
+@media (max-width:1080px){ .v-bento{ grid-template-columns:repeat(2,1fr); } .bn.tall{ grid-row:auto; } }
+@media (max-width:860px){
+  .grp{ grid-template-columns:1fr; }
+  .v-bento{ grid-template-columns:1fr; } .bn.wide{ grid-column:auto; }
+}
+
+/* ---------- picker chrome (not part of the design) ---------- */
+.vpicker{
+  position:fixed; left:50%; bottom:1.1rem; transform:translateX(-50%); z-index:200;
+  display:flex; gap:.35rem; padding:.5rem; flex-wrap:wrap; justify-content:center;
+  background:rgba(11,9,6,.92); border:1px solid var(--hairline-strong); border-radius:100px;
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 18px 44px rgba(0,0,0,.6); max-width:calc(100vw - 2rem);
+}
+.vpicker button{
+  font-family:var(--sans); font-size:.75rem; letter-spacing:.04em; cursor:pointer;
+  padding:.58rem .95rem; border-radius:100px; border:1px solid transparent;
+  background:transparent; color:var(--ink-2); transition:all .25s var(--ease); white-space:nowrap;
+}
+.vpicker button:hover{ color:var(--ink); border-color:var(--hairline); }
+.vpicker button[aria-pressed="true"]{ background:var(--gold); color:#16110A; border-color:var(--gold); font-weight:500; }
+.vpicker .lbl{ font-family:var(--sans); font-size:.66rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-3); align-self:center; padding-inline:.7rem .3rem; }
+.vnote{
+  position:fixed; left:50%; bottom:4.8rem; transform:translateX(-50%); z-index:200;
+  font-family:var(--sans); font-size:.76rem; color:var(--ink-3); background:rgba(11,9,6,.88);
+  padding:.42rem .9rem; border-radius:100px; white-space:nowrap;
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+}
+@media (max-width:760px){ .vpicker .lbl{ display:none; } .vnote{ display:none; } }
+
+</style>
+</head>
+<body>
+<div id="page">
+<section class="sec rule-top variant" id="v-grouped">
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="v-grouped">
+  <div class="grp">
+    <div class="grp-head"><h3>Get found</h3><p>So the people already searching for what you sell land on you.</p></div>
+    <div class="grp-items">
+      <a class="gi" href="../solution-websites-seo.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="gi-t">Websites &amp; SEO</span><span class="gi-b">Get found first, then earn the click with a site that loads in under three seconds.</span></a>
+      <a class="gi" href="../solution-marketing.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="gi-t">Marketing &amp; Social</span><span class="gi-b">Stay in front of the people who already know you, without thinking about it.</span></a>
+      <a class="gi" href="../solution-reviews.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="gi-t">Reviews &amp; Reputation</span><span class="gi-b">The wall of 5-star reviews that makes you the obvious, safe choice.</span></a>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="grp-head"><h3>Never miss a lead</h3><p>So nothing that reaches you falls through the cracks.</p></div>
+    <div class="grp-items">
+      <a class="gi" href="../solution-ai-phone.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="gi-t">AI Phone &amp; Chat</span><span class="gi-b">Every call answered, day or night. It books the job and texts back in seconds.</span></a>
+      <a class="gi" href="../solution-booking.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="gi-t">Online Booking</span><span class="gi-b">Let them book at 11pm while you sleep, then cut no-shows with reminders.</span></a>
+      <a class="gi" href="../solution-crm.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="gi-t">CRM &amp; Follow-Up</span><span class="gi-b">Catch every lead and follow up on its own. 78% buy from whoever answers first.</span></a>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="grp-head"><h3>Get paid faster</h3><p>So the money that's owed to you actually arrives.</p></div>
+    <div class="grp-items">
+      <a class="gi" href="../solution-payments.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="gi-t">Payments &amp; Financing</span><span class="gi-b">Tap, card-on-file and one-tap invoices, plus financing so big jobs close.</span></a>
+      <a class="gi" href="../solution-pos.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="gi-t">POS &amp; Inventory</span><span class="gi-b">Know what's on the shelf, what's selling, and what to reorder. No guessing.</span></a>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="grp-head"><h3>Keep them coming back</h3><p>So a customer you won once keeps paying you for years.</p></div>
+    <div class="grp-items">
+      <a class="gi" href="../solution-memberships.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="gi-t">Memberships &amp; Loyalty</span><span class="gi-b">Turn one-time customers into monthly revenue you can actually count on.</span></a>
+      <a class="gi" href="../solution-automation.html"><span class="gi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="gi-t">AI &amp; Automation</span><span class="gi-b">The busywork that eats your evenings, handled quietly in the background.</span></a>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-bento" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="v-bento">
+  <a class="bn wide" href="../solution-websites-seo.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="bn-t">Websites &amp; SEO</span><span class="bn-b">Get found first, then earn the click with a site that loads in under three seconds.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn wide" href="../solution-ai-phone.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="bn-t">AI Phone &amp; Chat</span><span class="bn-b">Every call answered, day or night. It books the job and texts back in seconds.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-crm.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="bn-t">CRM &amp; Follow-Up</span><span class="bn-b">Catch every lead and follow up on its own. 78% buy from whoever answers first.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-reviews.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="bn-t">Reviews &amp; Reputation</span><span class="bn-b">The wall of 5-star reviews that makes you the obvious, safe choice.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-marketing.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="bn-t">Marketing &amp; Social</span><span class="bn-b">Stay in front of the people who already know you, without thinking about it.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-booking.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="bn-t">Online Booking</span><span class="bn-b">Let them book at 11pm while you sleep, then cut no-shows with reminders.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-payments.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="bn-t">Payments &amp; Financing</span><span class="bn-b">Tap, card-on-file and one-tap invoices, plus financing so big jobs close.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn tall" href="../solution-automation.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="bn-t">AI &amp; Automation</span><span class="bn-b">The busywork that eats your evenings, handled quietly in the background.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-memberships.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="bn-t">Memberships &amp; Loyalty</span><span class="bn-b">Turn one-time customers into monthly revenue you can actually count on.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+  <a class="bn" href="../solution-pos.html"><span class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="bn-t">POS &amp; Inventory</span><span class="bn-b">Know what's on the shelf, what's selling, and what to reorder. No guessing.</span><span class="bn-go">Learn more <span aria-hidden="true">&rarr;</span></span></a>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-ring" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="v-ring">
+  <div class="ring-stage">
+    <div class="ring-core"><span class="ring-core-n">10</span><span class="ring-core-l">services<br>one flywheel</span></div>
+    <a class="node" style="--a:-90.0deg" href="../solution-websites-seo.html" data-name="Websites &amp; SEO" data-blurb="Get found first, then earn the click with a site that loads in under three seconds."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="nd-t">Websites &amp; SEO</span></a>
+    <a class="node" style="--a:-54.0deg" href="../solution-ai-phone.html" data-name="AI Phone &amp; Chat" data-blurb="Every call answered, day or night. It books the job and texts back in seconds."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="nd-t">AI Phone &amp; Chat</span></a>
+    <a class="node" style="--a:-18.0deg" href="../solution-crm.html" data-name="CRM &amp; Follow-Up" data-blurb="Catch every lead and follow up on its own. 78% buy from whoever answers first."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="nd-t">CRM &amp; Follow-Up</span></a>
+    <a class="node" style="--a:18.0deg" href="../solution-reviews.html" data-name="Reviews &amp; Reputation" data-blurb="The wall of 5-star reviews that makes you the obvious, safe choice."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="nd-t">Reviews &amp; Reputation</span></a>
+    <a class="node" style="--a:54.0deg" href="../solution-marketing.html" data-name="Marketing &amp; Social" data-blurb="Stay in front of the people who already know you, without thinking about it."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="nd-t">Marketing &amp; Social</span></a>
+    <a class="node" style="--a:90.0deg" href="../solution-booking.html" data-name="Online Booking" data-blurb="Let them book at 11pm while you sleep, then cut no-shows with reminders."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="nd-t">Online Booking</span></a>
+    <a class="node" style="--a:126.0deg" href="../solution-payments.html" data-name="Payments &amp; Financing" data-blurb="Tap, card-on-file and one-tap invoices, plus financing so big jobs close."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="nd-t">Payments &amp; Financing</span></a>
+    <a class="node" style="--a:162.0deg" href="../solution-automation.html" data-name="AI &amp; Automation" data-blurb="The busywork that eats your evenings, handled quietly in the background."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="nd-t">AI &amp; Automation</span></a>
+    <a class="node" style="--a:198.0deg" href="../solution-memberships.html" data-name="Memberships &amp; Loyalty" data-blurb="Turn one-time customers into monthly revenue you can actually count on."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="nd-t">Memberships &amp; Loyalty</span></a>
+    <a class="node" style="--a:234.0deg" href="../solution-pos.html" data-name="POS &amp; Inventory" data-blurb="Know what's on the shelf, what's selling, and what to reorder. No guessing."><span class="nd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="nd-t">POS &amp; Inventory</span></a>
+  </div>
+  <p class="ring-note">Each one plugs a different gap. Running together, they feed each other.</p>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-photo" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="v-photo">
+  <a class="ph" href="../solution-websites-seo.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/websites-seo-hero.webp" type="image/webp"><img src="../assets/img/solution/websites-seo-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">Websites &amp; SEO</span><span class="ph-b">Get found first, then earn the click with a site that loads in under three seconds.</span></span></a>
+  <a class="ph" href="../solution-ai-phone.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/ai-phone-hero.webp" type="image/webp"><img src="../assets/img/solution/ai-phone-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">AI Phone &amp; Chat</span><span class="ph-b">Every call answered, day or night. It books the job and texts back in seconds.</span></span></a>
+  <a class="ph" href="../solution-crm.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/crm-hero.webp" type="image/webp"><img src="../assets/img/solution/crm-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">CRM &amp; Follow-Up</span><span class="ph-b">Catch every lead and follow up on its own. 78% buy from whoever answers first.</span></span></a>
+  <a class="ph" href="../solution-reviews.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/reviews-hero.webp" type="image/webp"><img src="../assets/img/solution/reviews-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">Reviews &amp; Reputation</span><span class="ph-b">The wall of 5-star reviews that makes you the obvious, safe choice.</span></span></a>
+  <a class="ph" href="../solution-marketing.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/marketing-hero.webp" type="image/webp"><img src="../assets/img/solution/marketing-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">Marketing &amp; Social</span><span class="ph-b">Stay in front of the people who already know you, without thinking about it.</span></span></a>
+  <a class="ph" href="../solution-booking.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/booking-hero.webp" type="image/webp"><img src="../assets/img/solution/booking-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">Online Booking</span><span class="ph-b">Let them book at 11pm while you sleep, then cut no-shows with reminders.</span></span></a>
+  <a class="ph" href="../solution-payments.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/payments-hero.webp" type="image/webp"><img src="../assets/img/solution/payments-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">Payments &amp; Financing</span><span class="ph-b">Tap, card-on-file and one-tap invoices, plus financing so big jobs close.</span></span></a>
+  <a class="ph" href="../solution-automation.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/automation-hero.webp" type="image/webp"><img src="../assets/img/solution/automation-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">AI &amp; Automation</span><span class="ph-b">The busywork that eats your evenings, handled quietly in the background.</span></span></a>
+  <a class="ph" href="../solution-memberships.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/memberships-hero.webp" type="image/webp"><img src="../assets/img/solution/memberships-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">Memberships &amp; Loyalty</span><span class="ph-b">Turn one-time customers into monthly revenue you can actually count on.</span></span></a>
+  <a class="ph" href="../solution-pos.html"><span class="ph-img"><picture><source srcset="../assets/img/solution/pos-hero.webp" type="image/webp"><img src="../assets/img/solution/pos-hero.jpg" alt="" loading="lazy"></picture></span><span class="ph-body"><span class="ph-t">POS &amp; Inventory</span><span class="ph-b">Know what's on the shelf, what's selling, and what to reorder. No guessing.</span></span></a>
+</div>
+  </div>
+</section>
+<section class="sec rule-top variant" id="v-index" hidden>
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<div class="v-index">
+  <a class="ix" href="../solution-websites-seo.html"><span class="ix-n">01</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span><span class="ix-t">Websites &amp; SEO</span><span class="ix-b">Get found first, then earn the click with a site that loads in under three seconds.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-ai-phone.html"><span class="ix-n">02</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span><span class="ix-t">AI Phone &amp; Chat</span><span class="ix-b">Every call answered, day or night. It books the job and texts back in seconds.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-crm.html"><span class="ix-n">03</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span><span class="ix-t">CRM &amp; Follow-Up</span><span class="ix-b">Catch every lead and follow up on its own. 78% buy from whoever answers first.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-reviews.html"><span class="ix-n">04</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span><span class="ix-t">Reviews &amp; Reputation</span><span class="ix-b">The wall of 5-star reviews that makes you the obvious, safe choice.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-marketing.html"><span class="ix-n">05</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="ix-t">Marketing &amp; Social</span><span class="ix-b">Stay in front of the people who already know you, without thinking about it.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-booking.html"><span class="ix-n">06</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="ix-t">Online Booking</span><span class="ix-b">Let them book at 11pm while you sleep, then cut no-shows with reminders.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-payments.html"><span class="ix-n">07</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span><span class="ix-t">Payments &amp; Financing</span><span class="ix-b">Tap, card-on-file and one-tap invoices, plus financing so big jobs close.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-automation.html"><span class="ix-n">08</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span><span class="ix-t">AI &amp; Automation</span><span class="ix-b">The busywork that eats your evenings, handled quietly in the background.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-memberships.html"><span class="ix-n">09</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span><span class="ix-t">Memberships &amp; Loyalty</span><span class="ix-b">Turn one-time customers into monthly revenue you can actually count on.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+  <a class="ix" href="../solution-pos.html"><span class="ix-n">10</span><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span><span class="ix-t">POS &amp; Inventory</span><span class="ix-b">Know what's on the shelf, what's selling, and what to reorder. No guessing.</span><span class="ix-go" aria-hidden="true">&rarr;</span></a>
+</div>
+  </div>
+</section>
+</div>
+
+<p class="vnote">Same ten services and same copy in all five &mdash; only the treatment changes.</p>
+<div class="vpicker" role="group" aria-label="Section style options">
+  <span class="lbl">Style</span>
+  <button data-v="grouped" aria-pressed="true">1 &middot; Grouped by outcome</button>
+  <button data-v="bento" aria-pressed="false">2 &middot; Bento grid</button>
+  <button data-v="ring" aria-pressed="false">3 &middot; Flywheel ring</button>
+  <button data-v="photo" aria-pressed="false">4 &middot; Photo mosaic</button>
+  <button data-v="index" aria-pressed="false">5 &middot; Numbered index</button>
+</div>
+
+<script>
+(function () {
+  var btns = [].slice.call(document.querySelectorAll('.vpicker button'));
+  function show(k) {
+    document.querySelectorAll('.variant').forEach(function (s) { s.hidden = (s.id !== 'v-' + k); });
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === k)); });
+    try { history.replaceState(null, '', '#' + k); } catch (e) {}
+    window.scrollTo(0, 0);
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.v); }); });
+  var h = location.hash.replace('#', '');
+  if (h && document.getElementById('v-' + h)) show(h);
+  window.addEventListener('keydown', function (e) {
+    var i = btns.findIndex(function (b) { return b.getAttribute('aria-pressed') === 'true'; });
+    if (e.key === 'ArrowRight') show(btns[(i + 1) % btns.length].dataset.v);
+    if (e.key === 'ArrowLeft')  show(btns[(i - 1 + btns.length) % btns.length].dataset.v);
+  });
+})();
+</script>
+</body>
+</html>
