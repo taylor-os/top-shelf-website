@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf — Orbit Size Options</title>
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=20260731c">
+<style>
+.vpicker{position:fixed;left:50%;bottom:1.1rem;transform:translateX(-50%);z-index:200;display:flex;gap:.35rem;padding:.5rem;
+  flex-wrap:wrap;justify-content:center;background:rgba(11,9,6,.92);border:1px solid var(--hairline-strong);border-radius:100px;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 18px 44px rgba(0,0,0,.6);max-width:calc(100vw - 2rem)}
+.vpicker button{font-family:var(--sans);font-size:.75rem;letter-spacing:.04em;cursor:pointer;padding:.58rem 1rem;border-radius:100px;
+  border:1px solid transparent;background:transparent;color:var(--ink-2);transition:all .25s var(--ease);white-space:nowrap}
+.vpicker button:hover{color:var(--ink);border-color:var(--hairline)}
+.vpicker button[aria-pressed="true"]{background:var(--gold);color:#16110A;border-color:var(--gold);font-weight:500}
+.vpicker .lbl{font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);align-self:center;padding-inline:.7rem .3rem}
+.vnote{position:fixed;left:50%;bottom:4.8rem;transform:translateX(-50%);z-index:200;font-family:var(--sans);font-size:.76rem;
+  color:var(--ink-3);background:rgba(11,9,6,.88);padding:.42rem .9rem;border-radius:100px;white-space:nowrap;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.sizetag{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:200;font-family:var(--sans);font-size:.72rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);background:rgba(11,9,6,.88);padding:.4rem .9rem;border-radius:100px}
+@media (max-width:760px){.vpicker .lbl,.vnote,.sizetag{display:none}}
+</style>
+</head>
+<body>
+<div id="page">
+<section class="sec">
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:62ch;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center">The Stack</span>
+      <h2 class="display display-lg" style="margin-top:1.6rem">Ten Services. <em>One Flywheel.</em></h2>
+      <p style="margin-inline:auto">Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+    </div>
+<!-- orbit markup lifted verbatim from index.html so this picker
+     can never drift from what is actually shipping -->
+    <div class="fw fw-orbit">
+      <div class="orb-stage">
+        <div class="orb-centre" id="orbCentre">
+          <span class="orb-rest">
+            <img class="orb-logo" src="../assets/logo-mark.png?v=20260731c" alt="" width="976" height="976" decoding="async">
+          </span>
+          <span class="orb-detail" aria-live="polite">
+            <span class="orb-d-t"></span><span class="orb-d-b"></span>
+            <span class="orb-d-go">Learn more &rarr;</span>
+          </span>
+        </div>
+      <a class="orb-node" style="--a:-90deg" href="../solution-websites-seo.html" data-t="Websites &amp; SEO" data-b="Get found first, then earn the click with a site that loads in under three seconds.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span></span>
+        <span class="orb-name">Websites &amp; SEO</span>
+      </a>
+      <a class="orb-node" style="--a:-54deg" href="../solution-ai-phone.html" data-t="AI Phone &amp; Chat" data-b="Every call answered, day or night. It books the job and texts back in seconds.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 6c.3.6.2 1.3-.3 1.8L7.3 9.2a13 13 0 0 0 7.5 7.5l1.4-1.4c.5-.5 1.2-.6 1.8-.3l2.5 2.5c.6.6.6 1.6-.1 2.1-1.2 1-2.8 1.5-4.4 1.1-5.4-1.4-9.6-5.6-11-11-.4-1.6.1-3.2 1.1-4.4.5-.7 1.5-.7 2.1-.1Z"/></svg></span></span>
+        <span class="orb-name">AI Phone &amp; Chat</span>
+      </a>
+      <a class="orb-node" style="--a:-18deg" href="../solution-crm.html" data-t="CRM &amp; Follow-Up" data-b="Catch every lead and follow up on its own. 78% buy from whoever answers first.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><polyline points="20,3.5 20,8.5 15,8.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><polyline points="4,20.5 4,15.5 9,15.5"/></svg></span></span>
+        <span class="orb-name">CRM &amp; Follow-Up</span>
+      </a>
+      <a class="orb-node" style="--a:18deg" href="../solution-reviews.html" data-t="Reviews &amp; Reputation" data-b="The wall of 5-star reviews that makes you the obvious, safe choice.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8Z"/></svg></span></span>
+        <span class="orb-name">Reviews &amp; Reputation</span>
+      </a>
+      <a class="orb-node" style="--a:54deg" href="../solution-marketing.html" data-t="Marketing &amp; Social" data-b="Stay in front of the people who already know you, without thinking about it.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span></span>
+        <span class="orb-name">Marketing &amp; Social</span>
+      </a>
+      <a class="orb-node" style="--a:90deg" href="../solution-booking.html" data-t="Online Booking" data-b="Let them book at 11pm while you sleep, then cut no-shows with reminders.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span></span>
+        <span class="orb-name">Online Booking</span>
+      </a>
+      <a class="orb-node" style="--a:126deg" href="../solution-payments.html" data-t="Payments &amp; Financing" data-b="Tap, card-on-file and one-tap invoices, plus financing so big jobs close.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10" y2="14.5"/></svg></span></span>
+        <span class="orb-name">Payments &amp; Financing</span>
+      </a>
+      <a class="orb-node" style="--a:162deg" href="../solution-automation.html" data-t="AI &amp; Automation" data-b="The busywork that eats your evenings, handled quietly in the background.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1"/></svg></span></span>
+        <span class="orb-name">AI &amp; Automation</span>
+      </a>
+      <a class="orb-node" style="--a:198deg" href="../solution-memberships.html" data-t="Memberships &amp; Loyalty" data-b="Turn one-time customers into monthly revenue you can actually count on.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-8.8-1.9A5 5 0 0 0 3.2 5.6C1.9 9 5.5 13 12 19.5 18.5 13 22.1 9 20.8 5.6Z"/></svg></span></span>
+        <span class="orb-name">Memberships &amp; Loyalty</span>
+      </a>
+      <a class="orb-node" style="--a:234deg" href="../solution-pos.html" data-t="POS &amp; Inventory" data-b="Know what's on the shelf, what's selling, and what to reorder. No guessing.">
+        <span class="orb-chip"><span class="orb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 13H4.5Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg></span></span>
+        <span class="orb-name">POS &amp; Inventory</span>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<p class="sizetag" id="sizetag">Current &mdash; what&rsquo;s live now</p>
+<p class="vnote">Hover a service to check the labels still clear each other.</p>
+<div class="vpicker" role="group" aria-label="Orbit size options">
+  <span class="lbl">Size</span>
+  <button data-s="" aria-pressed="true">Current</button>
+  <button data-s="size-m" aria-pressed="false">Medium</button>
+  <button data-s="size-l" aria-pressed="false">Large</button>
+  <button data-s="size-xl" aria-pressed="false">Extra large</button>
+</div>
+
+<script src="../assets/site.js?v=20260731c"></script>
+<script>
+(function () {
+  var orb = document.querySelector('.fw-orbit');
+  var tag = document.getElementById('sizetag');
+  var names = { '':'Current — what’s live now', 'size-m':'Medium', 'size-l':'Large', 'size-xl':'Extra large' };
+  var btns = [].slice.call(document.querySelectorAll('.vpicker button'));
+  function set(k) {
+    orb.classList.remove('size-m','size-l','size-xl');
+    if (k) orb.classList.add(k);
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.s === k)); });
+    var cs = getComputedStyle(orb);
+    tag.innerHTML = names[k] + ' &nbsp;·&nbsp; icon ' + cs.getPropertyValue('--icon').trim() +
+                    ' &nbsp;·&nbsp; label ' + cs.getPropertyValue('--label').trim() +
+                    ' &nbsp;·&nbsp; ring ' + cs.getPropertyValue('--stage').trim();
+    try { history.replaceState(null,'','#'+(k||'current')); } catch(e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.s); }); });
+  window.addEventListener('keydown', function (e) {
+    var i = btns.findIndex(function (b) { return b.getAttribute('aria-pressed') === 'true'; });
+    if (e.key === 'ArrowRight') set(btns[(i+1) % btns.length].dataset.s);
+    if (e.key === 'ArrowLeft')  set(btns[(i-1+btns.length) % btns.length].dataset.s);
+  });
+  var h = location.hash.replace('#','');
+  set(h === 'current' ? '' : (names[h] !== undefined ? h : ''));
+})();
+</script>
+</body>
+</html>

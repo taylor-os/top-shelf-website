@@ -804,28 +804,48 @@ body.mm-open{ overflow:hidden; }
    Ten services around a ring. At rest the centre is the mark;
    hovering or focusing a service turns the centre into that
    service's detail, so the middle does work and the copy is read.
+
+   Everything is driven by the tokens on .fw-orbit, so the whole
+   thing scales from one place. The ring radius has to grow with
+   the labels: ten nodes 36 degrees apart on radius r sit
+   2*r*sin(18deg) apart, so at r=274 that is 169px of room and a
+   150px node already nearly fills it. Grow the type without
+   growing the stage and adjacent labels collide.
    ============================================================ */
 .fw{ display:grid; place-items:center; }
-.orb-ic{ display:grid; place-items:center; }
-.orb-ic svg{ width:24px; height:24px; }
-/* ============================================================
-   1 · ORBIT + LIVE CENTRE
-   ============================================================ */
-.fw-orbit{ display:grid; place-items:center; }
-.orb-stage{ position:relative; width:min(720px,88vw); aspect-ratio:1; --r:calc(min(720px,88vw)/2 - 86px); }
-.orb-stage::before,
-.orb-stage::after{
-  content:""; position:absolute; inset:86px; border-radius:50%; pointer-events:none;
+.fw-orbit{
+  --stage:720px;   /* ring diameter on desktop        */
+  --inset:86px;    /* stage edge -> ring line          */
+  --chip:54px;     /* icon disc                        */
+  --icon:24px;
+  --label:.82rem;
+  --node-w:150px;
+  --node-h:112px;
+  --orb:250px;     /* centre disc                      */
+  display:grid; place-items:center;
 }
+/* Size steps. Proportional: every token moves together. */
+.fw-orbit.size-m { --stage:780px; --inset:92px;  --chip:62px; --icon:28px; --label:.90rem;  --node-w:166px; --node-h:124px; --orb:272px; }
+.fw-orbit.size-l { --stage:840px; --inset:100px; --chip:70px; --icon:32px; --label:.98rem;  --node-w:180px; --node-h:136px; --orb:292px; }
+.fw-orbit.size-xl{ --stage:900px; --inset:108px; --chip:78px; --icon:36px; --label:1.06rem; --node-w:196px; --node-h:148px; --orb:314px; }
+
+.orb-ic{ display:grid; place-items:center; }
+.orb-ic svg{ width:var(--icon); height:var(--icon); }
+
+.orb-stage{
+  position:relative; width:min(var(--stage),88vw); aspect-ratio:1;
+  --r:calc(min(var(--stage),88vw)/2 - var(--inset));
+}
+.orb-stage::before,
+.orb-stage::after{ content:""; position:absolute; inset:var(--inset); border-radius:50%; pointer-events:none; }
 .orb-stage::before{ border:1px solid var(--hairline); }
 .orb-stage::after{
   border:1px dashed rgba(201,168,106,.22);
-  inset:76px; animation:orbSpin 64s linear infinite;
+  inset:calc(var(--inset) - 10px); animation:orbSpin 64s linear infinite;
 }
 @keyframes orbSpin{ to{ transform:rotate(360deg); } }
 
 .orb-centre{
-  --orb:250px;
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
   width:var(--orb); height:var(--orb); border-radius:50%;
   display:grid; place-items:center; text-align:center;
@@ -833,33 +853,35 @@ body.mm-open{ overflow:hidden; }
   background:radial-gradient(circle at 50% 34%, rgba(201,168,106,.14), rgba(16,12,8,.9) 72%);
 }
 .orb-rest, .orb-detail{ grid-area:1/1; transition:opacity .35s var(--ease), transform .35s var(--ease); }
-.orb-detail{ opacity:0; transform:translateY(6px); pointer-events:none; }
+.orb-detail{ opacity:0; transform:translateY(6px); pointer-events:none; padding:0 1.9rem; }
 .orb-centre.is-on .orb-rest{ opacity:0; transform:translateY(-6px); }
 .orb-centre.is-on .orb-detail{ opacity:1; transform:none; }
 /* At rest the orb is the mark, sized to nearly fill the circle. */
 .orb-logo{ display:block; width:calc(var(--orb) * .86); height:auto; margin-inline:auto; }
-.orb-detail{ padding:0 1.9rem; }
-.orb-d-t{ display:block; font-family:var(--serif); font-size:1.32rem; color:var(--gold-bright); line-height:1.2; margin-bottom:.6rem; }
-.orb-d-b{ display:block; font-size:.83rem; color:var(--ink-2); line-height:1.6; }
+.orb-d-t{ display:block; font-family:var(--serif); font-size:calc(var(--label) + .5rem); color:var(--gold-bright); line-height:1.2; margin-bottom:.6rem; }
+.orb-d-b{ display:block; font-size:calc(var(--label) + .01rem); color:var(--ink-2); line-height:1.6; }
 .orb-d-go{ display:block; margin-top:.8rem; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); }
 
 /* NB: never put .reveal on an .orb-node. These are positioned BY transform,
    and site.js's reveal animation writes transform inline, which wins and
    stacks all ten on the centre. The .fw-orbit container carries .reveal. */
 .orb-node{
-  position:absolute; top:50%; left:50%; width:150px; margin:-56px 0 0 -75px;
+  position:absolute; top:50%; left:50%;
+  width:var(--node-w); height:var(--node-h);
+  margin:calc(var(--node-h) / -2) 0 0 calc(var(--node-w) / -2);
   transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
-  display:grid; justify-items:center; gap:.6rem; text-align:center;
+  display:grid; grid-template-rows:auto 1fr; justify-items:center; align-content:start;
+  gap:.6rem; text-align:center;
 }
 .orb-chip{
-  width:54px; height:54px; border-radius:50%; display:grid; place-items:center;
+  width:var(--chip); height:var(--chip); border-radius:50%; display:grid; place-items:center;
   border:1px solid var(--hairline-strong); color:var(--gold); background:var(--ground);
   transition:border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
 }
 .orb-node:hover .orb-chip, .orb-node:focus-visible .orb-chip{
   border-color:var(--gold); color:var(--gold-bright); background:var(--surface-2); transform:translateY(-3px);
 }
-.orb-name{ font-size:.82rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
+.orb-name{ font-size:var(--label); line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
 .orb-node:hover .orb-name{ color:var(--gold-bright); }
 
 /* A ring is unreadable on a phone: fall back to a plain list. */
