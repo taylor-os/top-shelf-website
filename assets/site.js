@@ -379,3 +379,28 @@
     if (res && (res.cta || wantsCapture.test(text))) { setTimeout(function () { if (!lead.active) start(text); }, 1500); }
   };
 })();
+
+/* ===== Solutions orbit: the centre reports whichever service has hover or
+   focus. Keyboard focus drives the same reveal as the mouse, so the detail
+   is never hover-only. Falls back to the plain list layout under 820px,
+   where the detail panel is hidden and each node is just a link. ===== */
+(function () {
+  var centre = document.getElementById('orbCentre');
+  if (!centre) return;
+  var t = centre.querySelector('.orb-d-t');
+  var b = centre.querySelector('.orb-d-b');
+  if (!t || !b) return;
+
+  document.querySelectorAll('.orb-node').forEach(function (n) {
+    function on() {
+      t.innerHTML = n.dataset.t;
+      b.textContent = n.dataset.b;
+      centre.classList.add('is-on');
+    }
+    function off() { centre.classList.remove('is-on'); }
+    n.addEventListener('mouseenter', on);
+    n.addEventListener('focus', on);
+    n.addEventListener('mouseleave', off);
+    n.addEventListener('blur', off);
+  });
+})();

@@ -53,8 +53,8 @@ def v_orbit():
     o = ['<div class="fw fw-orbit">', '  <div class="orb-stage">',
          '    <div class="orb-centre" id="orbCentre">',
          '      <span class="orb-rest">',
-         '        <span class="orb-n">10</span>',
-         '        <span class="orb-l">services<br>one flywheel</span>',
+         '        <img class="orb-logo" src="../assets/logo-mark.png?v=20260731b" alt="" '
+         'width="976" height="976" decoding="async">',
          '      </span>',
          '      <span class="orb-detail" aria-live="polite">',
          '        <span class="orb-d-t"></span><span class="orb-d-b"></span>',

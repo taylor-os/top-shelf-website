@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css?v=20260731b">
+<link rel="stylesheet" href="../assets/site.css?v=20260731c">
 <style>
 /* ============================================================
    Five refinements of the "ten services, one flywheel" section.
@@ -42,17 +42,20 @@
 @keyframes orbSpin{ to{ transform:rotate(360deg); } }
 
 .orb-centre{
+  --orb:250px;
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:246px; height:246px; border-radius:50%; display:grid; place-items:center; text-align:center;
-  padding:1.6rem; border:1px solid var(--hairline-strong);
+  width:var(--orb); height:var(--orb); border-radius:50%;
+  display:grid; place-items:center; text-align:center;
+  border:1px solid var(--hairline-strong);
   background:radial-gradient(circle at 50% 34%, rgba(201,168,106,.14), rgba(16,12,8,.9) 72%);
 }
 .orb-rest, .orb-detail{ grid-area:1/1; transition:opacity .35s var(--ease), transform .35s var(--ease); }
 .orb-detail{ opacity:0; transform:translateY(6px); pointer-events:none; }
 .orb-centre.is-on .orb-rest{ opacity:0; transform:translateY(-6px); }
 .orb-centre.is-on .orb-detail{ opacity:1; transform:none; }
-.orb-n{ display:block; font-family:var(--serif); font-size:3.6rem; line-height:1; color:var(--gold-bright); }
-.orb-l{ display:block; margin-top:.6rem; font-size:.68rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); line-height:1.8; }
+/* At rest the orb is the mark, sized to nearly fill the circle. */
+.orb-logo{ display:block; width:calc(var(--orb) * .86); height:auto; margin-inline:auto; }
+.orb-detail{ padding:0 1.9rem; }
 .orb-d-t{ display:block; font-family:var(--serif); font-size:1.32rem; color:var(--gold-bright); line-height:1.2; margin-bottom:.6rem; }
 .orb-d-b{ display:block; font-size:.83rem; color:var(--ink-2); line-height:1.6; }
 .orb-d-go{ display:block; margin-top:.8rem; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); }
@@ -254,8 +257,7 @@
   <div class="orb-stage">
     <div class="orb-centre" id="orbCentre">
       <span class="orb-rest">
-        <span class="orb-n">10</span>
-        <span class="orb-l">services<br>one flywheel</span>
+        <img class="orb-logo" src="../assets/logo-mark.png?v=20260731c" alt="" width="976" height="976" decoding="async">
       </span>
       <span class="orb-detail" aria-live="polite">
         <span class="orb-d-t"></span><span class="orb-d-b"></span>

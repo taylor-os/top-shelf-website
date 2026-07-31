@@ -798,3 +798,79 @@ body.mm-open{ overflow:hidden; }
       linear-gradient(180deg, rgba(11,9,6,.86) 0%, rgba(11,9,6,.32) 30%, var(--ground) 100%);
   }
 }
+
+/* ============================================================
+   SOLUTIONS ORBIT (2026-07-31)
+   Ten services around a ring. At rest the centre is the mark;
+   hovering or focusing a service turns the centre into that
+   service's detail, so the middle does work and the copy is read.
+   ============================================================ */
+.fw{ display:grid; place-items:center; }
+.orb-ic{ display:grid; place-items:center; }
+.orb-ic svg{ width:24px; height:24px; }
+/* ============================================================
+   1 · ORBIT + LIVE CENTRE
+   ============================================================ */
+.fw-orbit{ display:grid; place-items:center; }
+.orb-stage{ position:relative; width:min(720px,88vw); aspect-ratio:1; --r:calc(min(720px,88vw)/2 - 86px); }
+.orb-stage::before,
+.orb-stage::after{
+  content:""; position:absolute; inset:86px; border-radius:50%; pointer-events:none;
+}
+.orb-stage::before{ border:1px solid var(--hairline); }
+.orb-stage::after{
+  border:1px dashed rgba(201,168,106,.22);
+  inset:76px; animation:orbSpin 64s linear infinite;
+}
+@keyframes orbSpin{ to{ transform:rotate(360deg); } }
+
+.orb-centre{
+  --orb:250px;
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:var(--orb); height:var(--orb); border-radius:50%;
+  display:grid; place-items:center; text-align:center;
+  border:1px solid var(--hairline-strong);
+  background:radial-gradient(circle at 50% 34%, rgba(201,168,106,.14), rgba(16,12,8,.9) 72%);
+}
+.orb-rest, .orb-detail{ grid-area:1/1; transition:opacity .35s var(--ease), transform .35s var(--ease); }
+.orb-detail{ opacity:0; transform:translateY(6px); pointer-events:none; }
+.orb-centre.is-on .orb-rest{ opacity:0; transform:translateY(-6px); }
+.orb-centre.is-on .orb-detail{ opacity:1; transform:none; }
+/* At rest the orb is the mark, sized to nearly fill the circle. */
+.orb-logo{ display:block; width:calc(var(--orb) * .86); height:auto; margin-inline:auto; }
+.orb-detail{ padding:0 1.9rem; }
+.orb-d-t{ display:block; font-family:var(--serif); font-size:1.32rem; color:var(--gold-bright); line-height:1.2; margin-bottom:.6rem; }
+.orb-d-b{ display:block; font-size:.83rem; color:var(--ink-2); line-height:1.6; }
+.orb-d-go{ display:block; margin-top:.8rem; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); }
+
+/* NB: never put .reveal on an .orb-node. These are positioned BY transform,
+   and site.js's reveal animation writes transform inline, which wins and
+   stacks all ten on the centre. The .fw-orbit container carries .reveal. */
+.orb-node{
+  position:absolute; top:50%; left:50%; width:150px; margin:-56px 0 0 -75px;
+  transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+  display:grid; justify-items:center; gap:.6rem; text-align:center;
+}
+.orb-chip{
+  width:54px; height:54px; border-radius:50%; display:grid; place-items:center;
+  border:1px solid var(--hairline-strong); color:var(--gold); background:var(--ground);
+  transition:border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
+}
+.orb-node:hover .orb-chip, .orb-node:focus-visible .orb-chip{
+  border-color:var(--gold); color:var(--gold-bright); background:var(--surface-2); transform:translateY(-3px);
+}
+.orb-name{ font-size:.82rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
+.orb-node:hover .orb-name{ color:var(--gold-bright); }
+
+/* A ring is unreadable on a phone: fall back to a plain list. */
+@media (max-width:820px){
+  .orb-stage{ width:100%; aspect-ratio:auto; display:grid; grid-template-columns:1fr 1fr; gap:1.6rem 1rem; }
+  .orb-stage::before, .orb-stage::after{ display:none; }
+  .orb-centre{ position:static; transform:none; grid-column:1 / -1; width:auto; height:auto;
+    border-radius:var(--r-lg); padding:1.6rem; margin-bottom:.4rem; }
+  .orb-centre .orb-detail{ display:none; }
+  .orb-logo{ width:150px; }
+  .orb-node{ position:static; width:auto; margin:0; transform:none; }
+}
+@media (max-width:480px){ .orb-stage{ grid-template-columns:1fr; } }
+@media (prefers-reduced-motion:reduce){ .orb-stage::after{ animation:none; } }
