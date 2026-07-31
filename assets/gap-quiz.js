@@ -1,7 +1,7 @@
 /* ============================================================
-   TOP SHELF — LEAK FINDER (Quiz A)  ·  site widget
+   TOP SHELF — GAP FINDER (Quiz A)  ·  site widget
    Self-injecting pop-up lead tool. Loaded site-wide via
-   <script src="assets/leak-quiz.js"></script> before </body>.
+   <script src="assets/gap-quiz.js"></script> before </body>.
    Rebrandable: edit the CONFIG object below. Source template:
    Drive → Projects/Top Shelf/Templates/Lead-Capture Widgets/
    ============================================================ */
@@ -10,7 +10,7 @@
 
 var CONFIG = {
   brand: {
-    name:"Top Shelf", logoText:"TOP SHELF", logoUrl:"", kicker:"Business Leak Finder",
+    name:"Top Shelf", logoText:"TOP SHELF", logoUrl:"", kicker:"Business Gap Finder",
     colors:{ground:"#0B0906",surface:"#100C08",gold:"#C9A86A",goldBright:"#E4C98A",ink:"#F4F0E8",ink2:"#CFC7B8",ink3:"#98907F",ink4:"#6E675A",hairline:"rgba(201,168,106,.20)"},
     fontImport:"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap",
     fontDisplay:"'Cormorant Garamond',Georgia,serif", fontBody:"'Jost',system-ui,sans-serif"
@@ -20,14 +20,14 @@ var CONFIG = {
     oncePerSession: true, dismissDays: 7, showDollars: true, currency: "$",
     leadEndpoint: "https://top-shelf-production.up.railway.app/api/website-lead",
     leadFallback: "https://formspree.io/f/FORMSPREE_ID",  /* set the real Formspree id if the CRM is down */
-    reopen: true, reopenLabel: "Find your leaks",
+    reopen: true, reopenLabel: "Find your gap",
     suppressPaths: ["contact.html","thank-you.html"]      /* don't pop on these pages */
   },
   intro: {
     eyebrow:"60-second business check",
-    headline:"Where is your business <em>leaking money?</em>",
+    headline:"Where is your business <em>losing money?</em>",
     sub:"No forms, no typing — just tap what sounds familiar. We'll show you where you're likely losing customers and what it's costing.",
-    cta:"Find my leaks"
+    cta:"Find my gap"
   },
   areas: [
     { eyebrow:"Getting found", icon:"map-pin", solution:"Websites & Local SEO", solutionUrl:"solution-websites-seo.html",
@@ -50,7 +50,7 @@ var CONFIG = {
   industries:["Home services","Restaurant / bar","Medical / dental","Law firm","Retail / local","Auto","Salon / spa / fitness","Other"],
   thankYou:{
     title:"Well done — you&rsquo;ve taken the first step.",
-    body:"Most owners never stop to look at where they&rsquo;re quietly losing customers. You just did &mdash; and that&rsquo;s exactly how the businesses that pull ahead begin. A Top Shelf specialist will personally reach out within one business day to walk you through your leaks and deliver your <strong style=\"color:#F4F0E8\">free, tailored deep-dive SEO report</strong> of your Google Business Profile and website &mdash; so you&rsquo;ll see precisely where you stand and what to fix first.",
+    body:"Most owners never stop to look at where they&rsquo;re quietly losing customers. You just did &mdash; and that&rsquo;s exactly how the businesses that pull ahead begin. A Top Shelf specialist will personally reach out within one business day to walk you through your gaps and deliver your <strong style=\"color:#F4F0E8\">free, tailored deep-dive SEO report</strong> of your Google Business Profile and website &mdash; so you&rsquo;ll see precisely where you stand and what to fix first.",
     note:"No obligation &mdash; just a clear, professional look at how to make your business more successful."
   }
 };
@@ -72,11 +72,11 @@ var cur=0,sel={},shown=0,MAX=0;CONFIG.areas.forEach(function(a){a.symptoms.forEa
 var root,stage,moneyEl,yrEl,barEl,dotsEl,navEl,opened=false;
 
 function css(){
-  if(!document.getElementById('tsleak-fonts')){var l=document.createElement('link');l.id='tsleak-fonts';l.rel='stylesheet';l.href=B.fontImport;document.head.appendChild(l);}
+  if(!document.getElementById('tsgap-fonts')){var l=document.createElement('link');l.id='tsgap-fonts';l.rel='stylesheet';l.href=B.fontImport;document.head.appendChild(l);}
   var s=document.createElement('style');s.textContent=
-  '#tsleak,#tsleak *{box-sizing:border-box}'+
-  '#tsleak{position:fixed;inset:0;z-index:99990;display:none;align-items:center;justify-content:center;background:rgba(6,5,3,.62);padding:20px;font-family:'+B.fontBody+'}'+
-  '#tsleak.show{display:flex}'+
+  '#tsgap,#tsgap *{box-sizing:border-box}'+
+  '#tsgap{position:fixed;inset:0;z-index:99990;display:none;align-items:center;justify-content:center;background:rgba(6,5,3,.62);padding:20px;font-family:'+B.fontBody+'}'+
+  '#tsgap.show{display:flex}'+
   '.tsl-card{width:100%;max-width:540px;max-height:92vh;overflow:auto;background:'+C.ground+';border:1px solid '+C.hairline+';border-radius:18px;padding:26px;color:'+C.ink2+';position:relative}'+
   '.tsl-eb{font-weight:500;font-size:11px;letter-spacing:2.4px;color:'+C.gold+';text-transform:uppercase}'+
   '.tsl-h{font-family:'+B.fontDisplay+';font-weight:500;color:'+C.ink+';margin:6px 0 0;line-height:1.15}'+
@@ -90,16 +90,16 @@ function css(){
   '.tsl-in{width:100%;background:'+C.surface+';border:1px solid rgba(201,168,106,.25);border-radius:10px;padding:11px 12px;color:'+C.ink+';font-family:'+B.fontBody+';font-size:14px;margin-top:8px}'+
   '.tsl-dot{width:7px;height:7px;border-radius:50%;background:rgba(201,168,106,.25)}.tsl-dot.on{background:'+C.gold+'}'+
   '.tsl-icn{color:'+C.gold+';flex:0 0 auto}'+
-  '#tsleak-tab{position:fixed;left:16px;bottom:16px;z-index:99989;background:'+C.gold+';color:'+C.ground+';border:0;border-radius:30px;padding:11px 16px;font-family:'+B.fontBody+';font-weight:500;font-size:13px;cursor:pointer;display:none;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}'+
-  '@media(max-width:560px){.tsl-card{max-width:100%;max-height:100vh;min-height:100vh;border-radius:0}#tsleak{padding:0}}';
+  '#tsgap-tab{position:fixed;left:16px;bottom:16px;z-index:99989;background:'+C.gold+';color:'+C.ground+';border:0;border-radius:30px;padding:11px 16px;font-family:'+B.fontBody+';font-weight:500;font-size:13px;cursor:pointer;display:none;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}'+
+  '@media(max-width:560px){.tsl-card{max-width:100%;max-height:100vh;min-height:100vh;border-radius:0}#tsgap{padding:0}}';
   document.head.appendChild(s);
 }
 function build(){
-  root=document.createElement('div');root.id='tsleak';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Business leak finder');
+  root=document.createElement('div');root.id='tsgap';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Business gap finder');
   var logo=B.logoUrl?'<img src="'+B.logoUrl+'" alt="'+B.name+'" style="height:22px">':'<span style="font-weight:500;letter-spacing:1.5px;color:'+C.ink+';font-size:14px">'+B.logoText+'</span>';
   root.innerHTML='<div class="tsl-card">'+
     '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><div style="display:flex;align-items:center;gap:9px"><span class="tsl-icn">'+svg("star",18)+'</span>'+logo+'<span style="color:'+C.ink4+';font-size:12px">· '+B.kicker+'</span></div><button id="tsl-close" aria-label="Close" style="background:none;border:0;color:'+C.ink4+';cursor:pointer">'+svg("x",18)+'</button></div>'+
-    (BE.showDollars?'<div id="tsl-meter" style="background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:13px;padding:14px 16px;margin-bottom:18px;display:none"><div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Money leaking / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div><div id="tsl-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:40px;color:'+C.goldBright+';line-height:1.1">'+BE.currency+'0</div><div style="height:5px;background:rgba(201,168,106,.14);border-radius:4px;margin-top:8px;overflow:hidden"><div id="tsl-bar" style="height:100%;width:0;background:'+C.gold+';transition:width .5s"></div></div><div style="color:'+C.ink4+';font-size:10.5px;margin-top:6px">Rough industry estimate — not a guarantee.</div></div>':'')+
+    (BE.showDollars?'<div id="tsl-meter" style="background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:13px;padding:14px 16px;margin-bottom:18px;display:none"><div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Gap / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div><div id="tsl-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:40px;color:'+C.goldBright+';line-height:1.1">'+BE.currency+'0</div><div style="height:5px;background:rgba(201,168,106,.14);border-radius:4px;margin-top:8px;overflow:hidden"><div id="tsl-bar" style="height:100%;width:0;background:'+C.gold+';transition:width .5s"></div></div><div style="color:'+C.ink4+';font-size:10.5px;margin-top:6px">Rough industry estimate — not a guarantee.</div></div>':'')+
     '<div id="tsl-stage"></div>'+
     '<div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px"><div id="tsl-dots" style="display:flex;gap:6px"></div><div id="tsl-nav" style="display:flex;gap:10px"></div></div>'+
   '</div>';
@@ -108,7 +108,7 @@ function build(){
   root.querySelector('#tsl-close').onclick=close;
   root.addEventListener('click',function(e){if(e.target===root)close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened)close();});
-  if(BE.reopen){var tab=document.createElement('button');tab.id='tsleak-tab';tab.textContent=BE.reopenLabel;tab.onclick=open;document.body.appendChild(tab);}
+  if(BE.reopen){var tab=document.createElement('button');tab.id='tsgap-tab';tab.textContent=BE.reopenLabel;tab.onclick=open;document.body.appendChild(tab);}
 }
 function fmt(n){return BE.currency+Math.round(n).toLocaleString();}
 function total(){var t=0;for(var k in sel)sel[k].forEach(function(i){t+=CONFIG.areas[k].symptoms[i].monthly;});return t;}
@@ -130,27 +130,27 @@ function step(){var a=CONFIG.areas[cur];dots(cur,CONFIG.areas.length);var t=tr(c
   h+='</div><p style="color:'+C.ink4+';font-size:11.5px;margin:12px 0 0">Tap any that sound familiar — leave blank if it&rsquo;s handled.</p>';
   stage.innerHTML=h;
   stage.querySelectorAll('.tsl-tile').forEach(function(b){b.onclick=function(){var i=+b.getAttribute('data-i');sel[cur]=sel[cur]||[];var p=sel[cur].indexOf(i);if(p>-1)sel[cur].splice(p,1);else sel[cur].push(i);step();meter();};});
-  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my leak report')+' →</button>';
+  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my gap report')+' →</button>';
   root.querySelector('#tsl-nx').onclick=function(){if(cur<CONFIG.areas.length-1){cur++;step();}else report();};
   root.querySelector('#tsl-bk').onclick=function(){if(cur>0){cur--;step();}else intro();};
 }
 function report(){dots(CONFIG.areas.length,CONFIG.areas.length+1);var t=total();var areas=[];
   for(var k in sel){if(sel[k].length){var sub=0;sel[k].forEach(function(i){sub+=CONFIG.areas[k].symptoms[i].monthly;});areas.push([CONFIG.areas[k].eyebrow.replace('&amp;','&'),sub,CONFIG.areas[k].solution]);}}
   areas.sort(function(a,b){return b[1]-a[1];});
-  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your leak report</div><h3 class="tsl-h" style="font-size:24px">You&rsquo;re likely leaking <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year — a rough estimate from your answers.</p>';
+  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your gap report</div><h3 class="tsl-h" style="font-size:24px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year — a rough estimate from your answers.</p>';
   if(areas.length){h+='<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">';areas.forEach(function(a){h+='<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:10px 13px"><span style="color:'+C.ink+';font-size:13.5px">'+a[0]+' <span style="color:'+C.ink4+'">→ '+a[2]+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:18px">'+fmt(a[1])+'</span></div>';});h+='</div>';}
   else h+='<p style="color:'+C.ink3+'">Nothing selected yet — most owners have at least a couple. Tap Back and take a look.</p>';
-  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">Get your free, no-obligation leak audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We&rsquo;ll turn this into your real numbers — whether you work with us or not.</p><div style="display:flex;gap:10px;align-items:flex-start;background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:11px;padding:11px 13px;margin:0 0 10px"><span class="tsl-icn" style="margin-top:1px">'+svg("report",18)+'</span><p style="color:'+C.ink2+';font-size:12.5px;margin:0;line-height:1.5">Every audit includes a <strong style="color:'+C.ink+'">free, tailored deep-dive SEO report</strong> of your Google Business Profile &amp; website. <a href="sample-report.html" target="_blank" rel="noopener" style="color:'+C.gold+';border-bottom:1px solid rgba(201,168,106,.45);white-space:nowrap">See a sample &rarr;</a></p></div><input class="tsl-in" id="tsl-name" placeholder="Your name"><input class="tsl-in" id="tsl-biz" placeholder="Business name"><select class="tsl-in" id="tsl-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tsl-in" id="tsl-contact" placeholder="Phone or email"><p style="color:'+C.ink4+';font-size:11px;line-height:1.5;margin:8px 0 0">By submitting, you agree to receive SMS from Top Shelf Business Solutions at the number you provide. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="privacy.html" target="_blank" rel="noopener" style="color:'+C.gold+'">Privacy Policy</a>.</p></div>';
+  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">Get your free, no-obligation gap audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We&rsquo;ll turn this into your real numbers — whether you work with us or not.</p><div style="display:flex;gap:10px;align-items:flex-start;background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:11px;padding:11px 13px;margin:0 0 10px"><span class="tsl-icn" style="margin-top:1px">'+svg("report",18)+'</span><p style="color:'+C.ink2+';font-size:12.5px;margin:0;line-height:1.5">Every audit includes a <strong style="color:'+C.ink+'">free, tailored deep-dive SEO report</strong> of your Google Business Profile &amp; website. <a href="sample-report.html" target="_blank" rel="noopener" style="color:'+C.gold+';border-bottom:1px solid rgba(201,168,106,.45);white-space:nowrap">See a sample &rarr;</a></p></div><input class="tsl-in" id="tsl-name" placeholder="Your name"><input class="tsl-in" id="tsl-biz" placeholder="Business name"><select class="tsl-in" id="tsl-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tsl-in" id="tsl-contact" placeholder="Phone or email"><p style="color:'+C.ink4+';font-size:11px;line-height:1.5;margin:8px 0 0">By submitting, you agree to receive SMS from Top Shelf Business Solutions at the number you provide. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="privacy.html" target="_blank" rel="noopener" style="color:'+C.gold+'">Privacy Policy</a>.</p></div>';
   stage.innerHTML=h;
-  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-submit">Send my leak report →</button>';
+  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-submit">Send my gap report →</button>';
   root.querySelector('#tsl-bk').onclick=function(){cur=CONFIG.areas.length-1;step();};
   root.querySelector('#tsl-submit').onclick=submit;
 }
 function val(id){var e=root.querySelector('#'+id);return e?e.value:'';}
 function submit(){
   var lead={name:val('tsl-name'),business:val('tsl-biz'),industry:val('tsl-ind'),contact:val('tsl-contact'),
-    total_monthly:total(),total_annual:total()*12,currency:BE.currency,leaks:[],source:location.href,ts:new Date().toISOString(),quiz:"leak-finder-A"};
-  for(var k in sel){if(sel[k].length){lead.leaks.push({area:CONFIG.areas[k].eyebrow.replace('&amp;','&'),solution:CONFIG.areas[k].solution,symptoms:sel[k].map(function(i){return CONFIG.areas[k].symptoms[i].label.replace(/&[a-z]+;/g,"'");}),monthly:sel[k].reduce(function(a,i){return a+CONFIG.areas[k].symptoms[i].monthly;},0)});}}
+    total_monthly:total(),total_annual:total()*12,currency:BE.currency,gaps:[],source:location.href,ts:new Date().toISOString(),quiz:"gap-finder-A"};
+  for(var k in sel){if(sel[k].length){lead.gaps.push({area:CONFIG.areas[k].eyebrow.replace('&amp;','&'),solution:CONFIG.areas[k].solution,symptoms:sel[k].map(function(i){return CONFIG.areas[k].symptoms[i].label.replace(/&[a-z]+;/g,"'");}),monthly:sel[k].reduce(function(a,i){return a+CONFIG.areas[k].symptoms[i].monthly;},0)});}}
   var btn=root.querySelector('#tsl-submit');if(btn){btn.textContent='Sending…';btn.disabled=true;}
   var done=false;function finish(){if(done)return;done=true;thanks();}
   try{
@@ -164,16 +164,16 @@ function thanks(){dotsEl.innerHTML='';navEl.innerHTML='';setMeter(false);
   stage.innerHTML='<div style="text-align:center;padding:14px 6px 6px"><div style="width:54px;height:54px;border-radius:50%;border:1px solid '+C.gold+';display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:'+C.gold+'">'+svg("check",26)+'</div><h3 class="tsl-h" style="font-size:25px">'+CONFIG.thankYou.title+'</h3><p style="color:'+C.ink2+';font-size:14px;line-height:1.65;margin:12px auto 0;max-width:400px;font-family:'+B.fontBody+'">'+CONFIG.thankYou.body+'</p><p style="color:'+C.ink4+';font-size:12px;margin-top:14px">'+CONFIG.thankYou.note+'</p><button class="tsl-btn tsl-gold" style="margin-top:18px" id="tsl-done">Close</button></div>';
   root.querySelector('#tsl-done').onclick=close;
 }
-function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tsleak-tab');if(t)t.style.display='none';if(!stage.innerHTML)intro();}
-function close(){opened=false;root.classList.remove('show');document.documentElement.style.overflow='';try{localStorage.setItem('tsleak_dismissed',Date.now());}catch(e){}if(BE.reopen){var t=document.getElementById('tsleak-tab');if(t)t.style.display='block';}}
-function arm(){var fired=false;function go(){if(fired)return;fired=true;try{sessionStorage.setItem('tsleak_shown','1');}catch(e){}open();}
-  try{var d=+localStorage.getItem('tsleak_dismissed');if(d&&(Date.now()-d)<BE.dismissDays*864e5){if(BE.reopen){var t=document.getElementById('tsleak-tab');if(t)t.style.display='block';}return;}}catch(e){}
-  if(BE.oncePerSession){try{if(sessionStorage.getItem('tsleak_shown')){if(BE.reopen){var tb=document.getElementById('tsleak-tab');if(tb)tb.style.display='block';}return;}}catch(e){}}
+function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tsgap-tab');if(t)t.style.display='none';if(!stage.innerHTML)intro();}
+function close(){opened=false;root.classList.remove('show');document.documentElement.style.overflow='';try{localStorage.setItem('tsgap_dismissed',Date.now());}catch(e){}if(BE.reopen){var t=document.getElementById('tsgap-tab');if(t)t.style.display='block';}}
+function arm(){var fired=false;function go(){if(fired)return;fired=true;try{sessionStorage.setItem('tsgap_shown','1');}catch(e){}open();}
+  try{var d=+localStorage.getItem('tsgap_dismissed');if(d&&(Date.now()-d)<BE.dismissDays*864e5){if(BE.reopen){var t=document.getElementById('tsgap-tab');if(t)t.style.display='block';}return;}}catch(e){}
+  if(BE.oncePerSession){try{if(sessionStorage.getItem('tsgap_shown')){if(BE.reopen){var tb=document.getElementById('tsgap-tab');if(tb)tb.style.display='block';}return;}}catch(e){}}
   if(BE.triggerSeconds!=null)setTimeout(go,BE.triggerSeconds*1000);
   if(BE.scrollPercent)window.addEventListener('scroll',function ons(){var sp=scrollY/(document.body.scrollHeight-innerHeight)*100;if(sp>=BE.scrollPercent){go();window.removeEventListener('scroll',ons);}},{passive:true});
   if(BE.exitIntent)document.addEventListener('mouseout',function(e){if(e.clientY<=0)go();});
 }
 function suppressed(){var p=location.pathname.split('/').pop();return (BE.suppressPaths||[]).indexOf(p)>-1;}
-function init(){if(suppressed())return;css();build();arm();window.TSLeak={open:open,close:close};}
+function init(){if(suppressed())return;css();build();arm();window.TSGap={open:open,close:close};}
 if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
 })();

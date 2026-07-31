@@ -5,6 +5,13 @@
   </FilesMatch>
 </IfModule>
 
+# The "Leak Finder" was renamed "Gap Finder" (2026-07-31). Anything already
+# linking to the old URLs — an email, a QR code, a prospect's bookmark —
+# still lands in the right place.
+Redirect 301 /leak-finder-demo.html /gap-finder-demo.html
+Redirect 301 /leak-map-demo.html /gap-map-demo.html
+Redirect 301 /assets/leak-quiz.js /assets/gap-quiz.js
+
 # Keep internal planning docs private: no HTTP access, no directory listing.
 Options -Indexes
 RedirectMatch 404 ^/docs(/|$)

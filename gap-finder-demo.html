@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leak Finder — Top Shelf (template)</title>
-<link rel="canonical" href="https://www.topshelfsolutions.io/leak-finder-demo.html">
+<title>Gap Finder — Top Shelf (template)</title>
+<link rel="canonical" href="https://www.topshelfsolutions.io/gap-finder-demo.html">
 <meta name="robots" content="noindex,follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Top Shelf Business Solutions">
-<meta property="og:title" content="Leak Finder — Top Shelf (template)">
+<meta property="og:title" content="Gap Finder — Top Shelf (template)">
 <meta property="og:description" content="One-stop digital modernization for local businesses.">
-<meta property="og:url" content="https://www.topshelfsolutions.io/leak-finder-demo.html">
+<meta property="og:url" content="https://www.topshelfsolutions.io/gap-finder-demo.html">
 <meta property="og:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Leak Finder — Top Shelf (template)">
+<meta name="twitter:title" content="Gap Finder — Top Shelf (template)">
 <meta name="twitter:description" content="One-stop digital modernization for local businesses.">
 <meta name="twitter:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
 <style>
@@ -27,15 +27,15 @@
 <body>
   <div class="demo">
     <h1>Your website content sits here.</h1>
-    <p>The Leak Finder pops up automatically (≈6s / exit-intent / scroll), or open it manually:</p>
-    <button onclick="TSLeak.open()">Open the Leak Finder</button>
+    <p>The Gap Finder pops up automatically (≈6s / exit-intent / scroll), or open it manually:</p>
+    <button onclick="TSGap.open()">Open the Gap Finder</button>
   </div>
 
 <!-- ============================================================
-     TOP SHELF — LEAK FINDER (Quiz A)   ·  reusable template
+     TOP SHELF — GAP FINDER (Quiz A)   ·  reusable template
      To rebrand: edit ONLY the CONFIG object below. Nothing else.
      To embed on a live site: copy this entire <script> block
-     (rename to leak-finder.js and <script src> it) — it self-injects
+     (rename to gap-finder.js and <script src> it) — it self-injects
      its own styles + markup. See REBRAND.md.
      ============================================================ -->
 <script>
@@ -48,7 +48,7 @@ var CONFIG = {
     name: "Top Shelf",
     logoText: "TOP SHELF",           /* or set logoUrl to an <img> src */
     logoUrl: "",
-    kicker: "Business Leak Finder",
+    kicker: "Business Gap Finder",
     colors: {
       ground:"#0B0906", surface:"#100C08", gold:"#C9A86A", goldBright:"#E4C98A",
       ink:"#F4F0E8", ink2:"#CFC7B8", ink3:"#98907F", ink4:"#6E675A",
@@ -68,15 +68,15 @@ var CONFIG = {
     currency: "$",
     leadEndpoint: "",       /* POST url for the lead. Empty = demo mode (logs to console) */
     reopen: true,           /* show a small re-open tab after dismiss */
-    reopenLabel: "Find your leaks"
+    reopenLabel: "Find your gap"
   },
   intro: {
     eyebrow: "60-second business check",
-    headline: "Where is your business <em>leaking money?</em>",
+    headline: "Where is your business <em>losing money?</em>",
     sub: "No forms, no typing — just tap what sounds familiar. We'll show you where you're likely losing customers and what it's costing.",
-    cta: "Find my leaks"
+    cta: "Find my gap"
   },
-  /* Each AREA = one step. Each symptom carries a rough monthly $ leak + which solution fixes it. */
+  /* Each AREA = one step. Each symptom carries a rough monthly $ gap + which solution fixes it. */
   areas: [
     { eyebrow:"Getting found", icon:"map-pin",
       question:"When someone needs what you do, how easily do they find you?",
@@ -126,8 +126,8 @@ var CONFIG = {
   industries: ["Home services","Restaurant / bar","Medical / dental","Law firm","Retail / local","Auto","Salon / spa / fitness","Other"],
   thankYou: {
     title: "Thank you — this is exactly what we needed.",
-    body: "We&rsquo;ve mapped your leaks. A Top Shelf specialist will reach out within one business day to walk you through what each one is costing you — and how we&rsquo;d plug it. No pressure, just your numbers.",
-    note: "Keep an eye on your phone. Your leak report is on the way."
+    body: "We&rsquo;ve mapped your gaps. A Top Shelf specialist will reach out within one business day to walk you through what each one is costing you — and how we&rsquo;d plug it. No pressure, just your numbers.",
+    note: "Keep an eye on your phone. Your gap report is on the way."
   }
 };
 /* ===================== END CONFIG ===================== */
@@ -151,11 +151,11 @@ CONFIG.areas.forEach(function(a){a.symptoms.forEach(function(s){MAX+=s.monthly;}
 var root, stage, moneyEl, yrEl, barEl, dotsEl, navEl, opened=false;
 
 function css(){
-  if(document.getElementById('tsleak-fonts')){}else{var l=document.createElement('link');l.id='tsleak-fonts';l.rel='stylesheet';l.href=B.fontImport;document.head.appendChild(l);}
+  if(document.getElementById('tsgap-fonts')){}else{var l=document.createElement('link');l.id='tsgap-fonts';l.rel='stylesheet';l.href=B.fontImport;document.head.appendChild(l);}
   var s=document.createElement('style');s.textContent=
-  '#tsleak,#tsleak *{box-sizing:border-box}'+
-  '#tsleak{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:rgba(6,5,3,.62);padding:20px;font-family:'+B.fontBody+'}'+
-  '#tsleak.show{display:flex}'+
+  '#tsgap,#tsgap *{box-sizing:border-box}'+
+  '#tsgap{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:rgba(6,5,3,.62);padding:20px;font-family:'+B.fontBody+'}'+
+  '#tsgap.show{display:flex}'+
   '.tsl-card{width:100%;max-width:540px;max-height:92vh;overflow:auto;background:'+C.ground+';border:1px solid '+C.hairline+';border-radius:18px;padding:26px;color:'+C.ink2+';position:relative}'+
   '.tsl-eb{font-weight:500;font-size:11px;letter-spacing:2.4px;color:'+C.gold+';text-transform:uppercase}'+
   '.tsl-h{font-family:'+B.fontDisplay+';font-weight:500;color:'+C.ink+';margin:6px 0 0;line-height:1.15}'+
@@ -170,13 +170,13 @@ function css(){
   '.tsl-in{width:100%;background:'+C.surface+';border:1px solid rgba(201,168,106,.25);border-radius:10px;padding:11px 12px;color:'+C.ink+';font-family:'+B.fontBody+';font-size:14px;margin-top:8px}'+
   '.tsl-dot{width:7px;height:7px;border-radius:50%;background:rgba(201,168,106,.25)}.tsl-dot.on{background:'+C.gold+'}'+
   '.tsl-icn{color:'+C.gold+';flex:0 0 auto}'+
-  '#tsleak-tab{position:fixed;right:16px;bottom:16px;z-index:99998;background:'+C.gold+';color:'+C.ground+';border:0;border-radius:30px;padding:11px 16px;font-family:'+B.fontBody+';font-weight:500;font-size:13px;cursor:pointer;display:none;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}'+
-  '@media(max-width:560px){.tsl-card{max-width:100%;max-height:100vh;min-height:100vh;border-radius:0}#tsleak{padding:0}}';
+  '#tsgap-tab{position:fixed;right:16px;bottom:16px;z-index:99998;background:'+C.gold+';color:'+C.ground+';border:0;border-radius:30px;padding:11px 16px;font-family:'+B.fontBody+';font-weight:500;font-size:13px;cursor:pointer;display:none;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}'+
+  '@media(max-width:560px){.tsl-card{max-width:100%;max-height:100vh;min-height:100vh;border-radius:0}#tsgap{padding:0}}';
   document.head.appendChild(s);
 }
 
 function build(){
-  root=document.createElement('div');root.id='tsleak';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Business leak finder');
+  root=document.createElement('div');root.id='tsgap';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Business gap finder');
   var logo = B.logoUrl ? '<img src="'+B.logoUrl+'" alt="'+B.name+'" style="height:22px">' : '<span style="font-weight:500;letter-spacing:1.5px;color:'+C.ink+';font-size:14px">'+B.logoText+'</span>';
   root.innerHTML =
   '<div class="tsl-card">'+
@@ -186,7 +186,7 @@ function build(){
     '</div>'+
     (BE.showDollars?
     '<div id="tsl-meter" style="background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:13px;padding:14px 16px;margin-bottom:18px;display:none">'+
-      '<div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Money leaking / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div>'+
+      '<div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Gap / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div>'+
       '<div id="tsl-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:40px;color:'+C.goldBright+';line-height:1.1">'+BE.currency+'0</div>'+
       '<div style="height:5px;background:rgba(201,168,106,.14);border-radius:4px;margin-top:8px;overflow:hidden"><div id="tsl-bar" style="height:100%;width:0;background:'+C.gold+';transition:width .5s"></div></div>'+
       '<div style="color:'+C.ink4+';font-size:10.5px;margin-top:6px">Rough industry estimate — not a guarantee.</div>'+
@@ -199,7 +199,7 @@ function build(){
   root.querySelector('#tsl-close').onclick=close;
   root.addEventListener('click',function(e){if(e.target===root)close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened)close();});
-  if(BE.reopen){var tab=document.createElement('button');tab.id='tsleak-tab';tab.textContent=CONFIG.behavior.reopenLabel;tab.onclick=open;document.body.appendChild(tab);}
+  if(BE.reopen){var tab=document.createElement('button');tab.id='tsgap-tab';tab.textContent=CONFIG.behavior.reopenLabel;tab.onclick=open;document.body.appendChild(tab);}
 }
 
 function fmt(n){return BE.currency+Math.round(n).toLocaleString();}
@@ -225,36 +225,36 @@ function step(){var a=CONFIG.areas[cur];dots(cur,CONFIG.areas.length);var tr=tra
   h+='</div><p style="color:'+C.ink4+';font-size:11.5px;margin:12px 0 0">Tap any that sound familiar — leave blank if it&rsquo;s handled.</p>';
   stage.innerHTML=h;
   stage.querySelectorAll('.tsl-tile').forEach(function(b){b.onclick=function(){var i=+b.getAttribute('data-i');sel[cur]=sel[cur]||[];var p=sel[cur].indexOf(i);if(p>-1)sel[cur].splice(p,1);else sel[cur].push(i);step();meter();};});
-  navEl.innerHTML=(cur>0?'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>':'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>')+'<button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my leak report')+' →</button>';
+  navEl.innerHTML=(cur>0?'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>':'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>')+'<button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my gap report')+' →</button>';
   root.querySelector('#tsl-nx').onclick=function(){if(cur<CONFIG.areas.length-1){cur++;step();}else report();};
   root.querySelector('#tsl-bk').onclick=function(){if(cur>0){cur--;step();}else intro();};
 }
 function report(){dots(CONFIG.areas.length,CONFIG.areas.length+1);var t=total();var areas=[];
   for(var k in sel){if(sel[k].length){var sub=0;sel[k].forEach(function(i){sub+=CONFIG.areas[k].symptoms[i].monthly;});areas.push([CONFIG.areas[k].eyebrow.replace('&amp;','&'),sub,CONFIG.areas[k].solution,CONFIG.areas[k].solutionUrl]);}}
   areas.sort(function(a,b){return b[1]-a[1];});
-  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your leak report</div>';
-  h+='<h3 class="tsl-h" style="font-size:24px">You&rsquo;re likely leaking <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3>';
+  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your gap report</div>';
+  h+='<h3 class="tsl-h" style="font-size:24px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3>';
   h+='<p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year — a rough estimate from your answers.</p>';
   if(areas.length){h+='<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">';areas.forEach(function(a){h+='<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:10px 13px"><span style="color:'+C.ink+';font-size:13.5px">'+a[0]+' <span style="color:'+C.ink4+'">→ '+a[2]+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:18px">'+fmt(a[1])+'</span></div>';});h+='</div>';}
   else h+='<p style="color:'+C.ink3+'">Nothing selected yet — most owners have at least a couple. Tap Back and take a look.</p>';
-  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">Get your free, no-obligation leak audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We&rsquo;ll turn this into your real numbers — whether you work with us or not.</p>'+
+  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">Get your free, no-obligation gap audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We&rsquo;ll turn this into your real numbers — whether you work with us or not.</p>'+
    '<input class="tsl-in" id="tsl-name" placeholder="Your name"><input class="tsl-in" id="tsl-biz" placeholder="Business name">'+
    '<select class="tsl-in" id="tsl-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select>'+
    '<input class="tsl-in" id="tsl-contact" placeholder="Phone or email"></div>';
   stage.innerHTML=h;
-  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-submit">Send my leak report →</button>';
+  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-submit">Send my gap report →</button>';
   root.querySelector('#tsl-bk').onclick=function(){cur=CONFIG.areas.length-1;step();};
   root.querySelector('#tsl-submit').onclick=submit;
 }
 function submit(){
   var lead={name:val('tsl-name'),business:val('tsl-biz'),industry:val('tsl-ind'),contact:val('tsl-contact'),
     total_monthly:total(), total_annual:total()*12, currency:BE.currency,
-    leaks:[], source:location.href, ts:new Date().toISOString(), quiz:"leak-finder-A"};
-  for(var k in sel){if(sel[k].length){lead.leaks.push({area:CONFIG.areas[k].eyebrow.replace('&amp;','&'),solution:CONFIG.areas[k].solution,
+    gaps:[], source:location.href, ts:new Date().toISOString(), quiz:"gap-finder-A"};
+  for(var k in sel){if(sel[k].length){lead.gaps.push({area:CONFIG.areas[k].eyebrow.replace('&amp;','&'),solution:CONFIG.areas[k].solution,
     symptoms:sel[k].map(function(i){return CONFIG.areas[k].symptoms[i].label.replace(/&[a-z]+;/g,"'");}),
     monthly:sel[k].reduce(function(a,i){return a+CONFIG.areas[k].symptoms[i].monthly;},0)});}}
   if(BE.leadEndpoint){try{fetch(BE.leadEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(lead)}).catch(function(){});}catch(e){}}
-  else{console.log("[Leak Finder] demo mode — lead captured:",lead);}
+  else{console.log("[Gap Finder] demo mode — lead captured:",lead);}
   thanks();
 }
 function thanks(){dotsEl.innerHTML='';navEl.innerHTML='';setMeterVisible(false);
@@ -267,19 +267,19 @@ function thanks(){dotsEl.innerHTML='';navEl.innerHTML='';setMeterVisible(false);
 }
 function val(id){var e=root.querySelector('#'+id);return e?e.value:'';}
 
-function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tsleak-tab');if(t)t.style.display='none';if(!stage.innerHTML)intro();}
-function close(){opened=false;root.classList.remove('show');document.documentElement.style.overflow='';try{localStorage.setItem('tsleak_dismissed',Date.now());}catch(e){}if(BE.reopen){var t=document.getElementById('tsleak-tab');if(t)t.style.display='block';}}
+function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tsgap-tab');if(t)t.style.display='none';if(!stage.innerHTML)intro();}
+function close(){opened=false;root.classList.remove('show');document.documentElement.style.overflow='';try{localStorage.setItem('tsgap_dismissed',Date.now());}catch(e){}if(BE.reopen){var t=document.getElementById('tsgap-tab');if(t)t.style.display='block';}}
 
 function armTriggers(){
-  var fired=false;function go(){if(fired)return;fired=true;try{sessionStorage.setItem('tsleak_shown','1');}catch(e){}open();}
-  try{var d=+localStorage.getItem('tsleak_dismissed');if(d&&(Date.now()-d)<BE.dismissDays*864e5){if(BE.reopen){var t=document.getElementById('tsleak-tab');if(t)t.style.display='block';}return;}}catch(e){}
-  if(BE.oncePerSession){try{if(sessionStorage.getItem('tsleak_shown')){if(BE.reopen){var tb=document.getElementById('tsleak-tab');if(tb)tb.style.display='block';}return;}}catch(e){}}
+  var fired=false;function go(){if(fired)return;fired=true;try{sessionStorage.setItem('tsgap_shown','1');}catch(e){}open();}
+  try{var d=+localStorage.getItem('tsgap_dismissed');if(d&&(Date.now()-d)<BE.dismissDays*864e5){if(BE.reopen){var t=document.getElementById('tsgap-tab');if(t)t.style.display='block';}return;}}catch(e){}
+  if(BE.oncePerSession){try{if(sessionStorage.getItem('tsgap_shown')){if(BE.reopen){var tb=document.getElementById('tsgap-tab');if(tb)tb.style.display='block';}return;}}catch(e){}}
   if(BE.triggerSeconds!=null)setTimeout(go,BE.triggerSeconds*1000);
   if(BE.scrollPercent){window.addEventListener('scroll',function ons(){var sp=(scrollY)/(document.body.scrollHeight-innerHeight)*100;if(sp>=BE.scrollPercent){go();window.removeEventListener('scroll',ons);}},{passive:true});}
   if(BE.exitIntent)document.addEventListener('mouseout',function(e){if(e.clientY<=0)go();});
 }
 
-function init(){css();build();armTriggers();window.TSLeak={open:open,close:close};}
+function init(){css();build();armTriggers();window.TSGap={open:open,close:close};}
 if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
 })();
 </script>

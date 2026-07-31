@@ -16,7 +16,7 @@
    Identity preserved: espresso ground, gold accent,
    Cormorant Garamond + Jost.
    Rebuilt composition: split hero with real imagery, marginalia
-   leak ledger, a gold-drenched process movement, photographic
+   gap ledger, a gold-drenched process movement, photographic
    industry mosaic, a receipt-form comparison. One kicker, once.
    ============================================================ */
 
@@ -300,28 +300,28 @@ body.mm-open{ overflow:hidden; }
 @keyframes cue{ 0%{transform:translateX(-100%)} 55%{transform:translateX(100%)} 100%{transform:translateX(100%)} }
 
 /* ============================================================
-   THE LEAKS — marginalia, not a metric bar.
+   THE GAPS — marginalia, not a metric bar.
    Figures sit in the margin like footnotes to the argument.
    ============================================================ */
-.leaks{ display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:clamp(2.5rem,6vw,6rem); align-items:start; }
-.leaks-aside{ position:sticky; top:130px; }
-.leaks-note{
+.gaps{ display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:clamp(2.5rem,6vw,6rem); align-items:start; }
+.gaps-aside{ position:sticky; top:130px; }
+.gaps-note{
   margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--hairline-soft);
   font-size:.8rem; color:var(--ink-3); letter-spacing:.03em; max-width:34ch;
 }
-.leak-list{ border-top:1px solid var(--hairline); }
-.leak{
+.gap-list{ border-top:1px solid var(--hairline); }
+.gap{
   display:grid; grid-template-columns:minmax(7.5rem,10rem) minmax(0,1fr);
   gap:clamp(1.2rem,3vw,2.6rem); align-items:baseline;
   padding:clamp(1.7rem,3vw,2.4rem) 0; border-bottom:1px solid var(--hairline-soft);
 }
-.leak-fig{
+.gap-fig{
   font-family:var(--serif); font-weight:400; font-size:clamp(2.6rem,4.2vw,3.6rem);
   color:var(--gold-bright); line-height:.9; letter-spacing:-.03em;
   font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right;
 }
-.leak-name{ font-family:var(--serif); font-size:clamp(1.25rem,1.9vw,1.6rem); color:var(--ink); font-weight:500; margin-bottom:.5rem; letter-spacing:-.01em; }
-.leak-body{ font-size:.93rem; color:var(--ink-2); line-height:1.75; max-width:56ch; text-wrap:pretty; }
+.gap-name{ font-family:var(--serif); font-size:clamp(1.25rem,1.9vw,1.6rem); color:var(--ink); font-weight:500; margin-bottom:.5rem; letter-spacing:-.01em; }
+.gap-body{ font-size:.93rem; color:var(--ink-2); line-height:1.75; max-width:56ch; text-wrap:pretty; }
 
 /* ============================================================
    PROCESS — the gold-drenched movement. A different world.
@@ -559,8 +559,8 @@ body.mm-open{ overflow:hidden; }
   }
   .hero-caption{ display:none; }
   .scroll-cue{ display:none; }
-  .leaks{ grid-template-columns:1fr; }
-  .leaks-aside{ position:static; }
+  .gaps{ grid-template-columns:1fr; }
+  .gaps-aside{ position:static; }
 }
 @media (max-width:860px){
   .nav-links, .nav-cta .btn{ display:none; }
@@ -580,8 +580,8 @@ body.mm-open{ overflow:hidden; }
   .tab tfoot td{ padding-left:0 !important; }
 }
 @media (max-width:560px){
-  .leak{ grid-template-columns:1fr; gap:.7rem; }
-  .leak-fig{ font-size:2.6rem; }
+  .gap{ grid-template-columns:1fr; gap:.7rem; }
+  .gap-fig{ font-size:2.6rem; }
   .mosaic{ grid-template-columns:1fr; }
   .tile{ aspect-ratio:16/11; }
   .footer-grid{ grid-template-columns:1fr; }
@@ -644,10 +644,10 @@ body.mm-open{ overflow:hidden; }
   <div class="hero-type">
     <span class="kicker hero-kicker" data-rise>We Solve. You Grow.</span>
     <h1 class="display d-hero hero-title">
-      <span class="hero-line" data-mask><span>Stop Losing Money</span></span>
-      <span class="hero-line" data-mask><span>to <em>Leaks You Can&rsquo;t See</em></span></span>
+      <span class="hero-line" data-mask><span>Find the Gap</span></span>
+      <span class="hero-line" data-mask><span><em>That&rsquo;s Costing You</em></span></span>
     </h1>
-    <p class="hero-sub" data-rise>You&rsquo;re not losing money because your work is bad. You&rsquo;re losing it to the leaks &mdash; missed calls, forgotten follow-ups, reviews you never asked for. We plug the leaks and grow what&rsquo;s left, so you take home more while doing less.</p>
+    <p class="hero-sub" data-rise>You&rsquo;re not losing money because your work is bad. You&rsquo;re losing it to the gaps &mdash; missed calls, forgotten follow-ups, reviews you never asked for. We close the gaps and grow what&rsquo;s left, so you take home more while doing less.</p>
     <div class="hero-actions" data-rise>
       <a href="../contact.html" class="btn btn-gold">Get Your Free Business Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
       <a href="../pricing.html" class="btn btn-line">See Pricing</a>
@@ -667,43 +667,43 @@ body.mm-open{ overflow:hidden; }
   <span class="scroll-cue" aria-hidden="true"><i></i> Where it goes</span>
 </header>
 
-<!-- ============================ THE LEAKS ============================ -->
+<!-- ============================ THE GAPS ============================ -->
 <section class="sec ruled">
   <div class="container">
-    <div class="leaks">
-      <div class="leaks-aside">
-        <h2 class="display d-lg" data-rise>Four Leaks, and <em>Nobody Sends a Bill</em></h2>
+    <div class="gaps">
+      <div class="gaps-aside">
+        <h2 class="display d-lg" data-rise>Four Gaps, and <em>Nobody Sends a Bill</em></h2>
         <p class="lead" data-rise style="margin-top:1.5rem">Nothing here shows up in your books as a loss. It just quietly never becomes revenue &mdash; and that&rsquo;s why it can run for years before anybody catches it.</p>
-        <p class="leaks-note" data-rise>Figures are industry averages for local businesses, not projections for yours. Your audit uses your own numbers.</p>
+        <p class="gaps-note" data-rise>Figures are industry averages for local businesses, not projections for yours. Your audit uses your own numbers.</p>
       </div>
 
-      <div class="leak-list">
-        <article class="leak" data-rise>
-          <p class="leak-fig">62%</p>
+      <div class="gap-list">
+        <article class="gap" data-rise>
+          <p class="gap-fig">62%</p>
           <div>
-            <h3 class="leak-name">The Phone Nobody Answers</h3>
-            <p class="leak-body">Nearly two out of three calls to local businesses go unanswered. Every one of them is a customer who dials the next name on the list &mdash; and that competitor picks up.</p>
+            <h3 class="gap-name">The Phone Nobody Answers</h3>
+            <p class="gap-body">Nearly two out of three calls to local businesses go unanswered. Every one of them is a customer who dials the next name on the list &mdash; and that competitor picks up.</p>
           </div>
         </article>
-        <article class="leak" data-rise>
-          <p class="leak-fig">$49K+</p>
+        <article class="gap" data-rise>
+          <p class="gap-fig">$49K+</p>
           <div>
-            <h3 class="leak-name">What Those Calls Are Worth</h3>
-            <p class="leak-body">The average annual revenue a single local business loses to missed calls. Not a rounding error &mdash; that&rsquo;s a truck, a hire, or a year of your own pay.</p>
+            <h3 class="gap-name">What Those Calls Are Worth</h3>
+            <p class="gap-body">The average annual revenue a single local business loses to missed calls. Not a rounding error &mdash; that&rsquo;s a truck, a hire, or a year of your own pay.</p>
           </div>
         </article>
-        <article class="leak" data-rise>
-          <p class="leak-fig">97%</p>
+        <article class="gap" data-rise>
+          <p class="gap-fig">97%</p>
           <div>
-            <h3 class="leak-name">The Reviews You Never Asked For</h3>
-            <p class="leak-body">97% of buyers read reviews before they choose, and 57% won&rsquo;t even consider a business under four stars. Your happiest customers would leave one. Nobody ever asks them.</p>
+            <h3 class="gap-name">The Reviews You Never Asked For</h3>
+            <p class="gap-body">97% of buyers read reviews before they choose, and 57% won&rsquo;t even consider a business under four stars. Your happiest customers would leave one. Nobody ever asks them.</p>
           </div>
         </article>
-        <article class="leak" data-rise>
-          <p class="leak-fig">73%</p>
+        <article class="gap" data-rise>
+          <p class="gap-fig">73%</p>
           <div>
-            <h3 class="leak-name">The Follow-Up That Never Happened</h3>
-            <p class="leak-body">Nearly three quarters of leads are never contacted again after the first touch. The job doesn&rsquo;t go to the best quote. It goes to whoever followed up.</p>
+            <h3 class="gap-name">The Follow-Up That Never Happened</h3>
+            <p class="gap-body">Nearly three quarters of leads are never contacted again after the first touch. The job doesn&rsquo;t go to the best quote. It goes to whoever followed up.</p>
           </div>
         </article>
       </div>
@@ -715,7 +715,7 @@ body.mm-open{ overflow:hidden; }
 <section class="drench">
   <div class="container">
     <div class="drench-head">
-      <h2 class="display d-lg" data-rise style="max-width:16ch">From Leaky to <em>Unstoppable</em> in Three Steps</h2>
+      <h2 class="display d-lg" data-rise style="max-width:16ch">From Gaps to <em>Unstoppable</em> in Three Steps</h2>
       <p data-rise>No retainer to sign before you find out what&rsquo;s wrong. Step one costs you nothing and you keep the findings either way.</p>
     </div>
 
@@ -749,7 +749,7 @@ body.mm-open{ overflow:hidden; }
   <div class="container wide">
     <div class="opener">
       <h2 class="display d-lg" data-rise>Find <em>Your Industry</em></h2>
-      <p class="lead" data-rise>Pick your world and we&rsquo;ll show you the exact leaks costing businesses like yours &mdash; what they run to, how we plug them, and what it does to your bottom line.</p>
+      <p class="lead" data-rise>Pick your world and we&rsquo;ll show you the exact gaps costing businesses like yours &mdash; what they run to, how we close them, and what it does to your bottom line.</p>
     </div>
 
     <div class="mosaic">
@@ -828,7 +828,7 @@ body.mm-open{ overflow:hidden; }
   <div class="container">
     <div class="opener">
       <h2 class="display d-lg" data-rise>Five Services. <em>One Flywheel.</em></h2>
-      <p class="lead" data-rise>Each one plugs a specific leak. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
+      <p class="lead" data-rise>Each one closes a specific gap. Run together, they keep working while you&rsquo;re on a job, at home, or asleep.</p>
     </div>
 
     <div class="stack">
@@ -1002,7 +1002,7 @@ body.mm-open{ overflow:hidden; }
 <section class="sec ruled">
   <div class="container">
     <div class="opener">
-      <h2 class="display d-lg" data-rise>What Plugging the Leaks <em>Actually Looks Like</em></h2>
+      <h2 class="display d-lg" data-rise>What Closing the Gaps <em>Actually Looks Like</em></h2>
     </div>
     <div class="proof">
       <article class="case" data-rise>
@@ -1035,7 +1035,7 @@ body.mm-open{ overflow:hidden; }
   <div class="container">
     <img src="../assets/logo-mark.png" alt="" class="close-mark" data-rise>
     <h2 class="close-title" data-rise>Get Your Free<br><em>Business Audit</em></h2>
-    <p class="close-sub" data-rise>We&rsquo;ll show you where your business is leaking money &mdash; your calls, your reviews, your follow-up, your rankings. You walk away with real numbers whether you hire us or not.</p>
+    <p class="close-sub" data-rise>We&rsquo;ll show you where your gap is &mdash; your calls, your reviews, your follow-up, your rankings. You walk away with real numbers whether you hire us or not.</p>
     <div class="close-actions" data-rise>
       <a href="../contact.html" class="btn btn-gold">Get My Free Audit <span class="arr" aria-hidden="true">&rarr;</span></a>
       <a href="../why-us.html" class="btn btn-line">Why Top Shelf</a>
@@ -1191,8 +1191,8 @@ body.mm-open{ overflow:hidden; }
     });
   }
 
-  group('.leaks-aside', { stagger: .1 });
-  group('.leak');                       /* each leak ticks in on its own line */
+  group('.gaps-aside', { stagger: .1 });
+  group('.gap');                       /* each gap ticks in on its own line */
   group('.drench .drench-head', { stagger: .12 });
   group('.steps', { stagger: .13 });
   group('.drench-foot');
