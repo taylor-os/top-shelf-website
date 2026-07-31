@@ -749,3 +749,43 @@ body.mm-open{ overflow:hidden; }
 @media (prefers-reduced-motion:reduce){
   .bottle-frame img{ transition-duration:.15s; }
 }
+
+/* ============================================================
+   HERO PHOTOGRAPHY (2026-07-31)
+   Full-bleed photograph behind the homepage hero and the interior
+   page heroes. The scrim does the real work: heavy where the type
+   sits, lighter where it doesn't, so the photograph still reads.
+   Body copy stays above 4.5:1 on both.
+   ============================================================ */
+
+/* --- homepage hero: type is left-aligned, so weight the scrim left --- */
+.hero{ isolation:isolate; }
+.hero-photo{ position:absolute; inset:0; z-index:-2; overflow:hidden; }
+.hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 50%; }
+.hero-photo::after{
+  content:""; position:absolute; inset:0;
+  background:
+    linear-gradient(90deg, rgba(11,9,6,.94) 0%, rgba(11,9,6,.86) 34%, rgba(11,9,6,.55) 68%, rgba(11,9,6,.42) 100%),
+    linear-gradient(180deg, rgba(11,9,6,.88) 0%, rgba(11,9,6,.10) 26%, rgba(11,9,6,.30) 70%, var(--ground) 100%);
+}
+/* the photograph replaces the old logo watermark */
+.hero:has(.hero-photo) .hero-mark{ display:none; }
+
+/* --- interior page heroes: type is centred, so scrim from the centre --- */
+.page-hero{ isolation:isolate; }
+.page-hero-photo{ position:absolute; inset:0; z-index:-2; overflow:hidden; }
+.page-hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 50%; }
+.page-hero-photo::after{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(120% 100% at 50% 45%, rgba(11,9,6,.86) 0%, rgba(11,9,6,.90) 45%, rgba(11,9,6,.72) 100%),
+    linear-gradient(180deg, rgba(11,9,6,.92) 0%, rgba(11,9,6,.45) 30%, rgba(11,9,6,.75) 78%, var(--ground) 100%);
+}
+@media (max-width:860px){
+  /* less horizontal room on a phone: darken evenly so nothing gets thin */
+  .hero-photo::after{
+    background:
+      linear-gradient(90deg, rgba(11,9,6,.92) 0%, rgba(11,9,6,.80) 100%),
+      linear-gradient(180deg, rgba(11,9,6,.86) 0%, rgba(11,9,6,.32) 30%, var(--ground) 100%);
+  }
+}
