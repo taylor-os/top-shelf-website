@@ -47,20 +47,22 @@
 .orb-d-b{ display:block; font-size:.83rem; color:var(--ink-2); line-height:1.6; }
 .orb-d-go{ display:block; margin-top:.8rem; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); }
 
+/* Anchor on the chip, not on chip+label, so the ring passes through the chip
+   centre. See the same note in site.css. */
 .orb-node{
-  position:absolute; top:50%; left:50%; width:150px; margin:-56px 0 0 -75px;
+  position:absolute; top:50%; left:50%; width:150px; height:54px; margin:-27px 0 0 -75px;
   transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
-  display:grid; justify-items:center; gap:.6rem; text-align:center;
+  display:block; text-align:center;
 }
 .orb-chip{
-  width:54px; height:54px; border-radius:50%; display:grid; place-items:center;
+  width:54px; height:54px; margin-inline:auto; border-radius:50%; display:grid; place-items:center;
   border:1px solid var(--hairline-strong); color:var(--gold); background:var(--ground);
   transition:border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
 }
 .orb-node:hover .orb-chip, .orb-node:focus-visible .orb-chip{
   border-color:var(--gold); color:var(--gold-bright); background:var(--surface-2); transform:translateY(-3px);
 }
-.orb-name{ font-size:.82rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
+.orb-name{ position:absolute; top:calc(100% + .55rem); left:0; right:0; font-size:.82rem; line-height:1.35; color:var(--ink-2); transition:color .3s var(--ease); }
 .orb-node:hover .orb-name{ color:var(--gold-bright); }
 
 /* ============================================================
@@ -187,8 +189,10 @@
   }
   .orb-centre .orb-detail{ display:none; }
   .orb-node, .dial-node, .mom-node, .go-node{
-    position:static; width:auto; margin:0; transform:none; justify-items:center;
+    position:static; width:auto; height:auto; margin:0; transform:none;
+    display:grid; justify-items:center; gap:.6rem;
   }
+  .orb-name{ position:static; }
   .go-grp{ position:static; width:auto; margin:0; transform:none; grid-column:1 / -1;
     text-align:left; font-size:1.1rem; padding-top:.8rem; border-top:1px solid var(--hairline); }
   .tk-item{ width:220px; }
