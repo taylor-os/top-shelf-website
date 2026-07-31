@@ -64,7 +64,7 @@
 
 <section class="hero">
   <div class="hero-photo">
-    <img id="heroImg" src="../assets/img/hero/hero-1-main-street.png" alt="">
+    <img id="heroImg" src="../assets/img/hero/hero-a-pos-counter.webp" alt="">
   </div>
 
   <div class="container hero-inner">
@@ -105,15 +105,16 @@
 
 </div>
 
-<p class="note">Same hero, same scrim &mdash; only the photograph changes.</p>
+<p class="note">Digital modernization set &mdash; same hero, same scrim, only the photograph changes.</p>
 
 <div class="picker" role="group" aria-label="Hero photo options">
   <span class="lbl">Photo</span>
-  <button data-src="hero-1-main-street" aria-pressed="true">1 &middot; Main street</button>
-  <button data-src="hero-2-back-office" aria-pressed="false">2 &middot; Back office</button>
-  <button data-src="hero-3-open-sign" aria-pressed="false">3 &middot; Open sign</button>
-  <button data-src="hero-4-counter" aria-pressed="false">4 &middot; Counter</button>
-  <button data-src="hero-5-top-shelf" aria-pressed="false">5 &middot; Top shelf</button>
+  <button data-src="hero-a-pos-counter" aria-pressed="true">A &middot; Shop counter</button>
+  <button data-src="hero-b-workbench" aria-pressed="false">B &middot; Workbench</button>
+  <button data-src="hero-c-reception" aria-pressed="false">C &middot; Reception</button>
+  <button data-src="hero-d-desk" aria-pressed="false">D &middot; Desk</button>
+  <button data-src="hero-e-shop-dusk" aria-pressed="false">E &middot; Shop at dusk</button>
+  <button data-src="hero-f-shop-lowkey" aria-pressed="false">F &middot; Corner shop, low key</button>
 </div>
 
 <script>
@@ -121,7 +122,7 @@
   var img = document.getElementById('heroImg');
   var btns = [].slice.call(document.querySelectorAll('.picker button'));
   function pick(b) {
-    img.src = '../assets/img/hero/' + b.dataset.src + '.png';
+    img.src = '../assets/img/hero/' + b.dataset.src + '.webp';
     btns.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
     try { history.replaceState(null, '', '#' + b.dataset.src); } catch (e) {}
   }
