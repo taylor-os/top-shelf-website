@@ -462,7 +462,11 @@ body.mm-open{ overflow:hidden; }
    ============================================================ */
 .footer{ position:relative; z-index:2; border-top:1px solid var(--hairline); padding-block:clamp(4rem,7vw,6rem) 3rem; }
 .footer-grid{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:clamp(2rem,4vw,4rem); margin-bottom:4rem; }
-.footer-logo img{ height:42px; width:auto; margin-bottom:1.6rem; }
+.footer-logo img{ height:84px; width:auto; margin-bottom:1.6rem; max-width:100%; }
+/* The wordmark is 2.85:1, so at 84px tall it wants ~240px of width. The
+   footer's first column is the widest one, but cap it on small screens so
+   it can never outgrow the column. */
+@media (max-width:560px){ .footer-logo img{ height:64px; } }
 .footer-brand p{ font-size:.86rem; color:var(--ink-3); max-width:34ch; line-height:1.7; font-weight:300; }
 .footer-col-title{ font-size:.72rem; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); margin-bottom:1.4rem; }
 .footer-links{ display:flex; flex-direction:column; gap:.85rem; }
