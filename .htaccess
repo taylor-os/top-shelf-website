@@ -12,6 +12,14 @@ Redirect 301 /leak-finder-demo.html /gap-finder-demo.html
 Redirect 301 /leak-map-demo.html /gap-map-demo.html
 Redirect 301 /assets/leak-quiz.js /assets/gap-quiz.js
 
+# A local homepage review copy was deployed by accident. Removing it from the
+# repo is NOT enough — this host adds and updates files on deploy but never
+# deletes them, so it stayed live at 200 with index,follow and the homepage's
+# full content. Redirect it away, which also consolidates anything that linked
+# to it. Any future *-review.html copy is covered by the same rule.
+Redirect 301 /home-centered-review.html /
+RedirectMatch 301 ^/.+-review\.html$ /
+
 # Keep internal planning docs private: no HTTP access, no directory listing.
 Options -Indexes
 RedirectMatch 404 ^/docs(/|$)
