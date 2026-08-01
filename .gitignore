@@ -1,0 +1,7 @@
+
+# Local review copies of live pages. These duplicate a real page's content and
+# carry index,follow, so deploying one creates a genuine duplicate-content
+# problem. Keep them local; they are not deliverables.
+home-centered-review.html
+*-review.html
+*.local.html
