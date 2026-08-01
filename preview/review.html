@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Top Shelf — Review</title>
+<link rel="icon" href="../assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=20260731d">
+<style>
+  body{ padding:clamp(2rem,5vw,4rem) 0 6rem; }
+  .wrap{ max-width:1020px; margin-inline:auto; padding-inline:var(--gutter); }
+  h1{ font-family:var(--serif); font-weight:500; font-size:clamp(2.2rem,4.4vw,3.2rem); color:var(--ink);
+      letter-spacing:-.02em; line-height:1.05; margin-bottom:.8rem; }
+  .sub{ color:var(--ink-2); max-width:64ch; line-height:1.8; }
+  h2{ font-family:var(--serif); font-weight:500; font-size:clamp(1.5rem,2.4vw,2rem); color:var(--ink);
+      margin:clamp(2.6rem,5vw,3.6rem) 0 1.2rem; padding-top:1.6rem; border-top:1px solid var(--hairline); }
+  h2:first-of-type{ border-top:0; }
+  .chips{ display:flex; gap:.5rem; flex-wrap:wrap; margin:1.4rem 0 0; }
+  .chip{ font-family:var(--sans); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+      padding:.42rem .85rem; border-radius:100px; border:1px solid; }
+  .chip.ok{ color:var(--gold-bright); border-color:var(--hairline-strong); background:rgba(201,168,106,.07); }
+  .chip.warn{ color:#E2A05A; border-color:rgba(226,160,90,.35); background:rgba(226,160,90,.07); }
+  .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+  .card{ border:1px solid var(--hairline); border-radius:var(--r-lg); padding:1.4rem 1.5rem; background:var(--surface);
+      transition:border-color .3s var(--ease), transform .3s var(--ease); display:block; }
+  .card:hover{ border-color:var(--gold); transform:translateY(-3px); }
+  .card b{ display:block; font-family:var(--serif); font-weight:500; font-size:1.2rem; color:var(--ink); margin-bottom:.4rem; }
+  .card:hover b{ color:var(--gold-bright); }
+  .card span{ display:block; font-size:.88rem; color:var(--ink-3); line-height:1.65; }
+  .card em{ display:block; font-style:normal; margin-top:.7rem; font-family:var(--sans); font-size:.7rem;
+      letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep); }
+  .t{ width:100%; border-collapse:collapse; margin-top:.4rem; }
+  .t th{ text-align:left; font-family:var(--sans); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+      color:var(--gold); font-weight:400; padding:.7rem 0; border-bottom:1px solid var(--hairline); }
+  .t td{ padding:.75rem 0; border-bottom:1px solid var(--hairline-soft); font-size:.92rem; color:var(--ink-2); vertical-align:top; }
+  .t .n{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; padding-left:1.4rem; }
+  .t code{ font-family:var(--sans); font-size:.86rem; color:var(--ink); }
+  .fine{ color:var(--gold-bright); } .mid{ color:#E2A05A; } .bad{ color:#E2502A; }
+  .ni{ font-family:var(--sans); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-4);
+      border:1px solid var(--hairline-soft); border-radius:100px; padding:.1rem .45rem; margin-left:.5rem; }
+  .none{ color:var(--gold-bright); font-size:.95rem; }
+  ol.open{ margin:0; padding:0; list-style:none; counter-reset:o; }
+  ol.open li{ counter-increment:o; padding:1.1rem 0 1.1rem 2.6rem; border-bottom:1px solid var(--hairline-soft); position:relative; }
+  ol.open li::before{ content:counter(o,decimal-leading-zero); position:absolute; left:0; top:1.15rem;
+      font-family:var(--serif); font-style:italic; color:var(--gold-deep); }
+  ol.open b{ display:block; font-family:var(--serif); font-size:1.12rem; color:var(--ink); margin-bottom:.35rem; font-weight:500; }
+  ol.open span{ font-size:.9rem; color:var(--ink-3); line-height:1.7; }
+  .note{ margin-top:1.2rem; font-size:.86rem; color:var(--ink-3); line-height:1.7; max-width:70ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Review</h1>
+  <p class="sub">Everything from this round in one place: what is live, what is still your choice,
+  and the duplicate-content audit. Every link opens the real page.</p>
+  <div class="chips">
+    <span class="chip ok">29 pages audited</span>
+    <span class="chip ok">No near-duplicates</span>
+    <span class="chip ok">Titles unique</span>
+    <span class="chip ok">Descriptions unique</span>
+    <span class="chip ok">Canonicals correct</span>
+  </div>
+
+  <h2>Live now</h2>
+  <div class="cards">
+    <a class="card" href="../index.html"><b>Homepage</b><span>Corner-shop hero photo, the ten-service orbit at Large with the mark at its centre, photographic industry shelf, and the gap wording throughout.</span><em>Open &rarr;</em></a><a class="card" href="../solution-crm.html"><b>Solution pages (10)</b><span>Every one now has its own hero photograph, shot for what that page actually sells. Linked here is CRM &amp; Follow-Up; the other nine are in the Solutions menu.</span><em>Open &rarr;</em></a><a class="card" href="../industry-home-services.html"><b>Industry pages (8)</b><span>Gap wording throughout. The curated per-industry systems sections were deliberately left alone &mdash; they are tailored, not generic.</span><em>Open &rarr;</em></a><a class="card" href="../gap-finder-demo.html"><b>Gap Finder</b><span>Renamed from Leak Finder, filenames included, with 301 redirects so old links still land.</span><em>Open &rarr;</em></a>
+  </div>
+
+  <h2>Still your choice</h2>
+  <div class="cards">
+    <a class="card" href="../preview/hero-options.html"><b>Hero photograph</b><span>Six candidates under the real scrim. Live: F, corner shop.</span><em>Compare &rarr;</em></a><a class="card" href="../preview/orbit-sizes.html"><b>Orbit size</b><span>Four proportional steps. Live: Large.</span><em>Compare &rarr;</em></a><a class="card" href="../preview/flywheel-options.html"><b>Flywheel treatment</b><span>Five refinements. Live: orbit with live centre.</span><em>Compare &rarr;</em></a><a class="card" href="../preview/solutions-options.html"><b>Section style</b><span>Five ways to present ten services.</span><em>Compare &rarr;</em></a><a class="card" href="../preview/index.html"><b>Homepage directions</b><span>The original three identity directions.</span><em>Compare &rarr;</em></a>
+  </div>
+
+  <h2>Duplicate content</h2>
+  <p class="note">Main content only &mdash; nav, footer, head and scripts are stripped first, because a shared
+  chrome across 29 pages is normal and Google discounts it. Similarity is Jaccard over 5-word
+  shingles, which is how near-duplicate detection actually works; a plain character-diff badly
+  over-reports on pages that share a vocabulary but say different things.</p>
+  <table class="t"><thead><tr><th>Pair</th><th class="n">Overlap</th><th>Read</th></tr></thead><tbody>
+<tr><td><code>gap-finder-demo.html</code><br><code>gap-map-demo.html</code></td><td class="n mid">52%</td><td>both noindex &mdash; invisible to Google</td></tr>
+<tr><td><code>solution-booking.html</code><br><code>solution-payments.html</code></td><td class="n fine">24%</td><td>both indexable</td></tr>
+<tr><td><code>solution-payments.html</code><br><code>solution-reviews.html</code></td><td class="n fine">24%</td><td>both indexable</td></tr>
+<tr><td><code>solution-booking.html</code><br><code>solution-reviews.html</code></td><td class="n fine">22%</td><td>both indexable</td></tr>
+<tr><td><code>index.html</code><br><code>pricing.html</code></td><td class="n fine">21%</td><td>both indexable</td></tr>
+<tr><td><code>solution-memberships.html</code><br><code>solution-payments.html</code></td><td class="n fine">21%</td><td>both indexable</td></tr>
+</tbody></table>
+
+  <h2>Content depth</h2>
+  <table class="t"><thead><tr><th>Page</th><th class="n">Words of main content</th></tr></thead><tbody><tr><td><code>gap-finder-demo.html</code> <span class="ni">noindex</span></td><td class="n mid">23</td></tr>
+<tr><td><code>gap-map-demo.html</code> <span class="ni">noindex</span></td><td class="n mid">23</td></tr>
+<tr><td><code>sample-report.html</code></td><td class="n bad">183</td></tr>
+<tr><td><code>thank-you.html</code> <span class="ni">noindex</span></td><td class="n mid">199</td></tr>
+<tr><td><code>contact.html</code></td><td class="n fine">387</td></tr>
+<tr><td><code>privacy.html</code></td><td class="n fine">432</td></tr>
+<tr><td><code>solution-payments.html</code></td><td class="n fine">595</td></tr>
+<tr><td><code>solution-booking.html</code></td><td class="n fine">636</td></tr>
+<tr><td><code>solution-reviews.html</code></td><td class="n fine">638</td></tr>
+<tr><td><code>solution-memberships.html</code></td><td class="n fine">807</td></tr>
+<tr><td><code>solution-automation.html</code></td><td class="n fine">1,040</td></tr>
+<tr><td><code>pricing.html</code></td><td class="n fine">1,058</td></tr>
+<tr><td><code>solution-websites-seo.html</code></td><td class="n fine">1,241</td></tr>
+<tr><td><code>solution-ai-phone.html</code></td><td class="n fine">1,263</td></tr>
+<tr><td><code>why-us.html</code></td><td class="n fine">1,264</td></tr>
+<tr><td><code>solution-crm.html</code></td><td class="n fine">1,305</td></tr>
+<tr><td><code>solution-marketing.html</code></td><td class="n fine">1,309</td></tr>
+<tr><td><code>solution-pos.html</code></td><td class="n fine">1,317</td></tr>
+<tr><td><code>index.html</code></td><td class="n fine">1,336</td></tr>
+<tr><td><code>industry-home-services.html</code></td><td class="n fine">1,612</td></tr>
+<tr><td><code>industry-bars.html</code> <span class="ni">noindex</span></td><td class="n fine">1,625</td></tr>
+<tr><td><code>industry-custom.html</code></td><td class="n fine">1,634</td></tr>
+<tr><td><code>industry-dental.html</code> <span class="ni">noindex</span></td><td class="n fine">1,668</td></tr>
+<tr><td><code>industry-salon-spa-fitness.html</code></td><td class="n fine">1,855</td></tr>
+<tr><td><code>industry-retail.html</code></td><td class="n fine">1,880</td></tr>
+<tr><td><code>industry-medical-dental.html</code></td><td class="n fine">1,895</td></tr>
+<tr><td><code>industry-legal.html</code></td><td class="n fine">2,006</td></tr>
+<tr><td><code>industry-restaurants.html</code></td><td class="n fine">2,029</td></tr>
+<tr><td><code>industry-auto.html</code></td><td class="n fine">2,130</td></tr></tbody></table>
+
+  <h2>Open questions</h2>
+  <ol class="open">
+    <li><b>Gap Finder popup opens over the orbit</b><span>It auto-opens on scroll and lands on the section that is now the centrepiece of that fold. Moving the trigger further down the page is a small change.</span></li><li><b>sample-report.html is thin and indexable</b><span>183 words of main content, in the sitemap. Fine if it is meant to be a lead-magnet landing page, worth a look if not.</span></li><li><b>Two orphan industry pages</b><span>industry-bars.html and industry-dental.html are live but unlinked and not in the sitemap. Both carry noindex so they are not a duplicate risk, but each self-canonicals rather than pointing at the page that replaced it.</span></li><li><b>robots.txt has two User-agent blocks</b><span>The second block&rsquo;s Disallow: /demo/ is probably being ignored. Pre-existing.</span></li>
+  </ol>
+
+  <p class="note" style="margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--hairline)">
+  Generated by <code>scripts/build_review.py</code>, which imports the audit rather than
+  re-implementing it, so these numbers are the audit&rsquo;s numbers. Re-run it any time the site changes.</p>
+
+</div>
+</body>
+</html>
