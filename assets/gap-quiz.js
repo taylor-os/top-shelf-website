@@ -10,7 +10,8 @@
 
 var CONFIG = {
   brand: {
-    name:"Top Shelf", logoText:"TOP SHELF", logoUrl:"", kicker:"Business Gap Finder",
+    name:"Top Shelf", logoText:"TOP SHELF", logoUrl:"assets/logo-mark.png", kicker:"Top Shelf Gap Finder",
+    title:"60-Second Business Check",
     colors:{ground:"#0B0906",surface:"#100C08",gold:"#C9A86A",goldBright:"#E4C98A",ink:"#F4F0E8",ink2:"#CFC7B8",ink3:"#98907F",ink4:"#6E675A",hairline:"rgba(201,168,106,.20)"},
     fontImport:"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap",
     fontDisplay:"'Cormorant Garamond',Georgia,serif", fontBody:"'Jost',system-ui,sans-serif"
@@ -69,7 +70,7 @@ function svg(n,s){return '<svg viewBox="0 0 24 24" width="'+(s||20)+'" height="'
 var B=CONFIG.brand,C=B.colors,BE=CONFIG.behavior;
 var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 var cur=0,sel={},shown=0,MAX=0;CONFIG.areas.forEach(function(a){a.symptoms.forEach(function(s){MAX+=s.monthly;});});
-var root,stage,moneyEl,yrEl,barEl,dotsEl,navEl,opened=false;
+var root,stage,moneyEl,yrEl,barEl,dotsEl,progEl,navEl,opened=false;
 
 function css(){
   if(!document.getElementById('tsgap-fonts')){var l=document.createElement('link');l.id='tsgap-fonts';l.rel='stylesheet';l.href=B.fontImport;document.head.appendChild(l);}
@@ -98,13 +99,13 @@ function build(){
   root=document.createElement('div');root.id='tsgap';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Business gap finder');
   var logo=B.logoUrl?'<img src="'+B.logoUrl+'" alt="'+B.name+'" style="height:22px">':'<span style="font-weight:500;letter-spacing:1.5px;color:'+C.ink+';font-size:14px">'+B.logoText+'</span>';
   root.innerHTML='<div class="tsl-card">'+
-    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><div style="display:flex;align-items:center;gap:9px"><span class="tsl-icn">'+svg("star",18)+'</span>'+logo+'<span style="color:'+C.ink4+';font-size:12px">· '+B.kicker+'</span></div><button id="tsl-close" aria-label="Close" style="background:none;border:0;color:'+C.ink4+';cursor:pointer">'+svg("x",18)+'</button></div>'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><div style="display:flex;align-items:center;gap:10px"><img src="'+B.logoUrl+'" alt="" style="width:30px;height:30px;flex:none;display:block"><span style="font-family:'+B.fontDisplay+';font-weight:600;font-size:16px;color:'+C.ink+';letter-spacing:.01em">'+B.kicker+'</span></div><button id="tsl-close" aria-label="Close" style="background:none;border:0;color:'+C.ink4+';cursor:pointer">'+svg("x",18)+'</button></div>'+
     (BE.showDollars?'<div id="tsl-meter" style="background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:13px;padding:14px 16px;margin-bottom:18px;display:none"><div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Gap / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div><div id="tsl-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:40px;color:'+C.goldBright+';line-height:1.1">'+BE.currency+'0</div><div style="height:5px;background:rgba(201,168,106,.14);border-radius:4px;margin-top:8px;overflow:hidden"><div id="tsl-bar" style="height:100%;width:0;background:'+C.gold+';transition:width .5s"></div></div><div style="color:'+C.ink4+';font-size:10.5px;margin-top:6px">Rough industry estimate — not a guarantee.</div></div>':'')+
     '<div id="tsl-stage"></div>'+
-    '<div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px"><div id="tsl-dots" style="display:flex;gap:6px"></div><div id="tsl-nav" style="display:flex;gap:10px"></div></div>'+
+    '<div style="margin-top:20px"><div id="tsl-prog" style="height:4px;background:rgba(201,168,106,.15);border-radius:4px;overflow:hidden;margin-bottom:14px"><div id="tsl-progfill" style="height:100%;width:10%;background:linear-gradient(90deg,'+C.gold+','+C.goldBright+');border-radius:4px;transition:width .55s cubic-bezier(.22,1,.36,1)"></div></div><div style="display:flex;align-items:center;justify-content:space-between"><span id="tsl-dots" style="color:'+C.ink4+';font-size:11.5px;letter-spacing:.04em"></span><div id="tsl-nav" style="display:flex;gap:10px"></div></div></div>'+
   '</div>';
   document.body.appendChild(root);
-  stage=root.querySelector('#tsl-stage');moneyEl=root.querySelector('#tsl-money');yrEl=root.querySelector('#tsl-yr');barEl=root.querySelector('#tsl-bar');dotsEl=root.querySelector('#tsl-dots');navEl=root.querySelector('#tsl-nav');
+  stage=root.querySelector('#tsl-stage');moneyEl=root.querySelector('#tsl-money');yrEl=root.querySelector('#tsl-yr');barEl=root.querySelector('#tsl-bar');dotsEl=root.querySelector('#tsl-dots');progEl=root.querySelector('#tsl-progfill');navEl=root.querySelector('#tsl-nav');
   root.querySelector('#tsl-close').onclick=close;
   root.addEventListener('click',function(e){if(e.target===root)close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened)close();});
@@ -115,7 +116,14 @@ function total(){var t=0;for(var k in sel)sel[k].forEach(function(i){t+=CONFIG.a
 function tween(to){if(reduce){shown=to;moneyEl.textContent=fmt(to);return;}var f=shown,st=performance.now();function fr(now){var p=Math.min(1,(now-st)/450);var v=f+(to-f)*(p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2);moneyEl.textContent=fmt(v);if(p<1)requestAnimationFrame(fr);else{shown=to;moneyEl.textContent=fmt(to);}}requestAnimationFrame(fr);}
 function meter(){if(!BE.showDollars)return;var t=total();tween(t);yrEl.textContent='~'+fmt(t*12)+' / yr';barEl.style.width=Math.min(100,t/MAX*140)+'%';}
 function setMeter(v){var m=root.querySelector('#tsl-meter');if(m)m.style.display=v?'block':'none';}
-function dots(a,c){dotsEl.innerHTML='';for(var i=0;i<c;i++){var d=document.createElement('div');d.className='tsl-dot'+(i<=a?' on':'');dotsEl.appendChild(d);}}
+var START_PCT=10;
+function dots(a,c){
+  /* Seeded at START_PCT so step 1 already shows momentum, then fills the
+     remaining 90% across the steps. a===c means the report: 100%. */
+  var pct = (a>=c) ? 100 : START_PCT + (a/c) * (100-START_PCT);
+  if(progEl) progEl.style.width = Math.min(100,pct).toFixed(1)+'%';
+  if(dotsEl) dotsEl.textContent = (a>=c) ? 'Complete' : ('Step '+(a+1)+' of '+c);
+}
 function intro(){setMeter(false);dotsEl.innerHTML='';
   stage.innerHTML='<div class="tsl-eb">'+CONFIG.intro.eyebrow+'</div><h3 class="tsl-h" style="font-size:27px">'+CONFIG.intro.headline+'</h3><p style="color:'+C.ink2+';font-size:14.5px;line-height:1.6;margin:12px 0 0;font-family:'+B.fontBody+'">'+CONFIG.intro.sub+'</p>';
   navEl.innerHTML='<button class="tsl-btn tsl-gold" id="tsl-start">'+CONFIG.intro.cta+' →</button>';
@@ -123,18 +131,18 @@ function intro(){setMeter(false);dotsEl.innerHTML='';
 }
 function tr(i){var a=CONFIG.areas[i];if(a.transitionIf){var t=a.transitionIf;if(sel[t.area]&&sel[t.area].indexOf(t.symptom)>-1)return t.text;}return a.transition;}
 function step(){var a=CONFIG.areas[cur];dots(cur,CONFIG.areas.length);var t=tr(cur);
-  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg(a.icon,14)+'</span> '+a.eyebrow+' · step '+(cur+1)+' of '+CONFIG.areas.length+'</div><h3 class="tsl-h" style="font-size:23px">'+a.question+'</h3>';
+  var h='<div style="font-family:'+B.fontDisplay+';font-weight:600;font-size:20px;color:'+C.ink+';letter-spacing:.01em;margin-bottom:9px">'+B.title+'</div>'+'<div class="tsl-eb"><span style="vertical-align:-2px">'+svg(a.icon,14)+'</span> '+a.eyebrow+'</div>'+'<h3 class="tsl-h" style="font-size:23px">'+a.question+'</h3>';
   if(t)h+='<p style="color:'+C.gold+';font-size:13.5px;font-style:italic;margin:9px 0 0">&ldquo;'+t+'&rdquo;</p>';
   h+='<div style="display:flex;flex-direction:column;gap:9px;margin-top:16px">';
   a.symptoms.forEach(function(s,i){var on=sel[cur]&&sel[cur].indexOf(i)>-1;h+='<button class="tsl-tile'+(on?' on':'')+'" data-i="'+i+'"><span class="tsl-k">'+(on?svg("check",14):'')+'</span><span class="tsl-icn">'+svg(a.icon,20)+'</span><span style="flex:1">'+s.label+'</span></button>';});
   h+='</div><p style="color:'+C.ink4+';font-size:11.5px;margin:12px 0 0">Tap any that sound familiar — leave blank if it&rsquo;s handled.</p>';
   stage.innerHTML=h;
   stage.querySelectorAll('.tsl-tile').forEach(function(b){b.onclick=function(){var i=+b.getAttribute('data-i');sel[cur]=sel[cur]||[];var p=sel[cur].indexOf(i);if(p>-1)sel[cur].splice(p,1);else sel[cur].push(i);step();meter();};});
-  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my gap report')+' →</button>';
+  navEl.innerHTML=(cur>0?'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>':'')+'<button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my gap report')+' →</button>';
   root.querySelector('#tsl-nx').onclick=function(){if(cur<CONFIG.areas.length-1){cur++;step();}else report();};
-  root.querySelector('#tsl-bk').onclick=function(){if(cur>0){cur--;step();}else intro();};
+  var bk=root.querySelector('#tsl-bk');if(bk)bk.onclick=function(){if(cur>0){cur--;step();}};
 }
-function report(){dots(CONFIG.areas.length,CONFIG.areas.length+1);var t=total();var areas=[];
+function report(){dots(CONFIG.areas.length,CONFIG.areas.length);var t=total();var areas=[];
   for(var k in sel){if(sel[k].length){var sub=0;sel[k].forEach(function(i){sub+=CONFIG.areas[k].symptoms[i].monthly;});areas.push([CONFIG.areas[k].eyebrow.replace('&amp;','&'),sub,CONFIG.areas[k].solution]);}}
   areas.sort(function(a,b){return b[1]-a[1];});
   var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your gap report</div><h3 class="tsl-h" style="font-size:24px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year — a rough estimate from your answers.</p>';
@@ -164,7 +172,7 @@ function thanks(){dotsEl.innerHTML='';navEl.innerHTML='';setMeter(false);
   stage.innerHTML='<div style="text-align:center;padding:14px 6px 6px"><div style="width:54px;height:54px;border-radius:50%;border:1px solid '+C.gold+';display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:'+C.gold+'">'+svg("check",26)+'</div><h3 class="tsl-h" style="font-size:25px">'+CONFIG.thankYou.title+'</h3><p style="color:'+C.ink2+';font-size:14px;line-height:1.65;margin:12px auto 0;max-width:400px;font-family:'+B.fontBody+'">'+CONFIG.thankYou.body+'</p><p style="color:'+C.ink4+';font-size:12px;margin-top:14px">'+CONFIG.thankYou.note+'</p><button class="tsl-btn tsl-gold" style="margin-top:18px" id="tsl-done">Close</button></div>';
   root.querySelector('#tsl-done').onclick=close;
 }
-function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tsgap-tab');if(t)t.style.display='none';if(!stage.innerHTML)intro();}
+function open(){opened=true;root.classList.add('show');document.documentElement.style.overflow='hidden';var t=document.getElementById('tsgap-tab');if(t)t.style.display='none';if(!stage.innerHTML){cur=0;setMeter(true);step();}}
 function close(){opened=false;root.classList.remove('show');document.documentElement.style.overflow='';try{localStorage.setItem('tsgap_dismissed',Date.now());}catch(e){}if(BE.reopen){var t=document.getElementById('tsgap-tab');if(t)t.style.display='block';}}
 function arm(){var fired=false;function go(){if(fired)return;fired=true;try{sessionStorage.setItem('tsgap_shown','1');}catch(e){}open();}
   try{var d=+localStorage.getItem('tsgap_dismissed');if(d&&(Date.now()-d)<BE.dismissDays*864e5){if(BE.reopen){var t=document.getElementById('tsgap-tab');if(t)t.style.display='block';}return;}}catch(e){}
