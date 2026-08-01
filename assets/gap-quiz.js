@@ -131,7 +131,7 @@ function intro(){setMeter(false);dotsEl.innerHTML='';
 }
 function tr(i){var a=CONFIG.areas[i];if(a.transitionIf){var t=a.transitionIf;if(sel[t.area]&&sel[t.area].indexOf(t.symptom)>-1)return t.text;}return a.transition;}
 function step(){var a=CONFIG.areas[cur];dots(cur,CONFIG.areas.length);var t=tr(cur);
-  var h='<div style="font-family:'+B.fontDisplay+';font-weight:600;font-size:20px;color:'+C.ink+';letter-spacing:.01em;margin-bottom:9px;text-align:center">'+B.title+'</div>'+'<div class="tsl-eb"><span style="vertical-align:-2px">'+svg(a.icon,14)+'</span> '+a.eyebrow+'</div>'+'<h3 class="tsl-h" style="font-size:23px">'+a.question+'</h3>';
+  var h='<div style="font-family:'+B.fontDisplay+';font-weight:600;font-size:20px;color:'+C.ink+';letter-spacing:.01em;margin-bottom:9px;text-align:center">'+B.title+'</div>'+'<div class="tsl-eb" style="text-align:center"><span style="vertical-align:-2px">'+svg(a.icon,14)+'</span> '+a.eyebrow+'</div>'+'<h3 class="tsl-h" style="font-size:23px;text-align:center">'+a.question+'</h3>';
   if(t)h+='<p style="color:'+C.gold+';font-size:13.5px;font-style:italic;margin:9px 0 0">&ldquo;'+t+'&rdquo;</p>';
   h+='<div style="display:flex;flex-direction:column;gap:9px;margin-top:16px">';
   a.symptoms.forEach(function(s,i){var on=sel[cur]&&sel[cur].indexOf(i)>-1;h+='<button class="tsl-tile'+(on?' on':'')+'" data-i="'+i+'"><span class="tsl-k">'+(on?svg("check",14):'')+'</span><span class="tsl-icn">'+svg(a.icon,20)+'</span><span style="flex:1">'+s.label+'</span></button>';});
