@@ -2,5 +2,9 @@
   "luigi-s-autobody-collision-repair": {
     "published": "2026-07-29",
     "expires": "2026-08-28"
+  },
+  "tx-smoke": {
+    "published": "2026-08-02",
+    "expires": "2026-09-01"
   }
 }
