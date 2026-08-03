@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dove Creek Animal Hospital | Veterinarian in Denton, TX</title>
+<meta name="description" content="Full service veterinary care for dogs and cats in Denton, Texas. Routine, emergency, and surgical care at 1200 Bent Oaks Court. Call 940-387-3313.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --cream:#FAF6EF; --sand:#F1E9DC; --card:#FFFFFF;
+  --ink:#22302A; --muted:#55665C;
+  --pine:#24493B; --pine-deep:#16291F; --clay:#B4571C; --on-clay:#FFFFFF;
+  /* feature-bg is a SURFACE (light text sits on it), separate from --pine which is a
+     text/accent colour. They diverge in dark mode: --pine lightens, this must not. */
+  --feature-bg:#24493B;
+  --on-dark:#FAF6EF; --on-dark-soft:rgba(250,246,239,.74); --gold:#E9B98A;
+  --line:rgba(34,48,42,.13);
+  --r-card:20px; --r-sm:12px;
+  --shadow-sm:0 1px 2px rgba(22,41,31,.05), 0 4px 14px rgba(22,41,31,.05);
+  --shadow-md:0 2px 6px rgba(22,41,31,.06), 0 14px 36px rgba(22,41,31,.10);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --maxw:1180px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --cream:#131A16; --sand:#1A241E; --card:#1B2620;
+    --ink:#E7EDE9; --muted:#A3B2AA;
+    --pine:#63A183; --pine-deep:#0E1512; --clay:#E2914E; --on-clay:#0E1512;
+    --feature-bg:#2A5544;
+    --line:rgba(231,237,233,.14);
+    --shadow-sm:0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.24);
+    --shadow-md:0 2px 6px rgba(0,0,0,.34), 0 14px 36px rgba(0,0,0,.34);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:1.0625rem; line-height:1.65;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+/* Grain, fixed + pointer-events-none so it never repaints on scroll */
+body::before{
+  content:""; position:fixed; inset:0; z-index:900; pointer-events:none; opacity:.032;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+h1,h2,h3{font-family:'Outfit',system-ui,sans-serif; font-weight:600; line-height:1.14; letter-spacing:-.02em; margin:0}
+p{margin:0}
+a{color:inherit}
+img{display:block; max-width:100%; height:auto}
+.wrap{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 1.5rem}
+@media(min-width:768px){.wrap{padding:0 2rem}}
+.eyebrow{font-size:.75rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--clay); margin:0 0 .75rem}
+.lede{font-size:1.125rem; color:var(--muted); max-width:60ch}
+section{padding:4rem 0}
+@media(min-width:768px){section{padding:6rem 0}}
+.shead{max-width:44rem; margin-bottom:3rem}
+.shead h2{font-size:clamp(1.85rem,4vw,2.75rem); margin-bottom:.75rem}
+
+/* Accessibility */
+.skip{position:absolute; left:1rem; top:-100px; z-index:1000; background:var(--feature-bg); color:var(--on-dark); padding:.75rem 1.25rem; border-radius:var(--r-sm); font-weight:600; text-decoration:none; transition:top .2s var(--ease)}
+.skip:focus{top:1rem}
+:focus-visible{outline:3px solid var(--clay); outline-offset:3px; border-radius:4px}
+
+/* Header */
+.hdr{position:sticky; top:0; z-index:100; background:color-mix(in srgb, var(--cream) 84%, transparent); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid transparent; transition:border-color .3s var(--ease), box-shadow .3s var(--ease)}
+.hdr.scrolled{border-bottom-color:var(--line); box-shadow:var(--shadow-sm)}
+.hdr-in{display:flex; align-items:center; justify-content:space-between; gap:1.5rem; min-height:72px}
+.brand{display:flex; align-items:center; gap:.7rem; text-decoration:none; font-family:'Outfit',sans-serif; font-weight:600; font-size:1.0625rem; line-height:1.15; color:var(--ink)}
+.brand svg{flex:none; width:34px; height:34px}
+.brand small{display:block; font-size:.7rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); white-space:nowrap}
+.nav{display:none; gap:1.75rem; align-items:center}
+@media(min-width:960px){.nav{display:flex}}
+.nav a{position:relative; text-decoration:none; font-weight:500; font-size:.9375rem; padding:.5rem 0; transition:color .2s var(--ease)}
+.nav a::after{content:""; position:absolute; left:0; right:0; bottom:.2rem; height:2px; background:var(--clay); transform:scaleX(0); transform-origin:left; transition:transform .3s var(--ease)}
+.nav a:hover{color:var(--clay)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-end{display:flex; align-items:center; gap:.5rem}
+/* Mobile disclosure nav, no JS dependency for open/close */
+.mnav{position:relative}
+@media(min-width:960px){.mnav{display:none}}
+.mnav>summary{list-style:none; cursor:pointer; width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:999px; border:1.5px solid var(--line); color:var(--ink); transition:background-color .2s var(--ease)}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav>summary svg{width:20px; height:20px}
+.mnav[open]>summary{background:var(--sand)}
+.mnav>summary .x{display:none}
+.mnav[open]>summary .x{display:block}
+.mnav[open]>summary .bars{display:none}
+.mnav-panel{position:absolute; right:0; top:calc(100% + .55rem); background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); box-shadow:var(--shadow-md); padding:.4rem; min-width:196px; display:flex; flex-direction:column; z-index:120}
+.mnav-panel a{display:flex; align-items:center; min-height:44px; padding:.55rem .85rem; text-decoration:none; font-weight:500; font-size:.9375rem; border-radius:8px; transition:background-color .2s var(--ease), color .2s var(--ease)}
+.mnav-panel a:hover{background:var(--sand); color:var(--clay)}
+@media(max-width:520px){.hdr-cta-label{display:none}.btn-sm{padding:.6rem .85rem}}
+
+/* Buttons: pill radius, one system */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.55rem; white-space:nowrap; min-height:48px; padding:.8rem 1.4rem; border-radius:999px; font-family:'Figtree',sans-serif; font-weight:600; font-size:.9375rem; text-decoration:none; cursor:pointer; border:1.5px solid transparent; transition:transform .2s var(--ease), box-shadow .25s var(--ease), background-color .2s var(--ease), color .2s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn-primary{background:var(--clay); color:var(--on-clay); box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:var(--shadow-md)}
+.btn-ghost{background:transparent; color:var(--pine); border-color:color-mix(in srgb, var(--pine) 34%, transparent)}
+.btn-ghost:hover{background:var(--pine); color:var(--cream); border-color:var(--pine); transform:translateY(-2px)}
+/* Sits on --feature-bg in both modes, so these stay fixed rather than inverting. */
+.btn-light{background:#FAF6EF; color:#16291F}
+.btn-light:hover{transform:translateY(-2px); box-shadow:var(--shadow-md)}
+.btn-on-photo{background:rgba(12,22,17,.42); color:#FAF6EF; border-color:rgba(250,246,239,.55); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px)}
+.btn-on-photo:hover{background:rgba(12,22,17,.62); border-color:#FAF6EF; transform:translateY(-2px)}
+.btn-sm{min-height:44px; padding:.6rem 1.15rem; font-size:.875rem}
+
+/* Hero */
+.hero{position:relative; min-height:100dvh; display:flex; align-items:center; padding:5rem 0 4rem; overflow:hidden}
+.hero-bg{position:absolute; inset:0; z-index:0}
+.hero-bg img{width:100%; height:100%; object-fit:cover; object-position:center 35%}
+.hero-bg::after{content:""; position:absolute; inset:0; background:linear-gradient(104deg, rgba(16,30,23,.95) 0%, rgba(16,30,23,.87) 40%, rgba(16,30,23,.5) 72%, rgba(16,30,23,.32) 100%)}
+.hero-in{position:relative; z-index:2; max-width:44rem; color:#FAF6EF}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.25rem); font-weight:600; color:#FAF6EF; margin-bottom:1.25rem}
+.hero h1 .w{display:inline-block; overflow:hidden; vertical-align:bottom; padding-bottom:.08em}
+.hero h1 .w i{display:inline-block; font-style:normal; transform:translateY(105%); animation:rise .8s var(--ease) forwards; animation-delay:var(--d,0s)}
+@keyframes rise{to{transform:translateY(0)}}
+.hero .lede{color:rgba(250,246,239,.9); font-size:1.125rem; max-width:33rem; margin-bottom:2rem}
+.hero-actions{display:flex; flex-wrap:wrap; gap:.75rem}
+.fade-up{opacity:0; transform:translateY(16px); animation:fu .75s var(--ease) forwards; animation-delay:var(--d,0s)}
+@keyframes fu{to{opacity:1; transform:translateY(0)}}
+
+/* Trust strip */
+.strip{background:var(--sand); border-bottom:1px solid var(--line); padding:2.25rem 0}
+.strip-grid{display:grid; grid-template-columns:1fr; gap:1.5rem}
+@media(min-width:640px){.strip-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.strip-grid{grid-template-columns:repeat(4,1fr); gap:2rem}}
+.strip-item{display:flex; gap:.85rem; align-items:flex-start}
+.strip-item svg{width:22px;height:22px;flex:none;color:var(--clay);margin-top:3px}
+.strip-item .lbl{font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:.15rem}
+.strip-item p{font-size:1rem; font-weight:500; line-height:1.45}
+.strip-item a{color:var(--pine); font-weight:600; text-decoration:none; border-bottom:1.5px solid color-mix(in srgb, var(--clay) 40%, transparent); transition:border-color .2s var(--ease), color .2s var(--ease)}
+.strip-item a:hover{color:var(--clay); border-bottom-color:var(--clay)}
+
+/* Services: two grouped panels */
+.svc-cols{display:grid; grid-template-columns:1fr; gap:1.5rem}
+@media(min-width:880px){.svc-cols{grid-template-columns:1fr 1fr; gap:2rem}}
+.svc-card{background:var(--card); border:1px solid var(--line); border-radius:var(--r-card); padding:2rem; box-shadow:var(--shadow-sm); transition:transform .3s var(--ease), box-shadow .3s var(--ease)}
+.svc-card:hover{transform:translateY(-4px); box-shadow:var(--shadow-md)}
+.svc-head{display:flex; align-items:center; gap:.85rem; margin-bottom:1.5rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line)}
+.svc-head svg{width:34px;height:34px;flex:none;color:var(--pine)}
+.svc-head h3{font-size:1.4rem}
+.svc-head p{font-size:.875rem; color:var(--muted)}
+.svc-list{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.6rem 1rem}
+.svc-list li{display:flex; align-items:flex-start; gap:.5rem; font-size:.9375rem}
+.svc-list svg{width:15px;height:15px;flex:none;color:var(--clay);margin-top:.32rem}
+.svc-note{margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--line); font-size:.9375rem; color:var(--muted)}
+
+/* Care: bento with rhythm, 6 items / 6 cells */
+.care{background:var(--sand)}
+.care-grid{display:grid; grid-template-columns:1fr; gap:1rem}
+@media(min-width:700px){.care-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.care-grid{grid-template-columns:repeat(3,1fr)}.care-item.wide{grid-column:span 2}}
+.care-item{background:var(--cream); border:1px solid var(--line); border-radius:var(--r-card); padding:1.75rem; transition:transform .3s var(--ease)}
+.care-item:hover{transform:translateY(-3px)}
+.care-item svg{width:26px;height:26px;color:var(--clay);margin-bottom:.85rem}
+.care-item h3{font-size:1.1875rem; margin-bottom:.4rem}
+.care-item p{font-size:.9375rem; color:var(--muted)}
+.care-item.feature{background:var(--feature-bg); border-color:transparent; color:var(--on-dark)}
+.care-item.feature svg{color:var(--gold)}
+.care-item.feature h3{color:var(--on-dark)}
+.care-item.feature p{color:var(--on-dark-soft)}
+.care-item.wide p{max-width:46ch}
+
+/* Team: split header + hairline roster */
+.team-grid{display:grid; grid-template-columns:1fr; gap:2.5rem}
+@media(min-width:900px){.team-grid{grid-template-columns:.85fr 1.15fr; gap:4rem}}
+.roster{list-style:none; margin:0; padding:0}
+.roster li{display:flex; gap:1.25rem; align-items:flex-start; padding:1.5rem 0; border-bottom:1px solid var(--line)}
+.roster li:first-child{padding-top:0}
+.roster li:last-child{border-bottom:0; padding-bottom:0}
+.roster .init{width:52px; height:52px; flex:none; border-radius:50%; background:var(--sand); color:var(--pine); display:flex; align-items:center; justify-content:center; font-family:'Outfit',sans-serif; font-size:1.0625rem; font-weight:600}
+.roster h3{font-size:1.1875rem; margin-bottom:.1rem}
+.roster .cred{font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--clay); margin-bottom:.4rem}
+.roster p{font-size:.9375rem; color:var(--muted)}
+
+/* Reviews: asymmetric, one featured + two */
+.reviews{background:var(--pine-deep); color:var(--on-dark)}
+.reviews h2{color:var(--on-dark)}
+.reviews .lede{color:var(--on-dark-soft)}
+.rev-grid{display:grid; grid-template-columns:1fr; gap:1.25rem}
+@media(min-width:900px){.rev-grid{grid-template-columns:1.25fr 1fr; gap:1.5rem}.rev-side{display:grid; gap:1.5rem; align-content:start}}
+.rev{background:rgba(250,246,239,.06); border:1px solid rgba(250,246,239,.13); border-radius:var(--r-card); padding:2rem; display:flex; flex-direction:column; transition:transform .3s var(--ease), background-color .3s var(--ease)}
+.rev:hover{transform:translateY(-4px); background:rgba(250,246,239,.09)}
+.rev blockquote{margin:0 0 1.5rem; font-size:1rem; line-height:1.6; color:rgba(250,246,239,.93)}
+.rev-feature{justify-content:center}
+.rev-feature blockquote{font-family:'Outfit',sans-serif; font-size:clamp(1.3rem,2.2vw,1.75rem); line-height:1.35; letter-spacing:-.015em; color:#FAF6EF}
+.rev.rev-feature figcaption{margin-top:0}
+.rev figcaption{margin-top:auto; font-size:.875rem; font-weight:600; color:var(--gold)}
+.rev cite{font-style:normal}
+.rev figcaption span{display:block; font-weight:400; color:rgba(250,246,239,.55); font-size:.8125rem; margin-top:.15rem}
+
+/* Contact */
+.contact-grid{display:grid; grid-template-columns:1fr; gap:2.5rem}
+@media(min-width:900px){.contact-grid{grid-template-columns:1.05fr .95fr; gap:4rem}}
+.ct-block{margin-bottom:1.75rem}
+.ct-block h3{font-family:'Figtree',sans-serif; font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:.4rem}
+.ct-block p{font-size:1.0625rem}
+.ct-block a{color:var(--pine); font-weight:600; text-decoration:none; border-bottom:1.5px solid color-mix(in srgb, var(--clay) 40%, transparent); transition:border-color .2s var(--ease), color .2s var(--ease)}
+.ct-block a:hover{color:var(--clay); border-bottom-color:var(--clay)}
+.hours{list-style:none; margin:0; padding:0}
+.hours li{display:flex; justify-content:space-between; gap:1.5rem; padding:.65rem 0; font-size:1rem}
+.hours li+li{border-top:1px solid var(--line)}
+.hours .t{color:var(--muted); font-variant-numeric:tabular-nums}
+.hours-note{margin-top:.85rem; font-size:.875rem; color:var(--muted)}
+.emerg{margin-top:1.75rem; background:var(--sand); border:1px solid var(--line); border-left:4px solid var(--clay); border-radius:var(--r-sm); padding:1.25rem}
+.emerg h3{font-family:'Figtree',sans-serif; font-size:.9375rem; font-weight:700; margin-bottom:.5rem; display:flex; align-items:center; gap:.5rem}
+.emerg h3 svg{width:18px;height:18px;color:var(--clay);flex:none}
+.emerg p{font-size:.9375rem; color:var(--muted); margin-bottom:.3rem}
+.emerg a{color:var(--pine); font-weight:600; text-decoration:none; border-bottom:1.5px solid color-mix(in srgb, var(--clay) 40%, transparent)}
+.emerg a:hover{color:var(--clay); border-bottom-color:var(--clay)}
+.cta-band{background:var(--feature-bg); color:var(--on-dark); border-radius:var(--r-card); padding:2rem; margin-top:1.75rem}
+.cta-band h3{font-size:1.4rem; color:var(--on-dark); margin-bottom:.5rem}
+.cta-band p{font-size:.9375rem; color:var(--on-dark-soft); margin-bottom:1.5rem}
+.cta-band .btns{display:flex; flex-wrap:wrap; gap:.65rem}
+.cta-band .btn-ghost{color:var(--on-dark); border-color:rgba(250,246,239,.42)}
+.cta-band .btn-ghost:hover{background:rgba(250,246,239,.14); color:var(--on-dark); border-color:#FAF6EF}
+
+/* Footer */
+.ft{background:var(--pine-deep); color:rgba(250,246,239,.64); padding:3rem 0 2rem}
+.ft-top{display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between; align-items:center; padding-bottom:2rem; border-bottom:1px solid rgba(250,246,239,.15)}
+.ft-brand{display:flex; align-items:center; gap:.7rem; color:#FAF6EF; font-family:'Outfit',sans-serif; font-weight:600; font-size:1.0625rem}
+.ft-brand svg{width:32px;height:32px}
+.ft-links{display:flex; flex-wrap:wrap; gap:1.5rem; font-size:.9375rem}
+.ft-links a{color:rgba(250,246,239,.74); text-decoration:none; transition:color .2s var(--ease)}
+.ft-links a:hover{color:var(--gold)}
+.ft-legal{padding-top:2rem; font-size:.8125rem; line-height:1.7}
+.attrib{margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid rgba(250,246,239,.1); font-size:.8125rem; color:rgba(250,246,239,.52)}
+.attrib a{color:rgba(250,246,239,.74); text-decoration:underline; text-underline-offset:3px}
+.attrib a:hover{color:var(--gold)}
+
+/* Scroll reveal */
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal.in{opacity:1; transform:none}
+.stagger>*{opacity:0; transform:translateY(20px); transition:opacity .65s var(--ease), transform .65s var(--ease)}
+.stagger.in>*{opacity:1; transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.07s}
+.stagger.in>*:nth-child(3){transition-delay:.14s}
+.stagger.in>*:nth-child(4){transition-delay:.21s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.35s}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important}
+  .reveal,.stagger>*,.fade-up{opacity:1 !important; transform:none !important; animation:none !important}
+  .hero h1 .w i{transform:none !important; animation:none !important}
+}
+@media (prefers-reduced-transparency: reduce){
+  .hdr{background:var(--cream); backdrop-filter:none; -webkit-backdrop-filter:none}
+  .btn-on-photo{background:rgba(12,22,17,.8); backdrop-filter:none; -webkit-backdrop-filter:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div id="sentinel" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#home" aria-label="Dove Creek Animal Hospital, home">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#24493B"/>
+        <path d="M20 29.5c-3.6-2.6-7.4-5.3-7.4-9.3a4.3 4.3 0 0 1 7.4-2.9 4.3 4.3 0 0 1 7.4 2.9c0 4-3.8 6.7-7.4 9.3Z" fill="#FAF6EF"/>
+        <circle cx="13.6" cy="13.4" r="2.05" fill="#E9B98A"/>
+        <circle cx="26.4" cy="13.4" r="2.05" fill="#E9B98A"/>
+      </svg>
+      <span>Dove Creek<small>Animal Hospital</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">Our Team</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr-end">
+      <a class="btn btn-primary btn-sm" href="tel:+19403873313" aria-label="Call Dove Creek Animal Hospital at 940-387-3313">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        <span class="hdr-cta-label">940-387-3313</span>
+      </a>
+      <details class="mnav" id="mnav">
+        <summary aria-label="Open menu" role="button">
+          <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </summary>
+        <nav class="mnav-panel" aria-label="Mobile">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">Our Team</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&q=80" alt="A dog resting calmly" fetchpriority="high" width="1600" height="1067">
+  </div>
+  <div class="wrap">
+    <div class="hero-in">
+      <p class="eyebrow fade-up" style="--d:.1s">Denton, Texas</p>
+      <h1>
+        <span class="w"><i style="--d:.18s">The</i></span>
+        <span class="w"><i style="--d:.25s">best</i></span>
+        <span class="w"><i style="--d:.32s">care</i></span>
+        <span class="w"><i style="--d:.39s">for</i></span>
+        <span class="w"><i style="--d:.46s">your</i></span>
+        <span class="w"><i style="--d:.53s">best</i></span>
+        <span class="w"><i style="--d:.60s">friend.</i></span>
+      </h1>
+      <p class="lede fade-up" style="--d:.7s">A full service veterinary center for dogs and cats. Routine, emergency, and surgical care, right here in Denton.</p>
+      <div class="hero-actions fade-up" style="--d:.8s">
+        <a class="btn btn-primary" href="tel:+19403873313">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call 940-387-3313
+        </a>
+        <a class="btn btn-on-photo" href="https://mobile.poe.idexx.com/book/DCAH" target="_blank" rel="noopener">
+          Request an appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="strip">
+  <div class="wrap">
+    <div class="strip-grid stagger">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div><p class="lbl">Hours</p><p>Monday to Friday, 7:00 AM to 6:00 PM</p></div>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><p class="lbl">Find us</p><p><a href="https://goo.gl/maps/1M2T4PQPjPH2" target="_blank" rel="noopener">1200 Bent Oaks Court</a></p></div>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5c-4-2.8-7.5-5.6-7.5-9.6a4.4 4.4 0 0 1 7.5-3 4.4 4.4 0 0 1 7.5 3c0 4-3.5 6.8-7.5 9.6Z"/></svg>
+        <div><p class="lbl">We care for</p><p>Dogs and cats, every life stage</p></div>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h4l2-5 4 10 2-5h4"/></svg>
+        <div><p class="lbl">On site</p><p>Lab work, digital X-ray, and surgery</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">What we do</p>
+      <h2>Everything your dog or cat needs, under one roof.</h2>
+      <p class="lede">Puppy shots, senior bloodwork, dental cleanings, and orthopedic surgery all happen in the same building, with the same team and the same records.</p>
+    </div>
+    <div class="svc-cols">
+      <article class="svc-card reveal">
+        <div class="svc-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="16.5" rx="4.2" ry="3.6"/><ellipse cx="5.6" cy="11" rx="2.1" ry="2.5"/><ellipse cx="18.4" cy="11" rx="2.1" ry="2.5"/><ellipse cx="9" cy="6.4" rx="2" ry="2.4"/><ellipse cx="15" cy="6.4" rx="2" ry="2.4"/></svg>
+          <div><h3>For dogs</h3><p>Puppy through senior</p></div>
+        </div>
+        <ul class="svc-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Puppy Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Adult Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Senior Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Vaccinations</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Dental Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Heartworm</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Flea &amp; Tick</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Microchipping</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Spaying</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Neutering</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Orthopedic Surgery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Bath</li>
+        </ul>
+        <p class="svc-note">Boarding is also available for dogs.</p>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5c-4.1 0-6.9-2.6-6.9-6.3 0-2.4 1-4.4 1-4.4L5 4.2l4 2.6a9.6 9.6 0 0 1 6 0l4-2.6-1.1 5.6s1 2 1 4.4c0 3.7-2.8 6.3-6.9 6.3Z"/><path d="M9.6 13h.01M14.4 13h.01"/></svg>
+          <div><h3>For cats</h3><p>Kitten through senior</p></div>
+        </div>
+        <ul class="svc-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Kitten Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Adult Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Senior Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Vaccinations</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Dental Care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Heartworms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Flea &amp; Tick</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Microchip</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Spay</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Neuter</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Orthopedic Surgery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Bath</li>
+        </ul>
+        <p class="svc-note">Boarding and preventative care are also available for cats.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CARE DEPTH -->
+<section class="care">
+  <div class="wrap">
+    <div class="shead reveal">
+      <h2>The lab and the X-ray are down the hall.</h2>
+      <p class="lede">Bloodwork and imaging are handled in house instead of being sent out to an outside lab.</p>
+    </div>
+    <div class="care-grid stagger">
+      <div class="care-item wide feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v6.5L4.6 17A2.4 2.4 0 0 0 6.7 21h10.6a2.4 2.4 0 0 0 2.1-4L15 9.5V3"/><path d="M8 3h8M7.5 14h9"/></svg>
+        <h3>In house lab work</h3>
+        <p>CBC, chemistry, heartworm testing, and FIV/FeLV testing all run here in the building rather than going out to a third party lab.</p>
+      </div>
+      <div class="care-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M12 8v8M8 12h8"/></svg>
+        <h3>Digital radiology</h3>
+        <p>Digital X-ray in the clinic, so imaging happens during the visit.</p>
+      </div>
+      <div class="care-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6M11 8v6M8 11h6"/></svg>
+        <h3>Early detection testing</h3>
+        <p>Screening that catches changes in older pets before they turn into symptoms you can see.</p>
+      </div>
+      <div class="care-item wide feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4v16M5 12h4.5a4 4 0 0 0 4-4V4"/><path d="M19 20V9a4 4 0 0 0-4-4"/></svg>
+        <h3>Veterinary chiropractor</h3>
+        <p>We partner with a veterinary chiropractor, available Mondays from 9:00 AM to 1:00 PM by appointment.</p>
+      </div>
+      <div class="care-item wide feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5c-4-2.8-7.5-5.6-7.5-9.6a4.4 4.4 0 0 1 7.5-3 4.4 4.4 0 0 1 7.5 3c0 4-3.5 6.8-7.5 9.6Z"/><path d="M9.5 11h5"/></svg>
+        <h3>Surgery and orthopedics</h3>
+        <p>Spay and neuter, dental procedures, and orthopedic surgery for dogs and cats.</p>
+      </div>
+      <div class="care-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l-1.5 8.5a5 5 0 0 1-9 0Z"/><path d="M12 11.5V21M8 21h8"/></svg>
+        <h3>Nutritional counseling</h3>
+        <p>Diet guidance, including help choosing food as your pet's needs change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="about">
+  <div class="wrap">
+    <div class="team-grid">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.85rem,4vw,2.75rem);margin-bottom:.75rem">The three veterinarians you'll see.</h2>
+        <p class="lede">Pet owners trust us to look after the needs of their beloved companions.</p>
+      </div>
+      <ul class="roster reveal">
+        <li>
+          <div class="init" aria-hidden="true">LH</div>
+          <div>
+            <h3>Dr. Lori J. Hill</h3>
+            <p class="cred">Veterinarian</p>
+            <p>Began in mixed animal practice before moving her focus to small animals.</p>
+          </div>
+        </li>
+        <li>
+          <div class="init" aria-hidden="true">GP</div>
+          <div>
+            <h3>Dr. Gabrielle Pagano</h3>
+            <p class="cred">DVM</p>
+            <p>Graduated from the University of Missouri College of Veterinary Medicine in 2017 and joined Dove Creek in 2019.</p>
+          </div>
+        </li>
+        <li>
+          <div class="init" aria-hidden="true">SM</div>
+          <div>
+            <h3>Dr. Stephanie Morel</h3>
+            <p class="cred">DVM</p>
+            <p>Graduated from Texas A&amp;M Veterinary School in 2021. Her interests include cardiology, neurology, and orthopedic surgery.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="shead reveal">
+      <h2>What Denton pet owners say.</h2>
+    </div>
+    <div class="rev-grid stagger">
+      <figure class="rev rev-feature">
+        <blockquote>The people at Dove Creek have always made me feel so comfortable taking our dog there. They are caring and kind.</blockquote>
+        <figcaption><cite>Judd B.</cite><span>Client review, dovecreekanimalhospital.com</span></figcaption>
+      </figure>
+      <div class="rev-side">
+        <figure class="rev">
+          <blockquote>... We have seen all three of the vets at Dove Creek and been very pleased with them.</blockquote>
+          <figcaption><cite>Lauri D.</cite><span>Client review, dovecreekanimalhospital.com</span></figcaption>
+        </figure>
+        <figure class="rev">
+          <blockquote>Dr. Hill, Dr. Pagano, Scott, Heather, and the entire Dove Creek team have cared for our pets for many years.</blockquote>
+          <figcaption><cite>Noel G.</cite><span>Client review, dovecreekanimalhospital.com</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">Visit</p>
+      <h2>Come see us in Denton.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="ct-block">
+          <h3>Address</h3>
+          <p><a href="https://goo.gl/maps/1M2T4PQPjPH2" target="_blank" rel="noopener">1200 Bent Oaks Court, Denton, TX 76210</a></p>
+        </div>
+        <div class="ct-block">
+          <h3>Phone</h3>
+          <p><a href="tel:+19403873313">940-387-3313</a></p>
+        </div>
+        <div class="ct-block">
+          <h3>Email</h3>
+          <p><a href="mailto:info@dovecreekanimalhospital.com">info@dovecreekanimalhospital.com</a></p>
+        </div>
+        <div class="ct-block">
+          <h3>Fax</h3>
+          <p>940-382-4137</p>
+        </div>
+        <div class="emerg">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg> After hours and emergencies</h3>
+          <p>Denton County Animal ER: <a href="tel:+19402711200">(940) 271-1200</a></p>
+          <p>Pet Poison Control, 24/7: <a href="tel:+18002221222">(800) 222-1222</a></p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="ct-block">
+          <h3>Clinic hours</h3>
+          <ul class="hours">
+            <li><span class="d">Monday</span><span class="t">7:00 AM to 6:00 PM</span></li>
+            <li><span class="d">Tuesday</span><span class="t">7:00 AM to 6:00 PM</span></li>
+            <li><span class="d">Wednesday</span><span class="t">7:00 AM to 6:00 PM</span></li>
+            <li><span class="d">Thursday</span><span class="t">7:00 AM to 6:00 PM</span></li>
+            <li><span class="d">Friday</span><span class="t">7:00 AM to 6:00 PM</span></li>
+            <li><span class="d">Saturday</span><span class="t">Closed</span></li>
+            <li><span class="d">Sunday</span><span class="t">Closed</span></li>
+          </ul>
+          <p class="hours-note">Holiday hours may vary.</p>
+        </div>
+        <div class="cta-band">
+          <h3>Two ways to reach us.</h3>
+          <p>Call during clinic hours, or send an appointment request any time.</p>
+          <div class="btns">
+            <a class="btn btn-light" href="tel:+19403873313">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              Call 940-387-3313
+            </a>
+            <a class="btn btn-ghost" href="https://mobile.poe.idexx.com/book/DCAH" target="_blank" rel="noopener">Request an appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#FAF6EF" fill-opacity=".1"/>
+          <path d="M20 29.5c-3.6-2.6-7.4-5.3-7.4-9.3a4.3 4.3 0 0 1 7.4-2.9 4.3 4.3 0 0 1 7.4 2.9c0 4-3.8 6.7-7.4 9.3Z" fill="#FAF6EF"/>
+          <circle cx="13.6" cy="13.4" r="2.05" fill="#E9B98A"/>
+          <circle cx="26.4" cy="13.4" r="2.05" fill="#E9B98A"/>
+        </svg>
+        Dove Creek Animal Hospital
+      </div>
+      <nav class="ft-links" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#about">Our Team</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="https://facebook.com/DoveCreek" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+    </div>
+    <div class="ft-legal">
+      <p>1200 Bent Oaks Court, Denton, TX 76210</p>
+      <p>940-387-3313 &nbsp;&middot;&nbsp; Monday to Friday, 7:00 AM to 6:00 PM</p>
+      <p class="attrib">
+        This website was prepared by Top Shelf Business Solutions.
+        <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* Header elevation via a sentinel. No scroll listener. */
+  var hdr = document.getElementById('hdr'), sentinel = document.getElementById('sentinel');
+  if (hasIO && hdr && sentinel){
+    new IntersectionObserver(function(e){
+      hdr.classList.toggle('scrolled', !e[0].isIntersecting);
+    }, {threshold:0}).observe(sentinel);
+  }
+
+  /* Close the mobile menu after a jump, and on outside click / Escape. */
+  var mnav = document.getElementById('mnav');
+  if (mnav){
+    mnav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ mnav.removeAttribute('open'); });
+    });
+    document.addEventListener('click', function(e){
+      if (mnav.hasAttribute('open') && !mnav.contains(e.target)) mnav.removeAttribute('open');
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') mnav.removeAttribute('open');
+    });
+  }
+
+  /* Scroll reveals. IntersectionObserver only, unobserved once shown. */
+  var targets = document.querySelectorAll('.reveal, .stagger');
+  if (reduce || !hasIO){
+    Array.prototype.forEach.call(targets, function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -10% 0px', threshold:0.08});
+    Array.prototype.forEach.call(targets, function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
