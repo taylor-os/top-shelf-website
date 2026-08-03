@@ -413,6 +413,51 @@ body.mm-open{ overflow:hidden; }
   box-shadow:0 40px 80px -40px rgba(201,168,106,0.35);
 }
 .pricing-card.featured:hover{ box-shadow:0 46px 90px -38px rgba(201,168,106,0.42); transform:translateY(-8px); }
+/* featured card: a slow light travelling the border, so the eye lands here first.
+   Degrades to the plain gold border above wherever @property isn't supported. */
+@property --ts-sweep{ syntax:'<angle>'; inherits:false; initial-value:0deg; }
+.pricing-card.featured::after,
+.sig-band::after{
+  content:""; position:absolute; inset:-1px; border-radius:inherit; padding:1px;
+  pointer-events:none; z-index:1;
+  background:conic-gradient(from var(--ts-sweep),
+    transparent 0deg 232deg,
+    var(--gold-deep) 272deg,
+    var(--gold-bright) 300deg,
+    #fff6dc 312deg,
+    var(--gold-bright) 324deg,
+    var(--gold-deep) 352deg,
+    transparent 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite:exclude;
+  animation:ts-border-sweep 5s linear infinite;
+}
+@keyframes ts-border-sweep{ to{ --ts-sweep:360deg; } }
+@media (prefers-reduced-motion:reduce){
+  .pricing-card.featured::after,
+  .sig-band::after{ animation:none; background:var(--gold); opacity:.55; }
+}
+
+/* Signature Blend band — the recurring "everything together" callout */
+.sig-band{
+  position:relative; display:flex; flex-wrap:wrap; align-items:center;
+  justify-content:space-between; gap:clamp(1.4rem,3vw,2.6rem);
+  border:1px solid var(--hairline-strong); border-radius:var(--r-lg);
+  background:linear-gradient(180deg,var(--surface-2),var(--surface));
+  padding:clamp(1.8rem,3.2vw,2.8rem);
+  box-shadow:0 30px 70px -46px rgba(201,168,106,.42);
+}
+.sig-band::after{ animation-duration:7s; }
+.sig-band > div{ max-width:64ch; }
+.sig-band-title{
+  font-family:var(--serif); font-weight:500; line-height:1.25;
+  font-size:clamp(1.4rem,2.3vw,1.9rem); color:var(--ink); margin:1rem 0 .7rem;
+}
+.sig-band-title em{ font-style:italic; font-weight:400; color:var(--gold-bright); }
+.sig-band-copy{ font-size:.95rem; font-weight:300; line-height:1.75; color:var(--ink-3); }
+.sig-band-cta{ flex-shrink:0; position:relative; z-index:2; }
 .pricing-badge{
   position:absolute; top:-13px; left:50%; transform:translateX(-50%);
   background:linear-gradient(180deg,var(--gold-bright),var(--gold)); color:#241708;
