@@ -1,6 +1,10 @@
-# Always revalidate CSS/JS/images so edits propagate without stale caches.
+# Always revalidate CSS/JS/images/PDFs so edits propagate without stale caches.
+# pdf was missing here until 2026-08-03, and it mattered: the sample report was
+# corrected twice and the live site kept serving the superseded file to anyone
+# following the bare link, while ?v= links got the new one. A cached stylesheet
+# looks wrong. A cached PDF is a document going out with defects we already fixed.
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|webp)$">
+  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|webp|pdf)$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
