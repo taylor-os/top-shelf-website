@@ -20,6 +20,16 @@ Redirect 301 /assets/leak-quiz.js /assets/gap-quiz.js
 Redirect 301 /home-centered-review.html /
 RedirectMatch 301 ^/.+-review\.html$ /
 
+# Two industry pages covered categories that already had a page: "Bars &
+# Restaurants" against "Restaurants & Bars", and "Dental & Medical" against
+# "Medical & Dental". They were never in the nav, the footer or the sitemap, so
+# nothing linked them but the thank-you page, and near-duplicate pages competing
+# for the same terms help nobody. Consolidated into the surviving twin. Deleting
+# the files is not enough here, same as the review copy above: this host never
+# removes a file on deploy, so without these rules both stay live at 200.
+Redirect 301 /industry-bars.html /industry-restaurants.html
+Redirect 301 /industry-dental.html /industry-medical-dental.html
+
 # Keep internal planning docs private: no HTTP access, no directory listing.
 Options -Indexes
 RedirectMatch 404 ^/docs(/|$)
