@@ -132,6 +132,67 @@ def test_slug_not_in_manifest_is_never_touched(demo_dir):
     assert not os.path.isdir(os.path.join(demo_dir, "_archive", "stray-biz"))
 
 
+# ---------------------------------------------------------------------------
+# The keep flag
+# ---------------------------------------------------------------------------
+
+@pytest.fixture()
+def kept_demo_dir(tmp_path):
+    """An expired slug marked keep, alongside an expired slug that is not."""
+    demo = tmp_path / "demo"
+    demo.mkdir()
+    manifest = {
+        "kept-biz":    {"published": "2026-06-01", "expires": "2026-07-01", "keep": True},
+        "expired-biz": {"published": "2026-06-01", "expires": "2026-07-01"},
+    }
+    (demo / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    for slug in ("kept-biz", "expired-biz"):
+        (demo / slug).mkdir()
+        (demo / slug / "index.html").write_text("<html/>", encoding="utf-8")
+    return str(demo)
+
+
+def test_keep_flag_survives_its_expiry_date(kept_demo_dir):
+    """An expired slug marked keep is left up and left out of the return list."""
+    result = expire(kept_demo_dir, "2026-07-29", apply=True)
+    assert result == ["expired-biz"]
+    assert os.path.isdir(os.path.join(kept_demo_dir, "kept-biz"))
+    assert not os.path.isdir(os.path.join(kept_demo_dir, "_archive", "kept-biz"))
+
+
+def test_keep_flag_is_never_stamped_taken_down(kept_demo_dir):
+    """Taking a neighbour down must not mark the kept slug as taken down."""
+    expire(kept_demo_dir, "2026-07-29", apply=True)
+    with open(os.path.join(kept_demo_dir, "manifest.json"), encoding="utf-8") as fh:
+        manifest = json.load(fh)
+    assert "taken_down" not in manifest["kept-biz"]
+    assert manifest["kept-biz"]["keep"] is True
+
+
+def test_keep_flag_holds_years_later(kept_demo_dir):
+    """The exemption does not decay with time — that is the whole point."""
+    result = expire(kept_demo_dir, "2030-01-01", apply=True)
+    assert "kept-biz" not in result
+    assert os.path.isdir(os.path.join(kept_demo_dir, "kept-biz"))
+
+
+def test_keep_flag_is_reported_in_a_dry_run_too(kept_demo_dir):
+    """A dry run must agree with what --apply would do, or it is a false alarm."""
+    assert expire(kept_demo_dir, "2026-07-29") == ["expired-biz"]
+
+
+def test_keep_false_still_expires(kept_demo_dir):
+    """Only a truthy keep exempts. An explicit false must not."""
+    path = os.path.join(kept_demo_dir, "manifest.json")
+    with open(path, encoding="utf-8") as fh:
+        manifest = json.load(fh)
+    manifest["kept-biz"]["keep"] = False
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(manifest, fh)
+
+    assert sorted(expire(kept_demo_dir, "2026-07-29", apply=True)) == ["expired-biz", "kept-biz"]
+
+
 def test_takedown_archives_all_three_pages_together(tmp_path):
     """Hub, website/ and audit/ live under one slug folder, so one move takes
     down all three at once."""

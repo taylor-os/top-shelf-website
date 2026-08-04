@@ -17,6 +17,16 @@ which .htaccess serves as a 404:
 That removes public access to all three pages at once (hub, website/, audit/)
 while keeping the files recoverable.  Nothing is deleted.
 
+Exempting a sample
+------------------
+Set "keep": true on a manifest entry and the takedown skips it forever, no
+matter how far past its expires date it is.  The expiry window exists to stop
+sample sites for cold prospects accumulating on the domain indefinitely; a
+sample that is deliberately staying up (a signed customer, a demo we point
+people at, a favour for a friend) is not that, and should not depend on someone
+remembering to intervene before the nightly job runs.  Opting out is a decision
+recorded in the manifest, not a race against a cron schedule.
+
 Usage (CLI):
     python scripts/expire_samples.py 2026-08-28              # dry run, default
     python scripts/expire_samples.py 2026-08-28 --apply      # actually take down
@@ -45,8 +55,8 @@ def expire(demo_dir: str, today_iso: str, apply: bool = False) -> list:
 
     - Reads <demo_dir>/manifest.json
     - Selects each slug where entry["expires"] < today_iso, the slug is still
-      present in the manifest without a taken_down stamp, AND <demo_dir>/<slug>/
-      exists on disk
+      present in the manifest without a taken_down stamp, is not marked
+      "keep": true, AND <demo_dir>/<slug>/ exists on disk
     - When apply=True:
         * Moves the folder to <demo_dir>/_archive/<slug>/ (no deletion)
         * Stamps the manifest entry with taken_down = today_iso
@@ -56,7 +66,8 @@ def expire(demo_dir: str, today_iso: str, apply: bool = False) -> list:
 
     Only slugs listed in the manifest are ever considered, and an entry whose
     expires date has not passed is never selected.  A slug already carrying a
-    taken_down stamp is skipped, so re-running is a no-op.
+    taken_down stamp is skipped, so re-running is a no-op.  An entry marked
+    "keep": true is skipped no matter how old it is, and stays skipped.
     """
     today = date.fromisoformat(today_iso)
     manifest_path = os.path.join(demo_dir, "manifest.json")
@@ -76,6 +87,9 @@ def expire(demo_dir: str, today_iso: str, apply: bool = False) -> list:
             continue
         # Already taken down on an earlier run — leave it alone.
         if entry.get("taken_down"):
+            continue
+        # Deliberately exempt: staying up regardless of age.
+        if entry.get("keep"):
             continue
         if date.fromisoformat(expires_str) >= today:
             continue
