@@ -1,18 +1,35 @@
 """
-expire_samples.py — archive sample-site folders past their 30-day expiry.
+expire_samples.py — take down sample-site folders past their expiry date.
+
+The expiry window itself is owned by the skill (ss_build.EXPIRY_DAYS, currently
+60 days); this script only reads the `expires` date each build already stamped
+into demo/manifest.json.  It never computes an expiry of its own.
+
+What "takedown" means here
+--------------------------
+The demo folders are served straight off this git repo (Hostinger auto-deploys
+on push), so a sample stops being public the moment its folder is no longer at
+demo/<slug>/.  Rather than delete, this moves the folder to demo/_archive/<slug>/,
+which .htaccess serves as a 404:
+
+    RedirectMatch 404 ^/demo/_archive(/|$)
+
+That removes public access to all three pages at once (hub, website/, audit/)
+while keeping the files recoverable.  Nothing is deleted.
 
 Usage (CLI):
-    python scripts/expire_samples.py 2026-08-28
+    python scripts/expire_samples.py 2026-08-28              # dry run, default
+    python scripts/expire_samples.py 2026-08-28 --apply      # actually take down
 
-    Reads demo/manifest.json, moves expired slug folders to demo/_archive/<slug>/,
-    removes those slugs from the manifest, and writes the manifest back.
-    Prints the list of archived slugs.
+    A bare run only reports what WOULD be taken down and touches nothing.
+    Pass --apply to move folders and update the manifest.
 
 Public API:
-    expire(demo_dir: str, today_iso: str) -> list[str]
+    expire(demo_dir: str, today_iso: str, apply: bool = False) -> list[str]
         demo_dir  — path to the demo/ folder (absolute or relative)
         today_iso — ISO date string (YYYY-MM-DD) to compare against expires dates
-        Returns the list of slugs that were archived.
+        apply     — False (default) reports only; True performs the takedown
+        Returns the list of slugs that were (or would be) taken down.
 """
 
 import json
@@ -22,16 +39,24 @@ import sys
 from datetime import date
 
 
-def expire(demo_dir: str, today_iso: str) -> list:
+def expire(demo_dir: str, today_iso: str, apply: bool = False) -> list:
     """
-    Archive sample folders whose expires date is earlier than today_iso.
+    Take down sample folders whose expires date is earlier than today_iso.
 
     - Reads <demo_dir>/manifest.json
-    - For each slug where entry["expires"] < today_iso AND <demo_dir>/<slug>/ exists:
-        * Moves the folder to <demo_dir>/_archive/<slug>/
-        * Removes the slug from the manifest
-    - Writes the updated manifest back to disk
-    - Returns the list of archived slug names
+    - Selects each slug where entry["expires"] < today_iso, the slug is still
+      present in the manifest without a taken_down stamp, AND <demo_dir>/<slug>/
+      exists on disk
+    - When apply=True:
+        * Moves the folder to <demo_dir>/_archive/<slug>/ (no deletion)
+        * Stamps the manifest entry with taken_down = today_iso
+        * Writes the manifest back
+    - When apply=False (the default) nothing on disk is touched at all
+    - Returns the list of slug names taken down, or that would be
+
+    Only slugs listed in the manifest are ever considered, and an entry whose
+    expires date has not passed is never selected.  A slug already carrying a
+    taken_down stamp is skipped, so re-running is a no-op.
     """
     today = date.fromisoformat(today_iso)
     manifest_path = os.path.join(demo_dir, "manifest.json")
@@ -44,34 +69,52 @@ def expire(demo_dir: str, today_iso: str) -> list:
     else:
         manifest = {}
 
-    archived = []
+    taken_down = []
     for slug, entry in list(manifest.items()):
         expires_str = entry.get("expires", "")
         if not expires_str:
             continue
-        if date.fromisoformat(expires_str) < today:
-            slug_dir = os.path.join(demo_dir, slug)
-            if os.path.isdir(slug_dir):
-                os.makedirs(archive_dir, exist_ok=True)
-                dest = os.path.join(archive_dir, slug)
-                shutil.move(slug_dir, dest)
-                archived.append(slug)
-                del manifest[slug]
+        # Already taken down on an earlier run — leave it alone.
+        if entry.get("taken_down"):
+            continue
+        if date.fromisoformat(expires_str) >= today:
+            continue
+        slug_dir = os.path.join(demo_dir, slug)
+        if not os.path.isdir(slug_dir):
+            continue
 
-    # Write manifest back even if nothing expired (keeps it tidy)
-    with open(manifest_path, "w", encoding="utf-8") as fh:
-        json.dump(manifest, fh, indent=2)
+        taken_down.append(slug)
+        if apply:
+            os.makedirs(archive_dir, exist_ok=True)
+            dest = os.path.join(archive_dir, slug)
+            # A previous archive of the same slug would make shutil.move nest
+            # the folder inside it; clear the stale copy first.
+            if os.path.isdir(dest):
+                shutil.rmtree(dest)
+            shutil.move(slug_dir, dest)
+            entry["taken_down"] = today_iso
 
-    return archived
+    # A dry run must not touch the manifest either.
+    if apply:
+        with open(manifest_path, "w", encoding="utf-8") as fh:
+            json.dump(manifest, fh, indent=2)
+
+    return taken_down
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python expire_samples.py <YYYY-MM-DD>", file=sys.stderr)
+    args = [a for a in sys.argv[1:] if a != "--apply"]
+    apply_flag = "--apply" in sys.argv
+    if not args:
+        print("Usage: python expire_samples.py <YYYY-MM-DD> [--apply]", file=sys.stderr)
         sys.exit(1)
-    today_arg = sys.argv[1]
-    expired = expire("demo", today_arg)
-    if expired:
-        print(f"Archived {len(expired)} sample(s): {', '.join(expired)}")
+    today_arg = args[0]
+    hits = expire("demo", today_arg, apply=apply_flag)
+    if not hits:
+        print("No samples are past their expiry date.")
+    elif apply_flag:
+        print(f"Took down {len(hits)} sample(s): {', '.join(hits)}")
+        print("Commit and push demo/ to publish the takedown.")
     else:
-        print("No samples expired.")
+        print(f"DRY RUN: {len(hits)} sample(s) would be taken down: {', '.join(hits)}")
+        print("Re-run with --apply to move them to demo/_archive/.")

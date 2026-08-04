@@ -20,8 +20,13 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Expire samples past 30 days
-        run: python scripts/expire_samples.py "$(date -u +%F)"
+      # --apply is required now that the script defaults to a dry run. Without
+      # it this job would report and change nothing, which looks identical to a
+      # working safeguard in the run log. The window is 60 days, stamped at build
+      # time by ss_build.EXPIRY_DAYS; this job only reads the date already in the
+      # manifest and never computes one of its own.
+      - name: Expire samples past their expiry date
+        run: python scripts/expire_samples.py "$(date -u +%F)" --apply
 
       - name: Commit archived samples (if any)
         run: |
@@ -29,7 +34,7 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add demo/
-            git commit -m "chore: auto-expire samples past 30 days"
+            git commit -m "chore: auto-expire samples past their 60-day window"
             git push
           else
             echo "Nothing to expire today."
