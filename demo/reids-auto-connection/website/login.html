@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Staff Login — Reids Auto Connection Dashboard</title>
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#070A14" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css?v=6" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<style>
+  .auth-wrap { min-height: 100vh; display: grid; place-items: center; padding: 24px; position: relative; z-index: 2; }
+  .auth-card { width: min(420px, 100%); background: rgba(10,14,28,0.72); backdrop-filter: blur(20px) saturate(150%); border: 1px solid var(--hairline); border-radius: var(--radius-lg); box-shadow: 0 50px 100px -30px rgba(0,0,0,0.9); padding: clamp(28px, 5vw, 44px); }
+  .auth-logo { display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 26px; }
+  .auth-logo .wordmark { align-items: center; }
+  .auth-card h1 { font-size: 26px; text-align: center; margin-bottom: 6px; }
+  .auth-card .sub { text-align: center; color: var(--text-soft); font-size: 14px; margin-bottom: 26px; }
+  .auth-demo { text-align: center; font-size: 12.5px; color: var(--gold-soft); background: rgba(245,165,36,0.1); border: 1px solid rgba(245,165,36,0.22); border-radius: 12px; padding: 10px 14px; margin-bottom: 22px; }
+  .auth-back { text-align: center; margin-top: 22px; font-size: 13px; }
+  .auth-back a { color: var(--text-dim); } .auth-back a:hover { color: var(--gold-soft); }
+  .err { color: #ff8a8a; font-size: 13px; margin-bottom: 12px; display: none; }
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <span class="logo-tile" aria-hidden="true"><svg width="44" height="44" viewBox="0 0 42 42" fill="none"><rect x="1" y="1" width="40" height="40" rx="11" fill="#0A0E1C" stroke="rgba(255,255,255,0.1)"/><circle cx="21" cy="27" r="8.5" fill="url(#sun)"/><rect x="8" y="27" width="26" height="10" fill="#0A0E1C"/><path d="M8 27 H34" stroke="#F5A524" stroke-width="2" stroke-linecap="round"/><path d="M21 12 V15 M13 15 L15 17 M29 15 L27 17 M8 24 H10 M32 24 H34" stroke="#F5A524" stroke-width="1.6" stroke-linecap="round"/><defs><radialGradient id="sun" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#FFC15E"/><stop offset="1" stop-color="#F5A524"/></radialGradient></defs></svg></span>
+      <span class="wordmark"><b>REIDS AUTO</b><small>Connection</small></span>
+    </div>
+    <h1>Dealer Dashboard</h1>
+    <p class="sub">Sign in to manage leads, sales &amp; inventory</p>
+    <div class="auth-demo">🔒 Demo — use any email &amp; password to sign in</div>
+
+    <form id="loginForm" novalidate>
+      <p class="err" id="err">Please enter an email and password.</p>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" placeholder="you@reidsautoconnection.com" autocomplete="username" /></div>
+      <div class="field"><label for="pw">Password</label><input type="password" id="pw" placeholder="••••••••" autocomplete="current-password" /></div>
+      <button type="submit" class="btn btn-gold btn-lg" style="width:100%;margin-top:6px;">Sign in →</button>
+    </form>
+    <p class="auth-back"><a href="index.html">← Back to website</a></p>
+  </div>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value.trim();
+    var pw = document.getElementById('pw').value.trim();
+    var err = document.getElementById('err');
+    if (!email || !pw) { err.style.display = 'block'; return; }
+    // DEMO auth only — no real backend. Any non-empty credentials pass.
+    try {
+      localStorage.setItem('reids_auth', '1');
+      localStorage.setItem('reids_user', email);
+    } catch (ex) {}
+    window.location.href = 'dashboard.html';
+  });
+</script>
+</body>
+</html>

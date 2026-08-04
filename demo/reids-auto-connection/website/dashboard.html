@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dealer Dashboard — Reids Auto Connection</title>
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#070A14" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css?v=6" />
+<link rel="stylesheet" href="assets/css/dashboard.css?v=6" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body class="dash-body">
+<div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="dscrim" id="dscrim"></div>
+
+<div class="dash">
+  <!-- SIDEBAR -->
+  <aside class="dside" id="dside">
+    <div class="dside__logo">
+      <span class="logo-tile" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 42 42" fill="none"><rect x="1" y="1" width="40" height="40" rx="11" fill="#0A0E1C" stroke="rgba(255,255,255,0.1)"/><circle cx="21" cy="27" r="8.5" fill="url(#sun)"/><rect x="8" y="27" width="26" height="10" fill="#0A0E1C"/><path d="M8 27 H34" stroke="#F5A524" stroke-width="2" stroke-linecap="round"/><path d="M21 12 V15 M13 15 L15 17 M29 15 L27 17 M8 24 H10 M32 24 H34" stroke="#F5A524" stroke-width="1.6" stroke-linecap="round"/><defs><radialGradient id="sun" cx="0.5" cy="0.35" r="0.75"><stop offset="0" stop-color="#FFC15E"/><stop offset="1" stop-color="#F5A524"/></radialGradient></defs></svg></span>
+      <span class="wordmark"><b>REIDS AUTO</b><small>Dashboard</small></span>
+    </div>
+    <nav class="dnav">
+      <span class="dnav__label">Sales CRM</span>
+      <a data-page="overview" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Overview</a>
+      <a data-page="leads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg> Leads <span class="badge-n">4</span></a>
+      <a data-page="followups"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Follow-Ups <span class="badge-n">5</span></a>
+      <a data-page="sales"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> New Sales</a>
+      <a data-page="reviews"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Reviews</a>
+      <span class="dnav__label">Website</span>
+      <a data-page="inventory"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9l2-4h14l2 4v6a2 2 0 0 1-2 2M7 17v2M17 17v2"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/></svg> Update Inventory</a>
+    </nav>
+    <div class="dside__foot">
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg> View website</a>
+      <a id="logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg> Sign out</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="dmain">
+    <header class="dtop">
+      <button class="dtop__burger" id="dburger" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <h1 id="dtitle">Overview</h1>
+      <div class="dtop__spacer"></div>
+      <a class="dtop__view" href="index.html" target="_blank" rel="noopener">View site ↗</a>
+      <div class="dtop__user"><span id="duser">owner@reids</span><div class="dtop__ava" id="dava">R</div></div>
+    </header>
+
+    <div class="dcontent">
+
+      <!-- OVERVIEW -->
+      <section class="dpage active" id="page-overview">
+        <div class="kpis">
+          <div class="kpi"><div class="kpi__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="kpi__n">4</div><div class="kpi__l">New leads today</div><div class="kpi__d up">▲ 2 vs. yesterday</div></div>
+          <div class="kpi"><div class="kpi__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div class="kpi__n">5</div><div class="kpi__l">Follow-ups due</div><div class="kpi__d down">2 overdue</div></div>
+          <div class="kpi"><div class="kpi__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9l2-4h14l2 4v6a2 2 0 0 1-2 2"/></svg></div><div class="kpi__n">12</div><div class="kpi__l">Cars sold (MTD)</div><div class="kpi__d up">▲ 3 vs. last month</div></div>
+          <div class="kpi"><div class="kpi__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="kpi__n">$146,695</div><div class="kpi__l">Revenue (MTD)</div><div class="kpi__d up">▲ 11%</div></div>
+        </div>
+        <div class="panel-d">
+          <div class="panel-d__head"><h3>Recent leads</h3><a class="dtop__view" data-jump="leads">View all →</a></div>
+          <table class="dtable"><thead><tr><th>Customer</th><th>Source</th><th>Interested in</th><th>Status</th></tr></thead><tbody>
+            <tr><td class="who"><b>Marcus Reyes</b><small>(972) 555-0148</small></td><td>Website form</td><td>2022 Ford F-150 XLT</td><td><span class="pill hot">🔥 Hot</span></td></tr>
+            <tr><td class="who"><b>Destiny Wallace</b><small>(940) 555-0192</small></td><td>Chat (Dawn)</td><td>Any SUV under $25k</td><td><span class="pill new">New</span></td></tr>
+            <tr><td class="who"><b>Ashley Nguyen</b><small>(469) 555-0110</small></td><td>Google</td><td>First car / no credit</td><td><span class="pill new">New</span></td></tr>
+            <tr><td class="who"><b>Brianna Scott</b><small>(940) 555-0134</small></td><td>Website form</td><td>Bankruptcy financing</td><td><span class="pill hot">🔥 Hot</span></td></tr>
+          </tbody></table>
+        </div>
+      </section>
+
+      <!-- LEADS -->
+      <section class="dpage" id="page-leads">
+        <div class="panel-d">
+          <div class="panel-d__head"><h3>All leads</h3><span class="dtop__view">8 open</span></div>
+          <table class="dtable"><thead><tr><th>Customer</th><th>Source</th><th>Interested in</th><th>Status</th><th>Added</th></tr></thead><tbody>
+            <tr><td class="who"><b>Marcus Reyes</b><small>(972) 555-0148</small></td><td>Website form</td><td>2022 Ford F-150 XLT</td><td><span class="pill hot">🔥 Hot</span></td><td>Today</td></tr>
+            <tr><td class="who"><b>Destiny Wallace</b><small>(940) 555-0192</small></td><td>Chat (Dawn)</td><td>Any SUV under $25k</td><td><span class="pill new">New</span></td><td>Today</td></tr>
+            <tr><td class="who"><b>Carlos Mendoza</b><small>(214) 555-0173</small></td><td>Facebook</td><td>2021 Nissan Altima</td><td><span class="pill wait">Following up</span></td><td>Yesterday</td></tr>
+            <tr><td class="who"><b>Ashley Nguyen</b><small>(469) 555-0110</small></td><td>Google</td><td>First car / no credit</td><td><span class="pill new">New</span></td><td>Yesterday</td></tr>
+            <tr><td class="who"><b>James Turner</b><small>(972) 555-0166</small></td><td>Referral</td><td>2023 Toyota RAV4</td><td><span class="pill won">Won</span></td><td>2 days ago</td></tr>
+            <tr><td class="who"><b>Brianna Scott</b><small>(940) 555-0134</small></td><td>Website form</td><td>Bankruptcy financing</td><td><span class="pill hot">🔥 Hot</span></td><td>2 days ago</td></tr>
+            <tr><td class="who"><b>Devon Price</b><small>(214) 555-0155</small></td><td>Walk-in</td><td>Silverado 1500</td><td><span class="pill wait">Waiting</span></td><td>3 days ago</td></tr>
+            <tr><td class="who"><b>Maria Flores</b><small>(469) 555-0129</small></td><td>Chat (Dawn)</td><td>Trade-in + upgrade</td><td><span class="pill new">New</span></td><td>3 days ago</td></tr>
+          </tbody></table>
+        </div>
+      </section>
+
+      <!-- FOLLOW-UPS -->
+      <section class="dpage" id="page-followups">
+        <div class="panel-d">
+          <div class="panel-d__head"><h3>Today &amp; upcoming</h3><span class="dtop__view">5 open · 2 overdue</span></div>
+          <div class="tasks">
+            <div class="task"><input type="checkbox" /><div class="task__t"><b>Call Marcus Reyes — F-150 approval decision</b><small>Due today · 2:00 PM · Sam E.</small></div><span class="pill due">Due today</span></div>
+            <div class="task"><input type="checkbox" /><div class="task__t"><b>Text Destiny Wallace 3 SUV options under $25k</b><small>Due today · Reid A.</small></div><span class="pill due">Due today</span></div>
+            <div class="task"><input type="checkbox" /><div class="task__t"><b>Follow up Brianna Scott — bankruptcy paperwork</b><small>Overdue · was due yesterday · Sam E.</small></div><span class="pill hot">Overdue</span></div>
+            <div class="task"><input type="checkbox" /><div class="task__t"><b>Call Maria Flores — trade-in value on 2018 Corolla</b><small>Due today · Reid A.</small></div><span class="pill due">Due today</span></div>
+            <div class="task"><input type="checkbox" /><div class="task__t"><b>Send Carlos Mendoza financing approval docs</b><small>Overdue · Sam E.</small></div><span class="pill hot">Overdue</span></div>
+            <div class="task done"><input type="checkbox" checked /><div class="task__t"><b>Check in with James Turner — delivery satisfaction</b><small>Completed · Reid A.</small></div><span class="pill won">Done</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW SALES -->
+      <section class="dpage" id="page-sales">
+        <div class="panel-d">
+          <div class="panel-d__head"><h3>Recent sales · July</h3><span class="dtop__view">12 sold · $146,695</span></div>
+          <table class="dtable"><thead><tr><th>Customer</th><th>Vehicle</th><th>Price</th><th>Salesperson</th><th>Date</th></tr></thead><tbody>
+            <tr><td class="who"><b>James Turner</b></td><td>2023 Toyota RAV4 XLE</td><td class="amt">$29,450</td><td>Sam E.</td><td>Jul 20</td></tr>
+            <tr><td class="who"><b>Kayla Brooks</b></td><td>2021 Honda Accord Sport</td><td class="amt">$23,450</td><td>Reid A.</td><td>Jul 18</td></tr>
+            <tr><td class="who"><b>Tyler Jackson</b></td><td>2020 Nissan Rogue SV</td><td class="amt">$18,995</td><td>Sam E.</td><td>Jul 17</td></tr>
+            <tr><td class="who"><b>Priya Patel</b></td><td>2022 Kia Sportage LX</td><td class="amt">$23,400</td><td>Reid A.</td><td>Jul 15</td></tr>
+            <tr><td class="who"><b>Andre Wilson</b></td><td>2022 Ford F-150 XLT</td><td class="amt">$33,450</td><td>Sam E.</td><td>Jul 12</td></tr>
+            <tr><td class="who"><b>Nicole Adams</b></td><td>2021 Hyundai Elantra SEL</td><td class="amt">$17,950</td><td>Reid A.</td><td>Jul 10</td></tr>
+          </tbody></table>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="dpage" id="page-reviews">
+        <div class="dpage__head"><span class="dtop__view">4.7★ average · 200+ Google reviews · 3 awaiting reply</span></div>
+        <div class="drev-grid">
+          <div class="drev"><div class="stars">★★★★★</div><p>"Just out of Chapter 7 and I was sure I'd get laughed out the door. They treated me like a person and got me approved with zero down."</p><div class="drev__foot"><span class="drev__who"><b>Marcus R.</b> · Google · 2d</span><button class="drev__reply">Reply</button></div></div>
+          <div class="drev"><div class="stars">★★★★★</div><p>"First car, no credit, and every other lot turned me away. Reids approved me in fifteen minutes and explained everything."</p><div class="drev__foot"><span class="drev__who"><b>Destiny W.</b> · Google · 4d</span><button class="drev__reply">Reply</button></div></div>
+          <div class="drev"><div class="stars">★★★★☆</div><p>"Good selection and fair pricing. Took a little while to finish the paperwork but well worth it in the end."</p><div class="drev__foot"><span class="drev__who"><b>Carlos M.</b> · Facebook · 5d</span><button class="drev__reply">Reply</button></div></div>
+          <div class="drev"><div class="stars">★★★★★</div><p>"After a repo my score was wrecked. They found me a truck I actually wanted, not some beater. Credit's already climbing."</p><div class="drev__foot"><span class="drev__who"><b>James T.</b> · Google · 1w</span><button class="drev__reply">Reply</button></div></div>
+        </div>
+      </section>
+
+      <!-- INVENTORY MANAGER -->
+      <section class="dpage" id="page-inventory">
+        <div class="panel-d">
+          <div class="panel-d__head">
+            <h3>Live inventory <span id="inv-total" style="color:var(--text-dim);font-weight:400;font-family:'Inter';font-size:14px;"></span></h3>
+            <button class="btn btn-gold" id="addBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg> Add vehicle</button>
+          </div>
+          <div class="invman" id="invman"></div>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-dim);text-align:center;">Vehicles you add here post straight to the public inventory page. <a id="resetDemo" style="color:var(--gold-soft);cursor:pointer;">Reset demo data</a></p>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- ADD VEHICLE MODAL -->
+<div class="addveh" id="addveh">
+  <div class="addveh__card">
+    <button class="vm-close" id="addClose" aria-label="Close"><svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <h3>Add a vehicle</h3>
+    <p class="sub">Fill in the details and upload a photo — it posts to the website instantly.</p>
+    <form id="addForm">
+      <div class="drop" id="drop">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        <p>Click to upload vehicle photo</p><small>JPG or PNG · first photo becomes the listing image</small>
+        <div class="drop__preview" id="preview"></div>
+        <input type="file" id="photo" accept="image/*" hidden multiple />
+      </div>
+      <div class="form-grid" style="margin-top:16px;">
+        <div class="field"><label>Year *</label><input name="year" type="number" min="1990" max="2027" placeholder="2022" required /></div>
+        <div class="field"><label>Make *</label><input name="make" placeholder="Toyota" required /></div>
+        <div class="field"><label>Model *</label><input name="model" placeholder="Camry" required /></div>
+        <div class="field"><label>Trim</label><input name="trim" placeholder="SE" /></div>
+        <div class="field"><label>Body type</label><select name="body"><option>Sedan</option><option>SUV</option><option>Truck</option><option>Van</option><option>Coupe</option></select></div>
+        <div class="field"><label>Price ($) *</label><input name="price" type="number" placeholder="24988" required /></div>
+        <div class="field"><label>Mileage *</label><input name="mileage" type="number" placeholder="31400" required /></div>
+        <div class="field"><label>Drivetrain</label><select name="drivetrain"><option>FWD</option><option>AWD</option><option>4x4</option><option>4WD</option><option>RWD</option></select></div>
+        <div class="field"><label>Transmission</label><select name="transmission"><option>Automatic</option><option>Manual</option><option>CVT</option></select></div>
+        <div class="field"><label>Fuel</label><select name="fuel"><option>Gasoline</option><option>Hybrid</option><option>Diesel</option><option>Electric</option></select></div>
+        <div class="field"><label>Exterior color</label><input name="ext" placeholder="Silver" /></div>
+        <div class="field"><label>Fuel economy (mpg)</label><input name="mpg" placeholder="28/39" /></div>
+      </div>
+      <div class="field"><label>Engine</label><input name="engine" placeholder="2.5L I4" /></div>
+      <div class="field"><label>Features (comma separated)</label><input name="features" placeholder="Apple CarPlay, Backup Camera, Alloy Wheels" /></div>
+      <div class="vm-actions" style="margin-top:8px;"><button type="submit" class="btn btn-gold btn-lg">Post to website</button><button type="button" class="btn btn-ghost btn-lg" id="addCancel">Cancel</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span id="toastMsg">Saved</span></div>
+
+<script src="assets/js/inventory-data.js?v=6"></script>
+<script src="assets/js/dashboard.js?v=6"></script>
+</body>
+</html>
