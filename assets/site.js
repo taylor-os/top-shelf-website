@@ -42,11 +42,16 @@
 
   var EASE = 'power3.out';
 
-  /* On-load reveal for whichever hero this page has */
+  /* Hero entrance — transform only, never opacity.
+     The hero is already painted by the time this runs (scripts are at the
+     bottom of the body) and it is the LCP element, so fading it from 0 meant
+     un-painting content the visitor had already seen. gsap.from() with y only
+     lets it rise into place without ever being invisible: if this tween never
+     runs, the hero simply sits where it belongs. */
   var heroSel = document.querySelector('.hero') ? '.hero .reveal' : '.page-hero .reveal';
   var heroReveals = gsap.utils.toArray(heroSel);
   if (heroReveals.length) {
-    gsap.to(heroReveals, { opacity: 1, y: 0, duration: 1.15, ease: EASE, stagger: 0.11, delay: 0.15 });
+    gsap.from(heroReveals, { y: 18, duration: 0.85, ease: EASE, stagger: 0.06, clearProps: 'transform' });
   }
 
   /* Stat reveal. This used to roll 0 -> final, and that animation was actively
@@ -74,9 +79,12 @@
     ScrollTrigger.create({ trigger: el, start: 'top 90%', once: true, onEnter: function () { countUp(el); } });
   });
 
-  /* Scroll-in reveals for everything outside the hero */
-  gsap.utils.toArray('.reveal').forEach(function (el) {
-    if (el.closest('.hero') || el.closest('.page-hero')) return;
+  /* Scroll-in reveals for everything below the hero. */
+  var belowFold = gsap.utils.toArray('.reveal').filter(function (el) {
+    return !el.closest('.hero') && !el.closest('.page-hero');
+  });
+
+  belowFold.forEach(function (el) {
     var isRow = el.matches(ROW_SEL);
     gsap.to(el, {
       opacity: 1, y: 0, duration: 0.95, ease: EASE,
@@ -85,16 +93,31 @@
     });
   });
 
-  /* Safety: force any still-hidden reveal visible after load */
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      gsap.utils.toArray('.reveal').forEach(function (el) {
-        if (getComputedStyle(el).opacity === '0') gsap.set(el, { opacity: 1, y: 0 });
-      });
-      document.querySelectorAll(ROW_SEL).forEach(function (el) { el.classList.add('is-ready'); });
-      ScrollTrigger.refresh();
-    }, 1400);
-  });
+  /* Failsafe — rescues content that should ALREADY be visible and isn't.
+     Replaces a load+1400ms sweep that called gsap.set on EVERY still-hidden
+     .reveal. That unhid the entire page, so ~1.4s after load every scroll
+     reveal below the fold had already been pre-empted and the animation never
+     played for anyone who hadn't scrolled by then.
+     Two constraints now:
+     (1) Not tied to window.load — that waits on every image, so on a slow
+         connection the people most likely to be looking at hidden content
+         waited longest to see it.
+     (2) Scoped to what is at or above the fold, so content further down still
+         animates on scroll as designed.
+     Runs a few times early, because layout shifts as images land. */
+  var sweeps = 0;
+  var sweep = setInterval(function () {
+    var stuck = belowFold.filter(function (el) {
+      if (getComputedStyle(el).opacity !== '0') return false;
+      return el.getBoundingClientRect().top < window.innerHeight;   // should have fired by now
+    });
+    if (stuck.length) {
+      gsap.to(stuck, { opacity: 1, y: 0, duration: 0.4, stagger: 0.04, overwrite: 'auto' });
+      // rescued rows still need their hover-slide enabled
+      stuck.forEach(function (el) { if (el.matches(ROW_SEL)) el.classList.add('is-ready'); });
+    }
+    if (++sweeps >= 4) { clearInterval(sweep); ScrollTrigger.refresh(); }
+  }, 700);
 })();
 
 /* ==================== GOLD DUST BACKGROUND ==================== */

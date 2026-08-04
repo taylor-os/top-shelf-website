@@ -51,7 +51,7 @@ body{
   background:var(--ground);
   color:var(--ink-2);
   font-family:var(--sans);
-  font-weight:300;
+  font-weight:400;
   font-size:16px;
   line-height:1.7;
   letter-spacing:.01em;
@@ -192,7 +192,7 @@ a{ color:inherit; text-decoration:none; }
 .nav-links{ display:flex; align-items:center; gap:2.4rem; }
 .nav-item{ position:relative; }
 .nav-link{
-  font-size:.86rem; letter-spacing:.05em; color:var(--ink-2); font-weight:300;
+  font-size:.86rem; letter-spacing:.05em; color:var(--ink-2); font-weight:400;
   display:inline-flex; align-items:center; gap:.4rem; padding-block:.5rem;
   transition:color .4s var(--ease);
 }
@@ -262,7 +262,7 @@ body.mm-open{ overflow:hidden; }
 .hero-title{ margin-bottom:2.4rem; }
 .hero-sub{
   color:var(--ink-2); max-width:54ch; font-size:clamp(1.02rem,1.35vw,1.18rem);
-  line-height:1.8; font-weight:300; margin-bottom:3rem;
+  line-height:1.8; font-weight:400; margin-bottom:3rem;
 }
 .hero-actions{ display:flex; flex-wrap:wrap; gap:1rem; }
 
@@ -283,7 +283,7 @@ body.mm-open{ overflow:hidden; }
   color:var(--gold-bright); line-height:1; display:block; margin-bottom:1rem; letter-spacing:-0.01em;
   font-variant-numeric:tabular-nums;
 }
-.hero-stat-label{ font-size:.82rem; line-height:1.6; color:var(--ink-3); max-width:26ch; font-weight:300; }
+.hero-stat-label{ font-size:.82rem; line-height:1.6; color:var(--ink-3); max-width:26ch; font-weight:400; }
 
 /* ============================================================
    PROCESS — v2 (emil) steps: hairline-gapped panel cells,
@@ -313,7 +313,7 @@ body.mm-open{ overflow:hidden; }
 .step:hover .step-icon{ border-color:var(--gold); color:var(--gold-bright); transform:translateY(-3px); }
 .step-icon svg{ width:28px; height:28px; }
 .step-title{ font-family:var(--serif); font-weight:500; font-size:26px; margin-bottom:14px; color:var(--ink); letter-spacing:-0.005em; }
-.step-body{ color:var(--ink-3); font-size:15px; line-height:1.7; font-weight:300; }
+.step-body{ color:var(--ink-3); font-size:15px; line-height:1.7; font-weight:400; }
 
 /* ============================================================
    INDUSTRIES — hairline-divided rows, no card boxes
@@ -343,7 +343,7 @@ body.mm-open{ overflow:hidden; }
 .row-titlewrap .row-title{ font-family:var(--serif); font-size:clamp(1.5rem,2.4vw,2rem); color:var(--ink); font-weight:400; letter-spacing:-0.005em; transition:color .45s var(--ease); }
 .rowitem:hover .row-title{ color:var(--gold-bright); }
 .row-hook{ font-size:.82rem; color:var(--gold); letter-spacing:.02em; margin-top:.5rem; }
-.row-body{ font-size:.9rem; color:var(--ink-3); line-height:1.7; font-weight:300; }
+.row-body{ font-size:.9rem; color:var(--ink-3); line-height:1.7; font-weight:400; }
 .row-cta{ justify-self:end; white-space:nowrap; }
 
 /* ============================================================
@@ -371,7 +371,7 @@ body.mm-open{ overflow:hidden; }
 .index-icon svg{ width:30px; height:30px; }
 .index-title{ font-family:var(--serif); font-size:clamp(1.4rem,2vw,1.85rem); color:var(--ink); font-weight:400; transition:color .45s var(--ease); }
 .index-item:hover .index-title{ color:var(--gold-bright); }
-.index-body{ font-size:.9rem; color:var(--ink-3); line-height:1.7; font-weight:300; }
+.index-body{ font-size:.9rem; color:var(--ink-3); line-height:1.7; font-weight:400; }
 .index-cta{ justify-self:end; white-space:nowrap; }
 
 /* ============================================================
@@ -383,7 +383,7 @@ body.mm-open{ overflow:hidden; }
 .promise-icon{ color:var(--gold); margin-bottom:1.8rem; }
 .promise-icon svg{ width:30px; height:30px; }
 .promise-title{ font-family:var(--serif); font-size:1.6rem; color:var(--ink); margin-bottom:1.1rem; font-weight:400; }
-.promise-body{ font-size:.92rem; color:var(--ink-2); line-height:1.75; font-weight:300; }
+.promise-body{ font-size:.92rem; color:var(--ink-2); line-height:1.75; font-weight:400; }
 
 /* ============================================================
    PRICING — v2 (emil) cards: gold top-edge draws in via scaleX,
@@ -456,7 +456,7 @@ body.mm-open{ overflow:hidden; }
   font-size:clamp(1.4rem,2.3vw,1.9rem); color:var(--ink); margin:1rem 0 .7rem;
 }
 .sig-band-title em{ font-style:italic; font-weight:400; color:var(--gold-bright); }
-.sig-band-copy{ font-size:.95rem; font-weight:300; line-height:1.75; color:var(--ink-3); }
+.sig-band-copy{ font-size:.95rem; font-weight:400; line-height:1.75; color:var(--ink-3); }
 .sig-band-cta{ flex-shrink:0; position:relative; z-index:2; }
 .pricing-badge{
   position:absolute; top:-13px; left:50%; transform:translateX(-50%);
@@ -476,7 +476,7 @@ body.mm-open{ overflow:hidden; }
 .pricing-feature{ display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--ink-2); line-height:1.5; }
 .pricing-feature .icon{ flex-shrink:0; color:var(--gold); margin-top:1px; }
 .pricing-feature .icon svg{ width:17px; height:17px; }
-.pricing-note{ text-align:center; color:var(--ink-3); font-size:15px; margin-top:44px; font-weight:300; }
+.pricing-note{ text-align:center; color:var(--ink-3); font-size:15px; margin-top:44px; font-weight:400; }
 .pricing-note a{ color:var(--gold-bright); border-bottom:1px solid var(--hairline-strong); transition:border-color 200ms var(--ease-out); }
 .pricing-note a:hover{ border-color:var(--gold-bright); }
 
@@ -488,7 +488,7 @@ body.mm-open{ overflow:hidden; }
 .result:first-child{ border-left:none; padding-left:0; }
 .result-num{ font-family:var(--serif); font-weight:300; font-size:clamp(3rem,5vw,4.4rem); color:var(--gold-bright); line-height:1; letter-spacing:-0.02em; display:block; margin-bottom:1.4rem; }
 .result-title{ font-family:var(--serif); font-size:1.35rem; color:var(--ink); margin-bottom:1rem; font-weight:400; }
-.result-body{ font-size:.9rem; color:var(--ink-2); line-height:1.75; font-weight:300; }
+.result-body{ font-size:.9rem; color:var(--ink-2); line-height:1.75; font-weight:400; }
 
 /* ============================================================
    FINAL CTA
@@ -498,7 +498,7 @@ body.mm-open{ overflow:hidden; }
 .cta .eyebrow{ margin-bottom:2rem; justify-content:center; }
 .cta-title{ font-family:var(--serif); font-size:clamp(2.8rem,6.5vw,5rem); color:var(--ink); line-height:1.05; font-weight:400; margin-bottom:2rem; letter-spacing:-0.01em; }
 .cta-title em{ font-style:italic; color:var(--gold-bright); }
-.cta-sub{ color:var(--ink-2); max-width:56ch; margin:0 auto 3rem; font-size:clamp(1rem,1.3vw,1.14rem); line-height:1.8; font-weight:300; }
+.cta-sub{ color:var(--ink-2); max-width:56ch; margin:0 auto 3rem; font-size:clamp(1rem,1.3vw,1.14rem); line-height:1.8; font-weight:400; }
 .cta-actions{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
 .cta-fine{ margin-top:2.4rem; font-size:.8rem; color:var(--ink-4); letter-spacing:.04em; }
 
@@ -512,13 +512,13 @@ body.mm-open{ overflow:hidden; }
    footer's first column is the widest one, but cap it on small screens so
    it can never outgrow the column. */
 @media (max-width:560px){ .footer-logo img{ height:64px; } }
-.footer-brand p{ font-size:.86rem; color:var(--ink-3); max-width:34ch; line-height:1.7; font-weight:300; }
+.footer-brand p{ font-size:.86rem; color:var(--ink-3); max-width:34ch; line-height:1.7; font-weight:400; }
 .footer-col-title{ font-size:.72rem; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); margin-bottom:1.4rem; }
 .footer-links{ display:flex; flex-direction:column; gap:.85rem; }
-.footer-links a{ font-size:.88rem; color:var(--ink-2); font-weight:300; transition:color .35s var(--ease); width:fit-content; }
+.footer-links a{ font-size:.88rem; color:var(--ink-2); font-weight:400; transition:color .35s var(--ease); width:fit-content; }
 .footer-links a:hover{ color:var(--gold-bright); }
 .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:2.4rem; border-top:1px solid var(--hairline-soft); gap:1rem; flex-wrap:wrap; }
-.footer-bottom p{ font-size:.8rem; color:var(--ink-4); font-weight:300; }
+.footer-bottom p{ font-size:.8rem; color:var(--ink-4); font-weight:400; }
 .footer-tagline{ font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--gold); }
 
 /* ============================================================
@@ -527,6 +527,18 @@ body.mm-open{ overflow:hidden; }
 .reveal{ opacity:1; }
 .js-motion .reveal{ opacity:0; transform:translateY(26px); }
 .js-motion .reveal-line{ transform:scaleX(0); transform-origin:left; }
+
+/* The hero is deliberately EXEMPT from hiding.
+   The scripts sit at the bottom of the body, so the browser paints the hero
+   first and site.js used to run afterwards and blank it — the visitor watched
+   the headline appear and then vanish for ~1.9s while GSAP staggered it back
+   in. On 2026-08-04 three of three sections screenshotted came back blank or
+   half-painted on a fast desktop with a warm cache, and two audit readers
+   independently reported staring at an empty black screen.
+   The hero is also the LCP element. So it paints once, stays painted, and
+   only rises into place — see the transform-only entrance in site.js. */
+.js-motion .hero .reveal,
+.js-motion .page-hero .reveal{ opacity:1; transform:none; }
 
 @media (prefers-reduced-motion:reduce){
   html{ scroll-behavior:auto; }
@@ -592,7 +604,7 @@ body.mm-open{ overflow:hidden; }
 .page-hero-icon svg{ width:30px; height:30px; }
 .page-hero .eyebrow{ justify-content:center; margin-bottom:1.6rem; }
 .page-hero h1{ margin-bottom:1.8rem; }
-.page-hero-sub{ color:var(--ink-2); max-width:60ch; margin:0 auto; font-size:clamp(1.02rem,1.35vw,1.18rem); line-height:1.8; font-weight:300; }
+.page-hero-sub{ color:var(--ink-2); max-width:60ch; margin:0 auto; font-size:clamp(1.02rem,1.35vw,1.18rem); line-height:1.8; font-weight:400; }
 .page-hero-actions{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:2.6rem; }
 
 /* --- Feature rows: icon + title + body, hairline divided --- */
@@ -612,7 +624,7 @@ body.mm-open{ overflow:hidden; }
 .feature-row-icon svg{ width:30px; height:30px; }
 .feature-row-title{ font-family:var(--serif); font-size:clamp(1.35rem,2.1vw,1.75rem); color:var(--ink); font-weight:400; margin-bottom:.6rem; letter-spacing:-0.005em; transition:color .45s var(--ease); }
 .feature-row:hover .feature-row-title{ color:var(--gold-bright); }
-.feature-row-body{ font-size:.94rem; color:var(--ink-2); line-height:1.75; font-weight:300; max-width:62ch; }
+.feature-row-body{ font-size:.94rem; color:var(--ink-2); line-height:1.75; font-weight:400; max-width:62ch; }
 .feature-row-result{ display:block; margin-top:.8rem; font-size:.86rem; color:var(--gold); letter-spacing:.01em; }
 
 /* --- Two-column split (e.g. narrative + list, before/after) --- */
@@ -629,7 +641,7 @@ body.mm-open{ overflow:hidden; }
 .mini-card-icon{ color:var(--gold); margin-bottom:1.2rem; }
 .mini-card-icon svg{ width:26px; height:26px; }
 .mini-card-title{ font-family:var(--serif); font-size:1.25rem; color:var(--ink); font-weight:400; margin-bottom:.6rem; }
-.mini-card-body{ font-size:.88rem; color:var(--ink-3); line-height:1.7; font-weight:300; }
+.mini-card-body{ font-size:.88rem; color:var(--ink-3); line-height:1.7; font-weight:400; }
 .mini-card-link{ margin-top:1rem; }
 
 /* --- Stat strip reused on interior pages (same look as homepage hero-stats) --- */
@@ -637,18 +649,18 @@ body.mm-open{ overflow:hidden; }
 .stat-cell{ padding:clamp(2rem,3vw,3rem) clamp(1.4rem,2vw,2.2rem); border-left:1px solid var(--hairline-soft); }
 .stat-cell:first-child{ border-left:none; padding-left:0; }
 .stat-cell-num{ font-family:var(--serif); font-weight:300; font-size:clamp(2.4rem,4vw,3.4rem); color:var(--gold-bright); line-height:1; display:block; margin-bottom:.9rem; font-variant-numeric:tabular-nums; letter-spacing:-.01em; }
-.stat-cell-label{ font-size:.82rem; line-height:1.6; color:var(--ink-3); max-width:26ch; font-weight:300; }
+.stat-cell-label{ font-size:.82rem; line-height:1.6; color:var(--ink-3); max-width:26ch; font-weight:400; }
 
 /* --- Q&A / FAQ rows (flattened, always visible) --- */
 .qa-list{ border-top:1px solid var(--hairline); }
 .qa-row{ padding:clamp(1.6rem,2.6vw,2.2rem) 0; border-bottom:1px solid var(--hairline-soft); display:grid; grid-template-columns:auto 1fr; gap:clamp(1rem,2vw,1.8rem); align-items:start; }
 .qa-num{ font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--gold-deep); font-weight:400; }
 .qa-q{ font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.4rem); color:var(--ink); font-weight:400; margin-bottom:.5rem; }
-.qa-a{ font-size:.92rem; color:var(--ink-2); line-height:1.75; font-weight:300; max-width:64ch; }
+.qa-a{ font-size:.92rem; color:var(--ink-2); line-height:1.75; font-weight:400; max-width:64ch; }
 
 /* --- Comparison table (them vs us / pricing matrix) --- */
 .cmp{ width:100%; border-collapse:collapse; border-top:1px solid var(--hairline); }
-.cmp th,.cmp td{ text-align:left; padding:clamp(1rem,1.8vw,1.4rem) clamp(1rem,1.6vw,1.5rem); border-bottom:1px solid var(--hairline-soft); font-weight:300; font-size:.92rem; color:var(--ink-2); vertical-align:top; }
+.cmp th,.cmp td{ text-align:left; padding:clamp(1rem,1.8vw,1.4rem) clamp(1rem,1.6vw,1.5rem); border-bottom:1px solid var(--hairline-soft); font-weight:400; font-size:.92rem; color:var(--ink-2); vertical-align:top; }
 .cmp thead th{ font-family:var(--sans); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:400; }
 .cmp .col-us{ color:var(--ink); }
 .cmp tbody tr:hover{ background:rgba(201,168,106,.03); }
@@ -660,7 +672,7 @@ body.mm-open{ overflow:hidden; }
 .field.full{ grid-column:1 / -1; }
 .field label{ font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); font-weight:400; }
 .field input,.field select,.field textarea{
-  font-family:var(--sans); font-size:.95rem; font-weight:300; color:var(--ink);
+  font-family:var(--sans); font-size:.95rem; font-weight:400; color:var(--ink);
   background:var(--surface); border:1px solid var(--hairline); border-radius:var(--r);
   padding:.9rem 1rem; width:100%; transition:border-color .35s var(--ease), background .35s var(--ease);
 }
@@ -703,7 +715,7 @@ body.mm-open{ overflow:hidden; }
 .pain-scene{font-style:italic;color:var(--ink-2);margin:.2rem 0 1rem}
 .pain-stat{display:flex;align-items:baseline;gap:.7rem;margin:1rem 0;padding-left:1rem;border-left:2px solid var(--gold)}
 .pain-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1;color:var(--gold-bright);font-weight:600;white-space:nowrap}
-.pain-stat-claim{font-size:.9rem;color:var(--ink-2);font-weight:300}
+.pain-stat-claim{font-size:.9rem;color:var(--ink-2);font-weight:400}
 .pain-src{font-size:.66rem;color:var(--ink-4);border-bottom:1px solid var(--hairline);white-space:nowrap}
 .pain-how strong{color:var(--gold)}
 .outcome-vision{font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1.5;color:var(--ink);font-weight:300;max-width:40ch}
