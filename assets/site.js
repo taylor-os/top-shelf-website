@@ -49,19 +49,21 @@
     gsap.to(heroReveals, { opacity: 1, y: 0, duration: 1.15, ease: EASE, stagger: 0.11, delay: 0.15 });
   }
 
-  /* Count-up (rolls 0 -> final). Hero stats fire on load; any other
-     [data-count] fires when scrolled into view. */
+  /* Stat reveal. This used to roll 0 -> final, and that animation was actively
+     costing us credibility: during a nine-reader audit on 2026-08-04, five
+     independent readers caught the counters mid-roll and reported our own
+     figures back as contradictory — "16% vs 62% unanswered", "22% vs 85%
+     never call back", "11x vs 21x". Every one of those was an intermediate
+     frame, not a number we publish. On a site whose entire promise is honest
+     numbers, a stat that displays a wrong value on its way to the right one is
+     a bad trade. So the final value renders immediately and only the type
+     animates. Same motion, no misreadable frames. */
   function countUp(el) {
     if (el._counted) return; el._counted = true;
-    var target = parseFloat(el.getAttribute('data-count'));
     var pre = el.getAttribute('data-prefix') || '';
     var suf = el.getAttribute('data-suffix') || '';
-    var obj = { v: 0 };
-    gsap.to(obj, {
-      v: target, duration: 1.6, ease: 'power2.out',
-      onUpdate: function () { el.textContent = pre + Math.round(obj.v) + suf; },
-      onComplete: function () { el.textContent = pre + target + suf; }
-    });
+    el.textContent = pre + el.getAttribute('data-count') + suf;
+    gsap.fromTo(el, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' });
   }
   var heroCounts = gsap.utils.toArray('.hero [data-count], .page-hero [data-count]');
   if (heroCounts.length) {
@@ -328,7 +330,6 @@
 (function () {
   if (!window.__tsChatRespond) return;
   var LEAD_ENDPOINT = 'https://top-shelf-production.up.railway.app/api/website-lead';
-  var FORMSPREE = 'https://formspree.io/f/FORMSPREE_ID'; // fallback (same id as the contact form)
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   var PHONE_RE = /(\d[\s\-().]*){10,}/;
 
@@ -343,20 +344,24 @@
   }
   window.__tsChatStartCapture = start;
 
+  /* The success line only fires on an actual 2xx. This used to end in
+     .catch(done), which told the visitor "You're all set ✅" even when every
+     endpoint had failed — the worst possible outcome, because they stop
+     chasing us and we never know they existed. If we can't deliver, we say so
+     and hand over the phone number. */
   function submit() {
-    var payload = { name: lead.name, business: lead.business, need: lead.need, page: location.href };
+    var payload = { name: lead.name, business: lead.business, need: lead.need, page: location.href, source: 'website-chat' };
     if (EMAIL_RE.test(lead.contact)) payload.email = lead.contact; else payload.phone = lead.contact;
-    var done = function () {
-      ask("You're all set, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! ✅ A Top Shelf specialist will reach out shortly about your free audit. Prefer email? <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a>.", 500);
-      lead.active = false;
-    };
+
     fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
       .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
-      .then(done)
+      .then(function () {
+        ask("You're all set, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! ✅ A Top Shelf specialist will reach out shortly about your free audit. Prefer email? <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a>.", 500);
+        lead.active = false;
+      })
       .catch(function () {
-        // Fallback so a lead is never lost.
-        fetch(FORMSPREE, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-          .then(done).catch(done);
+        ask("Sorry — something went wrong sending that, and I don't want your request to vanish. Call or text <a href='tel:+14698333033'>(469) 833-3033</a>, or email <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a> and we'll pick it straight up.", 500);
+        lead.active = false;
       });
   }
 

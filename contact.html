@@ -17,11 +17,11 @@
 <meta name="twitter:title" content="Get Your Free Audit — Top Shelf Business Solutions">
 <meta name="twitter:description" content="Get a free, no-obligation audit of your business. We'll tell you exactly where you're losing money — your calls, reviews, follow-up, and rankings. Real numbers, whether you work with us or not.">
 <meta name="twitter:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
-<link rel="icon" href="assets/logo-mark.png?v=20260803d">
+<link rel="icon" href="assets/logo-mark.png?v=20260804a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20260803d">
+<link rel="stylesheet" href="assets/site.css?v=20260804a">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 <!-- ============================ NAV ============================ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png?v=20260803d" alt="Top Shelf Business Solutions"></a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png?v=20260804a" alt="Top Shelf Business Solutions"></a>
     <div class="nav-links">
       <div class="nav-item">
         <a href="#" class="nav-link">Industries <span class="nav-arrow">&#9662;</span></a>
@@ -96,9 +96,12 @@
         <span class="eyebrow" style="margin-bottom:1.4rem;">Request Your Free Audit</span>
         <p style="color:var(--ink-3); font-size:.9rem; margin-bottom:2.4rem;">Takes about 60 seconds. No credit card, no commitment.</p>
         <p style="color:var(--ink-3); font-size:.9rem; margin-bottom:2.4rem;">Prefer to reach us directly? Call or text <a href="tel:+14698333033" style="color:var(--gold);">(469)&nbsp;833-3033</a>, email <a href="mailto:contact@topshelfsolutions.io" style="color:var(--gold);">contact@topshelfsolutions.io</a>, or visit <a href="https://www.topshelfsolutions.io" style="color:var(--gold);">www.topshelfsolutions.io</a>.</p>
-        <form id="audit-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
-          <input type="hidden" name="_subject" value="New Free Audit Request — Top Shelf Business Solutions" />
-          <input type="hidden" name="_next" value="thank-you.html" />
+        <!-- Posts to the Top Shelf CRM, which saves the contact, emails
+             contact@topshelfsolutions.io and texts the company line. The action
+             attribute is the same endpoint so a JS failure still captures the
+             lead rather than losing it, which is exactly what happened while
+             this pointed at an unreplaced Formspree placeholder. -->
+        <form id="audit-form" action="https://top-shelf-production.up.railway.app/api/website-lead" method="POST">
           <div class="form-grid">
             <div class="field">
               <label for="name">Your Name</label>
@@ -116,6 +119,7 @@
                 <option value="dental-medical">Dental / Medical</option>
                 <option value="home-services">Home Services (Plumbing, HVAC, Electrical, Roofing)</option>
                 <option value="auto">Auto (Tire Shop, Repair, Dealership)</option>
+                <option value="legal">Law Firm / Legal</option>
                 <option value="retail">Retail</option>
                 <option value="salon-spa">Salon / Spa</option>
                 <option value="other">Other Local Business</option>
@@ -136,8 +140,65 @@
           </div>
           <div class="field full" style="margin-top:1.6rem;display:flex;align-items:flex-start;gap:10px;"><input type="checkbox" id="sms-consent" name="sms_consent" value="yes" style="margin-top:3px;flex:none;width:17px;height:17px;accent-color:var(--gold);" /><label for="sms-consent" style="font-size:.78rem;color:var(--ink-3);line-height:1.6;font-weight:300;">Yes, text me. By checking this box, I agree to receive SMS text messages from Top Shelf Business Solutions (audit follow-ups, appointment reminders, account updates, and occasional offers) at the number provided. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our <a href="privacy.html" style="color:var(--gold);">Privacy Policy</a> &amp; <a href="privacy.html#sms-terms" style="color:var(--gold);">SMS Terms</a>.</label></div>
           <button type="submit" class="btn btn-gold w-full" style="margin-top:1.8rem;">Get My Free Audit <span class="arr">&rarr;</span></button>
+          <p id="audit-error" role="alert" style="display:none; margin-top:1.2rem; font-size:.84rem; color:#E5A3A3; text-align:center; line-height:1.6;"></p>
           <p style="margin-top:1.2rem; font-size:.78rem; color:var(--ink-4); text-align:center; letter-spacing:.03em;">We&rsquo;ll never share your info. No credit card. No commitment.</p>
         </form>
+
+        <script>
+        /* Audit form submission.
+           The CRM's field names differ from the form's, so we map rather than
+           posting the form verbatim: challenge -> need, type -> industry.
+           The one rule here is that the visitor is never told the message got
+           through unless it actually did — a silent failure on this form cost
+           us every inbound lead until 2026-08-04. */
+        (function () {
+          var form = document.getElementById('audit-form');
+          var err  = document.getElementById('audit-error');
+          if (!form) return;
+
+          var btn = form.querySelector('button[type="submit"]');
+          var btnHTML = btn ? btn.innerHTML : '';
+
+          function fail(msg) {
+            if (btn) { btn.disabled = false; btn.innerHTML = btnHTML; }
+            err.innerHTML = msg;
+            err.style.display = 'block';
+          }
+
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            err.style.display = 'none';
+            if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+            var f = new FormData(form);
+            var payload = {
+              name:        (f.get('name')     || '').trim(),
+              business:    (f.get('business') || '').trim(),
+              email:       (f.get('email')    || '').trim(),
+              phone:       (f.get('phone')    || '').trim(),
+              need:        (f.get('challenge')|| '').trim(),
+              industry:    f.get('type') || '',
+              sms_consent: f.get('sms_consent') === 'yes',
+              source:      'website-form',
+              page:        location.pathname
+            };
+
+            fetch(form.action, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(payload)
+            })
+            .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+            .then(function (d) {
+              if (d && d.ok) { location.href = 'thank-you.html'; return; }
+              fail('We couldn&rsquo;t send that just now. Please call or text <a href="tel:+14698333033" style="color:var(--gold);">(469)&nbsp;833-3033</a> or email <a href="mailto:contact@topshelfsolutions.io" style="color:var(--gold);">contact@topshelfsolutions.io</a> and we&rsquo;ll get straight to it.');
+            })
+            .catch(function () {
+              fail('We couldn&rsquo;t reach our server. Please call or text <a href="tel:+14698333033" style="color:var(--gold);">(469)&nbsp;833-3033</a> or email <a href="mailto:contact@topshelfsolutions.io" style="color:var(--gold);">contact@topshelfsolutions.io</a> &mdash; we don&rsquo;t want to lose your request.');
+            });
+          });
+        })();
+        </script>
       </div>
 
       <!-- WHAT HAPPENS NEXT -->
@@ -190,7 +251,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png?v=20260803d" alt="Top Shelf Business Solutions"></a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png?v=20260804a" alt="Top Shelf Business Solutions"></a>
         <p>One-stop digital modernization for local businesses. Your customers are always yours. Plain-English results.</p>
         <p class="footer-contact">
           <a href="tel:+14698333033">(469) 833-3033</a>
@@ -248,6 +309,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/site.js?v=20260803d"></script>
+<script src="assets/site.js?v=20260804a"></script>
 </body>
 </html>
