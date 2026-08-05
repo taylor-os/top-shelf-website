@@ -218,8 +218,11 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 }
 .hero-scrim{
   position:absolute;inset:0;
+  /* The copy column runs to roughly 48% of the width, so the wash has to still
+     be near-opaque there.  At .82 it was not, and a bright photo behind it left
+     the tagline and the rating chip barely readable. */
   background:
-    linear-gradient(to right,rgba(253,246,240,.96) 0%,rgba(253,246,240,.82) 44%,rgba(253,246,240,.28) 100%),
+    linear-gradient(to right,rgba(253,246,240,.97) 0%,rgba(253,246,240,.93) 40%,rgba(253,246,240,.72) 62%,rgba(253,246,240,.3) 100%),
     linear-gradient(to top,rgba(253,246,240,.9) 0%,transparent 36%);
 }
 .hero-inner{position:relative;max-width:40rem}
@@ -243,7 +246,7 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 .hero-rating{
   display:inline-flex;align-items:center;gap:.6rem;margin:0;
   padding:.55rem 1.15rem;border:1px solid var(--line-gold);border-radius:999px;
-  background:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.88);
   font-size:.9rem;color:var(--ink);
 }
 .hero-rating .star{color:var(--bronze);font-size:1rem;line-height:1}
