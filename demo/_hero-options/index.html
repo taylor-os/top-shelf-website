@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hero options — Strittmatter sample</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1B2E; --muted:#5A6B84; --line:#DCE4EF; --paper:#fff;
+    --bg:#F4F7FB; --navy:#1B3A6B; --accent:#2E6BC4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  header{background:var(--paper);border-bottom:1px solid var(--line);padding:1.1rem clamp(1rem,4vw,2rem)}
+  .head-in{max-width:1180px;margin:0 auto}
+  h1{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin:0 0 .25rem}
+  .sub{color:var(--muted);font-size:.9rem;margin:0}
+  .bar{max-width:1180px;margin:0 auto;padding:1.1rem clamp(1rem,4vw,2rem) 0;display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end;justify-content:space-between}
+  .group{display:flex;flex-wrap:wrap;gap:.5rem}
+  .lbl{display:block;font-size:.72rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+  button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink);
+    border-radius:9px;padding:.55rem 1rem;font-size:.9rem;font-weight:500;transition:.15s}
+  button:hover{border-color:#B9C8DC}
+  button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .note{max-width:1180px;margin:0 auto;padding:1rem clamp(1rem,4vw,2rem) 0}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:1rem 1.15rem}
+  .card b{display:block;font-size:.95rem;margin-bottom:.3rem}
+  .card p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.6}
+  .stage{max-width:1180px;margin:1.1rem auto 3rem;padding:0 clamp(1rem,4vw,2rem)}
+  .frame-wrap{background:#5C6B80;border-radius:13px;padding:clamp(.5rem,2vw,1.25rem);overflow:auto}
+  .frame-inner{margin:0 auto;transition:width .25s ease;background:#fff;border-radius:7px;overflow:hidden;box-shadow:0 10px 34px rgba(9,22,45,.28)}
+  iframe{display:block;width:100%;height:78vh;min-height:520px;border:0}
+  .open{display:inline-block;margin-top:.85rem;font-size:.88rem;color:var(--accent);text-decoration:none;font-weight:500}
+  .open:hover{text-decoration:underline}
+  .foot{max-width:1180px;margin:0 auto 3rem;padding:0 clamp(1rem,4vw,2rem);color:var(--muted);font-size:.83rem;line-height:1.65}
+</style>
+</head>
+<body>
+
+<header><div class="head-in">
+  <h1>Hero options</h1>
+  <p class="sub">Same page, same content, four hero treatments. Nothing here is published to the prospect.</p>
+</div></header>
+
+<div class="bar">
+  <div>
+    <span class="lbl">Option</span>
+    <div class="group" id="opts">
+      <button data-src="current.html" data-key="current" aria-pressed="false">Current (side photo)</button>
+      <button data-src="A.html" data-key="A" aria-pressed="true">A · Cinematic</button>
+      <button data-src="B.html" data-key="B" aria-pressed="false">B · Centered</button>
+      <button data-src="C.html" data-key="C" aria-pressed="false">C · Glass panel</button>
+    </div>
+  </div>
+  <div>
+    <span class="lbl">Width</span>
+    <div class="group" id="widths">
+      <button data-w="100%" aria-pressed="true">Desktop</button>
+      <button data-w="834px" aria-pressed="false">Tablet</button>
+      <button data-w="414px" aria-pressed="false">Phone</button>
+    </div>
+  </div>
+</div>
+
+<div class="note"><div class="card">
+  <b id="nt">A · Cinematic left scrim</b>
+  <p id="np">Copy sits on a solid dark left edge that fades into the photo. Legibility never depends on what the photograph happens to show, which matters when the photo is chosen mechanically from a pool. Keeps the left-aligned rhythm the rest of the page uses.</p>
+</div></div>
+
+<div class="stage">
+  <div class="frame-wrap">
+    <div class="frame-inner" id="fi" style="width:100%">
+      <iframe id="fr" src="A.html" title="Hero option preview"></iframe>
+    </div>
+  </div>
+  <a class="open" id="open" href="A.html" target="_blank" rel="noopener">Open this option full screen &rarr;</a>
+</div>
+
+<div class="foot">
+  <p>All four pass the fact checker with zero violations. The photo differs from the live sample on purpose: the pipeline picked an equipment close-up, which works beside the copy but falls apart blown up full width, so these use the condenser-beside-a-house shot from the same owned HVAC pool. If you pick a background hero, the skill also needs a rule that heroes prefer environmental shots and detail shots go to the gallery.</p>
+  <p>Use the Phone button to check the one thing I could not: my browser tooling would not change its own viewport, so I have never seen these at phone width.</p>
+</div>
+
+<script>
+  var COPY = {
+    current: ["Current · Side photo",
+      "The photo sits in a panel beside the copy. It is the design on the live sample today. The business name is squeezed into a narrow column, which is why a long name wraps to five lines."],
+    A: ["A · Cinematic left scrim",
+      "Copy sits on a solid dark left edge that fades into the photo. Legibility never depends on what the photograph happens to show, which matters when the photo is chosen mechanically from a pool. Keeps the left-aligned rhythm the rest of the page uses."],
+    B: ["B · Centered, full scrim",
+      "Boldest and most current-looking. The trade-off is that the scrim has to darken the entire image to keep the text readable, which mutes the photo you are featuring, and centered text is less forgiving of a long business name."],
+    C: ["C · Frosted glass panel",
+      "The photograph stays bright and unmuted behind a blurred panel. The trade-off is that it puts a box back inside a full-bleed hero, which is the thing this direction is meant to escape, and the blur is the most expensive of the three to render."]
+  };
+  var fr = document.getElementById('fr'), fi = document.getElementById('fi'),
+      open = document.getElementById('open'), nt = document.getElementById('nt'), np = document.getElementById('np');
+
+  document.getElementById('opts').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    [].forEach.call(this.querySelectorAll('button'), function(x){ x.setAttribute('aria-pressed', x === b); });
+    fr.src = b.dataset.src; open.href = b.dataset.src;
+    var c = COPY[b.dataset.key]; nt.textContent = c[0]; np.textContent = c[1];
+  });
+
+  document.getElementById('widths').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    [].forEach.call(this.querySelectorAll('button'), function(x){ x.setAttribute('aria-pressed', x === b); });
+    fi.style.width = b.dataset.w;
+  });
+</script>
+</body>
+</html>

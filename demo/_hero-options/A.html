@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B3A6B">
+<title>Strittmatter Air Conditioning, Heating &amp; Plumbing | Highland Village</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B3A6B'/%3E%3Cpath d='M8 17 16 9l8 8' fill='none' stroke='%239CC4EF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11 16v7h10v-7' fill='none' stroke='%23FFFFFF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Home services family template. Blueprint and steel direction:
+   light drafting-paper ground, deep navy structure, steel accent.
+   ============================================================ */
+:root{
+  --navy:#1B3A6B;
+  --navy-2:#12294E;
+  --navy-3:#0D1F3C;
+  --steel:#4A90D9;
+  --steel-ink:#2E6CB0;
+  --steel-light:#9CC4EF;
+  --steel-tint:#E8F1FB;
+  --bg:#F5F7FA;
+  --paper:#FFFFFF;
+  --ink:#1A1A2E;
+  --muted:#4A566B;
+  --line:#DCE3EE;
+  --gold:#E8A33D;
+  --radius:16px;
+  --radius-sm:11px;
+  --ease:cubic-bezier(.22,.61,.21,1);
+  --shadow-sm:0 4px 14px rgba(13,31,60,.07);
+  --shadow-md:0 14px 34px rgba(13,31,60,.12);
+  --shadow-lg:0 24px 60px rgba(13,31,60,.18);
+  --font-head:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  --font-body:"Open Sans","Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:6rem}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:1.0625rem;
+  line-height:1.7;
+  color:var(--ink);
+  background:var(--bg);
+  overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--steel-ink)}
+h1,h2,h3{font-family:var(--font-head);color:var(--navy);margin:0}
+h1,h2{text-wrap:balance}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+::selection{background:var(--steel);color:#fff}
+:focus-visible{outline:2.5px solid var(--steel-ink);outline-offset:3px}
+.wrap{width:min(1140px,100% - clamp(2.5rem,8vw,5rem));margin-inline:auto}
+.section{padding:clamp(4.25rem,9vw,7rem) 0}
+
+/* Skip link */
+.skip-link{
+  position:absolute;left:1rem;top:-4rem;z-index:200;
+  background:var(--navy);color:#fff;padding:.7rem 1.2rem;border-radius:8px;
+  font-weight:700;text-decoration:none;transition:top .25s var(--ease);
+}
+.skip-link:focus{top:1rem}
+
+/* Eyebrow labels */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.65rem;
+  font-family:var(--font-head);font-weight:700;font-size:.8rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--steel-ink);
+  margin:0 0 .9rem;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--steel);border-radius:2px}
+.section-head{max-width:62ch;margin-bottom:clamp(2.25rem,5vw,3.25rem)}
+.section-head h2{font-size:clamp(1.95rem,3.2vw + .6rem,2.85rem);font-weight:800;line-height:1.08;letter-spacing:.005em}
+.section-head .lede{margin-top:.9rem;color:var(--muted);font-size:1.08rem;max-width:56ch;text-wrap:pretty}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:var(--font-head);font-weight:700;font-size:.98rem;
+  text-transform:uppercase;letter-spacing:.06em;text-decoration:none;
+  padding:.92rem 1.65rem;border-radius:10px;border:1.5px solid transparent;
+  cursor:pointer;white-space:nowrap;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),
+    background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);
+}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 22px rgba(27,58,107,.24)}
+.btn-primary:hover{background:var(--navy-2);transform:translateY(-2px);box-shadow:0 16px 30px rgba(27,58,107,.3)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{border-color:#C7D4E6;color:var(--navy);background:transparent}
+.btn-ghost:hover{border-color:var(--steel);color:var(--steel-ink);background:var(--paper);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--navy);box-shadow:0 10px 24px rgba(6,16,34,.28)}
+.btn-light:hover{background:var(--steel-tint);transform:translateY(-2px);box-shadow:0 16px 32px rgba(6,16,34,.34)}
+
+/* ============================== Header ============================== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s var(--ease);
+}
+.site-header::before{
+  content:"";display:block;height:3px;
+  background:linear-gradient(90deg,var(--steel) 0%,var(--navy) 55%,var(--navy-3) 100%);
+}
+.site-header.is-scrolled{box-shadow:0 10px 30px rgba(13,31,60,.1)}
+.header-inner{display:flex;align-items:center;gap:1.1rem;min-height:74px;position:relative}
+.brand{
+  display:inline-flex;align-items:center;gap:.7rem;min-width:0;flex:1;
+  text-decoration:none;
+}
+.brand-glyph{
+  flex:none;width:40px;height:40px;border-radius:11px;
+  background:linear-gradient(145deg,#24518F,var(--navy-3));
+  display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 1px rgba(156,196,239,.35);
+}
+.brand-glyph svg{width:22px;height:22px;stroke:#fff}
+.brand-name{
+  font-family:var(--font-head);font-weight:700;color:var(--navy);
+  font-size:clamp(1.08rem,1.6vw,1.28rem);line-height:1.15;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.site-nav ul{list-style:none;display:flex;align-items:center;gap:1.9rem;margin:0;padding:0}
+.site-nav li:not(.nav-cta) a{
+  font-weight:600;font-size:.97rem;color:var(--muted);text-decoration:none;
+  padding:.3rem 0;
+  background:linear-gradient(var(--steel),var(--steel)) left bottom / 0 2px no-repeat;
+  transition:color .25s var(--ease),background-size .3s var(--ease);
+}
+.site-nav li:not(.nav-cta) a:hover{color:var(--navy);background-size:100% 2px}
+.nav-cta{display:none}
+.header-cta{flex:none}
+.nav-toggle{
+  display:none;flex:none;width:46px;height:46px;border:1.5px solid var(--line);
+  border-radius:10px;background:var(--paper);cursor:pointer;padding:0;
+  align-items:center;justify-content:center;flex-direction:column;gap:5px;
+  transition:border-color .25s var(--ease);
+}
+.nav-toggle:hover{border-color:var(--steel)}
+.nav-toggle span{
+  display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;
+  transition:transform .3s var(--ease),opacity .2s var(--ease);
+}
+.nav-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-open .nav-toggle span:nth-child(2){opacity:0}
+.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media (max-width:880px){
+  .nav-toggle{display:inline-flex}
+  .js .site-nav{
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    box-shadow:0 22px 40px rgba(13,31,60,.14);
+    opacity:0;visibility:hidden;transform:translateY(-10px);
+    transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s .3s;
+  }
+  .js.nav-open .site-nav{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+  .site-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:.6rem 1.4rem 1.3rem}
+  .site-nav li + li{border-top:1px solid var(--line)}
+  .site-nav li:not(.nav-cta) a{display:block;padding:.85rem .2rem;font-size:1.02rem;background:none}
+  .nav-cta{display:block;border-top:0 !important;padding-top:.6rem}
+  .nav-cta .btn{width:100%}
+  html:not(.js) .header-inner{flex-wrap:wrap;padding-bottom:.8rem}
+  html:not(.js) .site-nav{flex-basis:100%}
+}
+@media (max-width:560px){
+  .header-cta{display:none}
+  .btn{white-space:normal}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .cta-band .btn{width:100%}
+}
+html:not(.js) .nav-toggle{display:none}
+.top-sentinel{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
+
+/* ============================== Hero ============================== */
+.hero{
+  position:relative;
+  padding:clamp(3.25rem,7vw,5.75rem) 0 clamp(4rem,8vw,6.25rem);
+  background:
+    radial-gradient(90% 70% at 88% 0%,rgba(74,144,217,.14),transparent 60%),
+    repeating-linear-gradient(0deg,rgba(27,58,107,.045) 0 1px,transparent 1px 40px),
+    repeating-linear-gradient(90deg,rgba(27,58,107,.045) 0 1px,transparent 1px 40px),
+    var(--bg);
+}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(2.25rem,5vw,4.25rem);align-items:center;
+}
+.hero-copy .eyebrow{margin-bottom:1.1rem}
+.hero h1{
+  font-size:clamp(2.7rem,4.4vw + 1.1rem,4.55rem);
+  font-weight:800;line-height:1.02;text-transform:uppercase;
+  letter-spacing:.012em;margin-bottom:1.15rem;
+}
+.hero-lede{color:var(--muted);font-size:clamp(1.08rem,1.3vw,1.2rem);max-width:52ch;margin-bottom:1.9rem;text-wrap:pretty}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:1.6rem}
+.rating-chip{
+  display:inline-flex;flex-wrap:wrap;align-items:center;gap:.55rem;
+  background:var(--paper);border:1px solid var(--line);border-radius:999px;
+  padding:.55rem 1.05rem;box-shadow:var(--shadow-sm);
+  font-size:.95rem;color:var(--muted);
+}
+.rating-chip svg{width:18px;height:18px;fill:var(--gold);flex:none}
+.rating-chip strong{color:var(--navy);font-weight:700}
+.rating-chip .dot{color:#B6C2D4}
+
+/* Hero media panel: blueprint gradient base, optional photo overlay */
+.hero-media{
+  position:relative;border-radius:var(--radius);min-height:clamp(330px,42vw,520px);
+  box-shadow:var(--shadow-lg);
+  isolation:isolate;
+}
+.hero-media-base{
+  position:absolute;inset:0;border-radius:inherit;overflow:hidden;z-index:1;
+  background:
+    radial-gradient(120% 90% at 12% 6%,rgba(74,144,217,.38),transparent 56%),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.055) 0 1px,transparent 1px 38px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.055) 0 1px,transparent 1px 38px),
+    linear-gradient(152deg,#24518F 0%,var(--navy) 46%,var(--navy-3) 100%);
+  box-shadow:inset 0 0 0 1px rgba(156,196,239,.22);
+}
+.bp-art{
+  position:absolute;right:-4%;bottom:-3%;width:82%;height:auto;
+  stroke:var(--steel-light);opacity:.4;
+}
+.bp-art path,.bp-art rect{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.hero-photo{
+  position:absolute;inset:0;border-radius:inherit;overflow:hidden;z-index:2;
+  background-size:cover;background-position:center;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);
+}
+.hero-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(200deg,rgba(13,31,60,0) 46%,rgba(13,31,60,.42) 100%);
+}
+.hero-chip{
+  position:absolute;z-index:3;
+  display:flex;align-items:center;gap:.75rem;
+  background:var(--paper);border-radius:13px;box-shadow:var(--shadow-md);
+  padding:.8rem 1.05rem;max-width:min(78%,300px);
+}
+.hero-chip-1{left:clamp(-1.75rem,-2vw,-1rem);bottom:11%}
+.hero-chip-2{right:clamp(-1.25rem,-1.5vw,-.75rem);top:9%}
+.chip-ic{
+  flex:none;width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(145deg,#24518F,var(--navy-3));
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.chip-ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-chip b{display:block;font-family:var(--font-head);font-size:1rem;font-weight:700;color:var(--navy);line-height:1.2}
+.hero-chip small{display:block;color:var(--muted);font-size:.8rem;line-height:1.35;margin-top:.15rem}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-media{min-height:clamp(300px,52vw,430px)}
+  .hero-chip-1{left:.9rem;bottom:.9rem}
+  .hero-chip-2{right:.9rem;top:.9rem}
+}
+
+/* ============================== Services ============================== */
+.services{background:var(--paper)}
+.card-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.35rem;--cols:var(--cols-desktop,3)}
+.card-grid > *{flex:1 1 calc((100% - (var(--cols) - 1) * 1.35rem) / var(--cols));min-width:0;max-width:calc((100% - (var(--cols) - 1) * 1.35rem) / var(--cols))}
+@media (max-width:900px){.card-grid{--cols:2}}
+@media (max-width:560px){.card-grid{--cols:1}}
+.svc-card{
+  position:relative;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:1.7rem 1.55rem 1.6rem;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+}
+.svc-card::before{
+  content:"";position:absolute;top:0;left:1.55rem;width:44px;height:4px;
+  border-radius:0 0 4px 4px;
+  background:linear-gradient(90deg,var(--steel),var(--navy));
+  transition:width .35s var(--ease);
+}
+.svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:#BCD3EC}
+.svc-card:hover::before{width:76px}
+.svc-ic{
+  width:46px;height:46px;border-radius:12px;margin-bottom:1.05rem;
+  background:linear-gradient(145deg,#24518F,var(--navy-3));
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.card-grid > :nth-child(3n+2) .svc-ic{background:linear-gradient(145deg,var(--steel-ink),var(--navy))}
+.card-grid > :nth-child(3n) .svc-ic{background:linear-gradient(145deg,var(--navy),#0A1830)}
+.svc-ic svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc-card h3{font-size:1.24rem;font-weight:700;line-height:1.25;margin-bottom:.5rem}
+.svc-card p{color:var(--muted);font-size:.98rem;line-height:1.65}
+
+/* Mid-page CTA band */
+.cta-band{
+  position:relative;margin-top:clamp(2.75rem,6vw,4rem);
+  background:
+    radial-gradient(110% 130% at 6% 0%,rgba(74,144,217,.3),transparent 55%),
+    linear-gradient(150deg,#1E4177 0%,var(--navy-2) 60%,var(--navy-3) 100%);
+  border-radius:var(--radius);overflow:hidden;
+  padding:clamp(1.9rem,4vw,2.75rem) clamp(1.5rem,4vw,3rem);
+  display:flex;align-items:center;justify-content:space-between;gap:1.75rem;flex-wrap:wrap;
+  box-shadow:var(--shadow-md);
+}
+.cta-band::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:6px;
+  background:repeating-linear-gradient(135deg,var(--steel) 0 16px,rgba(255,255,255,.16) 16px 32px);
+}
+.cta-band h3{color:#fff;font-size:clamp(1.45rem,2.4vw,1.9rem);font-weight:800;margin-bottom:.4rem}
+.cta-band p{color:#C7D6EC;max-width:52ch;font-size:1rem}
+
+/* ============================== About ============================== */
+.about{background:var(--bg)}
+.about-grid{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(2.25rem,5vw,4rem);align-items:start;
+}
+.about-head{margin-bottom:1.4rem}
+.about-body p{color:#39445A;max-width:60ch}
+.expect-card{
+  background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:1.8rem 1.7rem;box-shadow:var(--shadow-sm);
+}
+.expect-card h3{
+  font-size:.85rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--steel-ink);margin-bottom:1.1rem;
+}
+.expect-card ul{list-style:none;margin:0;padding:0}
+.expect-card li{
+  display:flex;gap:.85rem;align-items:flex-start;
+  padding:.85rem 0;font-weight:600;color:var(--navy);line-height:1.5;
+}
+.expect-card li + li{border-top:1px solid var(--line)}
+.check-ic{
+  flex:none;width:26px;height:26px;border-radius:8px;background:var(--steel-tint);
+  display:inline-flex;align-items:center;justify-content:center;margin-top:.1rem;
+}
+.check-ic svg{width:15px;height:15px;stroke:var(--steel-ink);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:960px){
+  .about-grid{grid-template-columns:1fr}
+}
+
+/* Gallery strip inside About */
+.gallery{margin-top:clamp(3rem,6vw,4.25rem)}
+.gallery-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
+.gallery-head h3{font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:800}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr));gap:1.1rem}
+.gallery-item{
+  margin:0;border-radius:var(--radius-sm);overflow:hidden;background:var(--navy-2);
+  box-shadow:var(--shadow-sm);
+}
+.gallery-item img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;
+  transition:transform .5s var(--ease);
+}
+.gallery-item:hover img{transform:scale(1.045)}
+
+/* ============================== Reviews ============================== */
+.reviews{
+  background:
+    radial-gradient(80% 90% at 90% 10%,rgba(74,144,217,.16),transparent 55%),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 42px),
+    var(--navy-2);
+}
+.reviews .section-head h2{color:#fff}
+.reviews .section-head .lede{color:#C7D6EC}
+.reviews :focus-visible{outline-color:var(--steel-light)}
+.review-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));
+  gap:1.35rem;max-width:960px;
+}
+.review-card{
+  background:rgba(255,255,255,.055);border:1px solid rgba(156,196,239,.22);
+  border-radius:var(--radius-sm);padding:1.9rem 1.75rem 1.6rem;
+  transition:transform .3s var(--ease),border-color .3s var(--ease),background-color .3s var(--ease);
+}
+.review-card:hover{transform:translateY(-4px);border-color:rgba(156,196,239,.5);background:rgba(255,255,255,.08)}
+.quote-mark{
+  display:block;font-family:var(--font-head);font-weight:800;font-size:3.1rem;
+  line-height:.55;color:var(--steel-light);margin-bottom:1rem;
+}
+.review-card blockquote{margin:0}
+.review-card blockquote p{color:#E8EFF9;font-size:1.02rem;line-height:1.75}
+.review-author{
+  display:flex;align-items:center;gap:.7rem;margin-top:1.3rem;
+  font-family:var(--font-head);font-weight:700;font-size:.92rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--steel-light);
+}
+.review-author::before{content:"";width:22px;height:2px;background:var(--steel-light);opacity:.7}
+
+/* ============================== Contact ============================== */
+.contact{background:var(--paper)}
+.contact-card{
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);
+  border:1px solid var(--line);
+}
+.contact-panel{
+  position:relative;
+  background:
+    radial-gradient(120% 100% at 10% 0%,rgba(74,144,217,.32),transparent 58%),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 36px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 36px),
+    linear-gradient(155deg,#24518F 0%,var(--navy) 50%,var(--navy-3) 100%);
+  padding:clamp(2.25rem,4.5vw,3.25rem);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.contact-panel h2{color:#fff;font-size:clamp(1.85rem,2.8vw,2.5rem);font-weight:800;line-height:1.1}
+.contact-panel .lede{color:#C7D6EC;margin:.9rem 0 1.8rem;max-width:44ch}
+.contact-panel :focus-visible{outline-color:var(--steel-light)}
+.contact-info{padding:clamp(2.25rem,4.5vw,3.25rem);display:flex;flex-direction:column;gap:1.35rem;background:var(--paper)}
+.info-row{display:flex;gap:1rem;align-items:flex-start}
+.info-ic{
+  flex:none;width:42px;height:42px;border-radius:11px;background:var(--steel-tint);
+  display:inline-flex;align-items:center;justify-content:center;margin-top:.1rem;
+}
+.info-ic svg{width:20px;height:20px;stroke:var(--steel-ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.info-label{
+  display:block;font-family:var(--font-head);font-weight:700;font-size:.78rem;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem;
+}
+.info-value{font-weight:600;color:var(--navy);font-size:1.04rem;line-height:1.5}
+a.info-value{text-decoration:none;transition:color .25s var(--ease)}
+a.info-value:hover{color:var(--steel-ink)}
+.phone-link{font-family:var(--font-head);font-weight:800;font-size:1.5rem;letter-spacing:.015em}
+.map-link{display:inline-flex;align-items:center;gap:.45rem}
+.map-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease)}
+.map-link:hover svg{transform:translate(2px,-2px)}
+.hours-list{list-style:none;margin:.2rem 0 0;padding:0;max-width:340px}
+.hours-list li{
+  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+  padding:.45rem 0;font-size:.99rem;
+}
+.hours-list li + li{border-top:1px dashed var(--line)}
+.hours-day{font-weight:700;color:var(--navy)}
+.hours-time{color:var(--muted)}
+.contact-tip{
+  margin-top:auto;padding:1rem 1.15rem;border-radius:var(--radius-sm);
+  background:var(--bg);border:1px dashed #C7D4E6;
+  color:var(--muted);font-size:.92rem;line-height:1.6;
+}
+@media (max-width:880px){
+  .contact-card{grid-template-columns:1fr}
+}
+
+/* ============================== Footer ============================== */
+.site-footer{background:var(--navy-3);color:#9FB2CE}
+.footer-top{
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+  padding:clamp(2.5rem,5vw,3.5rem) 0 1.75rem;
+}
+.footer-brand{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.footer-brand .brand-glyph{background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(156,196,239,.3)}
+.footer-brand .brand-name{color:#fff;white-space:normal}
+.footer-nav ul{list-style:none;display:flex;gap:1.6rem;margin:0;padding:0;flex-wrap:wrap}
+.footer-nav a{color:#C0CDE2;text-decoration:none;font-weight:600;font-size:.95rem;transition:color .25s var(--ease)}
+.footer-nav a:hover{color:#fff}
+.footer-meta{
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  border-top:1px solid rgba(156,196,239,.16);padding:1.5rem 0;font-size:.92rem;
+}
+.site-footer :focus-visible{outline-color:var(--steel-light)}
+
+/* Top Shelf attribution */
+.attribution{
+  border-top:1px solid rgba(156,196,239,.16);
+  padding:1.6rem 0 2rem;text-align:center;font-size:.85rem;color:#8CA0BF;
+}
+.attribution img{height:26px;width:auto;margin:0 auto .6rem;opacity:.85}
+.attribution p{margin:0 0 .25rem}
+.attribution a{color:var(--steel-light);text-decoration:none}
+.attribution a:hover{text-decoration:underline}
+
+/* ============================== Motion ============================== */
+@keyframes riseIn{
+  from{opacity:0;transform:translateY(22px)}
+  to{opacity:1;transform:none}
+}
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+@keyframes chipFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *{animation:riseIn .7s var(--ease) both}
+  .hero-copy > :nth-child(2){animation-delay:.08s}
+  .hero-copy > :nth-child(3){animation-delay:.16s}
+  .hero-copy > :nth-child(4){animation-delay:.24s}
+  .hero-copy > :nth-child(5){animation-delay:.32s}
+  .hero-media{animation:fadeIn .9s var(--ease) .15s both}
+  .hero-chip-1{animation:riseIn .7s var(--ease) .5s both,chipFloat 7s ease-in-out 1.6s infinite}
+  .hero-chip-2{animation:riseIn .7s var(--ease) .65s both,chipFloat 8s ease-in-out 2.1s infinite}
+}
+/* Scroll reveals: headings and blocks rise, grid cards fade with stagger */
+.js .rv-up{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv-up.in{opacity:1;transform:none}
+.js .rv{opacity:0}
+.js .rv.in{animation:fadeIn .65s var(--ease) both}
+.js .card-grid > .rv:nth-child(2).in,
+.js .review-grid > .rv:nth-child(2).in,
+.js .gallery-grid > .rv:nth-child(2).in{animation-delay:.08s}
+.js .card-grid > .rv:nth-child(3).in,
+.js .review-grid > .rv:nth-child(3).in,
+.js .gallery-grid > .rv:nth-child(3).in{animation-delay:.16s}
+.js .card-grid > .rv:nth-child(4).in,
+.js .review-grid > .rv:nth-child(4).in,
+.js .gallery-grid > .rv:nth-child(4).in{animation-delay:.24s}
+.js .card-grid > .rv:nth-child(5).in{animation-delay:.32s}
+.js .card-grid > .rv:nth-child(6).in{animation-delay:.4s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .js .rv,.js .rv-up{opacity:1;transform:none;animation:none;transition:none}
+}
+@media print{
+  .js .rv,.js .rv-up{opacity:1 !important;transform:none !important;animation:none !important;transition:none !important}
+}
+</style>
+<style>
+
+.hero{position:relative;padding:0;background:none;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.hero-inner{position:relative;z-index:2}
+.hero .eyebrow{color:#9CC4EF}
+.hero h1{color:#fff;text-shadow:0 2px 28px rgba(8,20,42,.45);text-wrap:balance}
+.hero .hero-lede{color:rgba(255,255,255,.9);max-width:46ch}
+.hero .rating-chip{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.94);backdrop-filter:blur(10px)}
+.hero .rating-chip strong{color:#fff}
+.hero .rating-chip .dot{color:rgba(255,255,255,.55)}
+.hero .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.45);backdrop-filter:blur(10px)}
+
+.hero-scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,rgba(9,22,45,.94) 0%,rgba(9,22,45,.82) 38%,rgba(9,22,45,.34) 72%,rgba(9,22,45,.12) 100%);}
+.hero-inner{padding:clamp(5rem,11vw,8.5rem) 0 clamp(4.5rem,9vw,7rem)}
+.hero h1{font-size:clamp(2.6rem,4.6vw + .5rem,4.6rem);max-width:21ch}
+
+</style>
+</head>
+<body>
+<div class="top-sentinel" aria-hidden="true"></div>
+<a class="skip-link" href="#home">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home">
+      <span class="brand-glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4.5l8 7"/><path d="M6.5 10.5V19h11v-8.5"/></svg>
+      </span>
+      <span class="brand-name">Strittmatter Air Conditioning, Heating &amp; Plumbing</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="tel:+19723624999">Call (972) 362-4999</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary header-cta" href="tel:+19723624999">Call (972) 362-4999</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" id="home"><div class="hero-bg" style="background-image:url('https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-01-outdoor-air-conditioning-condenser.webp')"></div><div class="hero-scrim"></div><div class="wrap hero-inner"><p class="eyebrow">Proudly serving Highland Village</p>
+      <h1>Strittmatter Air Conditioning, Heating &amp; Plumbing</h1>
+      <p class="hero-lede">Air conditioning, heating and plumbing for Highland Village homes.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="tel:+19723624999">Call (972) 362-4999</a>
+          <a class="btn btn-ghost" href="#services">See what we do</a></div>
+      <p class="rating-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <strong>4.9</strong>&nbsp;star rating
+          <span class="dot" aria-hidden="true">&middot;</span>
+          <strong>671</strong>&nbsp;Google reviews</p></div></section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="wrap">
+
+      <div class="section-head rv-up">
+        <p class="eyebrow">Our services</p>
+        <h2>What we can take care of</h2>
+        <p class="lede">The work homeowners in Highland Village call Strittmatter Air Conditioning, Heating &amp; Plumbing for.</p>
+      </div>
+      <div class="card-grid" style="--cols-desktop:3">
+
+        <article class="svc-card rv">
+          <span class="svc-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="8" rx="3"/><path d="M6 14v4"/><path d="M12 14v4"/><path d="M18 14v4"/><path d="M6 6V4"/><path d="M12 6V4"/><path d="M18 6V4"/></svg>
+          </span>
+          <h3>AC Repair &amp; Maintenance</h3>
+          <p>Diagnosis and repair when the cooling quits, plus seasonal maintenance to keep it running.</p>
+        </article>
+
+        <article class="svc-card rv">
+          <span class="svc-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21a5.5 5.5 0 0 0 5.5-5.5C17.5 11 12 6 12 6s-5.5 5-5.5 9.5A5.5 5.5 0 0 0 12 21z"/><path d="M12 21a2.5 2.5 0 0 0 2.5-2.5c0-2-2.5-4.5-2.5-4.5s-2.5 2.5-2.5 4.5A2.5 2.5 0 0 0 12 21z"/></svg>
+          </span>
+          <h3>Heating Installation &amp; Repair</h3>
+          <p>Furnace and heating system repairs and replacements before the cold sets in.</p>
+        </article>
+
+        <article class="svc-card rv">
+          <span class="svc-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </span>
+          <h3>Plumbing Repair</h3>
+          <p>Everyday plumbing problems handled, from leaks to fixtures that stopped cooperating.</p>
+        </article>
+
+        <article class="svc-card rv">
+          <span class="svc-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M9 13l3 3 3-3"/></svg>
+          </span>
+          <h3>Drain &amp; Sewer Service</h3>
+          <p>Slow drains and sewer line trouble cleared and diagnosed properly.</p>
+        </article>
+
+        <article class="svc-card rv">
+          <span class="svc-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="16" rx="3"/><path d="M12 18v4"/><path d="M9 22h6"/><path d="M8 6H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+          </span>
+          <h3>Water Heater Repair &amp; Replacement</h3>
+          <p>Repairs when there is no hot water, and replacements when a unit is past saving.</p>
+        </article>
+
+        <article class="svc-card rv">
+          <span class="svc-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l8 6v4a8 8 0 1 1-16 0V8l8-6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <h3>Water Filtration &amp; Softeners</h3>
+          <p>Filtration and softener systems for homes dealing with hard North Texas water.</p>
+        </article>
+
+      </div>
+
+      <div class="cta-band rv-up">
+        <div>
+          <h3>Not sure what it will take? Just ask.</h3>
+          <p>Describe what is going on and we will point you in the right direction, with no pressure and no jargon.</p>
+        </div>
+        <a class="btn btn-light" href="tel:+19723624999">Call (972) 362-4999</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-body rv-up">
+          <div class="section-head about-head">
+            <h2>Get to know Strittmatter Air Conditioning, Heating &amp; Plumbing</h2>
+          </div>
+
+          <p>Strittmatter handles air conditioning, heating and plumbing for homes around Highland Village and the surrounding Denton County area.</p><p>Service is available seven days a week with no overtime charges, so a breakdown on a weekend costs the same as one on a Tuesday.</p>
+
+        </div>
+        <aside class="expect-card rv-up" aria-label="What you can expect">
+          <h3>What you can expect</h3>
+          <ul>
+            <li>
+              <span class="check-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+              Straight answers about what the job really needs
+            </li>
+            <li>
+              <span class="check-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+              Respect for your home, your time, and your schedule
+            </li>
+            <li>
+              <span class="check-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+              Options laid out clearly before any decisions
+            </li>
+            <li>
+              <span class="check-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+              Workmanship we are glad to put our name on
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-head rv-up">
+          <h3>A closer look</h3>
+        </div>
+        <div class="gallery-grid">
+
+          <figure class="gallery-item rv">
+            <img src="https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-10-whole-house-zoning-damper.webp" alt="Photo from Strittmatter Air Conditioning, Heating &amp; Plumbing" loading="lazy" decoding="async">
+          </figure>
+
+          <figure class="gallery-item rv">
+            <img src="https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-01-outdoor-air-conditioning-condenser.webp" alt="Photo from Strittmatter Air Conditioning, Heating &amp; Plumbing" loading="lazy" decoding="async">
+          </figure>
+
+          <figure class="gallery-item rv">
+            <img src="https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-02-high-efficiency-gas-furnace.webp" alt="Photo from Strittmatter Air Conditioning, Heating &amp; Plumbing" loading="lazy" decoding="async">
+          </figure>
+
+          <figure class="gallery-item rv">
+            <img src="https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-03-insulated-ductwork-runs-along.webp" alt="Photo from Strittmatter Air Conditioning, Heating &amp; Plumbing" loading="lazy" decoding="async">
+          </figure>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="contact-card rv-up">
+        <div class="contact-panel">
+          <h2>Tell us what is going on</h2>
+          <p class="lede">Describe the situation and we will take it from there.</p>
+          <div>
+            <a class="btn btn-light" href="tel:+19723624999">Call (972) 362-4999</a>
+          </div>
+        </div>
+        <div class="contact-info">
+
+          <div class="info-row">
+            <span class="info-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div>
+              <span class="info-label">Call us</span>
+              <a class="info-value phone-link" href="tel:+19723624999">(972) 362-4999</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <span class="info-label">Address</span>
+              <span class="info-value">2340 Justin Rd Suite 204, Highland Village, TX 75077</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            </span>
+            <div>
+              <span class="info-label">Directions</span>
+              <a class="info-value map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Strittmatter+Air+Conditioning+Heating+Plumbing+2340+Justin+Rd+Highland+Village+TX" target="_blank" rel="noopener noreferrer">
+                Open in Google Maps
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 11.5 12 4.5l8 7"/><path d="M6.5 10.5V19h11v-8.5"/></svg>
+            </span>
+            <div>
+              <span class="info-label">Service area</span>
+              <span class="info-value">Highland Village and nearby</span>
+            </div>
+          </div>
+          <p class="contact-tip">Tip: mention what you are seeing and when it started. It helps us show up prepared.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="#home">
+        <span class="brand-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4.5l8 7"/><path d="M6.5 10.5V19h11v-8.5"/></svg>
+        </span>
+        <span class="brand-name">Strittmatter Air Conditioning, Heating &amp; Plumbing</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; 2026 Strittmatter Air Conditioning, Heating &amp; Plumbing. All rights reserved.</span>
+      <span>Serving Highland Village</span>
+    </div>
+<!-- Top Shelf sample attribution -->
+    <div class="attribution">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions logo" loading="lazy">
+      <p>This website was prepared by Top Shelf Business Solutions.</p>
+      <a href="https://www.topshelfsolutions.io">View our business solutions at topshelfsolutions.io</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var doc=document.documentElement;
+  doc.classList.add('js');
+  var header=document.querySelector('.site-header');
+  var btn=document.querySelector('.nav-toggle');
+  var nav=document.getElementById('site-nav');
+  function closeNav(){
+    doc.classList.remove('nav-open');
+    if(btn){btn.setAttribute('aria-expanded','false');}
+  }
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      var open=doc.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.closest('a')){closeNav();}
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){closeNav();}
+    });
+  }
+  var sentinel=document.querySelector('.top-sentinel');
+  if(header&&sentinel&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){
+      header.classList.toggle('is-scrolled',!entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var els=[].slice.call(document.querySelectorAll('.rv,.rv-up'));
+  if(!reduce.matches&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el);});
+    setTimeout(function(){
+      els.forEach(function(el){el.classList.add('in');});
+    },3000);
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
+</body>
+</html>
