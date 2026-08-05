@@ -381,13 +381,23 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 }
 
 /* ---------- gallery ---------- */
-.gallery-head{margin-bottom:2.2rem}
+/* Centred like every other section heading.  Left alone it was the only
+   left-aligned heading on the page, and it did not even share a left edge with
+   the photos underneath it. */
+.gallery-head{margin-bottom:2.2rem;text-align:center}
 .gallery-head h2{font-size:clamp(1.7rem,3.4vw,2.25rem)}
 .gallery-strip{
   display:flex;gap:1.1rem;
   overflow-x:auto;scroll-snap-type:x mandatory;
   padding:.5rem max(4vw,1.2rem) 1.6rem;
   scrollbar-color:var(--gold) transparent;scrollbar-width:thin;
+  /* This is a swipeable strip sized for a wall of photos.  With three it does
+     not overflow, and flex-start left them packed against the edge with half
+     the section empty.  "safe center" centres them when they fit and falls
+     back to flex-start when they overflow, so the first photo never becomes
+     unreachable behind the scroll origin. */
+  justify-content:center;
+  justify-content:safe center;
 }
 .gallery-item{margin:0;flex:0 0 auto;scroll-snap-align:center}
 .gallery-item img{
