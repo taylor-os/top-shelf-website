@@ -25,18 +25,18 @@
   "vertical": "plumbing",
   "file": "home_services/plumbing/plumbing-02-neatly-installed-copper-supply.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/plumbing/plumbing-02-neatly-installed-copper-supply.webp",
-  "description": "Neatly installed copper supply lines and shutoff valves under a modern kitchen sink, clean and professionally soldered, cabinet interior bright and tidy",
+  "description": "Neatly installed copper supply lines running down a clean utility room wall to a row of quarter-turn shutoff valves, professionally soldered joints, bright and tidy",
   "tags": [
    "neatly",
    "installed",
    "copper",
    "supply",
    "lines",
-   "shutoff",
-   "valves",
-   "kitchen",
-   "sink",
-   "professionally"
+   "running",
+   "down",
+   "utility",
+   "room",
+   "wall"
   ],
   "width": 1366,
   "height": 768
@@ -88,18 +88,18 @@
   "vertical": "plumbing",
   "file": "home_services/plumbing/plumbing-05-plumbing-tools-laid-out.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/plumbing/plumbing-05-plumbing-tools-laid-out.webp",
-  "description": "Professional plumbing tools laid out in order on a clean canvas roll on a workshop bench: pipe wrenches, tubing cutter, torch, PTFE tape, assorted brass fittings",
+  "description": "Plumbing supplies laid out in order on a clean canvas roll on a workshop bench: a tubing cutter, a coil of soft copper tubing, a roll of PTFE tape and an assortment of brass compression fittings",
   "tags": [
    "plumbing",
-   "tools",
+   "supplies",
    "laid",
    "order",
    "canvas",
    "roll",
    "workshop",
    "bench",
-   "pipe",
-   "wrenches"
+   "tubing",
+   "cutter"
   ],
   "width": 1366,
   "height": 768
@@ -376,20 +376,20 @@
  {
   "family": "home_services",
   "vertical": "hvac",
-  "file": "home_services/hvac/hvac-09-refrigerant-gauge-manifold-set.webp",
-  "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-09-refrigerant-gauge-manifold-set.webp",
-  "description": "A refrigerant gauge manifold set and vacuum pump arranged on a clean drop cloth beside an outdoor condenser",
+  "file": "home_services/hvac/hvac-09-vacuum-pump-coiled-refrigerant.webp",
+  "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-09-vacuum-pump-coiled-refrigerant.webp",
+  "description": "A vacuum pump and neatly coiled refrigerant hoses arranged on a clean drop cloth beside an outdoor condenser unit on a concrete pad",
   "tags": [
-   "refrigerant",
-   "gauge",
-   "manifold",
    "vacuum",
    "pump",
+   "neatly",
+   "coiled",
+   "refrigerant",
+   "hoses",
    "arranged",
    "drop",
    "cloth",
-   "beside",
-   "outdoor"
+   "beside"
   ],
   "width": 1366,
   "height": 768
@@ -399,18 +399,18 @@
   "vertical": "hvac",
   "file": "home_services/hvac/hvac-10-whole-house-zoning-damper.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/hvac/hvac-10-whole-house-zoning-damper.webp",
-  "description": "A whole-house zoning damper and control board in a clean mechanical room with neat low-voltage wiring",
+  "description": "A whole-house zoning damper fitted into clean insulated ductwork in a tidy mechanical room, with neat low-voltage wiring run along the joists",
   "tags": [
    "whole",
    "house",
    "zoning",
    "damper",
-   "control",
-   "board",
+   "fitted",
+   "insulated",
+   "ductwork",
    "mechanical",
    "room",
-   "voltage",
-   "wiring"
+   "voltage"
   ],
   "width": 1366,
   "height": 768
@@ -566,7 +566,7 @@
   "vertical": "electrician",
   "file": "home_services/electrician/electrician-08-electrical-hand-tools-arranged.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/electrician/electrician-08-electrical-hand-tools-arranged.webp",
-  "description": "Electrical hand tools arranged neatly on a workbench: wire strippers, lineman pliers, a multimeter with a blank display, voltage tester, coiled cable",
+  "description": "Electrical hand tools arranged neatly on a clean workbench: lineman pliers, a screwdriver with an insulated handle, a coil of flexible cable and a roll of insulating tape",
   "tags": [
    "electrical",
    "hand",
@@ -574,10 +574,10 @@
    "arranged",
    "neatly",
    "workbench",
-   "wire",
-   "strippers",
    "lineman",
-   "pliers"
+   "pliers",
+   "screwdriver",
+   "insulated"
   ],
   "width": 1366,
   "height": 768
@@ -1044,7 +1044,7 @@
   "vertical": "landscaping",
   "file": "home_services/landscaping/landscaping-01-beautifully-maintained-suburban-front.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/landscaping/landscaping-01-beautifully-maintained-suburban-front.webp",
-  "description": "A beautifully maintained suburban front lawn with crisp mowing stripes, clean edging and layered shrub beds, morning light",
+  "description": "A beautifully maintained suburban front lawn with crisp mowing stripes, clean edging and layered shrub beds in morning light, the house behind shown complete with its full roofline",
   "tags": [
    "beautifully",
    "maintained",
@@ -1127,7 +1127,7 @@
   "vertical": "landscaping",
   "file": "home_services/landscaping/landscaping-05-freshly-installed-dark-mulch.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/landscaping/landscaping-05-freshly-installed-dark-mulch.webp",
-  "description": "Freshly installed dark mulch beds with neat spade-cut edges curving around a suburban home's foundation planting",
+  "description": "Freshly installed dark mulch beds with neat spade-cut edges curving around a suburban home's foundation planting, bright daylight",
   "tags": [
    "freshly",
    "installed",
@@ -1190,18 +1190,18 @@
   "vertical": "landscaping",
   "file": "home_services/landscaping/landscaping-08-landscaped-backyard-paver-walkway.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/landscaping/landscaping-08-landscaped-backyard-paver-walkway.webp",
-  "description": "A landscaped backyard with a paver walkway, low landscape lighting and mature ornamental planting at dusk",
+  "description": "A landscaped backyard at dusk with a paver walkway, low landscape lighting and mature ornamental planting, warm glow",
   "tags": [
    "landscaped",
    "backyard",
+   "dusk",
    "paver",
    "walkway",
    "landscape",
    "lighting",
    "mature",
    "ornamental",
-   "planting",
-   "dusk"
+   "planting"
   ],
   "width": 1366,
   "height": 768
@@ -1355,18 +1355,18 @@
   "vertical": "pest_control",
   "file": "home_services/pest_control/pest_control-06-spotless-kitchen-countertops-sealed.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/pest_control/pest_control-06-spotless-kitchen-countertops-sealed.webp",
-  "description": "A spotless modern kitchen with clean countertops and sealed food storage, implying a pest-free protected home",
+  "description": "A spotless modern kitchen with completely bare, clear countertops, plain closed cabinet doors and a closed pantry door, implying a pest-free protected home",
   "tags": [
    "spotless",
    "kitchen",
+   "completely",
+   "bare",
    "countertops",
-   "sealed",
-   "food",
-   "storage",
-   "implying",
-   "pest",
-   "free",
-   "protected"
+   "plain",
+   "closed",
+   "cabinet",
+   "doors",
+   "pantry"
   ],
   "width": 1366,
   "height": 768
@@ -1704,18 +1704,18 @@
   "vertical": "painting",
   "file": "home_services/painting/painting-03-painting-tools-laid-out.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/painting/painting-03-painting-tools-laid-out.webp",
-  "description": "Painting tools laid out neatly on a canvas drop cloth: rollers, brushes, a cut bucket and blue tape, clean and ready",
+  "description": "Painting supplies laid out neatly on a canvas drop cloth over a hardwood floor: clean empty paint trays, angled sash brushes with plain wooden handles lined up in a row, and a folded cotton rag",
   "tags": [
    "painting",
-   "tools",
+   "supplies",
    "laid",
    "neatly",
    "canvas",
    "drop",
    "cloth",
-   "rollers",
-   "brushes",
-   "bucket"
+   "hardwood",
+   "floor",
+   "empty"
   ],
   "width": 1366,
   "height": 768
@@ -1824,20 +1824,20 @@
  {
   "family": "home_services",
   "vertical": "painting",
-  "file": "home_services/painting/painting-09-freshly-painted-stairwell-hallway.webp",
-  "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/painting/painting-09-freshly-painted-stairwell-hallway.webp",
-  "description": "A freshly painted stairwell and hallway with smooth walls and crisp white balusters, natural light from above",
+  "file": "home_services/painting/painting-09-freshly-painted-single-level.webp",
+  "url": "https://www.topshelfsolutions.io/assets/img/library/home_services/painting/painting-09-freshly-painted-single-level.webp",
+  "description": "A freshly painted single-level hallway with smooth walls in a warm neutral tone, crisp white baseboards and door casings, one closed panel door, and daylight from a window at the far end",
   "tags": [
    "freshly",
    "painted",
-   "stairwell",
+   "single",
+   "level",
    "hallway",
    "smooth",
    "walls",
-   "crisp",
-   "white",
-   "balusters",
-   "above"
+   "warm",
+   "neutral",
+   "tone"
   ],
   "width": 1366,
   "height": 768
@@ -2092,18 +2092,18 @@
   "vertical": null,
   "file": "auto/auto-02-organised-technician-tool-chest.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/auto/auto-02-organised-technician-tool-chest.webp",
-  "description": "An organised technician tool chest with drawers open showing neatly arranged sockets and wrenches, clean shop floor behind",
+  "description": "A clean automotive service bay with a large red rolling tool chest, every drawer closed and flush, a rolling mechanic's stool beside it, and a polished concrete floor",
   "tags": [
-   "organised",
-   "technician",
+   "automotive",
+   "service",
+   "large",
+   "rolling",
    "tool",
    "chest",
-   "drawers",
-   "open",
-   "neatly",
-   "arranged",
-   "sockets",
-   "wrenches"
+   "every",
+   "drawer",
+   "closed",
+   "flush"
   ],
   "width": 1366,
   "height": 768
@@ -2132,19 +2132,20 @@
  {
   "family": "auto",
   "vertical": null,
-  "file": "auto/auto-04-rows-tires-stacked-neatly.webp",
-  "url": "https://www.topshelfsolutions.io/assets/img/library/auto/auto-04-rows-tires-stacked-neatly.webp",
-  "description": "Rows of new tires stacked neatly on steel racks in a clean tire service area",
+  "file": "auto/auto-04-new-tires-standing-upright.webp",
+  "url": "https://www.topshelfsolutions.io/assets/img/library/auto/auto-04-new-tires-standing-upright.webp",
+  "description": "New tires standing upright in a single neat row directly on the clean floor of a tire service area, resting against a plain painted wall",
   "tags": [
-   "rows",
    "tires",
-   "stacked",
-   "neatly",
-   "steel",
-   "racks",
+   "standing",
+   "upright",
+   "single",
+   "directly",
+   "floor",
    "tire",
    "service",
-   "area"
+   "area",
+   "resting"
   ],
   "width": 1366,
   "height": 768
@@ -2398,20 +2399,20 @@
  {
   "family": "health_dental",
   "vertical": null,
-  "file": "health_dental/health_dental-07-physical-therapy-gym-parallel.webp",
-  "url": "https://www.topshelfsolutions.io/assets/img/library/health_dental/health_dental-07-physical-therapy-gym-parallel.webp",
-  "description": "A physical therapy gym with parallel bars, exercise balls, resistance bands and a treatment mat table",
+  "file": "health_dental/health_dental-07-physical-therapy-treatment-room.webp",
+  "url": "https://www.topshelfsolutions.io/assets/img/library/health_dental/health_dental-07-physical-therapy-treatment-room.webp",
+  "description": "A bright uncluttered physical therapy treatment room with a padded treatment bench on a solid plinth base, exercise balls resting on the floor and a rolled exercise mat against the wall",
   "tags": [
+   "uncluttered",
    "physical",
    "therapy",
-   "parallel",
-   "bars",
-   "exercise",
-   "balls",
-   "resistance",
-   "bands",
    "treatment",
-   "table"
+   "room",
+   "padded",
+   "bench",
+   "solid",
+   "plinth",
+   "base"
   ],
   "width": 1366,
   "height": 768
@@ -2442,7 +2443,7 @@
   "vertical": null,
   "file": "health_dental/health_dental-09-veterinary-exam-room-stainless.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/health_dental/health_dental-09-veterinary-exam-room-stainless.webp",
-  "description": "A veterinary exam room with a stainless steel table, warm calm decor and a tidy instrument cart",
+  "description": "A veterinary exam room with one stainless steel exam table on a single solid pedestal base, warm calm decor, a cabinet run along one wall and a tidy instrument tray on the counter",
   "tags": [
    "veterinary",
    "exam",
@@ -2450,10 +2451,10 @@
    "stainless",
    "steel",
    "table",
-   "warm",
-   "calm",
-   "decor",
-   "instrument"
+   "single",
+   "solid",
+   "pedestal",
+   "base"
   ],
   "width": 1366,
   "height": 768
@@ -2712,16 +2713,18 @@
   "vertical": null,
   "file": "professional/professional-02-accountant-desk-organised-ledgers.webp",
   "url": "https://www.topshelfsolutions.io/assets/img/library/professional/professional-02-accountant-desk-organised-ledgers.webp",
-  "description": "An accountant's desk with organised ledgers, a calculator, neat folders and a coffee cup, morning light",
+  "description": "An accountant's desk in morning light with a neat stack of closed leather-bound ledgers, plain manila folders, a fountain pen and a coffee cup",
   "tags": [
    "accountant",
    "desk",
-   "organised",
+   "morning",
+   "stack",
+   "closed",
+   "leather",
+   "bound",
    "ledgers",
-   "calculator",
-   "folders",
-   "coffee",
-   "morning"
+   "plain",
+   "manila"
   ],
   "width": 1366,
   "height": 768

@@ -83,7 +83,8 @@ def main():
 
         src = os.path.join(LIBGEN, rec["file"].replace("/", os.sep))
         dst = os.path.join(OUT, rel.replace("/", os.sep))
-        if not os.path.exists(dst):
+        # Re-encode when the source is newer — a re-rolled photo keeps its filename.
+        if not os.path.exists(dst) or os.path.getmtime(src) > os.path.getmtime(dst):
             to_hero(src, dst)
 
         description = describe(rec["prompt"])
