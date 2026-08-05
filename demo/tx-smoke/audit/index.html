@@ -27,7 +27,11 @@
 .aud-body{ flex:1; padding-bottom:clamp(3rem,6vw,5rem); }
 .aud-page{ border:1px solid var(--hairline); border-radius:var(--r-lg); overflow:hidden;
   margin-bottom:1.3rem; background:#0B0906; }
-.aud-page img{ width:100%; display:block; }
+/* height:auto is load-bearing.  The img tags carry width and height attributes
+   so the browser reserves the right space before the image loads, and without
+   this the height attribute wins the cascade: pages render 770 wide by their
+   full 1540 natural height, squeezing Letter's 0.77 ratio to 0.50. */
+.aud-page img{ width:100%; height:auto; display:block; }
 
 .aud-endcap{ text-align:center; border-top:1px solid var(--hairline-soft);
   margin-top:2.6rem; padding-top:clamp(2.4rem,5vw,3.2rem); }
