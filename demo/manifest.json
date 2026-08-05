@@ -11,5 +11,25 @@
     "published": "2026-08-04",
     "expires": "2026-09-03",
     "keep": true
+  },
+  "cafe-smile-studio": {
+    "published": "2026-08-04",
+    "expires": "2026-10-03"
+  },
+  "highland-village-family-dentistry": {
+    "published": "2026-08-04",
+    "expires": "2026-10-03"
+  },
+  "spa-haven": {
+    "published": "2026-08-04",
+    "expires": "2026-10-03"
+  },
+  "quick-fix-lube-express": {
+    "published": "2026-08-04",
+    "expires": "2026-10-03"
+  },
+  "onyx-nail-bar": {
+    "published": "2026-08-04",
+    "expires": "2026-10-03"
   }
 }

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cafe Smile Studio | Dentistry in Highland Village, TX</title>
+<meta name="description" content="Cafe Smile Studio is a dental practice on Justin Road in Highland Village, Texas. Checkups and cleanings, dental emergencies, veneers, implants and Invisalign.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0B7285;
+  --teal-deep:#0A5561;
+  --teal-ink:#08414B;
+  --accent:#38D9A9;
+  --bg:#FFFFFF;
+  --tint:#F0F9FA;
+  --ink:#2D3748;
+  --muted:#5A6B7D;
+  --rule:#D3E4E8;        /* decorative separation only, not a UI boundary */
+  --rule-strong:#B6D2D8;
+  /* Borders that define an interactive control must clear the 3:1 non-text
+     threshold on white, which the soft rules above deliberately do not. */
+  --control-edge:#6E9AA5; /* 3.08:1 on #FFFFFF */
+  --shadow-sm:0 1px 2px rgba(10,60,70,.06),0 2px 8px rgba(10,60,70,.05);
+  --shadow-md:0 6px 14px rgba(10,60,70,.09),0 18px 38px rgba(10,60,70,.07);
+  --measure:1120px;
+  --r:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html:focus-within{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.65;font-weight:400;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px}
+h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em;margin:0;color:var(--teal-ink)}
+p{margin:0}
+.wrap{width:100%;max-width:var(--measure);margin-inline:auto;padding-inline:24px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+
+/* ---------- skip link ---------- */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--teal);color:#fff;
+  padding:12px 20px;border-radius:0 0 var(--r) 0;font-weight:700}
+.skip:focus{left:0}
+
+/* ---------- header ---------- */
+.topbar{background:var(--teal);color:#fff;font-size:14.5px}
+.topbar .wrap{display:flex;justify-content:center;gap:10px;align-items:center;
+  padding-block:7px;text-align:center}
+.topbar svg{flex:none}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--rule)}
+.bar{display:flex;align-items:center;gap:20px;min-height:74px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
+.mark{width:38px;height:38px;flex:none}
+.brand b{display:block;font-size:18.5px;font-weight:800;color:var(--teal-ink);letter-spacing:-.02em;line-height:1.15}
+.brand span{display:block;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.11em;text-transform:uppercase}
+nav.main{display:none}
+nav.main a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15.5px;
+  padding:9px 12px;border-radius:9px;transition:background .18s var(--ease),color .18s var(--ease)}
+nav.main a:hover{background:var(--tint);color:var(--teal-ink)}
+.callbtn{display:none;align-items:center;gap:8px;background:var(--teal);color:#fff;
+  text-decoration:none;font-weight:700;font-size:15.5px;padding:12px 20px;border-radius:999px;
+  min-height:44px;box-shadow:var(--shadow-sm);transition:background .18s var(--ease),transform .18s var(--ease)}
+.callbtn:hover{background:var(--teal-deep);transform:translateY(-1px)}
+.burger{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;
+  width:46px;height:46px;border:1px solid var(--control-edge);background:#fff;border-radius:11px;
+  cursor:pointer;color:var(--teal-ink)}
+#drawer{display:none;border-top:1px solid var(--rule);background:#fff}
+#drawer.open{display:block}
+#drawer a{display:block;padding:15px 24px;color:var(--ink);text-decoration:none;
+  font-weight:600;border-bottom:1px solid var(--tint)}
+#drawer .dcall{color:var(--teal);font-weight:800;border-bottom:0}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(44px,7vw,86px) 0 clamp(40px,6vw,72px)}
+.hero-grid{display:grid;gap:clamp(30px,5vw,54px);align-items:center}
+h1{font-size:clamp(2.15rem,1.35rem + 3.4vw,3.65rem)}
+.lede{margin-top:20px;font-size:clamp(1.08rem,1.02rem + .3vw,1.28rem);color:var(--muted);
+  max-width:34ch;line-height:1.55}
+.actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;
+  padding:14px 26px;border-radius:999px;font-weight:800;font-size:16.5px;text-decoration:none;
+  transition:background .18s var(--ease),transform .18s var(--ease),box-shadow .18s var(--ease)}
+.btn-a{background:var(--teal);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-a:hover{background:var(--teal-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-b{background:#fff;color:var(--teal-ink);border:1.5px solid var(--control-edge)}
+.btn-b:hover{background:var(--tint);border-color:var(--teal);transform:translateY(-2px)}
+.cred{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule);
+  display:flex;align-items:center;gap:14px}
+.stars{display:flex;gap:2px;flex:none}
+.cred-n{font-weight:800;color:var(--teal-ink);font-size:19px;font-variant-numeric:tabular-nums}
+.cred-t{color:var(--muted);font-size:14.5px;line-height:1.4}
+.shot{position:relative}
+.shot img{width:100%;height:clamp(290px,44vw,470px);object-fit:cover;
+  border-radius:var(--r);box-shadow:var(--shadow-md)}
+.shot::after{content:"";position:absolute;left:-14px;bottom:-14px;width:110px;height:110px;
+  border-radius:var(--r);background:var(--accent);opacity:.16;z-index:-1}
+
+/* ---------- care strip (asymmetric, not a 3-card row) ---------- */
+.strip{background:var(--tint);border-block:1px solid var(--rule);padding:clamp(30px,4vw,42px) 0}
+.strip-in{display:grid;gap:22px}
+.strip h2{font-size:1.32rem}
+.strip-list{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.strip-list li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:16px}
+.strip-list svg{flex:none;margin-top:3px}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:82px}
+.pad{padding:clamp(56px,8vw,96px) 0}
+.head{max-width:60ch;margin-bottom:clamp(30px,4vw,46px)}
+.head h2{font-size:clamp(1.72rem,1.4rem + 1.5vw,2.5rem)}
+.head p{margin-top:15px;color:var(--muted);font-size:1.06rem}
+
+/* services: 8 items, deliberately uneven emphasis */
+.svc{display:grid;gap:16px}
+.card{background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:26px 24px;
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--rule-strong)}
+.ico{width:44px;height:44px;border-radius:11px;background:var(--tint);color:var(--teal);
+  display:grid;place-items:center;margin-bottom:15px}
+.card h3{font-size:1.16rem;margin-bottom:9px}
+.card p{color:var(--muted);font-size:15.6px;line-height:1.6}
+.card.lead{background:var(--teal);border-color:var(--teal)}
+.card.lead h3{color:#fff}
+.card.lead p{color:#DCF2F5}
+.card.lead .ico{background:rgba(255,255,255,.16);color:#fff}
+
+/* about */
+.about{display:grid;gap:clamp(30px,5vw,52px);align-items:center}
+.about p+p{margin-top:17px}
+.about p{color:var(--muted);font-size:1.06rem}
+.about .figure img{width:100%;height:clamp(250px,36vw,400px);object-fit:cover;
+  border-radius:var(--r);box-shadow:var(--shadow-md)}
+.about figcaption{margin-top:11px;font-size:13.5px;color:var(--muted);font-style:italic}
+
+/* reviews */
+#reviews{background:var(--teal-deep);color:#fff}
+#reviews h2{color:#fff}
+.rev{display:grid;gap:clamp(28px,4vw,48px);align-items:center;text-align:center;justify-items:center}
+.score{font-size:clamp(3.6rem,2.6rem + 4vw,5.6rem);font-weight:800;line-height:1;
+  color:#fff;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.rev p{color:#CFE9ED;font-size:1.08rem;max-width:46ch}
+.rev .stars{margin:16px 0 6px;justify-content:center}
+.rev-count{color:var(--accent);font-weight:700;font-size:15.5px;letter-spacing:.02em}
+
+/* contact */
+.contact{display:grid;gap:clamp(28px,4vw,44px)}
+.rows{display:grid;gap:6px;margin:0;padding:0}
+.row{display:flex;gap:15px;align-items:flex-start;padding:17px 0;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.row svg{flex:none;margin-top:3px;color:var(--teal)}
+.row dt{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.1em;margin-bottom:3px}
+.row dd{margin:0;font-size:17px;font-weight:600;color:var(--teal-ink)}
+.row dd a{color:var(--teal-ink);text-decoration:none}
+.row dd a:hover{color:var(--teal);text-decoration:underline}
+.mapcard{border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;background:var(--tint)}
+.mapcard iframe{display:block;width:100%;height:clamp(250px,34vw,340px);border:0}
+
+/* footer */
+footer{background:#fff;border-top:1px solid var(--rule);padding:44px 0 30px;text-align:center}
+.f-brand{font-weight:800;color:var(--teal-ink);font-size:17px}
+.f-addr{margin-top:7px;color:var(--muted);font-size:14.6px}
+.attrib{margin-top:32px;padding-top:26px;border-top:1px solid var(--rule)}
+.attrib img{height:26px;width:auto;margin:0 auto 11px;opacity:.82}
+.attrib p{font-size:12.8px;color:var(--muted)}
+.attrib a{color:var(--muted);font-weight:600}
+.attrib a:hover{color:var(--teal)}
+
+/* reveal. Content is visible by default; only a browser that proves it can
+   animate gets the hidden start state, so a failed observer never eats the page */
+.rv{transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js-rv .rv{opacity:0;transform:translateY(16px)}
+.js-rv .rv.in{opacity:1;transform:none}
+/* Escape hatch: snap everything visible with no transition to wait on. */
+.rv-off .rv{opacity:1!important;transform:none!important;transition:none!important}
+
+/* ---------- responsive ---------- */
+@media (min-width:640px){
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .strip-list{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:768px){
+  .strip-in{grid-template-columns:1fr 1.55fr;align-items:center;gap:40px}
+  .strip-list{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr 1fr;align-items:start}
+  .rev{grid-template-columns:auto 1fr;text-align:left;justify-items:start;gap:44px}
+  .rev p{margin:0}
+  .rev .stars{justify-content:flex-start}
+}
+@media (min-width:960px){
+  .burger{display:none}
+  nav.main{display:flex;gap:2px}
+  .callbtn{display:inline-flex}
+  #drawer{display:none!important}
+  .hero-grid{grid-template-columns:1fr 1.16fr}
+  /* 8 services + a 2-wide lead = 9 cells, which fills a 3-col grid exactly.
+     A 4-col grid would strand the last card alone on its own row. */
+  .svc{grid-template-columns:repeat(3,1fr)}
+  .card.lead{grid-column:span 2}
+  .about{grid-template-columns:1.05fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html:focus-within{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .card:hover,.btn:hover,.callbtn:hover{transform:none}
+}
+@media print{header,.topbar,#drawer{position:static}.rv{opacity:1;transform:none}}
+
+/* ---------- dark mode ----------
+   Token roles FLIP here. --teal is a text colour on white (5.59:1) but only
+   3.17:1 on the dark ground, so interactive text switches to --accent (9.84:1).
+   All ratios below were computed, not estimated. */
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1A1D;          /* off-black, not #000 */
+    --tint:#152528;        /* elevated surface */
+    --ink:#DCE7EA;         /* 14.05:1 on bg */
+    --muted:#9DB2B8;       /* 8.01:1 on bg */
+    --rule:#2E4449;
+    --rule-strong:#4E727A; /* 3.38:1, clears non-text 3:1 */
+    --control-edge:#4E727A;/* 3.38:1 on the dark ground */
+    --teal-ink:#FFFFFF;    /* headings 15.8:1 on surface */
+    --teal:#38D9A9;        /* interactive text, 9.84:1 on bg */
+    --teal-deep:#5BE3BB;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.4),0 2px 8px rgba(0,0,0,.3);
+    --shadow-md:0 6px 14px rgba(0,0,0,.45),0 18px 38px rgba(0,0,0,.35);
+  }
+  header{background:rgba(15,26,29,.94)}
+  .topbar{background:#0A5561}                /* white on this = 8.45:1 */
+  .burger,.card,.mapcard,footer,.btn-b{background:var(--tint)}
+  .btn-b{color:var(--ink)}
+  /* Solid teal blocks keep white text: those ratios already pass in both modes. */
+  .callbtn,.btn-a{background:var(--teal);color:#08414B}
+  .callbtn:hover,.btn-a:hover{background:var(--teal-deep);color:#08414B}
+  .card.lead{background:#0A5561;border-color:#0A5561}
+  .card.lead p{color:#CFE9ED}
+  .card.lead h3,.card.lead .ico{color:#fff}
+  .ico{background:rgba(56,217,169,.14);color:var(--accent)}
+  #reviews{background:#08414B}               /* white 11.24:1, accent 6.25:1 */
+  .cred .stars svg,.row svg,.strip-list svg{fill:var(--accent);stroke:var(--accent)}
+  .strip-list svg{fill:none}
+  .brand .mark rect{fill:#0A5561}
+  .attrib img{opacity:.95;filter:brightness(1.6)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span>2330 Justin Rd, Suite 300, Highland Village, TX</span>
+  </div>
+</div>
+
+<header id="home">
+  <div class="wrap bar">
+    <a class="brand" href="#home" aria-label="Cafe Smile Studio, home">
+      <svg class="mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <rect width="44" height="44" rx="12" fill="#0B7285"/>
+        <path d="M14 15.5c-2.4 0-4 1.9-4 4.6 0 4.6 3.1 9.4 5 9.4 1.2 0 1.9-1 2.9-1s1.7 1 2.9 1c1.9 0 5-4.8 5-9.4 0-2.7-1.6-4.6-4-4.6-1.6 0-2.4.8-3.9.8s-2.3-.8-3.9-.8Z" fill="#fff" transform="translate(4 0)"/>
+        <circle cx="31" cy="14" r="3" fill="#38D9A9"/>
+      </svg>
+      <span class="brandtext"><b>Cafe Smile Studio</b><span>Highland Village, TX</span></span>
+    </a>
+    <nav class="main" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="callbtn" href="tel:+19723170551">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      (972) 317-0551
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div id="drawer">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a class="dcall" href="tel:+19723170551">Call (972) 317-0551</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" aria-labelledby="h1">
+    <div class="hero-grid">
+      <div>
+        <h1 id="h1">Dentistry in Highland Village, for a clean and for everything after it.</h1>
+        <p class="lede">A practice on Justin Road covering the routine visits, the cosmetic work, and the things that go wrong without warning.</p>
+        <div class="actions">
+          <a class="btn btn-a" href="tel:+19723170551">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Call the practice
+          </a>
+          <a class="btn btn-b" href="#services">See what we do</a>
+        </div>
+        <div class="cred">
+          <div class="stars" role="img" aria-label="Rated 5.0 out of 5 stars">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+          </div>
+          <span class="cred-n">5.0</span>
+          <span class="cred-t">across 256 Google reviews</span>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80"
+             width="1600" height="1067" fetchpriority="high"
+             alt="A dental treatment room with a reclining chair, overhead lamp and instrument tray, lit by daylight from a window.">
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-in rv">
+      <h2>Two halves of the same list</h2>
+      <ul class="strip-list">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B7285" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>The six month clean, the exam, and an honest answer about what needs watching.</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B7285" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Veneers, implants and Invisalign, when you want a change you can see.</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B7285" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Emergencies, which nobody puts in the diary.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="services" class="pad wrap" aria-labelledby="svc-h">
+    <div class="head rv">
+      <h2 id="svc-h">What the practice does</h2>
+      <p>Eight treatments, from the appointment you book every six months to the work that takes several visits to plan.</p>
+    </div>
+    <div class="svc">
+
+      <article class="card lead rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5c-1.6 0-2.4-.8-4-.8-2.4 0-4 1.9-4 4.6 0 4.6 3.1 9.4 5 9.4 1.2 0 1.9-1 3-1s1.8 1 3 1c1.9 0 5-4.8 5-9.4 0-2.7-1.6-4.6-4-4.6-1.6 0-2.4.8-4 .8Z"/></svg></div>
+        <h3>Checkup and cleaning</h3>
+        <p>The regular visit. An exam, a scale and polish, and an honest answer about anything that needs watching.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.1 13.1a1 1 0 0 0 .8 1.6H11l-1 7.3 8.9-11.1a1 1 0 0 0-.8-1.6H12Z"/></svg></div>
+        <h3>Dental emergency</h3>
+        <p>A broken tooth, a lost crown, or pain that will not wait for a scheduled appointment.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Smile aesthetics</h3>
+        <p>Cosmetic work planned around your face rather than a catalogue, so the result still looks like you.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 0 18 0"/><path d="M3 12a9 9 0 0 1 18 0"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg></div>
+        <h3>Smile makeovers</h3>
+        <p>Several treatments planned together as one result, rather than fixed one tooth at a time.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M5 9h14"/></svg></div>
+        <h3>Veneers</h3>
+        <p>Thin porcelain facings bonded to the front of a tooth to change its shape, shade or alignment.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a5 5 0 0 1 5 5c0 2-1 3.5-1.5 5H8.5C8 11.5 7 10 7 8a5 5 0 0 1 5-5Z"/><path d="M10 13v8M14 13v8M10 17h4"/></svg></div>
+        <h3>Implants</h3>
+        <p>A titanium post placed in the jaw to carry a replacement tooth that stays put.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9c0-2 1.6-3 4-3 2 0 3 .8 4 .8S14 6 16 6c2.4 0 4 1 4 3 0 3.5-3 9-4.6 9-1 0-1.6-1-3.4-1s-2.4 1-3.4 1C7 18 4 12.5 4 9Z"/></svg></div>
+        <h3>Invisalign</h3>
+        <p>Clear removable aligners that straighten teeth without brackets or wires.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4M20 4 9.5 14.5 7 17l-3 1 1-3 2.5-2.5Z"/><path d="M14 8 4 18v2h2"/></svg></div>
+        <h3>Botox</h3>
+        <p>Administered in a dental setting, where the muscles of the jaw and face are already part of the day's work.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about" class="pad" aria-labelledby="ab-h" style="background:var(--tint);border-block:1px solid var(--rule)">
+    <div class="wrap about">
+      <div class="rv">
+        <h2 id="ab-h" style="font-size:clamp(1.72rem,1.4rem + 1.5vw,2.5rem)">About the practice</h2>
+        <p style="margin-top:18px">Cafe Smile Studio is a dental practice on Justin Road in Highland Village. The checkups and cleanings keep a mouth out of trouble. The cosmetic side is there when somebody wants a change they can see. And then there are the emergencies, which nobody schedules.</p>
+        <p>Veneers, implants and Invisalign sit on the same list as a six month clean. Most patients end up using both sides of that list over the years.</p>
+      </div>
+      <figure class="figure rv" style="margin:0">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=1600&q=80"
+             width="1600" height="1067" loading="lazy"
+             alt="A clear removable dental aligner being fitted over the upper teeth.">
+        <figcaption>Clear aligners are one of the treatments offered.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="reviews" class="pad" aria-labelledby="rv-h">
+    <div class="wrap rev">
+      <div class="rv">
+        <div class="score">5.0</div>
+        <div class="stars" role="img" aria-label="Rated 5.0 out of 5 stars">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="#38D9A9" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="#38D9A9" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="#38D9A9" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="#38D9A9" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="#38D9A9" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+        </div>
+        <div class="rev-count">256 Google reviews</div>
+      </div>
+      <div class="rv">
+        <h2 id="rv-h" style="font-size:clamp(1.6rem,1.35rem + 1.3vw,2.2rem)">What patients have said</h2>
+        <p style="margin-top:15px">Two hundred and fifty six people have rated the practice on Google, and the average has stayed at five out of five.</p>
+        <a class="btn btn-b rv" style="margin-top:26px;background:transparent;color:#fff;border-color:rgba(255,255,255,.45)" href="tel:+19723170551">Call the practice</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="pad wrap" aria-labelledby="ct-h">
+    <div class="head rv">
+      <h2 id="ct-h">Find us</h2>
+      <p>The practice is on Justin Road in Highland Village. Call to ask about an appointment.</p>
+    </div>
+    <div class="contact">
+      <dl class="rows rv">
+        <div class="row">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><dt>Phone</dt><dd><a href="tel:+19723170551">(972) 317-0551</a></dd></div>
+        </div>
+        <div class="row">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><dt>Address</dt><dd>2330 Justin Rd, Suite 300<br>Highland Village, TX 75077</dd></div>
+        </div>
+        <div class="row">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></svg>
+          <div><dt>Rating</dt><dd>5.0 from 256 Google reviews</dd></div>
+        </div>
+      </dl>
+      <div class="mapcard rv">
+        <iframe
+          title="Map showing 2330 Justin Rd, Suite 300, Highland Village, Texas"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=2330%20Justin%20Rd%20Suite%20300%2C%20Highland%20Village%2C%20TX%2075077&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">Cafe Smile Studio</div>
+    <div class="f-addr">2330 Justin Rd, Suite 300, Highland Village, TX 75077 &middot; <a href="tel:+19723170551" style="color:var(--muted)">(972) 317-0551</a></div>
+    <div class="attrib">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" width="110" height="26" loading="lazy">
+      <p>This website was prepared by Top Shelf Business Solutions.</p>
+      <p style="margin-top:5px"><a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'), d=document.getElementById('drawer');
+  b.addEventListener('click',function(){
+    var open=d.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+    b.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  d.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){d.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+  // Scroll reveal via IntersectionObserver (no scroll listener, no CDN).
+  // The copy is visible unless this block succeeds, so a browser that never
+  // delivers observer callbacks still shows a complete page.
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver'in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var root=document.documentElement;
+  root.classList.add('js-rv');
+  var revealAll=function(){
+    // Snap to visible outright. Do not hand this to a transition, because a
+    // context that fails to run observers often fails to run transitions too.
+    root.classList.add('rv-off');
+    root.classList.remove('js-rv');
+    els.forEach(function(el){el.style.transitionDelay='';});
+  };
+  // If no callback has arrived shortly after load, assume the API is unreliable
+  // here and hand the page back rather than leaving it blank.
+  var armed=true;
+  var watchdog=setTimeout(function(){if(armed)revealAll();},1200);
+  var io=new IntersectionObserver(function(en){
+    if(armed){armed=false;clearTimeout(watchdog);}
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  els.forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*45)+'ms';io.observe(el);});
+})();
+</script>
+</body>
+</html>
