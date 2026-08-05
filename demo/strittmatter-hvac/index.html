@@ -273,7 +273,7 @@ html:not(.js) .nav-toggle{display:none}
 /* ============================== Services ============================== */
 .services{background:var(--paper)}
 .card-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.35rem;--cols:var(--cols-desktop,3)}
-.card-grid > *{flex:1 1 252px;min-width:0;max-width:calc((100% - (var(--cols) - 1) * 1.35rem) / var(--cols))}
+.card-grid > *{flex:1 1 calc((100% - (var(--cols) - 1) * 1.35rem) / var(--cols));min-width:0;max-width:calc((100% - (var(--cols) - 1) * 1.35rem) / var(--cols))}
 @media (max-width:900px){.card-grid{--cols:2}}
 @media (max-width:560px){.card-grid{--cols:1}}
 .svc-card{
