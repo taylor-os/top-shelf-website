@@ -5,3 +5,6 @@
 home-centered-review.html
 *-review.html
 *.local.html
+
+# Scratch: raw generated PNGs before conversion into assets/img/library/
+.libgen/
