@@ -544,6 +544,12 @@ a.info-value:hover{color:var(--steel-ink)}
   background:linear-gradient(90deg,rgba(9,22,45,.94) 0%,rgba(9,22,45,.82) 38%,rgba(9,22,45,.34) 72%,rgba(9,22,45,.12) 100%);}
 .hero-inner{padding:clamp(5rem,11vw,8.5rem) 0 clamp(4.5rem,9vw,7rem)}
 .hero h1{font-size:clamp(2.6rem,4.6vw + .5rem,4.6rem);max-width:21ch}
+/* A horizontal scrim only works while there is room to its right.  On a phone
+   the copy spans the full width, so the gradient turns vertical instead. */
+@media (max-width:760px){
+  .hero-scrim{background:linear-gradient(180deg,rgba(9,22,45,.84) 0%,rgba(9,22,45,.66) 45%,rgba(9,22,45,.92) 100%)}
+  .hero h1{max-width:none}
+}
 
 </style>
 </head>
