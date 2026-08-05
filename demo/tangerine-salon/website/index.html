@@ -268,22 +268,31 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 .menu-list{
   list-style:none;margin:0;padding:0;
   display:grid;grid-template-columns:repeat(var(--cols-desktop,2),1fr);column-gap:4.5rem;
-  counter-reset:menu;
   border-bottom:1px solid var(--line);
 }
 /* An odd service count would leave the last item alone beside a gap.  Let it
    run the full width instead, which reads as an intentional closing line. */
-.menu-list > :last-child:nth-child(odd){grid-column:1 / -1}
+.menu-list > :last-child:nth-child(odd):not(.menu-group){grid-column:1 / -1}
 @media (max-width:820px){.menu-list{grid-template-columns:1fr}}
+/* Group header row — spans both columns and acts as a visual divider */
+.menu-group{
+  grid-column:1 / -1;
+  padding:2.4rem 0 .6rem;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:.85rem;
+}
+.menu-group:first-child{border-top:none;padding-top:.4rem}
+.menu-group-label{
+  font-size:.72rem;font-weight:700;letter-spacing:.38em;text-transform:uppercase;
+  color:var(--bronze);white-space:nowrap;
+}
+.menu-group::after{content:"";flex:1;height:1px;background:var(--line-gold)}
 .menu-item{
-  counter-increment:menu;
-  display:grid;grid-template-columns:2.6rem 1fr;column-gap:1.1rem;
+  display:grid;grid-template-columns:1.1rem 1fr;column-gap:1.1rem;
   padding:1.7rem 0 1.55rem;border-top:1px solid var(--line);
 }
 .menu-item::before{
-  content:counter(menu,decimal-leading-zero);
-  font-size:.74rem;font-weight:700;letter-spacing:.18em;color:var(--bronze);
-  padding-top:.5rem;
+  content:"\25C6";/* solid diamond — salon, not a spreadsheet */
+  font-size:.5rem;color:var(--gold);padding-top:.9rem;
 }
 .menu-item article{transition:transform .35s var(--ease)}
 .menu-name{font-size:1.32rem;font-weight:500;margin:0 0 .45rem;transition:color .35s var(--ease)}
@@ -291,6 +300,49 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 @media (hover:hover) and (pointer:fine){
   .menu-item:hover article{transform:translateX(6px)}
   .menu-item:hover .menu-name{color:var(--bronze)}
+}
+
+/* ---------- trust bar ---------- */
+.trust-bar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.4rem;
+  margin:0 0 2.2rem;padding:.9rem 1.4rem;
+  background:rgba(255,255,255,.72);border:1px solid var(--line-gold);border-radius:999px;
+  width:fit-content;max-width:100%;
+}
+.trust-pill{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.78rem;font-weight:700;letter-spacing:.08em;color:var(--ink);
+  white-space:nowrap;
+}
+.trust-pill .tp-star{color:var(--bronze);font-size:.82rem}
+.trust-pill .tp-dot{color:var(--gold);font-weight:700;margin:0 .1rem}
+.trust-sep{width:1px;height:1.1rem;background:var(--line-gold);flex-shrink:0}
+@media (max-width:600px){
+  .trust-bar{border-radius:16px;padding:.8rem 1rem}
+  .trust-sep{display:none}
+}
+
+/* ---------- locations ---------- */
+.locations-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1.2rem;
+}
+.location-card{
+  padding:1.6rem 1.5rem;
+  background:var(--card);border:1px solid var(--line-gold);border-radius:14px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+@media (hover:hover) and (pointer:fine){
+  .location-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+}
+.location-city{
+  font-family:var(--font-display);font-weight:500;
+  font-size:1.18rem;margin:0 0 .35rem;
+}
+.location-centre{
+  font-size:.82rem;color:var(--ink-soft);margin:0;
+  font-weight:400;letter-spacing:.02em;
 }
 
 /* ---------- about ---------- */
@@ -474,6 +526,8 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
 
+        <li><a href="#locations">Locations</a></li>
+
         <li><a href="#reviews">Reviews</a></li>
 
         <li><a href="#contact">Contact</a></li>
@@ -499,20 +553,19 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
     </div>
     <div class="container">
       <div class="hero-inner">
-        <p class="hero-eyebrow">Highland Village</p>
+
+        <p class="hero-eyebrow">Trusted by the Dallas Cowboys Cheerleaders</p>
+
         <h1>Tangerine Salon</h1>
 
-        <p class="hero-tagline">Highland Village&#x27;s Aveda salon for color, balayage and extensions.</p>
+        <p class="hero-tagline">Aveda color, balayage and hand-tied extensions, done in Highland Village.</p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://www.tangerinesalon.net/online-booking">Book an Appointment</a>
           <a class="btn btn-ghost" href="#services">Explore services</a>
         </div>
 
-        <p class="hero-rating">
-          <span class="star" aria-hidden="true">&#9733;</span>
-          <span><strong>4.9</strong> rating <span class="dot" aria-hidden="true">&middot;</span> 939 reviews</span>
-        </p>
+        <div class="trust-bar" aria-label="Credentials"><span class="trust-pill"><span class="tp-star" aria-hidden="true">&#9733;</span><strong>4.9</strong><span class="tp-dot" aria-hidden="true">&middot;</span>939 Google reviews</span><span class="trust-sep" aria-hidden="true"></span><span class="trust-pill">4.9 stars from 939 Google reviews</span><span class="trust-sep" aria-hidden="true"></span><span class="trust-pill">Aveda Certified</span><span class="trust-sep" aria-hidden="true"></span><span class="trust-pill">The Shops at Highland Village</span></div>
 
       </div>
     </div>
@@ -524,16 +577,17 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 
       <div class="section-head reveal">
         <p class="eyebrow">Services</p>
-        <h2>The service menu</h2>
-        <p class="lede">Choose what your week calls for. We will take care of the rest.</p>
+        <h2>What we do here</h2>
+        <p class="lede">Everything from a single appointment to a complete transformation.</p>
         <svg class="ornament" viewBox="0 0 120 24" aria-hidden="true" focusable="false">
           <line x1="0" y1="12" x2="44" y2="12"></line>
           <path d="M60 3 C66 8 66 16 60 21 C54 16 54 8 60 3 Z"></path>
           <line x1="76" y1="12" x2="120" y2="12"></line>
         </svg>
       </div>
-      <ol class="menu-list reveal" style="--cols-desktop:2">
+      <ol class="menu-list reveal" style="--cols-desktop:4">
 
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Color</span></li>
         <li class="menu-item">
           <article>
             <h3 class="menu-name">Balayage</h3>
@@ -541,6 +595,7 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
           </article>
         </li>
 
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Color</span></li>
         <li class="menu-item">
           <article>
             <h3 class="menu-name">Highlights</h3>
@@ -548,6 +603,7 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
           </article>
         </li>
 
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Color</span></li>
         <li class="menu-item">
           <article>
             <h3 class="menu-name">All Over Color</h3>
@@ -555,24 +611,83 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
           </article>
         </li>
 
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Extensions</span></li>
         <li class="menu-item">
           <article>
-            <h3 class="menu-name">Bellami Extensions</h3>
-            <p class="menu-blurb">Hand-tied wefts, tape-ins and K-tip fusion.</p>
+            <h3 class="menu-name">Hand-Tied Wefts</h3>
+            <p class="menu-blurb">Bellami wefts sewn in flat, the same extensions the Dallas Cowboys Cheerleaders wear.</p>
           </article>
         </li>
 
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Extensions</span></li>
         <li class="menu-item">
           <article>
-            <h3 class="menu-name">Cuts and Styling</h3>
-            <p class="menu-blurb">Cuts for women and men, plus blowouts and formal styling when you need to look put together.</p>
+            <h3 class="menu-name">Tape-In Extensions</h3>
+            <p class="menu-blurb">Quicker to fit and easy to move up, for length without a long appointment.</p>
           </article>
         </li>
 
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Extensions</span></li>
         <li class="menu-item">
           <article>
-            <h3 class="menu-name">Smoothing and Repair</h3>
-            <p class="menu-blurb">Express and keratin smoothing, plus conditioning repair for hair that has been through it.</p>
+            <h3 class="menu-name">K-Tip / I-Tip (Fusion)</h3>
+            <p class="menu-blurb">Strand by strand, for fine hair or for filling in one area rather than all over.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Cuts and Styling</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Women&#x27;s Haircut</h3>
+            <p class="menu-blurb">Cut around how your hair actually falls, and how much time you will really spend on it.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Cuts and Styling</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Men&#x27;s Haircut</h3>
+            <p class="menu-blurb">Clean, current, and quick to get right again next time.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Cuts and Styling</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Blowouts</h3>
+            <p class="menu-blurb">For the mornings you want it done properly and you do not want to do it.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Cuts and Styling</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Formal Styling</h3>
+            <p class="menu-blurb">Weddings, photos, and the events you have been thinking about for months.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Smoothing and Repair</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Express Smoothing</h3>
+            <p class="menu-blurb">Takes the frizz down without taking the movement out.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Smoothing and Repair</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Keratin Smoothing</h3>
+            <p class="menu-blurb">The longer-lasting option when humidity is the whole problem.</p>
+          </article>
+        </li>
+
+        <li class="menu-group" aria-hidden="true"><span class="menu-group-label">Smoothing and Repair</span></li>
+        <li class="menu-item">
+          <article>
+            <h3 class="menu-name">Conditioning Repair</h3>
+            <p class="menu-blurb">For hair that has been through color, heat, or both.</p>
           </article>
         </li>
 
@@ -590,7 +705,7 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
           <h2>A place to exhale</h2>
           <div class="about-body">
 
-            <p>Tangerine Salon is an Aveda Certified salon in The Shops at Highland Village. Color is most of what happens here: highlights, balayage, all over color. They also fit Bellami hand-tied extensions, the same ones the Dallas Cowboys Cheerleaders wear. Cuts, blowouts, smoothing and conditioning repair are on the menu too.</p>
+            <p>Tangerine Salon is an Aveda Certified salon in The Shops at Highland Village, one of five Tangerine locations across the Metroplex. Color is most of what happens here: highlights, balayage, all over color, and Bellami hand-tied extensions. Every appointment starts with a consultation, because the answer for your hair is not the answer for the person in the next chair.</p>
 
           </div>
         </div>
@@ -631,6 +746,45 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnuE0fCF4h7dJGiAN7PZNtQNY3-pGtCapDbH81NbkeCGP3bmgKRpBDpg-AubyHz0J07ABDKOXRuXGyq1aRxthgaDkNCD1ZXdSFVBzd_tAAhRay2GtLX7EOzqMzusihSeV-VLGue=w1200" alt="Inside Tangerine Salon" loading="lazy">
       </figure>
 
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="section section-alt" id="locations" aria-labelledby="locations-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Locations</p>
+        <h2 id="locations-heading">Find us near you</h2>
+        <p class="lede">Tangerine Salon has locations across the area. Find the one closest to you.</p>
+      </div>
+      <div class="locations-grid reveal">
+
+        <div class="location-card">
+          <p class="location-city">Highland Village</p>
+          <p class="location-centre">The Shops at Highland Village</p>
+        </div>
+
+        <div class="location-card">
+          <p class="location-city">Dallas</p>
+          <p class="location-centre">Preston Hollow Village</p>
+        </div>
+
+        <div class="location-card">
+          <p class="location-city">Frisco</p>
+          <p class="location-centre">The Star</p>
+        </div>
+
+        <div class="location-card">
+          <p class="location-city">Coppell</p>
+          <p class="location-centre">Old Town Coppell</p>
+        </div>
+
+        <div class="location-card">
+          <p class="location-city">Allen</p>
+          <p class="location-centre">Watters Creek</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
