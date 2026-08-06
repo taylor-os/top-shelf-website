@@ -49,7 +49,8 @@ def rows(colour=INK2, size=13, align="left"):
             '<tr><td width="30" valign="middle" style="padding:3px 0;">'
             '<img src="%s/%s" width="22" height="22" alt="" '
             'style="display:block;border:0;width:22px;height:22px;"></td>'
-            '<td valign="middle" style="padding:3px 0;text-align:%s;font-family:%s;font-size:%dpx;">'
+            '<td valign="middle" style="padding:3px 0;text-align:%s;font-family:%s;font-size:%dpx;'
+            'white-space:nowrap;">'
             '<a href="%s" style="color:%s;text-decoration:none;">%s</a></td></tr>'
             % (IMG, icon, align, SANS, size, href, colour, label))
     out.append("</table>")
@@ -57,9 +58,13 @@ def rows(colour=INK2, size=13, align="left"):
 
 
 def inline_contacts(colour=INK2, size=13, sep=GOLD):
-    """One line, gold bullets between — no icons."""
-    parts = ['<a href="%s" style="color:%s;text-decoration:none;">%s</a>' % (h, colour, l)
-             for _, h, l in CONTACTS]
+    """One line, gold bullets between — no icons.
+
+    Each item is nowrap so a narrow client breaks BETWEEN items; without it the
+    phone splits at its hyphen and reads as two numbers.
+    """
+    parts = ['<a href="%s" style="color:%s;text-decoration:none;white-space:nowrap;">%s</a>'
+             % (h, colour, l) for _, h, l in CONTACTS]
     dot = '<span style="color:%s;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>' % sep
     return ('<div style="font-family:%s;font-size:%dpx;line-height:1.9;">%s</div>'
             % (SANS, size, dot.join(parts)))
@@ -83,9 +88,9 @@ def option_1():
         '<div style="font-family:%s;font-weight:bold;font-size:20px;line-height:1.15;'
         'color:%s;letter-spacing:.5px;">TOP SHELF<br>'
         '<span style="color:%s;">BUSINESS SOLUTIONS</span></div>'
-        '<div style="font-family:%s;font-size:11px;font-style:italic;color:%s;'
-        'padding:4px 0 9px;">%s &middot; Websites, SEO, AI phone &amp; CRM for local business</div>%s'
-        % (SERIF, INK, GOLD, SANS, INK3, SLOGAN, rows()))
+        '<div style="font-family:%s;font-size:12px;font-style:italic;color:%s;'
+        'padding:5px 0 9px;">%s</div>%s'
+        % (SERIF, INK, GOLD, SERIF, INK3, SLOGAN, rows()))
     inner = (
         '<div style="text-align:center;" dir="rtl">'
         '<div style="display:inline-block;vertical-align:middle;max-width:230px;text-align:center;" dir="ltr">'
@@ -154,9 +159,11 @@ def option_5():
         '<div style="font-family:%s;font-size:10px;letter-spacing:3px;color:%s;padding:4px 0 8px;">'
         '%s</div>%s' % (SERIF, INK, GOLD, SANS, INK3, SLOGAN.upper(), rows()))
     card = (
+        # width="100%" matters: a table with only max-width shrink-wraps to its
+        # content, which starves the inline-blocks and stacks them.
         '<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" '
-        'bgcolor="%s" style="background-color:%s;border:1px solid %s;border-left:3px solid %s;'
-        'max-width:560px;"><tr><td style="padding:16px 20px;">'
+        'width="100%%" bgcolor="%s" style="width:100%%;max-width:560px;background-color:%s;'
+        'border:1px solid %s;border-left:3px solid %s;"><tr><td style="padding:16px 20px;">'
         '<div style="text-align:center;" dir="rtl">'
         '<div style="display:inline-block;vertical-align:middle;max-width:110px;text-align:center;'
         'padding:0 14px;" dir="ltr">'
