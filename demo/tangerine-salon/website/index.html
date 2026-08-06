@@ -218,12 +218,20 @@ body.nav-open .nav-toggle span:last-child{transform:translate(-50%,-50%) rotate(
 }
 .hero-scrim{
   position:absolute;inset:0;
-  /* The copy column runs to roughly 48% of the width, so the wash has to still
-     be near-opaque there.  At .82 it was not, and a bright photo behind it left
-     the tagline and the rating chip barely readable. */
+  /* Two competing jobs: dark copy needs a near-opaque field, and the photo is
+     the reason anyone looks at the hero.  Measured, the copy column runs 28% to
+     53% of the width, so the wash holds through 53% and then falls away hard.
+     Past 70% the photograph is essentially uncovered.  An earlier version held
+     .72 all the way to 62% with a .9 bottom fade over the lower third, which
+     kept the text readable and left the salon barely visible. */
   background:
-    linear-gradient(to right,rgba(253,246,240,.97) 0%,rgba(253,246,240,.93) 40%,rgba(253,246,240,.72) 62%,rgba(253,246,240,.3) 100%),
-    linear-gradient(to top,rgba(253,246,240,.9) 0%,transparent 36%);
+    linear-gradient(to right,
+      rgba(253,246,240,.94) 0%,
+      rgba(253,246,240,.90) 48%,
+      rgba(253,246,240,.62) 60%,
+      rgba(253,246,240,.20) 72%,
+      rgba(253,246,240,.05) 100%),
+    linear-gradient(to top,rgba(253,246,240,.42) 0%,transparent 18%);
 }
 .hero-inner{position:relative;max-width:40rem}
 .hero-eyebrow{
