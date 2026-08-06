@@ -82,23 +82,38 @@ def shell(inner, bg=GROUND, rule_top=None, rule_bottom=None, pad="18px 20px"):
             % (bg, bg, border, pad, inner))
 
 
-def option_1():
-    """Faithful rebrand — GDR's exact geometry in Top Shelf's palette."""
+def port(logo="logo-email.png", w=200, h=70, slot=210):
+    """A strict port of the GDR signature: only the colours, words and logo change.
+
+    Every measurement below is GDR's — 16px/18px padding, a 19px name, an 11px
+    tagline, 22px icons, 13px links, 3px rows.  Arial too, not the site's serif:
+    swapping the typeface would be a redesign, and this is a swap.
+    """
     text = (
-        '<div style="font-family:%s;font-weight:bold;font-size:20px;line-height:1.15;'
-        'color:%s;letter-spacing:.5px;">TOP SHELF<br>'
+        '<div style="font-family:%s;font-weight:bold;font-size:19px;line-height:1.15;'
+        'color:%s;letter-spacing:.3px;">TOP SHELF<br>'
         '<span style="color:%s;">BUSINESS SOLUTIONS</span></div>'
-        '<div style="font-family:%s;font-size:12px;font-style:italic;color:%s;'
-        'padding:5px 0 9px;">%s</div>%s'
-        % (SERIF, INK, GOLD, SERIF, INK3, SLOGAN, rows()))
+        '<div style="font-family:%s;font-size:11px;font-style:italic;color:%s;'
+        'padding:4px 0 9px;">%s</div>%s'
+        % (SANS, INK, GOLD, SANS, INK3, SLOGAN, rows()))
     inner = (
         '<div style="text-align:center;" dir="rtl">'
-        '<div style="display:inline-block;vertical-align:middle;max-width:230px;text-align:center;" dir="ltr">'
-        '<img src="%s/logo-email.png" width="220" height="77" alt="Top Shelf Business Solutions" '
-        'style="display:inline-block;border:0;width:220px;height:77px;"></div> '
+        '<div style="display:inline-block;vertical-align:middle;max-width:%dpx;text-align:center;" dir="ltr">'
+        '<img src="%s/%s" width="%d" height="%d" alt="Top Shelf Business Solutions" '
+        'style="display:inline-block;border:0;width:%dpx;height:%dpx;"></div> '
         '<div style="display:inline-block;vertical-align:middle;width:100%%;max-width:340px;'
-        'text-align:center;" dir="ltr">%s</div></div>' % (IMG, text))
-    return shell(inner, rule_top=GOLD)
+        'text-align:center;" dir="ltr">%s</div></div>'
+        % (slot, IMG, logo, w, h, w, h, text))
+    return shell(inner, rule_top=GOLD, pad="16px 18px")
+
+
+def option_1():
+    return port()
+
+
+def option_1_mark():
+    """Same port, emblem instead of the wordmark — the text already says the name."""
+    return port(logo="logo-mark-email.png", w=84, h=84, slot=120)
 
 
 def option_2():
@@ -176,8 +191,10 @@ def option_5():
 
 
 OPTIONS = [
-    ("1", "Faithful Rebrand", "GDR's exact layout and geometry, straight swap to espresso + gold.",
+    ("A-wordmark", "The port", "GDR's signature with three things changed: colours, words, logo.",
      option_1),
+    ("B-emblem", "The port, emblem", "Identical, but the emblem stands in for the wordmark so the "
+     "name is not read twice.", option_1_mark),
     ("2", "Wordmark Lead", "The logo already says the name, so nothing repeats it. Contact on one line.",
      option_2),
     ("3", "Gold Split", "Mark and details divided by a hairline; the gold rule moves to the bottom.",
