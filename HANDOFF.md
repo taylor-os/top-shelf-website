@@ -1,4 +1,8 @@
-# Top Shelf Website — session handoff (live state)
+# Handoff — Top Shelf Website
+
+> Imported from this project's repo-root HANDOFF.md, which was canonical until
+> 2026-08-06. Rewrite it when you next wrap up a session here.
+
 > Read FIRST by whoever continues (Taylor OS / Claude Desktop). GitHub holds the code; this holds the thinking. (`.md` files are 404-blocked on the live site.)
 
 **Last updated:** 2026-07-24 · **By:** Claude Code (Windows desktop)
@@ -27,3 +31,14 @@ Deployed **assistant-only** to production. Built subagent-driven (6 TDD/reviewed
 - Scripted-retrieval relevance is keyword-based (owner chose no-LLM); tune matches via the vault `keywords` if desired (e.g. "more customers" currently keys to "Customer Portal").
 - Spec + plan: `docs/superpowers/{specs,plans}/2026-07-23-*` (this repo; `/docs` is 404-blocked live). Reference widget pattern: Reids `assets/js/app.js` ("Dawn").
 - App public URL: `https://top-shelf-production.up.railway.app` (endpoint `/api/website-lead`).
+
+<!-- AUTO:STATE — rewritten by brain-handoff.cjs. Edit above this line, not below. -->
+
+**Repo state** — C:\Users\taylo\top-shelf-website
+
+- branch: `main`
+- last commit: `4c0944c 2026-08-06 feat(email): package the signature options for the Taylor OS preview host`
+- uncommitted files: 1 — ANDOFF.md
+- commits not yet pushed: 0
+
+<!-- /AUTO:STATE -->
