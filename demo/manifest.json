@@ -1,7 +1,8 @@
 {
   "luigi-s-autobody-collision-repair": {
     "published": "2026-07-29",
-    "expires": "2026-08-28"
+    "expires": "2026-08-28",
+    "keep": true
   },
   "tx-smoke": {
     "published": "2026-08-02",
@@ -14,30 +15,37 @@
   },
   "cafe-smile-studio": {
     "published": "2026-08-04",
-    "expires": "2026-10-03"
+    "expires": "2026-10-03",
+    "keep": true
   },
   "highland-village-family-dentistry": {
     "published": "2026-08-04",
-    "expires": "2026-10-03"
+    "expires": "2026-10-03",
+    "keep": true
   },
   "spa-haven": {
     "published": "2026-08-04",
-    "expires": "2026-10-03"
+    "expires": "2026-10-03",
+    "keep": true
   },
   "quick-fix-lube-express": {
     "published": "2026-08-04",
-    "expires": "2026-10-03"
+    "expires": "2026-10-03",
+    "keep": true
   },
   "onyx-nail-bar": {
     "published": "2026-08-04",
-    "expires": "2026-10-03"
+    "expires": "2026-10-03",
+    "keep": true
   },
   "tangerine-salon": {
     "published": "2026-08-05",
-    "expires": "2026-10-04"
+    "expires": "2026-10-04",
+    "keep": true
   },
   "strittmatter-hvac": {
     "published": "2026-08-05",
-    "expires": "2026-10-04"
+    "expires": "2026-10-04",
+    "keep": true
   }
 }
