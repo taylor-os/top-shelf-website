@@ -2,13 +2,51 @@
 
 > Save-state read FIRST on resume. GitHub holds the code; this holds the thinking.
 > **This is the canonical handoff for the Top Shelf BUSINESS AUDIT** (registry `vault_slug: top-shelf`, covering CRM + Website + Outreach together).
-> Sub-project handoffs still exist for engineering work: `top-shelf-crm.md` (also holds a separate, still-open UI-redesign thread) and `top-shelf-website.md`.
+> `top-shelf-crm.md` and `top-shelf-website.md` are now **secondary archives** (CRM engineering log, website log). They are no longer generated. Read this file first; write handoffs here.
 
-**Last updated:** 2026-08-09 · **By:** Claude Code (desktop, Opus 5) · **Continuing on:** Taylor OS, project "Top Shelf"
+**Last updated:** 2026-08-10 · **By:** Claude Code (desktop, Opus 5) · **Continuing on:** Taylor OS, project "Top Shelf"
 
 ---
 
-## 🔴 READ THIS FIRST — the agent layer is DOWN, and fixing it is step zero
+## WHAT CHANGED 2026-08-10 — the handoff wiring was rebuilt
+
+Top Shelf is now **ONE project spanning two repos** in `project-registry.json` (new optional `repos` array). `brain-handoff.cjs`, `session-project-binding.cjs` and `freshness-gate.cjs` all read `repos` when present and fall back to `repo`, so the other 11 projects are byte-identical — verified by running each hook against the unchanged registry *before* the switch and re-verifying all 8 others after. Both Top Shelf folders now bind to **"Top Shelf"**, and this file is the generated handoff carrying live state for **both** repos, mirrored to both repo roots.
+
+The repos stay separate on disk deliberately: each deploys from its own root (CRM→Railway, website→Hostinger including the live `/demo` sample sites), so a monorepo would break both pipelines. Drive already models Top Shelf as one folder; only git is split, and correctly so.
+
+**Four writers were silently destroying handoffs** and are now fixed: `handoff-sync`, `taylor-os-sync`, the Taylor OS **Sync button** (`8bf4fc8`, deployed), and the Claude Desktop global instructions. All four said *"write `HANDOFF.md` at the repo root"* — but the generator overwrites every repo-root copy every ~10 minutes, so that work vanished within minutes with no error. **Repo-root copies are mirrors, never the source.** A live instance was recovered from commit `5f24833` during this very sync — see the AI-401 section.
+
+**Still owed by Taylor (one manual step):** paste the updated `OS Manager/DESKTOP-GLOBAL-INSTRUCTIONS.md` into Claude Desktop → Settings → Profile → custom instructions. It could not be automated: the Claude Desktop window is masked from computer-use screenshots — a deliberate boundary stopping an agent from driving its own host app. Until pasted, **Desktop keeps writing handoffs to the repo root where they are erased.**
+
+---
+
+## ✅ PHASE 1 COMPLETE — awaiting owner decisions on B1–B6 (2026-08-10)
+
+Commit `6d67cce` — `top-shelf-crm` main.
+
+### Delivered this session
+- ICP/Targeting + Demand seats re-run on Opus 5 ✅
+- Judge on §2a: REVISE → fixed — traction clamp corrected, /2.85 denominator, ≥100-review floor ✅
+- Chair synthesis + B1–B6 decision block delivered to Taylor ✅
+- `misc` category added to lead finder + sample site (backend only, never on website) ✅
+
+### Chair's verdict (do not re-litigate)
+- **Beachhead: health/beauty storefronts, dental first.** Owner's revealed behavior (4/6 approvals), HV survival (dental 62%, salon 60%), geographic stability all agree. Home services is second — needs metro-wide radius-operator infrastructure first.
+- **5 discovery calls before volume outreach.** Approved prospects, no pitch. Two questions: "how do you get new customers? Does your website bring leads?"
+- **6 scoring model fixes** (build pending owner approval): kill 3 dead inputs, gate ≥100 reviews, traction /2.85, remove website as within-pool ranker, live-read GBP claim status, fix identity to name+phone.
+- **Re-admit 112 geographic discards** into HV + Flower Mound + Double Oak + west Lewisville corridor.
+
+### Waiting on Taylor — B1–B6
+B1 cross-file identity key (blocks new city) · B2 add business_city field · B3 nightly reconciliation job · B4 confidence cap on derived fields · B5 builders refuse unknown website_quality · B6 resolve Animal Medical Center / Dove Creek / Strittmatter / Tangerine
+
+### Next 3 steps
+1. Taylor answers B1–B6
+2. Apply 6 scoring fixes + B1–B2 data fixes on 275 rows
+3. Re-admit 112 discards → run dental cohort end-to-end
+
+---
+
+## 🔴 HISTORICAL — agent layer block (NOW RESOLVED)
 
 **Nothing else in this handoff should be worked until this is resolved.** Owner instruction, verbatim: *"I need all of the council, agents, skills, judge, manager to work correctly before any work is done."*
 
@@ -28,21 +66,19 @@
 
 ⚠️ `sonnet` and `fable` "work" **only because they switch off Opus.** They are not fixes — they silently run every seat on a model the owner did not select, and report success. This fooled me twice and I recorded both as "fixed." Do not repeat it.
 
-### The staged fix has NEVER been loaded
+### 2026-08-10 UPDATE — the app restarted, the setting IS loaded, and it still 400s
 
-`alwaysThinkingEnabled: true` is set in `~/.claude/settings.json`. **It has never run.** Proof:
-- claude process started **17:56:20**
-- `settings.json` written **22:09:15** — four hours into an already-running process
-- `$env:CLAUDE_CODE_SESSION_ID` never changed → **no restart ever occurred**
+`alwaysThinkingEnabled: true` is set in `~/.claude/settings.json` and the **app process has since restarted** (the old pid is gone; settings.json is read at startup). A no-model agent dispatch **still returns the same 400**.
 
-An earlier note in the brain claimed the setting "does not win." **That was wrong.** I had only tested that it doesn't apply *mid-session* and generalised that into "doesn't work." Settings.json is read at startup only.
+**One caveat before calling this settled:** this was a *resumed* session — `$env:CLAUDE_CODE_SESSION_ID` is unchanged (`b0c799cd-…`), so a resume may restore the session's prior effort/thinking state instead of re-resolving it from the freshly-loaded settings. So the remaining untested case is a **brand-new session, not a resume**.
 
-### STEP 1 — test inheritance (do this before anything else)
-Dispatch any agent with **no `model` parameter**:
+**The one clean test left:** start a genuinely NEW session (new conversation, not resume/continue) and dispatch:
 > `Agent(subagent_type: "general-purpose", prompt: "Reply with one line: OK")`
 
-- **Runs** → thinking inherits. Go to STEP 2.
-- **400s** → confirmed product limitation, not a config error. Say so plainly, use the fallback, stop hunting.
+- **Runs** → thinking inherits. Unpin the Judge (STEP 2 below) and the standing rule is fully satisfied.
+- **400s** → **confirmed product limitation, not a config error.** Stop investigating — the disk has been exhausted (see "Already ruled out"). Use the fallback and tell Taylor plainly.
+
+*(Earlier note said the setting "does not win." That was wrong at the time — it had never been loaded. It has now been loaded once, in a resumed session, and still fails.)*
 
 ### STEP 2 — only if STEP 1 passed: unpin the Judge
 `~/.claude/agents/judge-agent.md` currently carries `model: sonnet` as a deliberate crutch. If inheritance works, that pin now **violates the owner's standing rule** by forcing the Judge onto Sonnet forever. Remove the `model: sonnet` line, re-test the Judge with no model param, commit.
@@ -160,19 +196,21 @@ Doc: `top-shelf-crm/docs/audit/2026-08-09-phase1-find-and-qualify.md` (`23eaa98`
 
 ---
 
-## OPEN ENGINEERING THREAD — AI Employee 401 (from a Taylor OS session, 2026-08-09)
+## OPEN ENGINEERING THREAD — AI Employee 401 (STILL BLOCKED as of 2026-08-10)
 
-Carried here because it is unresolved and belongs to this project. Full detail in the secondary log `top-shelf-crm.md` and in `projects/top-shelf/context.md`.
+**P10 AI Employee (chat-bubble reply drafting) will not authenticate.** Taylor minted **two** fresh `CLAUDE_CODE_OAUTH_TOKEN` values via `claude setup-token`; both returned `401 OAuth access token is invalid`.
 
-**P10 AI Employee (chat-bubble reply drafting) will not authenticate.** Taylor minted a fresh `CLAUDE_CODE_OAUTH_TOKEN` via `claude setup-token` and pasted it into Railway → top-shelf → **web** *and* **worker** Variables. Result: `401 OAuth access token is invalid`. He then redid the entire OAuth flow from scratch — **same 401**, so it is not a bad copy/paste.
+**Three code fixes were deployed in `6ff2896`** — pinned the CLI to `@2.1.226`, added `CLAUDE_CONFIG_DIR=/tmp/.claude-config`, added `trim()` on the token — **still 401. The token itself is being rejected by Anthropic's servers; the code is not the problem.**
 
-**Next steps, in order (do these instead of re-minting again):**
-1. `railway ssh --service web` (and `worker`) on **top-shelf**, run `claude -p "hi"` with `CLAUDE_CODE_OAUTH_TOKEN` in env — reproduce outside the app to see the real error rather than the wrapped 401.
-2. Check `claude --version` in the deployed image. The Dockerfile does `npm install -g @anthropic-ai/claude-code` **unpinned**, so a stale CLI could reject a token minted by a newer `setup-token`. Consider pinning.
-3. Confirm the variable actually landed and triggered a **real redeploy** on both services — Railway sometimes needs an explicit trigger, not just a Variables save.
-4. If still stuck, test the fresh token locally (`CLAUDE_CODE_OAUTH_TOKEN=… claude -p "hi"`) to separate "token is bad" from "container cannot use it."
+**New clue:** the latest error carries `"fast_mode_disabled_reason":"sdk_opt_in_required"`, which may mean Taylor's subscription tier does not permit headless SDK/API calls via an OAuth token. *(Possibly related to the agent-layer blocker at the top of this file — both involve subscription-level capability rather than config. Worth considering together, though they have not been proven to share a cause.)*
 
-Note both services must be set: chat works from `web`, but workflow-driven AI drafting runs on `worker` — set only one and automations silently do nothing.
+**ONE diagnostic step remaining — Taylor's action:**
+1. Command Prompt on Windows → `claude --version`. If old: `npm update -g @anthropic-ai/claude-code`, re-mint with `claude setup-token`, update both Railway vars (web + worker), redeploy.
+2. If it was already current: report roughly how long the `sk-ant-oat01-…` token is (character count) and whether `setup-token` opened a browser or just printed a token with no interaction.
+
+Both services must be set: chat runs from `web`, workflow-driven AI drafting runs on `worker` — set only one and automations silently do nothing.
+
+> **How this section got here is itself the lesson.** A Taylor OS session wrote these findings into `top-shelf-crm/HANDOFF.md` — the repo root — which is a *generated mirror*. The next `brain-handoff.cjs` tick would have overwritten them. Recovered from commit `5f24833` and folded into the brain by hand on 2026-08-10. The four writers that taught that habit have since been fixed; if you find yourself editing a repo-root `HANDOFF.md`, stop and edit this file instead.
 
 ---
 
@@ -209,14 +247,14 @@ Note both services must be set: chat works from `web`, but workflow-driven AI dr
 **Repo state** — C:\Users\taylo\top-shelf-crm
 
 - branch: `main`
-- last commit: `eaec924 2026-08-09 docs(handoff): point to the canonical business-audit handoff in the vault`
-- uncommitted files: 1 — HANDOFF.md
+- last commit: `5f24833 2026-08-10 chore: sync handoff — AI 401 still blocked, 3 code fixes deployed, token is root cause`
+- uncommitted files: 0
 - commits not yet pushed: 0
 
 **Repo state** — C:\Users\taylo\top-shelf-website
 
 - branch: `main`
-- last commit: `0bc1c66 2026-08-09 chore(demo): pause auto-archive on all 8 prospect sample sites`
+- last commit: `6564563 2026-08-10 docs(handoff): unified Top Shelf handoff (both repos) generated from the brain`
 - uncommitted files: 1 — HANDOFF.md
 - commits not yet pushed: 0
 
