@@ -34,6 +34,12 @@ RedirectMatch 301 ^/.+-review\.html$ /
 Redirect 301 /industry-bars.html /industry-restaurants.html
 Redirect 301 /industry-dental.html /industry-medical-dental.html
 
+# Clean URL for the booking page: /booking serves booking.html.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^booking/?$ booking.html [L]
+</IfModule>
+
 # Keep internal planning docs private: no HTTP access, no directory listing.
 Options -Indexes
 RedirectMatch 404 ^/docs(/|$)

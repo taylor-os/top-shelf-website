@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Call — Top Shelf Business Solutions</title>
+<meta name="description" content="Book a free, no-pressure call with Top Shelf Business Solutions. Pick a day, choose a time, and we'll walk through where your business is losing money and what to do about it.">
+<link rel="canonical" href="https://www.topshelfsolutions.io/booking">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Top Shelf Business Solutions">
+<meta property="og:title" content="Book a Call — Top Shelf Business Solutions">
+<meta property="og:description" content="Pick a day, choose a time, and talk to a real Top Shelf specialist. Free, no pressure.">
+<meta property="og:url" content="https://www.topshelfsolutions.io/booking">
+<meta property="og:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a Call — Top Shelf Business Solutions">
+<meta name="twitter:description" content="Pick a day, choose a time, and talk to a real Top Shelf specialist. Free, no pressure.">
+<meta name="twitter:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
+<link rel="icon" href="assets/logo-mark.png?v=20260804b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260804b">
+<style>
+/* ── Booking widget — scoped; uses the site's tokens so it reads as native ── */
+.bk-card{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:1.9rem;position:relative;overflow:hidden}
+.bk-card::before{content:"";position:absolute;inset-inline:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-glow),transparent)}
+.bk-cal-name{font-family:var(--serif);font-size:1.5rem;color:var(--ink);line-height:1.15}
+.bk-cal-meta{font-size:.82rem;color:var(--ink-3);margin-top:.15rem}
+.bk-divider{height:1px;background:var(--hairline);margin:1.3rem 0}
+.bk-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.bk-month{font-family:var(--sans);font-size:.9rem;font-weight:500;color:var(--ink);letter-spacing:.02em}
+.bk-nav-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid var(--hairline);border-radius:var(--r);background:transparent;color:var(--ink-2);cursor:pointer;transition:border-color .2s,color .2s}
+.bk-nav-btn:hover:not(:disabled){border-color:var(--gold);color:var(--ink)}
+.bk-nav-btn:disabled{opacity:.25;cursor:default}
+.bk-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+.bk-dow span{text-align:center;font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-4);padding:.3rem 0}
+.bk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.bk-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:.9rem;border-radius:var(--r);border:1px solid transparent}
+.bk-day.is-open{color:var(--ink);border-color:var(--hairline-strong);background:rgba(201,168,106,.06);cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.bk-day.is-open:hover{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.bk-day.is-closed{color:var(--ink-4);opacity:.5}
+.bk-hint{text-align:center;font-size:.76rem;color:var(--ink-4);margin-top:1rem;letter-spacing:.02em}
+.bk-back{display:inline-flex;align-items:center;gap:.4rem;background:transparent;border:0;color:var(--ink-3);font-family:var(--sans);font-size:.8rem;cursor:pointer;padding:0}
+.bk-back:hover{color:var(--gold-bright)}
+.bk-times{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;max-height:19rem;overflow-y:auto;padding-right:2px}
+@media(min-width:480px){.bk-times{grid-template-columns:repeat(4,1fr)}}
+.bk-time{padding:.6rem .2rem;border:1px solid var(--hairline);border-radius:var(--r);background:transparent;color:var(--ink);font-family:var(--sans);font-size:.86rem;cursor:pointer;transition:border-color .18s,background .18s}
+.bk-time:hover{border-color:var(--gold);background:rgba(201,168,106,.08)}
+.bk-selected{display:flex;align-items:center;justify-content:space-between;background:var(--surface-2);border:1px solid var(--hairline);border-radius:var(--r);padding:.6rem .85rem;font-size:.86rem;color:var(--ink);margin-bottom:.9rem}
+.bk-change{background:transparent;border:0;color:var(--ink-3);font-size:.76rem;cursor:pointer}
+.bk-change:hover{color:var(--gold-bright)}
+.bk-field{margin-bottom:.7rem}
+.bk-field input{width:100%;background:var(--ground);border:1px solid var(--hairline);border-radius:var(--r);padding:.7rem .85rem;color:var(--ink);font-family:var(--sans);font-size:.9rem}
+.bk-field input:focus{outline:none;border-color:var(--gold)}
+.bk-field input::placeholder{color:var(--ink-4)}
+.bk-msg{min-height:1.1rem;font-size:.82rem;margin:.4rem 0 0;line-height:1.5}
+.bk-msg.err{color:#E5A3A3}
+.bk-state{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.7rem;padding:2.2rem 1rem}
+.bk-state svg{color:var(--gold)}
+.bk-state h3{font-family:var(--serif);font-size:1.6rem;color:var(--ink)}
+.bk-state p{font-size:.9rem;color:var(--ink-3);max-width:20rem;line-height:1.6}
+.bk-spin{width:26px;height:26px;border:2px solid var(--hairline);border-top-color:var(--gold);border-radius:50%;animation:bk-rot .7s linear infinite}
+@keyframes bk-rot{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
+
+<div id="page">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo-full.png?v=20260804b" alt="Top Shelf Business Solutions"></a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <a href="#" class="nav-link">Industries <span class="nav-arrow">&#9662;</span></a>
+        <div class="nav-dropdown">
+          <a href="industry-home-services.html">Home Services</a>
+          <a href="industry-restaurants.html">Restaurants &amp; Bars</a>
+          <a href="industry-medical-dental.html">Medical &amp; Dental</a>
+          <a href="industry-legal.html">Law Firms</a>
+          <a href="industry-retail.html">Retail &amp; Local</a>
+          <a href="industry-auto.html">Auto</a>
+          <a href="industry-salon-spa-fitness.html">Salon, Spa &amp; Fitness</a>
+          <a href="industry-custom.html">Your Business</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Solutions <span class="nav-arrow">&#9662;</span></a>
+        <div class="nav-dropdown">
+          <a href="solution-websites-seo.html">Websites &amp; SEO</a>
+          <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
+          <a href="solution-crm.html">CRM &amp; Follow-Up</a>
+          <a href="solution-reviews.html">Reviews &amp; Reputation</a>
+          <a href="solution-marketing.html">Marketing &amp; Social</a>
+          <a href="solution-booking.html">Online Booking</a>
+          <a href="solution-payments.html">Payments &amp; Financing</a>
+          <a href="solution-automation.html">AI &amp; Automation</a>
+          <a href="solution-memberships.html">Memberships &amp; Loyalty</a>
+          <a href="solution-pos.html">POS &amp; Inventory</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="why-us.html" class="nav-link">Why Us</a>
+    </div>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-gold btn-sm">Get Free Audit</a>
+      <a href="#" class="nav-link nav-menu-btn" aria-label="Menu">Menu</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ PAGE HERO ============================ -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="page-hero-icon reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="1.8"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2.5" x2="8" y2="6.5"/><line x1="16" y1="2.5" x2="16" y2="6.5"/></svg>
+    </span>
+    <span class="eyebrow page-hero-eyebrow reveal">Free &middot; No Obligation &middot; No Pressure</span>
+    <h1 class="display display-lg reveal">Book a Call with <em>Top&nbsp;Shelf</em></h1>
+    <p class="page-hero-sub reveal">Pick a day, choose a time, and talk to a real Top Shelf specialist &mdash; never a call center. We&rsquo;ll walk through where your business is losing money and what fixing it is worth, whether you work with us or not.</p>
+  </div>
+</section>
+
+<!-- ============================ BOOKING + WHAT TO EXPECT ============================ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="two-col">
+
+      <!-- BOOKING WIDGET -->
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem;">Choose Your Time</span>
+        <p style="color:var(--ink-3);font-size:.9rem;margin-bottom:2rem;">Takes about a minute. No credit card, no commitment.</p>
+        <div class="bk-card">
+          <div id="bk-widget">
+            <div class="bk-state"><div class="bk-spin" role="status" aria-label="Loading available times"></div><p>Loading available times&hellip;</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT TO EXPECT -->
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:1.4rem;">What to Expect</span>
+        <h2 class="display display-lg" style="margin-bottom:2.4rem;">A Real Conversation, <em>Not a Pitch</em></h2>
+        <div class="feature-list">
+          <div class="feature-row">
+            <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="1.8"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2.5" x2="8" y2="6.5"/><line x1="16" y1="2.5" x2="16" y2="6.5"/></svg></span>
+            <div>
+              <p class="feature-row-title">Pick a Time That Works</p>
+              <p class="feature-row-body">Choose any open slot on the calendar. Add your name and how to reach you, and you&rsquo;re booked &mdash; no back-and-forth.</p>
+              <span class="feature-row-result">Takes about a minute</span>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11a1 1 0 0 1-1 1H8l-4 3.5Z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="13.5" x2="13" y2="13.5"/></svg></span>
+            <div>
+              <p class="feature-row-title">We Talk Through Your Numbers</p>
+              <p class="feature-row-body">Your calls, reviews, Google ranking, follow-up &mdash; we show you where the gap is and what it&rsquo;s costing you, in plain English.</p>
+              <span class="feature-row-result">Around 15&ndash;20 minutes</span>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div>
+              <p class="feature-row-title">You Decide, No Pressure</p>
+              <p class="feature-row-body">You leave with real numbers and a clear next step. Work with us or don&rsquo;t &mdash; the plan is yours to keep either way.</p>
+              <span class="feature-row-result">Zero obligation</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2.6rem;background:rgba(201,168,106,.05);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:1.8rem 2rem;">
+          <p style="font-size:.92rem;color:var(--ink-2);line-height:1.75;font-weight:300;"><span style="font-family:var(--sans);font-weight:500;color:var(--gold-bright);letter-spacing:.02em;">Prefer to talk now?</span> Call or text us at <a href="tel:+14698333033" style="color:var(--gold-bright);">(469)&nbsp;833-3033</a> or email <a href="mailto:contact@topshelfsolutions.io" style="color:var(--gold-bright);">contact@topshelfsolutions.io</a>. Every call is handled by a real Top Shelf specialist.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SHORT FAQ -->
+    <div class="reveal" style="max-width:760px;margin:5rem auto 0;">
+      <span class="eyebrow" style="margin-bottom:1.4rem;text-align:center;display:block;">Good to Know</span>
+      <div class="bk-faq">
+        <details class="faq-item"><summary>How long is the call?</summary><p>Usually 15 to 20 minutes. Long enough to show you something useful, short enough to respect your day.</p></details>
+        <details class="faq-item"><summary>Is it really free?</summary><p>Yes. No credit card, no commitment, no obligation to buy anything. You keep the numbers we find whether you hire us or not.</p></details>
+        <details class="faq-item"><summary>What do I need to have ready?</summary><p>Nothing. Just your name and a way to reach you. We do the digging before we talk.</p></details>
+        <details class="faq-item"><summary>Can I reschedule?</summary><p>Of course. Reply to your confirmation or call or text <a href="tel:+14698333033">(469) 833-3033</a> and we&rsquo;ll move it to a better time.</p></details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="assets/logo-full.png?v=20260804b" alt="Top Shelf Business Solutions"></a>
+        <p>One-stop digital modernization for local businesses. Your customers are always yours. Plain-English results.</p>
+        <p class="footer-contact">
+          <a href="tel:+14698333033">(469) 833-3033</a>
+          <a href="mailto:contact@topshelfsolutions.io">contact@topshelfsolutions.io</a>
+          <a href="https://www.topshelfsolutions.io">www.topshelfsolutions.io</a>
+        </p>
+      </div>
+      <div>
+        <p class="footer-col-title">Industries</p>
+        <div class="footer-links">
+          <a href="industry-home-services.html">Home Services</a>
+          <a href="industry-restaurants.html">Restaurants &amp; Bars</a>
+          <a href="industry-medical-dental.html">Medical &amp; Dental</a>
+          <a href="industry-legal.html">Law Firms</a>
+          <a href="industry-retail.html">Retail &amp; Local</a>
+          <a href="industry-auto.html">Auto</a>
+          <a href="industry-salon-spa-fitness.html">Salon, Spa &amp; Fitness</a>
+          <a href="industry-custom.html">Your Business</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Solutions</p>
+        <div class="footer-links">
+          <a href="solution-websites-seo.html">Websites &amp; SEO</a>
+          <a href="solution-ai-phone.html">AI Phone &amp; Chat</a>
+          <a href="solution-crm.html">CRM &amp; Follow-Up</a>
+          <a href="solution-reviews.html">Reviews &amp; Reputation</a>
+          <a href="solution-marketing.html">Marketing &amp; Social</a>
+          <a href="solution-booking.html">Online Booking</a>
+          <a href="solution-payments.html">Payments &amp; Financing</a>
+          <a href="solution-automation.html">AI &amp; Automation</a>
+          <a href="solution-memberships.html">Memberships &amp; Loyalty</a>
+          <a href="solution-pos.html">POS &amp; Inventory</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <div class="footer-links">
+          <a href="pricing.html">Pricing</a>
+          <a href="why-us.html">Why Top Shelf</a>
+          <a href="contact.html">Free Audit</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Top Shelf Business Solutions. All rights reserved.</p>
+      <span class="footer-tagline">We Solve. You Grow.</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#page -->
+
+<script>
+/* Booking widget — talks to the Top Shelf CRM booking API.
+   Local dev (served by the CRM on localhost) uses the same origin; the live
+   site uses the production CRM (CORS for the site lives in the CRM's cors.php).
+   Availability is grouped by day, each with a YYYY-MM-DD `key` in the calendar's
+   timezone, so the month grid is built from server keys — never from browser-
+   timezone parsing that could shift a day. The visitor is only ever told they're
+   booked when the server actually confirms it. */
+(function () {
+  var CRM = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? location.origin
+    : 'https://top-shelf-production.up.railway.app';
+
+  var HELP = 'Please call or text <a href="tel:+14698333033" style="color:var(--gold-bright)">(469)&nbsp;833-3033</a> and we&rsquo;ll get you booked.';
+  var DOW = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+  var el = document.getElementById('bk-widget');
+
+  var cal = null, days = [], byKey = {}, view = null, selectedKey = null, slot = null;
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+  function monthIdx(k) { var p = k.split('-'); return (+p[0]) * 12 + (+p[1] - 1); }
+
+  function stateHTML(icon, title, body) {
+    return '<div class="bk-state">' + icon + '<h3>' + title + '</h3><p>' + body + '</p></div>';
+  }
+
+  function load() {
+    fetch(CRM + '/api/booking/slots', { headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok || !d.days || !d.days.length) {
+          el.innerHTML = stateHTML('', 'No open times right now', 'We&rsquo;re booked up at the moment. ' + HELP);
+          return;
+        }
+        cal = d.calendar; days = d.days;
+        byKey = {}; days.forEach(function (x) { byKey[x.key] = x; });
+        var p = days[0].key.split('-'); view = { y: +p[0], m: +p[1] };
+        renderCalendar();
+      })
+      .catch(function () {
+        el.innerHTML = stateHTML('', 'We couldn&rsquo;t load the calendar', 'Something went wrong on our end. ' + HELP);
+      });
+  }
+
+  function header() {
+    return '<div class="bk-cal-name">' + esc(cal.name) + '</div>' +
+           '<div class="bk-cal-meta">' + cal.duration_minutes + '-minute call &middot; times in ' + esc(cal.timezone) + '</div>' +
+           '<div class="bk-divider"></div>';
+  }
+
+  function renderCalendar() {
+    var first = monthIdx(days[0].key), last = monthIdx(days[days.length - 1].key);
+    var cur = view.y * 12 + (view.m - 1);
+    var canPrev = cur > first, canNext = cur < last;
+    var label = new Date(view.y, view.m - 1, 1).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+    var daysIn = new Date(view.y, view.m, 0).getDate();
+    var lead = new Date(view.y, view.m - 1, 1).getDay();
+
+    var cells = '';
+    for (var i = 0; i < lead; i++) cells += '<div></div>';
+    for (var dd = 1; dd <= daysIn; dd++) {
+      var key = view.y + '-' + pad(view.m) + '-' + pad(dd);
+      cells += byKey[key]
+        ? '<div class="bk-day is-open" role="button" tabindex="0" data-day="' + key + '">' + dd + '</div>'
+        : '<div class="bk-day is-closed">' + dd + '</div>';
+    }
+
+    el.innerHTML = header() +
+      '<div class="bk-head">' +
+        '<button class="bk-nav-btn" data-nav="-1" ' + (canPrev ? '' : 'disabled') + ' aria-label="Previous month"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>' +
+        '<div class="bk-month">' + label + '</div>' +
+        '<button class="bk-nav-btn" data-nav="1" ' + (canNext ? '' : 'disabled') + ' aria-label="Next month"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>' +
+      '</div>' +
+      '<div class="bk-dow">' + DOW.map(function (d) { return '<span>' + d + '</span>'; }).join('') + '</div>' +
+      '<div class="bk-grid">' + cells + '</div>' +
+      '<p class="bk-hint">Highlighted dates have openings.</p>';
+  }
+
+  function renderTimes() {
+    var day = byKey[selectedKey];
+    var times = day.slots.map(function (s) {
+      return '<button class="bk-time" data-time="' + esc(s.iso) + '" data-label="' + esc(s.label) + '">' + esc(s.label) + '</button>';
+    }).join('');
+    el.innerHTML = header() +
+      '<div class="bk-head" style="margin-bottom:1.1rem">' +
+        '<div><div style="font-family:var(--sans);font-weight:500;color:var(--ink);font-size:.92rem">' + esc(day.date) + '</div>' +
+        '<div style="font-size:.78rem;color:var(--ink-3)">Choose a time</div></div>' +
+        '<button class="bk-back" data-back="cal"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</button>' +
+      '</div>' +
+      '<div class="bk-times">' + times + '</div>';
+  }
+
+  function renderForm() {
+    el.innerHTML = header() +
+      '<div class="bk-selected"><span>' + esc(byKey[selectedKey].date) + ' &middot; ' + esc(slot.label) + '</span>' +
+        '<button class="bk-change" data-back="times">change</button></div>' +
+      '<form id="bk-form" autocomplete="on">' +
+        '<div class="bk-field"><input name="first_name" placeholder="Your name" required></div>' +
+        '<div class="bk-field"><input name="email" type="email" placeholder="Email"></div>' +
+        '<div class="bk-field"><input name="phone" type="tel" placeholder="Phone"></div>' +
+        '<button type="submit" class="btn btn-gold w-full" style="margin-top:.4rem">Confirm booking <span class="arr">&rarr;</span></button>' +
+        '<p class="bk-msg" id="bk-msg" role="alert"></p>' +
+        '<p style="font-size:.74rem;color:var(--ink-4);text-align:center;margin-top:.2rem">We only use this to confirm your call. No spam.</p>' +
+      '</form>';
+  }
+
+  function submit(form) {
+    var msg = document.getElementById('bk-msg');
+    var btn = form.querySelector('button[type="submit"]');
+    var email = form.email.value.trim(), phone = form.phone.value.trim();
+    msg.className = 'bk-msg';
+    if (!email && !phone) { msg.className = 'bk-msg err'; msg.textContent = 'Add an email or phone so we can confirm.'; return; }
+    btn.disabled = true; var label = btn.innerHTML; btn.textContent = 'Booking…';
+
+    fetch(CRM + '/api/booking', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ first_name: form.first_name.value.trim(), email: email, phone: phone, slot: slot.iso })
+    })
+      .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+      .then(function (d) {
+        if (d && d.ok) {
+          el.innerHTML = stateHTML(
+            '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5 11 15.5 16 9"/></svg>',
+            'You&rsquo;re booked',
+            (d.when ? '<strong style="color:var(--ink-2)">' + esc(d.when) + '</strong><br>' : '') + 'We&rsquo;ll be in touch to confirm. You can close this page.'
+          );
+          return;
+        }
+        btn.disabled = false; btn.innerHTML = label;
+        msg.className = 'bk-msg err'; msg.innerHTML = 'That time didn&rsquo;t go through. ' + HELP;
+      })
+      .catch(function () {
+        btn.disabled = false; btn.innerHTML = label;
+        msg.className = 'bk-msg err'; msg.innerHTML = 'We couldn&rsquo;t reach our server. ' + HELP;
+      });
+  }
+
+  // Event delegation for the whole widget.
+  el.addEventListener('click', function (e) {
+    var day = e.target.closest('[data-day]');
+    if (day) { selectedKey = day.getAttribute('data-day'); renderTimes(); return; }
+    var t = e.target.closest('[data-time]');
+    if (t) { slot = { iso: t.getAttribute('data-time'), label: t.getAttribute('data-label') }; renderForm(); return; }
+    var nav = e.target.closest('[data-nav]');
+    if (nav && !nav.disabled) {
+      var idx = view.y * 12 + (view.m - 1) + (+nav.getAttribute('data-nav'));
+      view = { y: Math.floor(idx / 12), m: (idx % 12) + 1 }; renderCalendar(); return;
+    }
+    var back = e.target.closest('[data-back]');
+    if (back) { if (back.getAttribute('data-back') === 'cal') { selectedKey = null; renderCalendar(); } else { slot = null; renderTimes(); } }
+  });
+  el.addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('[data-day]')) { e.preventDefault(); e.target.click(); }
+  });
+  el.addEventListener('submit', function (e) { e.preventDefault(); submit(e.target); });
+
+  load();
+})();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js?v=20260804b"></script>
+</body>
+</html>
