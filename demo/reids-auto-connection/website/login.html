@@ -12,6 +12,15 @@
 <link rel="stylesheet" href="assets/css/styles.css?v=6" />
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <style>
+  /* Staff login keeps the original dark theme — scope the dark palette here so
+     the customer-site light theme in styles.css does not bleed into this page. */
+  body {
+    --bg:#070A14; --bg-2:#0A0E1C;
+    --surface:rgba(255,255,255,0.05); --surface-2:rgba(255,255,255,0.08);
+    --hairline:rgba(255,255,255,0.10); --hairline-soft:rgba(255,255,255,0.06);
+    --text:#EAEEF7; --text-soft:#AEB6CC; --text-dim:#7A839C;
+    --gold-deep:#FFC15E; background:var(--bg); color:var(--text);
+  }
   .auth-wrap { min-height: 100vh; display: grid; place-items: center; padding: 24px; position: relative; z-index: 2; }
   .auth-card { width: min(420px, 100%); background: rgba(10,14,28,0.72); backdrop-filter: blur(20px) saturate(150%); border: 1px solid var(--hairline); border-radius: var(--radius-lg); box-shadow: 0 50px 100px -30px rgba(0,0,0,0.9); padding: clamp(28px, 5vw, 44px); }
   .auth-logo { display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 26px; }

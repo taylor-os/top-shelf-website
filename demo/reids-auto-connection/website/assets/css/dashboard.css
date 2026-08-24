@@ -2,7 +2,16 @@
    Reids Auto Connection — Dealer Dashboard (Aurora admin shell)
    Loads AFTER styles.css. Client-side demo CRM.
    ========================================================================= */
-body.dash-body { background: var(--bg); }
+/* Staff dashboard keeps the original dark theme — scope the dark palette here
+   so the customer-site light theme in styles.css does not bleed into this tool. */
+body.dash-body {
+  --bg:#070A14; --bg-2:#0A0E1C;
+  --surface:rgba(255,255,255,0.05); --surface-2:rgba(255,255,255,0.08);
+  --hairline:rgba(255,255,255,0.10); --hairline-soft:rgba(255,255,255,0.06);
+  --text:#EAEEF7; --text-soft:#AEB6CC; --text-dim:#7A839C;
+  --gold-deep:#FFC15E; --tan-line:rgba(255,255,255,0.10);
+  background: var(--bg); color: var(--text);
+}
 .dash { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; position: relative; z-index: 2; }
 
 /* ---- Sidebar ---- */
