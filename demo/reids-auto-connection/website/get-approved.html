@@ -11,6 +11,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/styles.css?v=6" />
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<style>
+  .co-toggle { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:15px 18px; border:1.5px dashed var(--hairline); border-radius:var(--radius); background:var(--surface); color:var(--text); font:inherit; font-weight:600; font-size:15px; cursor:pointer; transition:border-color .2s var(--ease-out), background .2s var(--ease-out); }
+  .co-toggle:hover { border-color:var(--gold); background:var(--surface-2); }
+  .co-toggle.is-open { display:none; }
+  .co-plus { width:24px; height:24px; border-radius:7px; display:grid; place-items:center; flex:none; background:linear-gradient(160deg,var(--gold-soft),var(--gold)); color:#1a1200; font-size:18px; line-height:1; font-weight:700; }
+  .co-fields { margin-top:4px; padding:20px; border:1px solid var(--hairline); border-radius:var(--radius); background:var(--surface); }
+  .co-fields[hidden] { display:none; }
+  .co-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  .co-badge { font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--gold-deep); }
+  .co-remove { background:none; border:0; color:var(--text-dim); font:inherit; font-size:13px; cursor:pointer; text-decoration:underline; }
+  .co-remove:hover { color:var(--gold-deep); }
+  .co-same { display:flex; gap:10px; align-items:center; font-size:14px; color:var(--text-soft); margin:14px 0 6px; cursor:pointer; }
+  .co-same input { width:17px; height:17px; accent-color:var(--gold); flex:none; }
+  .co-addr[hidden] { display:none; }
+</style>
 </head>
 <body>
 
@@ -43,7 +58,7 @@
       <div class="sec-head center reveal in" style="margin-bottom:0;">
         <span class="eyebrow" style="justify-content:center;">The Fresh Start Application · One step</span>
         <h2 style="font-size:clamp(32px,5.2vw,52px);">Fill this out. <span class="gold">Reid does the rest.</span></h2>
-        <p class="lede" style="margin:16px auto 0; max-width:56ch;">Bad credit, no credit, repossession, or bankruptcy — Reid has gotten thousands of people just like you approved and into a car, often with <strong style="color:var(--gold-deep)">$0 down</strong>. This is the only step. It takes about three minutes and it won't obligate you to anything.</p>
+        <p class="lede" style="margin:16px auto 0; max-width:56ch;">Bad credit, no credit, repossession, or bankruptcy: Reid has given thousands of people just like you a real chance and the keys to a reliable car, often with <strong style="color:var(--gold-deep)">$0 down</strong>. This is the only step. It takes about three minutes, and it won't obligate you to anything.</p>
       </div>
       <div class="app-why reveal in">
         <div class="app-why__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg><span><b>We say yes when banks say no</b><span>Bankruptcy, bad credit, first-time — it's who we approve every day.</span></span></div>
@@ -134,12 +149,39 @@
           </div>
 
           <div class="appsec">
-            <h3>Other income &amp; co-applicant</h3>
+            <h3>Other income</h3>
             <div class="form-grid">
               <div class="field"><label for="oinc">Sources of other income <span class="subhint">(optional)</span></label><input id="oinc" name="other_income" placeholder="Benefits, side work, support, etc." /></div>
               <div class="field"><label for="oincamt">Amount per month</label><input id="oincamt" name="other_income_amount" inputmode="numeric" placeholder="$" /></div>
-              <div class="field"><label for="joint">Do you have a joint applicant?</label><select id="joint" name="joint"><option value="">Choose</option><option>No</option><option>Yes</option></select></div>
               <div class="field"><label for="best">Best time to contact you?</label><select id="best" name="best_time"><option value="">Choose</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select></div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Add a co-applicant <span style="font-weight:400;font-size:14px;color:var(--text-dim);">optional</span></h3>
+            <p class="appsec-hint">A co-applicant with steady income (a spouse, parent, or family member) can strengthen your approval and lower your payment. Add one here and we'll review you together.</p>
+            <button type="button" class="co-toggle" id="coToggle" aria-expanded="false" aria-controls="coFields"><span class="co-plus" aria-hidden="true">+</span><span>Add a co-applicant</span></button>
+            <div class="co-fields" id="coFields" hidden>
+              <div class="co-head"><span class="co-badge">Co-applicant</span><button type="button" class="co-remove" id="coRemove">Remove</button></div>
+              <div class="form-grid">
+                <div class="field"><label for="co_first">First name</label><input id="co_first" name="co_first" autocomplete="off" /></div>
+                <div class="field"><label for="co_middle">Middle name</label><input id="co_middle" name="co_middle" autocomplete="off" /></div>
+                <div class="field"><label for="co_last">Last name</label><input id="co_last" name="co_last" autocomplete="off" /></div>
+                <div class="field"><label for="co_rel">Relationship to you</label><select id="co_rel" name="co_relationship"><option value="">Choose</option><option>Spouse</option><option>Parent</option><option>Sibling</option><option>Other family</option><option>Other</option></select></div>
+                <div class="field"><label for="co_dob">Date of birth</label><input id="co_dob" name="co_dob" type="date" /></div>
+                <div class="field"><label for="co_ssn">Social Security number</label><input id="co_ssn" name="co_ssn" inputmode="numeric" placeholder="•••-••-••••" autocomplete="off" /></div>
+                <div class="field"><label for="co_dl">Driver's license number</label><input id="co_dl" name="co_dl" autocomplete="off" /></div>
+                <div class="field"><label for="co_email">Email</label><input id="co_email" name="co_email" type="email" autocomplete="off" /></div>
+                <div class="field"><label for="co_phone">Phone</label><input id="co_phone" name="co_phone" type="tel" autocomplete="off" /></div>
+              </div>
+              <label class="co-same"><input type="checkbox" id="coSameAddr" checked /> <span>Co-applicant lives at the same address as me</span></label>
+              <div class="field co-addr" id="coAddr" hidden><label for="co_address">Co-applicant street address, city, ZIP</label><input id="co_address" name="co_address" autocomplete="off" /></div>
+              <div class="form-grid" style="margin-top:4px;">
+                <div class="field"><label for="co_emp">Employer</label><input id="co_emp" name="co_employer" /></div>
+                <div class="field"><label for="co_empphone">Employer phone</label><input id="co_empphone" name="co_employer_phone" type="tel" /></div>
+                <div class="field"><label for="co_title">Position or title</label><input id="co_title" name="co_title" /></div>
+                <div class="field"><label for="co_salary">Gross monthly income</label><input id="co_salary" name="co_salary" inputmode="numeric" placeholder="$" /></div>
+              </div>
             </div>
           </div>
 
@@ -203,6 +245,24 @@
     var form = document.getElementById('appForm');
     var bk = document.getElementById('bk'), bk13 = document.getElementById('bk13wrap');
     bk.addEventListener('change', function () { bk13.style.display = bk.value === 'Chapter 13' ? '' : 'none'; });
+
+    // Co-applicant: intuitive add / remove of a second applicant on the same page
+    var coToggle = document.getElementById('coToggle'), coFields = document.getElementById('coFields');
+    var coRemove = document.getElementById('coRemove'), coSame = document.getElementById('coSameAddr'), coAddr = document.getElementById('coAddr');
+    if (coToggle) {
+      coToggle.addEventListener('click', function () {
+        coFields.hidden = false; coToggle.classList.add('is-open'); coToggle.setAttribute('aria-expanded', 'true');
+        coFields.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+      coRemove.addEventListener('click', function () {
+        coFields.hidden = true; coToggle.classList.remove('is-open'); coToggle.setAttribute('aria-expanded', 'false');
+        coFields.querySelectorAll('input, select').forEach(function (el) {
+          if (el.type === 'checkbox') el.checked = (el.id === 'coSameAddr'); else el.value = '';
+        });
+        coAddr.hidden = true;
+      });
+      coSame.addEventListener('change', function () { coAddr.hidden = coSame.checked; });
+    }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();

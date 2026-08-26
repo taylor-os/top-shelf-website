@@ -40,7 +40,7 @@
      ======================================================================= */
   var PHONE = "(972) 436-1600", PHONE_TEL = "9724361600";
   var KB = [
-    { k: ["bankrupt","chapter 7","chapter 13","ch 7","ch 13","bk"], a: "Yes — helping people in Chapter 7 and Chapter 13 bankruptcy is our specialty. Our Fresh Start Program is built for it, and we can often get you approved even during an active bankruptcy. Want me to have someone reach out to check your options?" },
+    { k: ["bankrupt","chapter 7","chapter 13","ch 7","ch 13","bk"], a: "Yes — helping people in Chapter 7 and Chapter 13 bankruptcy is our specialty. Our Fresh Start Vehicle Program is built for it, and we can often get you approved even during an active bankruptcy. Want me to have someone reach out to check your options?" },
     { k: ["bad credit","no credit","poor credit","low credit","credit score","repo","repossession","first time","first-time"], a: "Absolutely. We work with bad credit, no credit, first-time buyers, and past repossessions every day — it's who we're here for. There's no judgment, and approvals are often within an hour. Should I get someone to call you about approval?" },
     { k: ["down","down payment","money down","0 down","$0"], a: "Most of our loans are $0 down (that excludes tax, title & license). We'll always try to get you into a vehicle with the lowest out-of-pocket possible." },
     { k: ["approve","approval","qualify","pre-approv","prequal","get approved","financing","finance","loan"], a: "Getting pre-approved is quick and won't obligate you to anything. Most folks hear back within about an hour. I can start it for you right now — want to leave your name and number?" },
