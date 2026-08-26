@@ -198,6 +198,26 @@ section.block { padding: clamp(64px, 9vw, 108px) 0; }
 .section-warm .step { background: linear-gradient(180deg, var(--tan-2), rgba(255,255,255,0.4)); }
 .section-warm .help-ico { background: linear-gradient(160deg, rgba(245,165,36,0.18), rgba(245,165,36,0.06)); border-color: rgba(245,165,36,0.3); color: var(--gold-deep); }
 
+/* ============ BLUE FEATURE SECTIONS (break up the white) ============ */
+/* Scopes the deep-navy palette so headings, cards, inputs and gold accents all
+   render correctly light-on-blue — same technique the staff dashboard uses. */
+.section-blue {
+  --bg:#0E1B3A; --bg-2:#0b1730;
+  --surface:rgba(255,255,255,0.055); --surface-2:rgba(255,255,255,0.09);
+  --hairline:rgba(255,255,255,0.13); --hairline-soft:rgba(255,255,255,0.075);
+  --text:#EDF1FA; --text-soft:#B7C2D8; --text-dim:#8b97b0;
+  --tan:#12244d; --tan-2:rgba(255,255,255,0.05); --tan-edge:rgba(255,255,255,0.14); --tan-line:rgba(255,255,255,0.12);
+  --ink:#EDF1FA; --ink-soft:#B7C2D8; --ink-dim:#8b97b0;
+  --gold-deep:#FFC15E;
+  position:relative; z-index:2; color:var(--text);
+  background:radial-gradient(120% 90% at 82% -10%, #172c54, transparent 58%), #0E1B3A;
+}
+.section-blue .eyebrow { color:var(--gold-soft); }
+.section-blue .eyebrow::before { background:linear-gradient(90deg, var(--gold-soft), transparent); }
+.section-blue h2, .section-blue h3, .section-blue .sec-head h2 { color:var(--text); }
+.section-blue .sec-head p { color:var(--text-soft); }
+.section-blue .story-band { background:rgba(255,255,255,0.045); border-color:rgba(255,255,255,0.12); }
+
 /* ============ WHO WE HELP ============ */
 .help-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .help-card { position: relative; padding: 30px 26px 28px; background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; transition: transform 260ms var(--ease-out), border-color 260ms var(--ease-out), background 260ms; }
