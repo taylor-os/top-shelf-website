@@ -57,7 +57,7 @@
     <div class="wrap" style="max-width:840px;">
       <div class="sec-head center reveal in" style="margin-bottom:0;">
         <span class="eyebrow" style="justify-content:center;">The Fresh Start Application · One step</span>
-        <h2 style="font-size:clamp(32px,5.2vw,52px);">Fill this out. <span class="gold">Reid does the rest.</span></h2>
+        <h1 style="font-size:clamp(32px,5.2vw,52px);">Fill this out. <span class="gold">Reid does the rest.</span></h1>
         <p class="lede" style="margin:16px auto 0; max-width:56ch;">Bad credit, no credit, repossession, or bankruptcy: Reid has given thousands of people just like you a real chance and the keys to a reliable car, often with <strong style="color:var(--gold-deep)">$0 down</strong>. This is the only step. It takes about three minutes, and it won't obligate you to anything.</p>
       </div>
       <div class="app-why reveal in">
@@ -196,7 +196,7 @@
 
           <label class="consent"><input type="checkbox" id="consent" required /><span>I certify the information above is accurate and I authorize Reids Auto Connection to obtain a credit report and verify the information to process my application. I understand this does not obligate me to purchase.</span></label>
 
-          <p class="err" id="err" style="color:#C0261F;font-size:13.5px;display:none;margin:0 0 12px;">Please complete the required fields and agree to the authorization above.</p>
+          <p class="err" id="err" role="alert" style="color:#C0261F;font-size:13.5px;display:none;margin:0 0 12px;">Please complete the required fields and agree to the authorization above.</p>
 
           <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">Submit my application &rarr;</button>
           <div class="secure-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Your information is encrypted and protected by our privacy policy &amp; federal law.</div>
@@ -264,17 +264,34 @@
       coSame.addEventListener('change', function () { coAddr.hidden = coSame.checked; });
     }
 
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Clear a field's error state the moment the user starts fixing it.
+    form.addEventListener('input', function (e) {
+      if (e.target.getAttribute && e.target.getAttribute('aria-invalid') === 'true') {
+        e.target.setAttribute('aria-invalid', 'false');
+      }
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var err = document.getElementById('err');
       var required = form.querySelectorAll('[required]');
-      var ok = true;
+      var firstBad = null, badEmail = false;
       required.forEach(function (el) {
         var valid = el.type === 'checkbox' ? el.checked : !!el.value.trim();
-        el.style.borderColor = valid ? '' : 'rgba(255,138,138,0.6)';
-        if (!valid) ok = false;
+        if (valid && el.id === 'email') { valid = EMAIL_RE.test(el.value.trim()); if (!valid) badEmail = true; }
+        el.setAttribute('aria-invalid', valid ? 'false' : 'true');
+        if (!valid && !firstBad) firstBad = el;
       });
-      if (!ok) { err.style.display = 'block'; return; }
+      if (firstBad) {
+        err.textContent = (badEmail && firstBad.id === 'email')
+          ? 'That email address doesn’t look right — please double-check it so we can reach you.'
+          : 'Please complete the highlighted fields and agree to the authorization above.';
+        err.style.display = 'block';
+        firstBad.focus();
+        firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      err.style.display = 'none';
       // DEMO submit — sensitive info (SSN, DOB) is NOT transmitted or logged in this branded version.
       // On authorized domains the secure Cognito form below takes over and handles real submission.
       var first = document.getElementById('first').value.trim();
