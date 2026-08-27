@@ -25,6 +25,10 @@
   .co-same { display:flex; gap:10px; align-items:center; font-size:14px; color:var(--text-soft); margin:14px 0 6px; cursor:pointer; }
   .co-same input { width:17px; height:17px; accent-color:var(--gold); flex:none; }
   .co-addr[hidden] { display:none; }
+  #coAddr[hidden] { display:none; }
+  .co-sub { font-size:13px; font-weight:700; letter-spacing:.03em; color:var(--gold-deep); margin:20px 0 10px; }
+  .co-sub:first-of-type { margin-top:6px; }
+  .co-sub .co-subnote { font-weight:400; font-size:13px; color:var(--text-dim); }
   /* SSN privacy: show the real digits only while the field is focused; mask them to dots on blur.
      The input keeps its real value, so what the form captures and sends is unaffected. */
   #ssn, #co_ssn { -webkit-text-security: disc; }
@@ -167,6 +171,15 @@
             <button type="button" class="co-toggle" id="coToggle" aria-expanded="false" aria-controls="coFields"><span class="co-plus" aria-hidden="true">+</span><span>Add a co-applicant</span></button>
             <div class="co-fields" id="coFields" hidden>
               <div class="co-head"><span class="co-badge">Co-applicant</span><button type="button" class="co-remove" id="coRemove">Remove</button></div>
+
+              <div class="co-sub">Bankruptcy</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_bk">Which type of bankruptcy do they have?</label>
+                  <select id="co_bk" name="co_bankruptcy"><option value="">None / not applicable</option><option>Chapter 7</option><option>Chapter 13</option><option>Recently discharged</option></select></div>
+                <div class="field" id="co_bk13wrap" style="display:none;"><label for="co_bk13">Chapter 13 monthly plan payment</label><input id="co_bk13" name="co_ch13payment" inputmode="numeric" placeholder="$ per month" /></div>
+              </div>
+
+              <div class="co-sub">Co-applicant information</div>
               <div class="form-grid">
                 <div class="field"><label for="co_first">First name</label><input id="co_first" name="co_first" autocomplete="off" /></div>
                 <div class="field"><label for="co_middle">Middle name</label><input id="co_middle" name="co_middle" autocomplete="off" /></div>
@@ -177,14 +190,54 @@
                 <div class="field"><label for="co_dl">Driver's license number</label><input id="co_dl" name="co_dl" autocomplete="off" /></div>
                 <div class="field"><label for="co_email">Email</label><input id="co_email" name="co_email" type="email" autocomplete="off" /></div>
                 <div class="field"><label for="co_phone">Phone</label><input id="co_phone" name="co_phone" type="tel" autocomplete="off" /></div>
+                <div class="field"><label for="co_state">State</label><input id="co_state" name="co_state" placeholder="State" autocomplete="off" /></div>
               </div>
+
               <label class="co-same"><input type="checkbox" id="coSameAddr" checked /> <span>Co-applicant lives at the same address as me</span></label>
-              <div class="field co-addr" id="coAddr" hidden><label for="co_address">Co-applicant street address, city, ZIP</label><input id="co_address" name="co_address" autocomplete="off" /></div>
-              <div class="form-grid" style="margin-top:4px;">
+              <div id="coAddr" hidden>
+                <div class="co-sub">Co-applicant current address</div>
+                <div class="field"><label for="co_addr">Street address, city, ZIP</label><input id="co_addr" name="co_address" autocomplete="off" /></div>
+                <div class="field-3">
+                  <div class="field"><label for="co_own">Own, rent or live with others</label><select id="co_own" name="co_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
+                  <div class="field"><label for="co_mo">Monthly amount</label><input id="co_mo" name="co_housing_amount" inputmode="numeric" placeholder="$" /></div>
+                  <div class="field"><label>How long?</label><div style="display:flex;gap:8px;"><input name="co_addr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at co-applicant address" /><input name="co_addr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at co-applicant address" /></div></div>
+                </div>
+                <div class="co-sub">Co-applicant previous address <span class="co-subnote">— if less than 3 years at current</span></div>
+                <div class="field"><label for="co_paddr">Previous street address, city, ZIP</label><input id="co_paddr" name="co_prev_address" autocomplete="off" /></div>
+                <div class="field-3">
+                  <div class="field"><label for="co_pown">Own, rent or live with others</label><select id="co_pown" name="co_prev_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
+                  <div class="field"><label for="co_pmo">Monthly amount</label><input id="co_pmo" name="co_prev_housing_amount" inputmode="numeric" placeholder="$" /></div>
+                  <div class="field"><label>How long?</label><div style="display:flex;gap:8px;"><input name="co_paddr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at co-applicant previous address" /><input name="co_paddr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at co-applicant previous address" /></div></div>
+                </div>
+              </div>
+
+              <div class="co-sub">Co-applicant employment</div>
+              <div class="form-grid">
                 <div class="field"><label for="co_emp">Employer</label><input id="co_emp" name="co_employer" /></div>
                 <div class="field"><label for="co_empphone">Employer phone</label><input id="co_empphone" name="co_employer_phone" type="tel" /></div>
                 <div class="field"><label for="co_title">Position or title</label><input id="co_title" name="co_title" /></div>
-                <div class="field"><label for="co_salary">Gross monthly income</label><input id="co_salary" name="co_salary" inputmode="numeric" placeholder="$" /></div>
+                <div class="field"><label for="co_salary">Gross monthly salary</label><input id="co_salary" name="co_salary" inputmode="numeric" placeholder="$" /></div>
+              </div>
+              <div class="field" style="margin-top:2px;"><label>How long at this job?</label><div style="display:flex;gap:8px;max-width:220px;"><input name="co_job_years" inputmode="numeric" placeholder="Years" aria-label="Years at co-applicant job" /><input name="co_job_months" inputmode="numeric" placeholder="Months" aria-label="Months at co-applicant job" /></div></div>
+
+              <div class="co-sub">Co-applicant previous employer <span class="co-subnote">— if less than 3 years at current</span></div>
+              <div class="form-grid">
+                <div class="field"><label for="co_pemp">Previous employer</label><input id="co_pemp" name="co_prev_employer" /></div>
+                <div class="field"><label for="co_pempphone">Previous employer phone</label><input id="co_pempphone" name="co_prev_employer_phone" type="tel" /></div>
+              </div>
+              <div class="field" style="margin-top:2px;"><label>How long?</label><div style="display:flex;gap:8px;max-width:220px;"><input name="co_pjob_years" inputmode="numeric" placeholder="Years" aria-label="Years at co-applicant previous job" /><input name="co_pjob_months" inputmode="numeric" placeholder="Months" aria-label="Months at co-applicant previous job" /></div></div>
+
+              <div class="co-sub">Co-applicant other income</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_oinc">Sources of other income <span class="subhint">(optional)</span></label><input id="co_oinc" name="co_other_income" placeholder="Benefits, side work, support, etc." /></div>
+                <div class="field"><label for="co_oincamt">Amount per month</label><input id="co_oincamt" name="co_other_income_amount" inputmode="numeric" placeholder="$" /></div>
+              </div>
+
+              <div class="co-sub">Co-applicant other information</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_cs">Child support balance</label><input id="co_cs" name="co_child_support" inputmode="numeric" placeholder="$" /></div>
+                <div class="field"><label for="co_tl">Tax lien balance</label><input id="co_tl" name="co_tax_lien" inputmode="numeric" placeholder="$" /></div>
+                <div class="field"><label for="co_sl">Student loan balance</label><input id="co_sl" name="co_student_loan" inputmode="numeric" placeholder="$" /></div>
               </div>
             </div>
           </div>
@@ -248,6 +301,8 @@
     var form = document.getElementById('appForm');
     var bk = document.getElementById('bk'), bk13 = document.getElementById('bk13wrap');
     bk.addEventListener('change', function () { bk13.style.display = bk.value === 'Chapter 13' ? '' : 'none'; });
+    var cobk = document.getElementById('co_bk'), cobk13 = document.getElementById('co_bk13wrap');
+    if (cobk) cobk.addEventListener('change', function () { cobk13.style.display = cobk.value === 'Chapter 13' ? '' : 'none'; });
 
     // Co-applicant: intuitive add / remove of a second applicant on the same page
     var coToggle = document.getElementById('coToggle'), coFields = document.getElementById('coFields');
