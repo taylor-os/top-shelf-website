@@ -25,6 +25,10 @@
   .co-same { display:flex; gap:10px; align-items:center; font-size:14px; color:var(--text-soft); margin:14px 0 6px; cursor:pointer; }
   .co-same input { width:17px; height:17px; accent-color:var(--gold); flex:none; }
   .co-addr[hidden] { display:none; }
+  /* SSN privacy: show the real digits only while the field is focused; mask them to dots on blur.
+     The input keeps its real value, so what the form captures and sends is unaffected. */
+  #ssn, #co_ssn { -webkit-text-security: disc; }
+  #ssn:focus, #co_ssn:focus { -webkit-text-security: none; }
 </style>
 </head>
 <body>
