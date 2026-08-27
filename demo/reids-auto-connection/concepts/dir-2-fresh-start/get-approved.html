@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Approved — Fresh Start Credit Application | Reids Auto Connection</title>
+<meta name="description" content="Fill out the Reids Auto Connection credit application and get approved — even after bankruptcy, with bad credit, or no credit at all. $0 down on most loans. Takes about three minutes. Veteran-owned since 2009, BBB A+." />
+<meta name="theme-color" content="#F4EDE0" />
+<meta property="og:title" content="Get Approved — Reids Auto Connection" />
+<meta property="og:description" content="The Fresh Start credit application. Bad credit, no credit, repossession, or bankruptcy — fill it out, Reid does the rest. $0 down on most loans." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/img/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<script>document.documentElement.classList.add('has-js');</script>
+
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"AutoDealer","name":"Reids Auto Connection",
+  "url":"get-approved.html","telephone":"+1-972-436-1600","priceRange":"$$",
+  "slogan":"A hard chapter isn't the whole story.",
+  "founder":{"@type":"Person","name":"Reid M. Anderson"},"foundingDate":"2009",
+  "areaServed":{"@type":"Country","name":"United States"},"knowsLanguage":["en","es"],
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"}],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"200"} }
+</script>
+
+<style>
+  .appwrap{max-width:860px; margin-inline:auto;}
+  .app-why{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:clamp(1.8rem,3.5vw,2.4rem);}
+  .app-why__item{display:flex; gap:.7rem; align-items:flex-start; background:var(--paper); border:1px solid var(--hair); padding:1.05rem 1.15rem;}
+  .app-why__item svg{width:1.3rem; height:1.3rem; flex:none; color:var(--clay); margin-top:.15rem;}
+  .app-why__item b{display:block; font-family:"Newsreader",serif; font-weight:600; font-size:1rem; color:var(--ink); margin-bottom:.2rem; line-height:1.2;}
+  .app-why__item em{display:block; font-style:normal; font-size:.85rem; color:var(--ink-soft); line-height:1.45;}
+  @media (max-width:640px){ .app-why{grid-template-columns:1fr;} }
+
+  .appcard{background:var(--paper); border:1px solid var(--hair); box-shadow:0 30px 70px -40px rgba(36,26,16,.55); padding:clamp(1.5rem,3.5vw,2.6rem); margin-top:clamp(1.8rem,4vw,2.6rem);}
+  .disclosure{background:var(--paper-2); border:1px solid var(--hair); border-left:2px solid var(--clay); padding:1rem 1.15rem; font-size:.88rem; line-height:1.6; color:var(--ink-soft); margin-bottom:1.9rem;}
+  .disclosure b{color:var(--ink);}
+  .app-title{font-family:"DM Serif Display",serif; font-size:clamp(1.6rem,3.4vw,2.2rem); line-height:1.08; margin:0 0 .4rem;}
+  .app-sub{color:var(--ink-soft); font-size:.98rem; margin:0 0 1.7rem; max-width:56ch;}
+
+  .appsec{border-top:1px solid var(--hair); padding-top:1.7rem; margin-top:1.7rem;}
+  .appsec.first{border-top:0; padding-top:0; margin-top:0;}
+  .appsec > h3{font-family:"DM Serif Display",serif; font-size:1.4rem; line-height:1.1; margin:0 0 .3rem;}
+  .appsec > h3 .lc{font-family:"Newsreader",serif; font-weight:400; font-size:.9rem; color:var(--ink-dim);}
+  .appsec-hint{color:var(--ink-soft); font-size:.97rem; margin:0 0 1.1rem;}
+  .field label .lc{text-transform:none; letter-spacing:0; font-weight:400; color:var(--ink-dim);}
+  .field-3{display:grid; grid-template-columns:repeat(3,1fr); gap:0 1.1rem;}
+  .dur{display:flex; gap:.5rem;}
+  @media (max-width:640px){ .field-3{grid-template-columns:1fr;} }
+
+  /* SSN privacy: masked to dots on blur, revealed only while focused.
+     The input keeps its REAL value — what the form captures is the true SSN,
+     the masking is purely visual. (mask-on-blur, value retained) */
+  #ssn, #co_ssn{ -webkit-text-security:disc; }
+  #ssn:focus, #co_ssn:focus{ -webkit-text-security:none; }
+
+  /* co-applicant */
+  .co-toggle{display:flex; align-items:center; justify-content:center; gap:.7rem; width:100%; padding:1rem 1.1rem; border:1.5px dashed var(--hair); border-radius:2px; background:var(--paper-2); color:var(--ink); font-family:"Space Mono",monospace; font-size:.76rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:border-color .2s, background .2s;}
+  .co-toggle:hover{border-color:var(--clay); background:var(--sand);}
+  .co-toggle.is-open{display:none;}
+  .co-plus{width:24px; height:24px; border-radius:50%; display:grid; place-items:center; flex:none; background:radial-gradient(circle at 40% 30%, var(--ochre), var(--clay)); color:var(--cream); font-size:1.1rem; line-height:1;}
+  .co-fields{margin-top:.5rem; padding:clamp(1.1rem,2.5vw,1.5rem); border:1px solid var(--hair); background:var(--paper-2);}
+  .co-fields[hidden]{display:none;}
+  .co-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;}
+  .co-badge{font-family:"Space Mono",monospace; font-size:.66rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--clay);}
+  .co-remove{background:none; border:0; color:var(--ink-dim); font-family:"Space Mono",monospace; font-size:.72rem; cursor:pointer; text-decoration:underline;}
+  .co-remove:hover{color:var(--clay);}
+  .co-same{display:flex; gap:.6rem; align-items:center; font-size:.96rem; color:var(--ink-soft); margin:1rem 0 .4rem; cursor:pointer;}
+  .co-same input{width:17px; height:17px; accent-color:var(--clay); flex:none;}
+  #coAddr[hidden]{display:none;}
+  .co-sub{font-family:"Space Mono",monospace; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--clay); margin:1.5rem 0 .7rem;}
+  .co-sub:first-of-type{margin-top:.4rem;}
+  .co-sub .co-subnote{font-weight:400; color:var(--ink-dim); text-transform:none; letter-spacing:0;}
+
+  /* consent + submit */
+  .consent{display:flex; gap:.8rem; align-items:flex-start; margin:1.9rem 0 1.2rem; font-size:.93rem; color:var(--ink-soft); line-height:1.55; cursor:pointer;}
+  .consent input{width:20px; height:20px; accent-color:var(--clay); flex:none; margin-top:.12rem;}
+  .err{color:var(--clay-deep); font-family:"Space Mono",monospace; font-size:.78rem; letter-spacing:.02em; display:none; margin:0 0 1rem;}
+  .appcard .btn{width:100%;}
+  .secure-note{display:flex; align-items:center; gap:.5rem; justify-content:center; margin-top:1.1rem; font-family:"Space Mono",monospace; font-size:.66rem; letter-spacing:.03em; color:var(--ink-dim); text-align:center;}
+  .secure-note svg{width:1rem; height:1rem; flex:none; color:var(--pine);}
+
+  .app-success{text-align:center; padding:clamp(2rem,5vw,3.5rem) clamp(1.2rem,3vw,2rem);}
+  .tick-big{width:64px; height:64px; border-radius:50%; background:var(--pine); color:var(--cream); display:grid; place-items:center; margin:0 auto 1.3rem;}
+  .tick-big svg{width:1.8rem; height:1.8rem;}
+  .app-success h2{font-family:"DM Serif Display",serif; font-size:clamp(1.8rem,4vw,2.6rem); margin-bottom:.7rem;}
+  .app-success p{color:var(--ink-soft); max-width:44ch; margin:0 auto 1.7rem;}
+  .app-success .close__actions{justify-content:center;}
+</style>
+</head>
+<body>
+<a class="skip" href="#appForm">Skip to the application</a>
+
+<header class="masthead" id="masthead">
+  <div class="wrap mast-row">
+    <a class="brand" href="index.html" aria-label="Reids Auto Connection, home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>
+        <span class="brand__name">Reids Auto Connection</span>
+        <span class="brand__sub">The Fresh Start Program</span>
+      </span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <div class="mast-links">
+        <a href="financing.html">Financing</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="mast-actions">
+        <a class="mast-phone" href="tel:+19724361600">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="lbl">(972) 436-1600</span>
+        </a>
+        <a class="btn btn--primary" href="get-approved.html" aria-current="page">Get Approved</a>
+        <button class="hamb" id="hamb" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <nav class="mmenu" id="mmenu" aria-label="Mobile">
+    <a href="financing.html">Financing</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+19724361600">Call (972) 436-1600</a>
+    <a class="btn btn--primary" href="get-approved.html">Get Approved</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ REASSURANCE HERO ============ -->
+  <section class="phero phero--center wrap">
+    <span class="kicker reveal">The Fresh Start application · one step</span>
+    <h1 class="reveal" data-d="1">Fill this out. <span class="clay">Reid does the rest.</span></h1>
+    <p class="lede reveal" data-d="2" style="margin-inline:auto;">Bad credit, no credit, repossession, or bankruptcy — Reid has given real people just like you a genuine chance and the keys to a reliable car, often with <b>$0 down</b>. This is the only step. It takes about three minutes, and it doesn't obligate you to anything.</p>
+    <div class="appwrap">
+      <div class="app-why reveal" data-d="3">
+        <div class="app-why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg><span><b>We say yes when banks say no</b><em>Bankruptcy, bad credit, first-time — it's who we approve every day.</em></span></div>
+        <div class="app-why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span><b>Approvals often within the hour</b><em>We review your application and call you fast.</em></span></div>
+        <div class="app-why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9l2-4h14l2 4v6a2 2 0 0 1-2 2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg><span><b>$0 down, drive home this week</b><em>Most approvals need nothing down. Keep your savings.</em></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CREDIT APPLICATION ============ -->
+  <section class="wrap" style="padding-bottom:clamp(3rem,7vw,6rem);">
+    <div class="appwrap">
+
+      <div class="appcard reveal" id="app-panel">
+        <h2 class="app-title">The Fresh Start credit application</h2>
+        <p class="app-sub">One step, about three minutes. Fields marked <span class="req">*</span> are required — everything else just helps us move faster.</p>
+        <div class="disclosure">
+          <b>Important applicant information:</b> Federal law requires us to obtain enough information to verify your identity. You may be asked to provide one or more forms of identification. Your information is protected by our privacy policy and by federal law, and submitting this application does not obligate you to purchase.
+        </div>
+
+        <form id="appForm" novalidate>
+
+          <div class="appsec first">
+            <h3>Bankruptcy</h3>
+            <p class="appsec-hint">Currently in, or recently discharged from, a bankruptcy? No problem — it's our specialty.</p>
+            <div class="form-grid">
+              <div class="field"><label for="bk">Which type of bankruptcy do you have?</label>
+                <select id="bk" name="bankruptcy"><option value="">None / not applicable</option><option>Chapter 7</option><option>Chapter 13</option><option>Recently discharged</option></select></div>
+              <div class="field" id="bk13wrap" style="display:none;"><label for="bk13">Chapter 13 monthly plan payment</label><input id="bk13" name="ch13payment" inputmode="numeric" placeholder="$ per month" /></div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Primary applicant information</h3>
+            <div class="form-grid">
+              <div class="field"><label for="first">First name <span class="req">*</span></label><input id="first" name="first" required autocomplete="given-name" /></div>
+              <div class="field"><label for="middle">Middle name</label><input id="middle" name="middle" autocomplete="additional-name" /></div>
+              <div class="field"><label for="last">Last name <span class="req">*</span></label><input id="last" name="last" required autocomplete="family-name" /></div>
+              <div class="field"><label for="dob">Date of birth <span class="req">*</span></label><input id="dob" name="dob" type="date" required autocomplete="bday" /></div>
+              <div class="field"><label for="ssn">Social Security number <span class="req">*</span></label><input id="ssn" name="ssn" inputmode="numeric" placeholder="•••-••-••••" required autocomplete="off" /></div>
+              <div class="field"><label for="dl">Driver's license number <span class="req">*</span></label><input id="dl" name="dl" required autocomplete="off" /></div>
+              <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+              <div class="field"><label for="phone">Phone <span class="req">*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel" /></div>
+              <div class="field"><label for="state">State <span class="req">*</span></label><input id="state" name="state" placeholder="State" required autocomplete="address-level1" /></div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Current address</h3>
+            <div class="field"><label for="addr">Street address, city, ZIP <span class="req">*</span></label><input id="addr" name="address" required autocomplete="street-address" /></div>
+            <div class="field-3">
+              <div class="field"><label for="own">Own, rent or live with others</label><select id="own" name="housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
+              <div class="field"><label for="mo">Monthly amount</label><input id="mo" name="housing_amount" inputmode="numeric" placeholder="$" /></div>
+              <div class="field"><label>How long?</label><div class="dur"><input name="addr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at address" /><input name="addr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at address" /></div></div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Previous address <span class="lc">— if less than 3 years at current</span></h3>
+            <div class="field"><label for="paddr">Previous street address, city, ZIP</label><input id="paddr" name="prev_address" autocomplete="off" /></div>
+            <div class="field-3">
+              <div class="field"><label for="pown">Own, rent or live with others</label><select id="pown" name="prev_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
+              <div class="field"><label for="pmo">Monthly amount</label><input id="pmo" name="prev_housing_amount" inputmode="numeric" placeholder="$" /></div>
+              <div class="field"><label>How long?</label><div class="dur"><input name="paddr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at previous address" /><input name="paddr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at previous address" /></div></div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Employment information</h3>
+            <div class="form-grid">
+              <div class="field"><label for="emp">Employer <span class="req">*</span></label><input id="emp" name="employer" required /></div>
+              <div class="field"><label for="empphone">Employer phone <span class="req">*</span></label><input id="empphone" name="employer_phone" type="tel" required /></div>
+              <div class="field"><label for="title">Position or title <span class="req">*</span></label><input id="title" name="title" required /></div>
+              <div class="field"><label for="salary">Gross monthly salary <span class="req">*</span></label><input id="salary" name="salary" inputmode="numeric" placeholder="$" required /></div>
+            </div>
+            <div class="field" style="margin-top:.2rem;"><label>How long at this job? <span class="req">*</span></label><div class="dur" style="max-width:240px;"><input name="job_years" inputmode="numeric" placeholder="Years" aria-label="Years at job" /><input name="job_months" inputmode="numeric" placeholder="Months" aria-label="Months at job" /></div></div>
+          </div>
+
+          <div class="appsec">
+            <h3>Previous employer <span class="lc">— if less than 3 years at current</span></h3>
+            <div class="form-grid">
+              <div class="field"><label for="pemp">Previous employer</label><input id="pemp" name="prev_employer" /></div>
+              <div class="field"><label for="pempphone">Previous employer phone</label><input id="pempphone" name="prev_employer_phone" type="tel" /></div>
+            </div>
+            <div class="field" style="margin-top:.2rem;"><label>How long?</label><div class="dur" style="max-width:240px;"><input name="pjob_years" inputmode="numeric" placeholder="Years" aria-label="Years at previous job" /><input name="pjob_months" inputmode="numeric" placeholder="Months" aria-label="Months at previous job" /></div></div>
+          </div>
+
+          <div class="appsec">
+            <h3>Other income</h3>
+            <div class="form-grid">
+              <div class="field"><label for="oinc">Sources of other income <span class="lc">(optional)</span></label><input id="oinc" name="other_income" placeholder="Benefits, side work, support, etc." /></div>
+              <div class="field"><label for="oincamt">Amount per month</label><input id="oincamt" name="other_income_amount" inputmode="numeric" placeholder="$" /></div>
+              <div class="field"><label for="best">Best time to contact you?</label><select id="best" name="best_time"><option value="">Choose</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select></div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Add a co-applicant <span class="lc">optional</span></h3>
+            <p class="appsec-hint">A co-applicant with steady income — a spouse, parent, or family member — can strengthen your approval and lower your payment. Add one here and we'll review you together.</p>
+            <button type="button" class="co-toggle" id="coToggle" aria-expanded="false" aria-controls="coFields"><span class="co-plus" aria-hidden="true">+</span><span>Add a co-applicant</span></button>
+            <div class="co-fields" id="coFields" hidden>
+              <div class="co-head"><span class="co-badge">Co-applicant</span><button type="button" class="co-remove" id="coRemove">Remove</button></div>
+
+              <div class="co-sub">Bankruptcy</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_bk">Which type of bankruptcy do they have?</label>
+                  <select id="co_bk" name="co_bankruptcy"><option value="">None / not applicable</option><option>Chapter 7</option><option>Chapter 13</option><option>Recently discharged</option></select></div>
+                <div class="field" id="co_bk13wrap" style="display:none;"><label for="co_bk13">Chapter 13 monthly plan payment</label><input id="co_bk13" name="co_ch13payment" inputmode="numeric" placeholder="$ per month" /></div>
+              </div>
+
+              <div class="co-sub">Co-applicant information</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_first">First name</label><input id="co_first" name="co_first" autocomplete="off" /></div>
+                <div class="field"><label for="co_middle">Middle name</label><input id="co_middle" name="co_middle" autocomplete="off" /></div>
+                <div class="field"><label for="co_last">Last name</label><input id="co_last" name="co_last" autocomplete="off" /></div>
+                <div class="field"><label for="co_rel">Relationship to you</label><select id="co_rel" name="co_relationship"><option value="">Choose</option><option>Spouse</option><option>Parent</option><option>Sibling</option><option>Other family</option><option>Other</option></select></div>
+                <div class="field"><label for="co_dob">Date of birth</label><input id="co_dob" name="co_dob" type="date" /></div>
+                <div class="field"><label for="co_ssn">Social Security number</label><input id="co_ssn" name="co_ssn" inputmode="numeric" placeholder="•••-••-••••" autocomplete="off" /></div>
+                <div class="field"><label for="co_dl">Driver's license number</label><input id="co_dl" name="co_dl" autocomplete="off" /></div>
+                <div class="field"><label for="co_email">Email</label><input id="co_email" name="co_email" type="email" autocomplete="off" /></div>
+                <div class="field"><label for="co_phone">Phone</label><input id="co_phone" name="co_phone" type="tel" autocomplete="off" /></div>
+                <div class="field"><label for="co_state">State</label><input id="co_state" name="co_state" placeholder="State" autocomplete="off" /></div>
+              </div>
+
+              <label class="co-same"><input type="checkbox" id="coSameAddr" checked /> <span>Co-applicant lives at the same address as me</span></label>
+              <div id="coAddr" hidden>
+                <div class="co-sub">Co-applicant current address</div>
+                <div class="field"><label for="co_addr">Street address, city, ZIP</label><input id="co_addr" name="co_address" autocomplete="off" /></div>
+                <div class="field-3">
+                  <div class="field"><label for="co_own">Own, rent or live with others</label><select id="co_own" name="co_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
+                  <div class="field"><label for="co_mo">Monthly amount</label><input id="co_mo" name="co_housing_amount" inputmode="numeric" placeholder="$" /></div>
+                  <div class="field"><label>How long?</label><div class="dur"><input name="co_addr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at co-applicant address" /><input name="co_addr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at co-applicant address" /></div></div>
+                </div>
+                <div class="co-sub">Co-applicant previous address <span class="co-subnote">— if less than 3 years at current</span></div>
+                <div class="field"><label for="co_paddr">Previous street address, city, ZIP</label><input id="co_paddr" name="co_prev_address" autocomplete="off" /></div>
+                <div class="field-3">
+                  <div class="field"><label for="co_pown">Own, rent or live with others</label><select id="co_pown" name="co_prev_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
+                  <div class="field"><label for="co_pmo">Monthly amount</label><input id="co_pmo" name="co_prev_housing_amount" inputmode="numeric" placeholder="$" /></div>
+                  <div class="field"><label>How long?</label><div class="dur"><input name="co_paddr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at co-applicant previous address" /><input name="co_paddr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at co-applicant previous address" /></div></div>
+                </div>
+              </div>
+
+              <div class="co-sub">Co-applicant employment</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_emp">Employer</label><input id="co_emp" name="co_employer" /></div>
+                <div class="field"><label for="co_empphone">Employer phone</label><input id="co_empphone" name="co_employer_phone" type="tel" /></div>
+                <div class="field"><label for="co_title">Position or title</label><input id="co_title" name="co_title" /></div>
+                <div class="field"><label for="co_salary">Gross monthly salary</label><input id="co_salary" name="co_salary" inputmode="numeric" placeholder="$" /></div>
+              </div>
+              <div class="field" style="margin-top:.2rem;"><label>How long at this job?</label><div class="dur" style="max-width:240px;"><input name="co_job_years" inputmode="numeric" placeholder="Years" aria-label="Years at co-applicant job" /><input name="co_job_months" inputmode="numeric" placeholder="Months" aria-label="Months at co-applicant job" /></div></div>
+
+              <div class="co-sub">Co-applicant previous employer <span class="co-subnote">— if less than 3 years at current</span></div>
+              <div class="form-grid">
+                <div class="field"><label for="co_pemp">Previous employer</label><input id="co_pemp" name="co_prev_employer" /></div>
+                <div class="field"><label for="co_pempphone">Previous employer phone</label><input id="co_pempphone" name="co_prev_employer_phone" type="tel" /></div>
+              </div>
+              <div class="field" style="margin-top:.2rem;"><label>How long?</label><div class="dur" style="max-width:240px;"><input name="co_pjob_years" inputmode="numeric" placeholder="Years" aria-label="Years at co-applicant previous job" /><input name="co_pjob_months" inputmode="numeric" placeholder="Months" aria-label="Months at co-applicant previous job" /></div></div>
+
+              <div class="co-sub">Co-applicant other income</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_oinc">Sources of other income <span class="lc">(optional)</span></label><input id="co_oinc" name="co_other_income" placeholder="Benefits, side work, support, etc." /></div>
+                <div class="field"><label for="co_oincamt">Amount per month</label><input id="co_oincamt" name="co_other_income_amount" inputmode="numeric" placeholder="$" /></div>
+                <div class="field"><label for="co_best">Best time to contact them?</label><select id="co_best" name="co_best_time"><option value="">Choose</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select></div>
+              </div>
+
+              <div class="co-sub">Co-applicant other information</div>
+              <div class="form-grid">
+                <div class="field"><label for="co_cs">Child support balance</label><input id="co_cs" name="co_child_support" inputmode="numeric" placeholder="$" /></div>
+                <div class="field"><label for="co_tl">Tax lien balance</label><input id="co_tl" name="co_tax_lien" inputmode="numeric" placeholder="$" /></div>
+                <div class="field"><label for="co_sl">Student loan balance</label><input id="co_sl" name="co_student_loan" inputmode="numeric" placeholder="$" /></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="appsec">
+            <h3>Other information <span class="lc">— optional</span></h3>
+            <div class="form-grid">
+              <div class="field"><label for="cs">Child support balance</label><input id="cs" name="child_support" inputmode="numeric" placeholder="$" /></div>
+              <div class="field"><label for="tl">Tax lien balance</label><input id="tl" name="tax_lien" inputmode="numeric" placeholder="$" /></div>
+              <div class="field"><label for="sl">Student loan balance</label><input id="sl" name="student_loan" inputmode="numeric" placeholder="$" /></div>
+            </div>
+          </div>
+
+          <label class="consent"><input type="checkbox" id="consent" required /><span>I certify the information above is accurate and I authorize Reids Auto Connection to obtain a credit report and verify the information to process my application. I understand this does not obligate me to purchase.</span></label>
+
+          <p class="err" id="err" role="alert">Please complete the highlighted fields and agree to the authorization above.</p>
+
+          <button type="submit" class="btn btn--primary btn--lg">Submit my application
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <div class="secure-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Your information is protected by our privacy policy &amp; federal law.</div>
+        </form>
+      </div>
+
+      <div class="appcard app-success reveal" id="app-success" style="display:none;">
+        <span class="tick-big" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2 id="successName">You're on your way!</h2>
+        <p>Your application is in. Reid's team will review it and reach out shortly — most folks hear back within the hour. In a hurry?</p>
+        <div class="close__actions">
+          <a class="btn btn--primary btn--lg" href="tel:+19724361600">Call (972) 436-1600</a>
+          <a class="btn btn--ghost btn--lg" href="financing.html">How financing works</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="wrap">
+    <div class="colo__grid">
+      <div class="colo__brand">
+        <a class="brand" href="index.html" aria-label="Reids Auto Connection">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span><span class="brand__name">Reids Auto Connection</span><span class="brand__sub">The Fresh Start Program</span></span>
+        </a>
+        <p class="colo__promise">Veteran-owned auto financing for real people who've earned a fresh start — wherever in the country you're starting from.</p>
+        <a class="btn btn--light" href="get-approved.html">Get Approved</a>
+      </div>
+      <div class="colo__col">
+        <h3>Explore</h3>
+        <div class="colo__nav">
+          <a href="financing.html">Fresh Start Financing</a>
+          <a href="about.html">About Reid</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+          <a href="get-approved.html">Get Approved</a>
+        </div>
+      </div>
+      <div class="colo__col">
+        <h3>Hours · By appointment</h3>
+        <div class="colo__line"><span>Mon–Sat</span><span>10:00 – 7:00</span></div>
+        <div class="colo__line"><span>Sunday</span><span>Closed</span></div>
+        <p style="margin-top:1rem; font-size:.92rem;">Nationwide + fly-in program.<br>Se habla español.</p>
+      </div>
+      <div class="colo__col">
+        <h3>Reach us</h3>
+        <div class="colo__nap">
+          <a class="big" href="tel:+19724361600">(972) 436-1600</a>
+          <span>Ask for the Fresh Start Program.</span>
+        </div>
+      </div>
+    </div>
+    <div class="colo__foot">
+      <span>© 2026 Reids Auto Connection. All rights reserved.</span>
+      <div class="colo__badges"><span>★ 4.7 Google</span><span>BBB A+</span><span>Veteran-Owned · Est. 2009</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('appForm');
+  if (!form) return;
+
+  // Chapter 13 plan-payment field toggles in when Chapter 13 is chosen
+  var bk = document.getElementById('bk'), bk13 = document.getElementById('bk13wrap');
+  bk.addEventListener('change', function () { bk13.style.display = bk.value === 'Chapter 13' ? '' : 'none'; });
+  var cobk = document.getElementById('co_bk'), cobk13 = document.getElementById('co_bk13wrap');
+  if (cobk) cobk.addEventListener('change', function () { cobk13.style.display = cobk.value === 'Chapter 13' ? '' : 'none'; });
+
+  // Co-applicant add / remove
+  var coToggle = document.getElementById('coToggle'), coFields = document.getElementById('coFields');
+  var coRemove = document.getElementById('coRemove'), coSame = document.getElementById('coSameAddr'), coAddr = document.getElementById('coAddr');
+  if (coToggle) {
+    coToggle.addEventListener('click', function () {
+      coFields.hidden = false; coToggle.classList.add('is-open'); coToggle.setAttribute('aria-expanded', 'true');
+      coFields.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+    coRemove.addEventListener('click', function () {
+      coFields.hidden = true; coToggle.classList.remove('is-open'); coToggle.setAttribute('aria-expanded', 'false');
+      coFields.querySelectorAll('input, select').forEach(function (el) {
+        if (el.type === 'checkbox') el.checked = (el.id === 'coSameAddr'); else el.value = '';
+      });
+      coAddr.hidden = true;
+    });
+    coSame.addEventListener('change', function () { coAddr.hidden = coSame.checked; });
+  }
+
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  form.addEventListener('input', function (e) {
+    if (e.target.getAttribute && e.target.getAttribute('aria-invalid') === 'true') e.target.setAttribute('aria-invalid', 'false');
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err = document.getElementById('err');
+    var required = form.querySelectorAll('[required]');
+    var firstBad = null, badEmail = false;
+    required.forEach(function (el) {
+      var valid = el.type === 'checkbox' ? el.checked : !!el.value.trim();
+      if (valid && el.id === 'email') { valid = EMAIL_RE.test(el.value.trim()); if (!valid) badEmail = true; }
+      el.setAttribute('aria-invalid', valid ? 'false' : 'true');
+      if (!valid && !firstBad) firstBad = el;
+    });
+    if (firstBad) {
+      err.textContent = (badEmail && firstBad.id === 'email')
+        ? 'That email address doesn’t look right — please double-check it so we can reach you.'
+        : 'Please complete the highlighted fields and agree to the authorization above.';
+      err.style.display = 'block';
+      firstBad.focus();
+      firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    err.style.display = 'none';
+
+    // Collect the application. SSN is kept as digits only (formatting stripped).
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    function digits(x) { return String(x || '').replace(/\D/g, ''); }
+    if (data.ssn) data.ssn = digits(data.ssn);
+    if (data.co_ssn) data.co_ssn = digits(data.co_ssn);
+
+    /* ═══════════════════════════════════════════════════════════════════
+       INTEGRATION HOOK — deliver the application (incl. SSN) to REID.
+       ───────────────────────────────────────────────────────────────────
+       No live cross-origin POST is baked in on purpose. `data` (which
+       contains the applicant's real Social Security number) must ONLY be
+       sent to an endpoint Reid controls and has authorized — his own CRM,
+       his DMS, or his secure form provider (e.g. a Cognito Forms entry
+       API) — over HTTPS, and that endpoint must allow this origin via CORS.
+       Wire it here, then this branded form becomes the live application:
+
+           fetch('https://REID-AUTHORIZED-ENDPOINT.example/applications', {
+             method: 'POST',
+             headers: { 'Content-Type': 'application/json' },
+             body: JSON.stringify(data)
+           }).catch(function () {});   // never block the applicant on a network hiccup
+
+       Until that URL is filled in, the form confirms receipt client-side
+       (below) so the demo is fully clickable without shipping anyone's SSN
+       to a third party.
+       ═══════════════════════════════════════════════════════════════════ */
+
+    var first = document.getElementById('first').value.trim();
+    document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
+    document.getElementById('app-panel').style.display = 'none';
+    var s = document.getElementById('app-success'); s.style.display = 'block'; s.classList.add('in');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
