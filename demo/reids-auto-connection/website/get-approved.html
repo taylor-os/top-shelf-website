@@ -292,8 +292,22 @@
         return;
       }
       err.style.display = 'none';
-      // DEMO submit — sensitive info (SSN, DOB) is NOT transmitted or logged in this branded version.
-      // On authorized domains the secure Cognito form below takes over and handles real submission.
+
+      // Send the application to Reid's CRM (Top Shelf). The SSN is reduced to its
+      // last four IN THE BROWSER first, so the full number is never transmitted;
+      // the CRM stores only the last four as well.
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      function last4(x) { var d = String(x || '').replace(/\D/g, ''); return d ? d.slice(-4) : ''; }
+      if (data.ssn) data.ssn = last4(data.ssn);
+      if (data.co_ssn) data.co_ssn = last4(data.co_ssn);
+
+      fetch('https://app.topshelfsolutions.io/api/applications/rc_a7f3e91b8d264c05b9e2f6a1c4d78e30', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).catch(function () { /* never block the applicant on a network hiccup */ });
+
       var first = document.getElementById('first').value.trim();
       document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
       document.getElementById('app-panel').style.display = 'none';
