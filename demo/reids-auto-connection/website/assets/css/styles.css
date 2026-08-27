@@ -490,3 +490,19 @@ select option:checked, select option:hover { background-color: #EDF1F8; color: #
   .reveal { opacity: 1; transform: none; transition: none; }
   .aurora span { animation: none !important; }
 }
+
+/* ============ BLUE HEADER + FOOTER (site-wide) ============ */
+/* Reuse the blue-section variable overrides so every var(--text*)-based bit of
+   header/footer chrome flips to a legible light tone on the navy ground. */
+header, footer {
+  --bg:#0E1B3A; --bg-2:#0b1730;
+  --text:#EDF1FA; --text-soft:#B7C2D8; --text-dim:#8b97b0;
+  --hairline:rgba(255,255,255,0.13); --hairline-soft:rgba(255,255,255,0.10);
+  --gold-deep:#FFC15E;
+  background:#0E1B3A;
+}
+header { border-bottom:1px solid rgba(255,255,255,0.10); }
+header.scrolled { background:rgba(11,18,38,0.92); backdrop-filter:blur(18px) saturate(140%); -webkit-backdrop-filter:blur(18px) saturate(140%); border-bottom:1px solid rgba(255,255,255,0.14); }
+header .hamburger { color:#EDF1FA; }
+.nav.menu-open .nav-links { background:rgba(11,18,38,0.98); border-bottom-color:rgba(255,255,255,0.13); }
+footer { border-top:1px solid rgba(255,255,255,0.14); }
