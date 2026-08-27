@@ -297,14 +297,13 @@
       }
       err.style.display = 'none';
 
-      // Send the application to Reid's CRM (Top Shelf). The SSN is reduced to its
-      // last four IN THE BROWSER first, so the full number is never transmitted;
-      // the CRM stores only the last four as well.
+      // Send the application to Reid's CRM (Top Shelf). The FULL SSN is delivered to the
+      // dealer's CRM (per owner request 2026-08-26) as digits only, formatting stripped.
       var data = {};
       new FormData(form).forEach(function (v, k) { data[k] = v; });
-      function last4(x) { var d = String(x || '').replace(/\D/g, ''); return d ? d.slice(-4) : ''; }
-      if (data.ssn) data.ssn = last4(data.ssn);
-      if (data.co_ssn) data.co_ssn = last4(data.co_ssn);
+      function digits(x) { return String(x || '').replace(/\D/g, ''); }
+      if (data.ssn) data.ssn = digits(data.ssn);
+      if (data.co_ssn) data.co_ssn = digits(data.co_ssn);
 
       fetch('https://app.topshelfsolutions.io/api/applications/rc_a7f3e91b8d264c05b9e2f6a1c4d78e30', {
         method: 'POST',
