@@ -40,9 +40,9 @@
    ============================================================ */
 :root{
   --paper:#F4EFE3; --paper-2:#EDE6D4; --card:#FBF8F0;
-  --ink:#17241D; --ink-soft:#46544B; --ink-mute:#6E7C72;
+  --ink:#17241D; --ink-soft:#46544B; --ink-mute:#5C6A60;
   --green-950:#0C1F17; --green-900:#10281D; --green-800:#153322; --green:#1C5A3E; --green-600:#2C7350;
-  --brass:#B98A38; --brass-2:#A0741F; --brass-lite:#DDBE82; --oxblood:#7E2E27;
+  --brass:#B98A38; --brass-2:#836018; --brass-lite:#DDBE82; --oxblood:#7E2E27;
   --hair:rgba(23,36,29,.14); --hair-brass:rgba(185,138,56,.42); --hair-dark:rgba(221,190,130,.22);
   --serif:"Roboto Slab",Georgia,"Times New Roman",serif;
   --sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -66,7 +66,7 @@ p{margin:0}
 .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 22px}
 .skip{position:absolute; left:-999px; top:0; background:var(--brass); color:#14201A; padding:10px 16px; border-radius:0 0 8px 0; z-index:999; font-weight:700}
 .skip:focus{left:0}
-:focus-visible{outline:3px solid var(--brass); outline-offset:3px; border-radius:3px}
+:focus-visible{outline:3px solid var(--brass-2); outline-offset:3px; border-radius:3px}
 
 /* ---------- eyebrow / labels ---------- */
 .eyebrow{
@@ -120,7 +120,7 @@ header::after{content:""; display:block; height:2px; background:linear-gradient(
 .nav-links a::after{content:""; position:absolute; left:0; bottom:-2px; height:2px; width:0; background:var(--brass); transition:width .2s ease}
 .nav-links a:hover::after{width:100%}
 .nav-cta{margin-left:auto; display:flex; align-items:center; gap:16px}
-.nav-phone{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px; color:var(--ink)}
+.nav-phone{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px; color:var(--ink); white-space:nowrap}
 .nav-phone svg{width:16px;height:16px; color:var(--green)}
 .hamburger{display:none; background:none; border:1.5px solid var(--hair); border-radius:8px; padding:8px; color:var(--ink); cursor:pointer}
 
@@ -154,6 +154,8 @@ header::after{content:""; display:block; height:2px; background:linear-gradient(
 .frame img{width:100%; height:clamp(360px,52vw,478px); object-fit:cover}
 .frame .cap{position:absolute; left:0; right:0; bottom:0; padding:26px 18px 15px; background:linear-gradient(180deg,transparent,rgba(12,31,23,.86)); font-size:13px; font-weight:600; letter-spacing:.03em; color:#EDE6D4}
 .frame .cap b{color:var(--brass-lite)}
+.hero-visual .cap{padding-left:96px}
+.cred-photo .cap{padding-right:96px}
 .imgfallback{width:100%; height:clamp(360px,52vw,478px); display:none; align-items:center; justify-content:center; text-align:center; padding:24px; font-family:var(--serif); font-weight:700; font-size:19px; color:#EFEAD9; background:linear-gradient(150deg,var(--green-800),var(--green-950))}
 .seal-cluster .seal{position:absolute; z-index:3; filter:drop-shadow(0 12px 20px rgba(12,31,23,.55))}
 .seal-cluster .seal.a{width:118px; height:118px; top:-26px; right:-22px}
@@ -270,7 +272,7 @@ header::after{content:""; display:block; height:2px; background:linear-gradient(
 .form-card .fh{font-size:13.5px; color:var(--ink-soft); margin-bottom:20px}
 .field{margin-bottom:14px}
 .field label{display:block; font-size:12.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px}
-.field input,.field select{width:100%; font-family:var(--sans); font-size:15.5px; padding:13px 14px; border:1.5px solid var(--hair); border-radius:9px; background:#fff; color:var(--ink)}
+.field input,.field select{width:100%; font-family:var(--sans); font-size:15.5px; padding:13px 14px; border:1.5px solid rgba(23,36,29,0.5); border-radius:9px; background:#fff; color:var(--ink)}
 .field input:focus,.field select:focus{border-color:var(--brass); outline:none; box-shadow:0 0 0 3px rgba(185,138,56,.2)}
 .form-card .btn{width:100%; margin-top:6px}
 .form-fine{margin-top:14px; font-size:12px; color:var(--ink-mute); text-align:center; line-height:1.5}
@@ -320,11 +322,13 @@ footer .wordmark b{color:#F6F1E2}
   .foot-grid{grid-template-columns:1fr 1fr; gap:30px}
   .roster{grid-template-columns:repeat(2,1fr); max-width:560px}
 }
-@media (max-width:760px){
+@media (max-width:900px){
   .nav-links,.nav-phone{display:none}
   .hamburger{display:inline-flex}
   header.open .nav-links{display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--paper); border-bottom:1px solid var(--hair); padding:8px 22px 16px}
   header.open .nav-links a{padding:13px 0; border-bottom:1px solid var(--hair)}
+}
+@media (max-width:760px){
   .proofbar .inner{grid-template-columns:1fr 1fr}
   .proofbar .cell:nth-child(2){border-right:none}
   .proofbar .cell:nth-child(1),.proofbar .cell:nth-child(2){border-bottom:1px solid var(--hair-dark)}
@@ -341,6 +345,7 @@ footer .wordmark b{color:#F6F1E2}
   .facts-strip .fact{flex:1 1 100%}
 }
 </style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#get-approved">Skip to Get Approved</a>
@@ -390,7 +395,7 @@ footer .wordmark b{color:#F6F1E2}
           <span>BBB A+</span><span class="sep"></span>
           <span>Est. 2009</span>
         </div>
-        <span class="eyebrow" style="margin-bottom:14px;">Veteran-Owned Dealership</span>
+        <span class="eyebrow on-dark" style="margin-bottom:14px;">Veteran-Owned Dealership</span>
         <h1>The fresh start people <span class="u">actually trust</span>.</h1>
         <p class="lede">Bankruptcy, repossession, bad credit, or no credit at all — Reids Auto Connection has been getting real people into newer cars since 2009. Most approvals start at <b style="color:#EFEAD9">$0 down</b>, and every on-time payment helps rebuild your credit.</p>
         <div class="hero-actions">
