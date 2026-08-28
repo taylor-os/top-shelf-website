@@ -230,8 +230,7 @@ em, .it{font-style:italic;}
 
 /* ============ CH.3 — HOW A YES HAPPENS (sand) ============ */
 .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1.5rem,3vw,2.6rem); margin-top:clamp(2.5rem,5vw,3.5rem);}
-.step{position:relative; padding-top:2.2rem; border-top:2px solid var(--ink);}
-.chapter--dark .step{border-top-color:var(--ochre);}
+.step{position:relative; padding-top:2.2rem;}
 .step__n{position:absolute; top:-.1rem; left:0; font-family:"DM Serif Display",serif; font-size:2.6rem; color:var(--clay); line-height:.7;}
 .chapter--dark .step__n{color:var(--ochre);}
 .step h3{font-family:"DM Serif Display",serif; font-size:1.35rem; margin:.3rem 0 .6rem; line-height:1.1;}
