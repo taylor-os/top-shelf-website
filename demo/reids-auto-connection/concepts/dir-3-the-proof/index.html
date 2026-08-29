@@ -144,6 +144,16 @@ header::after{content:""; display:block; height:2px; background:linear-gradient(
 .hero h1 .u::after{content:""; position:absolute; left:0; right:0; bottom:.06em; height:.09em; background:var(--brass); border-radius:2px; opacity:.85}
 .hero .lede{margin-top:22px; font-size:clamp(16.5px,2vw,19px); line-height:1.62; color:#CFC9B7; max-width:50ch}
 .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:30px}
+.hero-inner{position:relative; z-index:2; text-align:center; max-width:1080px; margin-inline:auto; padding-top:clamp(46px,7vw,84px); padding-bottom:clamp(52px,7vw,92px)}
+.hero-inner .proof-chip{margin-inline:auto}
+.hero-inner h1{margin-top:4px}
+.hero-lede-center{margin-inline:auto}
+.hero-photos{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.8vw,20px); margin:clamp(28px,4vw,44px) auto; max-width:940px}
+.hero-photo{margin:0; aspect-ratio:3/4; overflow:hidden; border:1px solid var(--brass); border-radius:8px; background:var(--green-950); box-shadow:0 22px 52px -30px rgba(0,0,0,.7)}
+.hero-photo img{width:100%; height:100%; object-fit:cover; display:block}
+.hero-soar{font-family:var(--serif); font-weight:900; font-size:clamp(24px,4.4vw,44px); line-height:1.12; color:#F6F1E2; letter-spacing:-.01em; margin:6px auto 26px; max-width:26ch}
+.hero-actions-center{justify-content:center}
+.hero-reassure-center{justify-content:center; text-align:center}
 .reassure{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-top:26px; font-size:13.5px; color:#B9B4A2; font-weight:500}
 .reassure .dot{width:4px;height:4px;border-radius:50%;background:var(--brass);opacity:.7}
 .reassure b{color:var(--brass-lite); font-weight:700}
@@ -395,55 +405,33 @@ footer .wordmark b{color:#F6F1E2}
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy reveal in">
-        <div class="proof-chip" role="img" aria-label="Rated 4.7 stars across 200-plus Google reviews, BBB accredited A-plus, established 2009">
-          <span><span class="star">★</span> 4.7 rating</span><span class="sep"></span>
-          <span>200+ Google reviews</span><span class="sep"></span>
-          <span>BBB A+</span><span class="sep"></span>
-          <span>Est. 2009</span>
-        </div>
-        <span class="eyebrow on-dark" style="margin-bottom:14px;">Veteran-Owned Dealership</span>
-        <h1>The fresh start people <span class="u">actually trust</span>.</h1>
-        <p class="lede">Bankruptcy, repossession, bad credit, or no credit at all — Reids Auto Connection has been getting real people into newer cars since 2009. Most approvals start at <b style="color:#EFEAD9">$0 down</b>, and every on-time payment helps rebuild your credit.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="#get-approved">Get Approved</a>
-          <a class="btn btn-ghost-dark btn-lg" href="tel:+19724361600">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call (972) 436-1600
-          </a>
-        </div>
-        <div class="reassure">
-          <b>$0 down</b> on most loans <span class="dot"></span> Se habla español <span class="dot"></span> By appointment <span class="dot"></span> Nationwide fly-in program
-        </div>
+    <div class="wrap hero-inner">
+      <div class="proof-chip reveal in" role="img" aria-label="Rated 4.7 stars across 200-plus Google reviews, BBB accredited A-plus, established 2009">
+        <span><span class="star">★</span> 4.7 rating</span><span class="sep"></span>
+        <span>200+ Google reviews</span><span class="sep"></span>
+        <span>BBB A+</span><span class="sep"></span>
+        <span>Est. 2009</span>
+      </div>
+      <span class="eyebrow on-dark reveal in" style="margin-bottom:14px;">Veteran-Owned · Est. 2009</span>
+      <h1 class="reveal in">The <span class="u">Fresh Start</span> Program</h1>
+      <p class="lede hero-lede-center reveal in">Bankruptcy, repossession, bad credit, or no credit at all — Reids Auto Connection has been getting real people into reliable cars since 2009, most with <b style="color:#EFEAD9">$0 down</b>.</p>
+
+      <div class="hero-photos reveal in" data-d="1">
+        <figure class="hero-photo"><img src="assets/img/fresh-start-1.webp" width="800" height="1067" alt="A happy customer in the driver’s seat holding up the keys to the car he was just approved for." onerror="this.style.opacity=0"></figure>
+        <figure class="hero-photo"><img src="assets/img/fresh-start-2.webp" width="800" height="1067" alt="A happy older couple standing by their new car, holding up the keys." onerror="this.style.opacity=0"></figure>
+        <figure class="hero-photo"><img src="assets/img/fresh-start-3.webp" width="800" height="1067" alt="A happy single mom holding her child and the keys to her new car." onerror="this.style.opacity=0"></figure>
       </div>
 
-      <div class="hero-visual reveal in" data-d="1">
-        <div class="seal-cluster">
-          <!-- BBB A+ seal -->
-          <svg class="seal a" viewBox="0 0 120 120" role="img" aria-label="BBB Accredited, A-plus rating">
-            <defs><path id="arcTopA" d="M22,60 A38,38 0 0 1 98,60"/></defs>
-            <circle class="ring-o" cx="60" cy="60" r="56"/>
-            <circle class="ring-i" cx="60" cy="60" r="47"/>
-            <text class="curved"><textPath href="#arcTopA" startOffset="50%" text-anchor="middle">BBB · ACCREDITED</textPath></text>
-            <text class="center-big" x="60" y="70" font-size="34">A+</text>
-            <text class="center-sm" x="60" y="88">Rating</text>
-          </svg>
-          <!-- Veteran / Est. 2009 seal -->
-          <svg class="seal b" viewBox="0 0 120 120" role="img" aria-label="Veteran owned, established 2009">
-            <defs><path id="arcTopB" d="M22,60 A38,38 0 0 1 98,60"/></defs>
-            <circle class="ring-o" cx="60" cy="60" r="56"/>
-            <circle class="ring-i" cx="60" cy="60" r="47"/>
-            <text class="curved"><textPath href="#arcTopB" startOffset="50%" text-anchor="middle">★ VETERAN-OWNED ★</textPath></text>
-            <path class="star" d="M60 44 l4.2 8.9 9.8 1.2 -7.2 6.7 1.9 9.7 -8.7 -4.8 -8.7 4.8 1.9 -9.7 -7.2 -6.7 9.8 -1.2 z"/>
-            <text class="center-sm" x="60" y="90">Since 2009</text>
-          </svg>
-        </div>
-        <div class="frame">
-          <img src="assets/img/owner-hero.jpg" alt="A happy new owner holding up the keys to the car she was just approved for at Reids Auto Connection" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="imgfallback">Keys in hand.<br>A real fresh start.</div>
-          <div class="cap"><b>Approved &amp; driving.</b> Real customers, since 2009.</div>
-        </div>
+      <p class="hero-soar reveal in">Get approved and watch your credit <span class="u">soar</span>.</p>
+      <div class="hero-actions hero-actions-center reveal in">
+        <a class="btn btn-primary btn-lg" href="#get-approved">Get Approved</a>
+        <a class="btn btn-ghost-dark btn-lg" href="tel:+19724361600">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (972) 436-1600
+        </a>
+      </div>
+      <div class="reassure hero-reassure-center reveal in">
+        <b>$0 down</b> on most loans <span class="dot"></span> Se habla español <span class="dot"></span> By appointment <span class="dot"></span> Nationwide fly-in program
       </div>
     </div>
   </section>
