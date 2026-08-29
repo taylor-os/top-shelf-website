@@ -526,3 +526,9 @@ input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="tr
   .app-why{grid-template-columns:1fr}
   .masthead .inner{padding-top:30px; padding-bottom:38px}
 }
+
+/* Placed logo (interior pages) */
+.brand-logo{height:44px; width:auto; display:block}
+.foot-logo-plate{display:inline-block; background:#EFEAD9; padding:11px 16px; border-radius:12px; line-height:0}
+.foot-logo-plate img{height:38px; width:auto; display:block}
+@media (max-width:560px){ .brand-logo{height:38px} }

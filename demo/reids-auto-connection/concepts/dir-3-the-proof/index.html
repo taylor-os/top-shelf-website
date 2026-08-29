@@ -154,6 +154,10 @@ header::after{content:""; display:block; height:2px; background:linear-gradient(
 .hero-soar{font-family:var(--serif); font-weight:900; font-size:clamp(24px,4.4vw,44px); line-height:1.12; color:#F6F1E2; letter-spacing:-.01em; margin:6px auto 26px; max-width:26ch}
 .hero-actions-center{justify-content:center}
 .hero-reassure-center{justify-content:center; text-align:center}
+.brand-logo{height:44px; width:auto; display:block}
+.foot-logo-plate{display:inline-block; background:#EFEAD9; padding:11px 16px; border-radius:12px; line-height:0}
+.foot-logo-plate img{height:38px; width:auto; display:block}
+@media (max-width:560px){.brand-logo{height:38px}}
 .reassure{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-top:26px; font-size:13.5px; color:#B9B4A2; font-weight:500}
 .reassure .dot{width:4px;height:4px;border-radius:50%;background:var(--brass);opacity:.7}
 .reassure b{color:var(--brass-lite); font-weight:700}
@@ -372,15 +376,7 @@ footer .wordmark b{color:#F6F1E2}
 <header id="hdr">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Reids Auto Connection — home">
-      <span class="mark" aria-hidden="true">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="38" height="38" rx="9" fill="#10281D" stroke="#B98A38" stroke-width="1.4"/>
-          <path d="M13 27 V15 h6.4 a4.2 4.2 0 0 1 0 8.4 H15" stroke="#DDBE82" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <path d="M17.6 23.4 L23 27" stroke="#DDBE82" stroke-width="2.2" stroke-linecap="round"/>
-          <circle cx="27.5" cy="14.5" r="2.1" fill="#B98A38"/>
-        </svg>
-      </span>
-      <span class="wordmark"><b>REIDS AUTO</b><small>Connection</small></span>
+      <img class="brand-logo" src="assets/img/logo.png" alt="Reids Auto Connection" width="640" height="186" />
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="financing.html">Financing</a>
@@ -623,11 +619,8 @@ footer .wordmark b{color:#F6F1E2}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="#top" aria-label="Reids Auto Connection">
-          <span class="mark" aria-hidden="true">
-            <svg width="38" height="38" viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="9" fill="#0C1F17" stroke="#B98A38" stroke-width="1.4"/><path d="M13 27 V15 h6.4 a4.2 4.2 0 0 1 0 8.4 H15" stroke="#DDBE82" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M17.6 23.4 L23 27" stroke="#DDBE82" stroke-width="2.2" stroke-linecap="round"/><circle cx="27.5" cy="14.5" r="2.1" fill="#B98A38"/></svg>
-          </span>
-          <span class="wordmark"><b>REIDS AUTO</b><small>Connection</small></span>
+        <a class="foot-logo-plate" href="#top" aria-label="Reids Auto Connection">
+          <img src="assets/img/logo.png" alt="Reids Auto Connection" width="640" height="186" />
         </a>
         <p>Veteran-owned auto financing for real people who've earned a fresh start — wherever you're starting from.</p>
         <a class="btn btn-primary" href="#get-approved">Get Approved</a>
