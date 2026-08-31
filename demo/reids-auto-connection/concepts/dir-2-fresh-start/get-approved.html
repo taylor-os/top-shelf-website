@@ -29,6 +29,9 @@
 </script>
 
 <style>
+  /* EXPERIMENT: dark page background — revert by removing the body{} and .masthead{} lines below */
+  body{background:var(--dark);}
+  .masthead{background:var(--paper); border-bottom-color:var(--hair);}
   .appwrap{max-width:860px; margin-inline:auto;}
   .app-why{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:clamp(1.8rem,3.5vw,2.4rem);}
   .app-why__item{display:flex; gap:.7rem; align-items:flex-start; background:var(--paper); border:1px solid var(--hair); padding:1.05rem 1.15rem;}
