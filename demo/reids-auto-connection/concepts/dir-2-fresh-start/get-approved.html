@@ -29,9 +29,6 @@
 </script>
 
 <style>
-  /* EXPERIMENT: dark page background — revert by removing the body{} and .masthead{} lines below */
-  body{background:var(--dark);}
-  .masthead{background:var(--paper); border-bottom-color:var(--hair);}
   .appwrap{max-width:860px; margin-inline:auto;}
   .app-why{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:clamp(1.8rem,3.5vw,2.4rem);}
   .app-why__item{display:flex; gap:.7rem; align-items:flex-start; background:var(--paper); border:1px solid var(--hair); padding:1.05rem 1.15rem;}
@@ -45,6 +42,27 @@
   .disclosure b{color:var(--ink);}
   .app-title{font-family:"DM Serif Display",serif; font-size:clamp(1.8rem,3.8vw,2.5rem); line-height:1.08; margin:0 0 .5rem; text-align:center; color:var(--clay);}
   .app-sub{color:var(--ink-soft); font-size:.98rem; margin:0 auto 1.7rem; max-width:56ch; text-align:center;}
+  /* Dark application card (matches dir-3). Revert by removing this block + moving the title back inside .appcard. */
+  .app-head{text-align:center;}
+  #app-panel{background:var(--dark); border-color:rgba(207,136,60,.35);}
+  #app-panel .appsec{border-top-color:var(--hair-dark);}
+  #app-panel .appsec > h3{color:var(--cream);}
+  #app-panel .appsec > h3 .lc{color:var(--cream-dim);}
+  #app-panel .appsec-hint{color:var(--cream-soft);}
+  #app-panel .field label{color:var(--cream-soft);}
+  #app-panel .field input, #app-panel .field select, #app-panel .field textarea{background:#fff; color:var(--ink);}
+  #app-panel .disclosure{background:rgba(0,0,0,.28); border-left-color:var(--clay); color:var(--cream-soft);}
+  #app-panel .disclosure b{color:var(--cream);}
+  #app-panel .consent{color:var(--cream-soft);}
+  #app-panel .co-toggle{background:rgba(0,0,0,.22); color:var(--cream);}
+  #app-panel .co-toggle:hover{background:rgba(0,0,0,.42);}
+  #app-panel .co-fields{background:rgba(0,0,0,.28); border-color:var(--hair-dark);}
+  #app-panel .co-same{color:var(--cream-soft);}
+  #app-panel .co-badge, #app-panel .co-sub{color:var(--ochre);}
+  #app-panel .field .req, #app-panel .err{color:#E79A8F;}
+  #app-panel .secure-note{color:var(--cream-dim);}
+  #app-panel .app-success h2{color:var(--cream);}
+  #app-panel .app-success p{color:var(--cream-soft);}
 
   .appsec{border-top:1px solid var(--hair); padding-top:1.7rem; margin-top:1.7rem;}
   .appsec.first{border-top:0; padding-top:0; margin-top:0;}
@@ -140,9 +158,11 @@
   <section class="wrap" style="padding-top:clamp(2rem,5vw,3.5rem); padding-bottom:clamp(3rem,7vw,6rem);">
     <div class="appwrap">
 
-      <div class="appcard reveal" id="app-panel">
+      <div class="app-head reveal">
         <h2 class="app-title">The Fresh Start credit application</h2>
         <p class="app-sub">One step, about three minutes. Fields marked <span class="req">*</span> are required — everything else just helps us move faster.</p>
+      </div>
+      <div class="appcard reveal" id="app-panel">
         <div class="disclosure">
           <b>Important applicant information:</b> Federal law requires us to obtain enough information to verify your identity. You may be asked to provide one or more forms of identification. Your information is protected by our privacy policy and by federal law, and submitting this application does not obligate you to purchase.
         </div>
