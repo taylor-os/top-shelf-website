@@ -44,6 +44,10 @@
   .app-sub{color:var(--ink-soft); font-size:.98rem; margin:0 auto 1.7rem; max-width:56ch; text-align:center;}
   /* Dark application card (matches dir-3). Revert by removing this block + moving the title back inside .appcard. */
   .app-head{text-align:center;}
+  /* App page: fade the title + form in on load (not scroll-gated), so there is no empty gap on arrival. */
+  @keyframes appReveal{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;}}
+  .has-js .app-head.reveal, .has-js #app-panel.reveal{animation:appReveal .75s cubic-bezier(.22,.61,.36,1) .2s both;}
+  @media (prefers-reduced-motion:reduce){ .has-js .app-head.reveal, .has-js #app-panel.reveal{animation:none;} }
   #app-panel{background:var(--dark); border-color:rgba(207,136,60,.35);}
   #app-panel .appsec{border-top-color:var(--hair-dark);}
   #app-panel .appsec > h3{color:var(--cream);}
