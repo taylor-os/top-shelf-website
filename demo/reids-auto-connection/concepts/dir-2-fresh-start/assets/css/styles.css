@@ -145,7 +145,7 @@ em, .it{font-style:italic;}
 .hero{padding-top:clamp(2rem,5vw,4.5rem); padding-bottom:clamp(2.5rem,6vw,5rem); position:relative;}
 .hero__grid{display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(1.5rem,4vw,3.5rem); align-items:center;}
 .hero__over{margin-bottom:1.4rem;}
-.hero h1{font-family:"DM Serif Display",serif; font-size:clamp(2.7rem,6.4vw,5.3rem); line-height:1.015; letter-spacing:-.015em; margin-bottom:1.3rem;}
+.hero h1{font-family:"DM Serif Display",serif; font-size:clamp(2.7rem,6.4vw,5.3rem); line-height:1.22; letter-spacing:-.015em; margin-bottom:1.3rem;}
 .hero h1 .soft{color:var(--ink-soft);}
 .hero__lede{max-width:46ch; margin-bottom:2rem;}
 .hero__actions{display:flex; flex-wrap:wrap; gap:.9rem; align-items:center;}
