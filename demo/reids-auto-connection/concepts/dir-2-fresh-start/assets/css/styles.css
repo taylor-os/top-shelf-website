@@ -411,8 +411,10 @@ em, .it{font-style:italic;}
 
 /* ============ RESPONSIVE (base, from homepage) ============ */
 @media (max-width:900px){
-  .mast-links, .mast-phone{display:none;}
+  .mast-links, .mast-phone, .mast-actions .btn{display:none;}
   .hamb{display:inline-flex; min-width:44px; min-height:44px; align-items:center; justify-content:center;}
+  .creds__row{justify-content:center; text-align:center;}
+  .creds__row .st{display:none;}
   .hero__grid, .hard__grid, .reid__grid, .proof__grid, .close__grid{grid-template-columns:1fr;}
   .hero__fig{order:-1; max-width:440px; margin-inline:auto;}
   .hero__frame{transform:none;}
