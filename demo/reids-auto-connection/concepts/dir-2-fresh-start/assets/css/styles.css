@@ -206,8 +206,8 @@ em, .it{font-style:italic;}
 .chead--center p{margin-inline:auto;}
 .chapter--dark .chead h2{color:var(--cream);}
 .chapter--dark .chead p{color:var(--cream-soft);}
-.ghost-num{position:absolute; font-family:"DM Serif Display",serif; font-size:clamp(9rem,22vw,17rem); line-height:.7; color:var(--clay); opacity:.07; z-index:0; pointer-events:none; user-select:none;}
-.chapter--dark .ghost-num{color:var(--ochre); opacity:.06;}
+.ghost-num{position:absolute; font-family:"DM Serif Display",serif; font-size:clamp(9rem,22vw,17rem); line-height:.7; color:var(--clay); opacity:.14; z-index:0; pointer-events:none; user-select:none;}
+.chapter--dark .ghost-num{color:var(--ochre); opacity:.13;}
 
 /* margin note / editor's aside */
 .note{border-left:2px solid var(--clay); padding:.4rem 0 .4rem 1.1rem; margin:2rem 0;
