@@ -736,8 +736,8 @@ footer .wordmark b{color:#F6F1E2}
   form && form.addEventListener('submit', function(e){
     e.preventDefault();
     if(!form.checkValidity()){ form.reportValidity(); return; }
-    form.style.display = 'none';
-    document.getElementById('formThanks').style.display = 'block';
+    // TODO(Reid): email this lead's info to the owner here (FormSubmit/Formspree or CRM), then continue.
+    window.location.href = 'get-approved.html';
   });
 })();
 </script>

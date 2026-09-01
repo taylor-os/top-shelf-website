@@ -234,10 +234,8 @@
     // Until wired, the message is confirmed locally (nothing leaves the browser).
     console.log('[Reids Auto — contact message]', { name: name, phone: phone, email: form.email.value.trim(), message: message });
 
-    note.style.display = 'block';
-    note.style.color = 'var(--green)';
-    note.innerHTML = '✓ Thanks, <b>' + name.replace(/[<>&]/g, '') + '</b> — we’ll be in touch shortly.';
-    form.reset();
+    // TODO(Reid): email this message to the owner here (FormSubmit/Formspree or CRM), then continue.
+    window.location.href = 'get-approved.html';
   });
 })();
 </script>

@@ -104,7 +104,7 @@
       <div class="hero__close reveal" data-d="2">
         <p class="hero__soar">Get approved and watch your credit <span class="u-hand clay">soar</span>.</p>
         <div class="hero__actions hero__actions--center">
-          <a class="btn btn--primary btn--lg" href="#apply">Get Approved
+          <a class="btn btn--primary btn--lg" href="get-approved.html">Get Approved
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a class="btn btn--ghost btn--lg" href="tel:+19724361600">Call (972) 436-1600</a>
@@ -185,7 +185,7 @@
       <p class="note reveal"><b>Too far to drive to us?</b> We approve buyers nationwide — and through the fly-in program we help arrange the trip, so you can pick your car in person and drive it home.</p>
 
       <div class="howcta reveal">
-        <a class="btn btn--primary btn--lg" href="#apply">Start with a few questions
+        <a class="btn btn--primary btn--lg" href="get-approved.html">Start with a few questions
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a class="btn btn--ghost btn--lg" href="tel:+19724361600">Or call (972) 436-1600</a>
@@ -373,9 +373,8 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    form.style.display = 'none';
-    thanks.classList.add('show');
-    thanks.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' });
+    // TODO(Reid): email this lead's info to the owner here (FormSubmit/Formspree or CRM), then continue.
+    window.location.href = 'get-approved.html';
   });
 })();
 </script>

@@ -258,10 +258,8 @@
     }).catch(function () {});
     ---------------------------------- */
 
-    note.style.display = 'block';
-    note.style.color = 'var(--pine)';
-    note.innerHTML = '✓ Thanks, ' + name.replace(/[<>&]/g, '') + ' — we’ll be in touch shortly.';
-    form.reset();
+    // TODO(Reid): email this message to the owner here (FormSubmit/Formspree or CRM), then continue.
+    window.location.href = 'get-approved.html';
   });
 })();
 </script>
