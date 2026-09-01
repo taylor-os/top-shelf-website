@@ -319,7 +319,8 @@ em, .it{font-style:italic;}
 .colo__nav a{font-size:.98rem;}
 .colo__line{display:flex; justify-content:space-between; padding:.35rem 0; border-bottom:1px solid var(--hair-dark); font-size:.95rem;}
 .colo__nap{display:grid; gap:.5rem; font-size:1.02rem;}
-.colo__nap .big{font-family:"DM Serif Display",serif; font-size:1.5rem; color:var(--cream);}
+.colo__nap .big{font-family:"DM Serif Display",serif; font-size:1.5rem; color:var(--cream); text-decoration:none;}
+.colo__nap .big:hover{text-decoration:underline; text-underline-offset:.16em; text-decoration-thickness:1px;}
 .colo__foot{margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--hair-dark); display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center;
   font-family:"Space Mono",monospace; font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cream-dim);}
 .colo__badges{display:flex; gap:1.3rem; flex-wrap:wrap;}
