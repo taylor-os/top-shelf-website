@@ -30,6 +30,7 @@
 </script>
 
 <style>
+  html{scroll-padding-top:clamp(74px,11vh,98px);}
   /* review cards — shared pattern (mirrors reviews.html) */
   .reviews-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1.1rem,2.4vw,1.6rem); margin-top:clamp(2rem,4vw,3rem);}
   .review{background:var(--paper); border:1px solid var(--hair); padding:clamp(1.4rem,2.4vw,1.85rem); display:flex; flex-direction:column; box-shadow:0 20px 46px -34px rgba(36,26,16,.5);}
@@ -49,7 +50,7 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#apply">Skip to “get approved”</a>
+<a class="skip" href="#contact">Skip to the form</a>
 
 <!-- ============ MASTHEAD ============ -->
 <header class="masthead" id="masthead">
@@ -59,10 +60,10 @@
     </a>
     <nav class="mast-nav" aria-label="Primary">
       <div class="mast-links">
-        <a href="financing.html">Financing</a>
-        <a href="about.html">About</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
+        <a href="#financing">Financing</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="mast-actions">
         <a class="mast-phone" href="tel:+19724361600">
@@ -77,10 +78,10 @@
     </nav>
   </div>
   <nav class="mmenu" id="mmenu" aria-label="Mobile">
-    <a href="financing.html">Financing</a>
-    <a href="about.html">About</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contact.html">Contact</a>
+    <a href="#financing">Financing</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
     <a href="tel:+19724361600">Call (972) 436-1600</a>
     <a class="btn btn--primary" href="get-approved.html">Start My Application</a>
   </nav>
@@ -125,7 +126,7 @@
   </div>
 
   <!-- ============ PROBLEM → SOLUTION ============ -->
-  <section class="chapter chapter--dark" id="hard">
+  <section class="chapter chapter--dark" id="financing">
     <span class="ghost-num" style="top:-.2em; right:.1em;" aria-hidden="true">01</span>
     <div class="wrap hard__grid">
       <div class="hard__fig reveal">
@@ -144,34 +145,31 @@
           <div class="ledger__row" role="listitem"><span class="ledger__n">04</span><span class="ledger__t">No credit at all</span></div>
         </div>
         <p class="note"><b>Here, you’re approved.</b> $0 down on most loans — drive home today.</p>
+        <div class="hero__actions" style="margin-top:1.8rem;">
+          <a class="btn btn--light btn--lg" href="get-approved.html">Start My Application<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ HOW IT WORKS ============ -->
-  <section class="chapter chapter--sand" id="how">
+
+  <!-- ============ ABOUT ============ -->
+  <section class="chapter chapter--sand" id="about">
     <span class="ghost-num" style="top:-.2em; right:.05em;" aria-hidden="true">02</span>
     <div class="wrap">
-      <div class="chead reveal">
-        <span class="kicker">How it works</span>
-        <h2>Three steps. No maze.</h2>
-      </div>
-      <div class="steps">
-        <div class="step reveal" data-d="0"><span class="step__n">1</span><h3>Tell us where you are</h3><p>A few quick questions — start right here. No lot visit for a first answer.</p></div>
-        <div class="step reveal" data-d="1"><span class="step__n">2</span><h3>We get you approved</h3><p>We do the lender legwork and come back with a real approval — $0 down on most loans.</p></div>
-        <div class="step reveal" data-d="2"><span class="step__n">3</span><h3>Drive home</h3><p>Sign, grab your keys, and go. On-time payments report to the bureaus, so your credit climbs as you drive.</p></div>
-      </div>
-
-      <div class="howcta reveal">
-        <a class="btn btn--primary btn--lg" href="get-approved.html">Start My Application<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--ghost btn--lg" href="tel:+19724361600">Or call (972) 436-1600</a>
+      <div class="reid__copy reveal" style="max-width:760px; margin-inline:auto; text-align:center;">
+        <span class="kicker">About Reids</span>
+        <h2>Veteran-owned, built for real people.</h2>
+        <p class="lede" style="margin-inline:auto; margin-top:1rem;">We opened in 2009 with one rule that hasn’t moved since: treat every person who walks in like they matter. A bankruptcy, a repossession, a rough patch — none of it makes you a bad bet. It just means you had a hard chapter, and we read the whole book.</p>
+        <div class="hero__actions hero__actions--center" style="margin-top:1.9rem;">
+          <a class="btn btn--primary btn--lg" href="get-approved.html">Start My Application<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ PROOF ============ -->
-  <section class="chapter chapter--paper2" id="proof">
+  <section class="chapter chapter--paper2" id="reviews">
     <span class="ghost-num" style="top:-.18em; left:.02em;" aria-hidden="true">03</span>
     <div class="wrap">
       <div class="proof__grid">
@@ -211,14 +209,15 @@
         </article>
       </div>
 
-      <p class="note reveal" style="margin-inline:auto; margin-top:clamp(2rem,4vw,2.8rem); text-align:center; max-width:52ch; border-left:0; padding-left:0;">
-        <a class="tlink" href="reviews.html">Read all 200+ reviews →</a>
-      </p>
+      <div class="howcta reveal" style="margin-top:clamp(2rem,4vw,2.8rem);">
+        <a class="btn btn--primary btn--lg" href="get-approved.html">Start My Application<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/search/?api=1&amp;query=Reids+Auto+Connection" target="_blank" rel="noopener">Read all on Google →</a>
+      </div>
     </div>
   </section>
 
   <!-- ============ CLOSE — THE NEXT CHAPTER / APPLY ============ -->
-  <section class="close" id="apply">
+  <section class="close" id="contact">
     <div class="close__bg" aria-hidden="true">
       <div class="frame">
         <img src="assets/img/customer-drive.webp" width="1600" height="900" loading="lazy" alt="" onerror="this.closest('.frame').classList.add('is-missing')" />
@@ -228,9 +227,10 @@
     <div class="wrap">
       <div class="close__grid">
         <div class="close__copy reveal">
-          <span class="kicker kicker--cream">The next chapter — yours</span>
+          <span class="kicker kicker--cream">Get in touch</span>
           <h2>Let’s get you approved.</h2>
           <p class="close__lede">No lot to drive to for a first answer. Tell us where you’re starting from, and a real person picks it up from there.</p>
+          <p class="close__lede" style="margin-top:.7rem;">Call <a href="tel:+19724361600" style="color:var(--cream); font-weight:700;">(972) 436-1600</a> — Mon–Sat, 10–7, by appointment.</p>
           <ul class="close__list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>$0 down on most loans</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Approved through Ch. 7 &amp; 13, repo, no credit</li>
@@ -289,10 +289,10 @@
       <div class="colo__col">
         <h3>Explore</h3>
         <div class="colo__nav">
-          <a href="financing.html">Fresh Start Financing</a>
-          <a href="about.html">About</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="contact.html">Contact</a>
+          <a href="#financing">Fresh Start Financing</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
           <a href="get-approved.html">Get Approved</a>
         </div>
       </div>
