@@ -6,7 +6,8 @@
   },
   "tx-smoke": {
     "published": "2026-08-02",
-    "expires": "2026-09-01"
+    "expires": "2026-09-01",
+    "taken_down": "2026-09-02"
   },
   "reids-auto-connection": {
     "published": "2026-08-04",
