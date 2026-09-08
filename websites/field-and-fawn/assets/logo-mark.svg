@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 48" role="img" aria-label="Field and Fawn">
+  <g fill="none" stroke="#8B9A7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 46c-.5-8 .5-16 0-24-.3-5 .2-9 .2-13"/>
+    <path d="M20 31c-6 .3-9.5-2.8-10.5-8 5.5-.6 9.4 2.4 10.5 8z" fill="#A9B79A" stroke="none"/>
+    <path d="M20 24c6 .3 9.5-2.8 10.5-8-5.5-.6-9.4 2.4-10.5 8z" fill="#A9B79A" stroke="none"/>
+    <path d="M20.2 16c-5 .2-8-2.4-8.8-6.7 4.6-.5 7.9 2 8.8 6.7z" fill="#A9B79A" stroke="none"/>
+  </g>
+  <circle cx="20.2" cy="6.4" r="2.6" fill="#C0694A"/>
+</svg>
