@@ -698,7 +698,7 @@
   });
   // buttery momentum scroll (Lenis), wired into the existing GSAP ScrollTrigger + gold-dust
   if(!reduce && window.Lenis){
-    var lenis=new Lenis({duration:1.1, easing:function(t){return t===1?1:1-Math.pow(2,-10*t);}, smoothWheel:true});
+    var lenis=new Lenis({lerp:0.1, wheelMultiplier:1, smoothWheel:true});
     ['svcDrawer','tsChatPanel'].forEach(function(id){var el=document.getElementById(id); if(el)el.setAttribute('data-lenis-prevent','');});
     if(window.ScrollTrigger) lenis.on('scroll',ScrollTrigger.update);
     if(window.gsap){ gsap.ticker.add(function(t){lenis.raf(t*1000);}); gsap.ticker.lagSmoothing(0);} else { (function raf(t){lenis.raf(t); requestAnimationFrame(raf);})(); }
@@ -715,6 +715,44 @@
       gx=(e.clientX-(r.left+r.width/2))*.15; gy=(e.clientY-(r.top+r.height/2))*.22; if(!raf)raf=requestAnimationFrame(loop);});
     b.addEventListener('pointerleave',function(){hov=false;gx=0;gy=0; if(!raf)raf=requestAnimationFrame(loop);});
   });
+})();
+</script>
+<style id="odo-css">
+.hero-stat-num .odo-d{display:inline-block;height:1em;overflow:hidden;vertical-align:bottom;line-height:1;font-variant-numeric:tabular-nums}
+.hero-stat-num .odo-r{display:block;will-change:transform;font-variant-numeric:tabular-nums}
+.hero-stat-num .odo-r span{display:flex;align-items:center;justify-content:center;height:1em;line-height:1}
+.hero-stat-num .odo-x{display:inline-block;vertical-align:bottom;line-height:1}
+</style>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var stats=[].slice.call(document.querySelectorAll('.hero-stat-num[data-count]'));
+  if(!stats.length) return;
+  stats.forEach(function(el){
+    var pre=el.getAttribute('data-prefix')||'', suf=el.getAttribute('data-suffix')||'', ds=String(el.getAttribute('data-count'));
+    el._counted=true; el.removeAttribute('data-count');          // stop site.js overwriting the markup
+    el._final=pre+ds+suf;
+    var html=''; if(pre)html+='<span class="odo-x">'+pre+'</span>';
+    for(var i=0;i<ds.length;i++){ var ch=ds[i];
+      if(ch<'0'||ch>'9'){ html+='<span class="odo-x">'+ch+'</span>'; continue; }
+      var seq=''; for(var c=0;c<3;c++)for(var n=0;n<10;n++)seq+='<span>'+n+'</span>';
+      html+='<span class="odo-d"><span class="odo-r" data-t="'+(20+ +ch)+'">'+seq+'</span></span>';
+    }
+    if(suf)html+='<span class="odo-x">'+suf+'</span>';
+    el.innerHTML=html;
+  });
+  function roll(){
+    document.querySelectorAll('.hero-stat-num').forEach(function(el,si){
+      [].slice.call(el.querySelectorAll('.odo-r')).forEach(function(r,di){
+        var t=r.getAttribute('data-t');
+        if(reduce){ r.style.transform='translateY(-'+t+'em)'; return; }
+        r.style.transition='transform 1.5s cubic-bezier(.16,.86,.26,1) '+(si*0.1+di*0.16).toFixed(2)+'s';
+        requestAnimationFrame(function(){requestAnimationFrame(function(){ r.style.transform='translateY(-'+t+'em)'; });});
+      });
+    });
+    if(!reduce) setTimeout(function(){ stats.forEach(function(el){ if(el._final!=null) el.textContent=el._final; }); }, 2200);
+  }
+  if(document.readyState==='complete') setTimeout(roll,180); else window.addEventListener('load',function(){setTimeout(roll,160);});
 })();
 </script>
 </body>
