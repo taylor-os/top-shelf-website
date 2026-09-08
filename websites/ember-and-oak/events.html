@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private Events | Ember &amp; Oak</title>
+<meta name="description" content="Private dining at Ember & Oak: chef's table dinners, a private room, and full buyouts for the nights that matter. Wood-fired menus built around your table. Inquire or call 123-456-7890.">
+<meta property="og:title" content="Private Events | Ember & Oak">
+<meta property="og:description" content="Chef's table dinners, a private room, and full buyouts, built around live fire.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/interior.jpg">
+<link rel="icon" href="assets/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="12.5 5.5 19.5 12 12.5 18.5"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6.5 9.2 17.5 4 12.3"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.6"/><path d="M2.6 20.5a6.4 6.4 0 0 1 12.8 0"/><path d="M16 4.6a3.6 3.6 0 0 1 0 6.8"/><path d="M21.4 20.5a6.4 6.4 0 0 0-4-5.9"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10.5c0 6-9 11.5-9 11.5s-9-5.5-9-11.5a9 9 0 0 1 18 0z"/><circle cx="12" cy="10.3" r="3"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.4"/><polyline points="3.5 7 12 13 20.5 7"/></symbol>
+<symbol id="i-glass" viewBox="0 0 24 24"><path d="M4 4h16l-8 8zM12 12v7M8 21h8"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3-1.6 4.6-1.6 7.2A2.6 2.6 0 0 0 13 12.7c1.4-.9 1-2.8.5-3.8 2 1.4 3.5 3.6 3.5 6.1a5 5 0 0 1-10 0c0-3 2-4.6 3-6.1.3 1.2 1 2 2 2.3"/></symbol>
+</g></defs></svg>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="brand" aria-label="Ember and Oak, home">
+      <img src="assets/logo-mark.svg" alt="" class="brand__mark" width="34" height="41">
+      <span class="brand__name">Ember &amp; Oak<small>Wood-Fired Kitchen</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="events.html" aria-current="page">Events</a><a href="reserve.html">Reserve</a>
+    </nav>
+    <div class="header__cta">
+      <a href="tel:+11234567890" class="header__phone"><svg><use href="#i-phone"/></svg>123-456-7890</a>
+      <a href="reserve.html" class="btn btn--ember">Reserve</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer__top">
+    <span class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark"><span class="brand__name">Ember &amp; Oak</span></span>
+    <button class="drawer__close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="events.html">Events</a><a href="reserve.html">Reserve</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="tel:+11234567890" class="drawer__phone"><svg><use href="#i-phone"/></svg>123-456-7890</a>
+    <a href="reserve.html" class="btn btn--ember btn--lg">Reserve a table</a>
+  </div>
+</div>
+
+<main>
+<section class="pagehero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Private Events</div>
+    <span class="eyebrow">Private events</span>
+    <h1>The nights worth gathering for.</h1>
+    <p>Rehearsal dinners, milestone birthdays, company nights, or a long table of the people you like most. We build the fire around your night.</p>
+  </div>
+</section>
+
+<section class="section section--char">
+  <div class="container">
+    <div class="grid grid-3" data-reveal-stagger>
+      <div class="feature">
+        <span class="feature__ic"><svg><use href="#i-users"/></svg></span>
+        <h3>The Private Room</h3>
+        <p style="margin-bottom:1rem">Our timber-and-brick room, tucked off the main dining floor, with its own service and playlist.</p>
+        <p style="color:var(--gold);font-family:var(--font-display);font-size:1.05rem">Seats 10 to 26</p>
+      </div>
+      <div class="feature">
+        <span class="feature__ic"><svg><use href="#i-flame"/></svg></span>
+        <h3>The Chef's Table</h3>
+        <p style="margin-bottom:1rem">A front-row seat at the fire. A guided, multi-course menu from Chef Marsh, paced by the kitchen.</p>
+        <p style="color:var(--gold);font-family:var(--font-display);font-size:1.05rem">Seats 6 to 12</p>
+      </div>
+      <div class="feature">
+        <span class="feature__ic"><svg><use href="#i-glass"/></svg></span>
+        <h3>The Full Buyout</h3>
+        <p style="margin-bottom:1rem">The whole room, the whole bar, the whole night. Fully bespoke menus and a dedicated team.</p>
+        <p style="color:var(--gold);font-family:var(--font-display);font-size:1.05rem">Up to 90 guests</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--char2">
+  <div class="container">
+    <div class="split">
+      <div class="split__media tall" data-reveal><img src="assets/img/interior.jpg" alt="The private dining room"></div>
+      <div class="split__body" data-reveal>
+        <span class="eyebrow">What's included</span>
+        <h2 style="margin:1rem 0">We handle the details.</h2>
+        <p>You bring the people. We take care of the rest, from the first email to the last pour.</p>
+        <ul class="ticks">
+          <li><svg><use href="#i-check"/></svg>A dedicated event lead and service team</li>
+          <li><svg><use href="#i-check"/></svg>Custom wood-fired menus, tastings for larger parties</li>
+          <li><svg><use href="#i-check"/></svg>Cocktail pairings and a bar built for your night</li>
+          <li><svg><use href="#i-check"/></svg>AV, florals, and playlist handled on request</li>
+        </ul>
+        <a href="reserve.html" class="btn btn--ember">Start an inquiry <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--deep">
+  <div class="container">
+    <div class="section-head center" data-reveal><span class="eyebrow">A look inside</span><h2>The room, the fire, the table.</h2></div>
+    <div class="gallery" data-reveal>
+      <figure class="g-feat"><img src="assets/img/hero.jpg" alt="The open kitchen and fire" loading="lazy"></figure>
+      <figure class="g-wide"><img src="assets/img/interior.jpg" alt="The dining room" loading="lazy"></figure>
+      <figure><img src="assets/img/steak.jpg" alt="Wood-fired ribeye" loading="lazy"></figure>
+      <figure><img src="assets/img/cocktail.jpg" alt="A craft cocktail" loading="lazy"></figure>
+      <figure class="g-wide"><img src="assets/img/chef.jpg" alt="Chef at the grill" loading="lazy"></figure>
+      <figure class="g-wide"><img src="assets/img/veg.jpg" alt="Charred burrata" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--char">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Let's plan your night.</h2>
+      <p>Send us the date, the headcount, and the occasion. We'll come back within a day with ideas and availability.</p>
+      <div class="hero__actions" style="justify-content:center;margin-top:0">
+        <a href="reserve.html" class="btn btn--ember btn--lg"><svg><use href="#i-cal"/></svg>Start an inquiry</a>
+        <a href="tel:+11234567890" class="btn btn--outline btn--lg"><svg><use href="#i-phone"/></svg>123-456-7890</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark"><span class="brand__name">Ember &amp; Oak<small>Wood-Fired Kitchen</small></span></a>
+        <p>A wood-fired kitchen and craft cocktail bar on Kiln Street in Midtown. Cooked over oak, every night.</p>
+      </div>
+      <div class="footer__col"><h4>Explore</h4><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="events.html">Private Events</a><a href="reserve.html">Reserve</a></div>
+      <div class="footer__col"><h4>Hours</h4><ul><li>Tue to Thu · 5 to 10pm</li><li>Fri &amp; Sat · 5pm to midnight</li><li>Sunday · 5 to 9pm</li><li>Closed Mondays</li></ul></div>
+      <div class="footer__col footer__contact"><h4>Find us</h4><ul>
+        <li><svg><use href="#i-pin"/></svg>418 Kiln Street, Midtown</li>
+        <li><svg><use href="#i-phone"/></svg><a href="tel:+11234567890">123-456-7890</a></li>
+        <li><svg><use href="#i-mail"/></svg><a href="mailto:contact@emberandoak.com">contact@emberandoak.com</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Ember &amp; Oak. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Accessibility</a></span>
+    </div>
+  </div>
+  <div class="footer__credit"><div class="container">
+    <span>This is a sample website by <a href="https://www.topshelfsolutions.io/" target="_blank" rel="noopener">Top Shelf Business Solutions</a>. Want one like it for your business?</span>
+  </div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

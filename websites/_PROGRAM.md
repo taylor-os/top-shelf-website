@@ -9,9 +9,9 @@ and featured on each matching `industry-*.html` page.
 
 | # | Industry | Company | Slug | Palette / world | Status |
 |---|----------|---------|------|-----------------|--------|
-| 1 | Home Services | Everline Home Services | `everline-home-services` | Midnight navy + amber · premium-industrial | 🔨 building |
-| 2 | Restaurants & Bars | Ember & Oak | `ember-and-oak` | Charcoal + ember gold · cinematic | ⬜ queued |
-| 3 | Medical & Dental | Brightwater Dental | `brightwater-dental` | Aqua/teal + white · calm clinical | ⬜ queued |
+| 1 | Home Services | Everline Home Services | `everline-home-services` | Midnight navy + amber · premium-industrial | ✅ **LIVE** · Judge PASS |
+| 2 | Restaurants & Bars | Ember & Oak | `ember-and-oak` | Charcoal + ember gold · cinematic | ✅ **LIVE** · Judge PASS |
+| 3 | Medical & Dental | Brightwater Dental | `brightwater-dental` | Aqua/teal + white · calm clinical | 🔨 building |
 | 4 | Law Firms | Halcourt & Vale | `halcourt-vale` | Ink/forest + brass · authoritative | ⬜ queued |
 | 5 | Retail & Local | Field & Fawn | `field-and-fawn` | Cream + terracotta/sage · boutique | ⬜ queued |
 | 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ⬜ queued |
@@ -36,5 +36,14 @@ and featured on each matching `industry-*.html` page.
 - No visible building signage/brand text in generated photos
 
 ## Deploy note
-Repo has no build/FTP workflow (only `expire-samples.yml`). Confirm go-live path with owner
-before first push. Sites live under `websites/` (not `samples/`) to avoid the 60-day expiry sweep.
+Push to `main` **auto-deploys to production** (Hostinger GitHub integration — verified: all pages +
+assets return 200 at topshelfsolutions.io/websites/<slug>/). Sites live under `websites/` (not
+`samples/`) to avoid the 60-day `expire-samples.yml` sweep, which only touches `demo/`.
+Live sites are NOT linked from nav/industry pages yet — integration pass is deferred.
+
+## Verify workflow note (durable)
+In-app Browser pane will NOT composite content below the fold after a programmatic scroll (blank
+frames even though DOM is correct). Verify with **Playwright** instead: navigate → force-reveal
+`[data-reveal]` via evaluate → `browser_take_screenshot fullPage`. Lenis cdnjs path 404s — use
+`https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js`. Seed count-up stat values in the HTML
+(not `0`) so they're correct with JS off / in static captures.

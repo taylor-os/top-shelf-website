@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Ember &amp; Oak</title>
+<meta name="description" content="The Ember & Oak menu: wood-fired starters, steaks and seasonal plates from the grill, a craft cocktail list, and dessert. Everything cooked over live oak. Reserve a table or call 123-456-7890.">
+<meta property="og:title" content="Menu | Ember & Oak">
+<meta property="og:description" content="Wood-fired starters, steaks from the grill, craft cocktails, and dessert.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/steak.jpg">
+<link rel="icon" href="assets/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="12.5 5.5 19.5 12 12.5 18.5"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20.5A7.5 7.5 0 0 1 3.5 13C3.5 7.5 8.5 4 20.5 4c0 8.5-4.5 12.5-9.5 12.5z"/><line x1="3.5" y1="21" x2="10.5" y2="14.5"/></symbol>
+</g></defs></svg>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="brand" aria-label="Ember and Oak, home">
+      <img src="assets/logo-mark.svg" alt="" class="brand__mark" width="34" height="41">
+      <span class="brand__name">Ember &amp; Oak<small>Wood-Fired Kitchen</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html" aria-current="page">Menu</a>
+      <a href="story.html">Our Story</a>
+      <a href="events.html">Events</a>
+      <a href="reserve.html">Reserve</a>
+    </nav>
+    <div class="header__cta">
+      <a href="tel:+11234567890" class="header__phone"><svg><use href="#i-phone"/></svg>123-456-7890</a>
+      <a href="reserve.html" class="btn btn--ember">Reserve</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer__top">
+    <span class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark"><span class="brand__name">Ember &amp; Oak</span></span>
+    <button class="drawer__close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="events.html">Events</a><a href="reserve.html">Reserve</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="tel:+11234567890" class="drawer__phone"><svg><use href="#i-phone"/></svg>123-456-7890</a>
+    <a href="reserve.html" class="btn btn--ember btn--lg">Reserve a table</a>
+  </div>
+</div>
+
+<main>
+<section class="pagehero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Menu</div>
+    <span class="eyebrow">The menu</span>
+    <h1>Cooked over oak, served all night.</h1>
+    <p>A short menu that changes with the season and the fire. Ask your server what's best tonight, they'll tell you honestly.</p>
+  </div>
+</section>
+
+<section class="section section--char">
+  <div class="container container--narrow">
+
+    <div class="menu-section" data-reveal>
+      <div class="menu-section__head"><h2>Wood-Fired Starters</h2><span class="line"></span></div>
+      <div class="menu-item"><div class="menu-item__name">Hearth Bread &amp; Cultured Butter</div><div class="menu-item__price">9</div><div class="menu-item__desc">Blistered on the coals, torn by hand, cultured butter and sea salt.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Charred Burrata <span class="menu-item__tag">Seasonal</span></div><div class="menu-item__price">16</div><div class="menu-item__desc">Blistered over the coals with stone fruit, basil, and good olive oil.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Grilled Oysters</div><div class="menu-item__price">18</div><div class="menu-item__desc">A half dozen, garlic-herb butter, lemon, a little heat.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Ember Wings</div><div class="menu-item__price">14</div><div class="menu-item__desc">Smoked then fired hot, tossed in smoked honey and chili.</div></div>
+    </div>
+
+    <div class="menu-section" data-reveal>
+      <div class="menu-section__head"><h2>From the Grill</h2><span class="line"></span></div>
+      <div class="menu-item"><div class="menu-item__name">The 14oz Ribeye</div><div class="menu-item__price">46</div><div class="menu-item__desc">Dry-aged, seared hard over oak, bone-marrow butter and flaky salt.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Wood-Fired Half Chicken</div><div class="menu-item__price">29</div><div class="menu-item__desc">Brined and charred, lemon and thyme, pan drippings.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Cedar-Plank Salmon</div><div class="menu-item__price">32</div><div class="menu-item__desc">Cooked on the plank over embers, herb oil, charred lemon.</div></div>
+      <div class="menu-item"><div class="menu-item__name">King Trumpet Mushrooms <span class="menu-item__tag">Veg</span></div><div class="menu-item__price">24</div><div class="menu-item__desc">Grilled whole, salsa verde, a plate that eats like the steak.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Dry-Aged Burger</div><div class="menu-item__price">21</div><div class="menu-item__desc">Smoked cheddar, house pickles, fries cooked in beef fat.</div></div>
+    </div>
+
+    <div class="menu-section" id="bar" data-reveal>
+      <div class="menu-section__head"><h2>From the Bar</h2><span class="line"></span></div>
+      <div class="menu-item"><div class="menu-item__name">The Ember Old Fashioned</div><div class="menu-item__price">16</div><div class="menu-item__desc">Bourbon, demerara, smoked tableside under a glass cloche.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Smoked Maple Manhattan</div><div class="menu-item__price">17</div><div class="menu-item__desc">Rye, sweet vermouth, maple, a whisper of smoke.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Oak &amp; Honey</div><div class="menu-item__price">15</div><div class="menu-item__desc">Bourbon, house honey syrup, lemon, a long finish.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Seasonal Spritz</div><div class="menu-item__price">14</div><div class="menu-item__desc">Ask what's in it this week. It's always good.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Zero-Proof, Done Right</div><div class="menu-item__price">9</div><div class="menu-item__desc">Two or three proper non-alcoholic cocktails, not an afterthought.</div></div>
+    </div>
+
+    <div class="menu-section" data-reveal>
+      <div class="menu-section__head"><h2>Dessert</h2><span class="line"></span></div>
+      <div class="menu-item"><div class="menu-item__name">Warm Chocolate Torte</div><div class="menu-item__price">12</div><div class="menu-item__desc">Dense, barely set, salted caramel and cream.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Bourbon Pecan Tart</div><div class="menu-item__price">11</div><div class="menu-item__desc">Brown butter crust, bourbon caramel, crème fraîche.</div></div>
+      <div class="menu-item"><div class="menu-item__name">Seasonal Sorbet</div><div class="menu-item__price">9</div><div class="menu-item__desc">Whatever fruit is at its best right now.</div></div>
+    </div>
+
+    <p style="text-align:center;color:var(--smoke-2);font-size:.85rem;margin-top:2rem">Menu changes with the season. Ask about allergens, our kitchen is glad to help. A 20% gratuity is added for parties of six or more.</p>
+  </div>
+</section>
+
+<section class="section section--cream section--tight">
+  <div class="container">
+    <div class="split">
+      <div class="split__body" data-reveal>
+        <span class="eyebrow"><svg style="width:1.05em;height:1.05em;color:var(--ember-600)"><use href="#i-leaf"/></svg> Sourcing</span>
+        <h2 style="margin:1rem 0">Close to home, in season.</h2>
+        <p>We buy from growers and ranchers we can drive to, cook what's ripe, and let the fire do the rest. If a dish isn't right yet, it isn't on the menu.</p>
+      </div>
+      <div class="split__body" data-reveal style="display:flex;align-items:center">
+        <div style="text-align:center;width:100%">
+          <p style="font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,2rem);font-style:italic;color:var(--ink);line-height:1.4">"The fire is honest. It rewards good ingredients and punishes shortcuts. That's the whole philosophy."</p>
+          <p style="margin-top:1rem;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-l)">Chef Elena Marsh</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--deep">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Hungry yet?</h2>
+      <p>Tables go quickly on weekends. Reserve online in a minute, or call and we'll find you a seat.</p>
+      <div class="hero__actions" style="justify-content:center;margin-top:0">
+        <a href="reserve.html" class="btn btn--ember btn--lg"><svg><use href="#i-cal"/></svg>Reserve a table</a>
+        <a href="tel:+11234567890" class="btn btn--outline btn--lg"><svg><use href="#i-phone"/></svg>123-456-7890</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark"><span class="brand__name">Ember &amp; Oak<small>Wood-Fired Kitchen</small></span></a>
+        <p>A wood-fired kitchen and craft cocktail bar on Kiln Street in Midtown. Cooked over oak, every night.</p>
+      </div>
+      <div class="footer__col"><h4>Explore</h4><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="events.html">Private Events</a><a href="reserve.html">Reserve</a></div>
+      <div class="footer__col"><h4>Hours</h4><ul><li>Tue to Thu · 5 to 10pm</li><li>Fri &amp; Sat · 5pm to midnight</li><li>Sunday · 5 to 9pm</li><li>Closed Mondays</li></ul></div>
+      <div class="footer__col footer__contact"><h4>Find us</h4><ul>
+        <li><svg><use href="#i-pin"/></svg>418 Kiln Street, Midtown</li>
+        <li><svg><use href="#i-phone"/></svg><a href="tel:+11234567890">123-456-7890</a></li>
+        <li><svg><use href="#i-mail"/></svg><a href="mailto:contact@emberandoak.com">contact@emberandoak.com</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Ember &amp; Oak. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Accessibility</a></span>
+    </div>
+  </div>
+  <div class="footer__credit"><div class="container">
+    <span>This is a sample website by <a href="https://www.topshelfsolutions.io/" target="_blank" rel="noopener">Top Shelf Business Solutions</a>. Want one like it for your business?</span>
+  </div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
