@@ -297,3 +297,56 @@ em,.italic{font-style:italic}
   [data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}
   .hero__media img{height:100%!important}
 }
+
+/* ===== elevated menu (menu.html) ===== */
+.signature{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(1.4rem,4vw,3rem);align-items:center;
+  background:linear-gradient(155deg,var(--char-800),var(--char-900));border:1px solid rgba(228,180,88,.22);
+  border-radius:var(--r-lg);padding:clamp(1.2rem,2.4vw,1.8rem);margin-bottom:clamp(2.6rem,5vw,3.8rem);
+  box-shadow:var(--sh-lg);overflow:hidden}
+.signature::after{content:"";position:absolute;inset:0;background:radial-gradient(55% 75% at 88% 15%,rgba(232,114,42,.18),transparent 60%);pointer-events:none}
+.signature__media{position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:5/4;box-shadow:var(--sh-md)}
+.signature__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.signature:hover .signature__media img{transform:scale(1.06)}
+.signature__badge{position:absolute;top:.9rem;left:.9rem;z-index:2;font-family:var(--font-body);font-size:.62rem;
+  font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#1a0f08;background:var(--gold);
+  padding:.5em 1em;border-radius:var(--r-pill);box-shadow:0 6px 20px rgba(228,180,88,.35)}
+.signature__body{position:relative;z-index:1}
+.signature__name{font-family:var(--font-display);font-size:clamp(1.9rem,3.6vw,2.9rem);color:var(--cream);line-height:1.04;margin:.55rem 0 0}
+.signature__row{display:flex;align-items:baseline;gap:1rem;margin:.7rem 0 .9rem}
+.signature__price{font-family:var(--font-display);font-size:1.7rem;color:var(--gold)}
+.signature__meta{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke-2)}
+.signature__desc{color:var(--smoke);max-width:42ch}
+
+.menu-card{position:relative;
+  background:linear-gradient(var(--char-850),var(--char-850)) padding-box,
+    linear-gradient(180deg,rgba(228,180,88,.4),rgba(228,180,88,.05)) border-box;
+  border:1px solid transparent;border-radius:var(--r-lg);
+  padding:clamp(1.6rem,4vw,3.4rem);box-shadow:var(--sh-lg);overflow:hidden}
+.menu-card::before{content:"";position:absolute;top:0;left:0;right:0;height:180px;
+  background:radial-gradient(60% 100% at 50% 0%,rgba(232,114,42,.1),transparent 70%);pointer-events:none}
+
+.fsec{position:relative}
+.fsec + .fsec{margin-top:clamp(2.4rem,5vw,3.4rem)}
+.fsec__head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.2rem}
+.fsec__no{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--gold);opacity:.85}
+.fsec__title{font-family:var(--font-display);font-size:var(--fs-h3);color:var(--cream);white-space:nowrap;letter-spacing:.01em}
+.fsec__rule{flex:1;height:1px;background:linear-gradient(90deg,rgba(228,180,88,.45),rgba(228,180,88,.04))}
+.fsec__orn{flex-shrink:0;width:15px;height:17px;fill:var(--ember-300);stroke:none;filter:drop-shadow(0 0 6px rgba(232,114,42,.5))}
+
+.fitem{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;column-gap:.7rem;padding:.82rem 0}
+.fitem + .fitem{border-top:1px solid rgba(228,180,88,.09)}
+.fitem__name{font-family:var(--font-display);font-size:1.22rem;color:var(--cream);transition:color .3s var(--ease)}
+.fitem__dots{align-self:baseline;border-bottom:1.5px dotted rgba(228,180,88,.4);transform:translateY(-.32em);min-width:1.4rem}
+.fitem__price{font-family:var(--font-display);font-size:1.22rem;color:var(--gold);font-variant-numeric:tabular-nums}
+.fitem__desc{grid-column:1/-1;font-size:var(--fs-sm);color:var(--smoke);max-width:62ch;margin-top:.28rem}
+.fitem:hover .fitem__name{color:var(--gold-300)}
+.fitem__tag{font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ember-300);
+  border:1px solid rgba(242,154,91,.5);border-radius:var(--r-pill);padding:.18em .6em;margin-left:.55em;vertical-align:middle;white-space:nowrap}
+.menu-foot{text-align:center;color:var(--smoke-2);font-size:.82rem;margin-top:2.4rem;letter-spacing:.02em}
+
+@media(max-width:760px){
+  .signature{grid-template-columns:1fr}
+  .signature__media{order:-1;aspect-ratio:16/10}
+  .fitem{grid-template-columns:1fr auto;column-gap:.9rem}
+  .fitem__dots{display:none}
+}
