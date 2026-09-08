@@ -122,20 +122,23 @@ body.hero-dark .header:not(.scrolled) .nav-toggle{color:var(--d-head)}
 .drawer__phone svg{width:1em;height:1em}
 
 /* hero (editorial split) */
-.hero{padding-block:clamp(8.5rem,15vh,11rem) clamp(3.5rem,7vw,5.5rem);background:var(--ivory);position:relative;overflow:hidden}
-.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-.hero__est{font-family:var(--font-body);font-size:var(--fs-xs);letter-spacing:.28em;text-transform:uppercase;color:var(--brass-600)}
-.hero h1{font-size:var(--fs-hero);color:var(--ink);margin:1.4rem 0;font-weight:500;text-wrap:balance}
-.hero h1 em{color:var(--brass-600)}
+.hero{position:relative;min-height:clamp(560px,82vh,760px);display:flex;align-items:center;
+  padding-block:clamp(7rem,12vh,9rem) clamp(3rem,6vw,4.5rem);background-color:var(--ink);
+  background-size:cover;background-position:center;overflow:hidden;isolation:isolate;color:var(--d-head)}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:
+  linear-gradient(100deg,rgba(16,26,21,.93) 0%,rgba(16,26,21,.74) 42%,rgba(16,26,21,.42) 74%,rgba(16,26,21,.28) 100%),
+  linear-gradient(180deg,rgba(16,26,21,.3),rgba(16,26,21,.34) 55%,rgba(16,26,21,.74))}
+.hero .container{position:relative;z-index:1}
+.hero__inner{max-width:640px}
+.hero__est{font-family:var(--font-body);font-size:var(--fs-xs);letter-spacing:.28em;text-transform:uppercase;color:var(--brass-300)}
+.hero h1{font-size:var(--fs-hero);color:var(--d-head);margin:1.4rem 0;font-weight:500;text-wrap:balance}
+.hero h1 em{color:var(--brass-300)}
 .hero__rule{width:60px;height:1px;background:var(--brass);margin:1.4rem 0}
-.hero__sub{font-size:var(--fs-lead);color:var(--muted);max-width:46ch}
+.hero__sub{font-size:var(--fs-lead);color:var(--d-body);max-width:46ch}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
-.hero__media{position:relative}
-.hero__media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;box-shadow:var(--sh-lg)}
-.hero__media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(166,129,63,.35);pointer-events:none}
-.hero__tag{position:absolute;left:-1rem;bottom:1.6rem;background:var(--ink);color:var(--d-head);padding:1rem 1.4rem;max-width:16rem}
-.hero__tag b{font-family:var(--font-head);font-size:1.9rem;color:var(--brass-300);display:block;line-height:1}
-.hero__tag span{font-size:.8rem;color:var(--d-body)}
+.hero__stat{margin-top:2.4rem;display:flex;align-items:baseline;gap:.9rem;border-top:1px solid rgba(199,166,92,.28);padding-top:1.3rem;max-width:30rem}
+.hero__stat b{font-family:var(--font-head);font-size:2.1rem;color:var(--brass-300);line-height:1}
+.hero__stat span{font-size:.84rem;color:var(--d-body)}
 
 /* practice cards */
 .grid{display:grid;gap:clamp(1rem,2vw,1.5rem)}
@@ -201,8 +204,10 @@ body.hero-dark .header:not(.scrolled) .nav-toggle{color:var(--d-head)}
 .att p{font-size:var(--fs-sm);color:var(--muted)}
 
 /* page hero */
-.pagehero{padding-block:clamp(9rem,16vh,12rem) clamp(3rem,6vw,4.5rem);background:var(--ink);color:var(--d-head);position:relative;overflow:hidden}
-.pagehero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--brass),transparent)}
+.pagehero{padding-block:clamp(9rem,16vh,12rem) clamp(3rem,6vw,4.5rem);background-color:var(--ink);background-size:cover;background-position:var(--ph-pos,center);color:var(--d-head);position:relative;overflow:hidden;isolation:isolate}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,rgba(16,26,21,.94),rgba(16,26,21,.8) 45%,rgba(16,26,21,.55) 100%),linear-gradient(180deg,rgba(16,26,21,.42),rgba(16,26,21,.55) 60%,rgba(16,26,21,.86))}
+.pagehero>.container{position:relative;z-index:1}
+.pagehero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;z-index:1;background:linear-gradient(90deg,transparent,var(--brass),transparent)}
 .pagehero .label{color:var(--brass-300)}
 .pagehero h1{font-size:var(--fs-h1);margin:1rem 0;color:var(--d-head);text-wrap:balance}
 .pagehero p{font-size:var(--fs-lead);color:var(--d-body);max-width:58ch}
