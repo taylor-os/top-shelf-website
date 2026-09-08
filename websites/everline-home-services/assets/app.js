@@ -111,7 +111,6 @@
     var words = JSON.parse(rot.getAttribute("data-rotate"));
     var i = 0;
     rot.textContent = words[0];
-    rot.style.minWidth = Math.max.apply(null, words.map(function (w) { return w.length; })) + "ch";
     if (!reduce) setInterval(function () {
       i = (i + 1) % words.length;
       rot.style.transition = "opacity .32s, transform .32s"; rot.style.opacity = "0"; rot.style.transform = "translateY(-8px)";
