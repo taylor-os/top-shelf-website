@@ -14,8 +14,8 @@ and featured on each matching `industry-*.html` page.
 | 3 | Medical & Dental | Brightwater Dental | `brightwater-dental` | Aqua/teal + white · calm clinical | ✅ **LIVE** · Judge PASS |
 | 4 | Law Firms | Halcourt & Vale | `halcourt-vale` | Ink/forest + brass · authoritative | ✅ **LIVE** · Judge PASS |
 | 5 | Retail & Local | Field & Fawn | `field-and-fawn` | Cream + terracotta/sage · boutique | ✅ **LIVE** · Judge PASS (after 1 REVISE: sage-band WCAG) |
-| 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ⬜ queued |
-| 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | ⬜ queued |
+| 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ✅ **LIVE** · Judge PASS (1st) |
+| 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | 🔨 building |
 | 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Green/teal + coral · caring | ⬜ queued |
 
 ## Per-site pipeline (each ends at a Judge PASS before ship)
