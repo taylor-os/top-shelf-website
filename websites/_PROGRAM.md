@@ -16,7 +16,7 @@ and featured on each matching `industry-*.html` page.
 | 5 | Retail & Local | Field & Fawn | `field-and-fawn` | Cream + terracotta/sage · boutique | ✅ **LIVE** · Judge PASS (after 1 REVISE: sage-band WCAG) |
 | 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ✅ **LIVE** · Judge PASS (1st) |
 | 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | ✅ **LIVE** · Judge PASS (after 1 REVISE: image usage + featured-card contrast) |
-| 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Green/teal + coral · caring | ⬜ queued |
+| 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Forest green + coral · caring | ✅ **LIVE** · Judge PASS (after 1 REVISE: contact-chip AA) |
 
 ## Per-site pipeline (each ends at a Judge PASS before ship)
 1. **Brief** — identity, background/story, services, page IA, copy points, asset manifest → `<slug>/BRIEF.md`
