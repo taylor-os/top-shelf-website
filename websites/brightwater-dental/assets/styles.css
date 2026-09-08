@@ -206,8 +206,10 @@ ul{margin:0;padding:0;list-style:none}button{font-family:inherit;cursor:pointer;
 .member span{font-size:.84rem;color:var(--teal-600)}
 
 /* page hero */
-.pagehero{padding-block:clamp(8.5rem,15vh,11rem) clamp(3rem,6vw,4.5rem);text-align:center;background:
-  radial-gradient(60% 80% at 50% 0%,var(--teal-050),transparent 60%),linear-gradient(180deg,var(--sky-2),var(--white))}
+.pagehero{padding-block:clamp(8.5rem,15vh,11rem) clamp(3rem,6vw,4.5rem);text-align:center;position:relative;overflow:hidden;isolation:isolate;background-color:var(--white);background-size:cover;background-position:var(--ph-pos,center)}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(246,251,251,.82) 0%,rgba(246,251,251,.45) 34%,rgba(246,251,251,.52) 66%,rgba(246,251,251,.93) 100%),
+  radial-gradient(72% 80% at 50% 52%,rgba(246,251,251,.6),transparent 80%)}
 .pagehero .eyebrow{margin-inline:auto}
 .pagehero h1{font-size:var(--fs-h1);margin:1rem 0;text-wrap:balance}
 .pagehero p{font-size:var(--fs-lead);color:var(--muted);max-width:56ch;margin:0 auto}
