@@ -238,7 +238,11 @@ body:has(.drawer.open)::before{content:"";position:fixed;inset:0;background:rgba
 .cta__actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
 
 /* page hero */
-.pagehero{padding:10rem 0 3.5rem;background:var(--cream);border-bottom:1px solid var(--line)}
+.pagehero{padding:10rem 0 3.5rem;position:relative;overflow:hidden;isolation:isolate;background-color:var(--cream);background-size:cover;background-position:var(--ph-pos,center);border-bottom:1px solid var(--line)}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:0;background:
+  linear-gradient(180deg,rgba(251,247,241,.82) 0%,rgba(251,247,241,.5) 18%,rgba(251,247,241,.34) 46%,rgba(251,247,241,.5) 100%),
+  linear-gradient(100deg,rgba(251,247,241,.92) 0%,rgba(251,247,241,.68) 40%,rgba(251,247,241,.3) 70%,rgba(251,247,241,.08) 100%)}
+.pagehero>.container{position:relative;z-index:1}
 .breadcrumb{font-size:.82rem;letter-spacing:.06em;color:var(--muted);margin-bottom:1.3rem}
 .breadcrumb a:hover{color:var(--plum)}
 .pagehero h1{font-size:var(--fs-h1);font-weight:500;margin-bottom:1rem;max-width:18ch}
