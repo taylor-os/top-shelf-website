@@ -12,8 +12,8 @@ and featured on each matching `industry-*.html` page.
 | 1 | Home Services | Everline Home Services | `everline-home-services` | Midnight navy + amber · premium-industrial | ✅ **LIVE** · Judge PASS |
 | 2 | Restaurants & Bars | Ember & Oak | `ember-and-oak` | Charcoal + ember gold · cinematic | ✅ **LIVE** · Judge PASS |
 | 3 | Medical & Dental | Brightwater Dental | `brightwater-dental` | Aqua/teal + white · calm clinical | ✅ **LIVE** · Judge PASS |
-| 4 | Law Firms | Halcourt & Vale | `halcourt-vale` | Ink/forest + brass · authoritative | ⬜ queued |
-| 5 | Retail & Local | Field & Fawn | `field-and-fawn` | Cream + terracotta/sage · boutique | ⬜ queued |
+| 4 | Law Firms | Halcourt & Vale | `halcourt-vale` | Ink/forest + brass · authoritative | ✅ **LIVE** · Judge PASS |
+| 5 | Retail & Local | Field & Fawn | `field-and-fawn` | Cream + terracotta/sage · boutique | 🔨 building |
 | 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ⬜ queued |
 | 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | ⬜ queued |
 | 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Green/teal + coral · caring | ⬜ queued |
