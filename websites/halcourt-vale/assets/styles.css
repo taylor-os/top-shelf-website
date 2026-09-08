@@ -267,6 +267,7 @@ body.hero-dark .header:not(.scrolled) .nav-toggle{color:var(--d-head)}
 .footer__col a:hover{color:var(--brass-300)}
 .footer__contact li{display:flex;gap:.6em;align-items:flex-start}
 .footer__contact svg{width:1.1em;height:1.1em;color:var(--brass-300);flex-shrink:0;margin-top:.2em}
+.footer__contact a{padding:0}
 .footer__disclaimer{font-size:.76rem;color:var(--d-muted);max-width:70ch;padding-top:1.4rem;line-height:1.6}
 .footer__bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.4rem;font-size:.8rem;color:var(--d-muted)}
 .footer__credit{border-top:1px solid rgba(255,255,255,.1)}
