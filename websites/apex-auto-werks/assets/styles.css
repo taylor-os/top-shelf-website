@@ -239,11 +239,11 @@ body:has(.drawer.open)::before{content:"";position:fixed;inset:0;background:rgba
 .cta__actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
 
 /* page hero (interior) */
-.pagehero{padding:9.5rem 0 3.5rem;border-bottom:1px solid var(--line);position:relative;background:var(--ink1)}
-.pagehero::before{content:"";position:absolute;inset:0;opacity:.4;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:56px 56px;mask-image:radial-gradient(90% 80% at 80% 0%,#000,transparent 70%)}
-.pagehero>.container{position:relative}
+.pagehero{padding:9.5rem 0 3.5rem;border-bottom:1px solid var(--line);position:relative;overflow:hidden;isolation:isolate;background-color:var(--ink1);background-size:cover;background-position:var(--ph-pos,center)}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:0;background:
+  linear-gradient(100deg,rgba(14,15,18,.95) 0%,rgba(14,15,18,.82) 42%,rgba(14,15,18,.5) 72%,rgba(14,15,18,.2) 100%),
+  linear-gradient(180deg,rgba(14,15,18,.35),rgba(14,15,18,.5) 60%,rgba(14,15,18,.86))}
+.pagehero>.container{position:relative;z-index:1}
 .breadcrumb{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;color:var(--muted-2);margin-bottom:1.3rem;text-transform:uppercase}
 .breadcrumb a{color:var(--muted)}.breadcrumb a:hover{color:var(--red-300)}
 .pagehero h1{font-size:var(--fs-h1);margin-bottom:1rem;max-width:18ch}
