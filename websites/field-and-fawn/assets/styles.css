@@ -186,8 +186,10 @@ em,.italic{font-style:italic}
 .section--sage .section-head p,.section--sage .pillar p,.section--sage .split__body p,.section--sage .ticks li,.section--sage .stat__label,.section--sage .cta-band p{color:var(--cream-2)}
 
 /* page hero */
-.pagehero{padding-block:clamp(8.5rem,15vh,11rem) clamp(3rem,6vw,4.5rem);text-align:center;background:
-  radial-gradient(60% 80% at 50% 0%,var(--terra-soft),transparent 62%),var(--cream)}
+.pagehero{padding-block:clamp(8.5rem,15vh,11rem) clamp(3rem,6vw,4.5rem);text-align:center;position:relative;overflow:hidden;isolation:isolate;background-color:var(--cream);background-size:cover;background-position:var(--ph-pos,center)}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(250,246,238,.82) 0%,rgba(250,246,238,.45) 34%,rgba(250,246,238,.52) 66%,rgba(250,246,238,.93) 100%),
+  radial-gradient(72% 80% at 50% 52%,rgba(250,246,238,.6),transparent 80%)}
 .pagehero .eyebrow{margin-inline:auto}
 .pagehero h1{font-size:var(--fs-h1);margin:1rem 0;text-wrap:balance}
 .pagehero p{font-size:var(--fs-lead);color:var(--muted);max-width:56ch;margin:0 auto}
