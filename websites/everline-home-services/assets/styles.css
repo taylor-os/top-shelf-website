@@ -341,10 +341,12 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 
 /* ---------- Page hero (interior pages) ---------- */
 .pagehero{position:relative;padding-block:clamp(9rem,16vh,12rem) clamp(3rem,6vw,5rem);color:var(--d-head);
-  background:var(--navy-800);overflow:hidden;isolation:isolate}
-.pagehero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
-  background:radial-gradient(70% 120% at 80% 0%,rgba(246,166,35,.25),transparent 55%),
-  radial-gradient(50% 90% at 10% 100%,rgba(26,70,107,.6),transparent 60%)}
+  background-color:var(--navy-900);background-size:cover;
+  background-position:var(--ph-pos,center);overflow:hidden;isolation:isolate}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(72% 100% at 88% -10%,rgba(246,166,35,.18),transparent 55%),
+  linear-gradient(100deg,rgba(8,21,34,.95) 0%,rgba(8,21,34,.82) 34%,rgba(8,21,34,.5) 62%,rgba(8,21,34,.16) 100%),
+  linear-gradient(180deg,rgba(8,21,34,.28),rgba(8,21,34,.34) 68%,rgba(8,21,34,.6))}
 .pagehero h1{font-size:var(--fs-h1);color:var(--d-head);max-width:16ch}
 .pagehero p{font-size:var(--fs-lead);color:var(--d-body);max-width:52ch;margin-top:1.1rem}
 .breadcrumb{display:flex;gap:.5em;font-size:.82rem;color:var(--d-muted);margin-bottom:1.3rem;
