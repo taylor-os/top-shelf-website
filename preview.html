@@ -685,25 +685,15 @@
 .mag{will-change:transform}
 @media(prefers-reduced-motion:reduce){.mag{transform:none!important}.svc-wirebox{transition:none}}
 </style>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener('click',function(e){ var id=a.getAttribute('href'); if(!id||id.length<2)return;
       var t=document.querySelector(id); if(!t)return; e.preventDefault();
-      if(window.__lenis){ window.__lenis.scrollTo(t,{offset:-68}); return; }
       var top=t.getBoundingClientRect().top+(window.scrollY||document.documentElement.scrollTop||0)-68;
       window.scrollTo({top:top,behavior:reduce?'auto':'smooth'}); });
   });
-  // buttery momentum scroll (Lenis), wired into the existing GSAP ScrollTrigger + gold-dust
-  if(!reduce && window.Lenis){
-    var lenis=new Lenis({lerp:0.1, wheelMultiplier:1, smoothWheel:true});
-    ['svcDrawer','tsChatPanel'].forEach(function(id){var el=document.getElementById(id); if(el)el.setAttribute('data-lenis-prevent','');});
-    if(window.ScrollTrigger) lenis.on('scroll',ScrollTrigger.update);
-    if(window.gsap){ gsap.ticker.add(function(t){lenis.raf(t*1000);}); gsap.ticker.lagSmoothing(0);} else { (function raf(t){lenis.raf(t); requestAnimationFrame(raf);})(); }
-    window.__lenis=lenis;
-  }
   if(reduce) return;
   document.querySelectorAll('.btn-gold:not(.btn-sm):not(.w-full)').forEach(function(b){
     b.classList.add('mag'); var raf=null,tx=0,ty=0,gx=0,gy=0,hov=false;
