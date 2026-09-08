@@ -1,0 +1,40 @@
+# Top Shelf — Sample Websites Program
+
+8 fictional companies, one per Top Shelf industry, each a full **5-page** premium site.
+These are the flagship sample sites prospects see. Built into this repo under
+`websites/<slug>/`, surfaced via a new **"Websites"** nav gallery (`websites.html`)
+and featured on each matching `industry-*.html` page.
+
+## Roster & status
+
+| # | Industry | Company | Slug | Palette / world | Status |
+|---|----------|---------|------|-----------------|--------|
+| 1 | Home Services | Everline Home Services | `everline-home-services` | Midnight navy + amber · premium-industrial | 🔨 building |
+| 2 | Restaurants & Bars | Ember & Oak | `ember-and-oak` | Charcoal + ember gold · cinematic | ⬜ queued |
+| 3 | Medical & Dental | Brightwater Dental | `brightwater-dental` | Aqua/teal + white · calm clinical | ⬜ queued |
+| 4 | Law Firms | Halcourt & Vale | `halcourt-vale` | Ink/forest + brass · authoritative | ⬜ queued |
+| 5 | Retail & Local | Field & Fawn | `field-and-fawn` | Cream + terracotta/sage · boutique | ⬜ queued |
+| 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ⬜ queued |
+| 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | ⬜ queued |
+| 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Green/teal + coral · caring | ⬜ queued |
+
+## Per-site pipeline (each ends at a Judge PASS before ship)
+1. **Brief** — identity, background/story, services, page IA, copy points, asset manifest → `<slug>/BRIEF.md`
+2. **Assets** — hand-built SVG logo + Higgsfield photography → `<slug>/assets/`
+3. **Build** — full 5 pages, premium motion stack (Lenis + GSAP), dynamic hero, real transitions, per-industry theme
+4. **Verify** — every page in-browser, desktop + mobile, console clean
+5. **Judge** — independent review vs. brief/intent (Apple/enterprise, ready-to-ship)
+6. **Humanize** — visible copy only (public-facing)
+7. **Wire** — industry-page showcase + `websites.html` gallery card
+8. **Ship** — commit + push; file to Drive `Projects/Top Shelf/`
+
+## Conventions (all sites)
+- Phone: **123-456-7890** · Email: **contact@<company>.com**
+- Fictional companies + fictional locales (coined neighborhoods) — never impersonate a real business
+- Self-contained static: relative paths, own `styles.css` + `app.js`, own `assets/`
+- 5 pages, shared header/footer, accessible (WCAG AA basics), responsive, `prefers-reduced-motion` respected
+- No visible building signage/brand text in generated photos
+
+## Deploy note
+Repo has no build/FTP workflow (only `expire-samples.yml`). Confirm go-live path with owner
+before first push. Sites live under `websites/` (not `samples/`) to avoid the 60-day expiry sweep.

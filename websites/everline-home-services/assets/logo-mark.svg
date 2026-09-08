@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Everline Home Services">
+  <rect width="64" height="64" rx="15" fill="#0B1B2B"/>
+  <path d="M17 21.5 L32 12 L47 21.5" fill="none" stroke="#F6A623" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="20" y="25" width="5" height="26" rx="2.5" fill="#F6A623"/>
+  <rect x="20" y="25" width="24" height="5" rx="2.5" fill="#F6A623"/>
+  <rect x="20" y="35.5" width="20" height="5" rx="2.5" fill="#F6A623"/>
+  <rect x="20" y="46" width="24" height="5" rx="2.5" fill="#F6A623"/>
+</svg>
