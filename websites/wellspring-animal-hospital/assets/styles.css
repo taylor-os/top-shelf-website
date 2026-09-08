@@ -227,7 +227,11 @@ body:has(.drawer.open)::before{content:"";position:fixed;inset:0;background:rgba
 .cta__actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
 
 /* page hero */
-.pagehero{padding:10rem 0 3.5rem;background:var(--mist);border-bottom:1px solid var(--line)}
+.pagehero{padding:10rem 0 3.5rem;position:relative;overflow:hidden;isolation:isolate;background-color:var(--mist);background-size:cover;background-position:var(--ph-pos,center);border-bottom:1px solid var(--line)}
+.pagehero::before{content:"";position:absolute;inset:0;z-index:0;background:
+  linear-gradient(180deg,rgba(251,248,243,.82) 0%,rgba(251,248,243,.5) 18%,rgba(251,248,243,.34) 46%,rgba(251,248,243,.5) 100%),
+  linear-gradient(100deg,rgba(251,248,243,.92) 0%,rgba(251,248,243,.68) 40%,rgba(251,248,243,.3) 70%,rgba(251,248,243,.08) 100%)}
+.pagehero>.container{position:relative;z-index:1}
 .breadcrumb{font-family:var(--font-head);font-size:.82rem;font-weight:600;letter-spacing:.03em;color:var(--muted);margin-bottom:1.2rem}
 .breadcrumb a:hover{color:var(--green)}
 .pagehero h1{font-size:var(--fs-h1);margin-bottom:1rem;max-width:18ch}
