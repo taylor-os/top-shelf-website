@@ -605,6 +605,18 @@
   </div>
 </aside>
 <style id="ind-css">
+/* Homepage cards: let the bright industries read bright (per-industry tune) */
+.bottle[href="industry-medical-dental.html"] .bottle-frame img,
+.bottle[href="industry-salon-spa-fitness.html"] .bottle-frame img{ filter:saturate(1.05) brightness(1.12); }
+.bottle[href="industry-medical-dental.html"]:hover .bottle-frame img,
+.bottle[href="industry-salon-spa-fitness.html"]:hover .bottle-frame img{ filter:saturate(1.1) brightness(1.18); }
+.bottle[href="industry-retail.html"] .bottle-frame img,
+.bottle[href="industry-custom.html"] .bottle-frame img{ filter:saturate(1) brightness(1.05); }
+.bottle[href="industry-retail.html"]:hover .bottle-frame img,
+.bottle[href="industry-custom.html"]:hover .bottle-frame img{ filter:saturate(1.05) brightness(1.11); }
+.bottle[href="industry-medical-dental.html"] .bottle-frame::after,
+.bottle[href="industry-salon-spa-fitness.html"] .bottle-frame::after{ box-shadow:inset 0 -55px 55px -48px rgba(11,9,6,.55); }
+
 /* Industry playbook: card + trigger */
 .bottle-plus{display:inline-grid;place-items:center;width:1.4em;height:1.4em;border-radius:50%;background:var(--gold);color:#160f06;font-weight:600;font-size:.8em;line-height:1;margin-left:.2em;transition:transform .35s var(--ease)}
 .bottle.js-ind{cursor:pointer}
