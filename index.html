@@ -632,8 +632,9 @@
 .ind-x{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--hairline);border-radius:50%;color:var(--ink-3);background:none;cursor:pointer;transition:.25s var(--ease);font-size:1.15rem;line-height:1;font-family:var(--sans)}
 .ind-x svg{width:13px;height:13px}
 .ind-x:hover{border-color:var(--gold);color:var(--ink);transform:scale(1.08)}
-.ind-stage{position:relative;margin:.2rem 0 1.9rem;padding-bottom:20px}
-.ind-browser{margin:0;border:1px solid var(--hairline);border-radius:11px;overflow:hidden;background:var(--surface);box-shadow:0 34px 80px -34px rgba(0,0,0,.82)}
+.ind-stage{position:relative;margin:.2rem 0 2.2rem;padding-bottom:30px;cursor:pointer}
+.ind-browser{margin:0;border:1px solid var(--hairline);border-radius:11px;overflow:hidden;background:var(--surface);box-shadow:0 34px 80px -34px rgba(0,0,0,.82);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.ind-stage:hover .ind-browser{transform:translateY(-3px);box-shadow:0 44px 92px -32px rgba(0,0,0,.92);border-color:var(--hairline-strong)}
 .ind-bar{display:flex;gap:6px;align-items:center;padding:9px 13px;background:var(--surface-2);border-bottom:1px solid var(--hairline-soft)}
 .ind-bar i{width:8px;height:8px;border-radius:50%;background:var(--hairline-strong)}
 .ind-bar i:first-child{background:rgba(201,168,106,.5)}
@@ -641,15 +642,16 @@
 .ind-phone{margin:0;position:absolute;right:-6px;bottom:0;width:26%;max-width:106px;padding:5px;background:linear-gradient(160deg,#241d14,#0d0a06);border-radius:18px;box-shadow:0 22px 46px -16px rgba(0,0,0,.9),0 0 0 1px var(--hairline)}
 .ind-phone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:28%;height:3px;border-radius:2px;background:rgba(255,255,255,.22);z-index:2}
 .ind-phone img{display:block;width:100%;height:auto;border-radius:13px}
+.ind-phone figcaption{position:absolute;left:0;right:0;bottom:-1.5rem;text-align:center;font-family:var(--sans);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
 .ind-title{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,2.5rem);line-height:1.05;color:var(--gold-bright);font-weight:500;margin:0 0 .85rem}
 .ind-desc{font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.72;color:var(--ink-2);margin:0 0 1.5rem}
 .ind-points{list-style:none;margin:0 0 2rem;padding:0;display:flex;flex-direction:column;gap:.72rem}
 .ind-points li{position:relative;padding-left:1.55rem;font-family:var(--sans);font-size:.92rem;font-weight:300;line-height:1.5;color:var(--ink)}
 .ind-points li::before{content:"";position:absolute;left:0;top:.48em;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,168,106,.14)}
-.ind-cta{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;background:var(--gold);color:#160f06;font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:.01em;padding:.9rem 1.5rem;border-radius:999px;transition:.3s var(--ease);box-shadow:0 14px 30px -12px rgba(201,168,106,.6);margin:0 0 1.9rem}
+.ind-cta{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;background:var(--gold);color:#160f06;font-family:var(--sans);font-weight:600;font-size:1rem;letter-spacing:.02em;padding:1rem 1.5rem;border-radius:999px;transition:.3s var(--ease);box-shadow:0 16px 34px -12px rgba(201,168,106,.72);margin:0 0 1.35rem}
 .ind-cta:hover{transform:translateY(-2px);gap:.85rem;box-shadow:0 20px 42px -12px rgba(201,168,106,.78)}
-.ind-playbook{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.9rem 1.5rem;border:1px solid var(--hairline-strong);border-radius:999px;background:transparent;color:var(--ink);font-family:var(--sans);font-weight:500;font-size:.9rem;letter-spacing:.01em;transition:.25s var(--ease);margin-top:.4rem}
-.ind-playbook:hover{gap:.75rem;border-color:var(--gold);color:var(--gold-bright);background:rgba(201,168,106,.06)}
+.ind-playbook{display:block;width:-moz-fit-content;width:fit-content;margin:1.3rem auto 0;padding:0 0 2px;border:0;border-bottom:1px solid var(--hairline-strong);border-radius:0;background:none;color:var(--ink-2);font-family:var(--sans);font-weight:500;font-size:.85rem;letter-spacing:.01em;transition:.25s var(--ease)}
+.ind-playbook:hover{border-color:var(--gold);color:var(--gold-bright)}
 body.drawer-open .tsc-fab{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s var(--ease),visibility .3s var(--ease)}
 @media(prefers-reduced-motion:reduce){.ind-drawer,.ind-scrim,.ind-x,.bottle-plus{transition:none}}
 </style>
@@ -657,9 +659,9 @@ body.drawer-open .tsc-fab{opacity:0;visibility:hidden;pointer-events:none;transi
 <aside class="ind-drawer" id="indDrawer" role="dialog" aria-modal="true" aria-label="Industry demo" aria-hidden="true">
   <div class="ind-in">
     <div class="ind-top"><span class="ind-eyebrow">Industry Playbook</span><button class="ind-x" id="indX" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button></div>
-    <div class="ind-stage">
+    <div class="ind-stage" id="indStage" role="link" tabindex="0" aria-label="Open the live demo site">
       <figure class="ind-browser"><span class="ind-bar"><i></i><i></i><i></i></span><img id="indShotD" alt=""></figure>
-      <figure class="ind-phone"><img id="indShotM" alt=""></figure>
+      <figure class="ind-phone"><img id="indShotM" alt=""><figcaption aria-hidden="true">Mobile</figcaption></figure>
     </div>
     <a class="ind-cta" id="indCta" href="#" target="_blank" rel="noopener">View the demo site <span aria-hidden="true">&rarr;</span></a>
     <h3 class="ind-title" id="indTitle"></h3>
@@ -709,16 +711,16 @@ body.drawer-open .tsc-fab{opacity:0;visibility:hidden;pointer-events:none;transi
       demo:'websites/field-and-fawn/index.html',
       d:'For a local shop, the website is the window display that stays open all night. This demo leads with beautiful product photography, clear hours and directions, and an easy path to browse or buy &mdash; so a scroll becomes a visit.',
       pts:['Show up in &lsquo;near me&rsquo; and Maps when people shop local','Product photography that makes people want to come in','Browse, buy or find your hours in a couple of taps','Reviews and story that make you the local favorite'],
-      d_img:'assets/img/demo/field-desktop.jpg',
-      m_img:'assets/img/demo/field-mobile.jpg'
+      d_img:'assets/img/demo/field-desktop.jpg?v=3',
+      m_img:'assets/img/demo/field-mobile.jpg?v=3'
     },
     'industry-auto.html':{
       name:'Auto',
       demo:'websites/apex-auto-werks/index.html',
       d:'Car owners want to know you can be trusted with an expensive vehicle. This demo leads with dealer-level expertise, honest pricing you can read and easy online booking &mdash; so a driver picks you over the dealership.',
       pts:['Rank for the makes, services and &lsquo;near me&rsquo; searches that pay','Dealer-level polish that earns an expensive car','Book service online without the phone tag','Reviews and transparency that beat the dealership'],
-      d_img:'assets/img/demo/apex-desktop.jpg',
-      m_img:'assets/img/demo/apex-mobile.jpg'
+      d_img:'assets/img/demo/apex-desktop.jpg?v=3',
+      m_img:'assets/img/demo/apex-mobile.jpg?v=3'
     },
     'industry-salon-spa-fitness.html':{
       name:'Salon, Spa & Fitness',
@@ -765,6 +767,10 @@ body.drawer-open .tsc-fab{opacity:0;visibility:hidden;pointer-events:none;transi
   });
   scrim.addEventListener('click', close);
   document.getElementById('indX').addEventListener('click', close);
+  var indStage=document.getElementById('indStage');
+  if(indStage){ var goDemo=function(){ var u=eCta.getAttribute('href'); if(u&&u!=='#') window.open(u,'_blank','noopener'); };
+    indStage.addEventListener('click',goDemo);
+    indStage.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); goDemo(); } }); }
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
 })();
 </script>

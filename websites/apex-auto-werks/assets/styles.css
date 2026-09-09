@@ -326,3 +326,8 @@ body:has(.drawer.open)::before{content:"";position:fixed;inset:0;background:rgba
 .hero__stars{color:#F5B400;font-size:1.02rem;letter-spacing:.06em}
 .hero__rating-txt{font-weight:700;font-size:.82rem;white-space:nowrap}
 .gwm{font-weight:700}
+
+/* tap-to-call text link (keeps the hero to two pill buttons, no wrap) */
+.hero__call{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.02rem;color:inherit;text-decoration:none;letter-spacing:.01em;padding:.5rem .3rem;white-space:nowrap;transition:opacity .2s ease}
+.hero__call svg{width:1.05em;height:1.05em;opacity:.85}
+.hero__call:hover{text-decoration:underline;text-underline-offset:3px}
