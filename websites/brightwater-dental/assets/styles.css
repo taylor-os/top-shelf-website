@@ -307,3 +307,9 @@ ul{margin:0;padding:0;list-style:none}button{font-family:inherit;cursor:pointer;
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
   [data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}
 }
+
+/* Google review chip (hero) */
+.hero__rating{display:inline-flex;flex-direction:column;justify-content:center;gap:.14em;padding-left:.4rem;line-height:1.15;color:inherit}
+.hero__stars{color:#F5B400;font-size:1.02rem;letter-spacing:.06em}
+.hero__rating-txt{font-weight:700;font-size:.82rem;white-space:nowrap}
+.gwm{font-weight:700}

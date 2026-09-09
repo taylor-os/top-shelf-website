@@ -131,6 +131,10 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 .header__phone{display:inline-flex;align-items:center;gap:.5em;color:var(--d-head);
   font-family:var(--font-head);font-weight:600;font-size:.94rem;padding:.5rem .5rem}
 .header__phone svg{width:1em;height:1em;color:var(--amber-300)}
+.hero__rating{display:inline-flex;flex-direction:column;justify-content:center;gap:.14em;padding-left:.5rem;line-height:1.1}
+.hero__stars{color:var(--amber-300);font-size:1.02rem;letter-spacing:.06em}
+.hero__rating-txt{font-family:var(--font-head);font-size:.82rem;font-weight:600;color:var(--d-head);white-space:nowrap}
+.gwm{font-weight:700;letter-spacing:.01em}
 .nav-toggle{display:none;width:44px;height:44px;border-radius:var(--r-pill);
   align-items:center;justify-content:center;color:var(--d-head);background:rgba(255,255,255,.08)}
 .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{content:"";display:block;

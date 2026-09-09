@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20260804b">
+<link rel="stylesheet" href="assets/site.css?v=20260909c">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QCCJ3HP11"></script>
 <script>
@@ -560,15 +560,16 @@
 <style id="tsd-css">
 .promise-icon svg{width:38px;height:38px}
 .step-icon svg{width:34px;height:34px}
-.svc-scrim{position:fixed;inset:0;z-index:120;background:rgba(6,4,2,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease)}
+.svc-scrim{position:fixed;inset:0;z-index:210;background:rgba(6,4,2,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease)}
 .svc-scrim.open{opacity:1;visibility:visible}
-.svc-drawer{position:fixed;top:0;right:0;bottom:0;z-index:121;width:min(462px,93vw);background:linear-gradient(180deg,var(--surface-2),var(--surface));border-left:1px solid var(--hairline-strong);transform:translateX(100%);transition:transform .5s var(--ease);overflow-y:auto;box-shadow:-50px 0 120px -40px rgba(0,0,0,.85)}
+.svc-drawer{position:fixed;top:0;right:0;bottom:0;z-index:211;width:min(462px,93vw);background:linear-gradient(180deg,var(--surface-2),var(--surface));border-left:1px solid var(--hairline-strong);transform:translateX(100%);transition:transform .5s var(--ease);overflow-y:auto;box-shadow:-50px 0 120px -40px rgba(0,0,0,.85)}
 .svc-drawer.open{transform:none}
 .svc-in{padding:clamp(1.9rem,3vw,2.7rem)}
 .svc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.7rem}
 .svc-eyebrow{font-family:var(--sans);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
 .svc-x{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--hairline);border-radius:50%;color:var(--ink-3);background:none;cursor:pointer;transition:.25s var(--ease);font-size:1.15rem;line-height:1;font-family:var(--sans)}
-.svc-x:hover{border-color:var(--gold);color:var(--ink);transform:rotate(90deg)}
+.svc-x svg{width:13px;height:13px}
+.svc-x:hover{border-color:var(--gold);color:var(--ink);transform:scale(1.08)}
 .svc-icon{width:56px;height:56px;display:grid;place-items:center;border:1px solid var(--hairline);border-radius:50%;color:var(--gold);margin-bottom:1.35rem;background:var(--surface)}
 .svc-icon svg{width:27px;height:27px}
 .svc-title{font-family:var(--serif);font-size:clamp(2rem,3.6vw,2.65rem);line-height:1.04;color:var(--gold-bright);font-weight:500;margin-bottom:1rem}
@@ -595,7 +596,7 @@
 <div class="svc-scrim" id="svcScrim" aria-hidden="true"></div>
 <aside class="svc-drawer" id="svcDrawer" role="dialog" aria-modal="true" aria-label="Service detail" aria-hidden="true">
   <div class="svc-in">
-    <div class="svc-top"><span class="svc-eyebrow" id="svcEyebrow">The Stack</span><button class="svc-x" id="svcX" type="button" aria-label="Close">&times;</button></div>
+    <div class="svc-top"><span class="svc-eyebrow" id="svcEyebrow">The Stack</span><button class="svc-x" id="svcX" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button></div>
     <div class="svc-wirebox" id="svcWire" aria-hidden="true"></div>
     <h3 class="svc-title" id="svcTitle"></h3>
     <p class="svc-desc" id="svcDesc"></p>
@@ -603,6 +604,158 @@
     <a class="svc-cta" id="svcCta" href="#">See the full page <span aria-hidden="true">&rarr;</span></a>
   </div>
 </aside>
+<style id="ind-css">
+/* Industry playbook: card + trigger */
+.bottle-plus{display:inline-grid;place-items:center;width:1.4em;height:1.4em;border-radius:50%;background:var(--gold);color:#160f06;font-weight:600;font-size:.8em;line-height:1;margin-left:.2em;transition:transform .35s var(--ease)}
+.bottle.js-ind{cursor:pointer}
+.bottle.js-ind:hover .bottle-plus,.bottle.js-ind:focus-visible .bottle-plus{transform:scale(1.12) rotate(90deg)}
+/* Industry playbook drawer */
+.ind-scrim{position:fixed;inset:0;z-index:210;background:rgba(6,4,2,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease)}
+.ind-scrim.open{opacity:1;visibility:visible}
+.ind-drawer{position:fixed;top:0;right:0;bottom:0;z-index:211;width:min(486px,94vw);background:linear-gradient(180deg,var(--surface-2),var(--surface));border-left:1px solid var(--hairline-strong);transform:translateX(100%);transition:transform .5s var(--ease);overflow-y:auto;box-shadow:-50px 0 120px -40px rgba(0,0,0,.85)}
+.ind-drawer.open{transform:none}
+.ind-in{padding:clamp(1.7rem,3vw,2.5rem)}
+.ind-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+.ind-eyebrow{font-family:var(--sans);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
+.ind-x{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--hairline);border-radius:50%;color:var(--ink-3);background:none;cursor:pointer;transition:.25s var(--ease);font-size:1.15rem;line-height:1;font-family:var(--sans)}
+.ind-x svg{width:13px;height:13px}
+.ind-x:hover{border-color:var(--gold);color:var(--ink);transform:scale(1.08)}
+.ind-stage{position:relative;margin:.2rem 0 1.9rem;padding-bottom:20px}
+.ind-browser{margin:0;border:1px solid var(--hairline);border-radius:11px;overflow:hidden;background:var(--surface);box-shadow:0 34px 80px -34px rgba(0,0,0,.82)}
+.ind-bar{display:flex;gap:6px;align-items:center;padding:9px 13px;background:var(--surface-2);border-bottom:1px solid var(--hairline-soft)}
+.ind-bar i{width:8px;height:8px;border-radius:50%;background:var(--hairline-strong)}
+.ind-bar i:first-child{background:rgba(201,168,106,.5)}
+.ind-browser img{display:block;width:100%;height:auto}
+.ind-phone{margin:0;position:absolute;right:-6px;bottom:0;width:26%;max-width:106px;padding:5px;background:linear-gradient(160deg,#241d14,#0d0a06);border-radius:18px;box-shadow:0 22px 46px -16px rgba(0,0,0,.9),0 0 0 1px var(--hairline)}
+.ind-phone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:28%;height:3px;border-radius:2px;background:rgba(255,255,255,.22);z-index:2}
+.ind-phone img{display:block;width:100%;height:auto;border-radius:13px}
+.ind-title{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,2.5rem);line-height:1.05;color:var(--gold-bright);font-weight:500;margin:0 0 .85rem}
+.ind-desc{font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.72;color:var(--ink-2);margin:0 0 1.5rem}
+.ind-points{list-style:none;margin:0 0 2rem;padding:0;display:flex;flex-direction:column;gap:.72rem}
+.ind-points li{position:relative;padding-left:1.55rem;font-family:var(--sans);font-size:.92rem;font-weight:300;line-height:1.5;color:var(--ink)}
+.ind-points li::before{content:"";position:absolute;left:0;top:.48em;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,168,106,.14)}
+.ind-cta{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;background:var(--gold);color:#160f06;font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:.01em;padding:.9rem 1.5rem;border-radius:999px;transition:.3s var(--ease);box-shadow:0 14px 30px -12px rgba(201,168,106,.6);margin:0 0 1.9rem}
+.ind-cta:hover{transform:translateY(-2px);gap:.85rem;box-shadow:0 20px 42px -12px rgba(201,168,106,.78)}
+.ind-playbook{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.9rem 1.5rem;border:1px solid var(--hairline-strong);border-radius:999px;background:transparent;color:var(--ink);font-family:var(--sans);font-weight:500;font-size:.9rem;letter-spacing:.01em;transition:.25s var(--ease);margin-top:.4rem}
+.ind-playbook:hover{gap:.75rem;border-color:var(--gold);color:var(--gold-bright);background:rgba(201,168,106,.06)}
+body.drawer-open .tsc-fab{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s var(--ease),visibility .3s var(--ease)}
+@media(prefers-reduced-motion:reduce){.ind-drawer,.ind-scrim,.ind-x,.bottle-plus{transition:none}}
+</style>
+<div class="ind-scrim" id="indScrim" aria-hidden="true"></div>
+<aside class="ind-drawer" id="indDrawer" role="dialog" aria-modal="true" aria-label="Industry demo" aria-hidden="true">
+  <div class="ind-in">
+    <div class="ind-top"><span class="ind-eyebrow">Industry Playbook</span><button class="ind-x" id="indX" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button></div>
+    <div class="ind-stage">
+      <figure class="ind-browser"><span class="ind-bar"><i></i><i></i><i></i></span><img id="indShotD" alt=""></figure>
+      <figure class="ind-phone"><img id="indShotM" alt=""></figure>
+    </div>
+    <a class="ind-cta" id="indCta" href="#" target="_blank" rel="noopener">View the demo site <span aria-hidden="true">&rarr;</span></a>
+    <h3 class="ind-title" id="indTitle"></h3>
+    <p class="ind-desc" id="indDesc"></p>
+    <ul class="ind-points" id="indPoints"></ul>
+    <a class="ind-playbook" id="indLink" href="#">See the full playbook <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</aside>
+<script>
+(function(){
+  var shelf=document.querySelector('.shelf'); if(!shelf) return;
+  var IND={
+    'industry-home-services.html':{
+      name:'Home Services',
+      demo:'websites/everline-home-services/index.html',
+      d:'In home services, the job goes to whoever answers first and looks the most trustworthy. This demo leads with a same-day promise, the phone number and a book-online button right at the top &mdash; then backs it up with the licensing, reviews and upfront pricing that earn the click.',
+      pts:['Speed-to-lead &mdash; answer or text back before the competitor does','Top of the Google Map Pack for the near-me searches that matter','Licensing, reviews and upfront pricing right at the top','One-tap call and book-online, day or night'],
+      d_img:'assets/img/demo/everline-desktop.jpg',
+      m_img:'assets/img/demo/everline-mobile.jpg'
+    },
+    'industry-restaurants.html':{
+      name:'Restaurants & Bars',
+      demo:'websites/ember-and-oak/index.html',
+      d:'For a restaurant, the website is the table before the table. People pick where to eat by scrolling the photos, skimming the menu and tapping reserve &mdash; so this demo puts all three up front and makes the reservation take two taps, whether they found you at noon or at 11pm.',
+      pts:['Show up in &lsquo;restaurants near me&rsquo; when people are hungry now','A menu that loads fast and looks as good as the food','Reserve a table in two taps, day or night','Photography and reviews that make the choice easy'],
+      d_img:'assets/img/demo/ember-desktop.jpg',
+      m_img:'assets/img/demo/ember-mobile.jpg'
+    },
+    'industry-medical-dental.html':{
+      name:'Medical & Dental',
+      demo:'websites/brightwater-dental/index.html',
+      d:'In dentistry and medicine, people are nervous before they ever pick up the phone. This demo leads with a calm, modern look, pricing you can read and easy online booking &mdash; the things that turn an anxious searcher into a booked new patient.',
+      pts:['Rank for &lsquo;dentist near me&rsquo; and the treatments that pay','A calm, modern look that takes the nerves out of the chair','Book a visit online in under a minute','Insurance, reviews and hours answered before they call'],
+      d_img:'assets/img/demo/brightwater-desktop.jpg',
+      m_img:'assets/img/demo/brightwater-mobile.jpg'
+    },
+    'industry-legal.html':{
+      name:'Law Firms',
+      demo:'websites/halcourt-vale/index.html',
+      d:'People hiring a lawyer are worried and comparing fast. This demo leads with calm authority, clear practice areas and an easy way to request a consult &mdash; so a stressed searcher trusts you enough to reach out.',
+      pts:['Rank for the practice areas and &lsquo;attorney near me&rsquo; searches that matter','Calm authority that reads as senior and trustworthy','Request a consultation in a couple of taps','Results, credentials and clarity where they look first'],
+      d_img:'assets/img/demo/halcourt-desktop.jpg',
+      m_img:'assets/img/demo/halcourt-mobile.jpg'
+    },
+    'industry-retail.html':{
+      name:'Retail & Local',
+      demo:'websites/field-and-fawn/index.html',
+      d:'For a local shop, the website is the window display that stays open all night. This demo leads with beautiful product photography, clear hours and directions, and an easy path to browse or buy &mdash; so a scroll becomes a visit.',
+      pts:['Show up in &lsquo;near me&rsquo; and Maps when people shop local','Product photography that makes people want to come in','Browse, buy or find your hours in a couple of taps','Reviews and story that make you the local favorite'],
+      d_img:'assets/img/demo/field-desktop.jpg',
+      m_img:'assets/img/demo/field-mobile.jpg'
+    },
+    'industry-auto.html':{
+      name:'Auto',
+      demo:'websites/apex-auto-werks/index.html',
+      d:'Car owners want to know you can be trusted with an expensive vehicle. This demo leads with dealer-level expertise, honest pricing you can read and easy online booking &mdash; so a driver picks you over the dealership.',
+      pts:['Rank for the makes, services and &lsquo;near me&rsquo; searches that pay','Dealer-level polish that earns an expensive car','Book service online without the phone tag','Reviews and transparency that beat the dealership'],
+      d_img:'assets/img/demo/apex-desktop.jpg',
+      m_img:'assets/img/demo/apex-mobile.jpg'
+    },
+    'industry-salon-spa-fitness.html':{
+      name:'Salon, Spa & Fitness',
+      demo:'websites/lumen-wellness/index.html',
+      d:'In beauty and wellness, people book the place that feels like a treat and is easy to schedule. This demo leads with a calm, premium look and one-tap booking &mdash; so a browser becomes a standing appointment.',
+      pts:['Rank for the services and &lsquo;near me&rsquo; searches that fill the book','A calm, premium look that feels like the experience','Book an appointment in a couple of taps','Photos and reviews that turn browsers into regulars'],
+      d_img:'assets/img/demo/lumen-desktop.jpg',
+      m_img:'assets/img/demo/lumen-mobile.jpg'
+    },
+    'industry-custom.html':{
+      name:'Your Business',
+      demo:'websites/wellspring-animal-hospital/index.html',
+      d:'Whatever you do, the website is the first impression and the front desk in one. Here&rsquo;s a live demo we built for a veterinary hospital &mdash; it gets found on Google, earns trust in seconds, and books appointments around the clock. Yours gets built the same way, for your trade.',
+      pts:['Get found for the exact searches your customers use','Look established and trustworthy from the first glance','Book, buy or call in a couple of taps','Reviews and clarity that turn visitors into customers'],
+      d_img:'assets/img/demo/wellspring-desktop.jpg',
+      m_img:'assets/img/demo/wellspring-mobile.jpg'
+    }
+  };
+  var scrim=document.getElementById('indScrim'), drawer=document.getElementById('indDrawer');
+  var eT=document.getElementById('indTitle'), eD=document.getElementById('indDesc'), eP=document.getElementById('indPoints'),
+      eCta=document.getElementById('indCta'), eLink=document.getElementById('indLink'),
+      eShotD=document.getElementById('indShotD'), eShotM=document.getElementById('indShotM');
+  function keyOf(n){ return (n.getAttribute('href')||'').split('/').pop(); }
+  function open(n){
+    var k=keyOf(n), data=IND[k]; if(!data) return;
+    eT.textContent=data.name;
+    eD.innerHTML=data.d;
+    eP.innerHTML=data.pts.map(function(p){return '<li>'+p+'</li>';}).join('');
+    eShotD.src=data.d_img; eShotD.alt=data.name+' demo website, desktop';
+    eShotM.src=data.m_img; eShotM.alt=data.name+' demo website, mobile';
+    eCta.setAttribute('href',data.demo);
+    eLink.setAttribute('href',k);
+    drawer.scrollTop=0;
+    document.body.classList.add('drawer-open'); scrim.classList.add('open'); drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); scrim.setAttribute('aria-hidden','false');
+  }
+  function close(){ document.body.classList.remove('drawer-open'); scrim.classList.remove('open'); drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); scrim.setAttribute('aria-hidden','true'); }
+  var isMobile=function(){ return window.matchMedia('(max-width:820px)').matches; };
+  document.querySelectorAll('.bottle').forEach(function(n){
+    if(!IND[keyOf(n)]) return;
+    n.classList.add('js-ind');
+    var go=n.querySelector('.bottle-go');
+    if(go){ go.innerHTML='See the playbook <span class="bottle-plus" aria-hidden="true">+</span>'; }
+    n.addEventListener('click', function(e){ if(isMobile()) return; e.preventDefault(); open(n); });
+  });
+  scrim.addEventListener('click', close);
+  document.getElementById('indX').addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
 <script>
 (function(){
   var stage=document.querySelector('.orb-stage'); if(!stage) return;
@@ -647,9 +800,9 @@
     eCta.setAttribute('href',k);
     drawer.scrollTop=0;
     void drawer.offsetWidth; /* commit dashoffset:1 before opening so the wire draws in */
-    scrim.classList.add('open'); drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); scrim.setAttribute('aria-hidden','false');
+    document.body.classList.add('drawer-open'); scrim.classList.add('open'); drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); scrim.setAttribute('aria-hidden','false');
   }
-  function close(){ scrim.classList.remove('open'); drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); scrim.setAttribute('aria-hidden','true'); }
+  function close(){ document.body.classList.remove('drawer-open'); scrim.classList.remove('open'); drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); scrim.setAttribute('aria-hidden','true'); }
   var isMobile=function(){ return window.matchMedia('(max-width:820px)').matches; };
   document.querySelectorAll('.orb-node').forEach(function(n){
     if(!SPECS[keyOf(n)]) return;
@@ -668,13 +821,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/site.js?v=20260804b"></script>
-<script src="assets/gap-quiz.js?v=20260804b"></script>
+<script src="assets/gap-quiz.js?v=20260909c"></script>
 <!-- Apple-grade interaction polish (additive, reduced-motion aware) -->
 <style id="apple-polish">
 :root{--spring:cubic-bezier(.34,1.3,.5,1)}
 .btn:active,.btn-gold:active,.btn-line:active{transition:transform .08s ease-out}
-.btn-gold{box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 10px 26px -15px rgba(201,168,106,.55)}
-.btn-gold:hover{box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 18px 44px -16px rgba(201,168,106,.62)}
+/* .btn-gold apple-style styling now lives in site.css */
 .nav.scrolled{box-shadow:0 20px 44px -34px rgba(0,0,0,.85)}
 .nav::after{content:"";position:absolute;left:0;right:0;top:100%;height:28px;pointer-events:none;background:linear-gradient(rgba(11,9,6,.55),rgba(11,9,6,0));opacity:0;transition:opacity .5s var(--ease)}
 .nav.scrolled::after{opacity:1}
