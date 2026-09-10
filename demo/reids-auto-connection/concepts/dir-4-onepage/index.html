@@ -47,6 +47,27 @@
   .review__who small{display:block; font-family:"Space Mono",monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); margin-top:.12rem;}
   @media (max-width:860px){ .reviews-grid{grid-template-columns:1fr 1fr;} }
   @media (max-width:560px){ .reviews-grid{grid-template-columns:1fr;} }
+
+  /* ---- $0 DOWN offer band ---- */
+  .offer{background:var(--clay); color:var(--cream); border-top:1px solid var(--clay-deep); border-bottom:1px solid var(--clay-deep);}
+  .offer__inner{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(1.6rem,4.5vw,4rem); align-items:center; padding-block:clamp(2.6rem,5.5vw,4rem);}
+  .offer__eyebrow{font-family:"Space Mono",monospace; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#ffe6c2;}
+  .offer__zero{display:flex; align-items:baseline; gap:.12em; margin:.45rem 0 0; color:#fff; font-family:"DM Serif Display",serif; line-height:.78;}
+  .offer__amt{font-size:clamp(5rem,15vw,9.5rem); letter-spacing:-.03em;}
+  .offer__down{font-size:clamp(2.1rem,6vw,3.8rem); text-transform:uppercase; letter-spacing:.01em;}
+  .offer__sub{font-family:"DM Serif Display",serif; font-size:clamp(1.5rem,3vw,2.2rem); color:#fff; margin:.2rem 0 0; line-height:1;}
+  .offer__note{font-family:"Newsreader",serif; font-style:italic; font-size:clamp(1rem,1.7vw,1.22rem); color:#fbeede; margin:.7rem 0 0; max-width:32ch; line-height:1.5;}
+  .offer__side{display:grid; gap:1rem;}
+  .offer__fly{display:flex; gap:1rem; align-items:flex-start; background:rgba(0,0,0,.18); border:1.5px solid rgba(255,255,255,.42); border-radius:4px; padding:clamp(1.1rem,2.4vw,1.6rem);}
+  .offer__fly svg{width:2rem; height:2rem; flex:none; color:#ffe6c2; margin-top:.15rem;}
+  .offer__fly b{display:block; font-family:"DM Serif Display",serif; font-weight:400; font-size:clamp(1.4rem,2.8vw,2rem); line-height:1.05; color:#fff; margin-bottom:.35rem;}
+  .offer__fly span{color:#fbeede; font-family:"Newsreader",serif; font-size:1.04rem; line-height:1.5;}
+  .offer__chips{display:grid; gap:.75rem; padding-left:.15rem;}
+  .offer__chip{display:flex; gap:.7rem; align-items:center; font-family:"Space Mono",monospace; font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; color:#fff;}
+  .offer__chip svg{width:1.2em; height:1.2em; flex:none; color:#ffe6c2;}
+  @media (max-width:860px){
+    .offer__inner{grid-template-columns:1fr; gap:1.7rem;}
+  }
 </style>
 </head>
 <body>
@@ -109,7 +130,28 @@
           </a>
           <a class="btn btn--ghost btn--lg" href="tel:+19724361600">Call (972) 436-1600</a>
         </div>
-        <p class="hero__reassure hero__reassure--center"><span>Out of the area? We fly you in <b>free</b> to pick up your car.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ $0 DOWN OFFER BAND ============ -->
+  <section class="offer" aria-label="The offer">
+    <div class="wrap offer__inner">
+      <div class="offer__headline reveal">
+        <span class="offer__eyebrow">The offer, plainly</span>
+        <p class="offer__zero"><span class="offer__amt">$0</span><span class="offer__down">down</span></p>
+        <p class="offer__sub">on most loans.</p>
+        <p class="offer__note">Keep your cash for what comes after the keys.</p>
+      </div>
+      <div class="offer__side reveal" data-d="1">
+        <div class="offer__fly">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          <span><b>We fly you in, free.</b>Out of state? We cover your flight in, then you drive your car home.</span>
+        </div>
+        <div class="offer__chips">
+          <span class="offer__chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Late-model, low-mileage vehicles</span>
+          <span class="offer__chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>By appointment only</span>
+        </div>
       </div>
     </div>
   </section>
@@ -230,9 +272,10 @@
           <span class="kicker kicker--cream">Get in touch</span>
           <h2>Let’s get you approved.</h2>
           <p class="close__lede">No lot to drive to for a first answer. Tell us where you’re starting from, and a real person picks it up from there.</p>
-          <p class="close__lede" style="margin-top:.7rem;">Call <a href="tel:+19724361600" style="color:var(--cream); font-weight:700;">(972) 436-1600</a> — Mon–Sat, 10–7, by appointment.</p>
+          <p class="close__lede" style="margin-top:.7rem;">Call <a href="tel:+19724361600" style="color:var(--cream); font-weight:700;">(972) 436-1600</a> — Mon–Sat, 10–7, by appointment only.</p>
           <ul class="close__list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>$0 down on most loans</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Late-model, low-mileage vehicles</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Approved through Ch. 7 &amp; 13, repo, no credit</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>We fly you in free to pick up your car · Se habla español</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>On-time payments report to the bureaus — rebuild credit as you drive</li>
@@ -241,7 +284,7 @@
 
         <div class="apply reveal" data-d="1">
           <form id="applyForm" class="apply__form" novalidate>
-            <span class="kicker apply__k">Fresh Start Program · By appointment</span>
+            <span class="kicker apply__k">Fresh Start Program · By appointment only</span>
             <h3>Start here</h3>
             <div class="field">
               <label for="fname">First name</label>
@@ -297,7 +340,7 @@
         </div>
       </div>
       <div class="colo__col">
-        <h3>Hours · By appointment</h3>
+        <h3>Hours · By appointment only</h3>
         <div class="colo__line"><span>Mon–Sat</span><span>10:00 – 7:00</span></div>
         <div class="colo__line"><span>Sunday</span><span>Closed</span></div>
         <p style="margin-top:1rem; font-size:.92rem;">Nationwide + fly-in program.<br>Se habla español.</p>
