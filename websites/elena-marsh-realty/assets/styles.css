@@ -304,6 +304,9 @@ svg{display:block}
   .field--row{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr}
   .hero__title{font-size:clamp(2.6rem,11vw,3.6rem)}
+  .hero::after{background:
+    linear-gradient(0deg,rgba(13,11,9,.9) 0%,rgba(13,11,9,.74) 26%,rgba(13,11,9,.5) 50%,rgba(13,11,9,.22) 72%,rgba(13,11,9,0) 90%),
+    linear-gradient(180deg,rgba(13,11,9,.44) 0%,rgba(13,11,9,0) 16%)}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
