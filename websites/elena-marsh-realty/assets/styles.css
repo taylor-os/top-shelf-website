@@ -147,6 +147,12 @@ svg{display:block}
 .hero__rating .stars{color:var(--star);letter-spacing:.08em;font-size:.92rem}
 .hero__rating b{font-weight:700}
 .gmap span{font-weight:700}
+.gmap span:nth-child(1){color:#4285F4}
+.gmap span:nth-child(2){color:#EA4335}
+.gmap span:nth-child(3){color:#FBBC05}
+.gmap span:nth-child(4){color:#4285F4}
+.gmap span:nth-child(5){color:#34A853}
+.gmap span:nth-child(6){color:#EA4335}
 
 /* ---- intro statement ---- */
 .statement{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(2rem,6vw,6rem);align-items:end}
