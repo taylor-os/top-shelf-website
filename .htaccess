@@ -37,6 +37,7 @@ RedirectMatch 301 ^/.+-review\.html$ /
 # removes a file on deploy, so without these rules both stay live at 200.
 Redirect 301 /industry-bars.html /industry-restaurants.html
 Redirect 301 /industry-dental.html /industry-medical-dental.html
+Redirect 301 /industry-realtor.html /industry-real-estate.html
 
 # Clean URL for the booking page: /booking serves booking.html.
 <IfModule mod_rewrite.c>
