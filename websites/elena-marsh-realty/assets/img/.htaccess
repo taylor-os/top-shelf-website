@@ -1,0 +1,6 @@
+# Serve original images without CDN resize/recompression (keep hero full-res).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpe?g|png|webp)$">
+    Header set Cache-Control "public, max-age=31536000, no-transform"
+  </FilesMatch>
+</IfModule>

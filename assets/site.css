@@ -755,6 +755,8 @@ body.mm-open{ overflow:hidden; }
    bottle on a shelf. Uses the existing tokens; no new colours.
    ============================================================ */
 .shelf{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(1.1rem,2.2vw,2rem); }
+/* Homepage "Find Your Industry" has 9 bottles: show 3x3x3 on desktop. Solution-page shelves have 8, keep 4-wide. Below 1080 all shelves collapse the same. */
+@media (min-width:1081px){ #industries .shelf{ grid-template-columns:repeat(3,1fr); } }
 .bottle{ display:block; text-align:center; }
 .bottle-frame{
   display:block; position:relative; overflow:hidden; aspect-ratio:3/4.2;
