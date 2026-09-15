@@ -615,15 +615,23 @@
   </div>
 </aside>
 <style id="ind-css">
-/* Homepage cards: let the bright industries read bright (per-industry tune) */
-.bottle[href="industry-medical-dental.html"] .bottle-frame img{ filter:saturate(1.06) brightness(1.2); }
-.bottle[href="industry-salon-spa-fitness.html"] .bottle-frame img{ filter:saturate(1.05) brightness(1.12); }
-.bottle[href="industry-medical-dental.html"]:hover .bottle-frame img{ filter:saturate(1.11) brightness(1.26); }
-.bottle[href="industry-salon-spa-fitness.html"]:hover .bottle-frame img{ filter:saturate(1.1) brightness(1.18); }
-.bottle[href="industry-retail.html"] .bottle-frame img,
-.bottle[href="industry-custom.html"] .bottle-frame img{ filter:saturate(1) brightness(1.05); }
-.bottle[href="industry-retail.html"]:hover .bottle-frame img,
-.bottle[href="industry-custom.html"]:hover .bottle-frame img{ filter:saturate(1.05) brightness(1.11); }
+/* Homepage cards: pull the bright industries down to match the dark theme (per-industry tune, keyed by href) */
+.bottle[href="industry-legal.html"] .bottle-frame img{ filter:brightness(.72) saturate(.93); }
+.bottle[href="industry-custom.html"] .bottle-frame img{ filter:brightness(.64) saturate(.93); }
+.bottle[href="industry-auto.html"] .bottle-frame img{ filter:brightness(.58) saturate(.93); }
+.bottle[href="industry-retail.html"] .bottle-frame img{ filter:brightness(.52) saturate(.93); }
+.bottle[href="industry-medical-dental.html"] .bottle-frame img{ filter:brightness(.47) saturate(.93); }
+.bottle[href="industry-salon-spa-fitness.html"] .bottle-frame img{ filter:brightness(.44) saturate(.93); }
+.bottle[href="industry-legal.html"]:hover .bottle-frame img{ filter:brightness(.82) saturate(.98); }
+.bottle[href="industry-custom.html"]:hover .bottle-frame img{ filter:brightness(.74) saturate(.98); }
+.bottle[href="industry-auto.html"]:hover .bottle-frame img{ filter:brightness(.68) saturate(.98); }
+.bottle[href="industry-retail.html"]:hover .bottle-frame img{ filter:brightness(.62) saturate(.98); }
+.bottle[href="industry-medical-dental.html"]:hover .bottle-frame img{ filter:brightness(.57) saturate(.98); }
+.bottle[href="industry-salon-spa-fitness.html"]:hover .bottle-frame img{ filter:brightness(.54) saturate(.98); }
+.bottle[href="industry-legal.html"] .bottle-frame::after,
+.bottle[href="industry-custom.html"] .bottle-frame::after,
+.bottle[href="industry-auto.html"] .bottle-frame::after,
+.bottle[href="industry-retail.html"] .bottle-frame::after,
 .bottle[href="industry-medical-dental.html"] .bottle-frame::after,
 .bottle[href="industry-salon-spa-fitness.html"] .bottle-frame::after{ box-shadow:inset 0 -55px 55px -48px rgba(11,9,6,.55); }
 
