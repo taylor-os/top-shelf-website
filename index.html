@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20260913a">
+<link rel="stylesheet" href="assets/site.css?v=20260915b">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QCCJ3HP11"></script>
 <script>
@@ -841,6 +841,7 @@ body.drawer-open .tsc-fab{opacity:0;visibility:hidden;pointer-events:none;transi
     n.classList.add('js-drawer');
     var chip=n.querySelector('.orb-chip');
     if(chip){ var p=document.createElement('span'); p.className='orb-plus'; p.setAttribute('aria-hidden','true'); p.textContent='+'; chip.appendChild(p); }
+    if(!n.querySelector('.orb-desc')){ var dd=document.createElement('span'); dd.className='orb-desc'; dd.textContent=n.dataset.b||''; n.appendChild(dd); } // one-line description shown in the mobile list row
     n.addEventListener('click', function(e){ e.preventDefault(); open(n); }); // opens the detail drawer (a bottom sheet on mobile)
   });
   scrim.addEventListener('click', close);
