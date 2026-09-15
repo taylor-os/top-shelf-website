@@ -229,6 +229,16 @@ a{ color:inherit; text-decoration:none; }
 .mobile-menu a.mm-lead{ font-family:var(--serif); font-size:1.65rem; font-weight:400; }
 .mobile-menu a.mm-sub{ font-family:var(--sans); font-size:1rem; color:var(--ink-2); }
 .mobile-menu .btn{ margin-top:2rem; justify-content:center; }
+/* Collapsible groups (Industries / Solutions) — collapsed by default, tap to expand */
+.mm-group-head{ width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:.85rem 0; border:none; border-bottom:1px solid var(--hairline-soft); background:none; cursor:pointer;
+  text-align:left; font-family:var(--serif); font-size:1.65rem; font-weight:400; color:var(--ink); transition:color .3s var(--ease); }
+.mm-group-head:hover,.mm-group.open .mm-group-head{ color:var(--gold-bright); }
+.mm-caret{ font-size:.8rem; color:var(--gold); flex:none; transition:transform .35s var(--ease); }
+.mm-group.open .mm-caret{ transform:rotate(180deg); }
+.mm-group-body{ max-height:0; overflow:hidden; transition:max-height .4s var(--ease); }
+.mm-group.open .mm-group-body{ max-height:640px; }
+.mm-group-body .mm-sub{ padding-left:1rem; }
 body.mm-open{ overflow:hidden; }
 
 /* ============================================================

@@ -205,14 +205,21 @@
   panel.setAttribute('aria-hidden', 'true');
   links.querySelectorAll(':scope > .nav-item, :scope > .nav-link').forEach(function (node) {
     if (node.classList.contains('nav-item')) {
+      // Collapsible group: tap the header to expand its links (collapsed by default).
       var head = node.querySelector('.nav-link');
-      var title = document.createElement('p');
-      title.className = 'mm-group-title';
-      title.textContent = (head ? head.textContent : '').replace(/[▾▼]/g, '').trim();
-      panel.appendChild(title);
+      var label = (head ? head.textContent : '').replace(/[▾▼]/g, '').trim();
+      var group = document.createElement('div'); group.className = 'mm-group';
+      var gh = document.createElement('button'); gh.type = 'button'; gh.className = 'mm-group-head'; gh.setAttribute('aria-expanded', 'false');
+      gh.innerHTML = '<span>' + label + '</span><span class="mm-caret" aria-hidden="true">▾</span>';
+      var body = document.createElement('div'); body.className = 'mm-group-body';
       node.querySelectorAll('.nav-dropdown a').forEach(function (a) {
-        var c = a.cloneNode(true); c.className = 'mm-sub'; panel.appendChild(c);
+        var c = a.cloneNode(true); c.className = 'mm-sub'; body.appendChild(c);
       });
+      gh.addEventListener('click', function () {
+        var isOpen = group.classList.toggle('open');
+        gh.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      group.appendChild(gh); group.appendChild(body); panel.appendChild(group);
     } else {
       var c = node.cloneNode(true); c.className = 'mm-lead'; panel.appendChild(c);
     }
