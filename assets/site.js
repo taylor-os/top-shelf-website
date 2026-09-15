@@ -421,6 +421,7 @@
 
   document.querySelectorAll('.orb-node').forEach(function (n) {
     function on() {
+      if (window.matchMedia('(max-width:820px)').matches) return; // mobile: keep the logo; tapping opens the bottom sheet instead
       t.innerHTML = n.dataset.t;
       b.textContent = n.dataset.b;
       centre.classList.add('is-on');
