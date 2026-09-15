@@ -606,6 +606,8 @@
   .svc-drawer{top:auto;left:0;right:0;bottom:0;width:auto;max-height:88vh;border-left:none;border-top:1px solid var(--hairline-strong);border-radius:22px 22px 0 0;transform:translateY(100%);box-shadow:0 -40px 90px -26px rgba(0,0,0,.9)}
   .svc-drawer::before{content:"";position:sticky;top:0;z-index:6;display:block;width:38px;height:4px;margin:11px auto 0;border-radius:99px;background:var(--hairline-strong)}
 }
+/* Get the floating buttons out of the way while a detail drawer / bottom sheet is open (button has an attention animation, so display:none is the reliable hide) */
+body.drawer-open #tsgap-tab,body.drawer-open .tsc-fab{display:none!important}
 @media(prefers-reduced-motion:reduce){.svc-drawer,.svc-scrim,.svc-x,.orb-plus{transition:none}}
 </style>
 <div class="svc-scrim" id="svcScrim" aria-hidden="true"></div>
