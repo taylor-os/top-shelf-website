@@ -494,7 +494,7 @@ body.mm-open{ overflow:hidden; }
 
 /* Owner's Words — testimonials from the owners who run on Top Shelf */
 .owner-sub{ max-width:46rem; margin:1.6rem auto 0; color:var(--ink-3); font-size:1.02rem; line-height:1.7; }
-.owner-words{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; margin-top:3.4rem; }
+.owner-words{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; margin-top:3.4rem; }
 .owner-card{ display:flex; flex-direction:column; gap:1.8rem; padding:2.4rem; background:var(--surface); border:1px solid var(--hairline); border-radius:var(--r-lg); }
 .owner-quote{ font-family:var(--serif); font-size:1.28rem; line-height:1.62; color:var(--ink); font-style:italic; position:relative; padding-top:1.5rem; }
 .owner-quote::before{ content:"\201C"; position:absolute; top:-.5rem; left:-.3rem; font-family:var(--serif); font-style:normal; font-size:3.4rem; line-height:1; color:var(--gold); opacity:.5; }
@@ -503,7 +503,7 @@ body.mm-open{ overflow:hidden; }
 .owner-id{ display:flex; flex-direction:column; gap:.28rem; }
 .owner-name{ font-family:var(--serif); font-size:1.12rem; color:var(--ink); line-height:1.15; }
 .owner-role{ font-family:var(--sans); font-size:.68rem; text-transform:uppercase; letter-spacing:.2em; color:var(--gold); }
-@media (max-width:768px){ .owner-words{ grid-template-columns:1fr; } }
+@media (max-width:980px){ .owner-words{ grid-template-columns:1fr; } }
 
 /* ============================================================
    FINAL CTA
