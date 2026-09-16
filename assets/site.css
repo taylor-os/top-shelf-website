@@ -500,7 +500,7 @@ body.mm-open{ overflow:hidden; }
 .owner-quote::before{ content:"\201C"; position:absolute; top:-.5rem; left:-.3rem; font-family:var(--serif); font-style:normal; font-size:3.4rem; line-height:1; color:var(--gold); opacity:.5; }
 .owner-meta{ display:flex; align-items:center; gap:1.1rem; margin-top:auto; padding-top:1.6rem; border-top:1px solid var(--hairline); }
 .owner-logo{ height:42px; width:auto; max-width:134px; object-fit:contain; object-position:left center; }
-.owner-id{ display:flex; flex-direction:column; gap:.28rem; }
+.owner-id{ display:flex; flex-direction:column; justify-content:center; gap:.28rem; min-height:4.1rem; }
 .owner-name{ font-family:var(--serif); font-size:1.12rem; color:var(--ink); line-height:1.15; }
 .owner-role{ font-family:var(--sans); font-size:.68rem; text-transform:uppercase; letter-spacing:.2em; color:var(--gold); }
 @media (max-width:980px){ .owner-words{ grid-template-columns:1fr; } }
