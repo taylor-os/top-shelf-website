@@ -242,6 +242,23 @@
   window.matchMedia('(min-width: 861px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
 })();
 
+/* ===== Sticky mobile call + text bar ===== */
+(function () {
+  if (document.querySelector('.ts-callbar')) return;
+  var TEL = '+14698333033';
+  var bar = document.createElement('div');
+  bar.className = 'ts-callbar';
+  bar.setAttribute('aria-label', 'Call or text Top Shelf');
+  bar.innerHTML =
+    '<a class="ts-callbar-btn ts-callbar-call" href="tel:' + TEL + '">'
+    + '<svg viewBox="0 0 24 24" width="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+    + '<span class="ts-callbar-l"><b>Call</b><small>Always answered</small></span></a>'
+    + '<a class="ts-callbar-btn ts-callbar-text" href="sms:' + TEL + '">'
+    + '<svg viewBox="0 0 24 24" width="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
+    + '<span class="ts-callbar-l"><b>Text us</b></span></a>';
+  document.body.appendChild(bar);
+})();
+
 /* ===== Website assistant (concierge) — shell (markup + open/close) ===== */
 (function () {
   if (document.getElementById('tsChatFab')) return;
