@@ -500,7 +500,8 @@ body.mm-open{ overflow:hidden; }
 .owner-card{ display:flex; flex-direction:column; gap:1.8rem; padding:2.4rem; background:var(--surface); border:1px solid var(--hairline); border-radius:var(--r-lg); }
 .owner-quote{ font-family:var(--serif); font-size:1.28rem; line-height:1.62; color:var(--ink); font-style:italic; position:relative; padding-top:1.5rem; }
 .owner-quote::before{ content:"\201C"; position:absolute; top:-.5rem; left:-.3rem; font-family:var(--serif); font-style:normal; font-size:3.4rem; line-height:1; color:var(--gold); opacity:.5; }
-.owner-meta{ display:flex; align-items:center; gap:1.1rem; margin-top:auto; padding-top:1.6rem; border-top:1px solid var(--hairline); }
+.owner-plan{ margin-top:auto; font-family:var(--sans); font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:var(--gold); }
+.owner-meta{ display:flex; align-items:center; gap:1.1rem; padding-top:1.6rem; border-top:1px solid var(--hairline); }
 .owner-logo{ height:42px; width:auto; max-width:134px; object-fit:contain; object-position:left center; }
 .owner-id{ display:flex; flex-direction:column; justify-content:center; gap:.28rem; min-height:4.1rem; }
 .owner-name{ font-family:var(--serif); font-size:1.12rem; color:var(--ink); line-height:1.15; }
