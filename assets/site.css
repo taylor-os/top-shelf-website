@@ -532,6 +532,7 @@ body.mm-open{ overflow:hidden; }
   .tsc-fab{ bottom:calc(clamp(1rem,3vw,2rem) + 60px) !important; }
   .tsc-panel{ bottom:calc(clamp(1rem,3vw,2rem) + 134px) !important; }
   #tsgap-tab{ bottom:74px !important; }
+  .hero-logo{ display:none; } /* nav already shows the logo on mobile; avoid the double stack */
 }
 
 /* ============================================================
