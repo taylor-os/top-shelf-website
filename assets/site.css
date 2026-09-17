@@ -710,6 +710,13 @@ body.mm-open{ overflow:hidden; }
 .cmp .col-us{ color:var(--ink); }
 .cmp tbody tr:hover{ background:rgba(201,168,106,.03); }
 .cmp .cmp-check{ color:var(--gold); }
+/* Comparison tables stay usable on phones: the label column sticks while the plan columns scroll */
+.cmp-hint{ display:none; margin:0 0 .9rem; font-size:.78rem; color:var(--gold); font-family:var(--sans); letter-spacing:.02em; }
+@media (max-width:768px){
+  .cmp th,.cmp td{ padding:.72rem .7rem; font-size:.82rem; }
+  .cmp th:first-child,.cmp td:first-child{ position:sticky; left:0; z-index:1; background:var(--ground); box-shadow:1px 0 0 var(--hairline); min-width:126px !important; }
+  .cmp-hint{ display:block; }
+}
 
 /* --- Contact form (luxury inputs) --- */
 .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem 1.6rem; }
