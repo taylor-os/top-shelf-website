@@ -8,7 +8,7 @@
 # copy on a returning visitor's device until its heuristic cache expired, even
 # though the asset edits around it updated. Pages are what people read; revalidate them.
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|webp|pdf|html?)$">
+  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|webp|pdf|html?|xml|txt)$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
