@@ -17,7 +17,7 @@ var CONFIG = {
     fontDisplay:"'Cormorant Garamond',Georgia,serif", fontBody:"'Jost',system-ui,sans-serif"
   },
   behavior: {
-    triggerSeconds: 7, scrollPercent: 45, exitIntent: true,
+    triggerSeconds: null, scrollPercent: 45, exitIntent: true,
     oncePerSession: true, dismissDays: 7, showDollars: true, currency: "$",
     leadEndpoint: "https://top-shelf-production.up.railway.app/api/website-lead",
     leadFallback: "https://formspree.io/f/FORMSPREE_ID",  /* set the real Formspree id if the CRM is down */
