@@ -46,14 +46,9 @@ def entries():
             continue
         url, pr, cf = loc_and_priority(f)
         rows.append((url, lastmod(f), cf, pr))
-    for f in sorted(glob.glob("websites/*/*.html")):
-        rel = f.replace("\\", "/")
-        slug = rel.split("/")[1]
-        if rel.endswith("/index.html"):
-            url, pr, cf = f"{SITE}/websites/{slug}/", "0.6", "monthly"
-        else:
-            url, pr, cf = f"{SITE}/{rel}", "0.5", "monthly"
-        rows.append((url, lastmod(f), cf, pr))
+    # The 9 sample sites under /websites/ are FICTIONAL demos and are noindex
+    # (owner decision 2026-09-17: no fake companies competing in search), so
+    # they are deliberately kept OUT of the sitemap.
     return rows
 
 
