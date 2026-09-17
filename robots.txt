@@ -1,7 +1,11 @@
+# Top Shelf Business Solutions — https://www.topshelfsolutions.io
+# Every crawler is welcome, including AI answer engines (GPTBot, OAI-SearchBot,
+# ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended,
+# Bingbot, cohere-ai). Only the private prospect demos under /demo/ are off-limits.
+# See /llms.txt for a structured summary written for AI assistants.
+
 User-agent: *
 Allow: /
+Disallow: /demo/
 
 Sitemap: https://www.topshelfsolutions.io/sitemap.xml
-
-User-agent: *
-Disallow: /demo/

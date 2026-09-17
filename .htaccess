@@ -39,9 +39,17 @@ Redirect 301 /industry-bars.html /industry-restaurants.html
 Redirect 301 /industry-dental.html /industry-medical-dental.html
 Redirect 301 /industry-realtor.html /industry-real-estate.html
 
-# Clean URL for the booking page: /booking serves booking.html.
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Canonical host: 301 the bare apex to www so no page resolves at two hosts.
+  # The apex (topshelfsolutions.io) was answering 200 alongside www, a
+  # duplicate-host signal; canonical tags and the sitemap already use www, so
+  # this makes the server agree with them. Added 2026-09-17 (elite-SEO pass).
+  RewriteCond %{HTTP_HOST} ^topshelfsolutions\.io$ [NC]
+  RewriteRule ^(.*)$ https://www.topshelfsolutions.io/$1 [R=301,L]
+
+  # Clean URL for the booking page: /booking serves booking.html.
   RewriteRule ^booking/?$ booking.html [L]
 </IfModule>
 
