@@ -163,6 +163,14 @@
               <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="you@business.com" required />
             </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" placeholder="Denton" required />
+            </div>
+            <div class="field">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" placeholder="TX" maxlength="20" required />
+            </div>
             <div class="field full">
               <label for="challenge">Your Biggest Challenge Right Now</label>
               <textarea id="challenge" name="challenge" placeholder="e.g. We miss calls when we're busy, our reviews are thin, or we're just not showing up on Google…"></textarea>
@@ -207,6 +215,8 @@
               gbp:         (f.get('gbp')      || '').trim(),
               email:       (f.get('email')    || '').trim(),
               phone:       (f.get('phone')    || '').trim(),
+              city:        (f.get('city')     || '').trim(),
+              state:       (f.get('state')    || '').trim(),
               need:        (f.get('challenge')|| '').trim(),
               industry:    f.get('type') || '',
               sms_consent: f.get('sms_consent') === 'yes',
