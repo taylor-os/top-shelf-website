@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Shelf Timeline Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#0B0906; --surface:#100C08; --surface-2:#15100B;
+  --hairline:rgba(201,168,106,.16); --hairline-strong:rgba(201,168,106,.32);
+  --ink:#F4F0E8; --ink-2:#CFC7B8; --ink-3:#98907F; --ink-4:#6E675A;
+  --gold:#C9A86A; --gold-bright:#E4C98A; --gold-deep:#A98A4E;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--ink-2);font-family:var(--sans);font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:.7rem;text-transform:uppercase;letter-spacing:.28em;color:var(--gold)}
+.tag{font-family:var(--sans);font-weight:500;font-size:.62rem;text-transform:uppercase;letter-spacing:.24em;color:var(--gold)}
+.s-title{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1.15;letter-spacing:.01em}
+.s-desc{color:var(--ink-2);font-weight:300;font-size:.96rem;line-height:1.72}
+svg.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- page ---------- */
+.page-head{padding:clamp(3.5rem,8vw,6rem) 0 1rem;text-align:center}
+.page-head h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.4rem);color:var(--ink);line-height:1.05;margin:1.4rem 0 1.2rem;letter-spacing:.01em}
+.page-head p{max-width:46rem;margin:0 auto;color:var(--ink-3);font-weight:300;font-size:1.05rem}
+.page-head .steps-note{margin-top:1.4rem;font-size:.9rem;color:var(--ink-4)}
+
+.concept{padding:clamp(3.5rem,8vw,6.5rem) 0;border-top:1px solid var(--hairline)}
+.concept-head{margin-bottom:clamp(2.4rem,5vw,3.6rem)}
+.concept-head .cnum{font-family:var(--serif);font-size:1rem;color:var(--gold);letter-spacing:.08em}
+.concept-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--ink);margin:.4rem 0 .5rem;letter-spacing:.01em}
+.concept-head p{color:var(--ink-3);font-weight:300;font-size:.96rem;max-width:44rem}
+
+/* ================= 1 · CHANGELOG RAIL ================= */
+.c1-item{display:grid;grid-template-columns:118px 1fr;gap:clamp(1rem,3vw,2.4rem)}
+.c1-when{text-align:right;padding-top:.15rem}
+.c1-when .tag{display:block}
+.c1-when .n{font-family:var(--serif);font-size:2.1rem;color:var(--ink-4);line-height:1;margin-top:.3rem}
+.c1-body{position:relative;border-left:1px solid var(--hairline-strong);padding:0 0 clamp(2.4rem,5vw,3.4rem) clamp(1.6rem,3vw,2.4rem)}
+.c1-item:last-child .c1-body{border-left-color:transparent}
+.c1-node{position:absolute;left:-8px;top:2px;width:15px;height:15px;border-radius:50%;background:var(--ground);border:2px solid var(--gold);box-shadow:0 0 0 5px rgba(201,168,106,.08)}
+.c1-body .icon{color:var(--gold);margin-bottom:1rem}
+.c1-body h3{font-family:var(--serif);font-weight:500;font-size:1.55rem;color:var(--ink);margin-bottom:.5rem}
+.c1-body p{max-width:34rem}
+
+/* ================= 2 · HORIZONTAL TRACK ================= */
+.c2-track{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;position:relative}
+.c2-track::before{content:"";position:absolute;top:29px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-deep));opacity:.55}
+.c2-step{text-align:center;position:relative}
+.c2-node{width:58px;height:58px;border-radius:50%;margin:0 auto 1.5rem;display:grid;place-items:center;background:var(--surface);border:1px solid var(--hairline-strong);color:var(--gold-bright);position:relative;z-index:1}
+.c2-node .num{position:absolute;top:-8px;right:-6px;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#231a08;font-size:.7rem;font-weight:500;display:grid;place-items:center;font-family:var(--sans)}
+.c2-step .tag{display:block;margin-bottom:.5rem}
+.c2-step h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--ink);margin-bottom:.5rem;line-height:1.2}
+.c2-step p{font-size:.9rem}
+@media(max-width:760px){.c2-track{grid-template-columns:1fr;gap:2rem;max-width:24rem;margin:0 auto}.c2-track::before{display:none}}
+
+/* ================= 3 · ALTERNATING SPINE ================= */
+.c3{position:relative;padding:0}
+.c3::before{content:"";position:absolute;left:50%;top:6px;bottom:6px;width:1px;background:var(--hairline-strong);transform:translateX(-.5px)}
+.c3-item{position:relative;display:grid;grid-template-columns:1fr 1fr;margin-bottom:2rem}
+.c3-item:last-child{margin-bottom:0}
+.c3-dot{position:absolute;left:50%;top:2px;width:13px;height:13px;border-radius:50%;transform:translateX(-50%);background:var(--gold);box-shadow:0 0 0 5px rgba(201,168,106,.1)}
+.c3-card{background:var(--surface);border:1px solid var(--hairline);border-radius:8px;padding:clamp(1.3rem,2.5vw,1.7rem)}
+.c3-item:nth-child(odd) .c3-card{grid-column:1;margin-right:2.6rem;text-align:right}
+.c3-item:nth-child(even) .c3-card{grid-column:2;margin-left:2.6rem}
+.c3-card .row{display:flex;align-items:center;gap:.7rem;margin-bottom:.7rem;color:var(--gold)}
+.c3-item:nth-child(odd) .c3-card .row{flex-direction:row-reverse}
+.c3-card h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink);margin-bottom:.4rem}
+.c3-card p{font-size:.9rem}
+@media(max-width:760px){.c3::before{left:7px}.c3-item{grid-template-columns:1fr}.c3-dot{left:7px}.c3-item .c3-card{grid-column:1;margin:0 0 0 2.4rem;text-align:left}.c3-item:nth-child(odd) .c3-card{text-align:left}.c3-item:nth-child(odd) .c3-card .row{flex-direction:row}}
+
+/* ================= 4 · BENTO NUMBERS ================= */
+.c4-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.c4-card{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:clamp(1.6rem,3vw,2.2rem);min-height:230px;display:flex;flex-direction:column}
+.c4-card:hover{border-color:var(--hairline-strong)}
+.c4-ghost{position:absolute;top:-.24em;right:.04em;font-family:var(--serif);font-weight:600;font-size:9.5rem;line-height:1;color:var(--gold);opacity:.08;pointer-events:none}
+.c4-card .icon{color:var(--gold);margin-bottom:auto}
+.c4-card .tag{margin:1.4rem 0 .5rem}
+.c4-card h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;color:var(--ink);margin-bottom:.5rem;position:relative}
+.c4-card p{font-size:.92rem;position:relative}
+@media(max-width:720px){.c4-grid{grid-template-columns:1fr}}
+
+/* ================= 5 · GOLD PATH (payoff lit) ================= */
+.c5{max-width:680px}
+.c5-item{position:relative;display:grid;grid-template-columns:56px 1fr;gap:clamp(1.2rem,3vw,1.8rem);padding-bottom:clamp(2rem,4vw,2.8rem)}
+.c5-item:last-child{padding-bottom:0}
+.c5-item::before{content:"";position:absolute;left:27px;top:52px;bottom:-6px;width:2px;background:linear-gradient(var(--gold),rgba(201,168,106,.15));transform:translateX(-1px)}
+.c5-item:last-child::before{display:none}
+.c5-icon{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--gold);color:var(--gold-bright);position:relative;z-index:1}
+.c5-item:last-child .c5-icon{background:linear-gradient(160deg,var(--gold-bright),var(--gold-deep));border-color:var(--gold-bright);color:#231a08;box-shadow:0 0 34px -6px rgba(201,168,106,.6),0 0 0 6px rgba(201,168,106,.1)}
+.c5-body{padding-top:.4rem}
+.c5-body .tag{display:block;margin-bottom:.35rem}
+.c5-body h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;color:var(--ink);margin-bottom:.45rem}
+.c5-item:last-child .c5-body h3{color:var(--gold-bright)}
+.c5-body p{max-width:32rem;font-size:.95rem}
+
+.foot{padding:clamp(3rem,7vw,5rem) 0;border-top:1px solid var(--hairline);text-align:center;color:var(--ink-4);font-size:.9rem}
+.foot .eyebrow{margin-bottom:.8rem;display:inline-block}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-audit" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-analyze" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6" opacity=".55"/></symbol>
+  <symbol id="i-build" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a1.5 1.5 0 0 0 2.1 2.1l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.4-2.6z"/></symbol>
+  <symbol id="i-grow" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="page-head">
+    <span class="eyebrow">Top Shelf &middot; Section Concepts</span>
+    <h1>How It Works, in Four Steps</h1>
+    <p>Five ways to lay out the same four-step journey, from audit to results. Same words in every one, so you are comparing the look and feel. Pick a direction and we build it into the site.</p>
+    <p class="steps-note">Audit &rarr; Find the gaps &rarr; Build your system &rarr; It runs itself</p>
+  </header>
+</div>
+
+<!-- ============ CONCEPT 1 · CHANGELOG RAIL ============ -->
+<section class="concept"><div class="wrap">
+  <div class="concept-head"><span class="cnum">Concept 01</span><h2>Changelog Rail</h2><p>The Linear-style vertical timeline. Calm and editorial, reads straight down the page, with a step label and number running alongside like a date. Best when the section has room to breathe.</p></div>
+  <div class="c1">
+    <div class="c1-item"><div class="c1-when"><span class="tag">Audit</span><div class="n">01</div></div><div class="c1-body"><span class="c1-node"></span><span class="icon"><svg class="ic"><use href="#i-audit"/></svg></span><h3>You start a free audit</h3><p class="s-desc">Fill out a short form about your business. Where calls go unanswered, where reviews are thin, where leads slip away. A few minutes, no pressure.</p></div></div>
+    <div class="c1-item"><div class="c1-when"><span class="tag">Analyze</span><div class="n">02</div></div><div class="c1-body"><span class="c1-node"></span><span class="icon"><svg class="ic"><use href="#i-analyze"/></svg></span><h3>We find the gaps</h3><p class="s-desc">We dig into your calls, reviews, search presence, and follow-up, and pinpoint exactly what is costing you customers.</p></div></div>
+    <div class="c1-item"><div class="c1-when"><span class="tag">Build</span><div class="n">03</div></div><div class="c1-body"><span class="c1-node"></span><span class="icon"><svg class="ic"><use href="#i-build"/></svg></span><h3>We build your system</h3><p class="s-desc">Website, AI phone, CRM, reviews, booking, and follow-up, all set up and connected for you. Nothing for you to wire together.</p></div></div>
+    <div class="c1-item"><div class="c1-when"><span class="tag">Grow</span><div class="n">04</div></div><div class="c1-body"><span class="c1-node"></span><span class="icon"><svg class="ic"><use href="#i-grow"/></svg></span><h3>It runs like a well-oiled machine</h3><p class="s-desc">Calls get answered, leads get followed up, reviews roll in, and more of the right customers choose you. You grow while doing less.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============ CONCEPT 2 · HORIZONTAL TRACK ============ -->
+<section class="concept"><div class="wrap">
+  <div class="concept-head"><span class="cnum">Concept 02</span><h2>Horizontal Track</h2><p>Four steps across a single connected line, numbered nodes on the track. The most scannable option and the easiest to take in at a glance. Stacks into a clean column on phones.</p></div>
+  <div class="c2-track">
+    <div class="c2-step"><div class="c2-node"><svg class="ic"><use href="#i-audit"/></svg><span class="num">1</span></div><span class="tag">Audit</span><h3>You start a free audit</h3><p class="s-desc">Fill out a short form about your business. Where calls go unanswered, reviews are thin, leads slip away. A few minutes.</p></div>
+    <div class="c2-step"><div class="c2-node"><svg class="ic"><use href="#i-analyze"/></svg><span class="num">2</span></div><span class="tag">Analyze</span><h3>We find the gaps</h3><p class="s-desc">We dig into your calls, reviews, search presence, and follow-up, and pinpoint what is costing you customers.</p></div>
+    <div class="c2-step"><div class="c2-node"><svg class="ic"><use href="#i-build"/></svg><span class="num">3</span></div><span class="tag">Build</span><h3>We build your system</h3><p class="s-desc">Website, AI phone, CRM, reviews, booking, and follow-up, set up and connected for you. Nothing to wire together.</p></div>
+    <div class="c2-step"><div class="c2-node"><svg class="ic"><use href="#i-grow"/></svg><span class="num">4</span></div><span class="tag">Grow</span><h3>It runs itself</h3><p class="s-desc">Calls answered, leads followed up, reviews rolling in, more of the right customers choosing you. You grow doing less.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ CONCEPT 3 · ALTERNATING SPINE ============ -->
+<section class="concept"><div class="wrap">
+  <div class="concept-head"><span class="cnum">Concept 03</span><h2>Alternating Spine</h2><p>A centered line the steps zigzag around, each in its own card. More movement and presence on the page. A confident, premium feel when you want the section to be a moment.</p></div>
+  <div class="c3">
+    <div class="c3-item"><span class="c3-dot"></span><div class="c3-card"><div class="row"><svg class="ic"><use href="#i-audit"/></svg><span class="tag">01 &middot; Audit</span></div><h3>You start a free audit</h3><p class="s-desc">Fill out a short form about your business. Where calls go unanswered, reviews are thin, leads slip away.</p></div></div>
+    <div class="c3-item"><span class="c3-dot"></span><div class="c3-card"><div class="row"><svg class="ic"><use href="#i-analyze"/></svg><span class="tag">02 &middot; Analyze</span></div><h3>We find the gaps</h3><p class="s-desc">We dig into your calls, reviews, search presence, and follow-up, and pinpoint what is costing you customers.</p></div></div>
+    <div class="c3-item"><span class="c3-dot"></span><div class="c3-card"><div class="row"><svg class="ic"><use href="#i-build"/></svg><span class="tag">03 &middot; Build</span></div><h3>We build your system</h3><p class="s-desc">Website, AI phone, CRM, reviews, booking, and follow-up, set up and connected for you. Nothing to wire together.</p></div></div>
+    <div class="c3-item"><span class="c3-dot"></span><div class="c3-card"><div class="row"><svg class="ic"><use href="#i-grow"/></svg><span class="tag">04 &middot; Grow</span></div><h3>It runs like a well-oiled machine</h3><p class="s-desc">Calls answered, leads followed up, reviews rolling in, more of the right customers choosing you. You grow doing less.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============ CONCEPT 4 · BENTO NUMBERS ============ -->
+<section class="concept"><div class="wrap">
+  <div class="concept-head"><span class="cnum">Concept 04</span><h2>Bento Numbers</h2><p>Four bold cards with big ghosted numbers behind the copy. Modern and confident, and it holds up well in a tighter vertical space. Reads as a grid rather than a line.</p></div>
+  <div class="c4-grid">
+    <div class="c4-card"><span class="c4-ghost">01</span><span class="icon"><svg class="ic"><use href="#i-audit"/></svg></span><span class="tag">Audit</span><h3>You start a free audit</h3><p class="s-desc">Fill out a short form about your business. Where calls go unanswered, reviews are thin, leads slip away. A few minutes, no pressure.</p></div>
+    <div class="c4-card"><span class="c4-ghost">02</span><span class="icon"><svg class="ic"><use href="#i-analyze"/></svg></span><span class="tag">Analyze</span><h3>We find the gaps</h3><p class="s-desc">We dig into your calls, reviews, search presence, and follow-up, and pinpoint exactly what is costing you customers.</p></div>
+    <div class="c4-card"><span class="c4-ghost">03</span><span class="icon"><svg class="ic"><use href="#i-build"/></svg></span><span class="tag">Build</span><h3>We build your system</h3><p class="s-desc">Website, AI phone, CRM, reviews, booking, and follow-up, all set up and connected for you. Nothing for you to wire together.</p></div>
+    <div class="c4-card"><span class="c4-ghost">04</span><span class="icon"><svg class="ic"><use href="#i-grow"/></svg></span><span class="tag">Grow</span><h3>It runs itself</h3><p class="s-desc">Calls get answered, leads get followed up, reviews roll in, and more of the right customers choose you. You grow while doing less.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ CONCEPT 5 · GOLD PATH ============ -->
+<section class="concept"><div class="wrap">
+  <div class="concept-head"><span class="cnum">Concept 05</span><h2>Gold Path</h2><p>A vertical path where the line leads down to a lit-up final step. It deliberately pulls the eye to the payoff: the moment your business runs itself. The most conversion-focused of the five.</p></div>
+  <div class="c5">
+    <div class="c5-item"><span class="c5-icon"><svg class="ic"><use href="#i-audit"/></svg></span><div class="c5-body"><span class="tag">Step 01 &middot; Audit</span><h3>You start a free audit</h3><p class="s-desc">Fill out a short form about your business. Where calls go unanswered, where reviews are thin, where leads slip away. A few minutes, no pressure.</p></div></div>
+    <div class="c5-item"><span class="c5-icon"><svg class="ic"><use href="#i-analyze"/></svg></span><div class="c5-body"><span class="tag">Step 02 &middot; Analyze</span><h3>We find the gaps</h3><p class="s-desc">We dig into your calls, reviews, search presence, and follow-up, and pinpoint exactly what is costing you customers.</p></div></div>
+    <div class="c5-item"><span class="c5-icon"><svg class="ic"><use href="#i-build"/></svg></span><div class="c5-body"><span class="tag">Step 03 &middot; Build</span><h3>We build your system</h3><p class="s-desc">Website, AI phone, CRM, reviews, booking, and follow-up, all set up and connected for you. Nothing for you to wire together.</p></div></div>
+    <div class="c5-item"><span class="c5-icon"><svg class="ic"><use href="#i-grow"/></svg></span><div class="c5-body"><span class="tag">Step 04 &middot; Grow</span><h3>It runs like a well-oiled machine</h3><p class="s-desc">Calls get answered, leads get followed up, reviews roll in, and more of the right customers choose you. You grow while doing less.</p></div></div>
+  </div>
+</div></section>
+
+<div class="wrap"><footer class="foot"><span class="eyebrow">Tell me your pick</span><br>Reply with the concept number you like, or a mix (for example, "Concept 2 layout with Concept 5's lit final step") and I will build it into the site.</footer></div>
+
+</body>
+</html>
