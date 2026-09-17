@@ -508,6 +508,9 @@ body.mm-open{ overflow:hidden; }
 .owner-plan{ display:flex; align-items:baseline; gap:.5rem; margin-top:-.4rem; }
 .owner-plan-lead{ font-family:var(--sans); font-size:.6rem; text-transform:uppercase; letter-spacing:.2em; color:var(--ink-3); }
 .owner-plan-name{ font-family:'Great Vibes',cursive; font-size:1.85rem; line-height:1; color:var(--gold-bright); }
+.audit-list{ list-style:none; display:grid; gap:.85rem; margin:0; padding:0; }
+.audit-list li{ position:relative; padding-left:2rem; color:var(--ink-2); font-weight:300; line-height:1.6; }
+.audit-list li::before{ content:"\2713"; position:absolute; left:0; top:0; color:var(--gold); font-weight:600; }
 @media (max-width:980px){ .owner-words{ grid-template-columns:1fr; } }
 
 /* Hero one-line "what we are" descriptor */
