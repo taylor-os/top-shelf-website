@@ -519,6 +519,7 @@ body.mm-open{ overflow:hidden; }
 
 /* Sticky mobile call + text bar */
 .ts-callbar{ position:fixed; left:0; right:0; bottom:0; z-index:180; display:none; gap:1px; background:var(--hairline-strong); box-shadow:0 -8px 24px -12px rgba(0,0,0,.7); }
+body.drawer-open .ts-callbar{ display:none !important; } /* don't overlap the open service drawer */
 .ts-callbar-btn{ flex:1; display:flex; align-items:center; justify-content:center; gap:.55rem; padding:.72rem .5rem; text-decoration:none; font-family:var(--sans); }
 .ts-callbar-call{ background:linear-gradient(180deg,var(--gold-bright),var(--gold) 60%,var(--gold-deep)); color:#231a08; }
 .ts-callbar-text{ background:var(--surface-2); color:var(--ink); }
