@@ -1,156 +1,96 @@
 #!/usr/bin/env python3
+"""Uniqueness gate for the SEO corpus (plan §7). Pre-publish check, not a post-hoc report.
+
+Shingle (k-word n-gram) Jaccard similarity of each page's VISIBLE BODY against every other
+top-level page. Boilerplate (head, nav, footer, script, style) is stripped first so shared
+chrome never counts as duplication. Nothing ships above THRESHOLD overlap — an over-threshold
+page gets merged into the closest existing page instead of published thin (the anti-doorway
+rule). Exit 1 if any candidate breaches THRESHOLD.
+
+Usage:
+  python scripts/dupe_audit.py                      # audit all top-level pages against each other
+  python scripts/dupe_audit.py new1.html new2.html  # gate ONLY these candidates vs the whole corpus
 """
-Near-duplicate / thin-content audit for the Top Shelf site.
+import os, re, sys, glob, io, subprocess
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-Google's duplicate-content problem is about MAIN CONTENT, not boilerplate —
-a shared nav, footer and chat widget across 27 pages is normal and discounted.
-So this strips the chrome first, then compares what's left.
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(ROOT)
+THRESHOLD = 0.35   # plan §7: nothing ships above ~35% shingle overlap
+K = 8              # shingle size (word n-gram)
 
-Similarity is Jaccard over 5-word shingles, which is the standard shape of
-near-duplicate detection (order-sensitive, robust to reordered paragraphs)
-rather than a naive character-diff ratio, which over-reports on pages that
-share a vocabulary but say different things.
+def visible_body(html):
+    """Strip head/nav/footer/script/style/tags → normalized word list of the real body copy."""
+    h = re.sub(r"<head\b.*?</head>", " ", html, flags=re.S | re.I)
+    h = re.sub(r"<nav\b[^>]*>.*?</nav>", " ", h, flags=re.S | re.I)
+    h = re.sub(r"<footer\b[^>]*>.*?</footer>", " ", h, flags=re.S | re.I)
+    h = re.sub(r"<script\b.*?</script>", " ", h, flags=re.S | re.I)
+    h = re.sub(r"<style\b.*?</style>", " ", h, flags=re.S | re.I)
+    h = re.sub(r"<[^>]+>", " ", h)                 # drop tags
+    h = re.sub(r"&[a-z]+;|&#\d+;", " ", h)         # drop entities
+    h = re.sub(r"[^a-z0-9 ]", " ", h.lower())       # keep words/numbers
+    return h.split()
 
-Also reports the things that actually trigger consolidation in Search Console:
-duplicate titles, duplicate meta descriptions, thin pages, and canonical/
-noindex status.
-"""
-import io, re, glob, itertools, sys
-
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
-BOILERPLATE = [
-    (r'<head\b.*?</head>', ' '),
-    (r'<script\b.*?</script>', ' '),
-    (r'<style\b.*?</style>', ' '),
-    (r'<nav\b.*?</nav>', ' '),
-    (r'<footer\b.*?</footer>', ' '),
-    (r'<svg\b.*?</svg>', ' '),
-    (r'<!--.*?-->', ' '),
-]
-
-def main_text(html):
-    s = html
-    for pat, rep in BOILERPLATE:
-        s = re.sub(pat, rep, s, flags=re.S | re.I)
-    s = re.sub(r'<[^>]+>', ' ', s)
-    s = re.sub(r'&[a-z]+;|&#\d+;', ' ', s)
-    s = re.sub(r'[^a-z0-9 ]+', ' ', s.lower())
-    return re.sub(r'\s+', ' ', s).strip()
-
-def shingles(text, n=5):
-    w = text.split()
-    return {' '.join(w[i:i+n]) for i in range(max(0, len(w) - n + 1))}
+def shingles(words, k=K):
+    return set(tuple(words[i:i + k]) for i in range(max(0, len(words) - k + 1)))
 
 def jaccard(a, b):
-    if not a or not b: return 0.0
+    if not a or not b:
+        return 0.0
     return len(a & b) / len(a | b)
 
-def meta(html, name=None, prop=None):
-    """Match the attribute's OWN quote character.
+# corpus = git-tracked, INDEXABLE top-level pages (what actually competes in search) + any
+# candidate passed on argv. Noindex pages (demos, concept mockups) don't compete, so overlap
+# with them is irrelevant — exclude them or a noindex homepage variant false-flags every page.
+def is_noindex(path):
+    try:
+        s = open(path, encoding="utf-8", errors="replace").read()
+    except OSError:
+        return False
+    return bool(re.search(r'<meta[^>]+name=["\']robots["\'][^>]+noindex', s, re.I))
 
-    A ["\'] character class terminates on the first apostrophe inside the
-    text, so content="You didn't open a shop..." was captured as just
-    "You didn" — which made every description starting that way look
-    identical and produced a false duplicate report.
-    """
-    attr = 'name' if name else 'property'
-    val = name or prop
-    m = (re.search(r'<meta[^>]+' + attr + r'=["\']' + val + r'["\'][^>]+content="([^"]*)"', html, re.I | re.S)
-         or re.search(r"<meta[^>]+" + attr + r"=[\"']" + val + r"[\"'][^>]+content='([^']*)'", html, re.I | re.S))
-    return re.sub(r'\s+', ' ', m.group(1)).strip() if m else ''
+tracked = subprocess.run(["git", "ls-files", "*.html"], capture_output=True, text=True).stdout.split()
+corpus = sorted(f for f in tracked if "/" not in f and not is_noindex(f))
+candidates = [a for a in sys.argv[1:] if a.endswith(".html")]
+# candidates may be new/untracked — include them
+for c in candidates:
+    if c not in corpus and os.path.exists(c):
+        corpus.append(c)
+targets = candidates if candidates else corpus
 
-# Only audit what is actually DEPLOYED. Untracked local files (review copies,
-# work in progress) can't be a duplicate-content risk because they never reach
-# the server — auditing them produces false CRITICALs.
-import subprocess
-tracked = set(subprocess.run(["git","ls-files","*.html"], capture_output=True, text=True).stdout.split())
-
-pages = {}
-for p in sorted(glob.glob("*.html")):
-    if p.startswith("google"):        # search-console verification stub
+sig = {}
+for f in corpus:
+    if not os.path.exists(f):
         continue
-    if p not in tracked:
-        print(f"  (skipping {p} — untracked, not deployed)")
-        continue
-    h = io.open(p, encoding="utf-8").read()
-    t = main_text(h)
-    title = re.search(r'<title>(.*?)</title>', h, re.S)
-    canon = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\'](.*?)["\']', h, re.I)
-    pages[p] = {
-        'text': t,
-        'shingles': shingles(t),
-        'words': len(t.split()),
-        'title': re.sub(r'\s+',' ',title.group(1)).strip() if title else '',
-        'desc': meta(h, name='description'),
-        'canonical': canon.group(1) if canon else '',
-        'noindex': 'noindex' in h.lower(),
-    }
+    sig[f] = shingles(visible_body(open(f, encoding="utf-8", errors="replace").read()))
 
-print(f"Audited {len(pages)} pages (nav / footer / head / scripts stripped)\n")
-
-# ---------------------------------------------------------------- similarity
-print("=" * 78)
-print("NEAR-DUPLICATE PAIRS  (Jaccard on 5-word shingles of main content)")
-print("=" * 78)
+breaches = []
 rows = []
-for a, b in itertools.combinations(pages, 2):
-    j = jaccard(pages[a]['shingles'], pages[b]['shingles'])
-    if j >= 0.30:
-        rows.append((j, a, b))
+for t in targets:
+    if t not in sig:
+        continue
+    worst = (0.0, None)
+    for other in corpus:
+        if other == t or other not in sig:
+            continue
+        j = jaccard(sig[t], sig[other])
+        if j > worst[0]:
+            worst = (j, other)
+    rows.append((worst[0], t, worst[1]))
+    if worst[0] > THRESHOLD:
+        breaches.append((t, worst[0], worst[1]))
+
 rows.sort(reverse=True)
+print(f"Uniqueness gate — {len(targets)} candidate(s) vs {len(sig)} pages, threshold {THRESHOLD:.0%}, shingle k={K}")
+print("-" * 72)
+for j, t, other in rows[:40]:
+    flag = "  <-- BREACH (merge, don't ship)" if j > THRESHOLD else ""
+    print(f"  {j:5.1%}  {t}  ~=  {other}{flag}")
 
-def tier(j):
-    if j >= 0.75: return "CRITICAL"
-    if j >= 0.55: return "HIGH    "
-    if j >= 0.40: return "MODERATE"
-    return "low     "
-
-if rows:
-    for j, a, b in rows:
-        flags = []
-        if pages[a]['noindex'] or pages[b]['noindex']: flags.append("one is noindex")
-        if pages[a]['title'] == pages[b]['title']: flags.append("SAME TITLE")
-        if pages[a]['desc'] == pages[b]['desc']: flags.append("SAME DESC")
-        print(f"  {tier(j)} {j:5.0%}  {a:32} <-> {b:32} {' | '.join(flags)}")
-else:
-    print("  none above 30% — no near-duplicate risk")
-
-# ---------------------------------------------------------------- dupe meta
-print("\n" + "=" * 78)
-print("DUPLICATE TITLES / DESCRIPTIONS  (the thing Search Console flags)")
-print("=" * 78)
-for field in ('title', 'desc'):
-    seen = {}
-    for p, d in pages.items():
-        seen.setdefault(d[field], []).append(p)
-    dupes = {k: v for k, v in seen.items() if len(v) > 1 and k}
-    if dupes:
-        for k, v in dupes.items():
-            print(f"  {field.upper()} shared by {len(v)}: \"{k[:58]}\"")
-            for p in v: print(f"      {p}")
-    else:
-        print(f"  {field}: all unique")
-
-# ---------------------------------------------------------------- thin pages
-print("\n" + "=" * 78)
-print("CONTENT DEPTH  (main-content word count)")
-print("=" * 78)
-for p, d in sorted(pages.items(), key=lambda kv: kv[1]['words']):
-    mark = "THIN " if d['words'] < 300 else "     "
-    idx  = "noindex" if d['noindex'] else ""
-    print(f"  {mark}{d['words']:>5} words  {p:34} {idx}")
-
-# ---------------------------------------------------------------- canonicals
-print("\n" + "=" * 78)
-print("CANONICAL SANITY")
-print("=" * 78)
-bad = 0
-for p, d in sorted(pages.items()):
-    if not d['canonical']:
-        print(f"  MISSING canonical   {p}"); bad += 1
-    elif not d['canonical'].rstrip('/').endswith(p.replace('index.html','').rstrip('/') or 'topshelfsolutions.io'):
-        if p != 'index.html':
-            print(f"  POINTS ELSEWHERE    {p:32} -> {d['canonical']}"); bad += 1
-if not bad:
-    print("  every page self-canonicals correctly")
+if breaches:
+    print(f"\nFAIL — {len(breaches)} page(s) over {THRESHOLD:.0%}:")
+    for t, j, other in breaches:
+        print(f"  {t}: {j:.1%} vs {other}")
+    sys.exit(1)
+print(f"\nPASS — every candidate is under {THRESHOLD:.0%} overlap (unique enough to ship)")
+sys.exit(0)
