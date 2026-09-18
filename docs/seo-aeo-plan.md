@@ -299,7 +299,7 @@ enforced mechanically, not by hope:
 
 ```
 1. Seed        seed.csv/json (service × trade × intent × geo × AEO-form), DataForSEO-validated
-2. Generate    one template-driven .html per surviving keyword (keyword in title/slug/H1/1st line)
+2. Generate    one template-driven .html per surviving keyword (keyword in title/slug/H1/1st line; shared <head> carries GA4 G-4QCCJ3HP11 + the lead/call/book conversion events, §12)
 3. Uniqueness  dupe_audit.py pre-publish gate (< 35% overlap) — over-threshold → merge, don't ship
 4. Fact-gate   python -m platter.factcheck against top-shelf-business-solutions.json (no fabricated stat/price; gap-not-leak; dash-free)
 5. Humanize    humanizer pass on visible prose (public-facing) — no AI tells, invents nothing
@@ -344,7 +344,7 @@ trade by trade. If it doesn't, we've risked ~100 pages, not 2,000.
 
 ---
 
-## 12. Success metrics
+## 12. Success metrics & how you'll see them
 
 - **Leading (weeks 2–6):** new URLs indexed (GSC coverage), impressions on colony pages,
   colony pages earning clicks (the authority engine turning over).
@@ -355,6 +355,32 @@ trade by trade. If it doesn't, we've risked ~100 pages, not 2,000.
   re-examined or is merged.
 - **Guardrail metric:** existing-27-page rankings must NOT drop. A site-wide decline after
   a batch is the doorway-penalty signal — pause publishing and audit uniqueness.
+
+### Measurement & analytics (locked) — capturing it + how you SEE it
+
+The metrics above are only useful if they're actually captured and you can look at them. This
+is the tracking layer, so "how is the website really doing" is a page you open, not a guess.
+
+- **Already live (don't rebuild):** GA4 (`G-4QCCJ3HP11`) is on all 27 pages and Google Search
+  Console is verified. Every corpus page is emitted with the **same GA4 snippet in its shared
+  `<head>`** and is picked up by GSC through `sitemap.xml`, so a new page starts reporting from
+  day one with zero per-page setup.
+- **Track leads, not vanity metrics.** Tag the three money actions as GA4 **key events** so we
+  count LEADS, not pageviews: `generate_lead` (free-audit form submit), `click_to_call`
+  (tap-to-call `tel:` click), `book_call` (booking-link click) — each attributed to its landing
+  page + trade, so we know which pages actually *produce* business. These events get added to
+  the existing 27 pages too, not just the corpus, so the current site is measurable now.
+- **Traffic + rank:** GA4 sessions + per-URL GSC impressions/clicks/avg-position for "what gets
+  found and clicked"; DataForSEO position + map-pack tracking per money-page keyword (§9) for
+  "is it climbing." Both programmatic, no manual pulls.
+- **How you SEE it — one plain-English place:** a **monthly rollup** that pulls it together —
+  total organic sessions, top 10 pages by clicks, **leads by trade/source** (the key events),
+  and rank movement on the money-page keywords. Since GA4 + GSC are already wired into Taylor
+  OS, this can surface there as a dashboard you open, or ship as a generated monthly report.
+  GA4 Reports + GSC Performance remain the live drill-down.
+- **Per-phase proof runs straight off this:** the phase-1 4–6-week measure (§11) reads
+  impressions → clicks → leads → rank per page — so a page that draws traffic but no leads gets
+  its CTA/intent fixed or is merged, and "is the corpus working" is a number, not an opinion.
 
 ---
 
@@ -390,8 +416,10 @@ trade by trade. If it doesn't, we've risked ~100 pages, not 2,000.
    **realtor** takes 7 universal + Online Booking = 8, per §11), run the full pipeline
    (§10), Judge the batch.
 5. **Generate + gate the ~55 colony pages**, apply §6 sculpting, `seo_audit.py` clean.
-6. **Wire the bridge** from the 27 existing pages (§6) and **publish phase 1**.
-7. **Instrument + measure 4–6 weeks** (§12) → decide scale.
+6. **Wire the bridge** from the 27 existing pages (§6), **instrument analytics** (§12: GA4 in
+   the corpus template + the `generate_lead` / `click_to_call` / `book_call` key events on the
+   27 existing pages AND the corpus + the monthly rollup view), then **publish phase 1**.
+7. **Measure 4–6 weeks** off that rollup (§11/§12) → decide scale (kill or merge zero-lead pages).
 
 Skills to pull when building: `topical-authority`, `claude-seo:seo-cluster`,
 `seo-geo` (AEO), the `seo-analyzer` / `seo-fixer` agents (live DataForSEO + rubric),
