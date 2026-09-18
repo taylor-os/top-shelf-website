@@ -227,6 +227,14 @@ SPECS = [{
     "cta_sub": "Get a free audit of how many calls and leads your current setup is missing, whether you work with us or not. No credit card, never a call center.",
 }]
 
+# additional per-trade specs live in scripts/corpus_specs.py (keeps this generator lean)
+try:
+    from corpus_specs import SPECS as _MORE
+    SPECS = SPECS + _MORE
+except Exception as _e:
+    print(f"note: external specs not loaded ({_e})")
+
+
 def _selfcheck():
     shell = extract_shell()
     for req in ("head", "nav", "footer", "tail"):
