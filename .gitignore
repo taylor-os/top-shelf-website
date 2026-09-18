@@ -8,3 +8,7 @@ home-centered-review.html
 
 # Scratch: raw generated PNGs before conversion into assets/img/library/
 .libgen/
+
+# Python bytecode cache (build artifact)
+__pycache__/
+*.pyc
