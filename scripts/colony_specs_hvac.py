@@ -205,7 +205,7 @@ TOPICS = [
         ("Can it tell a real emergency from a call that can wait?",
          'Yes. You set the rules for what counts as an after-hours emergency, and it flags or dispatches those while booking routine calls for the next morning. You are not woken up for a filter question, and a true no-heat call does not sit in voicemail until you open.'),
         ("Is this cheaper than an overnight answering service or on-call staff?",
-         'For most shops, yes. Instead of paying per call or covering an overnight shift, it is part of a flat monthly plan starting at $299, and it answers every call with no separate per-minute charge. A free audit can compare it to what after-hours coverage costs you today.')],
+         'For most shops, yes. Instead of paying per call or covering an overnight shift, it is part of the Signature plan at $899 a month, and it answers every call with no separate per-minute charge. A free audit can compare it to what after-hours coverage costs you today.')],
 },
 # ============================ Marketing budget (marketing) ============================
 {
