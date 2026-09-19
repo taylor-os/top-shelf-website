@@ -38,6 +38,7 @@ def extract_shell(base_page=BASE_PAGE):
     nav = re.search(r"<nav\b.*?</nav>", s, re.S | re.I).group()
     footer = re.search(r"<footer\b.*?</footer>", s, re.S | re.I).group()
     tail = re.search(r"</footer>(.*?)</body>", s, re.S | re.I).group(1)  # reveal/animation scripts
+    tail = re.sub(r'<script src="assets/events\.js[^"]*"[^>]*></script>\s*', "", tail)  # events.js is added once via EVENTS
     return {"head": head, "nav": nav, "footer": footer, "tail": tail, "og_img": og_img}
 
 def esc(t):
@@ -174,13 +175,8 @@ def jsonld(spec):
         for q, a in spec["faqs"]]}
     return "\n".join(f'<script type="application/ld+json">{json.dumps(o, ensure_ascii=False)}</script>' for o in (crumb, service, faq))
 
-# ---------- events (§12 conversions) ----------
-EVENTS = """<script>
-(function(){function ev(n){try{if(window.gtag)gtag('event',n,{page_path:location.pathname,trade:document.body.dataset.trade||''});}catch(e){}}
-document.querySelectorAll('a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(){ev('click_to_call');});});
-document.querySelectorAll('a[href*="booking"]').forEach(function(a){a.addEventListener('click',function(){ev('book_call');});});
-document.querySelectorAll('a[href*="contact"]').forEach(function(a){a.addEventListener('click',function(){ev('cta_click');});});})();
-</script>"""
+# ---------- events (§12 conversions) — shared script, one source of truth ----------
+EVENTS = '<script src="assets/events.js?v=1" defer></script>'
 
 # ---------- assemble ----------
 def build_page(spec, shell=None):
@@ -300,7 +296,7 @@ def _selfcheck():
     assert page.count("<h1") == 1, "must have exactly one h1"
     assert page.count("application/ld+json") == 3, "expected 3 schema blocks"
     assert 'rel="canonical"' in page and "og:title" in page and "twitter:card" in page
-    assert "gtag('event','click_to_call')" in page.replace('"', "'") or "click_to_call" in page
+    assert 'assets/events.js' in page, "events.js (conversion tracking) not linked"
     assert 'class="corpus-grid"' in page and 'class="corpus-aside"' in page, "missing sidebar layout"
     assert "aside-toc" in page and 'href="#faq"' in page, "missing jump-link TOC"
     assert "site.css?v=20260918a" in page, "site.css version not bumped (sidebar CSS won't load)"
