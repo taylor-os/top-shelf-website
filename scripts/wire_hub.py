@@ -13,7 +13,9 @@ os.chdir(ROOT)
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 HUB = "industry-home-services.html"
-TRADE_MODULES = ["specs_plumbers", "specs_hvac", "specs_electricians", "specs_roofers", "specs_garage_door"]
+TRADE_MODULES = ["specs_plumbers", "specs_hvac", "specs_electricians", "specs_roofers", "specs_garage_door",
+                 "specs_landscapers", "specs_painters", "specs_handyman_services",
+                 "specs_pest_control_companies", "specs_house_cleaning_companies"]
 # short link label per service slug-prefix
 SERVICE_LABEL = {
     "ai-receptionist": "AI receptionist", "crm": "CRM & follow-up", "online-booking": "Online booking",

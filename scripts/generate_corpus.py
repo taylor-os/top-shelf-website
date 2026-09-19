@@ -44,6 +44,19 @@ def extract_shell(base_page=BASE_PAGE):
 def esc(t):
     return _html.escape(t, quote=True)
 
+def _trim_meta(s, limit=165):
+    """Cap a meta description at ~165 chars so Google does not truncate it. Metas are
+    keyword-first, so we trim the tail: prefer a sentence end, else the last word boundary."""
+    s = " ".join(s.split())
+    if len(s) <= limit:
+        return s
+    cut = s[:limit + 1]
+    dot = max(cut.rfind(". "), cut.rfind("! "), cut.rfind("? "))
+    if dot >= 80:
+        return cut[:dot + 1].strip()
+    sp = cut[:limit].rfind(" ")
+    return (cut[:sp].rstrip(" ,;:") if sp >= 80 else cut[:limit]).strip()
+
 # ---------- content-block builders (site CSS classes) ----------
 def hero(spec):
     return f'''<section class="page-hero">
@@ -181,6 +194,7 @@ EVENTS = '<script src="assets/events.js?v=1" defer></script>'
 # ---------- assemble ----------
 def build_page(spec, shell=None):
     shell = shell or extract_shell()
+    spec["meta_desc"] = _trim_meta(spec["meta_desc"])  # cap SERP snippet; keyword-first, so trim the tail
     head = re.sub(r"site\.css\?v=[0-9a-z]+", "site.css?v=20260918a", shell["head"])  # bump so pages get the sidebar CSS
     main_html, toc = build_main(spec)
     head_extra = f'''<title>{esc(spec["title"])}</title>
