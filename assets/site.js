@@ -403,6 +403,7 @@
     fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
       .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
       .then(function () {
+        if (window.tsTrack) window.tsTrack('generate_lead'); // confirmed chat lead
         ask("You're all set, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! ✅ A Top Shelf specialist will reach out shortly about your free audit. Prefer email? <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a>.", 500);
         lead.active = false;
       })

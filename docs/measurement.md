@@ -12,14 +12,21 @@ performance is measured in **leads, not pageviews**. GA4 property is **`G-4QCCJ3
 
 | Event | Fires when | Means |
 |---|---|---|
-| `generate_lead` | someone lands on `thank-you.html` | a **confirmed** free-audit request (the form submits by fetch and redirects here on success) |
+| `generate_lead` | a lead is **confirmed** by any of the three paths: the contact form redirects to `thank-you.html` on success, the gap-quiz widget completes a submit, or the chat widget completes a submit | a real free-audit request (each path counts as one lead) |
 | `click_to_call` | a `tel:` phone link is clicked | someone chose to call |
-| `book_call` | a booking link is clicked | someone went to book a call |
+| `book_call` | the scheduler link (`booking.html`) is clicked | someone went to book a call |
 | `cta_click` | a link to `contact.html` is clicked | someone headed for the audit form |
 
-Every event carries a **`trade`** parameter (from the page's `data-trade`, e.g. `plumbers`,
-`real-estate-agents`), so leads and calls are attributable to the trade page that produced
-them. All 124 indexable pages + the utility pages carry the script.
+`book_call` fires only on the real scheduler, not on the `solution-booking.html` marketing
+page or the `online-booking-for-*` money pages that the nav and footer link everywhere.
+
+Every event carries a **`trade`** parameter, so leads and calls are attributable to the
+trade page that produced them. On a trade page it comes straight from the page's
+`data-trade` (e.g. `plumbers`, `real-estate-agents`). For a lead that finishes on the shared
+`thank-you.html` (which has no trade of its own), the script carries the **last trade page
+the visitor viewed** that session, so contact-form leads stay attributable too. A visitor
+who never viewed a trade page shows an empty `trade` (a direct, untargeted lead). All 124
+indexable pages + the utility pages carry the script.
 
 ---
 

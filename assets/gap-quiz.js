@@ -164,7 +164,7 @@ function submit(){
   var done=false;function finish(){if(done)return;done=true;thanks();}
   try{
     fetch(BE.leadEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(lead)})
-      .then(function(r){if(!r.ok)throw 0;finish();})
+      .then(function(r){if(!r.ok)throw 0;if(window.tsTrack)window.tsTrack('generate_lead');finish();})
       .catch(function(){ if(BE.leadFallback&&BE.leadFallback.indexOf('FORMSPREE_ID')<0){fetch(BE.leadFallback,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify(lead)}).then(finish).catch(finish);} else finish(); });
   }catch(e){finish();}
   setTimeout(finish,4000);
