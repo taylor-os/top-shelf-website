@@ -24,6 +24,7 @@ def visible_body(html):
     h = re.sub(r"<head\b.*?</head>", " ", html, flags=re.S | re.I)
     h = re.sub(r"<nav\b[^>]*>.*?</nav>", " ", h, flags=re.S | re.I)
     h = re.sub(r"<footer\b[^>]*>.*?</footer>", " ", h, flags=re.S | re.I)
+    h = re.sub(r"<aside\b[^>]*>.*?</aside>", " ", h, flags=re.S | re.I)  # sticky sidebar = shared chrome (CTA card etc.)
     h = re.sub(r"<script\b.*?</script>", " ", h, flags=re.S | re.I)
     h = re.sub(r"<style\b.*?</style>", " ", h, flags=re.S | re.I)
     h = re.sub(r"<[^>]+>", " ", h)                 # drop tags

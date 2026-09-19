@@ -82,10 +82,12 @@ def demo_inner():
 
 def example_inner(spec):
     ex = spec["example"]
+    # dedupe: some specs end body with the disclaimer, and we append our own below — strip theirs
+    body = re.sub(r"\s*(<[^>]+>\s*)?Illustrative example,?\s*not a client\.?\s*(</[^>]+>\s*)?$", "", ex["body_html"], flags=re.I).rstrip()
     return f'''<span class="eyebrow reveal">{esc(ex["eyebrow"])}</span>
 {_h2(ex["h2_html"])}
 <div class="reveal" style="border:1px solid var(--hairline);border-radius:var(--r-lg);background:var(--surface);padding:clamp(1.4rem,3vw,2.2rem);max-width:64ch">
-  <p style="color:var(--ink-2);line-height:1.8">{ex["body_html"]}</p>
+  <p style="color:var(--ink-2);line-height:1.8">{body}</p>
   <p style="color:var(--ink-4);font-size:.82rem;letter-spacing:.02em;margin-top:1rem">Illustrative example, not a client.</p>
 </div>'''
 
@@ -274,12 +276,19 @@ SPECS = [{
     "cta_sub": "Get a free audit of how many calls and leads your current setup is missing, whether you work with us or not. No credit card, never a call center.",
 }]
 
-# additional per-trade specs live in scripts/corpus_specs.py (keeps this generator lean)
+# additional per-trade specs: corpus_specs.py (realtor) + any scripts/specs_*.py (trade batches)
+import importlib, glob as _glob
 try:
     from corpus_specs import SPECS as _MORE
     SPECS = SPECS + _MORE
 except Exception as _e:
-    print(f"note: external specs not loaded ({_e})")
+    print(f"note: corpus_specs not loaded ({_e})")
+for _sf in sorted(_glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "specs_*.py"))):
+    _mod = os.path.splitext(os.path.basename(_sf))[0]
+    try:
+        SPECS = SPECS + getattr(importlib.import_module(_mod), "SPECS", [])
+    except Exception as _e:
+        print(f"note: {_mod} not loaded ({_e})")
 
 
 def _selfcheck():
