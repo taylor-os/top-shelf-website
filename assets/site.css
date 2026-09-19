@@ -1152,3 +1152,26 @@ body.drawer-open .ts-callbar{ display:none !important; } /* don't overlap the op
 .sdrawer-cta:hover{ gap:.85rem; color:var(--ink); }
 body.drawer-open .tsc-fab{ opacity:0 !important; visibility:hidden !important; pointer-events:none !important; }
 @media (prefers-reduced-motion:reduce){ .sdrawer,.sdrawer-scrim,.sdrawer-x,.sitebit-plus{ transition:none; } }
+
+/* ============ Corpus money-page layout: sticky sidebar + demo (added 2026-09-18) ============ */
+.corpus-grid{ display:grid; grid-template-columns:minmax(0,1fr) 322px; gap:clamp(2rem,4.5vw,4.5rem); align-items:start; }
+.corpus-main{ min-width:0; }
+.corpus-main > section:first-child{ border-top:none; padding-top:0; }
+.corpus-aside{ position:sticky; top:96px; display:flex; flex-direction:column; gap:1.1rem; }
+.aside-card{ border:1px solid var(--hairline); border-radius:var(--r-lg); background:var(--surface); padding:1.35rem 1.4rem; }
+.aside-card h3{ font-family:var(--sans); font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; }
+.aside-answer p{ color:var(--ink-2); font-size:.92rem; line-height:1.72; margin:0; }
+.aside-toc a{ display:block; color:var(--ink-2); font-size:.9rem; line-height:1.45; padding:.4rem 0; border-bottom:1px solid var(--hairline-soft); text-decoration:none; transition:color .2s; }
+.aside-toc a:last-child{ border-bottom:none; }
+.aside-toc a:hover{ color:var(--gold-bright); }
+.aside-cta{ background:var(--surface-2); text-align:center; }
+.aside-cta p{ color:var(--ink-3); font-size:.86rem; line-height:1.6; margin:0 0 .9rem; }
+.aside-cta .btn{ display:flex; width:100%; justify-content:center; margin-top:.55rem; }
+@media(max-width:900px){
+  .corpus-grid{ grid-template-columns:1fr; }
+  .corpus-aside{ display:none; }   /* sidebar is a desktop enhancement; mobile has hero CTAs + sticky Call/Text bar */
+}
+/* Moving demo render (reusable phone frame) */
+.demo-frame{ position:relative; width:100%; max-width:392px; margin:0 auto; aspect-ratio:9/16; max-height:540px; border:1px solid var(--hairline); border-radius:24px; overflow:hidden; background:var(--surface-2); box-shadow:0 30px 80px -34px rgba(0,0,0,.72); }
+.demo-frame iframe{ width:100%; height:100%; border:0; display:block; background:transparent; }
+.demo-cap{ margin:1rem auto 0; color:var(--ink-4); font-size:.82rem; line-height:1.6; text-align:center; max-width:46ch; letter-spacing:.02em; }

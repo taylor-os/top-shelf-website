@@ -57,41 +57,80 @@ def hero(spec):
   </div>
 </section>'''
 
-def section(h2_html, body_html, rule=True):
-    cls = "section rule-top" if rule else "section"
-    return f'''<section class="{cls}">
-  <div class="container">
-    <h2 class="display reveal" style="margin-bottom:1.4rem">{h2_html}</h2>
-    {body_html}
-  </div>
-</section>'''
+def _slugify(text):
+    return re.sub(r"[^a-z0-9]+", "-", re.sub(r"<[^>]+>", "", text).lower()).strip("-")[:40] or "section"
 
-def example_block(spec):
+def _toc_label(h2_html):
+    t = re.sub(r"<[^>]+>", "", h2_html).strip()
+    w = t.split()
+    return " ".join(w[:6]) + ("..." if len(w) > 6 else "")
+
+def _block(inner, sid, first=False):
+    style = "" if first else ' style="padding-top:clamp(2rem,4.5vw,3.4rem);margin-top:clamp(2rem,4.5vw,3.4rem);border-top:1px solid var(--hairline-soft)"'
+    return f'<div class="corpus-block" id="{sid}"{style}>\n{inner}\n</div>'
+
+def _h2(h):
+    return f'<h2 class="display reveal" style="margin-bottom:1.3rem">{h}</h2>'
+
+def demo_inner():
+    return f'''<span class="eyebrow reveal">See it in action</span>
+{_h2("Watch it handle <em>a live call</em>")}
+<div class="demo-frame reveal">
+  <iframe src="https://crm.topshelfsolutions.io/e/ai-phone" title="AI receptionist live demo" loading="lazy" scrolling="no"></iframe>
+</div>
+<p class="demo-cap">A live demo of the AI receptionist taking a call. It is a sample, not a recording of a real customer.</p>'''
+
+def example_inner(spec):
     ex = spec["example"]
-    return f'''<section class="section rule-top">
-  <div class="container">
-    <span class="eyebrow reveal">{esc(ex["eyebrow"])}</span>
-    <h2 class="display reveal" style="margin:1rem 0 1.2rem">{ex["h2_html"]}</h2>
-    <div class="reveal" style="border:1px solid var(--hairline);border-radius:var(--r-lg);background:var(--surface);padding:clamp(1.4rem,3vw,2.2rem);max-width:62ch">
-      <p style="color:var(--ink-2);line-height:1.8">{ex["body_html"]}</p>
-      <p style="color:var(--ink-4);font-size:.82rem;letter-spacing:.02em;margin-top:1rem">Illustrative example, not a client.</p>
-    </div>
-  </div>
-</section>'''
+    return f'''<span class="eyebrow reveal">{esc(ex["eyebrow"])}</span>
+{_h2(ex["h2_html"])}
+<div class="reveal" style="border:1px solid var(--hairline);border-radius:var(--r-lg);background:var(--surface);padding:clamp(1.4rem,3vw,2.2rem);max-width:64ch">
+  <p style="color:var(--ink-2);line-height:1.8">{ex["body_html"]}</p>
+  <p style="color:var(--ink-4);font-size:.82rem;letter-spacing:.02em;margin-top:1rem">Illustrative example, not a client.</p>
+</div>'''
 
-def faq_block(spec):
+def faq_inner(spec):
     rows = "\n".join(
         f'''      <div class="qa-row reveal"><span class="qa-num">{i:02d}</span><div><p class="qa-q">{esc(q)}</p><p class="qa-a">{a}</p></div></div>'''
         for i, (q, a) in enumerate(spec["faqs"], 1))
-    return f'''<section class="section rule-top">
-  <div class="container">
-    <span class="eyebrow reveal">Questions {esc(spec["trade_plural"]).title()} Ask</span>
-    <h2 class="display reveal" style="margin:1rem 0 1.6rem">Common Questions</h2>
-    <div class="qa-list">
+    return f'''<span class="eyebrow reveal">Questions {esc(spec["trade_plural"]).title()} Ask</span>
+{_h2("Common Questions")}
+<div class="qa-list">
 {rows}
-    </div>
+</div>'''
+
+def build_main(spec):
+    """corpus-main column: sections, an optional moving demo, example, FAQ. Returns (html, toc)."""
+    blocks, toc, first = [], [], True
+    for i, s in enumerate(spec["sections"], 1):
+        sid = f"s{i}-{_slugify(s['h2_html'])}"[:48]
+        blocks.append(_block(_h2(s["h2_html"]) + s["body_html"], sid, first)); first = False
+        toc.append((sid, _toc_label(s["h2_html"])))
+        if i == 1 and spec.get("demo"):
+            blocks.append(_block(demo_inner(), "see-it")); toc.append(("see-it", "See it in action"))
+    blocks.append(_block(example_inner(spec), "example")); toc.append(("example", _toc_label(spec["example"]["h2_html"])))
+    blocks.append(_block(faq_inner(spec), "faq")); toc.append(("faq", "Common questions"))
+    return "\n".join(blocks), toc
+
+def build_aside(spec, toc):
+    toc_links = "\n".join(f'      <a href="#{sid}">{esc(label)}</a>' for sid, label in toc)
+    return f'''<aside class="corpus-aside">
+  <div class="aside-card aside-answer reveal">
+    <h3>The short version</h3>
+    <p>{spec["answer_block"]}</p>
   </div>
-</section>'''
+  <div class="aside-card aside-toc reveal">
+    <h3>On this page</h3>
+{toc_links}
+  </div>
+  <div class="aside-card aside-cta reveal">
+    <h3>Free business audit</h3>
+    <p>See what your current setup is missing, whether you work with us or not.</p>
+    <a href="contact.html" class="btn btn-gold btn-sm">Get Your Free Audit <span class="arr">&rarr;</span></a>
+    <a href="tel:+14698333033" class="btn btn-line btn-sm">Call (469) 833-3033</a>
+    <a href="booking.html" class="btn btn-line btn-sm">Book a 15-minute call</a>
+  </div>
+</aside>'''
 
 def related_block(spec):
     links = "\n".join(f'      <li><a href="{href}">{esc(txt)}</a></li>' for href, txt in spec["related"])
@@ -144,7 +183,8 @@ document.querySelectorAll('a[href*="contact"]').forEach(function(a){a.addEventLi
 # ---------- assemble ----------
 def build_page(spec, shell=None):
     shell = shell or extract_shell()
-    body_sections = "\n".join(section(s["h2_html"], s["body_html"]) for s in spec["sections"])
+    head = re.sub(r"site\.css\?v=[0-9a-z]+", "site.css?v=20260918a", shell["head"])  # bump so pages get the sidebar CSS
+    main_html, toc = build_main(spec)
     head_extra = f'''<title>{esc(spec["title"])}</title>
 <meta name="description" content="{esc(spec["meta_desc"])}">
 <link rel="canonical" href="{SITE}/{spec["slug"]}.html">
@@ -161,16 +201,23 @@ def build_page(spec, shell=None):
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-{shell["head"]}
+{head}
 {head_extra}
 </head>
 <body data-trade="{esc(spec["trade_slug"])}">
 {shell["nav"]}
 <main>
 {hero(spec)}
-{body_sections}
-{example_block(spec)}
-{faq_block(spec)}
+<section class="section rule-top">
+  <div class="container">
+    <div class="corpus-grid">
+      <div class="corpus-main">
+{main_html}
+      </div>
+{build_aside(spec, toc)}
+    </div>
+  </div>
+</section>
 {related_block(spec)}
 {final_cta(spec)}
 </main>
@@ -182,7 +229,7 @@ def build_page(spec, shell=None):
 
 # ================= SPECS (unique per-trade content, written per page) =================
 SPECS = [{
-    "slug": "ai-receptionist-for-real-estate-agents",
+    "slug": "ai-receptionist-for-real-estate-agents", "demo": True,
     "trade_slug": "real-estate-agents", "trade_plural": "real estate agents",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
     "breadcrumb_leaf": "AI Receptionist for Real Estate Agents",
@@ -245,10 +292,14 @@ def _selfcheck():
     assert page.count("application/ld+json") == 3, "expected 3 schema blocks"
     assert 'rel="canonical"' in page and "og:title" in page and "twitter:card" in page
     assert "gtag('event','click_to_call')" in page.replace('"', "'") or "click_to_call" in page
+    assert 'class="corpus-grid"' in page and 'class="corpus-aside"' in page, "missing sidebar layout"
+    assert "aside-toc" in page and 'href="#faq"' in page, "missing jump-link TOC"
+    assert "site.css?v=20260918a" in page, "site.css version not bumped (sidebar CSS won't load)"
+    assert "demo-frame" in page and "crm.topshelfsolutions.io/e/ai-phone" in page, "demo missing on demo spec"
     import re as _r
     words = len(_r.sub(r"<[^>]+>", " ", _r.search(r"<main>(.*?)</main>", page, _r.S).group(1)).split())
     assert words >= 600, f"body only {words} words (need >=600, anti-thin)"
-    print(f"selfcheck OK: 1 h1, 3 schema blocks, GA4+events+canonical present, {words} body words")
+    print(f"selfcheck OK: 1 h1, 3 schema, sidebar+TOC+demo present, css bumped, {words} body words")
 
 if __name__ == "__main__":
     _selfcheck()
