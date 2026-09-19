@@ -93,6 +93,7 @@ def jsonld(t):
     return "\n".join(f'<script type="application/ld+json">{json.dumps(o, ensure_ascii=False)}</script>' for o in (crumb, faqp))
 
 def build_page(t, shell):
+    t["meta_desc"] = gc._trim_meta(t["meta_desc"])  # cap SERP snippet at 165 chars (keyword-first tail trim)
     head = re.sub(r"site\.css\?v=[0-9a-z]+", "site.css?v=20260918a", shell["head"])
     head_extra = f'''<title>{esc(t["title"])}</title>
 <meta name="description" content="{esc(t["meta_desc"])}">
