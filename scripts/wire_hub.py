@@ -75,8 +75,10 @@ def main():
         if not os.path.exists(hub_slug):
             print(f"!! hub {hub_slug} missing; skip"); continue
         html = open(hub_slug, encoding="utf-8").read()
-        if BLOCK_RE.search(html) is None and re.search(r'-for-[a-z-]+\.html', html):
-            print(f".. {hub_slug}: money-page links present but no marker (manual wiring); SKIP"); continue
+        # A hub may carry a hand-built Deep Dives section with no marker (e.g. real-estate's
+        # realtor list, whose pages live in corpus_specs.py not specs_*.py). We do NOT skip it:
+        # its specs_*.py trades still get their own marker block before the FAQ, and the hand-built
+        # section is never touched because BLOCK_RE only matches our own marker.
         specs_by_trade = sorted(h["trades"].items())
         block = build_block(specs_by_trade, h["name"])
         if BLOCK_RE.search(html):
