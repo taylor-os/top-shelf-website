@@ -1,0 +1,200 @@
+"""Per-page content specs for the SEO corpus (plan §5), auto body shops batch. Same contract
+as scripts/corpus_specs.py: generate_corpus.py imports SPECS and owns the mechanics (shell,
+schema, events, interlinks, keyword-first title/slug/H1/first-sentence); each dict below owns
+the UNIQUE, hand-written, auto-body-specific substance that clears the uniqueness gate. Never
+templated find-and-replace, never the plumber or the auto-repair content reworded.
+
+Auto hub, collision-repair angle. This is deliberately distinct from the general auto-repair
+batch: collision work turns on the stressed post-accident phone call and the insurance-claim
+process, not recurring mileage service. Four service angles are here in one file (the
+ai-receptionist dict carries "demo": True). Each example body ends with the literal
+"Illustrative example, not a client." per the honesty rule; if the generator also appends that
+line, dedupe there.
+"""
+
+SPECS = [
+# =================== AI Receptionist for Auto Body Shops ===================
+{
+    "slug": "ai-receptionist-for-auto-body-shops", "demo": True,
+    "trade_slug": "auto_body_shops", "trade_plural": "auto body shops",
+    "hub_name": "Auto", "hub_slug": "industry-auto.html",
+    "breadcrumb_leaf": "AI Receptionist for Auto Body Shops",
+    "title": "AI Receptionist for Auto Body Shops | Top Shelf Business Solutions",
+    "og_title": "AI Receptionist for Auto Body Shops",
+    "meta_desc": "An auto body shop answering service answers every estimate and after-accident call while your crew is in the booth, explains the claim, and books it.",
+    "service_schema_name": "AI Receptionist for Auto Body Shops",
+    "eyebrow": "For Auto Body Shops",
+    "h1_html": "AI Receptionist <em>for Auto Body Shops</em>",
+    "answer_block": "An auto body shop answering service answers every call the moment it rings, even when your team is in the paint booth, on the frame machine, or blocking a panel. It calmly walks an accident caller through the claim process, gathers the vehicle and insurance details, and books the estimate so the car comes to you.",
+    "sections": [
+        {"h2_html": "The call you miss after a wreck is the car that <em>goes to the next shop</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A driver who just had an accident is shaken, and they are not going to leave a voicemail. They call a shop, and if nobody picks up they call the next one, and the one after that, until a calm voice answers and tells them what to do next. Collision work turns on that first phone call more than almost anything, because the person on the other end is stressed, unsure whether to file a claim, and looking for a shop to trust with a car they need back. But your team is in the paint booth, on the frame machine, or blocking a panel with hands they cannot pull off the work, so the call rolls to voicemail and the car goes to whoever answered.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">An auto body shop answering service answers on the first ring, stays calm with a rattled caller, finds out whether the car is drivable or needs a tow, gathers the insurance and claim details, and either books the estimate or flags it to you right away. The car is captured and scheduled instead of lost to the shop down the road that happened to be near the phone.</p>'},
+        {"h2_html": "Estimate calls and adjusters ring while your team is <em>in the booth</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The calls that hit a body shop do not wait for a free moment. Someone wants an estimate on a dented door, an adjuster is calling back about a supplement, a customer is asking whether their car is ready for pickup, and every one of those lands while your team is heads down on a repair, masking for paint, or matching color under the lights. A voicemail box cannot take an adjuster callback, and a generic call center reading a script does not know a bumper scuff from frame damage, or which car is a total loss waiting on the insurer.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Answers every estimate call during the workday, so a driver comparing shops reaches a real answer instead of a voicemail and books with you.</li><li>Handles the insurance side the way your front office would: gathers the insurer, the claim number, and the other driver details, and asks whether the car is drivable or needs a tow.</li><li>Takes the year, make, model, and what happened, books the estimate on your calendar, and texts you the details so the car shows up with the paperwork already started.</li><li>Treats a returning customer or a referral differently from a first-time caller, so the people who keep your bays full never hit a voicemail.</li></ul>'},
+        {"h2_html": "The calm voice that explains the claim <em>wins the nervous driver</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Most drivers do not know how a collision claim works. They are not sure whether to go through insurance or pay out of pocket, who covers a rental, or whether they are even allowed to choose their own shop instead of the one the insurer names. The shop that answers the phone and calmly walks them through it, what to expect, what to bring, how the claim moves, earns the car before an estimate is ever written, because a frightened person hires the one who made them feel taken care of.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The answering service is built to be that calm first voice. It reassures the caller, explains the next step in plain terms, and captures the claim number, the insurer, and the details you need to open a file, so by the time you look at your phone the hard part of the intake is done and the customer already trusts you.</p>'},
+        {"h2_html": "You own the number, the calls, and the <em>customer list</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">This runs on your existing shop number, or a new one registered in your name, not ours. Every caller, every vehicle, and every claim number stays yours and exportable, so the customer list you build is an asset you keep, not something a vendor rents back to you month by month, and no contract locks your data away. The answering service is one piece of the Top Shelf platform, and paired with the CRM on the Signature plan it drops every captured call into the system that chases the estimate, so a written job or a referral never quietly slips away.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A wreck, booked while your team was <em>in the booth</em>",
+        "body_html": "A driver clips another car in a parking lot and pulls over, rattled, to find a body shop. They call the first three they see. Two go to voicemail because everyone is in the booth or on a frame machine. Yours answers, stays calm, confirms the car is drivable, gets the insurer and the claim number, and books an estimate for the next morning while flagging it to your phone. You come off the floor to a file already started, with the vehicle, the damage, and the claim details attached, instead of hearing about a customer who went somewhere else. Illustrative example, not a client."},
+    "faqs": [
+        ("Does it work with my current shop number?",
+         "Yes. It answers on the shop number you already use, or on a new one registered in your name, and either way that number and every call on it stay yours, going with you if you ever move on."),
+        ("Can it handle insurance and claim questions?",
+         "Yes. It gathers the insurer, the claim number, and the other driver details, asks whether the car is drivable or needs a tow, and explains the next step in plain terms. It hands you a caller who is already reassured and an intake that is already started."),
+        ("Will it actually book the estimate on my schedule?",
+         "Yes. It books against your real availability, and you get a text with the year, make, model, and what happened, so the car arrives for its estimate with the paperwork already open."),
+        ("Is it going to sound like a robot to someone who just had a wreck?",
+         "It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone shaken after a collision mostly needs to know a real shop is handling it, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
+        ("How fast can it be running?",
+         "Setup is included with no separate onboarding fee. We configure your intake questions, your estimate schedule, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+    "related": [
+        ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
+        ("solution-ai-phone.html", "How the AI phone and chat system works"),
+        ("crm-for-auto-body-shops.html", "The CRM that follows up on every call you capture"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Stop losing wrecks to <em>voicemail</em>",
+    "cta_sub": "Get a free audit of how many estimate calls and after-accident jobs your current phone setup is missing, whether you work with us or not. No credit card, never a call center.",
+},
+# ========================= CRM for Auto Body Shops =========================
+{
+    "slug": "crm-for-auto-body-shops",
+    "trade_slug": "auto_body_shops", "trade_plural": "auto body shops",
+    "hub_name": "Auto", "hub_slug": "industry-auto.html",
+    "breadcrumb_leaf": "CRM for Auto Body Shops",
+    "title": "CRM for Auto Body Shops | Top Shelf Business Solutions",
+    "og_title": "CRM for Auto Body Shops",
+    "meta_desc": "A CRM for auto body shops follows up on every written estimate and past customer for you, so the collision car a driver is deciding on comes back to you.",
+    "service_schema_name": "CRM for Auto Body Shops",
+    "eyebrow": "For Auto Body Shops",
+    "h1_html": "CRM <em>for Auto Body Shops</em>",
+    "answer_block": "A CRM for auto body shops keeps every customer, vehicle, and written estimate in one place and follows up for you, so the collision estimate a driver is sitting on while they decide whether to file a claim, and the customer whose bumper you fixed last year, both come back to you instead of the shop that stayed in touch.",
+    "sections": [
+        {"h2_html": "The estimates you already wrote are the cars you are <em>losing</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Most body shops do not have a car-count problem so much as a follow-up problem. You write a collision estimate, the driver says they need to talk to their insurer, wait on the claim, or think it over, and then the shop gets busy and nobody circles back. They collect an estimate from two other shops, and the car goes to whoever stayed in touch, not always the lowest number. The estimate was never dead. It just needed one more call or text a few days later, and that is the thing there is never time for between cars in the booth.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">A CRM holds every open estimate where you can see it and works the follow-up on a schedule you set, by text and email, even when the counter is empty and everyone is on the floor. The driver waiting on a claim decision hears from you again while the other shops go silent, and the car comes back to you.</p>'},
+        {"h2_html": "A body shop customer is rare, so <em>every one has to count</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A body shop customer is different from an oil-change customer. A driver might only need real collision work once every few years, so you cannot lean on constant repeat visits the way a mechanic can. What you can do is make sure that when the next fender-bender, door ding, or repaint does come, and when a friend asks them who to trust, yours is the name they remember. That only happens if you stay in touch, and staying in touch by hand is exactly what a shop with cars moving through the booth never has time for.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Every customer, vehicle, estimate, and repair photo lives in one place instead of a drawer of paper tickets and your own memory.</li><li>Estimates that never converted get a nudge, so the car that went quiet after you priced it does not just disappear.</li><li>Past customers get an occasional light touch, so you are the shop they call for the next bumper, the next repaint, or the hail damage after a storm.</li><li>You can see who has gone quiet and reach the right customer at the right time without keeping any of it in your head.</li></ul>'},
+        {"h2_html": "Referrals and repeat work are a <em>goldmine sitting idle</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A happy collision customer is some of the best marketing a body shop can get, because a wreck is a memorable, stressful event and people tell their friends who got them through it. When a coworker gets rear-ended, or a neighbor backs into a pole, the first thing they hear is a recommendation, and you want to be the name that comes up. A steady, light touch after a repair, a check that everything still looks right, a note that you also handle dents, paint, and hail, keeps you top of mind so the referral and the next job both find their way back. Reactivating the customers already in your list is some of the easiest work you will book, and it is sitting there waiting for a reason to reach out.</p>'},
+        {"h2_html": "Your list stays yours, and it feeds the <em>rest of the shop</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Every customer, vehicle, and repair record belongs to you and exports any time, never trapped inside software you rent. Because the CRM is part of the Top Shelf platform, a call the AI receptionist answers drops straight into your database and gets worked automatically, and it ties into the estimate and status texts that keep a customer posted while their car is in the shop. The CRM and the answering service come together on the Signature plan, so nothing you have earned goes cold.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "The collision estimate that <em>closes itself</em>",
+        "body_html": "A driver comes in after backing into a post, and you write an estimate for a dented quarter panel and a repaint. They want to check with their insurer first, so normally that is the last you hear of it. Instead the CRM sends a friendly check-in a few days later and a short reminder the week after, both written to sound like your shop. The other two shops they visited never followed up, so when the claim is approved, yours is the only name still in front of them, and they book without shopping any further. You never sat down to chase it. Illustrative example, not a client."},
+    "faqs": [
+        ("Does it import my existing customers and vehicle history?",
+         "Yes. Your current customers, vehicles, and past repairs come in and live in one place, and everything stays yours and exportable. The point is to make the customer list you already have actually work for you."),
+        ("Will it really follow up on estimates automatically?",
+         "Yes, on the schedule you approve. An open estimate gets a check-in a few days later and another after that, all sent for you, so a driver waiting on a claim keeps hearing from you while the other shops go quiet. You can jump in and message anyone directly any time."),
+        ("Body shop customers do not come back often. Is a CRM still worth it?",
+         "That is exactly why it is worth it. When a customer only needs you every few years, staying the name they remember and refer is the whole game. The CRM works your unconverted estimates, keeps you top of mind for the next wreck or repaint, and turns happy customers into referrals, instead of relying on the repeat visits a body shop does not get."),
+        ("How is this different from my estimating system?",
+         "Most estimating and management systems store the file but do not chase the work. This follows up on cold estimates, nudges past customers, and tells you who has gone quiet, on a schedule, so the deferred and referral work actually shows up instead of depending on someone to remember."),
+        ("How long until it is set up?",
+         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up sequences, and connect it to your calls and estimates, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+    "related": [
+        ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
+        ("solution-crm.html", "How the CRM and follow-up system works"),
+        ("ai-receptionist-for-auto-body-shops.html", "The AI receptionist that feeds it every call"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Stop letting estimates and customers <em>go cold</em>",
+    "cta_sub": "Get a free audit of how many of your estimates and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+},
+# ====================== Marketing for Auto Body Shops ======================
+{
+    "slug": "marketing-for-auto-body-shops",
+    "trade_slug": "auto_body_shops", "trade_plural": "auto body shops",
+    "hub_name": "Auto", "hub_slug": "industry-auto.html",
+    "breadcrumb_leaf": "Marketing for Auto Body Shops",
+    "title": "Marketing for Auto Body Shops | Top Shelf Business Solutions",
+    "og_title": "Marketing for Auto Body Shops",
+    "meta_desc": "Auto body shop marketing keeps your Google Business Profile active and first in the map pack, so a driver searching after a collision calls you first.",
+    "service_schema_name": "Marketing for Auto Body Shops",
+    "eyebrow": "For Auto Body Shops",
+    "h1_html": "Marketing <em>for Auto Body Shops</em>",
+    "answer_block": "Auto body shop marketing keeps you visible where a driver looks right after a collision, your Google Business Profile and the map pack, so when someone nearby searches for a body shop the day they get rear-ended, your name is the active, well-reviewed one they call instead of the shop that let its listing go stale.",
+    "sections": [
+        {"h2_html": "Collision demand is <em>local and sudden</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Nobody shops for a body shop ahead of time. Demand appears the instant metal crumples, a driver gets rear-ended at a light, backs into a pole, or comes out to a dented door in a parking lot, and it is intensely local, because they want a shop they can get the car to now. It is also shaped by insurance, and many drivers do not realize they are allowed to pick their own shop instead of the one the insurer suggests. That means the whole game is being visible and trusted in your area the moment someone nearby searches, so you are the shop they choose before anyone steers them elsewhere.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Clever ads aimed at drivers whose cars are fine are mostly wasted, because a body shop is not something anyone wants until the day they suddenly do. The spend that pays off is the kind that makes you easy to find and easy to trust at the exact moment a collision happens near you, so being first and well reviewed in your area beats being loud everywhere.</p>'},
+        {"h2_html": "Your Google Business Profile is where a <em>nervous driver decides who to trust</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">When someone searches for a body shop near them, the map pack, those three local listings with the star ratings, is the first thing they see, above the websites and above the ads. A driver deciding who to trust with a car they need back looking right does not just glance at the stars, they read the reviews and they look at your photos. A profile with recent before-and-after shots of straightened panels and clean, color-matched paint tells a nervous customer more than any words can, and it quietly beats a profile that has sat untouched for a year. Keeping it active, complete, and full of real work is a standing advertisement in the exact spot people look right after a collision.</p>'},
+        {"h2_html": "Show up in the towns you cover, and back the <em>insurer and dealer referrals</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Marketing to a whole metro is expensive and forgettable, and it brings calls from drivers too far away to reach you easily. Focusing on the specific towns and neighborhoods your customers actually drive from, with a profile, photos, and content built around those areas, is what puts you in the map pack where the real work is, and it is a tighter, cheaper target than a citywide spend. A strong, well-reviewed public presence also backs up your other channels, the insurer direct-repair relationships and the dealership and used-car-lot referrals that send collision work your way, because those partners and their customers look you up too before they trust you with a car.</p>'},
+        {"h2_html": "Stay in front, because collision is <em>occasional and word of mouth</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Because a driver only needs collision work every few years, the shop they call is usually the one they can already see and the one a friend just mentioned. Staying visible and memorable all year, steady reviews, recent job photos, the occasional post, is what makes yours the name that comes up when someone in the area suddenly needs a body shop and asks around or searches. This is the public-facing side of the business, aimed at drivers who are not your customer yet; the private follow-up to the people already in your database, working your estimates and referrals, is the CRM.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "Rear-ended at a light, and you are <em>the shop they can see</em>",
+        "body_html": "A driver gets rear-ended at a red light and pulls into a parking lot, shaken, to figure out what to do. They search for a body shop near them and start reading. Because your Google profile has been kept active all year, with before-and-after photos of real repairs and a steady flow of reviews about clean work and a smooth insurance experience, you sit at the top of the map pack and you look like the safe choice. They call you instead of the shop their insurer mentioned, because yours is the one they can see and trust right now. The shop that let its profile go quiet is nowhere on the map. Illustrative example, not a client."},
+    "faqs": [
+        ("Do you post to my Google Business Profile for me?",
+         "Yes. We keep it active with before-and-after photos of real repairs, updates, and local content on a regular schedule, and keep your hours, services, and service area accurate, so it looks current whenever a driver searches for a body shop near them."),
+        ("What does focusing on my service area actually mean?",
+         "It means aiming your profile, photos, and content at the specific towns and neighborhoods your customers actually drive from, rather than buying reach across a whole metro. That is what lands you in the map pack, where the nearby drivers who just had a collision are looking."),
+        ("Can marketing help with insurance or dealership referrals?",
+         "It supports them. Insurer direct-repair relationships and dealer or used-car-lot referrals are their own channel, but the partners and the customers they send you look you up first, and a strong, well-reviewed profile full of real work makes those referrals easier to earn and easier to keep."),
+        ("How is this different from the CRM follow-up?",
+         "The CRM works privately on the people already in your database, your open estimates and past customers. Marketing is the public side, the Google profile, the reviews, and the local visibility that reach a driver who is not your customer yet and needs to trust you the hour they have a wreck."),
+        ("How long before I see it working?",
+         "A neglected profile can climb in the map pack within weeks once it is active and complete, and it compounds from there as reviews and photos build. Setup is included, and a free audit will show you what your current online presence looks like to someone searching near you today.")],
+    "related": [
+        ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
+        ("solution-marketing.html", "How the marketing and reputation system works"),
+        ("websites-seo-for-auto-body-shops.html", "The website that captures the demand this drives"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Be the body shop they <em>can already see</em>",
+    "cta_sub": "Get a free audit of how visible you actually are in your service area and on Google right now, whether you work with us or not. No credit card, never a call center.",
+},
+# =================== Websites & SEO for Auto Body Shops ===================
+{
+    "slug": "websites-seo-for-auto-body-shops",
+    "trade_slug": "auto_body_shops", "trade_plural": "auto body shops",
+    "hub_name": "Auto", "hub_slug": "industry-auto.html",
+    "breadcrumb_leaf": "Websites & SEO for Auto Body Shops",
+    "title": "Websites & SEO for Auto Body Shops | Top Shelf Business Solutions",
+    "og_title": "Websites & SEO for Auto Body Shops",
+    "meta_desc": "An auto body shop website built for SEO ranks for body shop near me and collision repair, and captures the estimate request directly, not a lead-seller.",
+    "service_schema_name": "Websites & SEO for Auto Body Shops",
+    "eyebrow": "For Auto Body Shops",
+    "h1_html": "Websites &amp; SEO <em>for Auto Body Shops</em>",
+    "answer_block": "An auto body shop website built for SEO ranks for the searches a driver makes right after a wreck, body shop near me, collision repair, auto body estimate, and shows up in the map pack for the towns you cover, so the car comes to you instead of a directory renting your own estimate requests back to you.",
+    "sections": [
+        {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own estimate requests</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a body shop in your town and the top of the page is often a directory, a national booking middleman, or a pay-per-lead service, not the local shop. Those sites publish thousands of pages and have years of authority behind them, so when a driver searches, they land there first, fill out an estimate request, and that lead gets sold, sometimes to several shops at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason an estimate request you should have gotten for free gets sold to you, or handed to whoever is paying that week.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">It is worse for collision work than for most trades. The driver filling out that form has no loyalty yet and no easy way to tell one shop from another, so the request gets shopped around and the job goes to whoever the middleman routes it to, not the shop that does the best paint or the cleanest panel work. A site of your own turns that same search into a call that lands with you and nobody else, and it keeps the customer, the vehicle, and the claim in your hands from the first ring.</p>'},
+        {"h2_html": "Rank for what a driver types <em>right after a collision</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">You will not outrank a national directory this year for the broadest term, and you do not need to. You can rank for your own name, for the specific towns and neighborhoods you cover, and for the exact searches a driver makes right after a collision: body shop near me, collision repair, auto body estimate, bumper repair, dent repair, paintless dent repair, and fender or panel work in your city. Pages built around the collision, refinishing, and frame work you actually do, and the areas you actually serve, are what search engines, and a driver who needs a shop now, reward with the click.</p>'},
+        {"h2_html": "A shaken driver should reach you in <em>one tap</em>, with proof you do good work",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Someone who just had a wreck is on a phone, not a desktop, and they are not going to read three paragraphs. The site has to load fast, put a tap-to-call button and your service area in front of them right away, and show proof you do good work, before-and-after photos of real repairs, so a nervous driver can see the quality before they call. Making it easy to request an estimate, a couple of taps to describe the damage and even attach a photo of it, turns a driver who would have kept scrolling into a car on your schedule, while the ones who would rather talk still reach you in one tap.</p>'},
+        {"h2_html": "The estimate requests are <em>yours</em>, permanently",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Every dollar you put into a pay-per-lead service disappears the day you stop paying, and the estimate request was never really yours anyway. A website you own keeps ranking, keeps capturing calls and estimate requests, and keeps compounding in value for as long as it exists, and it is registered to you, not a platform that can drop you. The site plugs into the same CRM that follows up on every estimate it captures and the AI receptionist that answers the calls it drives, so nothing it earns you slips away.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A collision finds <em>you</em>, not a directory",
+        "body_html": "A driver a couple of towns over gets sideswiped and pulls off the road to find help. They search body shop near me on their phone. Instead of a national directory that would sell the estimate request to three shops, they find your site ranking for that town, with a page about collision repair, before-and-after photos right there, a tap-to-call button at the top, and an estimate request a couple of taps down the page. They reach you directly, you pick up, and the car is booked in for its estimate, with no per-lead fee and no middleman anywhere in the chain. Illustrative example, not a client."},
+    "faqs": [
+        ("Will my site actually outrank the big directories?",
+         "Not for the broadest terms overnight. It can realistically rank for your name, your specific towns and neighborhoods, and the collision and estimate searches a national directory has no reason to target well, which is exactly where a local body shop can win."),
+        ("How is this different from paying for leads?",
+         "A pay-per-lead service rents you an estimate request that it also sells to other shops, and it stops the day you stop paying. A website you own captures calls and estimate requests that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every job."),
+        ("Do I need to rank for every town I serve?",
+         "You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent collision searches, then expand, rather than spreading thin across a whole metro at once."),
+        ("Do people really request a body estimate online?",
+         "More and more do, especially when they can describe the damage and attach a photo of it in a couple of taps. A photo-based estimate request on a fast site books cars that a plain contact form would have lost, and the drivers who would rather talk it through still get a tap-to-call button."),
+        ("How long until it starts ranking?",
+         "The tight local and collision searches can start moving within weeks, while the broadest terms build over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+    "related": [
+        ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
+        ("solution-websites-seo.html", "How the website and SEO system works"),
+        ("marketing-for-auto-body-shops.html", "Staying visible in your service area beyond your site"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Own the search results for <em>your own town</em>",
+    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your estimate requests, whether you work with us or not. No credit card, never a call center.",
+},
+]

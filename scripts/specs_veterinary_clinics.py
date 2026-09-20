@@ -1,0 +1,200 @@
+"""Per-page content specs for the SEO corpus (plan §5), veterinary-clinics batch. Same contract
+as scripts/corpus_specs.py: generate_corpus.py imports SPECS and owns the mechanics (shell,
+schema, events, interlinks, keyword-first title/slug/H1/first-sentence); each dict below owns
+the UNIQUE, hand-written, veterinary-specific substance that clears the uniqueness gate. Never
+templated find-and-replace, never the plumber or dentist content reworded.
+
+Medical & Dental hub, second trade in the hub alongside dentists. Four service angles are here
+in one file (the ai-receptionist dict carries "demo": True). Kept deliberately distinct from
+specs_dentists.py: after-hours ER triage, multi-pet households, and vaccine/dental/heartworm
+recall are the veterinary angles the dental pages never touch. Each example body ends with the
+literal "Illustrative example, not a client." per the honesty rule; if the generator also
+appends that line, dedupe there.
+"""
+
+SPECS = [
+# ==================== AI Receptionist for Veterinary Clinics ====================
+{
+    "slug": "ai-receptionist-for-veterinary-clinics", "demo": True,
+    "trade_slug": "veterinary_clinics", "trade_plural": "veterinary clinics",
+    "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
+    "breadcrumb_leaf": "AI Receptionist for Veterinary Clinics",
+    "title": "AI Receptionist for Veterinary Clinics | Top Shelf Business Solutions",
+    "og_title": "AI Receptionist for Veterinary Clinics",
+    "meta_desc": "A veterinary answering service answers every appointment and sick-pet call your front desk misses while rooming patients, triages after-hours, and books it.",
+    "service_schema_name": "AI Receptionist for Veterinary Clinics",
+    "eyebrow": "For Veterinary Clinics",
+    "h1_html": "AI Receptionist <em>for Veterinary Clinics</em>",
+    "answer_block": "A veterinary answering service answers every call the moment it rings, days, nights, and weekends, tells a routine vaccine question apart from a pet that needs to be seen now, points true after-hours emergencies toward the right hospital, and books the visit while your team is rooming patients. You keep your number, and every client belongs to you.",
+    "sections": [
+        {"h2_html": "A missed call is a worried owner <em>dialing the next clinic</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">An owner who thinks something is wrong with their dog does not leave a voicemail. If the line is busy, they are already dialing the next clinic on the list until a person picks up and says yes, bring the pet in. Your front desk is not ignoring the phone. They are holding a squirming cat still for a blood draw, walking a nervous owner to a room, or cleaning up after the last patient, and the call rings to voicemail while their hands are full. The call that got missed was rarely a wrong number. It was a client, and a good client means years of wellness visits, vaccines, and dentals for every animal in the house, plus the people they refer once they trust you.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">A veterinary answering service answers on the first ring no matter what the team is doing. It stays calm with an anxious owner, finds out what kind of animal it is and what is going on, and either books the visit while they are on the line or flags a real emergency to your staff right away. The appointment is captured instead of handed to the clinic across town that happened to pick up.</p>'},
+        {"h2_html": "The calls a <em>clinic front desk</em> fields all day",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The phone at a busy clinic almost never stops, and most of it is not an emergency. Owners call to book a vaccine or a wellness exam, to refill a heartworm or chronic medication, to ask whether a limp can wait until morning, or because a dog got into something at dinner and they are scared. Every one is a real person deciding whether your clinic is easy to reach, and a voicemail box cannot answer a question or book an appointment.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Answers days, evenings, and weekends, so the owner searching on a Sunday and the one whose cat stopped eating over a holiday reach a real answer instead of a recording.</li><li>Handles the routine calls that tie up the desk: your hours, where you are, whether you are taking new patients, whether a pet is due for shots, and what a first visit looks like.</li><li>Collects the pet and owner details and books the appointment straight onto your calendar, so nobody is re-keying it or playing phone tag later.</li></ul>'},
+        {"h2_html": "After hours, it sorts the <em>scared owner</em> instead of a voicemail",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Most clinics close at night and send their after-hours calls to a recording that tells a frightened owner to hang up and find an emergency hospital on their own. That is the moment an owner is most scared and most likely to remember how your clinic treated them. A veterinary answering service picks up instead, asks the questions your team would ask, and sorts the call. A pet that ate something toxic, cannot breathe, or was hit by a car gets pointed straight to the emergency hospital you trust, so no one loses time. A dog with a mild limp or a day-old ear problem gets booked into your first morning opening, so that visit stays with you instead of going to the emergency hospital and never coming back. You decide what counts as a drop-everything emergency and where those callers are sent.</p>'},
+        {"h2_html": "The number, the clients, and the bookings <em>stay yours</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">This runs on your existing clinic number, or a new one registered to your practice, not to us. Every caller, every pet record, and every appointment it books is yours and exportable any time, so the client list you are building stays an asset you own instead of something you rent back month to month. There is no long contract holding your data hostage. The answering service is one piece of the Top Shelf platform, so a call it answers lands in the same CRM that sends the vaccine and recheck reminders, and the client it books today is the one your system keeps bringing back for years.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A Sunday-night scare, on the schedule before <em>Monday</em>",
+        "body_html": 'It is 8pm on a Sunday and a dog owner notices her lab has been throwing up since the afternoon and will not settle. She searches for a vet, calls the first two she finds, and both ring to a weekend recording that tells her to try an emergency hospital. Yours answers, asks a few calm questions, decides it is worrying but not a crisis, and books her for Monday morning while noting the symptoms. She stops calling around because someone finally helped her. You open Monday to a client already on the schedule, with her name, her dog, and the history noted, instead of hearing she found a clinic that picked up. Illustrative example, not a client.'},
+    "faqs": [
+        ("Does it work with my current clinic number?",
+         'Yes. It can answer on the number your clients already call, or set up a new one registered to your practice. Either way the number and every call that comes through it belong to you and stay with you if you ever leave.'),
+        ("Can it tell a real emergency from a routine call?",
+         'Yes, that is the point. It asks what your team would ask, what kind of animal it is and what is happening, and treats a pet that was hit by a car, is struggling to breathe, or ate something toxic as urgent while booking a vaccine or a mild limp as routine. You set what counts as an emergency and which hospital those callers are sent to.'),
+        ("What happens with calls after we close?",
+         'Instead of a recording, a real answer picks up. A true emergency is pointed straight to the hospital you trust, and a call that can wait is booked into your first morning opening, so that visit stays with your clinic instead of going to the emergency hospital and never coming back.'),
+        ("Will it actually book the appointment on my calendar?",
+         'Yes. Routine visits, vaccines, wellness exams, and rechecks land straight on your calendar based on your availability, and your team gets the details right away. For an urgent case it flags your staff at once so a person decides how fast the pet needs to be seen.'),
+        ("How fast can it be answering?",
+         'Setup is included with no separate onboarding fee. We configure your questions, emergency rules, and scheduling for you, so it is picking up in days. Start with a free audit and we will show you how many calls your front desk is missing now.')],
+    "related": [
+        ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
+        ("solution-ai-phone.html", "How the AI phone and chat system works"),
+        ("crm-for-veterinary-clinics.html", "The CRM that follows up on every call you capture"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Stop losing sick-pet calls to <em>voicemail</em>",
+    "cta_sub": "Get a free audit that finds the gap in your appointment and sick-pet calls: how many roll to voicemail and book elsewhere while your front desk is rooming patients, whether you work with us or not. No credit card, never a call center.",
+},
+# ========================= CRM for Veterinary Clinics =========================
+{
+    "slug": "crm-for-veterinary-clinics",
+    "trade_slug": "veterinary_clinics", "trade_plural": "veterinary clinics",
+    "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
+    "breadcrumb_leaf": "CRM for Veterinary Clinics",
+    "title": "CRM for Veterinary Clinics | Top Shelf Business Solutions",
+    "og_title": "CRM for Veterinary Clinics",
+    "meta_desc": "A CRM for veterinary clinics brings back pets overdue for vaccines, dentals, and heartworm, so your client list keeps filling the schedule.",
+    "service_schema_name": "CRM for Veterinary Clinics",
+    "eyebrow": "For Veterinary Clinics",
+    "h1_html": "CRM <em>for Veterinary Clinics</em>",
+    "answer_block": "A CRM for veterinary clinics keeps every client, pet, and reminder in one place and reaches out for you, so the dog overdue for its vaccines and the cat whose dental you recommended last year both come back instead of drifting to another practice. Your client list quietly becomes your schedule.",
+    "sections": [
+        {"h2_html": "Overdue vaccines and dentals are <em>booked visits waiting to happen</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Most clinics are not short on demand. They are short on follow-up. The pets you already treat are the easiest exam rooms to fill: the owner knows you, and the next vaccines, wellness exam, heartworm refill, and recommended dental are all yours if you stay in touch. But a practice with thousands of patients cannot personally remember which dog is due for its rabies booster in the spring, which cat is overdue for a dental, or which puppy still needs the last of its shots. So a large amount of recurring, predictable work quietly slips, and a client who meant to come back books wherever they land when they finally remember.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Recall is the closest thing a clinic has to guaranteed production, and it is the piece most practices leave sitting because there is never time to work it by hand. A CRM keeps every due and overdue pet in front of you and sends the reminders for you, on a schedule you set.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Every client, every pet, the history, and what each animal is due for next lives in one place instead of scattered across your software and whatever the front desk happens to recall.</li><li>Vaccine, heartworm, wellness, and dental reminders go out on schedule, so the visits an owner intends to book get booked without your team working a spreadsheet of due dates.</li><li>You can see which pets have lapsed and reach the right owner at the right time, instead of hoping they remember you first.</li></ul>'},
+        {"h2_html": "A lapsed client has not fired you, they <em>just forgot to rebook</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A dog you have not seen in two years has usually not left your practice on purpose. Life got busy, a puppy grew up, the family moved across town, or they never rebooked after one canceled appointment. A light, steady touch, a note that the pet is overdue, a reminder that heartworm prevention should not lapse, is often all it takes to bring them back. And because it comes from the clinic that already knows the pet by name, it lands as a helpful nudge from someone they trust, not an ad from a stranger. Reactivating a lapsed client costs almost nothing next to chasing brand-new ones, and it turns a dormant name into a booked wellness visit and, often, the dental or follow-up care found the moment the pet is back on your table.</p>'},
+        {"h2_html": "One household is <em>many patients</em>, for years",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A single client is rarely a single pet. It is a dog and two cats today, a new puppy next year, and the animals the whole family will own over the years, and a household that trusts your clinic tends to keep every one with you. That is why staying organized around the client, not just the last visit, matters. When the reminders, history, and notes for every pet in a home sit together, your front desk can greet an owner calling about the cat and, in the same breath, mention the dog is due for its heartworm test. A reminder for one pet becomes a natural moment to catch the others up, so a household comes back on schedule instead of in scattered visits. It is the difference between a one-visit patient and a family that stays with you for the life of every animal they bring home.</p>'},
+        {"h2_html": "Your client list is <em>yours</em>, and it feeds the whole clinic",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Every client and every pet record is yours and exportable any time, handled with the discretion an owner expects when they hand you an animal they love, not locked inside software you only rent. The CRM is one piece of the Top Shelf platform. It connects to the answering service, so a new client it books lands in your database ready for the next reminder, and to online booking, so a scheduled visit is logged against the right pet with the full history already attached. The client list you have spent years building finally works for you instead of just recording who walked in.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "The dental she kept <em>putting off</em>",
+        "body_html": 'A client brings her cat in for vaccines in the spring, and the exam turns up a tooth that will need a dental cleaning under anesthesia. She says she will schedule it soon, but she is nervous about the anesthesia and leaves without booking. Normally that is the last anyone thinks of it. Instead the CRM holds the recommendation and sends her a gentle reminder a few weeks later, and again when the cat is due for its next check, written to sound like the clinic she trusts. She books the dental before the tooth turns into a painful, more expensive problem. Nobody at the front desk had to remember. Illustrative example, not a client.'},
+    "faqs": [
+        ("Does it work with my practice management software?",
+         'It sits alongside it as your follow-up and outreach layer. Your clients, their pets, the history, and what each one is due for come in and stay yours and exportable, so the list you already have starts actively bringing animals back instead of just recording who came in.'),
+        ("Will it really send vaccine and recall reminders on its own?",
+         'Yes, on the schedule you approve. A pet due for vaccines, a heartworm refill, a wellness exam, or a recommended dental gets a reminder at the right time, and another if it lapses, all sent for you. You can jump in and message any client directly whenever you want.'),
+        ("Can it reactivate clients I have not seen in a while?",
+         'Yes. It can find the pets that have gone quiet and reach their owners with a friendly nudge that they are overdue, which is far cheaper than winning a brand-new client and often brings back the wellness visit and the care that gets found once the pet is back on the table.'),
+        ("Does it keep each pet in a household straight?",
+         'Yes. It organizes around the client and every animal they own, so the reminders, history, and notes for the dog and both cats sit together, and one call about one pet is a natural chance to catch the others up on what they are due for.'),
+        ("How long until it is set up?",
+         'Setup is included with no separate onboarding fee. We bring in your clients and pets, build your recall and reactivation reminders, and connect it to your phones and calendar, so it is working in days. Start with a free audit and we will show you where visits are slipping today.')],
+    "related": [
+        ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
+        ("solution-crm.html", "How the CRM and follow-up system works"),
+        ("ai-receptionist-for-veterinary-clinics.html", "The AI receptionist that feeds it every call"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Stop letting overdue pets <em>slip away</em>",
+    "cta_sub": "Get a free audit that finds the gap in your recall and reactivation: how many pets are overdue for vaccines, dentals, and heartworm and going unworked right now, whether you work with us or not. No credit card, never a call center.",
+},
+# ====================== Marketing for Veterinary Clinics ======================
+{
+    "slug": "marketing-for-veterinary-clinics",
+    "trade_slug": "veterinary_clinics", "trade_plural": "veterinary clinics",
+    "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
+    "breadcrumb_leaf": "Marketing for Veterinary Clinics",
+    "title": "Marketing for Veterinary Clinics | Top Shelf Business Solutions",
+    "og_title": "Marketing for Veterinary Clinics",
+    "meta_desc": "Veterinary marketing keeps your Google profile active and your reviews fresh, so the pet owner searching for a vet nearby finds you first and books.",
+    "service_schema_name": "Marketing for Veterinary Clinics",
+    "eyebrow": "For Veterinary Clinics",
+    "h1_html": "Marketing <em>for Veterinary Clinics</em>",
+    "answer_block": "Veterinary marketing keeps your clinic visible where new clients actually look, your Google Business Profile, the map, and your reviews, so the pet owner searching for a vet nearby finds an active, well-reviewed practice and picks you instead of the clinic that let its profile go stale. It is how new clients find you before they ever call.",
+    "sections": [
+        {"h2_html": "A new pet owner trusts the vet with the <em>reviews and the map pack</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">When someone needs a vet, whether they just moved, adopted a puppy, or noticed their cat is not acting right, they do not ask around for weeks. They search for a vet near them, glance at the map, and look at who has the most reviews and the highest ratings close by. They are about to trust a stranger with an animal they love and cannot afford to get wrong, so those stars and that recent activity are the fastest trust they can find before they ever pick up the phone. A clinic with a thin, untouched profile quietly loses those searches to the practice with a fuller one, and you never see the client who scrolled right past you.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The medicine you practice is almost certainly excellent. The trouble is that a great clinic with a neglected online presence looks, to a worried owner searching at 9pm, about the same as a mediocre one. Marketing closes that distance so the reputation you have actually earned is the one a new client sees first.</p>'},
+        {"h2_html": "The map listing is the <em>first impression</em> now",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The three local listings on the map, the ones with the star ratings, show up before any website and before the ads when an owner searches for a vet near them. A profile that has not been touched in months, with old hours, no recent photos, and stale reviews, looks abandoned next to a clinic that keeps it current. Keeping yours active, complete, and honest, real photos of the team and the practice, accurate hours, the services you offer, whether you are taking new patients, and a steady stream of recent reviews, is a quiet advertisement running in the exact spot people look when they are ready to book. A clinic that shows its real team, its lobby, and a few happy patients feels like a place an owner can picture walking into, and that feeling is often what turns a search into a call. Wrong hours or a missing phone number does more than look sloppy. It quietly sends a ready-to-book owner to a clinic whose information they can actually trust.</p>'},
+        {"h2_html": "Win the <em>neighborhoods you actually serve</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A pet owner wants a clinic they can get to easily, close to home, close to work, close enough to reach fast when something is wrong, so the clients worth reaching live in a fairly tight radius around your practice. Marketing to a whole metro is expensive and brings calls from people who will never actually drive to you. Focusing your profile, your reviews, and your local content on the neighborhoods you truly serve is what puts you on the map for the searches that turn into booked exam rooms. It is a tighter, cheaper target than a citywide spend, and it is the one that turns into clients who come back for years. The local map rewards a clinic that is both close to the searcher and clearly relevant to what they typed, and because reviews carry so much weight in that decision, steadily earning fresh ones from happy owners is the strongest signal you can send a stranger comparing clinics late at night.</p>'},
+        {"h2_html": "Be visible right before <em>each seasonal wave</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Veterinary demand has a rhythm. Heartworm, flea, and tick season sends owners looking for prevention in the spring, adoption waves after the holidays bring a rush of new puppies and kittens that need their first visits, and travel and boarding around the holidays send families searching for a clinic that can fit them in. Being visible right before each of those waves beats scrambling once they hit. A steady local presence, timely posts, fresh reviews, and current information keeps you top of mind for the owner deciding now. This is the public-facing side of the clinic, aimed at people who are not your clients yet. The private follow-up to the pets already in your system, recall and reactivation, is the CRM, and the two work best together.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A new puppy down the street, and <em>you are the one on the map</em>",
+        "body_html": 'A family two streets over brings home a new puppy and realizes it needs its first round of shots, so they search for a vet nearby that afternoon. Because your Google profile has been kept active all year, with recent photos of the team, accurate hours, the services you offer, and a steady flow of reviews, you sit near the top of the map when they look. They see a clinic that is clearly open, busy, and trusted, and they call you instead of the practice two listings down with three old reviews. The clinic that let its profile go quiet never comes up, and that puppy becomes a client for years of care to come. Illustrative example, not a client.'},
+    "faqs": [
+        ("Do you keep my Google Business Profile updated for me?",
+         'Yes. We keep it active with photos of the team and the practice, posts, and accurate information on a regular schedule, and we keep your hours, services, and whether you are taking new patients current, so it looks alive whenever someone searches for a vet nearby.'),
+        ("What does focusing on my area actually mean?",
+         'It means building your profile, reviews, and content around the neighborhoods your clients realistically come from, instead of spreading a budget across a whole metro. That is what gets you into the local map where new pet owners are choosing a clinic.'),
+        ("How is this different from the CRM?",
+         'The CRM follows up privately with clients already in your system, recall and reactivation. Marketing is the public-facing side, your Google profile, reviews, and local visibility, aimed at new owners who need to find and trust you before they have ever been in.'),
+        ("Can you help me get ahead of seasonal demand?",
+         'Yes. We time your visibility to the waves that matter for a clinic, heartworm and flea season, the puppy and kitten rush after the holidays, and boarding season around travel, so you are visible before owners start searching instead of catching up after.'),
+        ("How long before it starts working?",
+         'A neglected profile can climb in the local map within weeks once it is active and complete, and it compounds as reviews and content build. Setup is included, and a free audit will show you exactly how visible your clinic looks to someone searching nearby today.')],
+    "related": [
+        ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
+        ("solution-marketing.html", "How the marketing and reputation system works"),
+        ("websites-seo-for-veterinary-clinics.html", "The website that captures the demand this drives"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Be the clinic owners <em>find first</em>",
+    "cta_sub": "Get a free audit that finds the gap in your local visibility and reviews: how easily a new pet owner nearby can actually find and trust you right now, whether you work with us or not. No credit card, never a call center.",
+},
+# ==================== Websites & SEO for Veterinary Clinics ====================
+{
+    "slug": "websites-seo-for-veterinary-clinics",
+    "trade_slug": "veterinary_clinics", "trade_plural": "veterinary clinics",
+    "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
+    "breadcrumb_leaf": "Websites & SEO for Veterinary Clinics",
+    "title": "Websites & SEO for Veterinary Clinics | Top Shelf Business Solutions",
+    "og_title": "Websites & SEO for Veterinary Clinics",
+    "meta_desc": "A veterinary clinic website built for SEO ranks for vet near me and the services you offer, and turns a worried pet owner into a booking, not a directory lead.",
+    "service_schema_name": "Websites & SEO for Veterinary Clinics",
+    "eyebrow": "For Veterinary Clinics",
+    "h1_html": "Websites &amp; SEO <em>for Veterinary Clinics</em>",
+    "answer_block": "A veterinary clinic website built for SEO ranks for what a pet owner types when they need care, vet near me, emergency vet, and the services you offer, shows up on the map for the towns you cover, and captures the client the moment they land, so the booking is yours, not a directory's.",
+    "sections": [
+        {"h2_html": "An owner sizes up your clinic by your <em>website in seconds</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">An owner whose dog has been off its food, or who just adopted a kitten and needs a first visit, is on their phone opening the first few clinics they find. In a few seconds they decide whether each one looks like a place they would trust with an animal they love. A site that loads slowly, looks like it was built a decade ago, or does not work right on a phone tells them the clinic might be just as behind, and they back out and try the next one. A clean, fast, modern site does the opposite: it signals a practice that has its act together, which is exactly what a nervous owner wants to believe before they hand you their pet.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The site does not have to be fancy. It has to load fast, put your phone number, location, hours, services, and whether you are taking new patients right in front of a visitor, and make calling or requesting an appointment a single tap. A new-client form that is simple to fill out from a phone turns a first-time searcher into a booked exam. A beautiful site that buries the phone number wastes the client it just earned.</p>'},
+        {"h2_html": "Rank for the searches an <em>owner actually types</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The biggest directories will keep the top of the broadest, most generic searches this year, and chasing them there is a waste of effort. What a local clinic can win is more specific and far more valuable: your own name, the exact towns and neighborhoods you serve, and the searches owners really make, vet near me, emergency vet, and the services you want more of, wellness exams, dentals, spay and neuter, vaccines, and care for a particular kind of animal. Pages built around the services you provide and the areas you cover are what search engines, and an owner deciding where to go, reward with the click. A page that explains, in plain language, what a first puppy visit involves or when a limp is worth a same-day exam also answers the quiet questions a worried owner is already typing, which is the kind of content that earns both the ranking and the trust. That is where a local clinic beats a faceless directory that has no reason to answer those searches well.</p>'},
+        {"h2_html": "Stop paying a directory for <em>clients that should be yours</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Type a vet and your town into a search and the results sitting above you are often a directory or a national booking app, not the clinic down the street. Those sites publish thousands of pages and carry years of authority, so a new client lands there first, and that lead gets handed out, sometimes to several clinics at once, sometimes back to you for a fee that comes straight out of the value of a client you should have gotten for free. For a clinic that gap stings more than it does for most businesses, because a single client is not one job, it is years of visits across every pet in the home, and the directory takes its cut of all of it. A website that ranks on its own keeps the client yours from the first click, with no middleman standing between you and the owner searching for exactly what you do.</p>'},
+        {"h2_html": "Every client the site earns <em>stays yours</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Money spent on a pay-per-lead service buys nothing that lasts. The moment you stop paying, the calls stop, and the client it sent you was never truly yours. A website you own keeps ranking, keeps earning bookings, and keeps compounding in value for as long as it exists, registered to your clinic, not to a platform that can drop you or raise the rent. It plugs into the same CRM that follows up on every new-client lead and puts each pet into recall, and the answering service that picks up the calls it drives, so a client the site earns at midnight is booked, followed up, and brought back for years instead of slipping away before morning.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A late-night scare finds <em>you</em>, not an app",
+        "body_html": 'A man new to town notices his older dog is suddenly lethargic late in the evening and searches vet near me on his phone. Instead of a national directory that would sell his details to a handful of clinics, he finds your site ranking for that search, loading fast, with a services page, your hours, and a tap-to-call button right at the top. He calls, your answering service books him for the morning, and he is a client before he has even met you. You paid nothing per lead, no middleman ever touched the booking, and that first visit is the start of years of care for every pet he owns. Illustrative example, not a client.'},
+    "faqs": [
+        ("Will my site actually outrank the big directories?",
+         'Not for the broadest terms overnight. It can realistically rank for your name, your specific towns and neighborhoods, and the service and emergency searches a national directory has no reason to target well, which is exactly where a local clinic can win.'),
+        ("How is this different from paying for leads?",
+         'A pay-per-lead service rents you a client it may also sell to other clinics, and it stops the day you stop paying. A website you own captures clients who are yours alone and keeps working long after it is built, with no per-lead fee skimming the years of visits a household is worth.'),
+        ("What should a veterinary website actually have?",
+         'The essentials a worried owner needs, fast: your services, your location and hours, whether you take new patients, real photos, easy tap-to-call and a simple new-client form, and pages for the services you want more of. It has to load quickly and work perfectly on a phone, since that is where most owners find you.'),
+        ("Do I need a page for every service I offer?",
+         'You start with the ones that matter most, the emergencies and the services you want to grow, then expand. A focused set of strong service and location pages ranks better than one thin page trying to cover everything at once.'),
+        ("How long until it starts ranking?",
+         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+    "related": [
+        ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
+        ("solution-websites-seo.html", "How the website and SEO system works"),
+        ("marketing-for-veterinary-clinics.html", "Staying visible in your area beyond your site"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Own the vet searches in <em>your own town</em>",
+    "cta_sub": "Get a free audit that finds the gap between your website and the directories taking your new-client searches, whether you work with us or not. No credit card, never a call center.",
+},
+]
