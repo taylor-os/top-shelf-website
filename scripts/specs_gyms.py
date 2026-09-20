@@ -1,0 +1,200 @@
+"""Per-page content specs for the SEO corpus, gyms and fitness studios batch. Same contract as
+scripts/specs_plumbers.py: generate_corpus.py imports SPECS and owns the mechanics (shell,
+schema, events, interlinks, keyword-first title/slug/H1/first-sentence); each dict below owns
+the UNIQUE, hand-written, gym-specific substance that clears the uniqueness gate. Never
+templated find-and-replace, never the hair-salon content reworded.
+
+Salon, Spa & Fitness hub, shared with specs_hair_salons.py. Four service angles live here in
+one file (the ai-receptionist dict carries "demo": True). Where a hair salon sells a per-visit
+appointment that gets rebooked, a gym sells a recurring membership, so this file is written
+around the lead-to-tour-to-join funnel and member retention, never per-visit rebooking. Each
+example body ends with the literal "Illustrative example, not a client." per the honesty rule;
+if the generator also appends that line, dedupe there.
+"""
+
+SPECS = [
+# ============================== AI Receptionist for Gyms ==============================
+{
+    "slug": "ai-receptionist-for-gyms", "demo": True,
+    "trade_slug": "gyms", "trade_plural": "gyms",
+    "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
+    "breadcrumb_leaf": "AI Receptionist for Gyms",
+    "title": "AI Receptionist for Gyms | Top Shelf Business Solutions",
+    "og_title": "AI Receptionist for Gyms",
+    "meta_desc": "A gym answering service answers every call and text the moment it comes in, day or night, answers the membership questions, and books the tour or free trial.",
+    "service_schema_name": "AI Receptionist for Gyms",
+    "eyebrow": "For Gyms",
+    "h1_html": "AI Receptionist <em>for Gyms</em>",
+    "answer_block": "A gym answering service answers every call, text, and message the moment it comes in, day or night, tells a prospect asking about membership apart from a current member with a quick question, and books the tour or free trial while your team is on the floor. You keep your own number, and every lead belongs to you.",
+    "sections": [
+        {"h2_html": "The inquiry you miss is the member who <em>joins the gym that answered</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A front desk mid-class, spotting a lift, or checking someone in cannot stop to pick up the phone, and a prospect calling to ask about joining is not going to leave a voicemail and wait around. They hang up and call the next gym, and the one after that, until a person answers. The work on the floor is the very reason the phone rings out, and that prospect, along with every month of dues they would have paid while they stayed, goes to whoever happened to be free. A membership is not a single sale you can shrug off when you miss it. It is recurring revenue that signs up once and pays for as long as the person keeps coming, which makes a missed inquiry one of the most expensive things that can happen at the desk.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">An answering service picks up on the first ring, day or night, sounds welcoming instead of harried, asks what the caller is after and when they want to start, and either books a tour or a free trial on the spot or takes the details so the lead is never lost. The prospect gets captured and scheduled instead of handed to the gym down the road that simply got to the phone first.</p>'},
+        {"h2_html": "Most people decide to join <em>at night, on their phone</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A large share of the interest in joining a gym never lands during staffed hours at all. Someone decides on a Sunday night that this is finally the week they start, a burst of resolve hits at eleven after a hard day, or a class clip catches them mid-scroll and they want to know whether they can just come try it. Motivation like that has a short shelf life. If the call goes to voicemail or the message sits until tomorrow, the resolve has cooled by morning and they have already signed up somewhere that answered while it was still hot. It is the kind of lead that rarely reaches out a second time.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The answering service replies in seconds to a text or a social message, not only a phone call, and turns that late-night decision into a booked tour or trial while the person is still ready to act on it. The one who reached out at eleven at night wakes up already on your schedule instead of still weighing their options. The reply goes out before the moment cools, which for a gym is the whole difference between a booked trial and a lead that never comes back.</p>'},
+        {"h2_html": "Built around how a gym <em>actually signs members</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Signing a member is rarely one quick question, and a generic call center reading a script does not know your class schedule from your open-gym hours, or that a nervous first-timer usually needs a tour before they will commit to anything. The answering service handles the conversation the way your best front-desk person would on a calm afternoon.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Answers calls, texts, and social messages 24/7, so the person who finds you at midnight and the one who calls on a holiday both reach a real reply instead of a voicemail box.</li><li>Answers the questions that actually decide it: your hours, what a membership runs, whether there is a free trial or a day pass, the class schedule, childcare, and what to bring the first time.</li><li>Books the next real step, a tour, a free trial, or a first class, straight onto your calendar, because a prospect ready to walk in should never be told to call back later.</li><li>Handles a current member with a billing or scheduling question differently from a first-time prospect, so the people already paying you never feel like they are explaining themselves to a stranger.</li></ul>'},
+        {"h2_html": "You own the number, the leads, and <em>the member list</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The number this answers on is yours, your existing gym line or a new one put in your name, never ours. Every caller, every text, and every lead it captures stays exportable whenever you want it, because the membership list you are slowly building is the most valuable asset a gym owns and it should never be rented back to you or locked behind a long contract. And the answering service does not work off on its own. It is one piece of the Top Shelf platform, so every lead it takes drops straight into the CRM that nurtures a free trial into a signed member and keeps following up, which means the person who called at nine at night becomes recurring dues instead of a note that gets lost by the morning shift.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A 9pm free-trial text, booked while the <em>floor is packed</em>",
+        "body_html": "It is nine on a weeknight and someone who has been meaning to get back in shape for months finally sees a post about your place and sends a message asking whether they can come try a class this week. Your trainers are running a full floor and nobody is free at the desk, but the answering service replies within seconds, explains what the trial includes and what to bring, checks the schedule against what they are looking for, and books them into a Saturday session. They wake up with the trial confirmed and the details sitting in their texts, instead of scrolling on to the next gym because no one replied. You picked up a real lead while every person on your staff had their hands completely full. Illustrative example, not a client."},
+    "faqs": [
+        ("Does it work with my current gym phone number?",
+         "Yes. It can answer on your existing gym number, or set up a new one registered in your name. Either way the number and every call, text, and lead that comes through it belong to you and go with you if you ever leave."),
+        ("Can it answer texts and social messages, not just calls?",
+         "Yes, and that matters for a gym. A lot of people reach out by text or a message after seeing a class or a result at night, and the answering service replies to those instantly, answers the first questions about membership and trials, and books the visit, so a late-night message does not sit until morning."),
+        ("Can it actually book a tour or a free trial?",
+         "Yes. It books the next real step, a tour, a trial, or a first class, straight onto your calendar based on your schedule and rules, and you get the details right away. For anything that needs a person, a membership freeze or a billing dispute, it takes the details and hands it to your team."),
+        ("Will it sound like a robot to someone thinking about joining?",
+         "It sounds natural and welcoming, and it never pretends to be a human when it is not. Someone deciding whether to join mostly wants to know they can get in, what it costs, and that a real gym has them booked, and a friendly reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
+        ("How fast can it be running?",
+         "Setup is included with no separate onboarding fee. We configure your membership options, your class schedule, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many membership inquiries your current phone setup is quietly letting slip.")],
+    "related": [
+        ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
+        ("solution-ai-phone.html", "How the AI phone and chat system works"),
+        ("crm-for-gyms.html", "The CRM that turns every lead into a member"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Stop losing new members to <em>voicemail</em>",
+    "cta_sub": "Get a free audit of how many calls, texts, and after-hours messages your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+},
+# ================================== CRM for Gyms ==================================
+{
+    "slug": "crm-for-gyms",
+    "trade_slug": "gyms", "trade_plural": "gyms",
+    "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
+    "breadcrumb_leaf": "CRM for Gyms",
+    "title": "CRM for Gyms | Top Shelf Business Solutions",
+    "og_title": "CRM for Gyms",
+    "meta_desc": "A CRM for gyms keeps every member, lead, and trial in one place and follows up for you, so trials become members and members stay instead of cancelling.",
+    "service_schema_name": "CRM for Gyms",
+    "eyebrow": "For Gyms",
+    "h1_html": "CRM <em>for Gyms</em>",
+    "answer_block": "A CRM for gyms keeps every member, lead, and free-trial visit in one place and follows up for you, so the prospect who toured but did not sign and the member who stopped showing up both stay instead of joining the gym down the street. Your roster quietly becomes recurring revenue you can actually hold onto.",
+    "sections": [
+        {"h2_html": "The trial that does not convert is the membership you are <em>losing</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Most gyms do not have a foot-traffic problem so much as a conversion problem. Someone takes a free trial, drops in on a class, or comes by for a tour, says they want to think it over, and then no one circles back. They fully meant to join, life got in the way, and the moment quietly passed. That trial was never a dead lead. A prospect who walked in, tried the place, and liked it enough to spend an hour there is a far warmer lead than any cold click, and letting that go unworked is the costliest miss a gym makes. It just needed a friendly nudge a day or two later, and a nudge is exactly what slips when the front desk is coaching sessions and running the floor all day.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">A CRM keeps every trial and tour in front of you and follows up on a schedule you set, with texts and emails that go out on time whether or not anyone at the desk remembers. The person still weighing whether to commit hears from you again while the impulse is alive, and the trial turns into a paying membership instead of a maybe that fades, all without a single reminder written by hand.</p>'},
+        {"h2_html": "Retention is the <em>whole business</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A gym lives and dies on recurring dues, so the real fight is not signing a member once, it is keeping them past the first month or two. A member who quietly stops showing up is a cancellation that has not been filed yet, and by the time the card gets declined or the cancel email lands, it is almost always too late to win them back. Catching that drift early, and making the first few weeks feel genuinely welcoming, protects more revenue than almost any new-member push ever will.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Every member, their join date, plan, visit history, and notes live in one place instead of a billing app, a spreadsheet, and someone\'s memory.</li><li>New members move through an onboarding sequence over their first weeks, a welcome, a nudge to book that first class, a check-in, so the habit sets before the motivation fades.</li><li>You can see who has not been in lately and reach out with a real reason to return before a quiet member becomes a cancelled one.</li><li>Memberships, class packs, and prepaid packages stay tracked against the right person, so the people who paid ahead actually come in and use what they bought.</li></ul>'},
+        {"h2_html": "The members who cancelled are not <em>gone for good</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A member who cancelled six months ago is usually not angry, they simply fell out of the routine, got busy, or told themselves they would restart eventually. Reaching back out to the people who have lapsed is some of the highest-return work a gym can do, because you are not paying to find a stranger, you are reminding someone who already knew your place and liked it that the door is still open to them. Best of all, a former member has nothing to relearn, their account, their history, and their familiarity with the room are all still there, so coming back is far easier than starting over somewhere new. A warm, well-timed message, especially right before the New Year when half the town is thinking about it all over again, brings a real share of them back onto the roster. The CRM finds the members who have gone quiet or cancelled outright and sends that message for you, so a name you had written off turns back into recurring dues without anyone hunting through old records to find it.</p>'},
+        {"h2_html": "Class bookings, no-shows, and a member list <em>you own</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Two quiet things drain a studio. One is the no-show who reserved a spot in a capped class and never came, leaving a bike or a mat empty that someone on the waitlist would have taken. The other is the member who drifts off simply because nothing reminded them to come back in. The CRM sends automatic class confirmations and reminders that cut no-shows and late cancels, and it can offer a freed-up spot to the waitlist the moment someone drops, so a full class stays full. Every member and every note is yours and exportable at any time, never locked inside software you only rent, and because the CRM shares one database with the answering service, a lead the phone captures lands here and gets nurtured on its own. Nothing you have already earned is left to go cold.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A free trial that <em>signs itself</em>",
+        "body_html": "Someone comes in for a free trial on a Tuesday, has a good first session, and leaves saying they will think it over, the way most people honestly do. Normally that is the last anyone hears of it until they turn up again months later, or never do. Instead, the next morning the CRM sends a friendly note saying it was great to have them in, with a simple link to start a membership, and a short, no-pressure follow-up a couple of days after that. The other gyms they tried never bothered to reach back out, so when they are finally ready that weekend, yours is the only name still sitting in front of them, and they sign up without shopping around any further. No one at the desk had to remember to chase it down. Illustrative example, not a client."},
+    "faqs": [
+        ("Does it import my existing members and their history?",
+         "Yes. Your current members, leads, plans, and visit history come in and live in one place, and everything stays yours and exportable. The point is to make the roster you already have actually work for you instead of sitting in a billing app."),
+        ("Will it really follow up on trials and tours on its own?",
+         "Yes, on the schedule you set. A free trial or a tour that did not sign gets a friendly check-in a day or two later and another after that, all sent for you, so a prospect on the fence keeps hearing from you while the other gyms go quiet. You can jump in and message anyone directly any time."),
+        ("Can it help me keep members from cancelling?",
+         "That is the biggest thing it does. It onboards new members over their first weeks, flags the ones who have not been in lately so you can reach them before they cancel, and reactivates members who already lapsed, all of which protects the recurring dues a gym runs on."),
+        ("Can it handle class bookings and no-shows?",
+         "Yes. It sends class confirmations and reminders that cut no-shows and late cancels, and it can offer an open spot to the waitlist when someone drops, so a limited class stays full instead of running with empty space."),
+        ("How long until it is set up?",
+         "Setup is included with no separate onboarding fee. We bring in your members, build your trial-conversion, onboarding, and win-back sequences, and connect it to your calls and schedule, so it is working in days. Start with a free audit and we will show you where members are slipping through today.")],
+    "related": [
+        ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
+        ("solution-crm.html", "How the CRM and follow-up system works"),
+        ("ai-receptionist-for-gyms.html", "The answering service that feeds it every lead"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Stop letting trials and members <em>slip away</em>",
+    "cta_sub": "Get a free audit of how many of your trials never converted and how many members have quietly stopped showing up, whether you work with us or not. No credit card, never a call center.",
+},
+# =============================== Marketing for Gyms ===============================
+{
+    "slug": "marketing-for-gyms",
+    "trade_slug": "gyms", "trade_plural": "gyms",
+    "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
+    "breadcrumb_leaf": "Marketing for Gyms",
+    "title": "Marketing for Gyms | Top Shelf Business Solutions",
+    "og_title": "Marketing for Gyms",
+    "meta_desc": "Gym marketing keeps your Google Business Profile active and your name first in the map pack, so people nearby find and join you when motivation spikes.",
+    "service_schema_name": "Marketing for Gyms",
+    "eyebrow": "For Gyms",
+    "h1_html": "Marketing <em>for Gyms</em>",
+    "answer_block": "Marketing for gyms keeps you visible where prospective members actually look, your Google Business Profile, the map pack, and social, so when someone nearby searches for a gym or feels the urge to start, your name is the active, well-reviewed one they join instead of the studio that let its profile go stale.",
+    "sections": [
+        {"h2_html": "Fitness demand runs on <em>the calendar</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Very little about joining a gym is a true emergency, but it is every bit as tied to timing. Demand surges on a schedule anyone can see coming: the New Year, when half the town resolves to get in shape in the same week, the run-up to summer, the reset right after the holidays, the start of a new school year. Those windows are when the people who have been putting it off finally go looking, and the gym that is already visible and trusted in that moment can catch a whole season of signups in a few short weeks.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The mistake is waiting until a rush has already started to try to get seen. Being active, complete, and well-reviewed before the wave arrives is what puts you in front of people at the moment they decide, instead of scrambling against every other gym that woke up its profile the same week you did, which is the cheapest advantage a gym can hand itself. A steady presence the rest of the year is what makes you the obvious choice once the surge hits. Miss that window and you are left buying attention at its most expensive, competing for the same eyes as every other gym that woke up late.</p>'},
+        {"h2_html": "Your Google Business Profile is the <em>storefront</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">When someone searches for a gym near them, the map pack, those three local listings with the stars, is the first thing they see, and for a decision this personal they lean on it hard. Choosing a gym means choosing where a year of early mornings or after-work hours is going to happen, so a prospect studies the photos, the hours, and the reviews before they will even reach out. A listing that shows a real floor mid-class, current schedules, and recent reviews reads as a place with momentum. One with a dim photo from years ago and hours that may or may not still be right reads as a place that might not even be open anymore. Beyond the impression, the profile is where the make-or-break practical questions get settled: are you open early enough for a before-work session, which classes run and when, is there parking, can a person simply walk in and try it. A gym that answers those on the spot wins the prospect who would have quietly moved on from one that made them dig for it or call to find out.</p>'},
+        {"h2_html": "Proof and community do <em>the selling</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">People do not join a gym for the equipment, they join for who they believe they will become inside it, and nothing sells that like watching real people like them already doing the work. Honest member progress, the energy of a packed class, coaches who clearly remember names, a challenge that hands someone a reason to start this month instead of next, this is the content that turns a nervous first-timer into a walk-in. A profile and a feed full of genuine moments from your actual floor does the reassuring for you, long before anyone picks up the phone, and the proof does that work whether or not anyone is at the desk to make the pitch. It quietly answers the fear every newcomer carries, that they will not belong or will not keep up, by showing a room full of people who once felt exactly the same way. Keep it real and specific to your place rather than staged stock photos, and it becomes the reason a prospect picks you over the anonymous box a mile down the road.</p>'},
+        {"h2_html": "Reviews and a steady local presence, <em>working together</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Reviews are the other half of local trust, and they pull double duty. A prospect reads them to judge whether your members are people like them and whether the place delivers what it promises, while Google reads them to decide whether to show you in the map pack at all. More honest reviews lift you in local search, which puts you in front of more prospects, who leave more reviews of their own, and the whole thing feeds itself. What keeps it turning is a steady presence: fresh photos of real classes, a reply to every review whether it is glowing or hard to read, posts tied to the challenges and seasons your members actually care about. All of that is the public-facing side of the gym, aimed at people who are not members yet. The private, one-to-one follow-up with the people already on your roster is the CRM, and the two are meant to run as a pair. Either way the reputation stays yours, tied to your own profile, not a class-booking app that quietly rents your own name back to you.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "January first, and you are <em>already at the top</em>",
+        "body_html": "The New Year arrives and half the neighborhood decides in the very same week that this is the year they finally get in shape. Because your Google profile has been kept active all year long, with recent photos of real classes, accurate hours, and a steady flow of reviews, you are sitting at the top of the map pack when everyone starts searching at once. The people ready to commit that week see a place that looks alive and full of members who resemble them, and they walk in and sign up. The studio a mile over, with a profile last touched last spring, never enters the running, and it spends all of January quietly wondering where the rush went this time. Illustrative example, not a client."},
+    "faqs": [
+        ("Do you post to my Google Business Profile and social for me?",
+         "Yes. We keep them active with real photos of your floor and classes, updates, and local content on a regular schedule, and keep your hours, class times, and services accurate, so you look current and busy whenever a prospective member looks you up."),
+        ("How do I get more reviews?",
+         "Reviews are a core piece of it, requested at the right moment and pointed at the same Google profile that drives your local ranking. We help you gather honest reviews from happy members and reply to the ones that come in, since responding is itself a signal that lifts you in local search."),
+        ("Can you help me get ahead of the New Year and summer rushes?",
+         "Yes. We time your visibility to the waves that matter, the New Year, the run-up to summer, the back-to-school reset, so you are already in front of people before the surge instead of scrambling to get noticed the same week as everyone else."),
+        ("How is this different from the CRM?",
+         "The CRM follows up privately with people already on your roster or in your leads, onboarding, retention, and win-back. Marketing is the public-facing side, your Google profile, reviews, and social presence, aimed at people who are not members yet but need to find you and trust you before they will join."),
+        ("How long before I see it working?",
+         "A profile that has been sitting neglected can start climbing the map pack within a few weeks of being made active and complete, and it keeps compounding as reviews and fresh photos stack up. Setup is included, and a free audit will show you what your online presence looks like to someone searching for a gym near them today.")],
+    "related": [
+        ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
+        ("solution-marketing.html", "How the marketing and reputation system works"),
+        ("websites-seo-for-gyms.html", "The website that captures the demand this drives"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Be the gym they <em>can already see</em>",
+    "cta_sub": "Get a free audit of how visible you actually are on Google and social in your area right now, whether you work with us or not. No credit card, never a call center.",
+},
+# ============================= Websites & SEO for Gyms =============================
+{
+    "slug": "websites-seo-for-gyms",
+    "trade_slug": "gyms", "trade_plural": "gyms",
+    "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
+    "breadcrumb_leaf": "Websites & SEO for Gyms",
+    "title": "Websites & SEO for Gyms | Top Shelf Business Solutions",
+    "og_title": "Websites & SEO for Gyms",
+    "meta_desc": "A gym website built for SEO ranks for gym near me and the classes you run, sells the membership up front, and lets a prospect start a free trial in one tap.",
+    "service_schema_name": "Websites & SEO for Gyms",
+    "eyebrow": "For Gyms",
+    "h1_html": "Websites &amp; SEO <em>for Gyms</em>",
+    "answer_block": "A gym website built for SEO ranks for the searches someone makes when they are ready to start, gym near me and the classes you run, sells the membership, and lets them book a tour or a free trial in one tap, so the member belongs to you instead of a class-booking app taking a cut of your own sign-ups.",
+    "sections": [
+        {"h2_html": "A prospect decides if your gym is <em>their place</em> before they walk in",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Joining a gym is a quiet bet on a future version of yourself, and most people are a little nervous about it, so a prospect does their homework well before they ever show up. They land on your site from a search or a link in your profile, and within seconds they are deciding whether this looks like a place for someone like them, whether the classes fit around their life, and whether starting will feel easy or awkward. A site that loads slowly, hides the schedule, buries what a membership actually costs, or forces them to call during business hours is a site they quietly leave for the gym that felt more welcoming.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The site has to load fast on a phone, show the real room and real members, make the schedule and the way in obvious, and read like an invitation rather than a wall to climb. A genuinely great gym with a neglected website loses people it never even hears about, and it loses them to places that are not necessarily better, only easier to say yes to. On a phone that ease comes down to speed and clarity, a page that opens instantly and shows the one thing they came looking for.</p>'},
+        {"h2_html": "Rank for what someone types when they are <em>ready to join</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The results at the very top for gym near me in your town are often a class-booking marketplace or a directory, not the local gyms themselves. Those sites publish thousands of pages and carry years of authority, so a prospect lands there first, and the sign-up either gets passed around or costs you a cut of a member who could have been yours for free. You will not outrank a national marketplace for the broadest term this year, and you do not need to. You can rank for your own name, for the neighborhoods you actually draw from, and for the exact things people search once they are ready: a specific class in your area, personal training near me, a place to lift, a gym open early or open late. Pages built around the classes, the training, and the areas you genuinely serve are what search engines, and ready-to-join prospects, reward with the click, because a national app has no reason to write a real page about your neighborhood or your Saturday class.</p>'},
+        {"h2_html": "A visitor on their phone should see the vibe and <em>start in one tap</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A prospect is almost always on a phone, often late at night just after deciding it is finally time, and they will not read long paragraphs or dig for a way in. The site has to load fast, show real photos and short clips of your floor and classes right at the top, put your reviews where they cannot be missed, keep the schedule and pricing easy to find, and give one clear button to book a tour or start a free trial that works in a single tap, day or night. It should never make someone create an account or download an app just to see the class schedule or the price, because every extra step between the impulse and the booking is one more chance to close the tab and lose the nerve. What sells a gym is the feeling of belonging and a low bar to just try it, so the vibe and the first step both have to sit front and center, not hidden behind a contact form nobody ever fills out. A beautiful site that makes starting hard is a wasted opportunity, and a visitor should never leave without an easy way to get through the door.</p>'},
+        {"h2_html": "The memberships are <em>yours</em>, not a marketplace's",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Every sign-up through a class-booking app or a pay-per-lead service costs you a cut and was never truly yours to begin with, and the day you stop paying, all of it disappears, member and all. A website you own keeps ranking, keeps selling the membership, and keeps capturing trials for as long as it exists, and it is registered to you, not to a platform that can change the rules, raise its take, or drop you whenever it likes. The site plugs into the same CRM that nurtures every trial it captures into a member and the same answering service that replies to the people who would rather message than tap, so nothing it earns you ever slips through. What you build is an asset that compounds and keeps paying you back for years, not rent you hand over forever just for access to your own members.</p>'}],
+    "example": {
+        "eyebrow": "How it plays out",
+        "h2_html": "A late-night 'gym near me' search finds <em>you</em>, not an app",
+        "body_html": "Someone has been telling themselves for weeks that they will start, and at nine at night they finally search for a gym near them on their phone. Instead of a class-booking marketplace that would take a cut and line up ten places at once, they find your site ranking for that exact search, with photos of the real floor, the class schedule right there on the page, honest reviews underneath, and one clear button to book a free trial. They see a room that looks like somewhere they could actually belong, tap to book Saturday, and start the trial before they close the tab and talk themselves back out of it. The sign-up is yours, with no cut taken, and no app ever stood in between you and your new member. Illustrative example, not a client."},
+    "faqs": [
+        ("Will my site actually outrank the big directories and class-booking apps?",
+         "Not for the broadest terms overnight. It can realistically rank for your gym name, your specific neighborhoods, and the class and training searches a national app has no reason to target well, which is exactly where a local gym can win."),
+        ("How is this different from paying a class-booking marketplace?",
+         "A marketplace shows a prospect ten gyms at once and takes a cut of a sign-up that could have been yours directly, and it stops the day you stop paying. A website you own captures members that are yours alone, with no cut taken, and keeps working long after it is built."),
+        ("Do I need a page for every class and neighborhood?",
+         "You start with the ones that matter most: your top classes or programs and your core areas. We build those pages first, around what people actually search and what you most want to fill, then expand, rather than spreading thin across everything at once."),
+        ("Most of my new members come from social. Does a website even help?",
+         "Yes, because social is where they first notice you, not where they finally decide. Social catches the eye, but a prospect checks your site, your schedule, and your reviews before they commit to a membership, and that is where a fast, honest, photo-forward page with easy trial booking turns a curious scroll into a walk-in."),
+        ("How long until it starts ranking?",
+         "The local, specific searches can begin moving in a matter of weeks, while the broader terms build more slowly and compound over the months that follow. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+    "related": [
+        ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
+        ("solution-websites-seo.html", "How the website and SEO system works"),
+        ("marketing-for-gyms.html", "Staying visible in your area beyond your site"),
+        ("booking.html", "Book a 15-minute call to see it"),
+        ("contact.html", "Get your free business audit")],
+    "cta_h2_html": "Own the search results for <em>your own neighborhood</em>",
+    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and class-booking apps taking your members, whether you work with us or not. No credit card, never a call center.",
+},
+]
