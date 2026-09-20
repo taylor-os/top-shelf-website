@@ -59,7 +59,7 @@ def _hub_rank(name):
 
 def build_block(service, intro, pages, topic_hub=None):
     """pages = list of (hub_name, anchor, slug), already collected."""
-    qlink = (f'<p class="reveal" style="margin-top:.6rem"><a href="{topic_hub}" style="color:var(--gold)">See the questions {esc(service.lower())} owners ask <span class="arr">&rarr;</span></a></p>'
+    qlink = (f'\n      <p class="reveal" style="margin-top:.6rem"><a href="{topic_hub}" style="color:var(--gold)">See the questions {esc(service.lower())} owners ask <span class="arr">&rarr;</span></a></p>'
              if topic_hub else "")
     by_hub = {}
     for hub, anchor, slug in pages:
@@ -81,8 +81,7 @@ def build_block(service, intro, pages, topic_hub=None):
     <div class="section-head">
       <span class="eyebrow reveal">By Trade</span>
       <h2 class="display display-lg reveal" style="margin-top:1.6rem">{esc(service)} for <em>Every Trade</em></h2>
-      <p class="reveal" style="color:var(--ink-3);max-width:64ch;margin-top:1rem">{esc(intro)}</p>
-      {qlink}
+      <p class="reveal" style="color:var(--ink-3);max-width:64ch;margin-top:1rem">{esc(intro)}</p>{qlink}
     </div>
     <div class="reveal" style="display:flex;flex-wrap:wrap;gap:2.4rem 3rem;margin-top:1.6rem">
 {chr(10).join(cols)}
