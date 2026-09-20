@@ -33,11 +33,14 @@ esc = gc.esc
 # ONLY when its prefix is one of these — this excludes colony pages such as
 # `is-a-crm-worth-it-for-<trade>.html` and `answering-service-cost-for-<trade>.html`.
 MONEY_SERVICES = {
-    "ai-receptionist", "crm", "best-crm", "marketing", "websites-seo",
+    "ai-receptionist", "crm", "marketing", "websites-seo",
     "automation", "online-booking", "review-software", "payments", "memberships", "pos",
 }
+# NOTE: "best-crm" is deliberately NOT a money service — the 3 best-crm-for-*.html pages
+# (landscapers/painters/handyman) are COLONY question pages ("what's the best CRM for X"),
+# so they belong in the colony block, not the money block (else the pillar double-links them).
 # order money links sensibly (falls back to alpha for anything unknown)
-_ORDER = ["ai-receptionist", "crm", "best-crm", "online-booking", "review-software",
+_ORDER = ["ai-receptionist", "crm", "online-booking", "review-software",
           "automation", "websites-seo", "marketing", "payments", "memberships", "pos"]
 
 
