@@ -1,0 +1,43 @@
+"""Comparison page: Top Shelf vs Smith.ai. NAMED-COMPETITOR page, so the competitor
+disclaimer is auto-appended (no implied partnership, endorsement, or affiliation). Honest and
+fair on MODEL, never price: Smith.ai is a specialist virtual receptionist and client-intake
+service that on its own site describes human agents working alongside AI, strong for law firms
+and professional services, and it also offers web chat and outbound follow-up campaigns. Top
+Shelf is an all-in-one, done-for-you platform where the AI receptionist that answers and books
+is ONE part, alongside the website, local SEO, marketing, and CRM follow-up, on one flat bill.
+Rules honored: NO Smith.ai price or dollar figure anywhere; Smith.ai features stated only as its
+own public positioning and hedged; strengths acknowledged, no disparagement; only real Top Shelf
+prices ($299/$899/$2,500/$1,500) and no setup fee; no fabricated Top Shelf stats; no ranking
+promise; for a law firm the AI does intake and booking only, never legal advice. No em/en dashes,
+no "leak" metaphor. File name uses underscores; slug is hyphenated.
+"""
+
+PAGE = {
+    "slug": "smith-ai-alternative",
+    "competitor": "Smith.ai",
+    "h1": "Looking for a Smith.ai Alternative?",
+    "title": "Looking for a Smith.ai Alternative? | Top Shelf Business Solutions",
+    "meta_desc": "Smith.ai is a specialist virtual receptionist and intake service, human agents plus AI. Top Shelf is an all-in-one platform where the AI receptionist is one part, alongside your website, marketing, and CRM follow-up, on one flat bill.",
+    "answer": "Smith.ai is a specialist virtual receptionist and client intake service that answers and qualifies your calls using human agents alongside AI, and it is a strong fit for law firms and professional services. Top Shelf is an all-in-one, done-for-you platform for local small businesses, where an AI receptionist that answers and books is one part of a package that also builds your website and local SEO, runs your marketing, and follows up on every lead through a CRM, all on one flat monthly bill. The question is not who answers the phone better, it is whether you want a specialist for the front desk or one company running the whole front office.",
+    "sections": [
+        {"h2_html": "What Smith.ai <em>does well</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Smith.ai has built its name on one thing and built it deep, answering and qualifying the calls that come in. On its own site it describes a service staffed by trained receptionists working alongside AI, and that human element is a genuine strength on the calls that need it. A real person can read a nervous or upset caller, handle an unusual situation, and follow a detailed intake script the way a trained coordinator would. It is especially well known among law firms and professional services, where careful client intake matters, and it publicly offers more than phone answering, including website chat and outbound follow-up campaigns.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The model is that of a specialist, and that is meant as a compliment. Smith.ai answers, screens, and books, then passes the organized details into the systems you already run, such as your CRM or practice management software. That is exactly what you want when the rest of your front office is handled and the one gap is call coverage and intake. It does mean the website that brings those calls in, and the marketing behind it, are still yours to build and run, on your own or through other vendors, and the tools your leads live in are ones you bring to the relationship rather than ones the service provides.</p>'},
+        {"h2_html": "Where Top Shelf is <em>different</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Top Shelf is not an answering service, it is the whole front office, done for you. The AI receptionist that answers every call day or night and books the job straight onto your calendar is one part of it. The same platform builds your website and local SEO so the calls start coming, runs the marketing that keeps them coming, and hands every captured lead to a CRM that follows up on its own, so a missed call turns into a text back and a quote request turns into a booked job instead of a note nobody returns. You get one company, one login, and one flat monthly bill for the parts that usually arrive from four different vendors.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Because it is built for local small businesses rather than a single department, the pieces are designed to work together. The <a href="solution-ai-phone.html">AI receptionist</a> shares what it hears with the <a href="solution-crm.html">CRM</a>, so follow-up starts the moment a call ends. Top Shelf is upfront that its receptionist is an AI assistant, not a live person, and for a call that genuinely needs a human it routes the caller to you rather than pretending to handle it. Your number, your leads, and your data stay yours, so nothing is locked to us if you ever decide to leave.</p>'},
+        {"h2_html": "Which one <em>fits your business</em>",
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If you already have a website you are happy with, marketing that fills your pipeline, and a CRM your team lives in, and the one thing you need is strong call answering and intake, a dedicated service like Smith.ai is a sound choice, and its human-backed option is worth a look for firms whose calls are often sensitive or complex. If instead you are a local business owner wearing every hat, and you would rather one company build the site, bring in the calls, answer them, and follow up than stitch together a receptionist service, a web designer, a marketer, and a CRM yourself, the all-in-one model is built for exactly that. The honest way to choose is to count how many of those pieces you already have handled. You can see what a full setup costs on our <a href="pricing.html">pricing page</a>, with no setup fee.</p>'}],
+    "bridge_h2": "One flat platform that goes beyond call answering",
+    "bridge_text": "Top Shelf's AI receptionist answers and books every call as part of the Signature plan at $899 a month, flat, and it plugs into the same CRM that follows up on every lead it captures. If you want the calls and the marketing that create them handled too, the fully done-for-you plan is $2,500 a month, an entry plan with your website and local SEO is $299 a month on Essentials, and a one-time custom five-page site is $1,500. There is no setup fee, and your number, your leads, and your data stay yours.",
+    "bridge_slug": "solution-ai-phone",
+    "bridge_label": "See how the AI receptionist works",
+    "faqs": [
+        ("Is Top Shelf an answering service like Smith.ai?",
+         "Not exactly. Smith.ai is a specialist virtual receptionist and intake service, and its own positioning is human agents working alongside AI. Top Shelf is an all-in-one platform for local businesses where an AI receptionist is one part, alongside your website, local SEO, marketing, and a CRM that follows up on every lead, all on one flat bill. If call answering and intake are the only gap you need filled, a dedicated service may fit you better. If you want the whole front office run for you, that is what Top Shelf is built for."),
+        ("Does Top Shelf use real people on calls like Smith.ai's human agents?",
+         "Top Shelf's receptionist is an AI assistant, and we are upfront about that. It answers every call, asks your questions, and books the job onto your calendar, and for a call that needs a real person it routes the caller to you instead of pretending to handle it. Smith.ai publicly offers a human-backed option, which can be the better fit for callers who are often upset or whose situations are complex. If you run a law firm, note that in the Top Shelf model the AI handles intake and appointment booking only, and it never gives legal advice."),
+        ("Can I use Top Shelf if I already have a website?",
+         "Yes. You can start with just the AI receptionist and CRM on the Signature plan at $899 a month and keep the website you have, or move the whole thing over so one company runs it. Either way there is no setup fee, and you keep your number, your leads, and your data."),
+    ],
+    "cta_h2": "See how many calls and leads your setup is <em>missing</em>",
+    "cta_sub": "Get a free audit of where calls go unanswered and leads go cold, whether you work with us or not. No credit card, and no pressure.",
+}
