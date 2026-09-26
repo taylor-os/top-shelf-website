@@ -15,13 +15,12 @@
   ],
   "services": [
     {
-      "name": "Custom Website Design & Hosting",
+      "name": "Custom Website Design",
       "section": "Web Presence & Visibility",
       "keywords": [
         "custom",
         "website",
         "design",
-        "hosting",
         "web",
         "presence",
         "visibility",
@@ -33,7 +32,7 @@
         "legal",
         "auto"
       ],
-      "blurb": "A fast, professional website we design, build, and host for you — one you actually own. We build a clean, mobile-first site tailored to your business and keep it hosted, fast, and secure — no plugins to babysit or tech to wrestle. You own every file; nothing is held hostage. You look like the established, trustworthy choice the moment someone finds you, so more of the people already searching for you actually pick up the phone.",
+      "blurb": "A fast, professional website we design and build for you — one you actually own. We build a clean, mobile-first site tailored to your business and keep it fast and secure — no plugins to babysit or tech to wrestle. You own every file; nothing is held hostage. You look like the established, trustworthy choice the moment someone finds you, so more of the people already searching for you actually pick up the phone.",
       "great_for": "Home services, restaurants, medical/dental, legal, auto, salons"
     },
     {
