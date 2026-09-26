@@ -24,7 +24,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # --- the two copy variants -------------------------------------------------
 AFTER_COMPARISON = (
-    '        <span class="eyebrow">Most Popular &middot; $899/mo</span>\n'
+    '        <span class="eyebrow">Signature Blend &middot; $899/mo</span>\n'
     '        <p class="sig-band-title">One Bill Instead of <em>Six</em></p>\n'
     '        <p class="sig-band-copy">That list is six separate hires. The Signature Blend is all of it '
     'on one team and one invoice &mdash; your website, your CRM, your reviews, your follow-up, and an AI '
@@ -32,7 +32,7 @@ AFTER_COMPARISON = (
 )
 
 AFTER_AUDIT = (
-    '        <span class="eyebrow">Most Popular &middot; $899/mo</span>\n'
+    '        <span class="eyebrow">Signature Blend &middot; $899/mo</span>\n'
     '        <p class="sig-band-title">Where Most Owners <em>Start</em></p>\n'
     '        <p class="sig-band-copy">The audit tells you what&rsquo;s costing you. The Signature Blend '
     'is what closes it &mdash; website, CRM, reviews, follow-up, and an AI receptionist that answers at '
