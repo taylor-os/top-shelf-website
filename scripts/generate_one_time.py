@@ -26,7 +26,6 @@ SITE = "https://www.topshelfsolutions.io"
 SHELL = "industry-retail.html"
 HUB = "one-time-services.html"
 TERMS = "Half up front, half when the job is done."
-REPORT = "A before-and-after report 30 days later: calls, direction requests and where you rank"
 
 ICONS = {
     "search": '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg>',
@@ -40,23 +39,22 @@ ICONS = {
 }
 
 # The same four terms close every job page.
-P_TERMS = ("chart", "Proof at 30 days", "Every job ends with a before-and-after report 30 days later, so you can check "
-           "the work against your own numbers.", ["Calls from your Google listing", "Direction requests", "Where you rank for your main searches"])
+P_TERMS = ("chart", "One price, paid in two halves", TERMS + " There is no plan and nothing to cancel.",
+           ["Half up front", "Half when the job is done", "No contract"])
 P_OWN = ("key", "Yours, in your name", "Everything we build or correct stays in your name, and you keep every login. "
          "There is no plan to cancel and nothing to hand back.", ["Your Google Business Profile", "Your website and domain", "Every login in your hands"])
 
 SERVICES = [
     {
-        "slug": "google-business-profile-fix", "name": "Google listing fix", "price": "$295",
-        "hero": "marketing-hero", "eyebrow": "One-Time Job &middot; $295",
+        "slug": "google-business-profile-fix", "name": "Google listing fix", "price": "$345",
+        "hero": "marketing-hero", "eyebrow": "One-Time Job &middot; $345",
         "h1": "Your Google Listing, <em>Corrected</em>.",
-        "title": "Google Business Profile Fix, $295 One Time",
-        "meta": "A one-time Google Business Profile fix for $295: categories, hours, services, description and attributes corrected. Half up front. No monthly plan.",
+        "title": "Google Business Profile Fix, $345 One Time",
+        "meta": "A one-time Google Business Profile fix for $345: categories, hours, services, description and attributes corrected. Half up front. No monthly plan.",
         "sub": "Most local searches end on a Google listing, not a website. If yours has the wrong category, missing hours or a blank description, people looking for what you sell are shown someone else. This job corrects the listing, once, for one price.",
         "for": ["Your listing shows the wrong category, or only one of them", "Hours, holiday hours or services are missing or out of date",
                 "The description is blank, or reads like someone else wrote it", "The listing was set up once and never touched again"],
-        "gets": ["Your Google listing corrected wherever our audit found a gap", "Categories, hours, services, description and attributes brought up to date",
-                 REPORT],
+        "gets": ["Your Google listing corrected wherever our audit found a gap", "Categories, hours, services, description and attributes brought up to date"],
         "pins": [("search", "Categories and services", "Google decides which searches to show you for largely from your category and the services you list. A wrong or missing one hides you from people looking for exactly what you do.",
                   ["Primary and secondary categories checked", "Every service you sell listed", "Attributes that apply to you turned on"]),
                  ("pin", "Hours and details", "Wrong hours send a customer to a locked door. We bring the hours, holiday hours, links and description in line with how you actually run.",
@@ -65,9 +63,9 @@ SERVICES = [
                   ["Claimed in your name", "We work as a manager, not the owner", "Remove us whenever you like"]),
                  P_TERMS],
         "demo": None,
-        "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $295. There is no plan, no contract and nothing to cancel."),
+        "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $345. There is no plan, no contract and nothing to cancel."),
                  ("How do I pay?", TERMS),
-                 ("Will this put me at the top of the map?", "We do not promise a ranking, because nobody controls Google's results. This job corrects what is wrong on the listing. The report 30 days later shows your calls, direction requests and where you rank, before and after."),
+                 ("Will this put me at the top of the map?", "We do not promise a ranking, because nobody controls Google's results. This job corrects what is wrong on the listing."),
                  ("Who controls the listing afterward?", "You do. The listing stays in your name and you keep every login. We work as a manager on the profile and you can remove us whenever you like.")],
         "related": ["map-pack-push", "review-reply-catch-up", "get-found-package"],
         "reads": [("not-showing-on-google-maps.html", "Why you are not showing on Google Maps"), ("why-am-i-not-on-google.html", "Why am I not on Google?")],
@@ -83,7 +81,7 @@ SERVICES = [
         "for": ["You have no website, or only a Facebook page", "Your Google listing was set up once and never touched",
                 "Customers tell you they could not find your hours or your address", "You want one job and one price, not a monthly plan"],
         "gets": ["Your Google listing corrected wherever our audit found a gap", "A one-page website of your own, built by us", "A logo designed for you, if you need one",
-                 "A review card that takes a customer straight to your Google review form", REPORT],
+                 "A review card that takes a customer straight to your Google review form"],
         "pins": [("pin", "Your Google listing", "The listing is corrected first, because it is what most people see: categories, hours, services, description and attributes.",
                   ["Categories and services", "Hours and details", "Claimed in your name"]),
                  ("page", "A website of your own", "One page with what a customer needs to choose you: what you do, where you are, when you are open, and how to reach you. It is yours, in your name.",
@@ -138,7 +136,7 @@ SERVICES = [
         "sub": "Before anyone calls, they look you up. We build you a new 5-page website from the ground up, publish it, and it is yours to keep. We replace a site rather than patch it, so every page is built to be found. You pay once, and you do not need a monthly plan to buy it.",
         "for": ["Your current site is slow, dated or hard to use on a phone", "One page is trying to cover everything you offer",
                 "A past vendor built your site and you are not sure you own it", "You would rather buy a website than rent one"],
-        "gets": ["A custom 5-page website, built new by us and published", "Basic on-page SEO built in, so it can be found", "A logo designed for you, if you need one", "Yours to keep, in your name", REPORT],
+        "gets": ["A custom 5-page website, built new by us and published", "Basic on-page SEO built in, so it can be found", "A logo designed for you, if you need one", "Yours to keep, in your name"],
         "pins": [("page", "Five pages, built for you", "A home page and the pages your customers look for, written and designed around your business, not poured into a template.",
                   ["Designed around your business", "A logo designed for you, if you need one", "Built and published for you"]),
                  ("phone", "Made for a phone", "Most people will see it on a phone first. The number can be tapped, the pages load quickly, and the next step is always on screen.",
@@ -156,15 +154,15 @@ SERVICES = [
         "solution": ("solution-websites-seo.html", "Websites &amp; SEO"),
     },
     {
-        "slug": "one-page-website", "name": "One-page website", "price": "$395",
-        "hero": "websites-seo-hero", "eyebrow": "One-Time Job &middot; $395",
+        "slug": "one-page-website", "name": "One-page website", "price": "$495",
+        "hero": "websites-seo-hero", "eyebrow": "One-Time Job &middot; $495",
         "h1": "One Page. <em>Yours</em>. Done.",
-        "title": "One-Page Website, $395 One Time",
-        "meta": "A one-page website of your own for $395 one time: what you do, where you are, when you are open and how to reach you. Yours to keep. No monthly plan required.",
+        "title": "One-Page Website, $495 One Time",
+        "meta": "A one-page website of your own for $495 one time: what you do, where you are, when you are open and how to reach you. Yours to keep. No monthly plan required.",
         "sub": "Not every business needs five pages. If a customer mainly wants to know what you do, where you are, when you are open and how to reach you, one good page covers it, and it is yours.",
         "for": ["Your only web presence is a Facebook page or a brokerage profile", "You are a one-person business and want a site in your own name",
                 "Customers ask for your hours and address because they could not find them", "You want something small and finished, not a project"],
-        "gets": ["A one-page website of your own, built by us", "What you do, where you are, when you are open and how to reach you", "A logo designed for you, if you need one", "Yours to keep, in your name", REPORT],
+        "gets": ["A one-page website of your own, built by us", "What you do, where you are, when you are open and how to reach you", "A logo designed for you, if you need one", "Yours to keep, in your name"],
         "pins": [("page", "One clear page", "Everything a customer needs to choose you, in the order they look for it, without a menu to dig through.",
                   ["What you do", "Where you are and when you are open", "How to reach you"]),
                  ("phone", "Made for a phone", "The page is built for a phone first, with a number that can be tapped and directions one tap away.",
@@ -173,9 +171,9 @@ SERVICES = [
                   ["Matches your Google listing", "A proper page title and description", "Business details Google can read"]),
                  P_OWN],
         "demo": ("field", "field-and-fawn", "a demo site we built for a home and lifestyle shop"),
-        "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $395, with no plan and no contract."),
+        "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $495, with no plan and no contract."),
                  ("How do I pay?", TERMS),
-                 ("Can it grow later?", "Yes. On a site we built, an extra page for a city or a service is $125. If you know you need several pages from the start, the custom 5-page website is the better buy."),
+                 ("Can it grow later?", "Yes. On a site we built, an extra page for a city or a service is $275. If you know you need several pages from the start, the custom 5-page website is the better buy."),
                  ("Who owns it?", "You do. The website and the domain are in your name and you keep every login.")],
         "related": ["get-found-package", "custom-5-page-website", "google-business-profile-fix"],
         "reads": [("not-showing-up-on-google.html", "Not showing up on Google"), ("losing-jobs-to-better-websites.html", "Losing jobs to better websites")],
@@ -190,7 +188,7 @@ SERVICES = [
         "sub": "A lot of owners are not sure who actually holds their domain or their Google listing. If the answer is a marketing company, past or current, you cannot leave without losing them. This job moves your domain and your listing into your own name, and your website too where the vendor's system lets it leave.",
         "for": ["A marketing company registered your domain and you never got the login", "Your Google listing is managed by someone you no longer work with",
                 "You want to switch vendors and are afraid of losing your website", "You are not sure who holds what, and want to know"],
-        "gets": ["Your domain and Google listing moved into your own name", "Your website moved too, where the vendor's system lets it leave", "Every login in your hands", REPORT],
+        "gets": ["Your domain and Google listing moved into your own name", "Your website moved too, where the vendor's system lets it leave", "Every login in your hands"],
         "pins": [("key", "Your domain", "The domain is the address your customers type and the one printed on your trucks and cards. It should be registered to you.",
                   ["Registered in your name", "The login in your hands", "Nothing held by a vendor"]),
                  ("page", "Your website", "Where the vendor's system lets the site leave, it moves with you. Some builders will not release a site, and we tell you that before you pay.",
@@ -216,7 +214,7 @@ SERVICES = [
         "sub": "A row of reviews with no reply tells the next customer nobody is listening. This job writes a reply to every unanswered review, and nothing is posted until you have read it and approved it.",
         "for": ["You have reviews going back months or years with no reply", "You mean to answer them and never get to it",
                 "You are not sure how to answer the bad ones", "You want it caught up once, then to keep up yourself"],
-        "gets": ["A written reply to every unanswered review", "Each reply approved by you before it is posted", REPORT],
+        "gets": ["A written reply to every unanswered review", "Each reply approved by you before it is posted"],
         "pins": [("star", "Every unanswered review", "Good ones and bad ones. Each gets a reply written for that review, not a line pasted under all of them.",
                   ["Written for each review", "The difficult ones included", "In your voice"]),
                  ("key", "You approve each one", "Nothing is posted until you have read it. You can change a word or strike a reply altogether.",
@@ -228,7 +226,7 @@ SERVICES = [
         "faqs": [("Will you post anything without asking me?", "No. Every reply is approved by you before it is posted."),
                  ("How do I pay?", TERMS),
                  ("Do I need a monthly plan?", "No. It is a one-time job for $150, with no plan and no contract."),
-                 ("Does this get me more reviews?", "No, it answers the ones you have. A review card that takes a customer straight to your Google review form is $75.")],
+                 ("Does this get me more reviews?", "No, it answers the ones you have. A review card that takes a customer straight to your Google review form is $95.")],
         "related": ["google-business-profile-fix", "map-pack-push", "get-found-package"],
         "reads": [("how-do-i-get-more-reviews.html", "How do I get more reviews?"), ("solution-reviews.html", "Reviews &amp; Reputation")],
         "solution": ("solution-reviews.html", "Reviews &amp; Reputation"),
@@ -236,8 +234,8 @@ SERVICES = [
 ]
 BY_SLUG = {s["slug"]: s for s in SERVICES}
 # Small jobs with no page of their own; listed on the hub.
-SMALL = [("Extra page", "$125 per page", "One new page for a city or a service, on a site we built."),
-         ("Review card", "$75", "A card or counter stand that takes a customer straight to your Google review form.")]
+SMALL = [("Extra page", "$275 per page", "One new page for a city or a service, on a site we built."),
+         ("Review card", "$95", "A card or counter stand that takes a customer straight to your Google review form.")]
 
 PAGE_CSS = """<style>
 .ot-terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2.2rem}
@@ -377,7 +375,7 @@ def service_page(s, assets, nav, foot, x_icon):
     ]
     out = head(s["title"], s["meta"], slug, schema, assets) + nav
     out += hero(s["eyebrow"], s["h1"], s["sub"], s["hero"], ("contact.html", "Get Your Free Audit"), ("#covers", "See What It Covers"))
-    terms = [(s["price"], "one time"), ("Half up front", "half when the job is done"), ("No contract", "nothing monthly"), ("30-day report", "before and after")]
+    terms = [(s["price"], "one time"), ("Half up front", "half when the job is done"), ("No contract", "nothing monthly"), ("Yours to keep", "in your name")]
     out += ('<section class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">One job, one price</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">%s, <em>%s</em> one time</h2>\n'
             '    </div>\n    <div class="ot-terms reveal">%s</div>\n    <div class="ot-two">\n'
@@ -400,8 +398,8 @@ def service_page(s, assets, nav, foot, x_icon):
             '      <span class="eyebrow reveal">How it works</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Three steps, <em>no plan</em></h2>\n    </div>\n'
             '    <div class="ot-cards">\n'
             '      <div class="ot-card reveal"><span class="ot-price">01</span><h3>The free audit</h3><p>We look at your Google listing and your website and show you what is wrong, with your own numbers. You see what the job covers before you pay anything.</p></div>\n'
-            '      <div class="ot-card reveal"><span class="ot-price">02</span><h3>The job</h3><p>%s Everything we build or correct stays in your name, and you keep every login.</p></div>\n'
-            '      <div class="ot-card reveal"><span class="ot-price">03</span><h3>The report</h3><p>Thirty days later you get a before-and-after: calls, direction requests and where you rank. What you do next is up to you.</p></div>\n'
+            '      <div class="ot-card reveal"><span class="ot-price">02</span><h3>The job</h3><p>%s We work on it until it is done.</p></div>\n'
+            '      <div class="ot-card reveal"><span class="ot-price">03</span><h3>Yours to keep</h3><p>Everything we build or correct stays in your name, and you keep every login. What you do next is up to you.</p></div>\n'
             '    </div>\n  </div>\n</section>\n\n' % e(TERMS))
     out += ('<section class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">Questions</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Owners Ask <em>First</em></h2>\n    </div>\n'
@@ -432,8 +430,8 @@ def hub_page(assets, nav, foot, x_icon):
     ]
     pins = [("key", "You buy it once", "A website or a fix is a single job with a single price. You pay for it once and you own what was built.",
              ["One price per job", "No plan and no contract", "Yours to keep"]),
-            ("chart", "Half up front", TERMS + " Thirty days after, you get a before-and-after report.",
-             ["Half up front", "Half when the job is done", "A report at 30 days"]),
+            ("chart", "Half up front", TERMS + " There is no plan and nothing to cancel.",
+             ["Half up front", "Half when the job is done", "No contract"]),
             ("pin", "Start with the audit", "The free audit shows what is wrong and, where one job would close the gap, names it, so you are not choosing from a menu blind.",
              ["Free, and yours to keep", "Your own numbers", "One job named, not a menu"]),
             ("page", "A plan is optional", "A monthly plan keeps the website and the listing working after the job is done. Plenty of owners buy the job and stop there.",
@@ -447,7 +445,7 @@ def hub_page(assets, nav, foot, x_icon):
     cards += "".join('      <div class="ot-card reveal"><span class="ot-price">%s</span><h3>%s</h3><p>%s</p></div>\n' % (p, e(n), e(d)) for n, p, d in SMALL)
     out += ('<section id="jobs" class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">The jobs</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">One Job, <em>One Price</em></h2>\n'
-            '      <p class="reveal">Every job is paid half up front and half when it is done, and every one ends with a before-and-after report 30 days later.</p>\n    </div>\n'
+            '      <p class="reveal">Every job is paid half up front and half when it is done.</p>\n    </div>\n'
             '    <div class="ot-cards">\n%s    </div>\n  </div>\n</section>\n\n' % cards)
     out += ('<section id="covers" class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">How it works</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Tap a <em>+</em> for the detail</h2>\n    </div>\n'

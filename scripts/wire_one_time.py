@@ -25,12 +25,12 @@ def a(slug, text):
     return '<a href="%s.html">%s</a>' % (slug, text)
 
 
-SITE_JOBS = ("Buying the site on its own? The %s is $1,500 one time and the %s is $395, each built new by us with a logo if you need one. If a past vendor holds your site or domain, %s moves them into your name for $495. %s."
+SITE_JOBS = ("Buying the site on its own? The %s is $1,500 one time and the %s is $495, each built new by us with a logo if you need one. If a past vendor holds your site or domain, %s moves them into your name for $495. %s."
              % (a("custom-5-page-website", "custom 5-page website"), a("one-page-website", "one-page website"),
                 a("take-back-your-website", "take back what's yours"), HUB))
-MAP_JOBS = ("Want it fixed once, for one price? The %s is $295 and the %s is $1,250, both one time. No website at all? %s covers the listing and a one-page site for $795. %s."
+MAP_JOBS = ("Want it fixed once, for one price? The %s is $345 and the %s is $1,250, both one time. No website at all? %s covers the listing and a one-page site for $795. %s."
             % (a("google-business-profile-fix", "Google listing fix"), a("map-pack-push", "map-pack push"), a("get-found-package", "Get Found"), HUB))
-REVIEW_JOBS = ("Behind on replies? The %s answers every unanswered review for $150 one time, each reply approved by you first. The %s corrects the listing itself for $295. %s."
+REVIEW_JOBS = ("Behind on replies? The %s answers every unanswered review for $150 one time, each reply approved by you first. The %s corrects the listing itself for $345. %s."
                % (a("review-reply-catch-up", "review reply catch-up"), a("google-business-profile-fix", "Google listing fix"), HUB))
 TAKE_BACK = ("Not sure who holds your domain or your Google listing? %s moves your website, domain and listing into your own name for $495 one time. %s."
              % (a("take-back-your-website", "Take back what's yours"), HUB))
