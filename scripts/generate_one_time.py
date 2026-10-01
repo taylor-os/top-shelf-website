@@ -8,7 +8,7 @@ where the free audit's recommendation lands.
 Prices, what each job includes and the terms mirror `topshelf/offer.py` in the
 topshelf-seo-audit skill (ONE_TIME, ONE_TIME_TERMS). Change a price there first, then here.
 Nothing on these pages may promise a ranking, mention a monthly price, say how to host, or
-offer photography (owner, 2026-10-02: "we are not photographers"). A website job is always a
+offer photography (owner, 2026-10-01: "we are not photographers"). A website job is always a
 full replacement built by us, and a logo can be included in it.
 
 The shell (head, nav, footer, the "+" pins and the side drawer) is lifted from
@@ -110,19 +110,19 @@ SERVICES = [
         "for": ["Your reviews are strong and you still sit outside the top three", "You show up in your own town and vanish in the next one over",
                 "Your details differ from one directory to the next", "You want to see the before and the after for yourself"],
         "gets": ["Your Google listing corrected wherever our audit found a gap", "Corrections submitted to your listings on the other directories",
-                 "Question-and-answer work on the listing, and a location page on your site", "Where you rank, checked before we start, at 30 days and at 60 days",
+                 "Common questions answered on the listing, and a location page if we built your site", "Where you rank, checked before we start, at 30 days and at 60 days",
                  "A list of work, not a ranking promise"],
         "pins": [("pin", "The listing itself", "Everything in the Google listing fix is part of this job: categories, hours, services, description and attributes.",
                   ["Categories and services", "Hours and details", "Claimed in your name"]),
                  ("search", "Other directories", "Your name, address and phone should match everywhere they appear. We find where they do not and submit the corrections.",
                   ["Mismatched details found", "Corrections submitted for you", "A list of what was sent, and where"]),
-                 ("page", "A location page", "A page on your website for the area you want to be found in, plus question-and-answer work on the listing.",
-                  ["One location page on your site", "Common questions answered on the listing", "Written for your customers"]),
+                 ("page", "Questions and a location page", "The common questions people ask about a business like yours, answered on your listing. If we built your site, it also gets a page for the area you want to be found in.",
+                  ["Common questions answered on the listing", "A location page, on a site we built", "Written for your customers"]),
                  ("chart", "Checked three times", "We record where you rank before we start, then again at 30 days and at 60 days, so you can see what moved.",
                   ["Before we start", "At 30 days", "At 60 days"])],
         "demo": None,
         "faqs": [("Do you promise a top-three ranking?", "No. Nobody controls Google's results, and the result on a phone also depends on where the person searching is standing. This is a fixed list of work, with your position checked before we start, at 30 days and at 60 days."),
-                 ("How is this different from the Google listing fix?", "The listing fix corrects the listing. The map-pack push includes that and adds the other directories, question-and-answer work, a location page on your site and the three rank checks. You buy one or the other, not both."),
+                 ("How is this different from the Google listing fix?", "The listing fix corrects the listing. The map-pack push includes that and adds the other directories, answers to common questions on the listing, a location page if we built your site, and the three rank checks. You buy one or the other, not both."),
                  ("How do I pay?", TERMS),
                  ("Do I need a monthly plan?", "No. It is a one-time job for $1,250, with no plan and no contract.")],
         "related": ["google-business-profile-fix", "custom-5-page-website", "review-reply-catch-up"],
@@ -175,7 +175,7 @@ SERVICES = [
         "demo": ("field", "field-and-fawn", "a demo site we built for a home and lifestyle shop"),
         "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $395, with no plan and no contract."),
                  ("How do I pay?", TERMS),
-                 ("Can it grow later?", "Yes. An extra page for a city, a service or a practice area is $125 per page. If you know you need several pages from the start, the custom 5-page website is the better buy."),
+                 ("Can it grow later?", "Yes. On a site we built, an extra page for a city or a service is $125. If you know you need several pages from the start, the custom 5-page website is the better buy."),
                  ("Who owns it?", "You do. The website and the domain are in your name and you keep every login.")],
         "related": ["get-found-package", "custom-5-page-website", "google-business-profile-fix"],
         "reads": [("not-showing-up-on-google.html", "Not showing up on Google"), ("losing-jobs-to-better-websites.html", "Losing jobs to better websites")],
@@ -236,7 +236,7 @@ SERVICES = [
 ]
 BY_SLUG = {s["slug"]: s for s in SERVICES}
 # Small jobs with no page of their own; listed on the hub.
-SMALL = [("Extra page", "$125 per page", "One new page for a city, a service or a practice area, on a site we built."),
+SMALL = [("Extra page", "$125 per page", "One new page for a city or a service, on a site we built."),
          ("Review card", "$75", "A card or counter stand that takes a customer straight to your Google review form.")]
 
 PAGE_CSS = """<style>
