@@ -104,7 +104,7 @@ SERVICES = [
         "h1": "Good Reviews, Still Not in the <em>Top Three</em>?",
         "title": "Map-Pack Push: A One-Time Google Maps Work List, $1,250",
         "meta": "A fixed list of work on your Google listing, other directories and your site, with rank checks before, at 30 and at 60 days. $1,250 one time. A list of work, not a ranking promise.",
-        "sub": "Google shows three businesses on the map before anyone has to tap for more. If you have the reviews and still sit below that line, this is a fixed list of work aimed at the things that hold a listing down, with your position checked before and after.",
+        "sub": "Google shows three businesses on the map before anyone has to tap for more. If you have the reviews and still sit below that line, this is a fixed list of work aimed at the things that hold a listing down, with your position checked before we start, at 30 days and at 60 days.",
         "for": ["Your reviews are strong and you still sit outside the top three", "You show up in your own town and vanish in the next one over",
                 "Your details differ from one directory to the next", "You want to see the before and the after for yourself"],
         "gets": ["Your Google listing corrected wherever our audit found a gap", "Corrections submitted to your listings on the other directories",
