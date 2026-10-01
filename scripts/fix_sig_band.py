@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fix the Signature Blend band.
+Fix the Signature plan band.
 
 It was dropped onto 21 pages with one piece of copy — "Everything Above,
 Working Together" — regardless of what was actually above it. On most pages
@@ -24,17 +24,17 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # --- the two copy variants -------------------------------------------------
 AFTER_COMPARISON = (
-    '        <span class="eyebrow">Signature Blend &middot; $899/mo</span>\n'
+    '        <span class="eyebrow">Signature plan &middot; $899/mo</span>\n'
     '        <p class="sig-band-title">One Bill Instead of <em>Six</em></p>\n'
-    '        <p class="sig-band-copy">That list is six separate hires. The Signature Blend is all of it '
+    '        <p class="sig-band-copy">That list is six separate hires. The Signature plan is all of it '
     'on one team and one invoice &mdash; your website, your CRM, your reviews, your follow-up, and an AI '
     'receptionist that answers at midnight &mdash; with your new website included.</p>\n'
 )
 
 AFTER_AUDIT = (
-    '        <span class="eyebrow">Signature Blend &middot; $899/mo</span>\n'
+    '        <span class="eyebrow">Signature plan &middot; $899/mo</span>\n'
     '        <p class="sig-band-title">Where Most Owners <em>Start</em></p>\n'
-    '        <p class="sig-band-copy">The audit tells you what&rsquo;s costing you. The Signature Blend '
+    '        <p class="sig-band-copy">The audit tells you what&rsquo;s costing you. The Signature plan '
     'is what closes it &mdash; website, CRM, reviews, follow-up, and an AI receptionist that answers at '
     'midnight, on one team and one invoice, with your new website included.</p>\n'
 )
@@ -53,7 +53,7 @@ def band_html(copy):
         '      <div>\n'
         f'{copy}'
         '      </div>\n'
-        '      <a href="pricing.html#signature" class="btn btn-gold sig-band-cta">See the Signature Blend '
+        '      <a href="pricing.html#signature" class="btn btn-gold sig-band-cta">See the Signature plan '
         '<span class="arr">&rarr;</span></a>\n'
         '    </div>\n'
         '  </div>\n'

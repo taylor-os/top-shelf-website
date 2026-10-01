@@ -11,7 +11,7 @@ specs: no invented stats or clients; hedge instead of overpromise; "find the gap
 as a money metaphor. No em/en dashes anywhere.
 
 Prices are limited to Top Shelf's real ladder, and cited only where true. Per pricing.html
-(source of truth): Essentials Blend is $299/mo and includes the website; Signature Blend is
+(source of truth): Essentials plan is $299/mo and includes the website; Signature plan is
 $899/mo and is where the CRM and the AI receptionist actually live; a standalone 5-page site is
 $1,500 one-time. (The $2,500 figure is the Platinum monthly plan, not a website build price, so
 the website-cost page uses the real $1,500 one-time / free-on-plan-from-$299 framing.)
