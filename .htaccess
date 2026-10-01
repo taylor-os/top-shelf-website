@@ -58,3 +58,9 @@ Options -Indexes
 RedirectMatch 404 ^/docs(/|$)
 RedirectMatch 404 ^/.+\.(md)$
 RedirectMatch 404 ^/demo/_archive(/|$)
+
+# Two one-time job pages were retired a day after launch (owner, 2026-10-02): a website
+# job is always a full replacement, and we do not sell photography. This host never
+# deletes files on deploy, so send them to the hub.
+Redirect 301 /website-tune-up.html /custom-5-page-website.html
+Redirect 301 /business-photo-refresh.html /one-time-services.html
