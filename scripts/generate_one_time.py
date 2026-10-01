@@ -186,15 +186,15 @@ SERVICES = [
         "hero": "crm-hero", "eyebrow": "One-Time Job &middot; $495",
         "h1": "Your Website. Your Domain. <em>Your Name</em>.",
         "title": "Take Back Your Website, Domain and Google Listing, $495 One Time",
-        "meta": "Your website, domain and Google listing moved out of a past vendor's hands and into your own name, with every login, for $495 one time. No monthly plan.",
-        "sub": "A lot of owners are not sure who actually holds their domain or their Google listing. If the answer is a marketing company, you cannot leave without losing them. This job moves your website, domain and listing into your own name.",
+        "meta": "Your domain and Google listing moved out of a past or current vendor's hands and into your own name, and your website too where it can be moved, for $495 one time. No monthly plan.",
+        "sub": "A lot of owners are not sure who actually holds their domain or their Google listing. If the answer is a marketing company, past or current, you cannot leave without losing them. This job moves your domain and your listing into your own name, and your website too where the vendor's system lets it leave.",
         "for": ["A marketing company registered your domain and you never got the login", "Your Google listing is managed by someone you no longer work with",
                 "You want to switch vendors and are afraid of losing your website", "You are not sure who holds what, and want to know"],
-        "gets": ["Your website, domain and Google listing moved into your own name", "Every login in your hands", REPORT],
+        "gets": ["Your domain and Google listing moved into your own name", "Your website moved too, where the vendor's system lets it leave", "Every login in your hands", REPORT],
         "pins": [("key", "Your domain", "The domain is the address your customers type and the one printed on your trucks and cards. It should be registered to you.",
                   ["Registered in your name", "The login in your hands", "Nothing held by a vendor"]),
-                 ("page", "Your website", "The site itself moves with you, so leaving a vendor does not mean starting over.",
-                  ["The site moved with you", "In your name", "Every login handed over"]),
+                 ("page", "Your website", "Where the vendor's system lets the site leave, it moves with you. Some builders will not release a site, and we tell you that before you pay.",
+                  ["Moved with you where it can be", "You are told first if it cannot", "Every login handed over"]),
                  ("pin", "Your Google listing", "The listing carries your reviews. Ownership of it should sit with you, with anyone else added only as a manager.",
                   ["You as the owner", "Your reviews stay with you", "Old managers removed"]),
                  P_OWN],
@@ -358,7 +358,7 @@ def faq_html(faqs):
 def cta_block():
     return ('<section class="cta rule-top">\n  <div class="container">\n    <img src="assets/logo-mark.png?v=20260804b" alt="" class="cta-mark reveal">\n'
             '    <span class="eyebrow reveal">Free. No Obligation. No Pressure.</span>\n    <h2 class="cta-title reveal">Start With the<br><em>Free Audit</em></h2>\n'
-            '    <p class="cta-sub reveal">The audit shows you what is wrong with your Google listing and your website, with your own numbers, and names the one job we would start with. It costs nothing, and it is yours whether you work with us or not.</p>\n'
+            '    <p class="cta-sub reveal">The audit shows you what is wrong with your Google listing and your website, with your own numbers. If one job would close the gap, it names it. It costs nothing, and it is yours whether you work with us or not.</p>\n'
             '    <div class="cta-actions reveal">\n      <a href="contact.html" class="btn btn-gold">Get My Free Audit <span class="arr">&rarr;</span></a>\n'
             '      <a href="%s" class="btn btn-line">See Every One-Time Job</a>\n    </div>\n'
             '    <p class="cta-fine reveal">Call or text (469) 833-3033.</p>\n  </div>\n</section>\n\n' % HUB)
@@ -421,7 +421,7 @@ def hub_page(assets, nav, foot, x_icon):
             "Half up front, half when the job is done. No monthly plan required.")
     faqs = [("Do I need a monthly plan to buy one of these?", "No. Each one is a single job with a single price. There is no plan, no contract and nothing to cancel."),
             ("How do I pay?", TERMS),
-            ("Which job should I start with?", "The free audit answers that. It shows what is wrong with your Google listing and your website and names the one job we would start with."),
+            ("Which job should I start with?", "The free audit answers that. It shows what is wrong with your Google listing and your website. If one job would close the gap, it names it, and if nothing needs fixing it says so."),
             ("What is the difference between a one-time job and a monthly plan?", "You buy the build once and you own it. A monthly plan is optional, and what it does is keep your website and your listing working after the job is done.")]
     schema = [
         {"@context": "https://schema.org", "@type": "ItemList", "name": "One-time services", "itemListElement": [
@@ -434,7 +434,7 @@ def hub_page(assets, nav, foot, x_icon):
              ["One price per job", "No plan and no contract", "Yours to keep"]),
             ("chart", "Half up front", TERMS + " Thirty days after, you get a before-and-after report.",
              ["Half up front", "Half when the job is done", "A report at 30 days"]),
-            ("pin", "Start with the audit", "The free audit shows what is wrong and names the one job we would start with, so you are not choosing from a menu blind.",
+            ("pin", "Start with the audit", "The free audit shows what is wrong and, where one job would close the gap, names it, so you are not choosing from a menu blind.",
              ["Free, and yours to keep", "Your own numbers", "One job named, not a menu"]),
             ("page", "A plan is optional", "A monthly plan keeps the website and the listing working after the job is done. Plenty of owners buy the job and stop there.",
              ["Upkeep, not the build", "Month to month", "Only if you want it"])]

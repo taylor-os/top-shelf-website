@@ -32,7 +32,7 @@ TOPICS = [
     "slug": "junk-removal-website-cost",
     "h1": "How Much Does a Junk Removal Website Cost?",
     "title": "How Much Does a Junk Removal Website Cost? | Top Shelf Business Solutions",
-    "meta_desc": "A junk removal website ranges from cheap templates to several thousand for a custom build. What matters is a photo-for-a-quote path, same-day booking, and ranking for junk removal near me. Top Shelf builds yours for $1,500, or free on any plan.",
+    "meta_desc": "A junk removal website ranges from cheap templates to several thousand for a custom build. What matters is a photo-for-a-quote path, same-day booking, and ranking for junk removal near me. Top Shelf builds yours for $1,500, and you own it.",
     "answer": "A junk removal website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more than the price is whether it does the job: a photo-for-a-quote path, an obvious same-day booking option, and ranking for junk removal near me. Top Shelf builds a custom five page site for $1,500 one-time, and you own it.",
     "sections": [
         {"h2_html": "What a junk removal site actually has to <em>do</em>",
