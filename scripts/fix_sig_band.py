@@ -36,7 +36,7 @@ AFTER_AUDIT = (
     '        <p class="sig-band-title">Where Most Owners <em>Start</em></p>\n'
     '        <p class="sig-band-copy">The audit tells you what&rsquo;s costing you. The Signature plan '
     'is what closes it &mdash; website, CRM, reviews, follow-up, and an AI receptionist that answers at '
-    'midnight, on one team and one invoice, with your new website included.</p>\n'
+    'midnight, on one team and one invoice.</p>\n'
 )
 
 BAND_SECTION = re.compile(
