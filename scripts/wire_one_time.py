@@ -25,8 +25,9 @@ def a(slug, text):
     return '<a href="%s.html">%s</a>' % (slug, text)
 
 
-SITE_JOBS = ("Buying the site on its own? The %s is $1,500 one time, the %s is $395, and a %s of the site you already have is $395. %s."
-             % (a("custom-5-page-website", "custom 5-page website"), a("one-page-website", "one-page website"), a("website-tune-up", "tune-up"), HUB))
+SITE_JOBS = ("Buying the site on its own? The %s is $1,500 one time, the %s is $395, and a %s of the site you already have is $395. If a past vendor holds your site or domain, %s moves them into your name for $495. %s."
+             % (a("custom-5-page-website", "custom 5-page website"), a("one-page-website", "one-page website"), a("website-tune-up", "tune-up"),
+                a("take-back-your-website", "take back what's yours"), HUB))
 MAP_JOBS = ("Want it fixed once, for one price? The %s is $295 and the %s is $1,250, both one time. No website at all? %s covers the listing and a one-page site for $795. %s."
             % (a("google-business-profile-fix", "Google listing fix"), a("map-pack-push", "map-pack push"), a("get-found-package", "Get Found"), HUB))
 REVIEW_JOBS = ("Behind on replies? The %s answers every unanswered review for $150 one time, each reply approved by you first. A %s for the listing is $195. %s."
@@ -41,7 +42,8 @@ for f in glob.glob(os.path.join(ROOT, "*-website-cost.html")) + [os.path.join(RO
     BLOCKS[os.path.basename(f)] = SITE_JOBS
 for f in ("not-showing-on-google-maps.html", "why-am-i-not-on-google.html", "not-showing-up-on-google.html", "solution-marketing.html"):
     BLOCKS[f] = MAP_JOBS
-for f in ("how-do-i-get-more-reviews.html", "solution-reviews.html"):
+for f in ["how-do-i-get-more-reviews.html", "solution-reviews.html"] + [os.path.basename(x) for pat in (
+        "get-more-*-reviews.html", "review-software-for-*.html", "how-to-get-*-reviews.html") for x in glob.glob(os.path.join(ROOT, pat))]:
     BLOCKS[f] = REVIEW_JOBS
 for f in ("switching-from-hibu-thryv.html", "thryv-alternative.html"):
     BLOCKS[f] = TAKE_BACK
@@ -73,6 +75,8 @@ def main():
             i = s.find('<section class="cta')
             if i == -1:
                 i = s.find('<footer class="footer">')
+            if i == -1:
+                continue                      # no safe place to put it; leave the page alone
             s = s[:i] + block(BLOCKS[name]).replace("\n", nl) + s[i:]
             blocks += 1
         if name == "pricing.html" and "custom-5-page-website.html" not in s:

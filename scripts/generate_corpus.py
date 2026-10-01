@@ -327,3 +327,9 @@ if __name__ == "__main__":
         out = f"{spec['slug']}.html"
         open(out, "w", encoding="utf-8", newline="").write(build_page(spec, shell))
         print(f"wrote {out}")
+
+# Regenerating pages drops the one-time service links (footer link and link blocks);
+# put them back every time this script is run.
+if __name__ == "__main__":
+    import wire_one_time
+    wire_one_time.main()

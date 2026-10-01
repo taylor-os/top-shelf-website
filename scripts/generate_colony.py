@@ -163,3 +163,9 @@ if __name__ == "__main__":
         print(f"wrote {len(topics)} colony pages")
     else:
         print("no colony_specs_*.py found yet")
+
+# Regenerating pages drops the one-time service links (footer link and link blocks);
+# put them back every time this script is run.
+if __name__ == "__main__":
+    import wire_one_time
+    wire_one_time.main()

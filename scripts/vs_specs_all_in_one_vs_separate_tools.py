@@ -27,7 +27,7 @@ PAGE = {
         ("Is an all-in-one worse than best-of-breed tools?",
          "It can be shallower in any single category than a specialist tool built only for that job. What it wins on is connection and follow-through: the pieces hand off to each other so nothing slips through the gaps, on one bill. For a busy owner without time to run several tools, that trade usually comes out ahead."),
         ("What does Top Shelf's all-in-one cost?",
-         "Essentials is $299 a month for the website, local SEO, online booking, and reviews. The Signature plan is $899 a month and adds the AI receptionist and CRM. A fully done-for-you plan is $2,500 a month, or a one-time custom site is $1,500. There is no setup fee."),
+         "Essentials is $299 a month for website upkeep, local SEO, online booking, and reviews. The Signature plan is $899 a month and adds the AI receptionist and CRM. A fully done-for-you plan is $2,500 a month, or a one-time custom site is $1,500. There is no setup fee."),
         ("If I move to one platform, do I lose my data later?",
          "Not with Top Shelf. Your phone number, your customer list, and your leads stay yours and are exportable any time, so consolidating onto one system does not lock your data away if you ever decide to leave."),
     ],

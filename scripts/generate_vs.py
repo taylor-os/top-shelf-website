@@ -296,3 +296,9 @@ if __name__ == "__main__":
         print("wrote alternatives.html (hub)")
     print(f"\nwrote {built} vs page(s); {len(failed)} failed: {failed}")
     sys.exit(1 if failed else 0)
+
+# Regenerating pages drops the one-time service links (footer link and link blocks);
+# put them back every time this script is run.
+if __name__ == "__main__":
+    import wire_one_time
+    wire_one_time.main()

@@ -32,7 +32,7 @@ PAGE = {
         ("Can Top Shelf answer my calls and follow up on my leads?",
          "Yes. The Signature plan includes an AI receptionist that answers around the clock and books the job, plus a CRM that follows up on every lead automatically. Answering inbound calls is a front-office job rather than what field-service management software is built to do, so check any tool's site for its current features."),
         ("What does Top Shelf cost, and is there a setup fee?",
-         "Essentials is $299 a month for your website, local SEO, online booking, and reviews. Signature is $899 a month and adds the AI receptionist and the CRM. Fully done-for-you is $2,500 a month, or you can get a one-time custom five-page site for $1,500. There is no setup fee, and you always own your number, your leads, and your data."),
+         "Essentials is $299 a month for website upkeep, local SEO, online booking, and reviews. Signature is $899 a month and adds the AI receptionist and the CRM. Fully done-for-you is $2,500 a month, or you can get a one-time custom five-page site for $1,500. There is no setup fee, and you always own your number, your leads, and your data."),
     ],
     "cta_h2": "See where jobs are slipping <em>before they book</em>",
     "cta_sub": "Get a free audit of where calls and leads are going cold in your business, whether you work with us or not. No credit card, no obligation.",

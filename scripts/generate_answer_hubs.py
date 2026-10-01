@@ -231,3 +231,9 @@ if __name__ == "__main__":
     missing = [r["slug"] for r in rows if r["slug"] not in reach]
     assert not missing, f"colony pages NOT reachable from answer hubs: {missing[:10]} ({len(missing)})"
     print(f"selfcheck OK: all {len(rows)} colony pages reachable via answers.html + 4 topic hubs")
+
+# Regenerating pages drops the one-time service links (footer link and link blocks);
+# put them back every time this script is run.
+if __name__ == "__main__":
+    import wire_one_time
+    wire_one_time.main()

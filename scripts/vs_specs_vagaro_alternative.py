@@ -25,7 +25,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits your business</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If you already have a full book and you mainly want reliable software to schedule and check out the clients you have, Vagaro or a booking platform like it is a reasonable choice, and some owners are happy running their own tools. If your real problem is the opposite, being hard to find online, missing calls while you work, thin reviews, and no time to market, then an all-in-one that answers the phone, gets you found, and handles the follow-up will usually do more for your calendar than a booking app alone. Plenty of businesses even keep the booking tool they like and add Top Shelf for the website, phone, reviews, and marketing on top. The honest way to decide is to look at where clients are actually slipping away, which is exactly what a free audit shows you, and you can see the full package on the <a href="pricing.html">pricing</a> page.</p>'}],
     "bridge_h2": "One managed platform that books, answers, and markets for you",
-    "bridge_text": "Top Shelf starts at $299 a month for a managed website and local SEO, and the Signature plan at $899 a month adds the AI receptionist and CRM that answer and follow up on every call and lead, with online booking included throughout. There is no setup fee, one bill covers all of it, and your phone number, your leads, and your data stay yours.",
+    "bridge_text": "Top Shelf starts at $299 a month for website upkeep and local SEO, and the Signature plan at $899 a month adds the AI receptionist and CRM that answer and follow up on every call and lead, with online booking included throughout. There is no setup fee, one bill covers all of it, and your phone number, your leads, and your data stay yours.",
     "bridge_slug": "solution-booking",
     "bridge_label": "See how online booking works",
     "faqs": [
@@ -34,7 +34,7 @@ PAGE = {
         ("Can I keep the booking software I already use?",
          "Yes. Some businesses keep the booking tool they like and add Top Shelf on top for the website, the phone answering, review generation, and marketing. You are not forced to rip out what already works for you, and your number and client data always stay yours."),
         ("What does Top Shelf cost, and how is it billed?",
-         "Top Shelf is a flat monthly price with no setup fee: $299 a month for a managed website and local SEO, and $899 a month for the Signature plan that adds the AI receptionist and CRM. A fully done-for-you plan is $2,500 a month, and a one-time custom five-page site is $1,500. It is one bill for the whole managed service, so there is no per-call meter and no stack of separate tools to reconcile."),
+         "Top Shelf is a flat monthly price with no setup fee: $299 a month for website upkeep and local SEO, and $899 a month for the Signature plan that adds the AI receptionist and CRM. A fully done-for-you plan is $2,500 a month, and a one-time custom five-page site is $1,500. It is one bill for the whole managed service, so there is no per-call meter and no stack of separate tools to reconcile."),
     ],
     "cta_h2": "See where clients are <em>slipping away</em>",
     "cta_sub": "Get a free audit of how many calls, bookings, and new clients your current setup is missing, whether you work with us or not. No credit card, never a call center.",
