@@ -173,7 +173,7 @@ SERVICES = [
         "demo": ("field", "field-and-fawn", "a demo site we built for a home and lifestyle shop"),
         "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $495, with no plan and no contract."),
                  ("How do I pay?", TERMS),
-                 ("Can it grow later?", "Yes. On a site we built, an extra page for a city or a service is $275. If you know you need several pages from the start, the custom 5-page website is the better buy."),
+                 ("Can it grow later?", "Yes. On a site we built, an extra page for a city or a service is $325. If you know you need several pages from the start, the custom 5-page website is the better buy."),
                  ("Who owns it?", "You do. The website and the domain are in your name and you keep every login.")],
         "related": ["get-found-package", "custom-5-page-website", "google-business-profile-fix"],
         "reads": [("not-showing-up-on-google.html", "Not showing up on Google"), ("losing-jobs-to-better-websites.html", "Losing jobs to better websites")],
@@ -234,7 +234,7 @@ SERVICES = [
 ]
 BY_SLUG = {s["slug"]: s for s in SERVICES}
 # Small jobs with no page of their own; listed on the hub.
-SMALL = [("Extra page", "$275 per page", "One new page for a city or a service, on a site we built."),
+SMALL = [("Extra page", "$325 per page", "One new page for a city or a service, on a site we built."),
          ("Review card", "$95", "A card or counter stand that takes a customer straight to your Google review form.")]
 
 PAGE_CSS = """<style>
