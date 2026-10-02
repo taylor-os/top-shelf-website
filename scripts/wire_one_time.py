@@ -9,6 +9,7 @@ The page generators do not know about these links, so run this after any of them
     topic one of the jobs answers (website cost, not showing on Google, reviews, switching
     vendors, and the three related solution pages)
   - the pricing page's website line linked to the 5-page site
+  - the three Get Found packages on the industry pages, and in the blocks above where one fits
 
 Usage:  python scripts/wire_one_time.py   (from the repo root)
 """
@@ -25,13 +26,28 @@ def a(slug, text):
     return '<a href="%s.html">%s</a>' % (slug, text)
 
 
-SITE_JOBS = ("Buying the site on its own? The %s is $1,500 one time and the %s is $495, each built new by us with a logo if you need one. If a past vendor holds your site or domain, %s moves them into your name for $495. %s."
-             % (a("custom-5-page-website", "custom 5-page website"), a("one-page-website", "one-page website"),
+# The Get Found packages (owner, 2026-10-02). Names and prices mirror generate_one_time.py.
+PLUS = a("get-found-plus", "Get Found Plus")
+LISTING_REVIEWS = a("get-found-listing-reviews", "Get Found: Listing + Reviews")
+GET_FOUND = a("get-found-package", "Get Found")
+
+SITE_JOBS = ("Buying the site on its own? The %s is $1,500 one time and the %s is $495, each built new by us with a logo if you need one. "
+             "Google listing needs work too? %s is the 5-page website, the listing corrected, your reviews answered and a review card for $1,995. "
+             "If a past vendor holds your site or domain, %s moves them into your name for $495. %s."
+             % (a("custom-5-page-website", "custom 5-page website"), a("one-page-website", "one-page website"), PLUS,
                 a("take-back-your-website", "take back what's yours"), HUB))
-MAP_JOBS = ("Want it fixed once, for one price? The %s is $345 and the %s is $1,250, both one time. No website at all? %s covers the listing and a one-page site for $795. %s."
-            % (a("google-business-profile-fix", "Google listing fix"), a("map-pack-push", "map-pack push"), a("get-found-package", "Get Found"), HUB))
-REVIEW_JOBS = ("Behind on replies? The %s answers every unanswered review for $150 one time, each reply approved by you first. The %s corrects the listing itself for $345. %s."
-               % (a("review-reply-catch-up", "review reply catch-up"), a("google-business-profile-fix", "Google listing fix"), HUB))
+MAP_JOBS = ("Want it fixed once, for one price? The %s is $345 and the %s is $1,250, both one time. "
+            "Reviews need answering too? %s is the listing fix, a reply to every unanswered review and a review card for $500. "
+            "No website at all? %s covers the listing and a one-page site for $795. %s."
+            % (a("google-business-profile-fix", "Google listing fix"), a("map-pack-push", "map-pack push"), LISTING_REVIEWS, GET_FOUND, HUB))
+REVIEW_JOBS = ("Behind on replies? The %s answers every unanswered review for $150 one time, each reply approved by you first. The %s corrects the listing itself for $345. "
+               "%s is both of those and a review card for $500. %s."
+               % (a("review-reply-catch-up", "review reply catch-up"), a("google-business-profile-fix", "Google listing fix"), LISTING_REVIEWS, HUB))
+# On the industry pages, which otherwise only sell the monthly plans.
+PACKAGES = ("Not ready for a monthly plan? Start with one job at one price, paid once. With no website, %s is $795. "
+            "With a poor website and a weak Google listing, %s is $1,995 and includes a new 5-page website. "
+            "If your website is fine, %s is $500. %s."
+            % (GET_FOUND, PLUS, LISTING_REVIEWS, HUB))
 TAKE_BACK = ("Not sure who holds your domain or your Google listing? %s moves your website, domain and listing into your own name for $495 one time. %s."
              % (a("take-back-your-website", "Take back what's yours"), HUB))
 
@@ -47,6 +63,8 @@ for f in ["how-do-i-get-more-reviews.html", "solution-reviews.html"] + [os.path.
     BLOCKS[f] = REVIEW_JOBS
 for f in ("switching-from-hibu-thryv.html", "thryv-alternative.html"):
     BLOCKS[f] = TAKE_BACK
+for f in glob.glob(os.path.join(ROOT, "industry-*.html")):
+    BLOCKS[os.path.basename(f)] = PACKAGES
 
 FOOT_OLD = '<a href="pricing.html">Pricing</a>\n          <a href="why-us.html">Why Top Shelf</a>'
 FOOT_NEW = ('<a href="pricing.html">Pricing</a>\n          <a href="one-time-services.html">One-Time Services</a>\n'

@@ -26,6 +26,16 @@ SITE = "https://www.topshelfsolutions.io"
 SHELL = "industry-retail.html"
 HUB = "one-time-services.html"
 TERMS = "Half up front, half when the job is done."
+# Owner, 2026-10-02 (offer.py FIVE_PAGES, FIVE_PAGES_NOTE, LOGO_NOTE, PACKAGE_LINES, PACKAGES).
+FIVE_PAGES = ("Home", "Services or Products", "About", "Reviews", "Contact")
+FIVE_LINE = ("The usual five pages are %s and %s. You decide what each page is."
+             % (", ".join(FIVE_PAGES[:-1]), FIVE_PAGES[-1]))
+LOGO_NOTE = "No logo yet? Tell us and we design one as part of this job."
+L_LISTING = "Your Google listing corrected: category, hours, what you sell, description"
+L_REVIEWS = "A reply to every unanswered review, each one approved by you first"
+L_CARD = "A review card for the counter that takes a customer straight to your review form"
+NO_RANK = "We do not promise a ranking, because nobody controls Google's results."
+OWN_BOTH = "You do. The website, the domain and the Google listing are in your name, and you keep every login."
 
 ICONS = {
     "search": '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg>',
@@ -66,14 +76,18 @@ SERVICES = [
         "faqs": [("Do I need a monthly plan to buy this?", "No. It is a one-time job for $345. There is no plan, no contract and nothing to cancel."),
                  ("How do I pay?", TERMS),
                  ("Will this put me at the top of the map?", "We do not promise a ranking, because nobody controls Google's results. This job corrects what is wrong on the listing."),
+                 ("My reviews need answering too. Is there one price for both?", "Yes. Get Found: Listing + Reviews is the listing fix, a reply to every unanswered review and a review card for $500."),
                  ("Who controls the listing afterward?", "You do. The listing stays in your name and you keep every login. We work as a manager on the profile and you can remove us whenever you like.")],
-        "related": ["map-pack-push", "review-reply-catch-up", "get-found-package"],
+        "related": ["map-pack-push", "review-reply-catch-up", "get-found-listing-reviews"],
         "reads": [("not-showing-on-google-maps.html", "Why you are not showing on Google Maps"), ("why-am-i-not-on-google.html", "Why am I not on Google?")],
         "solution": ("solution-marketing.html", "Marketing &amp; Reviews"),
     },
     {
         "slug": "get-found-package", "name": "Get Found", "price": "$795",
-        "hero": "websites-seo-hero", "eyebrow": "One-Time Job &middot; $795",
+        "who": "For a business with no website.",
+        "parts": ["google-business-profile-fix", "one-page-website", "review-card"],
+        "in": ["Your Google listing corrected", "A one-page website of your own, built by us", "A review card for the counter"],
+        "hero": "websites-seo-hero", "eyebrow": "One-Time Package &middot; $795",
         "h1": "No Website? Start With <em>Get Found</em>.",
         "title": "Get Found: Google Listing, One-Page Website and Review Card, $795",
         "meta": "For a business with no website: your Google listing corrected, a one-page website of your own and a review card, $795 one time. Half up front. No monthly plan.",
@@ -92,11 +106,72 @@ SERVICES = [
         "demo": ("field", "field-and-fawn", "a demo site we built for a home and lifestyle shop"),
         "faqs": [("Do I need a monthly plan to buy this?", "No. Get Found is a one-time job for $795. There is no plan and no contract."),
                  ("How do I pay?", TERMS),
-                 ("What if I already have a website?", "Then this is not the right job. Look at the Google listing fix, or the custom 5-page website if your site is holding you back."),
-                 ("Who owns the website and the listing?", "You do. The website, the domain and the Google listing are in your name, and you keep every login.")],
-        "related": ["one-page-website", "google-business-profile-fix", "custom-5-page-website"],
+                 ("What if I already have a website?", "Then this is not the right package. If the website is fine, Get Found: Listing + Reviews covers the listing and your reviews for $500. If the website is holding you back, Get Found Plus replaces it with a new custom 5-page website and covers the listing and reviews too, for $1,995."),
+                 ("Who owns the website and the listing?", OWN_BOTH)],
         "reads": [("not-showing-up-on-google.html", "Not showing up on Google"), ("why-am-i-not-on-google.html", "Why am I not on Google?")],
         "solution": ("solution-websites-seo.html", "Websites &amp; SEO"),
+    },
+    {
+        "slug": "get-found-plus", "name": "Get Found Plus", "price": "$1,995",
+        "who": "For a business with a poor website and a weak Google listing.",
+        "parts": ["custom-5-page-website", "google-business-profile-fix", "review-reply-catch-up", "review-card"],
+        "in": ["A new custom 5-page website, built by us", "Your Google listing corrected", L_REVIEWS, "A review card for the counter"],
+        "hero": "websites-seo-hero", "eyebrow": "One-Time Package &middot; $1,995",
+        "h1": "A New Website and Your Google Listing, <em>One Job</em>.",
+        "title": "Get Found Plus: New 5-Page Website and Google Listing Fix, $1,995",
+        "meta": "Get Found Plus: a new custom 5-page website, your Google listing corrected, a reply to every unanswered review and a review card. $1,995 one time. No monthly plan.",
+        "sub": "One job that fixes all of it. We build you a new website and put your Google listing right, so you put your best foot forward and Google has every reason to show you to the customers searching near you.",
+        "for": ["Your website is slow, dated or hard to use on a phone", "Your Google listing has the wrong category, missing hours or a blank description",
+                "Reviews sit on your listing with no reply", "You want one job that covers all of it, not a list of fixes"],
+        "gets": ["A custom 5-page website, built new by us, in your name", "Built for phones, with a number customers tap to call",
+                 L_LISTING, L_REVIEWS, L_CARD, FIVE_LINE],
+        "pins": [("page", "A new 5-page website", "We build you a new website from the ground up, in your name. It is built for phones, with a number customers tap to call. " + FIVE_LINE,
+                  [", ".join(FIVE_PAGES), "You decide what each page is", LOGO_NOTE]),
+                 ("pin", "Your Google listing", "The listing is what most people see first. We correct the category, the hours, what you sell and the description.",
+                  ["Category and what you sell", "Hours and description", "The listing stays in your name"]),
+                 ("star", "Reviews answered, and a review card", "Every unanswered review gets a written reply, and nothing is posted until you approve it. The review card sits on the counter and takes a customer straight to your review form.",
+                  ["A reply to every unanswered review", "Each one approved by you first", "A review card for the counter"]),
+                 P_TERMS],
+        "demo": ("brightwater", "brightwater-dental", "a demo site we built for a dental practice"),
+        "faqs": [("Do I need a monthly plan to buy this?", "No. Get Found Plus is a one-time job for $1,995. There is no plan and no contract."),
+                 ("How do I pay?", TERMS),
+                 ("Which five pages do I get?", FIVE_LINE),
+                 ("What if my website is fine?", "Then you do not need this one. Get Found: Listing + Reviews covers the listing, the review replies and the review card for $500, and your website stays exactly as it is."),
+                 ("Will this put me at the top of Google?", NO_RANK + " This job builds the website and corrects the listing."),
+                 ("Who owns the website and the listing?", OWN_BOTH)],
+        "reads": [("losing-jobs-to-better-websites.html", "Losing jobs to better websites"), ("not-showing-up-on-google.html", "Not showing up on Google"),
+                  ("industry-retail.html", "Retail &amp; Local shops")],
+        "solution": ("solution-websites-seo.html", "Websites &amp; SEO"),
+    },
+    {
+        "slug": "get-found-listing-reviews", "name": "Get Found: Listing + Reviews", "price": "$500",
+        "who": "For a business whose website is fine.",
+        "parts": ["google-business-profile-fix", "review-reply-catch-up", "review-card"],
+        "in": ["Your Google listing corrected", L_REVIEWS, "A review card for the counter", "Your website stays exactly as it is"],
+        "hero": "reviews-hero", "eyebrow": "One-Time Package &middot; $500",
+        "h1": "Website Fine? Fix the <em>Listing and the Reviews</em>.",
+        "title": "Get Found: Listing + Reviews, $500 One Time",
+        "meta": "Get Found: Listing + Reviews. Your Google listing corrected, a reply to every unanswered review and a review card, $500 one time. Your website stays exactly as it is.",
+        "sub": "One job that fixes all of it, so your listing puts its best foot forward and Google has every reason to show you to the customers searching near you. Your website stays exactly as it is.",
+        "for": ["Your website does its job and you want to keep it", "Your Google listing has the wrong category, missing hours or a blank description",
+                "Reviews sit on your listing with no reply", "You want one job that covers the listing and the reviews"],
+        "gets": [L_LISTING, L_REVIEWS, L_CARD, "Your website stays exactly as it is"],
+        "pins": [("pin", "Your Google listing", "The listing is what most people see first. We correct the category, the hours, what you sell and the description.",
+                  ["Category and what you sell", "Hours and description", "The listing stays in your name"]),
+                 ("key", "Every review answered", "Good ones and bad ones. Each gets a written reply, and nothing is posted until you have read it and approved it.",
+                  ["A reply to every unanswered review", "Each one approved by you first", "Posted under your business name"]),
+                 ("star", "A review card", "A card for the counter that takes a customer straight to your Google review form, so asking takes one sentence.",
+                  ["Opens your review form directly", "Works from any phone camera", "No software to learn"]),
+                 P_TERMS],
+        "demo": None,
+        "faqs": [("Do I need a monthly plan to buy this?", "No. Get Found: Listing + Reviews is a one-time job for $500. There is no plan and no contract."),
+                 ("How do I pay?", TERMS),
+                 ("Will you change my website?", "No. Your website stays exactly as it is. If the website is what holds you back, Get Found Plus replaces it with a new custom 5-page website and covers the listing and reviews too, for $1,995."),
+                 ("Will this put me at the top of the map?", NO_RANK + " This job corrects what is wrong on the listing and answers your reviews."),
+                 ("Who controls the listing afterward?", "You do. The listing stays in your name and you keep every login. We work as a manager on the profile and you can remove us whenever you like.")],
+        "reads": [("not-showing-on-google-maps.html", "Why you are not showing on Google Maps"), ("how-do-i-get-more-reviews.html", "How do I get more reviews?"),
+                  ("industry-retail.html", "Retail &amp; Local shops")],
+        "solution": ("solution-reviews.html", "Reviews &amp; Reputation"),
     },
     {
         "slug": "map-pack-push", "name": "Map-pack push", "price": "$1,250",
@@ -136,9 +211,9 @@ SERVICES = [
         "sub": "Before anyone calls, they look you up. We build you a new 5-page website from the ground up, publish it, and it is yours to keep. We replace a site rather than patch it, so every page is built to be found. You pay once, and you do not need a monthly plan to buy it.",
         "for": ["Your current site is slow, dated or hard to use on a phone", "One page is trying to cover everything you offer",
                 "A past vendor built your site and you are not sure you own it", "You would rather buy a website than rent one"],
-        "gets": ["A custom 5-page website, built new by us and published", "Basic on-page SEO built in, so it can be found", "A logo designed for you, if you need one", "Yours to keep, in your name"],
-        "pins": [("page", "Five pages, built for you", "A home page and the pages your customers look for, written and designed around your business, not poured into a template.",
-                  ["Designed around your business", "A logo designed for you, if you need one", "Built and published for you"]),
+        "gets": ["A custom 5-page website, built new by us and published", FIVE_LINE, "Basic on-page SEO built in, so it can be found", "A logo designed for you, if you need one", "Yours to keep, in your name"],
+        "pins": [("page", "Five pages, built for you", "Five pages written and designed around your business, not poured into a template. " + FIVE_LINE,
+                  [", ".join(FIVE_PAGES), "You decide what each page is", "A logo designed for you, if you need one"]),
                  ("phone", "Made for a phone", "Most people will see it on a phone first. The number can be tapped, the pages load quickly, and the next step is always on screen.",
                   ["Tap-to-call phone number", "Readable without pinching", "The next step on every screen"]),
                  ("search", "Basic SEO built in", "Page titles, descriptions, headings and the business details Google reads are set up as the site is built, so it can be found.",
@@ -147,9 +222,11 @@ SERVICES = [
         "demo": ("brightwater", "brightwater-dental", "a demo site we built for a dental practice"),
         "faqs": [("Do I need a monthly plan to get a website?", "No. The website is a one-time build for $1,500 and it is yours. A monthly plan is optional, and what a plan does is keep the site and your listing working after it is built."),
                  ("How do I pay?", TERMS),
+                 ("Which five pages do I get?", FIVE_LINE),
+                 ("My Google listing needs work too. Is there one price for both?", "Yes. Get Found Plus is the custom 5-page website, the Google listing fix, a reply to every unanswered review and a review card for $1,995."),
                  ("Who owns it?", "You do. The website and the domain are in your name and you keep every login."),
                  ("Why replace my site instead of fixing it?", "A site we build is one we can keep optimized. Patching a site inside someone else's builder means working around its limits, and you pay for the workaround. If your current site is doing its job, the free audit will say so and we will not sell you a new one.")],
-        "related": ["one-page-website", "get-found-package", "take-back-your-website"],
+        "related": ["get-found-plus", "one-page-website", "take-back-your-website"],
         "reads": [("losing-jobs-to-better-websites.html", "Losing jobs to better websites"), ("cost-to-modernize-local-business-online.html", "What it costs to modernize a local business online")],
         "solution": ("solution-websites-seo.html", "Websites &amp; SEO"),
     },
@@ -227,7 +304,7 @@ SERVICES = [
                  ("How do I pay?", TERMS),
                  ("Do I need a monthly plan?", "No. It is a one-time job for $150, with no plan and no contract."),
                  ("Does this get me more reviews?", "No, it answers the ones you have. A review card that takes a customer straight to your Google review form is $95.")],
-        "related": ["google-business-profile-fix", "map-pack-push", "get-found-package"],
+        "related": ["google-business-profile-fix", "get-found-listing-reviews", "map-pack-push"],
         "reads": [("how-do-i-get-more-reviews.html", "How do I get more reviews?"), ("solution-reviews.html", "Reviews &amp; Reputation")],
         "solution": ("solution-reviews.html", "Reviews &amp; Reputation"),
     },
@@ -236,6 +313,43 @@ BY_SLUG = {s["slug"]: s for s in SERVICES}
 # Small jobs with no page of their own; listed on the hub.
 SMALL = [("Extra page", "$325 per page", "One new page for a city or a service, on a site we built."),
          ("Review card", "$95", "A card or counter stand that takes a customer straight to your Google review form.")]
+
+# The Get Found family (owner, 2026-10-02): a package is several jobs sold as one job for one
+# price. A package is any service with "parts"; the rest are single jobs.
+PACKAGES = [s for s in SERVICES if "parts" in s]
+JOBS = [s for s in SERVICES if "parts" not in s]
+
+
+def money(n):
+    return "$" + format(n, ",")
+
+
+def dollars(price):
+    return int(price.lstrip("$").replace(",", ""))
+
+
+def part(slug):
+    """(name, price, href) of one part of a package. The review card has no page of its own."""
+    if slug == "review-card":
+        return "Review card", "$95", HUB + "#jobs"
+    return BY_SLUG[slug]["name"], BY_SLUG[slug]["price"], slug + ".html"
+
+
+def mid(name):
+    """A job name as it reads in the middle of a sentence."""
+    return name if name.startswith("Google") else name[0].lower() + name[1:]
+
+
+def parts_total(s):
+    return sum(dollars(part(p)[1]) for p in s["parts"])
+
+
+for _p in PACKAGES:
+    assert parts_total(_p) > dollars(_p["price"]), (_p["slug"], "a package must cost less than its parts")
+    _names = ", ".join("%s %s" % (mid(n), pr) for n, pr, _h in map(part, _p["parts"]))
+    _p["related"] = [x for x in _p["parts"] if x in BY_SLUG]
+    _p["faqs"] = _p["faqs"][:2] + [("Can I buy just part of it?", "Yes. Every part is sold on its own: %s. Bought one at a time they come to %s. Together they are %s."
+                                    % (_names, money(parts_total(_p)), _p["price"]))] + _p["faqs"][2:]
 
 PAGE_CSS = """<style>
 .ot-terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2.2rem}
@@ -257,6 +371,9 @@ PAGE_CSS = """<style>
 .ot-links{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:1.4rem}
 .ot-links a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hair)}
 .ot-links a:hover{border-color:var(--gold)}
+.ot-card .ot-list{margin:0;font-size:.9rem;gap:.5rem}
+.ot-parts{margin-top:2rem;color:var(--ink-2);line-height:1.7;max-width:72ch}
+.ot-parts a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hair)}
 @media (max-width:900px){.ot-terms{grid-template-columns:repeat(2,minmax(0,1fr))}.ot-two,.ot-pins{grid-template-columns:1fr}.ot-cards{grid-template-columns:1fr}}
 </style>"""
 
@@ -362,8 +479,16 @@ def cta_block():
             '    <p class="cta-fine reveal">Call or text (469) 833-3033.</p>\n  </div>\n</section>\n\n' % HUB)
 
 
+def package_card(s, link_text="See what it covers"):
+    """A package on the hub and in the family row: who it is for, what is in it, the price."""
+    return ('      <div class="ot-card reveal"><span class="ot-price">%s one time</span><h3><a href="%s.html">%s</a></h3><p>%s</p>'
+            '<ul class="ot-list">%s</ul><a href="%s.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">%s &rarr;</a></div>\n'
+            % (s["price"], s["slug"], e(s["name"]), e(s["who"]), "".join("<li>%s</li>" % e(x) for x in s["in"]), s["slug"], link_text))
+
+
 def service_page(s, assets, nav, foot, x_icon):
     slug, url = s["slug"], "%s/%s.html" % (SITE, s["slug"])
+    pack = "parts" in s
     schema = [
         {"@context": "https://schema.org", "@type": "Service", "name": s["name"], "serviceType": s["title"],
          "provider": {"@type": "Organization", "name": "Top Shelf Business Solutions", "url": SITE + "/"},
@@ -376,13 +501,17 @@ def service_page(s, assets, nav, foot, x_icon):
     out = head(s["title"], s["meta"], slug, schema, assets) + nav
     out += hero(s["eyebrow"], s["h1"], s["sub"], s["hero"], ("contact.html", "Get Your Free Audit"), ("#covers", "See What It Covers"))
     terms = [(s["price"], "one time"), ("Half up front", "half when the job is done"), ("No contract", "nothing monthly"), ("Yours to keep", "in your name")]
+    parts = ""
+    if pack:        # what the parts cost on their own, each linked to its own page
+        parts = ('    <p class="ot-parts reveal">Bought one at a time, the parts come to %s: %s. As one package they are %s.</p>\n'
+                 % (money(parts_total(s)), ", ".join('<a href="%s">%s</a> %s' % (h, e(mid(n)), pr) for n, pr, h in map(part, s["parts"])), s["price"]))
     out += ('<section class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">One job, one price</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">%s, <em>%s</em> one time</h2>\n'
             '    </div>\n    <div class="ot-terms reveal">%s</div>\n    <div class="ot-two">\n'
             '      <div class="reveal"><span class="eyebrow">This is for you if</span><ul class="ot-list">%s</ul></div>\n'
-            '      <div class="reveal"><span class="eyebrow">What you get</span><ul class="ot-list">%s</ul></div>\n    </div>\n  </div>\n</section>\n\n'
+            '      <div class="reveal"><span class="eyebrow">What you get</span><ul class="ot-list">%s</ul></div>\n    </div>\n%s  </div>\n</section>\n\n'
             % (e(s["name"]), s["price"], "".join('<div class="ot-term"><b>%s</b><span>%s</span></div>' % (e(a), e(b)) for a, b in terms),
-               "".join("<li>%s</li>" % e(x) for x in s["for"]), "".join("<li>%s</li>" % e(x) for x in s["gets"])))
+               "".join("<li>%s</li>" % e(x) for x in s["for"]), "".join("<li>%s</li>" % e(x) for x in s["gets"]), parts))
     demo = ""
     if s["demo"]:
         img, site, what = s["demo"]
@@ -404,26 +533,34 @@ def service_page(s, assets, nav, foot, x_icon):
     out += ('<section class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">Questions</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What Owners Ask <em>First</em></h2>\n    </div>\n'
             '    <div class="qa-list">\n%s    </div>\n  </div>\n</section>\n\n' % faq_html(s["faqs"]))
+    if pack:        # the three Get Found packages point at each other
+        out += ('<section class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
+                '      <span class="eyebrow reveal">The Get Found packages</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Not Quite <em>Your Case</em>?</h2>\n'
+                '      <p class="reveal">There are three Get Found packages. Which one fits depends on your website.</p>\n    </div>\n'
+                '    <div class="ot-cards">\n%s    </div>\n  </div>\n</section>\n\n' % "".join(package_card(p) for p in PACKAGES if p is not s))
     rel = "".join('      <div class="ot-card reveal"><span class="ot-price">%s one time</span><h3><a href="%s.html">%s</a></h3><p>%s</p></div>\n'
                   % (BY_SLUG[r]["price"], r, e(BY_SLUG[r]["name"]), e(BY_SLUG[r]["gets"][0])) for r in s["related"])
     reads = "".join('<a href="%s">%s</a>' % (h, t) for h, t in s["reads"] + [s["solution"], (HUB, "Every one-time job"), ("pricing.html", "Monthly plans")])
+    rel_head = ("What is in it", "The Parts, <em>On Their Own</em>") if pack else ("Related jobs", "Often Bought <em>Alongside</em>")
     out += ('<section class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
-            '      <span class="eyebrow reveal">Related jobs</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Often Bought <em>Alongside</em></h2>\n    </div>\n'
-            '    <div class="ot-cards">\n%s    </div>\n    <div class="ot-links reveal">%s</div>\n  </div>\n</section>\n\n' % (rel, reads))
+            '      <span class="eyebrow reveal">%s</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">%s</h2>\n    </div>\n'
+            '    <div class="ot-cards">\n%s    </div>\n    <div class="ot-links reveal">%s</div>\n  </div>\n</section>\n\n' % (rel_head + (rel, reads)))
     out += cta_block() + drawer(x_icon, s["pins"], ("contact.html", "Get the free audit")) + foot
     return out
 
 
 def hub_page(assets, nav, foot, x_icon):
-    desc = ("One-time jobs with one price each: a Google listing fix, a new website you own, a map-pack push and more. "
+    desc = ("One-time jobs and packages with one price each: the three Get Found packages, a Google listing fix, a new website you own and more. "
             "Half up front, half when the job is done. No monthly plan required.")
     faqs = [("Do I need a monthly plan to buy one of these?", "No. Each one is a single job with a single price. There is no plan, no contract and nothing to cancel."),
             ("How do I pay?", TERMS),
+            ("What is a package?", "Several jobs sold as one job, for less than the jobs cost one at a time. "
+             + " ".join("%s is %s. %s" % (p["name"], p["price"], p["who"]) for p in PACKAGES)),
             ("Which job should I start with?", "The free audit answers that. It shows what is wrong with your Google listing and your website. If one job would close the gap, it names it, and if nothing needs fixing it says so."),
             ("What is the difference between a one-time job and a monthly plan?", "You buy the build once and you own it. A monthly plan is optional, and what it does is keep your website and your listing working after the job is done.")]
     schema = [
         {"@context": "https://schema.org", "@type": "ItemList", "name": "One-time services", "itemListElement": [
-            {"@type": "ListItem", "position": i, "name": s["name"], "url": "%s/%s.html" % (SITE, s["slug"])} for i, s in enumerate(SERVICES, 1)]},
+            {"@type": "ListItem", "position": i, "name": s["name"], "url": "%s/%s.html" % (SITE, s["slug"])} for i, s in enumerate(PACKAGES + JOBS, 1)]},
         crumbs("One-Time Services", None),
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]},
@@ -438,10 +575,14 @@ def hub_page(assets, nav, foot, x_icon):
              ["Upkeep, not the build", "Month to month", "Only if you want it"])]
     out = head("One-Time Services, One Price Each", desc, HUB[:-5], schema, assets) + nav
     out += hero("One-Time Services", "Buy the Job <em>Once</em>. Own It.", "Not everything needs a monthly plan. These are single jobs with a single price: you see what is wrong, you buy the fix, and it is yours.",
-                "websites-seo-hero", ("contact.html", "Get Your Free Audit"), ("#jobs", "See the Jobs"))
+                "websites-seo-hero", ("contact.html", "Get Your Free Audit"), ("#packages", "See Packages and Jobs"))
+    out += ('<section id="packages" class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
+            '      <span class="eyebrow reveal">Packages</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Get Found, <em>Three Ways</em></h2>\n'
+            '      <p class="reveal">A package is several jobs sold as one, for less than the jobs cost one at a time. Which one fits depends on your website.</p>\n    </div>\n'
+            '    <div class="ot-cards">\n%s    </div>\n  </div>\n</section>\n\n' % "".join(package_card(p) for p in PACKAGES))
     cards = "".join('      <div class="ot-card reveal"><span class="ot-price">%s one time</span><h3><a href="%s.html">%s</a></h3><p>%s</p>'
                     '<a href="%s.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>\n'
-                    % (s["price"], s["slug"], e(s["name"]), e(s["sub"].split(". ")[0] + "."), s["slug"]) for s in SERVICES)
+                    % (s["price"], s["slug"], e(s["name"]), e(s["sub"].split(". ")[0] + "."), s["slug"]) for s in JOBS)
     cards += "".join('      <div class="ot-card reveal"><span class="ot-price">%s</span><h3>%s</h3><p>%s</p></div>\n' % (p, e(n), e(d)) for n, p, d in SMALL)
     out += ('<section id="jobs" class="section rule-top">\n  <div class="container">\n    <div class="section-head">\n'
             '      <span class="eyebrow reveal">The jobs</span>\n      <h2 class="display display-lg reveal" style="margin-top:1.6rem">One Job, <em>One Price</em></h2>\n'
@@ -463,11 +604,30 @@ def main():
     pages = {HUB: hub_page(assets, nav, foot, x_icon)}
     for s in SERVICES:
         pages[s["slug"] + ".html"] = service_page(s, assets, nav, foot, x_icon)
+    for name, key in [(s["slug"] + ".html", k) for s in SERVICES for k in ("title", "meta", "h1")]:
+        assert sum(1 for s in SERVICES if s[key] == BY_SLUG[name[:-5]][key]) == 1, (name, key, "not unique")
     for name, body in pages.items():
         text = re.sub(r"<script.*?</script>|<nav.*?</nav>|<footer.*?</footer>", "", body, flags=re.S)
         for bad in ("hosting", "hosted", "guarantee", "—", "–", "Blend"):
             assert bad not in text, (name, bad)
+        low = text.lower()
+        for bad in ("refund", "money back", "money-back", "leak", "tune-up", "tune up", "photograph", "photos", "free website", "free logo",
+                    "elevate", "seamless", "unlock", "$275", "$295", "$395"):
+            assert bad not in low, (name, bad)
+        # Only the map-pack push has dated checks; no other one-time job carries a timeframe or a report.
+        if not name.startswith("map-pack"):
+            assert not re.search(r"\b\d+ (?:days?|weeks?)\b|before-and-after|report", low), (name, "a timeframe or a report")
         assert not re.search(r"\$[\d,]+\s*(?:/|a |per )mo", text), (name, "a monthly price")
+        assert body.count("<h1") == 1 and body.count('rel="canonical"') == 1, (name, "h1 or canonical")
+        for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', body, re.S):
+            json.loads(block)
+        for href in set(re.findall(r'href="([^"#:]+\.html)', body)):     # every internal link lands on a real page
+            assert href in pages or os.path.exists(os.path.join(ROOT, href)), (name, "dead link", href)
+        if name != HUB:
+            s = BY_SLUG[name[:-5]]
+            assert s["price"] in text and TERMS in text, (name, "price or terms missing")
+            if "parts" in s:
+                assert money(parts_total(s)) in text and all(p["slug"] + ".html" in text for p in PACKAGES if p is not s), (name, "package")
         with open(os.path.join(ROOT, name), "w", encoding="utf-8", newline="\n") as f:
             f.write(body)
     print("wrote %d pages: %s" % (len(pages), ", ".join(sorted(pages))))
