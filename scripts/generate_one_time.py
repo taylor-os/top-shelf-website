@@ -31,9 +31,9 @@ FIVE_PAGES = ("Home", "Services or Products", "About", "Reviews", "Contact")
 FIVE_LINE = ("The usual five pages are %s and %s. You decide what each page is."
              % (", ".join(FIVE_PAGES[:-1]), FIVE_PAGES[-1]))
 LOGO_NOTE = "No logo yet? Tell us and we design one as part of this job."
-L_LISTING = "Your Google listing corrected: category, hours, what you sell, description and links"
-L_REVIEWS = "A reply to every unanswered review, each one approved by you first"
-L_CARD = "A review card for the counter that takes a customer straight to your review form"
+L_LISTING = "Your Google listing checked and corrected: category, hours, what you offer, description and links"
+L_REVIEWS = "A reply to any unanswered review, each one approved by you first"
+L_CARD = "A review card that takes a customer straight to your Google review form"
 NO_RANK = "We do not promise a ranking, because nobody controls Google's results."
 OWN_BOTH = "You do. The website, the domain and the Google listing are in your name, and you keep every login."
 
