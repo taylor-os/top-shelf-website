@@ -3,566 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Luigi's Autobody &amp; Collision Repair · Denton, TX</title>
-<meta name="description" content="Family-owned auto body and collision repair in Denton, TX. Honest pricing, straight answers, and repairs that hold up. Rated 4.9 stars.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>For Luigi&#x27;s Autobody &amp; Collision Repair | Top Shelf Business Solutions</title>
+<meta name="description" content="A sample website and a free website and Google Business Profile audit, prepared for Luigi&#x27;s Autobody &amp; Collision Repair by Top Shelf Business Solutions.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/assets/logo-mark.png?v=20260731i">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=20260731i">
 <style>
-  :root{
-    --ink:#131417;
-    --ink-2:#1b1d22;
-    --surface:#202329;
-    --line:rgba(255,255,255,.09);
-    --line-2:rgba(255,255,255,.14);
-    --text:#e9e7e3;
-    --text-soft:#b0aea9;
-    --text-mute:#8b8983;
-    --amber:#f0842a;
-    --amber-soft:#f6a15a;
-    --amber-ink:#3a2410;
-    --r-lg:22px;
-    --ease:cubic-bezier(.2,.8,.2,1);
-    --ease-out:cubic-bezier(.16,1,.3,1);
-    --maxw:1180px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{
-    background:var(--ink);
-    color:var(--text);
-    font-family:"Inter",system-ui,-apple-system,sans-serif;
-    font-size:clamp(16px,1.05vw,17px);
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,.display{
-    font-family:"Bricolage Grotesque","Inter",sans-serif;
-    line-height:1.02;
-    letter-spacing:-.03em;
-    text-wrap:balance;
-    font-weight:700;
-  }
-  a{color:inherit;text-decoration:none}
-  img{display:block;max-width:100%}
-  ::selection{background:var(--amber);color:var(--amber-ink)}
-  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,5vw,44px)}
-  .eyebrow{
-    font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--amber-soft);display:inline-flex;align-items:center;gap:.6em;
-  }
-  .eyebrow::before{content:"";width:26px;height:1px;background:var(--amber);opacity:.7}
+.hub{ min-height:100vh; display:flex; flex-direction:column; }
+.hub-main{ flex:1; padding-block:clamp(3.2rem,7vw,6rem) clamp(3rem,6vw,5rem); }
+.hub-inner{ width:100%; max-width:820px; margin-inline:auto; padding-inline:var(--gutter); }
 
-  /* ---------- NAV ---------- */
-  header.nav{
-    position:fixed;inset:0 0 auto 0;z-index:50;
-    transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s var(--ease);
-    border-bottom:1px solid transparent;
-  }
-  header.nav.scrolled{
-    background:rgba(19,20,23,.72);
-    backdrop-filter:blur(18px) saturate(160%);
-    -webkit-backdrop-filter:blur(18px) saturate(160%);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-.02em}
-  .brand .mark{
-    width:34px;height:34px;border-radius:9px;flex:none;
-    background:linear-gradient(150deg,var(--amber-soft),var(--amber));
-    color:var(--amber-ink);display:grid;place-items:center;font-weight:800;font-size:1.05rem;
-    box-shadow:0 6px 18px -6px rgba(240,132,42,.6);
-  }
-  .brand small{display:block;font-family:"Inter";font-weight:500;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);margin-top:1px}
-  .nav-links{display:flex;align-items:center;gap:2rem}
-  .nav-links a{font-size:.92rem;color:var(--text-soft);font-weight:500;transition:color .2s var(--ease);position:relative}
-  .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:1.5px;width:0;background:var(--amber);transition:width .28s var(--ease)}
-  .nav-links a:hover{color:var(--text)}
-  .nav-links a:hover::after{width:100%}
-  .nav-cta{
-    display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:var(--amber-ink);
-    font-weight:600;font-size:.9rem;padding:.6rem 1.1rem;border-radius:999px;
-    transition:transform .18s var(--ease),box-shadow .25s var(--ease);
-    box-shadow:0 8px 22px -10px rgba(240,132,42,.7);
-  }
-  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 12px 28px -10px rgba(240,132,42,.85)}
-  .nav-cta:active{transform:translateY(0) scale(.98)}
-  .nav-cta svg{width:16px;height:16px}
-  .nav-toggle{display:none;background:none;border:1px solid var(--line-2);border-radius:10px;width:44px;height:44px;color:var(--text);cursor:pointer;align-items:center;justify-content:center}
-  .nav-toggle svg{width:22px;height:22px}
+.hub-mark{ height:66px; width:auto; margin-bottom:clamp(2.2rem,5vw,3.2rem); }
+.hub-title{ font-family:var(--serif); font-weight:400; color:var(--ink); line-height:1.06;
+  letter-spacing:-0.01em; font-size:clamp(2.3rem,6vw,3.4rem); margin:1.5rem 0 1.3rem; }
+.hub-title em{ font-style:italic; color:var(--gold-bright); }
+.hub-intro{ color:var(--ink-2); font-size:clamp(1rem,1.3vw,1.1rem); line-height:1.75; max-width:56ch; }
 
-  @media(max-width:860px){
-    .nav-links{
-      position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
-      background:rgba(19,20,23,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-      padding:1rem clamp(20px,5vw,44px) 1.6rem;border-bottom:1px solid var(--line);
-      transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease);
-    }
-    .nav-links.open{opacity:1;transform:none;pointer-events:auto}
-    .nav-links a{padding:.85rem 0;border-bottom:1px solid var(--line);font-size:1.02rem;color:var(--text)}
-    .nav-links a::after{display:none}
-    .nav-links .nav-cta{justify-content:center;margin-top:1rem;padding:.85rem;border-bottom:none;color:var(--amber-ink)}
-    .nav-toggle{display:flex}
-  }
+.hub-cards{ display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;
+  margin-top:clamp(2.6rem,5vw,3.6rem); }
+.hub-card{ display:flex; flex-direction:column; background:var(--surface);
+  border:1px solid var(--hairline); border-radius:var(--r-lg);
+  padding:clamp(1.8rem,3vw,2.4rem); position:relative; overflow:hidden;
+  transition:transform 320ms var(--ease-out), border-color 320ms var(--ease-out),
+             background 320ms var(--ease-out); }
+.hub-card::before{ content:""; position:absolute; inset:0 0 auto 0; height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+  transform:scaleX(0); transform-origin:left; transition:transform 420ms var(--ease-out); }
+.hub-card:hover{ transform:translateY(-4px); border-color:var(--hairline-strong); background:var(--surface-2); }
+.hub-card:hover::before{ transform:scaleX(1); }
+.hub-card:focus-visible{ outline:2px solid var(--gold-bright); outline-offset:3px; }
+.hub-card .eyebrow{ margin-bottom:1.1rem; }
+.hub-card h2{ font-family:var(--serif); font-weight:500; font-size:clamp(1.5rem,2.4vw,1.85rem);
+  color:var(--ink); line-height:1.2; margin-bottom:.9rem; }
+.hub-card p{ color:var(--ink-3); font-size:.94rem; line-height:1.7; flex:1; margin-bottom:1.7rem; }
+.hub-cta{ display:inline-flex; align-items:center; gap:.55rem; font-size:.88rem;
+  letter-spacing:.06em; color:var(--gold-bright); }
+.hub-card:hover .hub-cta .arr{ transform:translateX(4px); }
+.hub-cta .arr{ transition:transform .45s var(--ease); }
 
-  /* ---------- HERO ---------- */
-  .hero{position:relative;min-height:100dvh;display:flex;align-items:center;padding-top:72px;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;z-index:0;background:#0e0f12}
-  .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.3) contrast(1.05) brightness(.6)}
-  .hero-bg::after{
-    content:"";position:absolute;inset:0;
-    background:
-      radial-gradient(120% 90% at 80% 6%,rgba(240,132,42,.17),transparent 46%),
-      linear-gradient(180deg,rgba(19,20,23,.7) 0%,rgba(19,20,23,.52) 42%,rgba(19,20,23,.95) 96%),
-      linear-gradient(90deg,rgba(19,20,23,.92) 0%,rgba(19,20,23,.34) 56%,transparent 100%);
-  }
-  .hero-inner{position:relative;z-index:2;padding-block:clamp(4rem,10vh,6.5rem)}
-  .hero h1{
-    font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-.04em;max-width:16ch;
-    margin:1.4rem 0 0;
-  }
-  .hero h1 .accent{color:var(--amber-soft)}
-  .hero .lede{
-    margin-top:1.5rem;max-width:47ch;font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--text-soft);
-  }
-  .hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.4rem}
-  .btn{
-    display:inline-flex;align-items:center;gap:.6rem;font-weight:600;border-radius:999px;
-    padding:.95rem 1.6rem;font-size:1rem;cursor:pointer;border:1px solid transparent;white-space:nowrap;
-    transition:transform .18s var(--ease),box-shadow .25s var(--ease),background .2s var(--ease),border-color .2s var(--ease);
-  }
-  .btn-primary{background:var(--amber);color:var(--amber-ink);box-shadow:0 12px 30px -12px rgba(240,132,42,.75)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px -12px rgba(240,132,42,.9)}
-  .btn-primary:active{transform:translateY(0) scale(.98)}
-  .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line-2);color:var(--text)}
-  .btn-ghost:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
-  .btn svg{width:19px;height:19px}
-  .hero-trust{
-    display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem 1.9rem;margin-top:3rem;
-    padding-top:1.8rem;border-top:1px solid var(--line);max-width:600px;
-  }
-  .trust-item{display:flex;align-items:center;gap:.7rem}
-  .stars{display:inline-flex;gap:2px;color:var(--amber)}
-  .stars svg{width:17px;height:17px}
-  .trust-item .big{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.28rem;letter-spacing:-.02em;line-height:1}
-  .trust-item .sub{font-size:.8rem;color:var(--text-mute);margin-top:2px}
-  .trust-sep{width:1px;height:34px;background:var(--line);align-self:center}
+.hub-close{ margin-top:clamp(2.6rem,5vw,3.4rem); padding-top:2.2rem;
+  border-top:1px solid var(--hairline-soft); color:var(--ink-3); font-size:.92rem;
+  line-height:1.8; max-width:58ch; }
+.hub-close a{ color:var(--gold); border-bottom:1px solid var(--hairline-strong); }
+.hub-close a:hover{ color:var(--gold-bright); }
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
-  .reveal.in{opacity:1;transform:none}
-  .reveal[data-d="1"]{transition-delay:.08s}
-  .reveal[data-d="2"]{transition-delay:.16s}
-  .reveal[data-d="3"]{transition-delay:.24s}
-  .reveal[data-d="4"]{transition-delay:.32s}
-  @media (prefers-reduced-motion:reduce){
-    .reveal{opacity:1 !important;transform:none !important;transition:none !important}
-  }
+.hub-foot{ border-top:1px solid var(--hairline); padding-block:1.8rem; }
+.hub-foot .hub-inner{ display:flex; justify-content:space-between; align-items:center;
+  gap:1rem; flex-wrap:wrap; }
+.hub-foot p{ font-size:.78rem; color:var(--ink-4); }
+.hub-foot span{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--gold); }
 
-  section{position:relative}
-  .section-pad{padding-block:clamp(5rem,11vh,8.5rem)}
-  .sec-head{max-width:52ch}
-  .sec-head h2{font-size:clamp(2rem,4.2vw,3.2rem);margin-top:1.1rem;font-weight:700}
-  .sec-head p{margin-top:1.1rem;color:var(--text-soft);font-size:1.08rem;max-width:48ch}
+@media (max-width:720px){
+  .hub-cards{ grid-template-columns:1fr; }
+  .hub-mark{ height:54px; }
+}
 
-  /* ---------- SERVICES ---------- */
-  #services{background:linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%)}
-  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.1rem;margin-top:3.2rem}
-  .svc{
-    position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
-    padding:1.9rem 1.7rem 1.8rem;overflow:hidden;
-    transition:transform .35s var(--ease),border-color .35s var(--ease),background .35s var(--ease);
-  }
-  .svc::before{
-    content:"";position:absolute;inset:0;
-    background:radial-gradient(120% 90% at 100% 0,rgba(240,132,42,.14),transparent 55%);
-    opacity:0;transition:opacity .35s var(--ease);
-  }
-  .svc:hover{transform:translateY(-6px);border-color:var(--line-2);background:#252931}
-  .svc:hover::before{opacity:1}
-  .svc-ico{
-    position:relative;z-index:1;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;
-    background:linear-gradient(150deg,rgba(240,132,42,.22),rgba(240,132,42,.08));
-    border:1px solid rgba(240,132,42,.3);color:var(--amber-soft);
-  }
-  .svc-ico svg{width:24px;height:24px}
-  .svc h3{position:relative;z-index:1;font-size:1.28rem;margin:1.3rem 0 .5rem;letter-spacing:-.02em}
-  .svc p{position:relative;z-index:1;color:var(--text-soft);font-size:.98rem}
-  .svc .num{position:absolute;top:1.4rem;right:1.5rem;z-index:1;font-family:"Bricolage Grotesque";font-weight:700;font-size:.9rem;color:var(--text-mute)}
-
-  /* ---------- ABOUT ---------- */
-  #about{background:var(--ink-2)}
-  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
-  .about-copy h2{font-size:clamp(2rem,4.2vw,3.1rem);margin-top:1.1rem;font-weight:700}
-  .about-copy p{margin-top:1.3rem;color:var(--text-soft);font-size:1.08rem;max-width:52ch}
-  .about-copy p strong{color:var(--text);font-weight:600}
-  .about-points{display:grid;gap:1rem;margin-top:2.2rem}
-  .point{display:flex;gap:.9rem;align-items:flex-start}
-  .point .tick{flex:none;width:26px;height:26px;border-radius:8px;background:rgba(240,132,42,.14);border:1px solid rgba(240,132,42,.3);display:grid;place-items:center;color:var(--amber-soft);margin-top:2px}
-  .point .tick svg{width:15px;height:15px}
-  .point b{font-weight:600;color:var(--text)}
-  .point span{color:var(--text-mute);font-size:.94rem;display:block;margin-top:1px}
-  .about-visual{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:linear-gradient(150deg,#2a2e36,#181a1f)}
-  .about-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2) contrast(1.03) brightness(.82)}
-  .about-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(19,20,23,.72))}
-  .about-badge{
-    position:absolute;left:1.3rem;bottom:1.3rem;z-index:2;
-    background:rgba(19,20,23,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    border:1px solid var(--line-2);border-radius:14px;padding:.9rem 1.15rem;
-  }
-  .about-badge .t{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
-  .about-badge .s{font-size:.8rem;color:var(--text-soft);margin-top:2px}
-  @media(max-width:820px){
-    .about-grid{grid-template-columns:1fr}
-    .about-visual{aspect-ratio:16/11;order:-1}
-  }
-
-  /* ---------- REVIEWS ---------- */
-  #reviews{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%)}
-  .rev-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem}
-  .rev-score{display:flex;align-items:center;gap:1rem}
-  .rev-score .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:3rem;letter-spacing:-.03em;line-height:1;color:var(--amber-soft)}
-  .rev-score .meta .stars{margin-bottom:3px}
-  .rev-score .meta small{color:var(--text-mute);font-size:.86rem}
-  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;margin-top:3rem}
-  .rev{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem 1.7rem;
-    display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s var(--ease);
-  }
-  .rev:hover{transform:translateY(-4px);border-color:var(--line-2)}
-  .rev .quote-mark{font-family:"Bricolage Grotesque";font-size:2.6rem;line-height:.6;color:rgba(240,132,42,.45);height:1rem}
-  .rev blockquote{font-size:1.06rem;color:var(--text);margin:1.3rem 0 1.5rem;line-height:1.55;font-weight:400}
-  .rev .who{margin-top:auto;display:flex;align-items:center;gap:.75rem;padding-top:1.1rem;border-top:1px solid var(--line)}
-  .rev .who .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(150deg,var(--amber-soft),var(--amber));color:var(--amber-ink);display:grid;place-items:center;font-family:"Bricolage Grotesque";font-weight:700;font-size:1rem;flex:none}
-  .rev .who .name{font-weight:600;font-size:.94rem}
-  .rev .who .stars{margin-top:2px}
-  .rev .who .stars svg{width:13px;height:13px}
-
-  /* ---------- CONTACT ---------- */
-  #contact{background:var(--ink)}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:stretch}
-  .contact-copy h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-top:1.1rem;font-weight:700;max-width:14ch}
-  .contact-copy p{margin-top:1.2rem;color:var(--text-soft);font-size:1.1rem;max-width:42ch}
-  .cta-call{
-    display:inline-flex;align-items:center;gap:.9rem;margin-top:2rem;
-    background:var(--amber);color:var(--amber-ink);font-weight:700;font-family:"Bricolage Grotesque";
-    font-size:clamp(1.25rem,2.4vw,1.65rem);letter-spacing:-.02em;padding:1.05rem 1.7rem;border-radius:16px;
-    box-shadow:0 16px 40px -14px rgba(240,132,42,.8);
-    transition:transform .18s var(--ease),box-shadow .25s var(--ease);
-  }
-  .cta-call:hover{transform:translateY(-2px);box-shadow:0 22px 50px -14px rgba(240,132,42,.95)}
-  .cta-call:active{transform:translateY(0) scale(.99)}
-  .cta-call svg{width:26px;height:26px}
-  .info-card{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:2rem 1.9rem;
-    display:flex;flex-direction:column;gap:1.4rem;
-  }
-  .info-row{display:flex;gap:1rem;align-items:flex-start}
-  .info-row .ic{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(240,132,42,.12);border:1px solid rgba(240,132,42,.28);display:grid;place-items:center;color:var(--amber-soft)}
-  .info-row .ic svg{width:20px;height:20px}
-  .info-row .lbl{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mute);font-weight:600}
-  .info-row .val{font-size:1.05rem;color:var(--text);margin-top:3px;font-weight:500;line-height:1.4}
-  .info-row a.val:hover{color:var(--amber-soft)}
-  .info-note{font-size:.86rem;color:var(--text-mute);border-top:1px solid var(--line);padding-top:1.1rem}
-  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
-
-  /* ---------- FOOTER ---------- */
-  footer.site{background:var(--ink);border-top:1px solid var(--line);padding-block:2.6rem 2.4rem}
-  .foot-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.4rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
-  .foot-brand{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.05rem}
-  .foot-brand .mark{width:30px;height:30px;border-radius:8px;flex:none;background:linear-gradient(150deg,var(--amber-soft),var(--amber));color:var(--amber-ink);display:grid;place-items:center;font-weight:800}
-  .foot-nav{display:flex;gap:1.6rem;flex-wrap:wrap}
-  .foot-nav a{font-size:.9rem;color:var(--text-soft);transition:color .2s}
-  .foot-nav a:hover{color:var(--amber-soft)}
-  .foot-legal{font-size:.82rem;color:var(--text-mute);margin-top:1.6rem;line-height:1.6}
-  .attribution{
-    margin-top:1.6rem;padding-top:1.5rem;border-top:1px solid var(--line);
-    display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;opacity:.72;
-  }
-  .attribution img{height:20px;width:auto;opacity:.85}
-  .attribution .txt{font-size:.78rem;color:var(--text-mute);line-height:1.5}
-  .attribution .txt a{color:var(--text-soft);text-decoration:underline;text-underline-offset:2px}
-  .attribution .txt a:hover{color:var(--amber-soft)}
-
-  @media(max-width:560px){
-    .hero-trust{gap:1.1rem 1.4rem}
-    .trust-sep{display:none}
-    .rev-top{align-items:flex-start}
-  }
+.prop{ margin-top:clamp(3.2rem,6vw,4.6rem); padding-top:clamp(2.4rem,5vw,3.2rem);
+  border-top:1px solid var(--hairline-soft); }
+.prop h2.prop-title{ font-family:var(--serif); font-weight:400; color:var(--ink); line-height:1.1;
+  font-size:clamp(1.9rem,4.4vw,2.6rem); margin:1.2rem 0 1rem; }
+.prop h2.prop-title em{ font-style:italic; color:var(--gold-bright); }
+.prop-intro{ color:var(--ink-2); line-height:1.75; max-width:58ch; font-size:1rem; }
+.job{ background:var(--surface-2); border:1px solid var(--hairline-strong); border-radius:var(--r-lg);
+  padding:clamp(1.6rem,3vw,2.2rem); margin-top:2rem; }
+.job-top h3{ font-family:var(--serif); font-weight:500; color:var(--ink); line-height:1.15;
+  font-size:clamp(1.7rem,3.4vw,2.3rem); margin:.9rem 0 1.4rem; }
+.job-cols{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; }
+.job-cols > div{ min-width:0; }
+.job-cols h4{ font-family:var(--sans); font-weight:500; font-size:.72rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-3); margin-bottom:.8rem; }
+.job-cols h4.sub{ color:var(--gold); }
+.job-cols ul + h4.sub{ margin-top:1.1rem; }
+.job-cols ul{ list-style:none; margin:0; padding:0; }
+.job-cols li{ position:relative; padding-left:1.15rem; margin-bottom:.6rem; color:var(--ink-2);
+  font-size:.93rem; line-height:1.6; }
+.job-cols li::before{ content:""; position:absolute; left:0; top:.62em; width:6px; height:6px; border-radius:50%; }
+.found li::before{ background:#B4553F; }
+.does li::before{ background:var(--gold); }
+.job-pitch{ color:var(--ink); font-size:.97rem; line-height:1.7; margin:0 0 1rem; }
+.job-pages{ color:var(--ink-2); font-size:.9rem; line-height:1.65; margin-top:.9rem; }
+.job-pages strong{ color:var(--ink); font-weight:500; }
+.job-pay{ display:flex; align-items:baseline; gap:1.2rem; flex-wrap:wrap; margin-top:1.6rem;
+  padding-top:1.4rem; border-top:1px solid var(--hairline-soft); }
+.job-price{ font-family:var(--serif); color:var(--gold-bright); font-size:clamp(1.5rem,2.8vw,2rem);
+  font-variant-numeric:tabular-nums; white-space:nowrap; }
+.job-price small{ font-family:var(--sans); font-size:.78rem; color:var(--ink-3); letter-spacing:.04em; }
+.job-pay p{ color:var(--ink-2); font-size:.95rem; line-height:1.7; flex:1; min-width:16rem; }
+.job-actions{ display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.5rem; }
+.job-small{ color:var(--ink-3); font-size:.88rem; line-height:1.7; margin-top:1rem; }
+.job-small a{ color:var(--gold-bright); border-bottom:1px solid var(--hairline-strong); }
+.prop-plans{ border:1px solid var(--gold); border-radius:var(--r-lg);
+  background:linear-gradient(180deg, rgba(201,168,106,.10), rgba(201,168,106,.03));
+  padding:clamp(1.8rem,3.4vw,2.6rem); }
+.prop-plans h3{ font-family:var(--serif); font-weight:500; color:var(--ink); line-height:1.12;
+  font-size:clamp(1.7rem,3.4vw,2.3rem); margin:.9rem 0 .9rem; }
+.prop-plans > p{ color:var(--ink-2); font-size:1rem; line-height:1.75; max-width:60ch; }
+.plan-secs{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem 2.2rem; margin:1.6rem 0 1.8rem; }
+.plan-sec{ min-width:0; }
+.plan-sec h4{ font-family:var(--serif); font-weight:500; font-size:1.3rem; color:var(--ink); line-height:1.2; }
+.plan-sub{ font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-top:.35rem; }
+.plan-intro{ font-size:.93rem; color:var(--ink-3); margin-top:.5rem; line-height:1.6; }
+.plan-sec ul{ list-style:none; margin:.9rem 0 0; padding:0; display:grid; gap:.6rem; }
+.plan-sec li{ position:relative; padding-left:1.15rem; color:var(--ink-2); font-size:.95rem; line-height:1.6; }
+.plan-sec li::before{ content:""; position:absolute; left:0; top:.62em; width:6px; height:6px;
+  border-radius:50%; background:var(--gold); }
+@media (max-width:720px){ .job-cols, .plan-secs{ grid-template-columns:1fr; gap:1.3rem; } }
 </style>
 </head>
 <body>
+<div id="page" class="hub">
+<div class="grain" aria-hidden="true"></div>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="#home" class="brand" aria-label="Luigi's Autobody and Collision Repair, home">
-      <span class="mark" aria-hidden="true">L</span>
-      <span>Luigi's Autobody<small>Collision Repair · Denton, TX</small></span>
-    </a>
-    <nav class="nav-links" id="menu" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+12142817685" class="nav-cta">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (214) 281-7685
+<main class="hub-main">
+  <div class="hub-inner">
+    <img src="/assets/logo-full.png?v=20260731i" alt="Top Shelf Business Solutions" class="hub-mark">
+
+    <span class="eyebrow">Prepared for Luigi&#x27;s Autobody &amp; Collision Repair</span>
+    <h1 class="hub-title">Welcome, <em>Luigi&#x27;s Autobody &amp; Collision Repair</em></h1>
+    <p class="hub-intro">We are Top Shelf Business Solutions, a North Texas team that builds
+      websites for local businesses and finds the gaps quietly costing them customers.
+      Nobody asked us to do this. We put three things together for you: a sample website, an audit, and our recommendation below. The first two are free, and there is
+      nothing to sign, pay, or return.</p>
+
+    <div class="hub-cards">
+      <a class="hub-card" href="website/">
+        <span class="eyebrow">Sample website</span>
+        <h2>Here is the sample website we built for you</h2>
+        <p>A real page, live right now, designed around what Luigi&#x27;s Autobody &amp; Collision Repair actually sells.
+          Open it on your phone. That is where most of your customers will see it.</p>
+        <span class="hub-cta">View your sample site <span class="arr">&rarr;</span></span>
       </a>
-    </nav>
-    <button class="nav-toggle" id="toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
+
+      <a class="hub-card" href="audit/">
+        <span class="eyebrow">Free audit</span>
+        <h2>Here is your free Google Business Profile and website audit</h2>
+        <p>Graded page by page: what is working for you on Google, and where the gaps are.
+          Read it here or download the PDF.</p>
+        <span class="hub-cta">View your audit <span class="arr">&rarr;</span></span>
+      </a>
+
+    </div>
+
+    <section class="prop"><span class="eyebrow">What we found, and the fix</span><h2 class="prop-title">What we would do for <em>Luigi&#x27;s Autobody &amp; Collision Repair</em></h2><p class="prop-intro">The audit shows what we found. This is the one job that answers it.</p><div class="job job-lead"><span class="eyebrow">Our recommendation</span><div class="job-top"><h3>Get Found</h3></div><div class="job-cols"><div class="found"><h4>What the audit found</h4><h4 class="sub">Your website</h4><ul><li>No working website of your own.</li></ul><h4 class="sub">On your Google listing</h4><ul><li>Booking link. There&#x27;s no booking link on the listing.</li><li>Description. Doesn&#x27;t mention Denton or several of your other services, like tires, bumpers, or lock service.</li></ul></div><div class="does"><h4>What we do about it</h4><ul><li>Your Google listing corrected wherever this audit found a gap</li><li>A one-page website of your own, built by us</li><li>A review card that takes a customer straight to your Google review form</li></ul></div></div><div class="job-pay"><span class="job-price">$795</span><p>$397.50 to start. $397.50 when the job is done. The first page is already built, and you have seen it before paying anything.</p></div><div class="job-actions"><a class="btn btn-gold btn-sm" href="sms:+14698333033?&amp;body=Hi%2C%20this%20is%20Luigi%27s%20Autobody%20%26%20Collision%20Repair.%20I%27d%20like%20to%20talk%20about%20the%20Get%20Found%20job.">Text us about this</a><a class="btn btn-line btn-sm" href="mailto:contact@topshelfsolutions.io?subject=Luigi%27s%20Autobody%20%26%20Collision%20Repair%3A%20the%20Get%20Found%20job&amp;body=Hi%2C%20this%20is%20Luigi%27s%20Autobody%20%26%20Collision%20Repair.%20I%27d%20like%20to%20talk%20about%20the%20Get%20Found%20job.">Email us about this</a></div><p class="job-small">The <a href="website/">sample website</a> above is the first page of this. Tell us what to change and we build the rest from there.</p><p class="job-small">No logo yet? Tell us and we design one as part of this job.</p></div></section>
+    <section class="prop"><div class="prop-plans"><span class="eyebrow">Monthly plans</span><h3>After the job: keep it that way</h3><p>Optional. The job above is finished work on its own. A monthly plan is the upkeep after it, handled for you so it does not slide back.</p><div class="plan-secs"><div class="plan-sec"><h4>Kept up for you</h4><ul><li>Your website kept current: specials, inventory changes and SEO updates</li><li>Your Google Business Profile kept current</li><li>A before-and-after report every 30 days</li></ul></div><div class="plan-sec"><h4>Keep up with your customers</h4><p class="plan-sub">A CRM built around your business</p><p class="plan-intro">One place for every customer and every message, whatever you sell.</p><ul><li>Every customer in one list, with your notes on each</li><li>A members list for your regulars, with specials sent out by email and text</li><li>Texts, emails and messages in one inbox</li><li>Online booking on one calendar, with reminders</li><li>Review requests after a visit</li></ul></div></div><a class="btn btn-gold" href="https://topshelfsolutions.io/pricing.html">See the monthly plans <span class="arr">&rarr;</span></a></div></section>
+
+    <p class="hub-close">Have a question, or want something on the sample changed?
+      Call or text <a href="tel:+14698333033">(469) 833-3033</a>, or email
+      <a href="mailto:contact@topshelfsolutions.io">contact@topshelfsolutions.io</a>.
+      A real person here will answer.</p>
   </div>
-</header>
-
-<main id="home">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1920&q=80" alt="" loading="eager">
-    </div>
-    <div class="wrap hero-inner">
-      <span class="eyebrow reveal in">Family-owned in Denton since day one</span>
-      <h1 class="reveal in" data-d="1">Wrecked bumper or full collision, <span class="accent">you leave with your car right.</span></h1>
-      <p class="lede reveal in" data-d="2">Denton's family-owned body shop. Honest prices, straight answers, and repairs that hold up, whether it's a scraped bumper or a car that's been through a serious wreck.</p>
-      <div class="hero-actions reveal in" data-d="3">
-        <a href="tel:+12142817685" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call (214) 281-7685
-        </a>
-        <a href="#services" class="btn btn-ghost">See what we fix</a>
-      </div>
-      <div class="hero-trust reveal in" data-d="4">
-        <div class="trust-item">
-          <span class="stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-          </span>
-          <div><div class="big">4.9 / 5</div><div class="sub">142 Google reviews</div></div>
-        </div>
-        <span class="trust-sep" aria-hidden="true"></span>
-        <div class="trust-item"><div><div class="big">Family-owned</div><div class="sub">Treated like a neighbor</div></div></div>
-        <span class="trust-sep" aria-hidden="true"></span>
-        <div class="trust-item"><div><div class="big">Upfront pricing</div><div class="sub">No runaround, no surprises</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section-pad">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">What we fix</span>
-        <h2>Body work that gets your car back to how it drove.</h2>
-        <p>From a light tap in a parking lot to heavy collision damage, the shop handles the repair start to finish.</p>
-      </div>
-      <div class="svc-grid">
-        <article class="svc reveal" data-d="1">
-          <span class="num">01</span>
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></div>
-          <h3>Collision Repair</h3>
-          <p>From a light fender-bender to heavy damage, we get your car back to how it drove before the wreck.</p>
-        </article>
-        <article class="svc reveal" data-d="2">
-          <span class="num">02</span>
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M4 16h16a1 1 0 0 0 1-1v-3H3v3a1 1 0 0 0 1 1z"/><path d="M7 16v2M17 16v2"/></svg></div>
-          <h3>Bumper Repair</h3>
-          <p>Cracked, scuffed, or hanging loose? We repair or replace it and blend it back in so it looks right.</p>
-        </article>
-        <article class="svc reveal" data-d="3">
-          <span class="num">03</span>
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a5 5 0 0 0 0 10 3 3 0 0 1 0 6"/><circle cx="8.5" cy="8.5" r=".7" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="9" cy="15.5" r=".7" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Paint Matching</h3>
-          <p>We match your car's exact color so the fixed panel disappears into the rest of the body.</p>
-        </article>
-        <article class="svc reveal" data-d="4">
-          <span class="num">04</span>
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V5s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></div>
-          <h3>Dent Removal</h3>
-          <p>Door dings and dents pulled out clean, keeping your original paint wherever we can.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section-pad">
-    <div class="wrap about-grid">
-      <div class="about-copy reveal">
-        <span class="eyebrow">Who you're dealing with</span>
-        <h2>A neighbor with a paint booth, not a chain shop.</h2>
-        <p>Luigi's started the way most good body shops do. One family, a set of tools, and a simple rule: <strong>treat every car like it belongs to a neighbor.</strong></p>
-        <p>Bring in a dented bumper or a car that's been through a serious wreck, and you get the same thing either way. An honest look at what it costs, a real answer on how long it takes, and work that lasts. Most people in Denton find us the same way. Someone they trust sent them here.</p>
-        <div class="about-points">
-          <div class="point">
-            <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <div><b>Upfront on cost and timing</b><span>You hear the real number and the real timeline before we start.</span></div>
-          </div>
-          <div class="point">
-            <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <div><b>Family-owned and easy to talk to</b><span>The people who quote your car are the people who fix it.</span></div>
-          </div>
-          <div class="point">
-            <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <div><b>Everyone's welcome here</b><span>A friendly, LGBTQ+ friendly shop where you're treated like family.</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="about-visual reveal" data-d="1">
-        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=80" alt="A car being worked on inside an auto body repair shop" loading="lazy">
-        <div class="about-badge">
-          <div class="t">4.9 stars, 142 reviews</div>
-          <div class="s">Denton, Texas</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section id="reviews" class="section-pad">
-    <div class="wrap">
-      <div class="rev-top reveal">
-        <div class="sec-head" style="margin:0">
-          <h2 style="margin-top:0">What Denton drivers say.</h2>
-        </div>
-        <div class="rev-score">
-          <div class="n">4.9</div>
-          <div class="meta">
-            <span class="stars" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
-            </span>
-            <small>Based on 142 Google reviews</small>
-          </div>
-        </div>
-      </div>
-      <div class="rev-grid">
-        <article class="rev reveal" data-d="1">
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>Absolutely my go-to body shop in Denton. Good pricing and great repairs.</blockquote>
-          <div class="who">
-            <span class="av" aria-hidden="true">G</span>
-            <div>
-              <div class="name">Gavin D.</div>
-              <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></span>
-            </div>
-          </div>
-        </article>
-        <article class="rev reveal" data-d="2">
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>Upfront about costs and timing, and an amazing job for a very reasonable price.</blockquote>
-          <div class="who">
-            <span class="av" aria-hidden="true">L</span>
-            <div>
-              <div class="name">Lucy H.</div>
-              <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></span>
-            </div>
-          </div>
-        </article>
-        <article class="rev reveal" data-d="3">
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>Small, family owned place that makes you feel like family.</blockquote>
-          <div class="who">
-            <span class="av" aria-hidden="true">D</span>
-            <div>
-              <div class="name">Denton customer</div>
-              <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section-pad">
-    <div class="wrap contact-grid">
-      <div class="contact-copy reveal">
-        <h2 style="margin-top:0">Ready when your car needs us.</h2>
-        <p>Call the shop and talk to the people who'll actually do the work. We'll give you an honest read on the damage and what it takes to fix it.</p>
-        <a href="tel:+12142817685" class="cta-call">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (214) 281-7685
-        </a>
-      </div>
-      <div class="info-card reveal" data-d="1">
-        <div class="info-row">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><div class="lbl">Shop</div><a class="val" href="https://maps.google.com/?q=4401+E+McKinney+St,+Denton,+TX+76208" target="_blank" rel="noopener">4401 E McKinney St<br>Denton, TX 76208</a></div>
-        </div>
-        <div class="info-row">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-          <div><div class="lbl">Phone</div><a class="val" href="tel:+12142817685">(214) 281-7685</a></div>
-        </div>
-        <div class="info-row">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>
-          <div><div class="lbl">Hours</div><div class="val">Opens 9 AM on weekdays</div></div>
-        </div>
-        <p class="info-note">Give us a call to confirm hours before you head over.</p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-top">
-      <a href="#home" class="foot-brand"><span class="mark" aria-hidden="true">L</span> Luigi's Autobody &amp; Collision Repair</a>
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+12142817685">Call</a>
-      </nav>
-    </div>
-    <p class="foot-legal">4401 E McKinney St, Denton, TX 76208 · (214) 281-7685 · Family-owned auto body &amp; collision repair.</p>
-    <div class="attribution">
-      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions logo">
-      <span class="txt">This website was prepared by Top Shelf Business Solutions. <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a></span>
-    </div>
+<footer class="hub-foot">
+  <div class="hub-inner">
+    <p>&copy; 2026 Top Shelf Business Solutions</p>
+    <span>We Solve. You Grow.</span>
   </div>
 </footer>
-
-<script>
-  (function(){
-    var nav=document.getElementById('nav');
-    var onScroll=function(){ if(window.scrollY>24){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');} };
-    onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-
-    var toggle=document.getElementById('toggle'), menu=document.getElementById('menu');
-    toggle.addEventListener('click',function(){
-      var open=menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded',open?'true':'false');
-      toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
-    });
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',function(){ menu.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
-    });
-
-    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var items=document.querySelectorAll('.reveal:not(.in)');
-    if(reduce||!('IntersectionObserver' in window)){
-      items.forEach(function(el){el.classList.add('in');});
-    }else{
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-      },{rootMargin:'0px 0px -10% 0px',threshold:.12});
-      items.forEach(function(el){io.observe(el);});
-    }
-  })();
-</script>
+</div>
 </body>
 </html>
