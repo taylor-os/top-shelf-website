@@ -31,7 +31,7 @@ FIVE_PAGES = ("Home", "Services or Products", "About", "Reviews", "Contact")
 FIVE_LINE = ("The usual five pages are %s and %s. You decide what each page is."
              % (", ".join(FIVE_PAGES[:-1]), FIVE_PAGES[-1]))
 LOGO_NOTE = "No logo yet? Tell us and we design one as part of this job."
-L_LISTING = "Your Google listing corrected: category, hours, what you sell, description"
+L_LISTING = "Your Google listing corrected: category, hours, what you sell, description and links"
 L_REVIEWS = "A reply to every unanswered review, each one approved by you first"
 L_CARD = "A review card for the counter that takes a customer straight to your review form"
 NO_RANK = "We do not promise a ranking, because nobody controls Google's results."
@@ -120,7 +120,7 @@ SERVICES = [
         "h1": "A New Website and Your Google Listing, <em>One Job</em>.",
         "title": "Get Found Plus: New 5-Page Website and Google Listing Fix, $1,995",
         "meta": "Get Found Plus: a new custom 5-page website, your Google listing corrected, a reply to every unanswered review and a review card. $1,995 one time. No monthly plan.",
-        "sub": "One job that fixes all of it. We build you a new website and put your Google listing right, so you put your best foot forward and Google has every reason to show you to the customers searching near you.",
+        "sub": "One job for a weak website and a weak Google listing. We build you a new website and put the listing right, so you put your best foot forward with the customers searching near you.",
         "for": ["Your website is slow, dated or hard to use on a phone", "Your Google listing has the wrong category, missing hours or a blank description",
                 "Reviews sit on your listing with no reply", "You want one job that covers all of it, not a list of fixes"],
         "gets": ["A custom 5-page website, built new by us, in your name", "Built for phones, with a number customers tap to call",
@@ -152,7 +152,7 @@ SERVICES = [
         "h1": "Website Fine? Fix the <em>Listing and the Reviews</em>.",
         "title": "Get Found: Listing + Reviews, $500 One Time",
         "meta": "Get Found: Listing + Reviews. Your Google listing corrected, a reply to every unanswered review and a review card, $500 one time. Your website stays exactly as it is.",
-        "sub": "One job that fixes all of it, so your listing puts its best foot forward and Google has every reason to show you to the customers searching near you. Your website stays exactly as it is.",
+        "sub": "One job for your Google listing and your reviews, so the listing puts its best foot forward. Your website stays exactly as it is.",
         "for": ["Your website does its job and you want to keep it", "Your Google listing has the wrong category, missing hours or a blank description",
                 "Reviews sit on your listing with no reply", "You want one job that covers the listing and the reviews"],
         "gets": [L_LISTING, L_REVIEWS, L_CARD, "Your website stays exactly as it is"],
