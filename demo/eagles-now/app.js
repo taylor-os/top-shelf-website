@@ -105,11 +105,11 @@
   const resultRow = (g) => `
     <li class="grow" data-reveal>
       <span class="wk">Wk ${g.week}</span>
+      ${place(g)}
+      ${g.result ? `<span class="score nb">${esc(g.score)}</span>` : '<span class="meta pending">Final pending</span>'}
       ${g.result
         ? `<span class="wl ${g.result}">${g.result}<span class="sr-only">${g.result === 'W' ? ' win' : ' loss'}</span></span>`
         : '<span class="wl"></span>'}
-      ${place(g)}
-      ${g.result ? `<span class="score nb">${esc(g.score)}</span>` : '<span class="meta pending">Final pending</span>'}
     </li>`;
 
   /* ---------- season: one ordered list of games, and the clock decides where each one shows ---------- */
