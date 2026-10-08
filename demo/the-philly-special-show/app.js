@@ -107,6 +107,37 @@
         <span class="srow-when">${g.date ? `${fmtDay(g.date)} · ${g.time} ET · ${esc(g.tv)}` : 'Date and time TBD'}</span>
       </li>`);
 
+  /* Hero scoreboard: the channel's public subscriber count, re-read from YouTube while the page is open. */
+  function subsBoard(el) {
+    let shown = '';
+    const paint = (text, count, live) => {
+      const top = `<span class="subs-dot${live ? ' on' : ''}"></span>${live ? 'Live from YouTube' : `YouTube · ${asOf}`}`;
+      if (text === shown) { $('.subs-top', el).innerHTML = top; return; } // same number: leave the digits alone
+      shown = text;
+      el.classList.remove('in');
+      const step = 10 ** (Math.floor(Math.log10(count)) - 1); // 166K counts toward 170K
+      const next = (Math.floor(count / step) + 1) * step;
+      el.innerHTML = `
+        <p class="subs-top">${top}</p>
+        <p class="subs-num" role="img" aria-label="${esc(text)} subscribers">${[...text].map((c) => (/[0-9]/.test(c)
+          ? `<span class="dg" style="--d:${c}"><span>${'0123456789'.split('').join('<br>')}</span></span>`
+          : `<span class="dg-x">${esc(c)}</span>`)).join('')}</p>
+        <p class="subs-label">Subscribers<span>Next up: ${compact(next)}</span></p>
+        <span class="subs-bar"><i style="--p:${(count % step) / step}"></i></span>`;
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('in'))); // digits roll up from zero
+    };
+    paint(D.show.subscribers, D.show.subscribersNum, false);
+    const pull = async () => {
+      try {
+        const r = await fetch('subs.php', { cache: 'no-store' });
+        const j = await r.json();
+        if (r.ok && j.count) paint(j.text, j.count, true);
+      } catch { /* no PHP here (local preview) or YouTube unreachable: keep the dated number */ }
+    };
+    pull();
+    setInterval(pull, 5 * 60 * 1000);
+  }
+
   const nextGame = () => {
     const n = D.season.next;
     const local = new Date(n.kickoff).toLocaleString(undefined, { weekday: 'long', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
@@ -285,7 +316,8 @@
           <button type="button" class="btn" data-video="${v.id}">Watch the latest</button>
           <a class="btn ghost" href="${D.show.subscribeUrl}" ${EXT}>Subscribe on YouTube</a>
         </div>
-        <p class="fine" style="margin-top:16px">${esc(D.show.subscribers)} subscribers ${asOf}.</p>`;
+        <div class="subs" id="subs"></div>`;
+      subsBoard($('#subs'));
       $('#hero-frame').innerHTML = `
         <button type="button" class="frame" data-video="${v.id}" aria-label="Play the latest episode: ${esc(v.title)}">
           ${media(`https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`, '', 1280, 720, 'r16',
