@@ -15,6 +15,7 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const fmtDate = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   const ttl = (t) => esc(t).replace(/[0-9]+[-–][0-9]+/g, '<span class="nb">$&</span>');
+  const sq = (url, w) => `${url}?format=${w}w`; // the show's image host resizes on request; phones don't need the 1320px original
   const fmtDur = (s) => {
     const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = String(s % 60).padStart(2, '0');
     return h ? `${h}:${String(m).padStart(2, '0')}:${sec}` : `${m}:${sec}`;
@@ -55,7 +56,7 @@
 
   const articleCard = (a) => `
     <a class="card" href="${articleHref(a)}" data-reveal>
-      ${media(a.image, '', 600, 400, 'r32')}
+      ${media(sq(a.image, 500), '', 600, 400, 'r32')}
       <span class="card-body">
         <span><span class="tag quiet">${esc(a.series)}</span></span>
         <span class="card-title">${ttl(a.title)}</span>
@@ -66,7 +67,7 @@
 
   const leadStory = (a) => `
     <a class="lead" href="${articleHref(a)}" data-reveal>
-      ${media(a.image, '', 900, 600, 'r32')}
+      ${media(sq(a.image, 1000), '', 900, 600, 'r32')}
       <span class="lead-body">
         <span><span class="tag">${esc(a.series)}</span></span>
         <span class="lead-title">${esc(a.title)}</span>
@@ -366,7 +367,7 @@
           </button>` })),
         ...D.articles.map((a) => ({ type: 'Articles', date: a.date, html: `
           <a class="frow" href="${articleHref(a)}">
-            ${media(a.image, '', 480, 270, 'r16')}
+            ${media(sq(a.image, 300), '', 480, 270, 'r16')}
             <span class="frow-body"><span class="frow-top"><span class="tag quiet">Article</span><span class="meta">${fmtDate(a.date)} · ${esc(a.series)}</span></span><span class="card-title">${ttl(a.title)}</span></span>
           </a>` })),
       ].sort((a, b) => b.date.localeCompare(a.date));
@@ -411,7 +412,7 @@
       const pn = (x, label) => (x ? `<a href="${articleHref(x)}"><span class="meta">${label}</span><span class="card-title">${ttl(x.title)}</span></a>` : '');
       body.innerHTML = `
         <p class="meta">By ${esc(D.writer.name)} · ${fmtDate(a.date)}</p>
-        ${media(a.image, '', 1200, 800, 'r32', '', 'fetchpriority="high"')}
+        ${media(sq(a.image, 1000), '', 1200, 800, 'r32', '', 'fetchpriority="high"')}
         ${a.excerpt ? `<p class="excerpt">${ttl(a.excerpt)}</p>` : '<p class="excerpt">No preview on this one. The full piece is a click away.</p>'}
         <div class="readmore">
           <p class="fine">This is a preview. The full article lives on the show’s site.</p>
