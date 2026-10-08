@@ -166,10 +166,10 @@ noscript p { padding: 16px var(--pad); font-weight: 600; }
 .srow { display: grid; grid-template-columns: 4.4rem 1fr auto; gap: 1px 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .srow-wk { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .srow-opp { grid-column: 2; font-family: var(--serif); font-weight: 600; font-size: 1.08rem; line-height: 1.25; }
-.srow-res { grid-column: 3; grid-row: 1; font-weight: 700; white-space: nowrap; }
+.srow-res { grid-column: 3; grid-row: 1; font-weight: 700; white-space: nowrap; display: flex; justify-content: flex-end; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; } /* score, then the W/L badge last, so the badges share one right edge */
 .srow-res.tbd { font-size: .85rem; font-weight: 500; color: var(--muted); }
 .srow-when, .srow-site { grid-column: 2 / -1; font-size: .85rem; color: var(--muted); }
-.wl { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; margin-right: 8px; border: 1.5px solid var(--ink); border-radius: 50%; font-size: .8rem; }
+.wl { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; flex: none; border: 1.5px solid var(--ink); border-radius: 50%; font-size: .8rem; }
 .wl.W { background: var(--green); border-color: var(--green); color: var(--paper); }
 @media (min-width: 800px) {
   .srow { grid-template-columns: 5.5rem minmax(0, 1.1fr) minmax(0, 1fr) 19rem; } /* fixed tracks: every row is its own grid, so shared widths are what line the columns up */

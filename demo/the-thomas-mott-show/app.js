@@ -65,7 +65,7 @@
       <span class="srow-wk">Week ${g.week}</span>
       <span class="srow-opp">${g.home ? 'vs.' : 'at'} ${esc(g.opp)}</span>
       ${g.result
-        ? `<span class="srow-res"><span class="wl ${g.result}">${g.result}<span class="sr-only">${g.result === 'W' ? ' win' : ' loss'}</span></span>${esc(g.score)}</span>`
+        ? `<span class="srow-res">${esc(g.score)}<span class="wl ${g.result}">${g.result}<span class="sr-only">${g.result === 'W' ? ' win' : ' loss'}</span></span></span>`
         : '<span class="srow-res tbd">Result pending</span>'}
       <span class="srow-site">@ ${esc(g.site)}</span>
     </li>`;
