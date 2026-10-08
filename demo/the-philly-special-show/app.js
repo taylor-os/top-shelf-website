@@ -14,6 +14,7 @@
   /* ---------- helpers ---------- */
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const fmtDate = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  const ttl = (t) => esc(t).replace(/[0-9]+[-–][0-9]+/g, '<span class="nb">$&</span>');
   const fmtDur = (s) => {
     const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = String(s % 60).padStart(2, '0');
     return h ? `${h}:${String(m).padStart(2, '0')}:${sec}` : `${m}:${sec}`;
@@ -47,7 +48,7 @@
     <button type="button" class="card" data-video="${v.id}" data-reveal>
       ${media(v.thumb, '', 480, 270, 'r16', `<span class="dur">${fmtDur(v.seconds)}</span>`)}
       <span class="card-body">
-        <span class="card-title">${esc(v.title)}</span>
+        <span class="card-title">${ttl(v.title)}</span>
         <span class="meta">${fmtDate(v.date)} · ${compact(v.views)} views</span>
       </span>
     </button>`;
@@ -57,8 +58,8 @@
       ${media(a.image, '', 600, 400, 'r32')}
       <span class="card-body">
         <span><span class="tag quiet">${esc(a.series)}</span></span>
-        <span class="card-title">${esc(a.title)}</span>
-        ${a.excerpt ? `<span class="clamp">${esc(a.excerpt)}</span>` : ''}
+        <span class="card-title">${ttl(a.title)}</span>
+        ${a.excerpt ? `<span class="clamp">${ttl(a.excerpt)}</span>` : ''}
         <span class="meta">${fmtDate(a.date)}</span>
       </span>
     </a>`;
@@ -69,7 +70,7 @@
       <span class="lead-body">
         <span><span class="tag">${esc(a.series)}</span></span>
         <span class="lead-title">${esc(a.title)}</span>
-        ${a.excerpt ? `<p>${esc(a.excerpt)}</p>` : ''}
+        ${a.excerpt ? `<p>${ttl(a.excerpt)}</p>` : ''}
         <span class="meta">${esc(D.writer.name)} · ${fmtDate(a.date)}</span>
       </span>
     </a>`;
@@ -97,6 +98,15 @@
     </div>
     <p class="fine" style="margin-top:14px">Channel numbers ${asOf}.</p>`;
 
+  const fmtDay = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const schedRow = (g) => (g.bye
+    ? `<li class="srow bye"><span class="meta">Week ${g.week}</span><span class="srow-opp">Bye week</span></li>`
+    : `<li class="srow">
+        <span class="meta">Week ${g.week}</span>
+        <span><span class="srow-opp">${g.home ? 'vs.' : 'at'} ${esc(g.opp)}</span><span class="fine">@ ${esc(g.site)}</span></span>
+        <span class="srow-when">${g.date ? `${fmtDay(g.date)} · ${g.time} ET · ${esc(g.tv)}` : 'Date and time TBD'}</span>
+      </li>`);
+
   const nextGame = () => {
     const n = D.season.next;
     const local = new Date(n.kickoff).toLocaleString(undefined, { weekday: 'long', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
@@ -105,12 +115,17 @@
       <div>
         <p class="eyebrow" style="margin:0">Next kickoff · Week ${n.week}</p>
         <p class="bug-opp">Eagles vs. ${esc(n.opp)}</p>
-        <p class="meta">${esc(n.site)} · ${esc(n.tv)}</p>
+        <p class="meta">@ ${esc(n.site)} · ${esc(n.tv)}</p>
         <p class="fine" style="margin-top:6px">${esc(local)}, your time</p>
       </div>
       <div class="cd" data-countdown role="timer" aria-label="Countdown to kickoff">
         ${['Days', 'Hrs', 'Min', 'Sec'].map((u) => `<span><b>--</b><i>${u}</i></span>`).join('')}
       </div>
+    </div>
+    <div class="sched" data-reveal>
+      <p class="eyebrow">Rest of the schedule</p>
+      <ol class="sched-list">${D.season.schedule.map(schedRow).join('')}</ol>
+      <p class="fine">Times are Eastern. Dates, times and channels as listed on the Eagles' official schedule ${fmtDate(D.season.scheduleAsOf)}.</p>
     </div>`;
   };
 
@@ -306,7 +321,7 @@
         <li class="game" data-reveal>
           <span class="meta">Week ${g.week}</span>
           <span class="game-opp">${esc(g.opp)}</span>
-          ${g.site ? `<span class="fine">${esc(g.site)}</span>` : ''}
+          <span class="fine">@ ${esc(g.site)}</span>
           <span class="game-res"><span class="wl ${g.result}">${g.result}<span class="sr-only">${g.result === 'W' ? ' win' : ' loss'}</span></span>${esc(g.score)}</span>
         </li>`).join('');
       $('#news-next').innerHTML = nextGame();
@@ -315,12 +330,12 @@
         ...D.videos.map((v) => ({ type: 'Videos', date: v.date, html: `
           <button type="button" class="frow" data-video="${v.id}">
             ${media(v.thumb, '', 480, 270, 'r16')}
-            <span class="frow-body"><span class="frow-top"><span class="tag">Video</span><span class="meta">${fmtDate(v.date)} · ${fmtDur(v.seconds)}</span></span><span class="card-title">${esc(v.title)}</span></span>
+            <span class="frow-body"><span class="frow-top"><span class="tag">Video</span><span class="meta">${fmtDate(v.date)} · ${fmtDur(v.seconds)}</span></span><span class="card-title">${ttl(v.title)}</span></span>
           </button>` })),
         ...D.articles.map((a) => ({ type: 'Articles', date: a.date, html: `
           <a class="frow" href="${articleHref(a)}">
             ${media(a.image, '', 480, 270, 'r16')}
-            <span class="frow-body"><span class="frow-top"><span class="tag quiet">Article</span><span class="meta">${fmtDate(a.date)} · ${esc(a.series)}</span></span><span class="card-title">${esc(a.title)}</span></span>
+            <span class="frow-body"><span class="frow-top"><span class="tag quiet">Article</span><span class="meta">${fmtDate(a.date)} · ${esc(a.series)}</span></span><span class="card-title">${ttl(a.title)}</span></span>
           </a>` })),
       ].sort((a, b) => b.date.localeCompare(a.date));
       const render = (type) => {
@@ -361,11 +376,11 @@
       $('#art-title').textContent = a.title;
       $('#art-top').innerHTML = `<a class="tag" href="blog.html?series=${encodeURIComponent(a.series)}">${esc(a.series)}</a>`;
       const newer = D.articles[i - 1], older = D.articles[i + 1];
-      const pn = (x, label) => (x ? `<a href="${articleHref(x)}"><span class="meta">${label}</span><span class="card-title">${esc(x.title)}</span></a>` : '');
+      const pn = (x, label) => (x ? `<a href="${articleHref(x)}"><span class="meta">${label}</span><span class="card-title">${ttl(x.title)}</span></a>` : '');
       body.innerHTML = `
         <p class="meta">By ${esc(D.writer.name)} · ${fmtDate(a.date)}</p>
         ${media(a.image, '', 1200, 800, 'r32', '', 'fetchpriority="high"')}
-        ${a.excerpt ? `<p class="excerpt">${esc(a.excerpt)}</p>` : '<p class="excerpt">No preview on this one. The full piece is a click away.</p>'}
+        ${a.excerpt ? `<p class="excerpt">${ttl(a.excerpt)}</p>` : '<p class="excerpt">No preview on this one. The full piece is a click away.</p>'}
         <div class="readmore">
           <p class="fine">This is a preview. The full article lives on the show’s site.</p>
           <div class="btn-row"><a class="btn" href="${esc(a.url)}" ${EXT}>Read the full article</a><a class="btn ghost" href="blog.html">All articles</a></div>
@@ -415,9 +430,9 @@
           ${s.stat ? `<span class="meta">${esc(s.stat)} ${asOf}</span>` : ''}
           <span class="go">Follow on ${esc(s.name)}</span>
         </a>`).join('') + `
-        <a class="social wide" href="${D.show.membershipUrl}" ${EXT} data-reveal>
-          <span class="eyebrow" style="margin:0">YouTube membership</span>
-          <span class="social-name">Join the channel</span>
+        <a class="social" href="${D.show.membershipUrl}" ${EXT} data-reveal>
+          <span class="social-name">Members</span>
+          <span class="social-handle">YouTube channel membership</span>
           <span class="go">Become a member on YouTube</span>
         </a>`;
     },

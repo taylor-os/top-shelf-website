@@ -17,7 +17,7 @@ window.PSS = {
   "subscribeUrl": "https://www.youtube.com/@thephillyspecialshow?sub_confirmation=1",
   "membershipUrl": "https://www.youtube.com/channel/UCrhQ6meclsB2RQDhXAiyyrQ/join",
   "logo": "assets/logo.webp",
-  "hostPhoto": "assets/josh-davis.jpg",
+  "hostPhoto": "assets/josh-davis.jpg"
  },
  "writer": {
   "name": "Anthony DiBona",
@@ -223,28 +223,33 @@ window.PSS = {
     "week": 1,
     "opp": "Washington Commanders",
     "result": "W",
-    "score": "24-22"
+    "score": "24-22",
+    "site": "Lincoln Financial Field",
+    "home": true
    },
    {
     "week": 2,
     "opp": "Tennessee Titans",
-    "site": "at Nissan Stadium",
+    "site": "Nissan Stadium",
     "result": "W",
-    "score": "24-20"
+    "score": "24-20",
+    "home": false
    },
    {
     "week": 3,
     "opp": "Chicago Bears",
-    "site": "at Soldier Field",
+    "site": "Soldier Field",
     "result": "L",
-    "score": "27-7"
+    "score": "27-7",
+    "home": false
    },
    {
     "week": 4,
     "opp": "Los Angeles Rams",
     "site": "Lincoln Financial Field",
     "result": "L",
-    "score": "24-20"
+    "score": "24-20",
+    "home": true
    }
   ],
   "next": {
@@ -253,7 +258,119 @@ window.PSS = {
    "site": "Tottenham Hotspur Stadium, London",
    "kickoff": "2026-10-11T09:30:00-04:00",
    "tv": "NFL Network"
-  }
+  },
+  "schedule": [
+   {
+    "week": 6,
+    "opp": "Carolina Panthers",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-10-18",
+    "time": "1:00 PM",
+    "tv": "CBS"
+   },
+   {
+    "week": 7,
+    "opp": "Dallas Cowboys",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-10-26",
+    "time": "8:15 PM",
+    "tv": "ESPN / ABC"
+   },
+   {
+    "week": 8,
+    "opp": "Washington Commanders",
+    "home": false,
+    "site": "Northwest Stadium",
+    "date": "2026-11-01",
+    "time": "8:20 PM",
+    "tv": "NBC"
+   },
+   {
+    "week": 9,
+    "opp": "New York Giants",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-11-08",
+    "time": "1:00 PM",
+    "tv": "FOX"
+   },
+   {
+    "week": 10,
+    "bye": true
+   },
+   {
+    "week": 11,
+    "opp": "Pittsburgh Steelers",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-11-22",
+    "time": "4:25 PM",
+    "tv": "CBS"
+   },
+   {
+    "week": 12,
+    "opp": "Dallas Cowboys",
+    "home": false,
+    "site": "AT&T Stadium",
+    "date": "2026-11-26",
+    "time": "4:30 PM",
+    "tv": "FOX"
+   },
+   {
+    "week": 13,
+    "opp": "Arizona Cardinals",
+    "home": false,
+    "site": "State Farm Stadium",
+    "date": "2026-12-06",
+    "time": "4:05 PM",
+    "tv": "FOX"
+   },
+   {
+    "week": 14,
+    "opp": "Indianapolis Colts",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-12-13",
+    "time": "1:00 PM",
+    "tv": "FOX"
+   },
+   {
+    "week": 15,
+    "opp": "Seattle Seahawks",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-12-19",
+    "time": "5:00 PM",
+    "tv": "FOX"
+   },
+   {
+    "week": 16,
+    "opp": "Houston Texans",
+    "home": true,
+    "site": "Lincoln Financial Field",
+    "date": "2026-12-24",
+    "time": "8:15 PM",
+    "tv": "Prime Video"
+   },
+   {
+    "week": 17,
+    "opp": "San Francisco 49ers",
+    "home": false,
+    "site": "Levi's Stadium",
+    "date": "2027-01-03",
+    "time": "8:20 PM",
+    "tv": "NBC"
+   },
+   {
+    "week": 18,
+    "opp": "New York Giants",
+    "home": false,
+    "site": "MetLife Stadium"
+   }
+  ],
+  "scheduleAsOf": "2026-10-07"
  },
  "videos": [
   {
