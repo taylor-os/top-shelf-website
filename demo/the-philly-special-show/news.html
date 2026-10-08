@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eagles News | The Philly Special Show</title>
+<meta name="description" content="Eagles news hub from The Philly Special Show: season results week by week and every recent video and article in one feed.">
+<link rel="icon" href="assets/josh-davis.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="news">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="eyebrow">The news desk</p>
+      <h1>Eagles News</h1>
+      <p class="lede">Where the season stands and everything the show has put out lately.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-season">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Season tracker</p>
+          <h2 id="h-season">The story so far</h2>
+        </div>
+        <p><span class="meta">Record</span><br><span class="record" id="news-record"></span></p>
+      </div>
+      <ul class="games" id="news-games"></ul>
+      <div id="news-next" style="margin-top:22px"></div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-feed">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Newest first</p>
+          <h2 id="h-feed">Latest headlines</h2>
+        </div>
+      </div>
+      <div class="chips" id="news-chips" role="group" aria-label="Filter headlines by type"></div>
+      <ul class="feed" id="news-feed"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

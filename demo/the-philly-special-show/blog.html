@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The DiBona Desk | The Philly Special Show</title>
+<meta name="description" content="Anthony DiBona's Eagles coverage for The Philly Special Show: mailbags, game previews, injury reports, takeaways and analysis.">
+<link rel="icon" href="assets/josh-davis.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="blog">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="eyebrow">Eagles coverage by Anthony DiBona</p>
+      <h1>The DiBona Desk</h1>
+      <p class="lede">Mailbags, previews, injury reports and the numbers behind them. Filter by series or search for whatever is keeping you up at night.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Articles">
+    <div class="wrap">
+      <div class="controls">
+        <div class="field">
+          <label for="blog-q">Search articles</label>
+          <input type="search" id="blog-q" placeholder="Try “mailbag” or “Titans”" autocomplete="off">
+        </div>
+      </div>
+      <div class="chips" id="blog-chips" role="group" aria-label="Filter articles by series"></div>
+      <p class="meta count" id="blog-count" aria-live="polite"></p>
+      <div id="blog-list"></div>
+      <div id="blog-author"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

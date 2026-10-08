@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Episodes | The Philly Special Show</title>
+<meta name="description" content="Watch the latest episodes of The Philly Special Show. Search, sort by newest or most viewed, and play them right on the page.">
+<link rel="icon" href="assets/josh-davis.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="episodes">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="eyebrow">Watch</p>
+      <h1>Episodes</h1>
+      <p class="lede">The most recent uploads from the channel. Search them, sort them, and watch without leaving the page.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Episode list">
+    <div class="wrap">
+      <div class="controls">
+        <div class="field">
+          <label for="ep-q">Search episodes</label>
+          <input type="search" id="ep-q" placeholder="Try “Rams” or “Week 2”" autocomplete="off">
+        </div>
+        <div class="field narrow">
+          <label for="ep-sort">Sort by</label>
+          <select id="ep-sort">
+            <option value="date">Newest</option>
+            <option value="views">Most viewed</option>
+          </select>
+        </div>
+      </div>
+      <p class="meta count" id="ep-count" aria-live="polite"></p>
+      <div class="grid" id="ep-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Philly Special Show | Eagles news with a side of sarcasm</title>
+<meta name="description" content="The home of The Philly Special Show: the latest Eagles episodes, articles, merch and updates from Josh Davis.">
+<link rel="icon" href="assets/josh-davis.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Eagles news, with a side of sarcasm</p>
+        <h1 class="kinetic" id="hero-h1"><span class="sr-only">The Philly Special Show. </span></h1>
+        <div class="hero-ep" id="hero-ep"></div>
+      </div>
+      <div id="hero-frame"></div>
+    </div>
+  </section>
+
+  <div class="wrap home-bug" id="home-next"></div>
+
+  <section class="section" aria-labelledby="h-episodes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Fresh off the upload</p>
+          <h2 id="h-episodes">Latest episodes</h2>
+        </div>
+        <a class="more" href="episodes.html">All episodes</a>
+      </div>
+      <div class="rail" id="home-rail"></div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-articles">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">The DiBona Desk</p>
+          <h2 id="h-articles">Read up before you argue</h2>
+        </div>
+        <a class="more" href="blog.html">All articles</a>
+      </div>
+      <div id="home-articles"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-stats">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">The scoreboard</p>
+          <h2 id="h-stats">A lot of people watch this</h2>
+        </div>
+        <a class="more" href="sponsors.html">Advertise on the show</a>
+      </div>
+      <div id="home-stats"></div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-sponsors">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Recent video sponsors</p>
+          <h2 id="h-sponsors">They keep the lights on</h2>
+        </div>
+        <a class="more" href="sponsors.html">Codes and offers</a>
+      </div>
+    </div>
+    <div class="marquee" id="home-marquee"></div>
+  </section>
+
+  <section class="section" aria-labelledby="h-signup">
+    <div class="wrap signup">
+      <div>
+        <p class="eyebrow">Get updates</p>
+        <h2 id="h-signup">Know before your group chat does</h2>
+        <p class="lede" style="margin-top:16px">New episodes, new articles, merch drops and game-day alerts. Pick what you want and skip the rest.</p>
+      </div>
+      <form class="form" data-demo>
+        <div class="field">
+          <label for="home-email">Email</label>
+          <div class="inline">
+            <input type="email" id="home-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="home-error">
+            <button type="submit" class="btn">Sign me up</button>
+          </div>
+        </div>
+        <p class="error" id="home-error" data-error role="alert"></p>
+        <p class="fine">Want to choose what you get? <a href="subscribe.html">Use the full form</a>. This is a demo form. Nothing you type here is sent or saved.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-merch">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Merch</p>
+          <h2 id="h-merch">Dress like you called the play</h2>
+        </div>
+        <a class="more" href="merch.html">All merch</a>
+      </div>
+      <div class="grid" id="home-merch"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

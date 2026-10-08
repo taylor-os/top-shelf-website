@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Merch | The Philly Special Show</title>
+<meta name="description" content="Tees from The Philly Special Show, sold through The Philly Linc. Browse the lineup and buy on the store.">
+<link rel="icon" href="assets/josh-davis.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="merch">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="eyebrow">Sold through The Philly Linc</p>
+      <h1>Merch</h1>
+      <p class="lede">Tees for game day, the day after game day, and the long week of overreacting in between. Checkout happens on the store.</p>
+      <div class="btn-row"><a class="btn" data-store href="merch.html" target="_blank" rel="noopener">Visit the full store</a></div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Products">
+    <div class="wrap">
+      <h2 class="sr-only">All tees</h2>
+      <div class="grid" id="merch-grid"></div>
+      <p class="fine" style="margin-top:22px">Prices and colors as listed on the store when this page was put together. The store has the final word on price, sizes and stock.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>
