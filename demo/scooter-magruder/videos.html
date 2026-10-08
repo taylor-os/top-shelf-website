@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Videos | Scooter Magruder</title>
+<meta name="description" content="Scooter Magruder's latest videos. Filter by series, search by title and watch on the page.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23FF7A1A' stroke='%2315132E' stroke-width='5'/%3E%3Ctext x='32' y='45' font-size='38' font-weight='900' font-family='Arial' text-anchor='middle' fill='%2315132E'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="videos">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="tag t2 tilt">Videos</p>
+      <h1>Watch something quick</h1>
+      <p class="lede">The latest uploads, playable right on this page. Filter by series or search a title.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="chips" id="vid-chips" role="group" aria-label="Filter by series"></div>
+      <div class="tools">
+        <div class="field">
+          <label for="vid-q">Search titles</label>
+          <input type="search" id="vid-q" placeholder="Try “Giants”" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="vid-sort">Sort by</label>
+          <select id="vid-sort">
+            <option value="new">Newest</option>
+            <option value="views">Most viewed</option>
+            <option value="quick">Quickest</option>
+          </select>
+        </div>
+      </div>
+      <p class="count" id="vid-count" aria-live="polite"></p>
+      <div class="grid" id="vid-grid"></div>
+      <div class="btn-row">
+        <a class="btn" data-href="show.youtube" target="_blank" rel="noopener">More on YouTube</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot dark" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

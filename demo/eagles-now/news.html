@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eagles Season Tracker | Eagles Now by Chat Sports</title>
+<meta name="description" content="Where the Eagles season stands: results so far, the next kickoff, the rest of the schedule, and Eagles Now previews and reactions.">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="news">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="kicker">Eagles Now / News</p>
+      <h1>The Eagles desk</h1>
+      <p class="lede">Where the season stands and what’s left on the schedule.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <div class="sec-head">
+          <div>
+            <p class="kicker" id="news-year"></p>
+            <h2>Results so far</h2>
+          </div>
+        </div>
+        <p class="record-line"><span class="record" id="news-record"></span><span class="meta" id="news-record-label"></span></p>
+        <ol class="results" id="news-games"></ol>
+      </div>
+      <div>
+        <div class="sec-head">
+          <div>
+            <p class="kicker">Up next</p>
+            <h2>The schedule</h2>
+          </div>
+        </div>
+        <div id="news-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-cover">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">From the channel</p>
+          <h2 id="h-cover">Previews and reactions</h2>
+        </div>
+        <a class="more" href="videos.html">All videos</a>
+      </div>
+      <ol class="feed two" id="news-feed"></ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

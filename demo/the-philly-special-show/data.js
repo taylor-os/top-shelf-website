@@ -257,7 +257,10 @@ window.PSS = {
    "opp": "Jacksonville Jaguars",
    "site": "Tottenham Hotspur Stadium, London",
    "kickoff": "2026-10-11T09:30:00-04:00",
-   "tv": "NFL Network"
+   "tv": "NFL Network",
+   "home": false,
+   "date": "2026-10-11",
+   "time": "9:30 AM"
   },
   "schedule": [
    {
@@ -267,7 +270,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-10-18",
     "time": "1:00 PM",
-    "tv": "CBS"
+    "tv": "CBS",
+    "kickoff": "2026-10-18T13:00:00-04:00"
    },
    {
     "week": 7,
@@ -276,7 +280,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-10-26",
     "time": "8:15 PM",
-    "tv": "ESPN / ABC"
+    "tv": "ESPN / ABC",
+    "kickoff": "2026-10-26T20:15:00-04:00"
    },
    {
     "week": 8,
@@ -285,7 +290,8 @@ window.PSS = {
     "site": "Northwest Stadium",
     "date": "2026-11-01",
     "time": "8:20 PM",
-    "tv": "NBC"
+    "tv": "NBC",
+    "kickoff": "2026-11-01T20:20:00-05:00"
    },
    {
     "week": 9,
@@ -294,7 +300,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-11-08",
     "time": "1:00 PM",
-    "tv": "FOX"
+    "tv": "FOX",
+    "kickoff": "2026-11-08T13:00:00-05:00"
    },
    {
     "week": 10,
@@ -307,7 +314,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-11-22",
     "time": "4:25 PM",
-    "tv": "CBS"
+    "tv": "CBS",
+    "kickoff": "2026-11-22T16:25:00-05:00"
    },
    {
     "week": 12,
@@ -316,7 +324,8 @@ window.PSS = {
     "site": "AT&T Stadium",
     "date": "2026-11-26",
     "time": "4:30 PM",
-    "tv": "FOX"
+    "tv": "FOX",
+    "kickoff": "2026-11-26T16:30:00-05:00"
    },
    {
     "week": 13,
@@ -325,7 +334,8 @@ window.PSS = {
     "site": "State Farm Stadium",
     "date": "2026-12-06",
     "time": "4:05 PM",
-    "tv": "FOX"
+    "tv": "FOX",
+    "kickoff": "2026-12-06T16:05:00-05:00"
    },
    {
     "week": 14,
@@ -334,7 +344,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-12-13",
     "time": "1:00 PM",
-    "tv": "FOX"
+    "tv": "FOX",
+    "kickoff": "2026-12-13T13:00:00-05:00"
    },
    {
     "week": 15,
@@ -343,7 +354,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-12-19",
     "time": "5:00 PM",
-    "tv": "FOX"
+    "tv": "FOX",
+    "kickoff": "2026-12-19T17:00:00-05:00"
    },
    {
     "week": 16,
@@ -352,7 +364,8 @@ window.PSS = {
     "site": "Lincoln Financial Field",
     "date": "2026-12-24",
     "time": "8:15 PM",
-    "tv": "Prime Video"
+    "tv": "Prime Video",
+    "kickoff": "2026-12-24T20:15:00-05:00"
    },
    {
     "week": 17,
@@ -361,7 +374,8 @@ window.PSS = {
     "site": "Levi's Stadium",
     "date": "2027-01-03",
     "time": "8:20 PM",
-    "tv": "NBC"
+    "tv": "NBC",
+    "kickoff": "2027-01-03T20:20:00-05:00"
    },
    {
     "week": 18,

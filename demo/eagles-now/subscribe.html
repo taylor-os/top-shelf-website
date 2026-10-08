@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Get Alerts | Eagles Now by Chat Sports</title>
+<meta name="description" content="Sign up for Eagles Now alerts and choose the kinds you want: breaking news, rumors, game previews and reactions.">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="subscribe">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="kicker">Eagles Now / Alerts</p>
+      <h1>Get the alerts</h1>
+      <p class="lede">Pick the kinds of video you want to hear about. Skip the rest.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <!-- data-demo: handled entirely in app.js. No network request is made and nothing is stored. -->
+      <form class="form" data-demo>
+        <div class="field">
+          <label for="sub-email">Email (required)</label>
+          <input type="email" id="sub-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="sub-error">
+        </div>
+        <div class="field">
+          <label for="sub-name">First name (optional)</label>
+          <input type="text" id="sub-name" name="firstName" autocomplete="given-name">
+        </div>
+        <fieldset>
+          <legend>Alert me about</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="topics" value="breaking news" checked> Breaking</label>
+            <label><input type="checkbox" name="topics" value="rumors" checked> Rumors</label>
+            <label><input type="checkbox" name="topics" value="game previews"> Game previews</label>
+            <label><input type="checkbox" name="topics" value="reactions"> Reactions</label>
+          </div>
+        </fieldset>
+        <p class="error" id="sub-error" data-error role="alert"></p>
+        <button type="submit" class="btn">Get alerts</button>
+        <p class="fine">This is a demo form. Nothing you type here is sent or saved.</p>
+      </form>
+      <p class="fine" style="margin-top:18px">Prefer YouTube’s own notifications? <a data-link="subscribe" target="_blank" rel="noopener">Subscribe to the channel</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

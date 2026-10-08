@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Thomas Mott Show | Unfiltered Eagles talk</title>
+<meta name="description" content="The home of The Thomas Mott Show: the latest Eagles videos, the schedule, sponsors, merch and updates from Thomas Mott.">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">The Thomas Mott Show</p>
+        <h1 class="display" id="hero-h1"><span class="ln"><span>Unfiltered</span></span> <span class="ln"><span>thoughts on</span></span> <span class="ln"><span><em>the Birds.</em></span></span></h1>
+        <p class="lede">Join me every week as we sift through the news surrounding The Birds and the NFL.</p>
+        <div class="btn-row" id="hero-cta"></div>
+        <div class="subs" id="subs"></div>
+      </div>
+      <figure class="portrait">
+        <span class="portrait-back"></span>
+        <span class="media"><img src="assets/avatar.jpg" alt="Thomas Mott smiling and holding a football" width="600" height="600" fetchpriority="high"></span>
+        <figcaption>Thomas Mott, host</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-latest">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" id="h-latest">The latest</h2>
+        <a class="more" href="episodes.html">All recent videos</a>
+      </div>
+      <div class="lead" id="home-lead"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-sched">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" id="h-sched">What’s next for the Birds</h2>
+        <a class="more" href="news.html">Season so far</a>
+      </div>
+      <div id="home-next"></div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-more">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" id="h-more">More recent videos</h2>
+        <a class="more" href="episodes.html">Search the videos</a>
+      </div>
+      <ul class="stories" id="home-list"></ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-sponsors">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" id="h-sponsors">Recent video sponsors</h2>
+        <a class="more" href="sponsors.html">Codes and offers</a>
+      </div>
+      <ul class="names" id="home-names"></ul>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-signup">
+    <div class="wrap signup">
+      <div>
+        <p class="eyebrow">Get updates</p>
+        <h2 class="h2" id="h-signup">Show updates by email</h2>
+        <p class="lede" style="margin-top:14px">Sign up for new video alerts and game day reminders.</p>
+      </div>
+      <form class="form" data-demo>
+        <div class="field">
+          <label for="home-email">Email</label>
+          <div class="inline">
+            <input type="email" id="home-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="home-error">
+            <button type="submit" class="btn">Sign me up</button>
+          </div>
+        </div>
+        <p class="error" id="home-error" data-error role="alert"></p>
+        <p class="fine">Want to choose what you get? <a href="subscribe.html">Use the full form</a>. This is a demo form. Nothing you type here is sent or saved.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

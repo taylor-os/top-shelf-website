@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Articles | Eagles Now by Chat Sports</title>
+<meta name="description" content="Eagles headlines from Chat Sports. Search the list and open any story on chatsports.com.">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="articles">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="kicker">Eagles Now / Articles</p>
+      <h1>Articles</h1>
+      <p class="lede">Eagles articles published on Chat Sports. Every headline here opens the full story on chatsports.com.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <div class="controls">
+        <div class="field">
+          <label for="art-q">Search headlines</label>
+          <input type="search" id="art-q" placeholder="Try a player or an opponent">
+        </div>
+      </div>
+      <p class="meta count" id="art-count" aria-live="polite"></p>
+      <ol class="art-list" id="art-list"></ol>
+      <div class="btn-row"><a class="btn ghost" data-link="chatsports" target="_blank" rel="noopener">More Eagles coverage on chatsports.com</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

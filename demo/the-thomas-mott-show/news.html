@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eagles | The Thomas Mott Show</title>
+<meta name="description" content="The Eagles season at a glance: results, the next game, the rest of the schedule and the latest videos from The Thomas Mott Show.">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="news">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <div class="wrap page-head">
+    <p class="eyebrow">Eagles</p>
+    <h1 class="display">Where the Birds <em>stand.</em></h1>
+    <p class="lede">The results so far, the next game and everything left on the schedule.</p>
+  </div>
+
+  <section class="section alt" aria-labelledby="h-season">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h2" id="h-season">The season so far</h2></div>
+      <p class="record" id="news-record"></p>
+      <ol class="sched-list" id="news-games"></ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-next">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h2" id="h-next">What’s next</h2></div>
+      <div id="news-next"></div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="h-heads">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" id="h-heads">What the show has said lately</h2>
+        <a class="more" href="episodes.html">Browse with thumbnails</a>
+      </div>
+      <ol class="heads" id="news-heads"></ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>

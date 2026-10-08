@@ -139,37 +139,45 @@
     setInterval(pull, 5 * 60 * 1000);
   }
 
+  // The countdown always targets the first game still to kick off; anything before it with no result yet is "pending".
+  const allGames = [D.season.next, ...D.season.schedule];
+  const upcomingAt = () => allGames.findIndex((g) => g.kickoff && new Date(g.kickoff).getTime() > Date.now());
+  const pendingGames = () => allGames.slice(0, upcomingAt() < 0 ? allGames.length : upcomingAt()).filter((g) => g.kickoff);
+
   const nextGame = () => {
-    const n = D.season.next;
+    const at = upcomingAt(), n = allGames[at];
+    const rest = at < 0 ? allGames.filter((g) => !g.bye && !g.kickoff) : allGames.slice(at + 1);
+    const sched = `
+    <div class="sched" data-reveal>
+      <p class="eyebrow">Rest of the schedule</p>
+      <ol class="sched-list">${rest.map(schedRow).join('')}</ol>
+      <p class="fine">Times are Eastern. Dates, times and channels as listed on the Eagles' official schedule ${fmtDate(D.season.scheduleAsOf)}.</p>
+    </div>`;
+    if (!n) return sched;
     const local = new Date(n.kickoff).toLocaleString(undefined, { weekday: 'long', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
     return `
     <div class="bug" data-reveal>
       <div>
         <p class="eyebrow" style="margin:0">Next kickoff · Week ${n.week}</p>
-        <p class="bug-opp">Eagles vs. ${esc(n.opp)}</p>
+        <p class="bug-opp">Eagles ${n.home ? 'vs.' : 'at'} ${esc(n.opp)}</p>
         <p class="meta">@ ${esc(n.site)} · ${esc(n.tv)}</p>
         <p class="fine" style="margin-top:6px">${esc(local)}, your time</p>
       </div>
-      <div class="cd" data-countdown role="timer" aria-label="Countdown to kickoff">
+      <div class="cd" data-countdown="${n.kickoff}" role="timer" aria-label="Countdown to kickoff">
         ${['Days', 'Hrs', 'Min', 'Sec'].map((u) => `<span><b>--</b><i>${u}</i></span>`).join('')}
       </div>
-    </div>
-    <div class="sched" data-reveal>
-      <p class="eyebrow">Rest of the schedule</p>
-      <ol class="sched-list">${D.season.schedule.map(schedRow).join('')}</ol>
-      <p class="fine">Times are Eastern. Dates, times and channels as listed on the Eagles' official schedule ${fmtDate(D.season.scheduleAsOf)}.</p>
-    </div>`;
+    </div>${sched}`;
   };
 
   function countdowns() {
     const els = $$('[data-countdown]');
     if (!els.length) return;
-    const kickoff = new Date(D.season.next.kickoff).getTime();
+    const kickoff = new Date(els[0].dataset.countdown).getTime();
     const tick = () => {
       const left = kickoff - Date.now();
       if (left <= 0) {
-        els.forEach((el) => (el.closest('.bug') || el).remove()); // no next game in data to roll to
-        return clearInterval(id);
+        clearInterval(id);
+        return location.reload(); // kickoff passed: the reload targets the next game
       }
       const s = Math.floor(left / 1000);
       const parts = [Math.floor(s / 86400), Math.floor((s % 86400) / 3600), Math.floor((s % 3600) / 60), s % 60];
@@ -356,6 +364,12 @@
           <span class="game-opp">${esc(g.opp)}</span>
           <span class="fine">@ ${esc(g.site)}</span>
           <span class="game-res"><span class="wl ${g.result}">${g.result}<span class="sr-only">${g.result === 'W' ? ' win' : ' loss'}</span></span>${esc(g.score)}</span>
+        </li>`).join('') + pendingGames().map((g) => `
+        <li class="game" data-reveal>
+          <span class="meta">Week ${g.week}</span>
+          <span class="game-opp">${esc(g.opp)}</span>
+          <span class="fine">@ ${esc(g.site)}</span>
+          <span class="game-res"><span class="fine">Result pending</span></span>
         </li>`).join('');
       $('#news-next').innerHTML = nextGame();
 
