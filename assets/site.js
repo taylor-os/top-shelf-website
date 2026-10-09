@@ -269,7 +269,7 @@
   panel.className = 'tsc-panel'; panel.id = 'tsChatPanel'; panel.setAttribute('aria-label', 'Top Shelf assistant');
   panel.innerHTML =
     '<div class="tsc-head"><div class="tsc-av"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>'
-    + '<div><b>Top Shelf Concierge</b><span>Typically replies instantly</span></div>'
+    + '<div><b>Top Shelf AI Assistant</b><span>Typically replies instantly</span></div>'
     + '<button type="button" aria-label="Close">×</button></div>'
     + '<div class="tsc-body"></div>'
     + '<div class="tsc-quick"></div>'
@@ -315,7 +315,7 @@
 
   // Site-level intents (checked before the vault)
   var INTENTS = [
-    { k: ['hello','hi','hey','help','start'], a: function () { return "Hi! I'm the Top Shelf concierge. I can walk you through what we do — websites, marketing, CRM, AI phone answering, payments and a lot more — and help you get a free audit. What kind of business do you run?"; } },
+    { k: ['hello','hi','hey','help','start'], a: function () { return "Hi! I'm the Top Shelf AI assistant. I can walk you through what we do — websites, marketing, CRM, AI phone answering, payments and a lot more — and help you get a free audit. What kind of business do you run?"; } },
     { k: ['price','pricing','cost','how much','quote','rate','fee','afford','budget'], a: function () { return "Every business is different, so we don't do one-size-fits-all pricing — we run a quick <strong>free audit</strong> of your business and build you a custom plan that fits. Want me to set that up? I'll just grab your details."; } },
     { k: ['who are you','what is top shelf','about','why you','why top shelf','trust'], a: function () { return "Top Shelf Business Solutions is your all-in-one growth partner — we handle the tech and marketing that get you more customers, so you can run your business. We tailor everything to your trade and you keep what we build for you."; } },
     { k: ['how does it work','how it works','process','get started','start','next step'], a: function () { return "Simple: we do a free audit of where you're losing customers, show you exactly what we'd fix, and build a custom plan — no guesswork. Want me to get you on the list for an audit?"; } },
@@ -398,7 +398,7 @@
      chasing us and we never know they existed. If we can't deliver, we say so
      and hand over the phone number. */
   function submit() {
-    var payload = { name: lead.name, business: lead.business, need: lead.need, page: location.href, source: 'website-chat' };
+    var payload = { name: lead.name, business: lead.business, need: lead.need, page: location.href.slice(0, 300), source: 'website-chat' };
     if (EMAIL_RE.test(lead.contact)) payload.email = lead.contact; else payload.phone = lead.contact;
 
     fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
@@ -448,7 +448,7 @@
     turns.push({ role: 'user', content: text.slice(0, 2000) });
     var bubble = window.__tsChatTyping();
 
-    fetch(CHAT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: turns.slice(-40), page: location.href, captured: captured }) })
+    fetch(CHAT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: turns.slice(-40), page: location.href.slice(0, 300), captured: captured }) })
       .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
       .then(function (d) {
         turns.push({ role: 'assistant', content: d.reply });
