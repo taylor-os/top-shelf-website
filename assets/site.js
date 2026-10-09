@@ -445,13 +445,13 @@
     if (aiDown) { scripted(text); return; }
 
     window.__tsChatSetQuick([]);
-    turns.push({ role: 'user', content: text.slice(0, 2000) });
+    turns.push({ role: 'user', content: text.slice(0, 1000) });
     var bubble = window.__tsChatTyping();
 
     fetch(CHAT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: turns.slice(-40), page: location.href.slice(0, 300), captured: captured }) })
       .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
       .then(function (d) {
-        turns.push({ role: 'assistant', content: d.reply });
+        turns.push({ role: 'assistant', content: String(d.reply).slice(0, 1000) });
         bubble.innerHTML = window.__tsChatEscape(d.reply).replace(/\n/g, '<br>')
           .replace(/topshelfsolutions\.io\/booking/g, '<a href="/booking">topshelfsolutions.io/booking</a>');
         bubble.parentNode.scrollTop = bubble.parentNode.scrollHeight;
