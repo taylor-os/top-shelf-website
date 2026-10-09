@@ -340,10 +340,11 @@
   function userMsg(text) { el(escapeHtml(text), 'tsc-msg tsc-msg--user'); }
   function escapeHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   window.__tsChatBotReply = botReply; window.__tsChatUserMsg = userMsg; window.__tsChatEscape = escapeHtml;
+  window.__tsChatTyping = botTyping;
 
   window.__tsChatGreet = function () {
-    botReply("Hi! I'm the <strong>Top Shelf concierge</strong>. Ask me anything about how we help businesses grow — or tell me your trade and I'll point you to the right fix. 👋", 400);
-    setQuick(['What do you offer?', 'Help me get more customers', 'Book a free audit']);
+    botReply("Hi! I'm the Top Shelf AI assistant. Ask me anything about what we do, or I can set up a call back from our team. What can I help you with?", 400);
+    setQuick(['What do you offer?', 'Help me get more customers', 'Schedule a call back']);
   };
 
   function setQuick(items) {
@@ -426,10 +427,42 @@
 
   var wantsCapture = /(call me|reach out|contact me|leave|my (name|number|info)|get (an )?audit|book|sign me up|yes|get started|interested)/i;
 
-  window.__tsChatHandle = function (text) {
-    if (lead.active) { step(text); return; }
+  // The scripted flow: keyword answers + step-by-step capture. It is the fallback
+  // for when the AI assistant below can't be reached.
+  function scripted(text) {
     var res = window.__tsChatRespond(text); // renders the answer
     if (res && (res.cta || wantsCapture.test(text))) { setTimeout(function () { if (!lead.active) start(text); }, 1500); }
+  }
+
+  /* AI assistant: the CRM answers each turn from the whole conversation and saves
+     the lead itself once the visitor confirms their details. Any failure switches
+     this visit to the scripted flow, so the widget never goes dead. */
+  var CHAT_ENDPOINT = 'https://top-shelf-production.up.railway.app/api/website-chat';
+  var turns = [], aiDown = false, captured = false;
+
+  window.__tsChatHandle = function (text) {
+    if (lead.active) { step(text); return; }
+    if (aiDown) { scripted(text); return; }
+
+    window.__tsChatSetQuick([]);
+    turns.push({ role: 'user', content: text.slice(0, 2000) });
+    var bubble = window.__tsChatTyping();
+
+    fetch(CHAT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: turns.slice(-40), page: location.href, captured: captured }) })
+      .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
+      .then(function (d) {
+        turns.push({ role: 'assistant', content: d.reply });
+        bubble.innerHTML = window.__tsChatEscape(d.reply).replace(/\n/g, '<br>')
+          .replace(/topshelfsolutions\.io\/booking/g, '<a href="/booking">topshelfsolutions.io/booking</a>');
+        bubble.parentNode.scrollTop = bubble.parentNode.scrollHeight;
+        if (d.captured && !captured && window.tsTrack) window.tsTrack('generate_lead'); // confirmed chat lead
+        captured = !!d.captured;
+      })
+      .catch(function () {
+        aiDown = true;
+        bubble.remove();
+        scripted(text);
+      });
   };
 })();
 
