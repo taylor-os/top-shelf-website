@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Scooter Magruder | Sports and comedy videos</title>
+<meta name="description" content="The home of Scooter Magruder, in Cowboys colors: the next game countdown, the latest videos by series, merch, press and ways to get in touch.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2306122B'/%3E%3Crect x='3' y='3' width='58' height='58' rx='8' fill='none' stroke='%23B9C3D1' stroke-width='3'/%3E%3Ctext x='32' y='45' font-size='36' font-weight='900' font-family='Arial' text-anchor='middle' fill='%23F5F8FC'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Graduate&family=Kanit:ital,wght@1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker" data-text="show.tagline"></p>
+          <h1 class="hero-h1"><span>Scooter</span> <span>Magruder</span></h1>
+          <p class="lede" data-text="show.intro"></p>
+          <div class="btn-row">
+            <a class="btn" data-href="show.subscribeUrl" target="_blank" rel="noopener">Subscribe on YouTube</a>
+            <a class="btn ghost" href="#series">Pick a series</a>
+          </div>
+          <ul class="hash" id="hero-hash" aria-label="Hashtags from his channel"></ul>
+        </div>
+        <div class="hero-art" id="hero-art"></div>
+      </div>
+      <div class="next" id="next-game" data-if-next></div>
+      <div class="hero-foot">
+        <p class="record" data-slot="record"></p>
+        <a class="more" href="cowboys.html">Results and full schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rule" aria-labelledby="h-lead">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">Start here</p>
+          <h2 id="h-lead"></h2>
+          <p class="lede" id="lead-count"></p>
+        </div>
+        <a class="more" href="videos.html">All videos</a>
+      </div>
+      <div class="feature" id="home-feature"></div>
+      <div class="grid" id="home-lead"></div>
+    </div>
+  </section>
+
+  <section class="section rule" id="series" aria-labelledby="h-series">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">More to watch</p>
+          <h2 id="h-series">Pick a series</h2>
+          <p class="lede">Most of these are over in under three minutes.</p>
+        </div>
+      </div>
+      <div class="tiles" id="home-series"></div>
+    </div>
+  </section>
+
+  <section class="section steel" aria-labelledby="h-cp">
+    <div class="wrap cp">
+      <h2 class="kicker" id="h-cp">Catchphrases</h2>
+      <div class="cp" id="home-cp"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-feat">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-feat">Featured by</h2>
+        <a class="more" href="press.html">Press</a>
+      </div>
+      <div data-slot="featured"></div>
+    </div>
+  </section>
+
+  <section class="section rule" aria-labelledby="h-merch">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">The Grown Man store</p>
+          <h2 id="h-merch">Wear the catchphrase</h2>
+        </div>
+        <a class="more" href="merch.html">All merch</a>
+      </div>
+      <div class="grid" id="home-merch"></div>
+    </div>
+  </section>
+
+  <section class="section tight" aria-labelledby="h-signup">
+    <div class="wrap">
+      <div class="signup">
+        <div>
+          <h2 id="h-signup">New video? You’ll know.</h2>
+          <p class="lede">Get an email when a new one goes up. Want only certain series? <a href="subscribe.html">Use the full form</a>.</p>
+        </div>
+        <form class="form" data-demo>
+          <div class="field">
+            <label for="home-email">Email</label>
+            <div class="inline">
+              <input type="email" id="home-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="home-error">
+              <button type="submit" class="btn">Sign me up</button>
+            </div>
+          </div>
+          <p class="error" id="home-error" data-error role="alert"></p>
+          <p class="fine">This is a demo form. Nothing you type here is sent or saved.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>
