@@ -375,10 +375,12 @@ input[aria-invalid="true"] { border-color: #ff9d8a; }
 .product { cursor: default; }
 .product .media { background: #e9ece9; }
 .price { font: 400 1.7rem/1 var(--disp); color: var(--kelly); }
+/* price sits centred directly above the button (after the colours), so prices line up across a row */
+.product .price { order: 2; margin-top: auto; padding-top: 6px; text-align: center; }
+.product .btn { order: 3; }
 .swatches { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .92rem; color: var(--muted); }
 .swatches li { display: flex; align-items: center; gap: 6px; }
 .swatches i { width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px var(--silver); }
-.product .btn { margin-top: auto; }
 
 /* ---------- sponsors ---------- */
 .sponsor { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); display: flex; flex-direction: column; gap: 14px; }
@@ -507,4 +509,3 @@ noscript p { padding: 24px var(--gut); text-align: center; }
   .foot-grid { grid-template-columns: 1fr 1fr; gap: 26px 20px; }
   .foot-grid > :first-child, .foot-grid > :last-child { grid-column: 1 / -1; }
 }
-.product .btn { margin-top: auto; } /* buy buttons line up across a row */

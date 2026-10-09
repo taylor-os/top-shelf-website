@@ -171,8 +171,8 @@ button.card:hover { translate: -3px -3px; box-shadow: 8px 8px 0 var(--ink); }
 .card .tag { padding: 2px 9px; font-size: .72rem; letter-spacing: 0; text-transform: none; }
 .card-title { font: 800 .98rem/1.25 var(--body); letter-spacing: 0; }
 .product .media { background: #fff; }
-.price { font: 400 1.5rem/1 var(--disp); }
-.product .btn { align-self: stretch; margin-top: auto; }
+.price { font: 400 1.5rem/1 var(--disp); margin-top: auto; padding-top: 6px; text-align: center; } /* centred and pinned above the button, so prices line up across a row */
+.product .btn { align-self: stretch; }
 .empty { grid-column: 1 / -1; padding: 24px; background: var(--card); border: var(--bd); border-radius: var(--r); font-weight: 600; }
 @media (min-width: 700px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } .card-title { font-size: 1.08rem; } .card-body { padding: 16px; } }
 @media (min-width: 1040px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
