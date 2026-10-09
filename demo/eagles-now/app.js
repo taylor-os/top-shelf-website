@@ -117,14 +117,15 @@
   const scored = new Set(D.season.games.map((g) => g.week));
   const lastScored = Math.max(...scored);
 
-  // next: the first kickoff still ahead. rest: what follows it (the bye and undated games keep their place).
+  // next: the first kickoff still ahead. rest: every game still to play, starting with that one
+  // (the bye and undated games keep their place).
   // pending: kicked off, but no result in data yet.
   function seasonState(now) {
     const past = (g) => Boolean(g.kickoff) && new Date(g.kickoff).getTime() <= now;
     const i = GAMES.findIndex((g) => g.kickoff && !past(g));
     return {
       next: GAMES[i],
-      rest: GAMES.slice((i >= 0 ? i : GAMES.findLastIndex(past)) + 1),
+      rest: GAMES.slice(i >= 0 ? i : GAMES.findLastIndex(past) + 1),
       pending: GAMES.filter((g) => past(g) && !scored.has(g.week)),
     };
   }

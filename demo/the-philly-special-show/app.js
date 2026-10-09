@@ -146,7 +146,7 @@
 
   const nextGame = () => {
     const at = upcomingAt(), n = allGames[at];
-    const rest = at < 0 ? allGames.filter((g) => !g.bye && !g.kickoff) : allGames.slice(at + 1);
+    const rest = at < 0 ? allGames.filter((g) => !g.bye && !g.kickoff) : allGames.slice(at); // starts with the countdown's game
     const sched = `
     <div class="sched" data-reveal>
       <p class="eyebrow">Rest of the schedule</p>

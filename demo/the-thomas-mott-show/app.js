@@ -116,7 +116,7 @@
     const next = slate.find((g, i) => i > last && g.kickoff);
     return {
       next,
-      rest: slate.slice(last + 1).filter((g) => g !== next),
+      rest: slate.slice(last + 1), // starts with the countdown's game
       pending: slate.filter((g) => kicked(g) && !D.season.games.some((p) => p.week === g.week)),
     };
   };
