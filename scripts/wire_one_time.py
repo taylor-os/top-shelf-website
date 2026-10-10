@@ -8,7 +8,8 @@ The page generators do not know about these links, so run this after any of them
   - a short "one job, one price" block above the closing call to action on the pages whose
     topic one of the jobs answers (website cost, not showing on Google, reviews, switching
     vendors, and the three related solution pages)
-  - the pricing page's website line linked to the 5-page site
+  - the pricing page's website line linked to the 5-page site, and the packages and jobs
+    copied from the hub onto the pricing page, above the monthly plans
   - the three Get Found packages on the industry pages, and in the blocks above where one fits
 
 Usage:  python scripts/wire_one_time.py   (from the repo root)
@@ -19,6 +20,8 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MARK = "<!-- one-time-links -->"
+PRICING_OPEN = "<!-- one-time-on-pricing: filled from one-time-services.html by scripts/wire_one_time.py -->"
+PRICING_CLOSE = "<!-- /one-time-on-pricing -->"
 HUB = '<a href="one-time-services.html">See every one-time job</a>'
 
 
@@ -101,6 +104,18 @@ def main():
             s = s.replace("A custom 5-page site is <strong", 'A <a href="custom-5-page-website.html" style="color:var(--gold)">custom 5-page site</a> is <strong', 1)
             s = s.replace("You do not need a plan to buy one.</p>",
                           'You do not need a plan to buy one. <a href="one-time-services.html" style="color:var(--gold)">See every one-time job</a>.</p>', 1)
+        if name == "pricing.html" and PRICING_OPEN in s:
+            # The packages and jobs sit above the monthly plans, copied from the hub so the
+            # prices have one source (generate_one_time.py).
+            hub = open(os.path.join(ROOT, "one-time-services.html"), encoding="utf-8", newline="").read()
+            parts = [re.search(r"<style>.*?</style>", hub, re.S).group(0),
+                     re.search(r'<section id="packages".*?</section>', hub, re.S).group(0),
+                     re.search(r'<section id="jobs".*?</section>', hub, re.S).group(0)
+                     + '\n<p class="container ot-parts" style="margin-top:-3rem;margin-bottom:4rem;max-width:var(--maxw)">'
+                       '<a href="one-time-services.html">See what every one-time job covers</a></p>']
+            body = "\n".join(parts).replace("\r\n", "\n").replace("\n", nl)
+            s = re.sub(re.escape(PRICING_OPEN) + r".*?" + re.escape(PRICING_CLOSE),
+                       lambda m: PRICING_OPEN + nl + body + nl + PRICING_CLOSE, s, count=1, flags=re.S)
         if s != o:
             open(path, "w", encoding="utf-8", newline="").write(s)
     print("footer link added on %d pages; link block on %d pages" % (footers, blocks))

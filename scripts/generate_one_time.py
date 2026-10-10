@@ -353,7 +353,7 @@ for _p in PACKAGES:
 
 PAGE_CSS = """<style>
 .ot-terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2.2rem}
-.ot-term{border:1px solid var(--hair);border-radius:6px;padding:1.2rem 1.3rem;background:rgba(255,255,255,.015)}
+.ot-term{border:1px solid var(--hairline);border-radius:6px;padding:1.2rem 1.3rem;background:rgba(255,255,255,.015)}
 .ot-term b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1.1;color:var(--ink)}
 .ot-term span{display:block;margin-top:.35rem;font-size:.82rem;color:var(--ink-3)}
 .ot-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem;margin-top:2.4rem}
@@ -363,17 +363,17 @@ PAGE_CSS = """<style>
 .ot-pins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2.4rem}
 .ot-pins .annot-pin,.ot-cards .annot-pin{position:static;width:100%;justify-content:space-between;text-align:left}
 .ot-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;margin-top:2.4rem}
-.ot-card{border:1px solid var(--hair);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column;gap:.7rem;background:rgba(255,255,255,.015)}
+.ot-card{border:1px solid var(--hairline);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column;gap:.7rem;background:rgba(255,255,255,.015)}
 .ot-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:1.55rem;line-height:1.15;margin:0}
 .ot-card h3 a{color:var(--ink);text-decoration:none}.ot-card h3 a:hover{color:var(--gold)}
 .ot-card .ot-price{color:var(--gold);font-size:.95rem;letter-spacing:.04em}
 .ot-card p{margin:0;font-size:.92rem;line-height:1.6;color:var(--ink-2)}
 .ot-links{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:1.4rem}
-.ot-links a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hair)}
+.ot-links a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hairline)}
 .ot-links a:hover{border-color:var(--gold)}
 .ot-card .ot-list{margin:0;font-size:.9rem;gap:.5rem}
 .ot-parts{margin-top:2rem;color:var(--ink-2);line-height:1.7;max-width:72ch}
-.ot-parts a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hair)}
+.ot-parts a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hairline)}
 @media (max-width:900px){.ot-terms{grid-template-columns:repeat(2,minmax(0,1fr))}.ot-two,.ot-pins{grid-template-columns:1fr}.ot-cards{grid-template-columns:1fr}}
 </style>"""
 

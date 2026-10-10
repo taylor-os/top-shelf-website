@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing | Top Shelf Business Solutions</title>
-<meta name="description" content="Flat monthly pricing, no surprises. Essentials $299, Signature $899, Platinum $2,500. No setup fee, and your customers are always yours. Get a free audit.">
+<meta name="description" content="Clear pricing, no surprises. One-time jobs like a custom 5-page website for $1,500, or monthly plans: Essentials $299, Signature $899, Platinum $2,500. Get a free audit.">
 <link rel="canonical" href="https://www.topshelfsolutions.io/pricing.html">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Top Shelf Business Solutions">
 <meta property="og:title" content="Pricing | Top Shelf Business Solutions">
-<meta property="og:description" content="Flat monthly pricing, no surprises. Essentials $299, Signature $899, Platinum $2,500. No setup fee, and your customers are always yours. Get a free audit.">
+<meta property="og:description" content="Clear pricing, no surprises. One-time jobs like a custom 5-page website for $1,500, or monthly plans: Essentials $299, Signature $899, Platinum $2,500. Get a free audit.">
 <meta property="og:url" content="https://www.topshelfsolutions.io/pricing.html">
 <meta property="og:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pricing | Top Shelf Business Solutions">
-<meta name="twitter:description" content="Flat monthly pricing, no surprises. Essentials $299, Signature $899, Platinum $2,500. No setup fee, and your customers are always yours. Get a free audit.">
+<meta name="twitter:description" content="Clear pricing, no surprises. One-time jobs like a custom 5-page website for $1,500, or monthly plans: Essentials $299, Signature $899, Platinum $2,500. Get a free audit.">
 <meta name="twitter:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
 <link rel="icon" href="assets/logo-mark.png?v=20260804b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,18 +100,85 @@
   <div class="container page-hero-inner">
     <span class="page-hero-icon reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="11" rx="1.8"/><circle cx="12" cy="12" r="2.6"/><line x1="5.5" y1="9.5" x2="5.5" y2="9.5"/><line x1="18.5" y1="14.5" x2="18.5" y2="14.5"/></svg></span>
     <span class="eyebrow reveal">Simple, Transparent Pricing</span>
-    <h1 class="display display-lg reveal">Flat Monthly Rate. <em>No Surprises.</em></h1>
-    <p class="page-hero-sub reveal">Every plan includes your setup. No hidden fees, and your customers are always yours. These are plans, not a menu you&rsquo;re stuck with, start on one, or we&rsquo;ll build a fully custom plan from your free audit. Either way, you only pay for what you need, and every plan is priced to earn its keep.</p>
+    <h1 class="display display-lg reveal">Clear Prices. <em>No Surprises.</em></h1>
+    <p class="page-hero-sub reveal">Buy one job once and own it, or pay a flat monthly rate for a plan. The one-time jobs come first, each with a single price, and the monthly plans are below them. There are no hidden fees, and your customers are always yours.</p>
     <div class="page-hero-actions reveal">
       <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
-      <a href="#compare" class="btn btn-line">Compare Plans</a>
+      <a href="#plans" class="btn btn-line">See Monthly Plans</a>
     </div>
   </div>
 </section>
 
-<!-- ============================ PRICING CARDS ============================ -->
-<section class="section rule-top">
+<!-- one-time-on-pricing: filled from one-time-services.html by scripts/wire_one_time.py -->
+<style>
+.ot-terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2.2rem}
+.ot-term{border:1px solid var(--hairline);border-radius:6px;padding:1.2rem 1.3rem;background:rgba(255,255,255,.015)}
+.ot-term b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1.1;color:var(--ink)}
+.ot-term span{display:block;margin-top:.35rem;font-size:.82rem;color:var(--ink-3)}
+.ot-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem;margin-top:2.4rem}
+.ot-list{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.8rem}
+.ot-list li{position:relative;padding-left:1.5rem;color:var(--ink-2);line-height:1.6}
+.ot-list li::before{content:"";position:absolute;left:0;top:.72em;width:.6rem;height:1px;background:var(--gold)}
+.ot-pins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2.4rem}
+.ot-pins .annot-pin,.ot-cards .annot-pin{position:static;width:100%;justify-content:space-between;text-align:left}
+.ot-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;margin-top:2.4rem}
+.ot-card{border:1px solid var(--hairline);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column;gap:.7rem;background:rgba(255,255,255,.015)}
+.ot-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:1.55rem;line-height:1.15;margin:0}
+.ot-card h3 a{color:var(--ink);text-decoration:none}.ot-card h3 a:hover{color:var(--gold)}
+.ot-card .ot-price{color:var(--gold);font-size:.95rem;letter-spacing:.04em}
+.ot-card p{margin:0;font-size:.92rem;line-height:1.6;color:var(--ink-2)}
+.ot-links{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:1.4rem}
+.ot-links a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hairline)}
+.ot-links a:hover{border-color:var(--gold)}
+.ot-card .ot-list{margin:0;font-size:.9rem;gap:.5rem}
+.ot-parts{margin-top:2rem;color:var(--ink-2);line-height:1.7;max-width:72ch}
+.ot-parts a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--hairline)}
+@media (max-width:900px){.ot-terms{grid-template-columns:repeat(2,minmax(0,1fr))}.ot-two,.ot-pins{grid-template-columns:1fr}.ot-cards{grid-template-columns:1fr}}
+</style>
+<section id="packages" class="section rule-top">
   <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Packages</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Get Found, <em>Three Ways</em></h2>
+      <p class="reveal">A package is several jobs sold as one, for less than the jobs cost one at a time. Which one fits depends on your website.</p>
+    </div>
+    <div class="ot-cards">
+      <div class="ot-card reveal"><span class="ot-price">$795 one time</span><h3><a href="get-found-package.html">Get Found</a></h3><p>For a business with no website.</p><ul class="ot-list"><li>Your Google listing corrected</li><li>A one-page website of your own, built by us</li><li>A review card for the counter</li></ul><a href="get-found-package.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$1,995 one time</span><h3><a href="get-found-plus.html">Get Found Plus</a></h3><p>For a business with a poor website and a weak Google listing.</p><ul class="ot-list"><li>A new custom 5-page website, built by us</li><li>Your Google listing corrected</li><li>A reply to any unanswered review, each one approved by you first</li><li>A review card for the counter</li></ul><a href="get-found-plus.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$500 one time</span><h3><a href="get-found-listing-reviews.html">Get Found: Listing + Reviews</a></h3><p>For a business whose website is fine.</p><ul class="ot-list"><li>Your Google listing corrected</li><li>A reply to any unanswered review, each one approved by you first</li><li>A review card for the counter</li><li>Your website stays exactly as it is</li></ul><a href="get-found-listing-reviews.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+    </div>
+  </div>
+</section>
+<section id="jobs" class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">The jobs</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">One Job, <em>One Price</em></h2>
+      <p class="reveal">Every job is paid half up front and half when it is done.</p>
+    </div>
+    <div class="ot-cards">
+      <div class="ot-card reveal"><span class="ot-price">$345 one time</span><h3><a href="google-business-profile-fix.html">Google listing fix</a></h3><p>Most local searches end on a Google listing, not a website.</p><a href="google-business-profile-fix.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$1,250 one time</span><h3><a href="map-pack-push.html">Map-pack push</a></h3><p>Google shows three businesses on the map before anyone has to tap for more.</p><a href="map-pack-push.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$1,500 one time</span><h3><a href="custom-5-page-website.html">Custom 5-page website</a></h3><p>Before anyone calls, they look you up.</p><a href="custom-5-page-website.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$495 one time</span><h3><a href="one-page-website.html">One-page website</a></h3><p>Not every business needs five pages.</p><a href="one-page-website.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$495 one time</span><h3><a href="take-back-your-website.html">Take back what&#x27;s yours</a></h3><p>A lot of owners are not sure who actually holds their domain or their Google listing.</p><a href="take-back-your-website.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$150 one time</span><h3><a href="review-reply-catch-up.html">Review reply catch-up</a></h3><p>A row of reviews with no reply tells the next customer nobody is listening.</p><a href="review-reply-catch-up.html" style="color:var(--gold);text-decoration:none;font-size:.9rem;margin-top:auto">See what it covers &rarr;</a></div>
+      <div class="ot-card reveal"><span class="ot-price">$325 per page</span><h3>Extra page</h3><p>One new page for a city or a service, on a site we built.</p></div>
+      <div class="ot-card reveal"><span class="ot-price">$95</span><h3>Review card</h3><p>A card or counter stand that takes a customer straight to your Google review form.</p></div>
+    </div>
+  </div>
+</section>
+<p class="container ot-parts" style="margin-top:-3rem;margin-bottom:4rem;max-width:var(--maxw)"><a href="one-time-services.html">See what every one-time job covers</a></p>
+<!-- /one-time-on-pricing -->
+
+<!-- ============================ PRICING CARDS ============================ -->
+<section id="plans" class="section rule-top">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Monthly plans</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">Flat Monthly Rate. <em>No Surprises.</em></h2>
+      <p class="reveal">Every plan includes your setup. No hidden fees, and your customers are always yours. These are plans, not a menu you&rsquo;re stuck with, start on one, or we&rsquo;ll build a fully custom plan from your free audit. Either way, you only pay for what you need, and every plan is priced to earn its keep.</p>
+    </div>
     <div class="pricing-grid">
       <div class="pricing-card reveal">
         <p class="pricing-name">Essentials</p>
