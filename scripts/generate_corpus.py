@@ -90,7 +90,7 @@ def demo_inner():
     return f'''<span class="eyebrow reveal">See it in action</span>
 {_h2("Watch it handle <em>a live call</em>")}
 <div class="demo-frame reveal">
-  <iframe src="https://crm.topshelfsolutions.io/e/ai-phone" title="AI receptionist live demo" loading="lazy" scrolling="no"></iframe>
+  <iframe src="https://crm.topshelfsolutions.io/e/ai-phone?v=2" title="AI receptionist live demo" loading="lazy" scrolling="no"></iframe>
 </div>
 <p class="demo-cap">A live demo of the AI receptionist taking a call. It is a sample, not a recording of a real customer.</p>'''
 
@@ -314,7 +314,7 @@ def _selfcheck():
     assert 'class="corpus-grid"' in page and 'class="corpus-aside"' in page, "missing sidebar layout"
     assert "aside-toc" in page and 'href="#faq"' in page, "missing jump-link TOC"
     assert "site.css?v=20260918a" in page, "site.css version not bumped (sidebar CSS won't load)"
-    assert "demo-frame" in page and "crm.topshelfsolutions.io/e/ai-phone" in page, "demo missing on demo spec"
+    assert "demo-frame" in page and "crm.topshelfsolutions.io/e/ai-phone?v=2" in page, "demo missing on demo spec"
     import re as _r
     words = len(_r.sub(r"<[^>]+>", " ", _r.search(r"<main>(.*?)</main>", page, _r.S).group(1)).split())
     assert words >= 600, f"body only {words} words (need >=600, anti-thin)"
