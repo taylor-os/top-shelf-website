@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Get updates | Mikerophone</title>
+<meta name="description" content="Sign up for Mikerophone updates and choose which videos you hear about.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,800;1,800;1,900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="subscribe">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"></header>
+<noscript><p>This demo renders its content with JavaScript. Turn it on to see the site.</p></noscript>
+
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <p class="kicker">Updates</p>
+      <h1>Get updates</h1>
+      <p class="lede">Choose what you want to hear about. The email is the only thing required.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form class="form" data-demo>
+        <div class="field">
+          <label for="sub-name">First name <small>(optional)</small></label>
+          <input type="text" id="sub-name" name="firstName" autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="sub-email">Email</label>
+          <input type="email" id="sub-email" name="email" autocomplete="email" required aria-describedby="sub-error">
+        </div>
+        <fieldset>
+          <legend>Send me</legend>
+          <div class="checks">
+            <label><input type="checkbox" value="new videos" checked> New videos</label>
+            <label><input type="checkbox" value="Dark Stories"> Dark Stories</label>
+            <label><input type="checkbox" value="Player Bios"> Player Bios</label>
+            <label><input type="checkbox" value="Documentaries"> Documentaries</label>
+          </div>
+        </fieldset>
+        <p class="error" id="sub-error" data-error aria-live="polite"></p>
+        <div><button type="submit" class="btn">Sign up</button></div>
+        <p class="fine">This form is a demo. It sends nothing and saves nothing. To follow the channel today, <a data-link="subscribe" target="_blank" rel="noopener">subscribe on YouTube</a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="site-foot"></footer>
+
+<script defer src="data.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>
