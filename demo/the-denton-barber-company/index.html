@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<title>The Denton Barber Company | Barber Shop in Denton, TX</title>
+<meta name="description" content="The Denton Barber Company, a barber shop at 517 S Locust St, Denton, TX 76201. Call (940) 218-1800.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Denton Barber Company | Barber Shop in Denton, TX">
+<meta property="og:description" content="Barber shop at 517 S Locust St, Denton, TX 76201. Call (940) 218-1800.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/the-denton-barber-company/assets/listing.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Cpath d='M9 7h7.5c5.2 0 8.5 3.6 8.5 9s-3.3 9-8.5 9H9zm4 3.4v11.2h3.3c2.9 0 4.6-2.2 4.6-5.6s-1.7-5.6-4.6-5.6z' fill='%23FFD60A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/listing.jpg" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   The Denton Barber Company. One-page demo.
+   Direction: black-and-white editorial. Their own monochrome
+   shop photo full-bleed, Bodoni display, sharp corners, and
+   one accent (signal yellow). Signature device: the photo seen
+   again through three mirror panes.
+   ============================================================ */
+:root{
+  --k:#0A0A0A;
+  --k2:#161616;
+  --paper:#F3F3F1;
+  --w:#FFFFFF;
+  --y:#FFD60A;
+  --dim:#A9A9A9;
+  --ink-dim:#4D4D4D;
+  --line:rgba(255,255,255,.16);
+  --line-k:rgba(10,10,10,.16);
+  --e:cubic-bezier(.22,.61,.21,1);
+  --display:"Bodoni Moda","Bodoni MT",Didot,"Times New Roman",serif;
+  --label:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow","Segoe UI",Arial,sans-serif;
+  --bar:60px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-padding-top:1.5rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;background:var(--k);color:var(--w);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,p,dl,dd,ul{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1;letter-spacing:-.012em;text-wrap:balance}
+h2{font-size:clamp(2.5rem,7.4vw,4.75rem)}
+em{font-style:italic}
+::selection{background:var(--y);color:var(--k)}
+:focus-visible{outline:3px solid var(--k);outline-offset:2px;box-shadow:0 0 0 7px var(--y)}
+.wrap{width:min(1180px,100% - clamp(2.5rem,8vw,6rem));margin-inline:auto}
+.section{padding:clamp(4.5rem,11vw,8.5rem) 0}
+.skip{position:absolute;left:1rem;top:-6rem;z-index:300;background:var(--y);color:var(--k);padding:.7rem 1.1rem;font-weight:600;text-decoration:none}
+.skip:focus{top:1rem}
+
+.eyebrow{
+  display:flex;align-items:center;gap:.75rem;
+  font-family:var(--label);font-weight:600;font-size:.9rem;letter-spacing:.24em;text-transform:uppercase;
+  margin-bottom:1.4rem;
+}
+.eyebrow::before{content:"";width:2.25rem;height:3px;background:var(--y);flex:none}
+.on-paper .eyebrow::before,.on-yellow .eyebrow::before{background:var(--k)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:54px;padding:0 1.5rem;
+  font-family:var(--label);font-weight:600;font-size:1.1rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;white-space:nowrap;border:1.5px solid transparent;
+  transition:background-color .2s var(--e),color .2s var(--e),border-color .2s var(--e),transform .15s var(--e);
+}
+.btn:active{transform:scale(.98)}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+.btn--y{background:var(--y);color:var(--k)}
+.btn--line{border-color:rgba(255,255,255,.7);color:var(--w)}
+.btn--k{background:var(--k);color:var(--w)}
+.btn--kline{border-color:var(--k);color:var(--k)}
+@media (hover:hover){
+  .btn--y:hover{background:var(--w)}
+  .btn--line:hover{background:var(--w);color:var(--k);border-color:var(--w)}
+  .btn--k:hover{background:var(--w);color:var(--k)}
+  .btn--kline:hover{background:var(--k);color:var(--w)}
+}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* ---------- ribbon ---------- */
+.ribbon{
+  background:var(--w);color:var(--k);text-align:center;
+  font-size:.72rem;line-height:1.35;letter-spacing:.02em;
+  padding:.45rem clamp(1rem,4vw,2rem);
+}
+.ribbon a{font-weight:600;text-underline-offset:2px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  display:flex;flex-direction:column;
+  min-height:calc(100vh - 2.6rem);
+  min-height:calc(100svh - 2.6rem);
+  background:var(--k);
+}
+@media (min-width:761px){.hero{max-height:980px}}
+.hero__img{
+  position:absolute;inset:0;z-index:-2;
+  width:100%;height:100%;object-fit:cover;object-position:50% 58%;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(to top,rgba(10,10,10,.96) 0%,rgba(10,10,10,.86) 26%,rgba(10,10,10,.38) 52%,rgba(10,10,10,.05) 72%,rgba(10,10,10,.5) 100%);
+}
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding-top:1.1rem;
+}
+.mark{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none}
+.mark__d{
+  width:2.5rem;height:2.5rem;display:grid;place-items:center;flex:none;
+  background:var(--y);color:var(--k);
+  font-family:var(--display);font-weight:800;font-style:italic;font-size:1.5rem;line-height:1;
+}
+.mark__t{font-family:var(--label);font-weight:600;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;line-height:1.25}
+.nav{display:flex;align-items:center;gap:clamp(1rem,2.4vw,2.2rem)}
+.nav a{
+  font-family:var(--label);font-weight:600;font-size:.92rem;letter-spacing:.2em;text-transform:uppercase;
+  text-decoration:none;padding:.6rem 0;border-bottom:2px solid transparent;transition:border-color .2s var(--e);
+}
+@media (hover:hover){.nav a:hover{border-color:var(--y)}}
+.nav .nav__wide{display:none}
+@media (min-width:761px){.nav .nav__wide{display:inline-block}}
+
+.hero__in{margin-top:auto;padding-top:3rem;padding-bottom:clamp(1.75rem,5vw,4rem)}
+.chip{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:var(--label);font-weight:600;font-size:.88rem;letter-spacing:.16em;text-transform:uppercase;
+  white-space:nowrap;line-height:1;
+  padding:.5rem .75rem;border:1px solid var(--line);background:rgba(10,10,10,.55);
+}
+.chip:empty{display:none}
+.chip::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--y);flex:none}
+.chip[data-open="0"]::before{background:transparent;box-shadow:inset 0 0 0 1.5px var(--dim)}
+h1{
+  font-size:clamp(2.9rem,14vw,4.4rem);font-weight:700;line-height:.93;
+  margin:1.1rem 0 1rem;
+}
+h1 span{display:block}
+h1 em{color:var(--y);font-weight:600}
+@media (min-width:761px){
+  h1{font-size:clamp(4rem,9vw,7.5rem)}
+  h1 .l2 span{display:inline}
+}
+.hero__tag{font-size:clamp(1.05rem,1.5vw,1.3rem);max-width:34ch;color:#E6E6E6;text-wrap:pretty}
+.rate{
+  display:inline-flex;align-items:center;flex-wrap:wrap;gap:.35rem .6rem;
+  margin:1.25rem 0 1.4rem;text-decoration:none;
+  font-family:var(--label);font-weight:600;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;line-height:1;
+}
+.rate svg{width:1.25rem;height:1.25rem;flex:none}
+.rate b{font-family:var(--display);font-weight:700;font-size:1.6rem;letter-spacing:0;line-height:1}
+.rate__u{border-bottom:1.5px solid var(--y);padding-bottom:.18rem;white-space:nowrap}
+.stars{position:relative;display:inline-block;font-size:1.05rem;letter-spacing:.12em;line-height:1;color:rgba(255,255,255,.28);white-space:nowrap}
+.stars i{position:absolute;left:0;top:0;width:96%;overflow:hidden;color:var(--y);font-style:normal}
+.hero__cta .btn{flex:1 1 auto}
+@media (min-width:761px){.hero__cta .btn{flex:0 0 auto}}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero__img{animation:settle 1.8s var(--e) both}
+  .hero__in > *{animation:rise .8s var(--e) both}
+  .hero__in > :nth-child(2){animation-delay:.08s}
+  .hero__in > :nth-child(3){animation-delay:.16s}
+  .hero__in > :nth-child(4){animation-delay:.24s}
+  .hero__in > :nth-child(5){animation-delay:.32s}
+  @keyframes settle{from{transform:scale(1.07)}to{transform:none}}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+}
+
+/* ---------- ticker ---------- */
+.tick{background:var(--y);color:var(--k);overflow:hidden;padding:.8rem 0}
+.tick__track{display:flex;width:max-content}
+.tick__g{
+  display:flex;flex:none;
+  font-family:var(--label);font-weight:600;font-size:1.05rem;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;line-height:1;
+}
+.tick__g span{padding:0 1.1rem}
+.tick__g span::after{content:"/";margin-left:2.2rem;opacity:.5}
+@media (prefers-reduced-motion:no-preference){
+  .tick__track{animation:tick 46s linear infinite}
+  @keyframes tick{to{transform:translateX(-50%)}}
+}
+
+/* ---------- the shop ---------- */
+.on-paper{background:var(--paper);color:var(--k)}
+.shop__grid{display:grid;gap:clamp(2.25rem,5vw,4.5rem);align-items:center}
+@media (min-width:900px){.shop__grid{grid-template-columns:5fr 7fr}}
+.hl{background:linear-gradient(transparent 58%,var(--y) 58%,var(--y) 92%,transparent 92%);font-style:italic;padding:0 .08em}
+.shop p{margin-top:1.4rem;max-width:42ch;color:var(--ink-dim);font-size:1.125rem;text-wrap:pretty}
+.facts{margin-top:2.25rem;border-top:1.5px solid var(--k)}
+.facts div{display:flex;justify-content:space-between;gap:1.5rem;padding:.85rem 0;border-bottom:1px solid var(--line-k)}
+.facts dt{font-family:var(--label);font-weight:600;font-size:.88rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);padding-top:.15rem}
+.facts dd{font-weight:600;text-align:right}
+.panes{position:relative;overflow:hidden;background:var(--k)}
+.panes img{width:100%;aspect-ratio:1400/1049;object-fit:cover}
+.panes::before,.panes::after{
+  content:"";position:absolute;top:0;bottom:0;width:clamp(8px,1.2vw,14px);
+  background:var(--paper);transform:translateX(-50%);pointer-events:none;
+}
+.panes::before{left:33.333%}
+.panes::after{left:66.666%}
+.cap{
+  display:flex;justify-content:space-between;gap:1rem;margin-top:.85rem;
+  font-family:var(--label);font-weight:600;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);
+}
+
+/* ---------- hours + call ---------- */
+.hours__grid{display:grid;gap:clamp(2.5rem,6vw,5rem)}
+@media (min-width:900px){.hours__grid{grid-template-columns:1fr 1fr;align-items:start}}
+.hours__head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.75rem}
+.rows{border-top:1.5px solid var(--w)}
+.rows li{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:.95rem 0;border-bottom:1px solid var(--line);
+  white-space:nowrap;font-size:1.0625rem;
+}
+.rows .d{font-family:var(--label);font-weight:600;font-size:1.1rem;letter-spacing:.14em;text-transform:uppercase}
+.rows .t{color:var(--dim);font-variant-numeric:tabular-nums}
+.rows .now{display:none;margin-left:.6rem;padding:.2rem .4rem;background:var(--y);color:var(--k);font-family:var(--label);font-weight:600;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;vertical-align:.1em}
+.rows li.is-today .d,.rows li.is-today .t{color:var(--y)}
+.rows li.is-today .now{display:inline-block}
+@media (max-width:380px){.rows li{font-size:.95rem}.rows .d{font-size:1rem;letter-spacing:.1em}}
+.ask{border:1.5px solid var(--line);border-left:4px solid var(--y);padding:clamp(1.6rem,4vw,2.75rem);background:var(--k2)}
+.ask h3{font-size:clamp(1.9rem,4.4vw,2.75rem)}
+.ask p{margin:1rem 0 1.6rem;color:var(--dim);max-width:36ch;text-wrap:pretty}
+.ask__num{
+  display:inline-block;font-family:var(--display);font-weight:700;font-size:clamp(2rem,7.2vw,3.25rem);line-height:1;
+  text-decoration:none;white-space:nowrap;margin-bottom:1.6rem;
+  border-bottom:3px solid var(--y);padding-bottom:.35rem;
+}
+
+/* ---------- reviews ---------- */
+.rev{text-align:center}
+.rev .eyebrow{justify-content:center}
+.rev__n{
+  display:block;font-family:var(--display);font-weight:800;line-height:.8;letter-spacing:-.03em;
+  font-size:clamp(8rem,34vw,17rem);font-variant-numeric:lining-nums;
+}
+.rev .stars{font-size:clamp(1.6rem,5vw,2.4rem);color:rgba(10,10,10,.18);margin-top:1.5rem}
+.rev .stars i{color:var(--k)}
+.rev__g{
+  display:flex;align-items:center;justify-content:center;gap:.7rem;margin-top:1.4rem;
+  font-family:var(--label);font-weight:600;font-size:1.25rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+}
+.rev__g svg{width:1.6rem;height:1.6rem;flex:none}
+.rev p{margin:1.25rem auto 2rem;max-width:34ch;color:var(--ink-dim);font-size:1.125rem;text-wrap:pretty}
+
+/* ---------- visit ---------- */
+.on-yellow{background:var(--y);color:var(--k)}
+.visit__a{
+  font-family:var(--display);font-weight:800;font-style:normal;line-height:.95;letter-spacing:-.02em;
+  font-size:clamp(2.3rem,10vw,7.5rem);
+}
+.visit__a span{display:block}
+.visit__a span + span{font-weight:500;font-style:italic;font-size:.5em;margin-top:.5em;letter-spacing:0}
+.visit__row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem;margin-top:clamp(2rem,5vw,3.5rem);padding-top:clamp(1.5rem,3vw,2.25rem);border-top:1.5px solid var(--k)}
+.visit__row p{max-width:30ch;font-weight:500}
+
+/* ---------- footer ---------- */
+.foot{background:var(--k);padding:clamp(3rem,7vw,5rem) 0 2rem}
+.foot__grid{display:grid;gap:2.25rem}
+@media (min-width:761px){.foot__grid{grid-template-columns:1.4fr 1fr 1fr}}
+.foot__name{font-family:var(--display);font-weight:700;font-size:1.75rem;line-height:1.05}
+.foot h3{font-family:var(--label);font-weight:600;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:.8rem}
+.foot address{font-style:normal}
+.foot a{text-underline-offset:3px;text-decoration-color:var(--y)}
+.foot li{white-space:nowrap}
+.foot__end{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;
+  margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line);
+  font-size:.8rem;color:var(--dim);
+}
+
+/* ---------- phone action bar ---------- */
+.bar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    display:grid;grid-template-columns:1fr 1fr;
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    background:var(--k);border-top:1px solid var(--line);
+    transition:transform .3s var(--e),visibility .3s;
+  }
+  .bar a{
+    display:flex;align-items:center;justify-content:center;gap:.5rem;height:var(--bar);
+    font-family:var(--label);font-weight:600;font-size:1.1rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  }
+  .bar a svg{width:1.1em;height:1.1em}
+  .bar a:first-child{background:var(--y);color:var(--k)}
+  .js .bar:not(.show){transform:translateY(110%);visibility:hidden}
+  html:not(.js) .hero__in{padding-bottom:calc(var(--bar) + 1.5rem)}
+}
+
+/* ---------- scroll reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s var(--e),transform .7s var(--e)}
+  .js .rv.in{opacity:1;transform:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"The Denton Barber Company",
+  "telephone":"+1-940-218-1800",
+  "image":"https://www.topshelfsolutions.io/demo/the-denton-barber-company/assets/listing.jpg",
+  "hasMap":"https://www.google.com/maps?cid=10725053781280087145",
+  "address":{"@type":"PostalAddress","streetAddress":"517 S Locust St","addressLocality":"Denton","addressRegion":"TX","postalCode":"76201","addressCountry":"US"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"09:00","closes":"15:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"17:00"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">Sample website made for The Denton Barber Company by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a></div>
+
+<header class="hero">
+  <img class="hero__img" src="assets/listing.jpg" width="1400" height="1049" alt="Inside The Denton Barber Company: a row of black barber chairs facing mirrored stations with tall dark cabinets" fetchpriority="high" decoding="async">
+
+  <div class="wrap top">
+    <a class="mark" href="#main" aria-label="The Denton Barber Company, top of page">
+      <span class="mark__d" aria-hidden="true">D</span>
+      <span class="mark__t">Denton<br>Texas</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a class="nav__wide" href="#shop">The shop</a>
+      <a href="#hours">Hours</a>
+      <a class="nav__wide" href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+
+  <div class="wrap hero__in" id="main">
+    <div><span class="chip js-chip" aria-live="polite"></span></div>
+    <h1>
+      <span>The Denton</span>
+      <span class="l2"><span><em>Barber</em> </span><span>Company</span></span>
+    </h1>
+    <p class="hero__tag">A barber shop on S Locust St in Denton, Texas. Pull up a chair.</p>
+    <div>
+      <a class="rate" href="https://www.google.com/maps?cid=10725053781280087145" target="_blank" rel="noopener" aria-label="4.8 stars, 459 Google reviews. Opens Google Maps.">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <b>4.8</b>
+        <span class="stars" aria-hidden="true">★★★★★<i>★★★★★</i></span>
+        <span class="rate__u">459 Google reviews</span>
+      </a>
+    </div>
+    <div class="btns hero__cta">
+      <a class="btn btn--y" href="tel:+19402181800">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+        Call (940) 218-1800
+      </a>
+      <a class="btn btn--line" href="https://www.google.com/maps?cid=10725053781280087145" target="_blank" rel="noopener">Directions</a>
+    </div>
+  </div>
+</header>
+
+<div class="tick" aria-hidden="true">
+  <div class="tick__track">
+    <div class="tick__g"><span>Barber shop</span><span>Denton, Texas</span><span>517 S Locust St</span><span>Monday through Saturday</span><span>Barber shop</span><span>Denton, Texas</span><span>517 S Locust St</span><span>Monday through Saturday</span><span>Barber shop</span><span>Denton, Texas</span><span>517 S Locust St</span><span>Monday through Saturday</span></div>
+    <div class="tick__g"><span>Barber shop</span><span>Denton, Texas</span><span>517 S Locust St</span><span>Monday through Saturday</span><span>Barber shop</span><span>Denton, Texas</span><span>517 S Locust St</span><span>Monday through Saturday</span><span>Barber shop</span><span>Denton, Texas</span><span>517 S Locust St</span><span>Monday through Saturday</span></div>
+  </div>
+</div>
+
+<main>
+  <section class="section on-paper shop" id="shop">
+    <div class="wrap shop__grid">
+      <div class="rv">
+        <div class="eyebrow">The shop</div>
+        <h2>This is the <span class="hl">room.</span></h2>
+        <p>A row of black barber chairs, each one facing its own mirrored station, with tall dark cabinets in between. Come see it for yourself on S Locust St.</p>
+        <dl class="facts">
+          <div><dt>What</dt><dd>Barber shop</dd></div>
+          <div><dt>Where</dt><dd>517 S Locust St, Denton</dd></div>
+          <div><dt>When</dt><dd>Monday through Saturday</dd></div>
+        </dl>
+      </div>
+      <figure class="rv" style="margin:0">
+        <div class="panes">
+          <img src="assets/listing.jpg" width="1400" height="1049" loading="lazy" decoding="async" alt="The barber chairs and mirrored stations at The Denton Barber Company">
+        </div>
+        <figcaption class="cap"><span>Inside the shop</span><span>Denton, TX</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section hours" id="hours">
+    <div class="wrap hours__grid">
+      <div class="rv">
+        <div class="eyebrow">Hours</div>
+        <div class="hours__head">
+          <h2>When we're <em>open.</em></h2>
+          <span class="chip js-chip"></span>
+        </div>
+        <ul class="rows">
+          <li data-day="1"><span><span class="d">Monday</span><span class="now">Today</span></span><span class="t">9 am to 3 pm</span></li>
+          <li data-day="2"><span><span class="d">Tuesday</span><span class="now">Today</span></span><span class="t">9 am to 7 pm</span></li>
+          <li data-day="3"><span><span class="d">Wednesday</span><span class="now">Today</span></span><span class="t">9 am to 7 pm</span></li>
+          <li data-day="4"><span><span class="d">Thursday</span><span class="now">Today</span></span><span class="t">9 am to 7 pm</span></li>
+          <li data-day="5"><span><span class="d">Friday</span><span class="now">Today</span></span><span class="t">9 am to 7 pm</span></li>
+          <li data-day="6"><span><span class="d">Saturday</span><span class="now">Today</span></span><span class="t">9 am to 5 pm</span></li>
+          <li data-day="0"><span><span class="d">Sunday</span><span class="now">Today</span></span><span class="t">Closed</span></li>
+        </ul>
+      </div>
+      <div class="ask rv">
+        <h3>Got a question? Call the shop.</h3>
+        <p>Ask us about prices or anything else you want to know before you come in.</p>
+        <a class="ask__num" href="tel:+19402181800">(940) 218-1800</a>
+        <div class="btns">
+          <a class="btn btn--y" href="tel:+19402181800">Call now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section on-paper rev" id="reviews">
+    <div class="wrap rv">
+      <h2 class="eyebrow" style="font-size:.9rem;line-height:1.6;letter-spacing:.24em">Reviews</h2>
+      <span class="rev__n">4.8</span>
+      <div><span class="stars" role="img" aria-label="4.8 stars">★★★★★<i aria-hidden="true">★★★★★</i></span></div>
+      <div class="rev__g">
+        <svg viewBox="0 0 48 48" role="img" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <span>459 Google reviews</span>
+      </div>
+      <p>We'd rather you hear it from them. Every review is up on Google.</p>
+      <a class="btn btn--k" href="https://www.google.com/maps?cid=10725053781280087145" target="_blank" rel="noopener">Read the reviews</a>
+    </div>
+  </section>
+
+  <section class="section on-yellow" id="visit">
+    <div class="wrap rv">
+      <div class="eyebrow">Visit</div>
+      <address class="visit__a"><span>517 S Locust St</span><span>Denton, TX 76201</span></address>
+      <div class="visit__row">
+        <p>Open Monday through Saturday. Closed Sunday. Call ahead if you want to check on anything.</p>
+        <div class="btns">
+          <a class="btn btn--k" href="https://www.google.com/maps?cid=10725053781280087145" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn--kline" href="tel:+19402181800">Call (940) 218-1800</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <p class="foot__name">The Denton<br>Barber Company</p>
+      </div>
+      <div>
+        <h3>Address &amp; phone</h3>
+        <address>517 S Locust St<br>Denton, TX 76201<br><a href="tel:+19402181800">(940) 218-1800</a></address>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Monday: 9 am to 3 pm</li>
+          <li>Tuesday to Friday: 9 am to 7 pm</li>
+          <li>Saturday: 9 am to 5 pm</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__end">
+      <span>&copy; 2026 The Denton Barber Company</span>
+      <span>Sample site by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a href="tel:+19402181800"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps?cid=10725053781280087145" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var d=document;
+  function showAll(){[].forEach.call(d.querySelectorAll('.rv'),function(el){el.classList.add('in')})}
+  try{
+    /* Open/closed chip, computed in America/Chicago. Hours are [open, close] in 24h, index 0 = Sunday. */
+    var H=[null,[9,15],[9,19],[9,19],[9,19],[9,19],[9,17]];
+    var N=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var o={};parts.forEach(function(p){o[p.type]=p.value});
+    var day=N.indexOf(o.weekday),m=(+o.hour%24)*60+(+o.minute);
+    var f=function(h){return (h>12?h-12:h)+(h>=12?' pm':' am')};
+    var open=!!H[day]&&m>=H[day][0]*60&&m<H[day][1]*60,txt;
+    if(open){txt='Open now · until '+f(H[day][1])}
+    else if(H[day]&&m<H[day][0]*60){txt='Closed · opens '+f(H[day][0])}
+    else{
+      for(var i=1;i<=7;i++){var n=(day+i)%7;if(H[n]){txt='Closed · opens '+(i===1?'tomorrow':N[n])+' '+f(H[n][0]);break}}
+    }
+    if(day>-1){
+      [].forEach.call(d.querySelectorAll('.js-chip'),function(c){c.textContent=txt;c.setAttribute('data-open',open?'1':'0')});
+      var row=d.querySelector('.rows li[data-day="'+day+'"]');if(row)row.classList.add('is-today');
+    }
+  }catch(e){}
+  try{
+    if(!('IntersectionObserver' in window)){showAll();d.getElementById('bar').classList.add('show');return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    [].forEach.call(d.querySelectorAll('.rv'),function(el){io.observe(el)});
+    /* Phone action bar stays out of the way while the hero buttons are on screen. */
+    var bar=d.getElementById('bar');
+    new IntersectionObserver(function(es){bar.classList.toggle('show',!es[0].isIntersecting)}).observe(d.querySelector('.hero__cta'));
+  }catch(e){showAll();var b=d.getElementById('bar');if(b)b.classList.add('show')}
+})();
+</script>
+</body>
+</html>

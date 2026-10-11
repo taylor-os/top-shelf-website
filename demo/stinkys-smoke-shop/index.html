@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Stinky's Smoke Shop at 1113 Dallas Dr, Denton, TX. Smoke shop, tobacco shop and vaporizer store, open every day from 10 am. 21+ only. Call (940) 218-6603.">
+<meta name="theme-color" content="#0E0E0E">
+<title>Stinky's Smoke Shop | Smoke Shop in Denton, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stinky's Smoke Shop | Denton, TX">
+<meta property="og:description" content="Smoke shop, tobacco shop and vaporizer store at 1113 Dallas Dr, Denton. Open every day from 10 am. 21+ only.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/stinkys-smoke-shop/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230E0E0E'/%3E%3Cpath fill='%23fff' d='M32 5C40 20 40 44 32 59C24 44 24 20 32 5Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Stinky's Smoke Shop",
+  "telephone": "+1-940-218-6603",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1113 Dallas Dr",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76205",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "10:00", "closes": "00:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "21:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=1895228374651849152"
+}
+</script>
+<style>
+/* ================================================================
+   Stinky's Smoke Shop - one-page demo
+   Skunk black and white, one loud lime. The device is the stripe
+   that runs down a skunk's back and splits in two.
+   ================================================================ */
+:root{
+  --ink:#0E0E0E;
+  --ink-2:#1B1B1B;
+  --white:#FFFFFF;
+  --paper:#F7F7F2;
+  --lime:#C8FF2E;
+  --on-ink-muted:#BDBDB5;
+  --on-paper-muted:#4A4A45;
+  --rule:rgba(14,14,14,.16);
+  --rule-ink:rgba(255,255,255,.18);
+  --display:'Bagel Fat One','Arial Black',Impact,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --stripe:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' d='M0 22H420C640 22 760 8 1200 8V20C820 20 700 30 560 30C700 30 820 40 1200 40V52C760 52 640 38 420 38H0Z'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--paper);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;text-wrap:balance;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
+.on-light :focus-visible{outline-color:var(--ink)}
+::selection{background:var(--lime);color:var(--ink)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--lime);color:var(--ink);font-weight:800;border-radius:10px;text-decoration:none}
+.skip:focus{top:1rem}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-size:.8125rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;line-height:1.2;
+}
+.eyebrow::before{content:"";width:1.6em;height:.5em;border-radius:99px;background:currentColor;flex:none}
+.hl{background:linear-gradient(transparent 58%,var(--lime) 58% 92%,transparent 92%)}
+
+/* sticker buttons: hard offset shadow, press down on tap */
+.btn{
+  --sh:var(--ink);
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.8rem 1.4rem;border-radius:14px;border:2px solid var(--ink);
+  font:800 1.0625rem/1 var(--body);text-decoration:none;white-space:nowrap;
+  box-shadow:4px 4px 0 var(--sh);
+  transition:transform .16s var(--ease),box-shadow .16s var(--ease);
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-white{background:var(--white);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.on-ink .btn{--sh:var(--white)}
+.on-ink .btn-white{--sh:var(--lime)}
+.on-lime .btn-ink{--sh:var(--white)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--sh)}
+@media (hover:hover){
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--sh)}
+  .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--sh)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon --------------------------------- */
+.ribbon{background:var(--lime);color:var(--ink);text-align:center;font-size:.75rem;font-weight:600;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{font-weight:800;text-underline-offset:2px}
+
+/* ---- header ------------------------------------------------------ */
+.top{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--white);border-bottom:1px solid var(--rule-ink)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.4rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--display);font-size:1.2rem;line-height:1;text-decoration:none;white-space:nowrap}
+.brand svg{width:1.7rem;height:1.7rem;flex:none}
+.top-right{display:flex;align-items:center;gap:1.25rem;min-width:0}
+.top nav{display:none;gap:1.25rem;font-size:.9375rem;font-weight:600}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:6px}
+.top .place{font-size:.8125rem;font-weight:600;color:var(--on-ink-muted);white-space:nowrap}
+.top .btn{display:none;min-height:2.5rem;padding:.5rem 1rem;font-size:.9375rem;border-radius:11px;box-shadow:3px 3px 0 var(--white)}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:900px){.top nav{display:flex}}
+
+.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:600;color:var(--on-ink-muted);white-space:nowrap}
+.status::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--on-ink-muted);flex:none}
+.status.is-open{color:var(--white)}
+.status.is-open::before{background:var(--lime);box-shadow:0 0 0 4px rgba(200,255,46,.2)}
+
+/* ---- hero -------------------------------------------------------- */
+/* Phones: their photo sits first, then the name, the rating and the
+   button, so all four share the first screen. Desktop: copy left, the
+   photo framed on the right at no more than 560px wide (it is 1080px). */
+.hero{background:var(--ink);color:var(--white);padding:1.1rem 0 2rem;overflow:clip}
+.hero-grid{display:flex;flex-direction:column;gap:1.1rem}
+.shot{order:-1;position:relative;margin:0 6px 6px 0}
+.shot img{
+  width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;object-position:50% 62%;
+  border:4px solid var(--white);border-radius:16px;box-shadow:6px 6px 0 var(--lime);background:var(--ink-2);
+}
+.sticker{
+  position:absolute;z-index:2;top:-.55rem;right:-.3rem;width:3.7rem;height:3.7rem;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:var(--lime);color:var(--ink);border:2px solid var(--ink);transform:rotate(10deg);
+  font-family:var(--display);font-size:1.3rem;line-height:.9;text-align:center;
+}
+.sticker small{font-family:var(--body);font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-top:.15rem}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;min-width:0}
+.hero h1{font-size:clamp(2.5rem,12.4vw,3.4rem);line-height:.92}
+.hero h1 span{display:block}
+.hero h1 .l2{color:var(--lime)}
+.hero-sub{order:5;max-width:31rem;color:var(--on-ink-muted);font-size:1rem}
+.hero-sub strong{color:var(--white);font-weight:600}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .9rem .4rem .5rem;
+  border:1px solid var(--rule-ink);border-radius:999px;background:rgba(255,255,255,.07);
+  font-size:.9375rem;font-weight:600;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.6rem;height:1.6rem;padding:.28rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04}
+.rating .sep{color:var(--on-ink-muted);font-weight:400}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;width:100%;padding-right:6px}
+
+.rise{animation:rise .6s var(--ease) both}
+.rise-2{animation-delay:.07s}.rise-3{animation-delay:.14s}.rise-4{animation-delay:.21s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-white{display:none} /* Call lives in the phone bar */
+}
+@media (min-width:900px){
+  .hero{padding:clamp(3rem,6vw,4.5rem) 0 clamp(3.5rem,7vw,5.5rem)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(3rem,5vw,4.5rem);align-items:center}
+  .shot{order:0;justify-self:end;width:100%;max-width:35rem;margin:0 14px 14px 0;transform:rotate(1.5deg)}
+  .shot img{aspect-ratio:4/3;object-position:50% 50%;border-width:6px;border-radius:22px;box-shadow:14px 14px 0 var(--lime)}
+  .sticker{top:-1.4rem;right:-1.2rem;width:5.25rem;height:5.25rem;font-size:1.9rem;border-width:3px}
+  .sticker small{font-size:.72rem}
+  .hero-copy{gap:1.3rem}
+  .hero h1{font-size:clamp(3.2rem,5.6vw,5rem)}
+  .hero-sub{order:0;font-size:1.1875rem}
+}
+
+/* ---- the skunk stripe -------------------------------------------- */
+.stripe{height:clamp(2.25rem,6vw,3.5rem);background:var(--ink) var(--stripe) center/100% 100% no-repeat}
+.stripe.flip{transform:scaleX(-1)}
+
+/* ---- marquee ------------------------------------------------------ */
+.band{background:var(--lime);color:var(--ink);overflow:hidden;padding:.8rem 0;border-block:2px solid var(--ink)}
+.band-track{display:flex;width:max-content;animation:slide 28s linear infinite}
+.band-group{display:flex;align-items:center;flex:none}
+.band-group span{
+  display:inline-flex;align-items:center;gap:1.3rem;padding-right:1.3rem;
+  font-family:var(--display);font-size:clamp(1.3rem,3.6vw,1.9rem);line-height:1.1;white-space:nowrap;
+}
+.band-group span::after{content:"";width:1.5em;height:.42em;border-radius:99px;background:var(--ink);flex:none}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---- sections ------------------------------------------------------ */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.head{max-width:44rem;margin-bottom:clamp(1.75rem,4vw,3rem)}
+.head .eyebrow{margin-bottom:1rem}
+.head h2{font-size:clamp(2.2rem,7.5vw,4.25rem)}
+
+/* ---- what we are: three big rows and a call card ------------------- */
+.shop-grid{display:grid;gap:2.25rem}
+.kinds{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.kinds li{
+  display:flex;align-items:center;gap:1rem;padding:1.15rem 0;border-bottom:1px solid var(--rule);
+  font-family:var(--display);font-size:clamp(2rem,8.4vw,4rem);line-height:1;
+}
+.kinds li::before{content:"";width:.9em;height:.26em;border-radius:99px;background:var(--ink);flex:none;transition:width .3s var(--ease),background-color .2s ease}
+@media (hover:hover){.kinds li:hover::before{width:1.5em;background:var(--lime);box-shadow:0 0 0 2px var(--ink)}}
+.ask{
+  align-self:start;padding:clamp(1.5rem,4vw,2.25rem);margin-right:6px;
+  background:var(--lime);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);
+}
+.ask h3{font-size:clamp(1.7rem,5.5vw,2.3rem);margin-bottom:.8rem}
+.ask p{max-width:26rem}
+.ask .tel{display:block;margin:1rem 0 1.25rem;font-family:var(--display);font-size:clamp(1.8rem,7.4vw,2.5rem);line-height:1;text-decoration:none;white-space:nowrap}
+.ask .btn{width:100%}
+@media (min-width:900px){.shop-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:4rem;align-items:center}}
+
+/* ---- inside: a second, taller crop of their own photo -------------- */
+.inside{background:var(--ink);color:var(--white)}
+.inside-grid{display:grid;gap:2.25rem}
+.inside-photo{position:relative;margin:0 6px 6px 0}
+.inside-photo img{
+  width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:56% 50%;
+  border:4px solid var(--white);border-radius:18px;box-shadow:6px 6px 0 var(--lime);background:var(--ink-2);
+}
+.inside-photo figcaption{
+  position:absolute;left:1rem;bottom:1rem;max-width:calc(100% - 2rem);padding:.45rem .85rem;border-radius:999px;
+  background:var(--ink);color:var(--white);font-size:.8125rem;font-weight:700;
+}
+/* soft focus over the top half of the photo, where the display toppers and shelf boxes sit:
+   no packaging text may read. The floor and the jar pyramid stay sharp. */
+.inside-photo::before,.shot::before{
+  content:"";position:absolute;z-index:1;inset:4px 4px auto;height:50%;border-radius:14px 14px 0 0;pointer-events:none;
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+  -webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent);
+}
+@media (min-width:900px){.inside-photo::before,.shot::before{inset:6px 6px auto;border-radius:16px 16px 0 0}}
+.inside .eyebrow{color:var(--lime);margin-bottom:1rem}
+.inside h2{font-size:clamp(2.4rem,9vw,4.5rem);margin-bottom:1.25rem}
+.inside h2 span{display:block;color:var(--lime)}
+.inside p{max-width:32rem;color:var(--on-ink-muted);font-size:1.125rem}
+.inside p + p{margin-top:1rem}
+.inside .btn{margin-top:1.75rem}
+@media (max-width:560px){.inside .btn{width:calc(100% - 6px)}}
+@media (min-width:900px){
+  .inside-grid{grid-template-columns:minmax(0,26rem) minmax(0,1fr);gap:clamp(3rem,6vw,5rem);align-items:center}
+  .inside-photo{transform:rotate(-1.5deg);margin:0 12px 12px 0}
+  .inside-photo img{box-shadow:12px 12px 0 var(--lime);border-width:6px}
+}
+
+/* ---- reviews --------------------------------------------------------- */
+.reviews{text-align:center}
+.score{font-family:var(--display);font-size:clamp(7rem,36vw,15rem);line-height:.85;margin:1rem 0 1.25rem}
+/* one row of five: grey underneath, the same row in gold on top, clipped to 88% (4.4 of 5).
+   Both spans inherit the same font, line-height, letter-spacing and nowrap, so they overlap exactly. */
+.stars{position:relative;display:inline-block;font:400 clamp(2.25rem,12vw,3rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap;color:rgba(14,14,14,.14)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:88%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-family:var(--body);font-weight:800;font-size:clamp(1.5rem,4.6vw,2.1rem);letter-spacing:-.02em;line-height:1.15;margin-top:1.4rem}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:26rem;margin:.9rem auto 0;color:var(--on-paper-muted)}
+.reviews .btn{margin-top:1.9rem}
+
+/* ---- visit ------------------------------------------------------------ */
+.visit{background:var(--ink);color:var(--white)}
+.visit .eyebrow{color:var(--lime)}
+.visit-grid{display:grid;gap:1.4rem;padding-right:6px}
+.card{padding:clamp(1.4rem,4vw,2.1rem);border-radius:20px;border:2px solid var(--white);min-width:0}
+.card.white{background:var(--white);color:var(--ink);box-shadow:6px 6px 0 var(--lime)}
+.card.lime{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.card .label{display:block;margin-bottom:.9rem;font-size:.8125rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.card.line .label{color:var(--lime)}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.58rem 0;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:800;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--on-paper-muted);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.84em}}
+.hours .today dd{color:var(--ink);font-weight:800}
+.hours .today dt::after{content:"Today";padding:.18rem .5rem;border-radius:99px;background:var(--lime);border:1.5px solid var(--ink);font-size:.6875rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.big{display:block;font-family:var(--display);font-size:clamp(1.8rem,7.2vw,2.5rem);line-height:1.02;text-decoration:none}
+address.big{font-style:normal}
+.card .note{margin-top:.6rem}
+.card.line .note{color:var(--on-ink-muted)}
+.card .btn{margin-top:1.3rem;width:100%}
+.stack{display:grid;gap:1.4rem;min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:1.75rem}}
+
+/* ---- closing CTA -------------------------------------------------------- */
+.close{background:var(--lime);color:var(--ink);text-align:center;padding:clamp(4rem,11vw,7.5rem) 0;border-top:2px solid var(--ink)}
+.close h2{font-size:clamp(2.7rem,10.5vw,6.25rem)}
+.close p{max-width:30rem;margin:1.2rem auto 0;font-size:1.125rem;font-weight:600}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem;margin-top:1.9rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer --------------------------------------------------------------- */
+.foot{background:var(--ink);color:var(--on-ink-muted);font-size:.9375rem}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{color:var(--white);font-size:1.4rem;margin-bottom:.7rem}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;display:inline-flex;align-items:center;gap:.5rem;color:var(--white);font-weight:800;letter-spacing:.04em}
+.foot .age::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--lime)}
+.credit{border-top:1px solid var(--rule-ink);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar ------------------------------------------------------ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--ink);border-top:2px solid var(--white);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:1rem;box-shadow:none;border-radius:12px}
+.dock .btn:active{transform:scale(.97);box-shadow:none}
+@media (max-width:720px){body{padding-bottom:calc(4.3rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion --------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-mark" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#0E0E0E" stroke="#fff" stroke-width="3"/><path fill="#fff" d="M32 8C39 21 39 43 32 56C25 43 25 21 32 8Z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for Stinky's Smoke Shop by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="Stinky's Smoke Shop, back to top">
+      <svg aria-hidden="true"><use href="#i-mark"/></svg><span>Stinky's</span>
+    </a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#shop">The shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <span class="place">Denton, TX</span>
+      <a class="btn btn-lime" href="tel:+19402186603"><svg aria-hidden="true"><use href="#i-phone"/></svg>(940) 218-6603</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero on-ink" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="status js-status rise">Open every day from 10 am</p>
+        <h1 class="rise rise-2"><span>Stinky's</span><span class="l2">Smoke Shop</span></h1>
+        <p class="hero-sub rise rise-3">Smoke shop, tobacco shop and vaporizer store at <strong>1113 Dallas Dr</strong> in Denton. We open at 10 every morning.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener" aria-label="Rated 4.4 out of 5 from 321 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <span>4.4</span>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep">·</span>
+          <span>321 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-lime" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-white" href="tel:+19402186603"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (940) 218-6603</a>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/listing.jpg" width="1080" height="810" fetchpriority="high" decoding="async"
+             alt="Inside Stinky's Smoke Shop: a bright room with a wood-look floor, long glass display cases along one wall, shelving on the other and a round pyramid of jars in the middle.">
+        <p class="sticker">21+<small>only</small></p>
+      </figure>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <!-- Marquee -->
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <div class="band-group"><span>Smoke shop</span><span>Tobacco shop</span><span>Vaporizer store</span><span>Denton, TX</span><span>21+ only</span></div>
+      <div class="band-group"><span>Smoke shop</span><span>Tobacco shop</span><span>Vaporizer store</span><span>Denton, TX</span><span>21+ only</span></div>
+    </div>
+  </div>
+
+  <!-- What we are -->
+  <section class="section on-light" id="shop">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">The shop</p>
+        <h2>What you'll find on <span class="hl">Dallas Dr</span></h2>
+      </div>
+      <div class="shop-grid">
+        <ul class="kinds reveal">
+          <li>Smoke shop</li>
+          <li>Tobacco shop</li>
+          <li>Vaporizer store</li>
+        </ul>
+        <div class="ask reveal">
+          <h3>Looking for something in particular?</h3>
+          <p>Call us and ask before you make the drive.</p>
+          <a class="tel" href="tel:+19402186603">(940) 218-6603</a>
+          <a class="btn btn-ink" href="tel:+19402186603"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inside -->
+  <section class="section inside on-ink" id="inside">
+    <div class="wrap inside-grid">
+      <figure class="inside-photo">
+        <img src="assets/listing.jpg" width="1080" height="810" loading="lazy" decoding="async"
+             alt="The shop floor at Stinky's Smoke Shop, with the round pyramid of jars in the middle and glass display cases behind it.">
+        <figcaption>Our shop floor, 1113 Dallas Dr</figcaption>
+      </figure>
+      <div class="reveal">
+        <p class="eyebrow">Inside</p>
+        <h2>Stinky by name, <span>tidy by nature.</span></h2>
+        <p>Don't let the name fool you. The shop is bright and clean, with a wood-look floor, long glass cases down one wall and shelves along the other.</p>
+        <p>The pyramid of jars in the middle of the floor is hard to miss.</p>
+        <a class="btn btn-lime" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews on-light" id="reviews">
+    <div class="wrap reveal">
+      <p class="eyebrow">Reviews</p>
+      <p class="score" aria-hidden="true">4.4</p>
+      <div class="stars" role="img" aria-label="4.4 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>4.4 stars from 321 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>Thanks to everyone who took the time to leave one.</p>
+      <a class="btn btn-ink" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener"><svg aria-hidden="true" style="width:1.3em;height:1.3em;padding:.14em;border-radius:50%;background:#fff"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section visit on-ink" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Visit</p>
+        <h2>Open every day from 10 am</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card white reveal">
+          <span class="label">Hours</span>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>10 am to 11 pm</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>10 am to 11 pm</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>10 am to 11 pm</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>10 am to 11 pm</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>10 am to midnight</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>10 am to midnight</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>10 am to 9 pm</dd></div>
+          </dl>
+        </div>
+        <div class="stack">
+          <div class="card lime reveal">
+            <span class="label">Address</span>
+            <address class="big">1113 Dallas Dr<br>Denton, TX 76205</address>
+            <a class="btn btn-ink" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card line reveal">
+            <span class="label">Phone</span>
+            <a class="big" href="tel:+19402186603">(940) 218-6603</a>
+            <p class="status js-status note">Open every day from 10 am</p>
+            <a class="btn btn-white" href="tel:+19402186603"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="close on-lime on-light">
+    <div class="wrap reveal">
+      <h2>Come see us on Dallas Dr.</h2>
+      <p>We're at 1113 Dallas Dr, Denton, TX 76205, and we open at 10 am every day. 21+ only.</p>
+      <div class="close-ctas">
+        <a class="btn btn-ink" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-white" href="tel:+19402186603"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (940) 218-6603</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="stripe flip" aria-hidden="true"></div>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand"><svg aria-hidden="true"><use href="#i-mark"/></svg><span>Stinky's Smoke Shop</span></p>
+      <p>1113 Dallas Dr, Denton, TX 76205</p>
+      <p><a href="tel:+19402186603">(940) 218-6603</a> · <a href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn btn-lime" href="https://www.google.com/maps?cid=1895228374651849152" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-white" href="tel:+19402186603"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Hours in minutes from midnight, Sunday first. Opens at 10 am every day.
+  var OPEN=600, CLOSE=[1260,1380,1380,1380,1380,1440,1440];
+  function label(m){ if(m===1440) return 'midnight'; var h=Math.floor(m/60); return (h>12?h-12:h)+(h>=12?' pm':' am'); }
+  function isOpen(d,m){ return m>=OPEN && m<CLOSE[d]; }
+  function text(d,m){
+    if(isOpen(d,m)) return 'Open now until '+label(CLOSE[d]);
+    return m<OPEN ? 'Closed now, opens 10 am' : 'Closed now, opens 10 am tomorrow';
+  }
+  // self-check: Sunday 8:59 pm open, Sunday 9 pm closed, Friday 11:59 pm open, Monday 9:59 am closed
+  console.assert(isOpen(0,1259) && !isOpen(0,1260) && isOpen(5,1439) && !isOpen(1,599), 'hours logic');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var open=isOpen(d,m), els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=text(d,m); els[i].classList.toggle('is-open',open); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

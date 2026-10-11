@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Fast Jewelry Repair in Denton, TX. Jewelry repair at 2430 S Interstate 35E #110. Call (940) 595-6025.">
+<meta name="theme-color" content="#0A1430">
+<title>Fast Jewelry Repair | Jewelry Repair in Denton, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fast Jewelry Repair | Jewelry Repair in Denton, TX">
+<meta property="og:description" content="Jewelry repair in Denton, TX. Call (940) 595-6025.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/fast-jewelry-repair/assets/sign.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A1430'/%3E%3Cpath d='M30 22h40l18 22-38 40-38-40z' fill='none' stroke='%23E6BE6E' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M12 44h76' stroke='%23E6BE6E' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..700&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Fast Jewelry Repair",
+  "telephone": "+1-940-595-6025",
+  "image": "https://www.topshelfsolutions.io/demo/fast-jewelry-repair/assets/sign.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2430 S Interstate 35E #110",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76205",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "12:00",
+      "closes": "18:00"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps?cid=6669109428650496541"
+}
+</script>
+<style>
+/* ================================================================
+   Fast Jewelry Repair - one-page demo
+   Deep navy, one solder gold, hairlines. The cut gem is the device.
+   ================================================================ */
+:root{
+  --navy:#0A1430;
+  --navy-2:#101D45;
+  --navy-3:#07102A;
+  --ice:#EAF1FF;
+  --ice-muted:#A9B8DA;
+  --facet:#7FB2FF;
+  --gold:#E6BE6E;
+  --gold-deep:#8A6412;   /* small text on paper */
+  --paper:#F6F3EC;
+  --paper-2:#FFFFFF;
+  --ink:#0A1430;
+  --ink-muted:#4A5573;
+  --rule:rgba(10,20,48,.14);
+  --rule-navy:rgba(234,241,255,.16);
+  --display:'Bodoni Moda','Didot','Bodoni MT',Georgia,serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar-h:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--navy-3);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,figure,dl,dd{margin:0}
+h1,h2{font-family:var(--display);font-weight:600;letter-spacing:-.02em;line-height:1;text-wrap:balance;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+::selection{background:var(--gold);color:var(--navy)}
+
+.wrap{width:min(100% - 2.5rem,1140px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--gold);color:var(--navy);font-weight:700;border-radius:8px;text-decoration:none}
+.skip:focus{top:1rem}
+
+.label{
+  display:block;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;line-height:1.3;
+}
+
+/* bench ruler: fine ticks with a taller one every fifth */
+.ruler{
+  height:12px;color:inherit;opacity:.4;
+  background:
+    repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 40px) 0 0/100% 100% no-repeat,
+    repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 8px) 0 100%/100% 50% no-repeat;
+}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.85rem 1.5rem;border-radius:6px;border:1.5px solid transparent;
+  font:700 1.0625rem/1.1 var(--body);text-decoration:none;white-space:nowrap;
+  transition:transform .18s var(--ease),background-color .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-line{border-color:rgba(234,241,255,.5);color:var(--ice);background:transparent}
+.btn-navy{background:var(--navy);color:var(--ice)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold:hover{background:#F0CD86}
+  .btn-line:hover{border-color:var(--ice);background:rgba(234,241,255,.08)}
+  .btn-navy:hover{background:var(--navy-2)}
+}
+
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- ribbon ---------------------------------------------------- */
+.ribbon{
+  background:var(--navy-3);color:var(--ice-muted);text-align:center;
+  font-size:.75rem;line-height:1.4;padding:.45rem 1.25rem;border-bottom:1px solid var(--rule-navy);
+}
+.ribbon a{color:var(--ice);font-weight:600}
+
+/* ---- header ---------------------------------------------------- */
+.top{
+  position:sticky;top:0;z-index:50;color:var(--ice);
+  background:rgba(10,20,48,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule-navy);
+}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem}
+.brand{
+  display:inline-flex;align-items:center;gap:.55rem;min-width:0;
+  font:600 1.125rem/1 var(--display);letter-spacing:-.01em;text-decoration:none;white-space:nowrap;
+}
+.brand svg{width:1.4rem;height:1.4rem;flex:none}
+.brand span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.top-right{display:flex;align-items:center;gap:1.25rem;flex:none}
+.nav{display:none;gap:1.5rem;font-size:.9375rem;font-weight:600}
+.nav a{text-decoration:none;color:var(--ice-muted)}
+.nav a:hover{color:var(--ice)}
+.chip{
+  display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;
+  font-size:.8125rem;font-weight:600;color:var(--ice-muted);
+}
+.chip:empty{display:none}
+.chip::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--ice-muted);flex:none}
+.chip.is-open{color:var(--ice)}
+.chip.is-open::before{background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+.top .btn{display:none;min-height:2.5rem;padding:.5rem 1rem;font-size:.9375rem}
+@media (max-width:480px){
+  .brand{font-size:.9375rem;gap:.45rem}
+  .brand svg{width:1.2rem;height:1.2rem}
+  .chip{font-size:.71875rem;gap:.35rem}
+}
+@media (min-width:860px){
+  .nav{display:flex}
+  .top .btn{display:inline-flex}
+}
+
+/* ---- hero ------------------------------------------------------ */
+.hero{position:relative;overflow:hidden;color:var(--ice);background:var(--navy)}
+.facets{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;gap:1.25rem;padding-block:1.25rem 2.5rem}
+.hero-visual{order:-1}
+.gem-big{display:none}
+
+/* The listing photo, cropped in CSS to the shop's own sign only.
+   Crop box on the 1400x1050 original: x 496-944, y 390-508. */
+.sign{
+  position:relative;overflow:hidden;aspect-ratio:448/118;border-radius:6px;
+  border:1px solid rgba(234,241,255,.35);background:var(--navy-2);
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.7);
+}
+.sign img{position:absolute;max-width:none;width:312.5%;height:auto;left:-110.714%;top:-330.508%}
+.sign-cap{
+  display:flex;align-items:center;gap:.6rem;margin-top:.6rem;
+  font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+}
+.sign-cap::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(230,190,110,.6),transparent)}
+
+.hero h1{font-size:clamp(2.5rem,11.5vw,5rem);line-height:.98}
+.hero h1 .fast{display:flex;align-items:center;gap:.28em;font-style:italic;color:var(--gold)}
+.hero h1 .fast svg{width:.72em;height:.72em;flex:none}
+.hero-sub{margin-top:.75rem;font-size:1.0625rem;color:var(--ice-muted);max-width:30ch}
+
+.rating{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:1rem;
+  padding:.45rem .85rem .45rem .5rem;border:1px solid var(--rule-navy);border-radius:999px;
+  background:rgba(234,241,255,.06);text-decoration:none;white-space:nowrap;font-size:.9375rem;
+}
+.rating .g{width:1.6rem;height:1.6rem;padding:.3rem;border-radius:50%;background:#fff;flex:none}
+.rating b{font-weight:700}
+.stars{
+  font-size:.95rem;letter-spacing:.08em;line-height:1;
+  background:linear-gradient(90deg,var(--gold) 94%,rgba(234,241,255,.28) 94%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.rating .count{color:var(--ice-muted)}
+@media (max-width:380px){
+  .rating{font-size:.8125rem;gap:.45rem}
+  .stars{font-size:.8125rem}
+}
+
+.hero-cta{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.15rem}
+.hero-cta .btn{flex:1 1 100%}
+
+@media (min-width:560px){
+  .hero-cta .btn{flex:0 1 auto}
+  .sign{max-width:32rem}
+}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:3.5rem;padding-block:4.5rem 5rem}
+  .hero-visual{order:0}
+  .hero h1{font-size:clamp(3.4rem,6vw,5.5rem)}
+  .hero-sub{font-size:1.1875rem;margin-top:1.25rem}
+  .rating{margin-top:1.5rem}
+  .hero-cta{margin-top:1.75rem}
+  .gem-big{display:block;width:min(100%,21rem);margin:0 auto 2rem;overflow:visible}
+  .gem-big path{stroke-dasharray:1;stroke-dashoffset:0}
+  .js .gem-big path{animation:cut 1.6s var(--ease) both}
+  .js .gem-big path:nth-child(2){animation-delay:.25s}
+  .js .gem-big path:nth-child(3){animation-delay:.45s}
+  .sign{max-width:none}
+}
+@keyframes cut{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+
+/* ---- repair ---------------------------------------------------- */
+.sec{padding-block:4rem}
+.paper{background:var(--paper);color:var(--ink)}
+.sec h2{font-size:clamp(2.1rem,7.5vw,3.5rem)}
+.sec .label{color:var(--gold-deep);margin-bottom:.9rem}
+.lede{margin-top:1.1rem;font-size:1.125rem;color:var(--ink-muted);max-width:42ch}
+.repair-grid{display:grid;gap:2.5rem}
+.repair .btn{margin-top:1.6rem}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fact{padding:1.4rem .5rem 1.3rem 0}
+.fact + .fact{padding-left:1rem;border-left:1px solid var(--rule)}
+.fact dt{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);line-height:1.35}
+.fact dd{font:600 clamp(2.1rem,9vw,3.4rem)/1 var(--display);letter-spacing:-.02em;margin-bottom:.5rem}
+.facts{display:grid}
+.fact{display:flex;flex-direction:column-reverse;justify-content:flex-end}
+.repair .ruler{margin-top:1.25rem;color:var(--ink)}
+@media (min-width:900px){
+  .sec{padding-block:6.5rem}
+  .repair-grid{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+}
+
+/* ---- atmosphere band ------------------------------------------- */
+.band{position:relative;overflow:hidden;color:var(--ice);background:var(--navy);aspect-ratio:4/5;max-height:38rem;width:100%}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 78%}
+.band::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,20,48,.9) 0%,rgba(10,20,48,.55) 45%,rgba(10,20,48,.25) 100%);
+}
+.band-copy{position:absolute;z-index:1;inset:0 0 auto 0;padding-top:3rem}
+.band h2{font-size:clamp(2.4rem,9vw,4.5rem)}
+.band h2 em{font-style:italic;color:var(--gold)}
+.band p{margin-top:.9rem;font-size:1.125rem;max-width:26ch}
+.band p a{color:var(--gold);font-weight:700;white-space:nowrap}
+.sample{
+  position:absolute;z-index:1;right:.75rem;bottom:.75rem;
+  font-size:.6875rem;letter-spacing:.06em;color:rgba(234,241,255,.85);
+  background:rgba(10,20,48,.55);padding:.2rem .5rem;border-radius:3px;
+}
+@media (min-width:700px){
+  .band{aspect-ratio:16/8}
+  .band-copy{padding-top:4.5rem}
+}
+
+/* ---- reviews --------------------------------------------------- */
+.reviews{text-align:center}
+.score-card{
+  max-width:34rem;margin-inline:auto;padding:2.5rem 1.5rem 2.25rem;
+  background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:0 30px 60px -40px rgba(10,20,48,.45);
+}
+.gword{display:inline-flex;align-items:center;gap:.6rem;font-size:.9375rem;font-weight:600;color:var(--ink-muted)}
+.gword svg{width:1.75rem;height:1.75rem}
+.gword i{font-style:normal;font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.score{font:600 clamp(4.5rem,22vw,7rem)/1 var(--display);letter-spacing:-.03em;margin-top:1rem}
+.score-card .stars{
+  display:inline-block;font-size:1.6rem;margin-top:.4rem;
+  background-image:linear-gradient(90deg,#C99A2E 94%,rgba(10,20,48,.18) 94%);
+}
+.score-card p{margin-top:.6rem;color:var(--ink-muted)}
+.score-card .btn{margin-top:1.5rem;white-space:normal;text-align:center}
+
+/* ---- visit ----------------------------------------------------- */
+.visit{background:var(--navy);color:var(--ice);position:relative;overflow:hidden}
+.visit .label{color:var(--gold)}
+.visit-grid{display:grid;gap:2.75rem;position:relative;z-index:1}
+.visit address{font-style:normal;margin-top:1.25rem;font-size:1.1875rem;line-height:1.5}
+.visit .tel{display:inline-block;margin-top:.75rem;font:600 clamp(1.9rem,8vw,2.6rem)/1.1 var(--display);color:var(--gold);text-decoration:none;white-space:nowrap}
+.visit-cta{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.6rem}
+.hours{border-top:1px solid var(--rule-navy)}
+.hours h3{font:700 .75rem/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0;padding:1.1rem 0 .6rem}
+.hours-row{
+  display:flex;justify-content:space-between;gap:1rem;white-space:nowrap;
+  padding:.7rem 0;border-bottom:1px solid var(--rule-navy);font-size:1rem;color:var(--ice-muted);
+}
+.hours-row.today{color:var(--ice);font-weight:700}
+.hours-row.today span:first-child::after{content:" \00B7  Today";color:var(--gold);font-weight:700}
+@media (max-width:380px){.hours-row{font-size:.875rem}}
+@media (min-width:900px){
+  .visit-grid{grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+}
+
+/* ---- footer ---------------------------------------------------- */
+.foot{background:var(--navy-3);color:var(--ice-muted);padding-block:2.5rem;font-size:.9375rem;border-top:1px solid var(--rule-navy)}
+.foot-grid{display:grid;gap:1rem}
+.foot .brand{color:var(--ice)}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ice)}
+.foot small{display:block;font-size:.8125rem;opacity:.8}
+.foot small a{text-decoration:underline}
+
+/* ---- phone call bar -------------------------------------------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;
+  padding:.6rem 1.25rem calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(7,16,42,.96);border-top:1px solid var(--rule-navy);
+  transition:transform .3s var(--ease);
+}
+.bar .btn{min-height:3rem;padding:.6rem .75rem;font-size:1rem}
+.js .bar{transform:translateY(110%)}
+.js .bar.show{transform:none}
+@media (max-width:719px){
+  body{padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+}
+@media (min-width:720px){.bar{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">Sample website made for Fast Jewelry Repair by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a></div>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#top" aria-label="Fast Jewelry Repair, back to top">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#E6BE6E" stroke-width="5" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h56l17 25-45 55L5 37z"/><path d="M5 37h90M22 12l14 25 14-25 14 25 14-25M36 37l14 55 14-55"/></svg>
+      <span>Fast Jewelry Repair</span>
+    </a>
+    <div class="top-right">
+      <nav class="nav" aria-label="Sections">
+        <a href="#repair">Repair</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <span class="chip" id="chip" role="status"></span>
+      <a class="btn btn-gold" href="tel:+19405956025">Call (940) 595-6025</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <svg class="facets" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="0,0 46,0 18,42" fill="#7FB2FF" opacity=".05"/>
+    <polygon points="46,0 100,0 72,34" fill="#7FB2FF" opacity=".09"/>
+    <polygon points="46,0 72,34 18,42" fill="#7FB2FF" opacity=".02"/>
+    <polygon points="100,0 100,58 72,34" fill="#7FB2FF" opacity=".04"/>
+    <polygon points="0,0 18,42 0,70" fill="#000" opacity=".12"/>
+    <polygon points="18,42 72,34 52,100 0,100 0,70" fill="#000" opacity=".06"/>
+    <polygon points="72,34 100,58 100,100 52,100" fill="#7FB2FF" opacity=".06"/>
+  </svg>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>
+        <span class="fast">Fast
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h56l17 25-45 55L5 37z"/><path d="M5 37h90M22 12l14 25 14-25 14 25 14-25M36 37l14 55 14-55"/></svg>
+        </span>
+        Jewelry Repair
+      </h1>
+      <p class="hero-sub">Jewelry repair in Denton. Open seven days a week.</p>
+      <a class="rating" href="https://www.google.com/maps?cid=6669109428650496541" target="_blank" rel="noopener" aria-label="4.7 stars from 141 Google reviews. Opens Google Maps.">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <b>4.7</b>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="count">141 Google reviews</span>
+      </a>
+      <div class="hero-cta" id="hero-cta">
+        <a class="btn btn-gold" href="tel:+19405956025">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call (940) 595-6025
+        </a>
+        <a class="btn btn-line" href="https://www.google.com/maps?cid=6669109428650496541" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Directions
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="gem-big" viewBox="0 0 100 100" fill="none" stroke="#E6BE6E" stroke-width=".7" stroke-linejoin="round" aria-hidden="true">
+        <path pathLength="1" d="M22 10h56l17 25-45 57L5 35z"/>
+        <path pathLength="1" d="M5 35h90M22 10l14 25 14-25 14 25 14-25"/>
+        <path pathLength="1" stroke="#7FB2FF" d="M36 35l14 57 14-57M5 35l45 57 45-57"/>
+      </svg>
+      <figure>
+        <div class="sign">
+          <img src="assets/listing.jpg" width="1400" height="1050" alt="The Fast Jewelry Repair sign above the shop door in Denton" fetchpriority="high">
+        </div>
+        <figcaption class="sign-cap">Look for our sign</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper repair" id="repair">
+  <div class="wrap repair-grid">
+    <div class="reveal">
+      <span class="label">Jewelry repair</span>
+      <h2>Something need fixing?</h2>
+      <p class="lede">Jewelry repair is our trade. Call us, tell us what's wrong with the piece, and we'll tell you what we can do.</p>
+      <a class="btn btn-navy" href="tel:+19405956025">Call (940) 595-6025</a>
+    </div>
+    <div class="reveal">
+      <dl class="facts">
+        <div class="fact"><dt>Stars on Google</dt><dd>4.7</dd></div>
+        <div class="fact"><dt>Google reviews</dt><dd>141</dd></div>
+        <div class="fact"><dt>Days a week</dt><dd>7</dd></div>
+      </dl>
+      <div class="ruler" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Worth fixing">
+  <img src="https://www.topshelfsolutions.io/assets/img/library/food_retail/food_retail-08-jewelry-display-case-rings.webp" width="1366" height="768" alt="" loading="lazy" decoding="async">
+  <div class="band-copy">
+    <div class="wrap">
+      <h2>Worth <em>fixing.</em></h2>
+      <p>If the piece matters to you, call us at <a href="tel:+19405956025">(940) 595-6025</a>.</p>
+    </div>
+  </div>
+  <span class="sample">Sample photo</span>
+</section>
+
+<section class="sec paper reviews" id="reviews">
+  <div class="wrap">
+    <div class="score-card reveal">
+      <span class="gword">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <i aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></i>
+        Reviews
+      </span>
+      <div class="score">4.7</div>
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <p>141 Google reviews</p>
+      <a class="btn btn-navy" href="https://www.google.com/maps?cid=6669109428650496541" target="_blank" rel="noopener">Read our reviews on Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <span class="label">Visit</span>
+      <h2>Find us in Denton.</h2>
+      <address>2430 S Interstate 35E #110<br>Denton, TX 76205</address>
+      <a class="tel" href="tel:+19405956025">(940) 595-6025</a>
+      <div class="visit-cta">
+        <a class="btn btn-gold" href="https://www.google.com/maps?cid=6669109428650496541" target="_blank" rel="noopener">Directions</a>
+        <a class="btn btn-line" href="tel:+19405956025">Call</a>
+      </div>
+    </div>
+    <div class="hours reveal">
+      <h3>Hours</h3>
+      <div class="hours-row" data-day="1"><span>Monday</span><span>10 am to 7 pm</span></div>
+      <div class="hours-row" data-day="2"><span>Tuesday</span><span>10 am to 7 pm</span></div>
+      <div class="hours-row" data-day="3"><span>Wednesday</span><span>10 am to 7 pm</span></div>
+      <div class="hours-row" data-day="4"><span>Thursday</span><span>10 am to 7 pm</span></div>
+      <div class="hours-row" data-day="5"><span>Friday</span><span>10 am to 7 pm</span></div>
+      <div class="hours-row" data-day="6"><span>Saturday</span><span>10 am to 7 pm</span></div>
+      <div class="hours-row" data-day="0"><span>Sunday</span><span>12 pm to 6 pm</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <span class="brand">Fast Jewelry Repair</span>
+    <span>2430 S Interstate 35E #110, Denton, TX 76205 &middot; <a href="tel:+19405956025">(940) 595-6025</a></span>
+    <small>&copy; 2026 Fast Jewelry Repair. Sample website by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a>.</small>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a class="btn btn-gold" href="tel:+19405956025">Call</a>
+  <a class="btn btn-line" href="https://www.google.com/maps?cid=6669109428650496541" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement;
+  root.classList.add('js');
+
+  // Open/closed chip, computed in America/Chicago. Minutes from midnight; 0 = Sunday.
+  var H={0:[720,1080],1:[600,1140],2:[600,1140],3:[600,1140],4:[600,1140],5:[600,1140],6:[600,1140]};
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'pm':'am';h=h%12||12;return h+(mm?':'+('0'+mm).slice(-2):'')+' '+ap}
+  function status(day,mins){
+    var t=H[day];
+    if(mins>=t[0]&&mins<t[1])return{open:true,text:'Open until '+fmt(t[1])};
+    if(mins<t[0])return{open:false,text:'Closed, opens '+fmt(t[0])};
+    return{open:false,text:'Closed, opens '+fmt(H[(day+1)%7][0])};
+  }
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);
+    var s=status(day,(+p.hour%24)*60+(+p.minute));
+    var chip=d.getElementById('chip');
+    chip.textContent=s.text;
+    if(s.open)chip.classList.add('is-open');
+    var row=d.querySelector('.hours-row[data-day="'+day+'"]');
+    if(row)row.classList.add('today');
+  }catch(e){}
+
+  var bar=d.getElementById('bar');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){bar.classList.toggle('show',!es[0].isIntersecting)})
+      .observe(d.getElementById('hero-cta'));
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{rootMargin:'0px 0px -8% 0px'});
+    d.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{
+    bar.classList.add('show');
+    d.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>

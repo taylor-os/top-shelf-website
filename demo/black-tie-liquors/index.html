@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Black Tie Liquors, a liquor store at 2824 N Locust St in Denton, TX. Open Monday to Saturday, 10 am to 9 pm. Call (940) 808-1550.">
+<meta name="theme-color" content="#0B0B0C">
+<title>Black Tie Liquors | Liquor Store in Denton, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Black Tie Liquors | Liquor Store in Denton, TX">
+<meta property="og:description" content="Liquor store at 2824 N Locust St, Denton. Open Monday to Saturday, 10 am to 9 pm.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/black-tie-liquors/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0C'/%3E%3Cpath d='M29 32 10 20q-3 12 0 24zM35 32l19-12q3 12 0 24z' fill='%23fff'/%3E%3Crect x='27' y='26' width='10' height='12' rx='3' fill='%23C9A24B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LiquorStore",
+  "name": "Black Tie Liquors",
+  "telephone": "+1-940-808-1550",
+  "image": "https://www.topshelfsolutions.io/demo/black-tie-liquors/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2824 N Locust St",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76209",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "21:00"
+  }],
+  "hasMap": "https://www.google.com/maps?cid=7668858555502290581",
+  "sameAs": ["http://www.facebook.com/blacktieliquor2824"]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ================================================================
+   Black Tie Liquors - one-page demo
+   Tuxedo black, shirt white, one gold stud. The bow tie is the mark.
+   ================================================================ */
+:root{
+  --black:#0B0B0C;
+  --black-2:#161617;
+  --white:#FFFFFF;
+  --shirt:#F5F4F0;
+  --gold:#C9A24B;        /* on black */
+  --gold-deep:#7A5C14;   /* small text on white */
+  --on-black:#F5F4F0;
+  --on-black-muted:#B4B2AC;
+  --on-white-muted:#55534E;
+  --rule:rgba(11,11,12,.16);
+  --rule-black:rgba(245,244,240,.18);
+  --display:'Bodoni Moda','Didot','Bodoni MT',Georgia,serif;
+  --sans:'Jost','Century Gothic','Avenir Next',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --notch:clamp(18px,4vw,54px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;overflow-x:clip;
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--black);background:var(--white);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+h1,h2,p,ul,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+h1,h2{font-family:var(--display);font-weight:600;line-height:1;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(2.1rem,7.4vw,3.6rem)}
+h2 em,h1 em{font-style:italic;font-weight:500}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+::selection{background:var(--gold);color:var(--black)}
+
+.wrap{width:min(100% - 2.5rem,1120px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--gold);color:var(--black);font-weight:600;border-radius:4px;text-decoration:none}
+.skip:focus{top:1rem}
+
+.eyebrow{
+  font-size:.75rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;line-height:1.3;
+}
+.on-white .eyebrow{color:var(--gold-deep)}
+.on-black .eyebrow{color:var(--gold)}
+
+.bow{width:4.25rem;height:auto;aspect-ratio:2/1;flex:none}
+.bow .wing{fill:currentColor}
+.bow .knot{fill:var(--gold)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.85rem 1.5rem;border:1.5px solid transparent;border-radius:2px;
+  font:600 .9375rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  transition:transform .18s var(--ease),background-color .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:var(--black)}
+.btn-line{border-color:currentColor;background:transparent}
+.btn-black{background:var(--black);color:var(--on-black)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold:hover{background:#D9B560}
+  .on-black .btn-line:hover{background:var(--on-black);color:var(--black);border-color:var(--on-black)}
+  .btn-black:hover{background:#2A2A2C}
+}
+
+/* scroll reveal: without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- ribbon + header ---------- */
+.ribbon{
+  background:var(--white);color:var(--black);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.45rem 1.25rem;border-bottom:1px solid var(--rule);
+}
+.ribbon a{font-weight:600;text-underline-offset:2px}
+
+.top{background:var(--black);color:var(--on-black)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem}
+.brand{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--display);font-weight:600;font-size:1.2rem;letter-spacing:.01em;white-space:nowrap}
+.brand .bow{width:2.1rem}
+.top nav{display:none}
+.top-call{font-size:.875rem;font-weight:600;letter-spacing:.06em;text-decoration:none;white-space:nowrap;padding:.6rem 0}
+.top-call span{border-bottom:1px solid var(--gold);padding-bottom:2px}
+@media (min-width:860px){
+  .top nav{display:flex;gap:2.2rem}
+  .top nav a{font-size:.8125rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--on-black-muted);transition:color .18s ease}
+  .top nav a:hover{color:var(--on-black)}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:var(--black);color:var(--on-black);text-align:center;
+  display:flex;align-items:flex-end;justify-content:center;
+  min-height:34rem;
+  padding:2rem 0 calc(2.5rem + var(--notch));
+  clip-path:polygon(0 0,100% 0,100% calc(100% - var(--notch)),50% 100%,0 calc(100% - var(--notch)));
+}
+.hero-photo{
+  position:absolute;inset:-8px;z-index:-2;width:calc(100% + 16px);height:calc(100% + 16px);max-width:none;
+  object-fit:cover;object-position:50% 35%;
+  filter:grayscale(1) contrast(1.08) brightness(.58) blur(1.5px);
+}
+.hero-wash{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 62%,rgba(11,11,12,.6),transparent 72%),
+    linear-gradient(180deg,rgba(11,11,12,.62) 0%,rgba(11,11,12,.42) 30%,rgba(11,11,12,.9) 100%);
+}
+.hero-in{display:flex;flex-direction:column;align-items:center}
+.hero .bow{width:4.6rem;color:var(--white);margin-bottom:1.1rem;transform-origin:50% 50%}
+.js .hero .bow{animation:straighten .9s var(--ease) .25s both}
+@keyframes straighten{from{transform:rotate(-11deg)}60%{transform:rotate(3deg)}to{transform:none}}
+.hero h1{
+  margin-top:.9rem;font-size:clamp(3.3rem,15.5vw,8.5rem);line-height:.9;
+  text-shadow:0 2px 30px rgba(0,0,0,.55);
+}
+.hero h1 span{display:block}
+.tag{margin-top:1rem;font-size:1.125rem;color:var(--on-black);text-shadow:0 1px 12px rgba(0,0,0,.7)}
+.rating{
+  margin-top:1.15rem;display:inline-flex;align-items:center;gap:.55rem;flex-wrap:wrap;justify-content:center;
+  padding:.5rem .95rem;border:1px solid var(--rule-black);border-radius:999px;
+  background:rgba(11,11,12,.6);text-decoration:none;font-size:.9375rem;line-height:1.2;
+}
+.rating .g{width:1.1rem;height:1.1rem;flex:none}
+.rating b{font-weight:600}
+.stars{
+  font-size:1rem;letter-spacing:.08em;line-height:1;color:var(--gold);
+  background:linear-gradient(90deg,var(--gold) 88%,rgba(245,244,240,.3) 88%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-cta{margin-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;width:100%}
+.hero-cta .btn{flex:1 1 12rem;max-width:20rem}
+.chip{
+  margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.8125rem;font-weight:500;letter-spacing:.04em;white-space:nowrap;color:var(--on-black);
+}
+.chip::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--on-black-muted)}
+.chip.open::before{background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,75,.22)}
+.chip[hidden]{display:none}
+@media (min-width:860px){
+  .hero{min-height:min(82vh,46rem);padding-top:4rem}
+  .tag{font-size:1.3rem}
+}
+
+/* ---------- the shirt front ---------- */
+section{position:relative}
+.shirt{background:var(--white);padding:0 0 clamp(4rem,10vw,7rem);text-align:center}
+.shirt::before{ /* pleated bib */
+  content:"";position:absolute;top:0;bottom:0;left:50%;width:min(76%,30rem);transform:translateX(-50%);
+  background:repeating-linear-gradient(90deg,transparent 0 21px,rgba(11,11,12,.055) 21px 22px);
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 55%,transparent 100%);
+  pointer-events:none;
+}
+.shirt .wrap{position:relative}
+.studs{display:flex;flex-direction:column;align-items:center;gap:1.5rem;padding:1.5rem 0 2.25rem}
+.studs i{width:.6rem;height:.6rem;border-radius:50%;background:var(--black)}
+.studs i:nth-child(2){background:var(--gold);box-shadow:0 0 0 3px var(--white),0 0 0 4px var(--gold)}
+.shirt h2{margin-top:.9rem}
+.shirt p.lead{max-width:34rem;margin:1.4rem auto 0;font-size:1.1875rem;color:var(--on-white-muted)}
+.facts{
+  margin:2.75rem auto 0;max-width:46rem;display:grid;gap:0;
+  border-top:1px solid var(--black);border-bottom:1px solid var(--black);background:var(--white);
+}
+.facts li{padding:1.1rem .5rem;border-top:1px solid var(--rule)}
+.facts li:first-child{border-top:0}
+.facts small{display:block;font-size:.6875rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep)}
+.facts b{display:block;margin-top:.3rem;font-family:var(--display);font-weight:600;font-size:1.35rem;line-height:1.15;white-space:nowrap}
+@media (min-width:780px){
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .facts li{border-top:0;border-left:1px solid var(--rule);padding:1.4rem .75rem}
+  .facts li:first-child{border-left:0}
+}
+
+/* ---------- call band ---------- */
+.band{
+  isolation:isolate;overflow:hidden;background:var(--black);color:var(--on-black);text-align:center;
+  padding:clamp(4.5rem,12vw,8rem) 0;
+}
+.band img{
+  position:absolute;inset:-8px;z-index:-2;width:calc(100% + 16px);height:calc(100% + 16px);max-width:none;
+  object-fit:cover;object-position:50% 70%;
+  filter:grayscale(1) brightness(.5) blur(2.5px);
+}
+.band::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(11,11,12,.74)}
+/* wider screens draw the photo larger, so the blur grows with the viewport: no label or box may read */
+@media (min-width:700px){
+  .hero-photo,.band img{inset:-60px;width:calc(100% + 120px);height:calc(100% + 120px)}
+  .hero-photo{filter:grayscale(1) contrast(1.08) brightness(.52) blur(clamp(6px,.9vw,18px))}
+  .band img{filter:grayscale(1) brightness(.5) blur(clamp(6px,.9vw,18px))}
+}
+.band h2{margin-top:.9rem}
+.band p{max-width:30rem;margin:1.2rem auto 0;font-size:1.1875rem;color:var(--on-black)}
+.band .btn{margin-top:2rem;max-width:100%}
+.rule-bow{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:1.75rem;color:var(--white)}
+.rule-bow::before,.rule-bow::after{content:"";height:1px;width:min(22vw,7rem);background:var(--rule-black)}
+.rule-bow .bow{width:3rem}
+
+/* ---------- visit ---------- */
+.visit{background:var(--shirt);padding:clamp(4rem,10vw,7rem) 0}
+.visit-head{text-align:center;margin-bottom:clamp(2.25rem,6vw,3.5rem)}
+.visit-head h2{margin-top:.9rem}
+.visit-grid{display:grid;gap:1.5rem;align-items:stretch}
+@media (min-width:860px){.visit-grid{grid-template-columns:1.05fr .95fr;gap:2.5rem}}
+
+.invite{
+  position:relative;background:var(--white);text-align:center;
+  padding:clamp(2.75rem,8vw,4rem) clamp(1.25rem,5vw,3rem) clamp(2.25rem,6vw,3.25rem);
+  border:1px solid var(--black);outline:1px solid var(--black);outline-offset:-9px;
+  box-shadow:0 24px 50px -30px rgba(11,11,12,.45);
+}
+.invite .bow{width:3.6rem;margin:0 auto 1.25rem;color:var(--black)}
+.invite .line{font-size:.75rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
+.invite .name{margin-top:.8rem;font-family:var(--display);font-weight:600;font-size:clamp(2rem,8vw,2.9rem);line-height:1}
+.invite address{margin-top:1.1rem;font-style:normal;font-size:1.1875rem;line-height:1.45}
+.invite .dress{margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--rule);font-family:var(--display);font-style:italic;font-size:1.2rem}
+.invite .btns{margin-top:1.6rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem}
+.invite .btns .btn{flex:1 1 11rem;max-width:17rem}
+.invite .btn-line{color:var(--black)}
+@media (hover:hover){.invite .btn-line:hover{background:var(--black);color:var(--white);border-color:var(--black)}}
+
+.hours{background:var(--black);color:var(--on-black);padding:clamp(1.75rem,6vw,2.75rem) clamp(1.25rem,5vw,2.5rem)}
+.hours h3{margin:0 0 .9rem;font-family:var(--display);font-weight:600;font-size:1.75rem;line-height:1.1}
+.hours li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.72rem 0;border-top:1px solid var(--rule-black);
+  font-size:1rem;white-space:nowrap;color:var(--on-black-muted);
+}
+.hours li span:first-child{display:inline-flex;align-items:center;gap:.6rem}
+.hours li.today{color:var(--on-black);font-weight:600}
+.hours li.today span:first-child::after{
+  content:"Today";font-size:.625rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--black);background:var(--gold);padding:.2rem .45rem;border-radius:2px;
+}
+@media (max-width:380px){.hours li{font-size:.9375rem;gap:.6rem}}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--black);color:var(--on-black);padding:clamp(4.5rem,11vw,7.5rem) 0;text-align:center}
+.score{
+  margin-top:1rem;font-family:var(--display);font-weight:600;line-height:.85;letter-spacing:-.03em;
+  font-size:clamp(6.5rem,32vw,13rem);
+}
+.reviews .stars{display:inline-block;margin-top:1.1rem;font-size:clamp(1.6rem,7vw,2.25rem);letter-spacing:.16em}
+.reviews .count{margin-top:.9rem;font-size:1.1875rem;display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap}
+.gword{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:-.02em;white-space:nowrap}
+.reviews .btn{margin-top:2rem}
+.reviews .btn .g{width:1.2rem;height:1.2rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--black);color:var(--on-black-muted);border-top:1px solid var(--rule-black);padding:3rem 0 2.5rem;text-align:center;font-size:.9375rem}
+footer .brand{color:var(--on-black);font-size:1.5rem;flex-direction:column;gap:.8rem}
+footer .brand .bow{width:3rem}
+footer p{margin-top:.9rem}
+footer a{text-underline-offset:3px}
+footer .age{
+  display:inline-block;margin-top:1.4rem;padding:.4rem .9rem;border:1px solid var(--gold);border-radius:999px;
+  color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+}
+footer .credit{margin-top:1.75rem;font-size:.8125rem}
+
+/* ---------- phone bar ---------- */
+.bar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:calc(4.1rem + env(safe-area-inset-bottom))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;
+    background:var(--black);border-top:1px solid var(--rule-black);
+    padding:.5rem .6rem calc(.5rem + env(safe-area-inset-bottom));gap:.5rem;
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.8125rem;letter-spacing:.12em}
+  .bar .btn-line{color:var(--on-black)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .js .hero .bow{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="bow" viewBox="0 0 120 60">
+    <path class="wing" d="M54 30 8 5Q-1 30 8 55Z"/>
+    <path class="wing" d="M66 30 112 5Q121 30 112 55Z"/>
+    <rect class="knot" x="50" y="19" width="20" height="22" rx="5"/>
+  </symbol>
+  <symbol id="g" viewBox="0 0 48 48">
+    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+</svg>
+
+<div class="ribbon">Sample website made for Black Tie Liquors by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Black Tie Liquors, top of page">
+      <svg class="bow" aria-hidden="true"><use href="#bow"/></svg>Black Tie Liquors
+    </a>
+    <nav aria-label="Sections">
+      <a href="#visit">Visit</a>
+      <a href="#hours">Hours</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a class="top-call" href="tel:+19408081550"><span>(940) 808-1550</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero on-black" aria-labelledby="h-hero">
+  <img class="hero-photo" src="assets/listing.jpg" width="1400" height="1050" alt="An aisle inside Black Tie Liquors, lined with tall black shelves" fetchpriority="high" decoding="async">
+  <div class="hero-wash" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <svg class="bow" aria-hidden="true"><use href="#bow"/></svg>
+    <p class="eyebrow">Liquor store &middot; Denton, Texas</p>
+    <h1 id="h-hero"><span>Black Tie</span><span><em>Liquors</em></span></h1>
+    <p class="tag">Black tie is the name. Jeans are fine.</p>
+    <a class="rating" href="https://www.google.com/maps?cid=7668858555502290581" target="_blank" rel="noopener" aria-label="Rated 4.4 stars from 148 Google reviews. Opens Google Maps.">
+      <svg class="g" aria-hidden="true"><use href="#g"/></svg>
+      <b>4.4</b>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>148 Google reviews</span>
+    </a>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="https://www.google.com/maps?cid=7668858555502290581" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+      <a class="btn btn-line" href="tel:+19408081550"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the store</a>
+    </div>
+    <p class="chip" id="chip" hidden></p>
+  </div>
+</section>
+
+<section class="shirt on-white" aria-labelledby="h-store">
+  <div class="wrap">
+    <div class="studs" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="reveal">
+      <p class="eyebrow">The store</p>
+      <h2 id="h-store">Shelves dressed <em>to the nines.</em></h2>
+      <p class="lead">Walk in and you'll see it straight away: tall black shelving, full to the top, and a clean tiled aisle with room to look around. You'll find us on North Locust Street in Denton, Monday to Saturday.</p>
+    </div>
+    <ul class="facts reveal">
+      <li><small>Monday to Saturday</small><b>10 am to 9 pm</b></li>
+      <li><small>Address</small><b>2824 N Locust St</b></li>
+      <li><small>At the door</small><b>21+ only</b></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band on-black" aria-labelledby="h-call">
+  <img src="assets/listing.jpg" width="1400" height="1050" alt="" loading="lazy" decoding="async">
+  <div class="wrap reveal">
+    <div class="rule-bow" aria-hidden="true"><svg class="bow"><use href="#bow"/></svg></div>
+    <p class="eyebrow">Ask us</p>
+    <h2 id="h-call">After a <em>particular</em> bottle?</h2>
+    <p>Call the store and ask before you make the drive.</p>
+    <a class="btn btn-gold" href="tel:+19408081550"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (940) 808-1550</a>
+  </div>
+</section>
+
+<section class="visit on-white" id="visit" aria-labelledby="h-visit">
+  <div class="wrap">
+    <div class="visit-head reveal">
+      <p class="eyebrow">Visit</p>
+      <h2 id="h-visit">Consider this <em>your invitation.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="invite reveal">
+        <svg class="bow" aria-hidden="true"><use href="#bow"/></svg>
+        <p class="line">You'll find us at</p>
+        <p class="name">Black Tie Liquors</p>
+        <address>2824 N Locust St<br>Denton, TX 76209</address>
+        <p class="dress">Dress code: none. 21+ only.</p>
+        <div class="btns">
+          <a class="btn btn-black" href="https://www.google.com/maps?cid=7668858555502290581" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+          <a class="btn btn-line" href="tel:+19408081550"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+        </div>
+      </div>
+      <div class="hours on-black reveal" id="hours">
+        <h3>Hours</h3>
+        <ul>
+          <li data-d="1"><span>Monday</span><span>10 am to 9 pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>10 am to 9 pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10 am to 9 pm</span></li>
+          <li data-d="4"><span>Thursday</span><span>10 am to 9 pm</span></li>
+          <li data-d="5"><span>Friday</span><span>10 am to 9 pm</span></li>
+          <li data-d="6"><span>Saturday</span><span>10 am to 9 pm</span></li>
+          <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews on-black" id="reviews" aria-labelledby="h-reviews">
+  <div class="wrap reveal">
+    <p class="eyebrow">Reviews</p>
+    <h2 id="h-reviews" class="sr-only">Rated 4.4 stars on Google</h2>
+    <p class="score" aria-hidden="true">4.4</p>
+    <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <p class="count">
+      <span>148 reviews on</span>
+      <span class="gword" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+    </p>
+    <a class="btn btn-line" href="https://www.google.com/maps?cid=7668858555502290581" target="_blank" rel="noopener"><svg class="g" aria-hidden="true"><use href="#g"/></svg>Read them on Google</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#main"><svg class="bow" aria-hidden="true"><use href="#bow"/></svg>Black Tie Liquors</a>
+    <p>2824 N Locust St, Denton, TX 76209<br><a href="tel:+19408081550">(940) 808-1550</a></p>
+    <p>Monday to Saturday, 10 am to 9 pm. Closed Sunday.</p>
+    <p><a href="https://www.google.com/maps?cid=7668858555502290581" target="_blank" rel="noopener">Google Maps</a> &nbsp;&middot;&nbsp; <a href="http://www.facebook.com/blacktieliquor2824" target="_blank" rel="noopener">Facebook</a></p>
+    <span class="age">21+ only</span>
+    <p class="credit">&copy; 2026 Black Tie Liquors. Sample website by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a>.</p>
+  </div>
+</footer>
+
+<div class="bar on-black">
+  <a class="btn btn-line" href="tel:+19408081550"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-gold" href="https://www.google.com/maps?cid=7668858555502290581" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+</div>
+
+<script>
+(function(){
+  // Open/closed in America/Chicago. Monday to Saturday 10:00-21:00, Sunday closed.
+  try{
+    var m={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(p){m[p.type]=p.value});
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(m.weekday), t=+m.hour*60+ +m.minute;
+    var open=d>0&&t>=600&&t<1260, chip=document.getElementById('chip');
+    chip.textContent=open?'Open now until 9 pm'
+      :d===0?'Closed today, opens 10 am Monday'
+      :t<600?'Closed now, opens 10 am today'
+      :d===6?'Closed now, opens 10 am Monday'
+      :'Closed now, opens 10 am tomorrow';
+    if(open)chip.classList.add('open');
+    chip.hidden=false;
+    var row=document.querySelector('.hours li[data-d="'+d+'"]');
+    if(row)row.classList.add('today');
+  }catch(e){}
+
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
