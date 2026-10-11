@@ -142,7 +142,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--rosa)}
     radial-gradient(60% 45% at 0% 100%,rgba(214,36,94,.12),transparent 65%),
     var(--cream);
 }
-.garland{display:block;width:100%;height:clamp(62px,12vw,170px);overflow:visible;margin-top:clamp(.9rem,2.2vw,1.75rem);margin-bottom:clamp(1.1rem,4vw,2.25rem)}
+.garland{display:block;position:relative;z-index:20;pointer-events:none;width:100%;height:max(62px,12.5vw);overflow:visible;margin-top:clamp(.9rem,2.2vw,1.75rem);margin-bottom:clamp(1.1rem,4vw,2.25rem)}
 .garland .flag{transform-box:fill-box;transform-origin:50% 0;animation:sway 5s ease-in-out infinite alternate}
 .garland .flag:nth-child(even){animation-delay:-2.5s}
 .garland .flag:nth-child(3n){animation-duration:6.2s}
