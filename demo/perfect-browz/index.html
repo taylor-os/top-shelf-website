@@ -94,6 +94,15 @@ a{color:inherit}
 
 /* ============================== Hero ============================== */
 .hero{position:relative;background:var(--ink);color:var(--on-dark);overflow:hidden;isolation:isolate}
+/* Room photo behind the hero so it isn't a flat panel; the plum wash keeps the copy readable. */
+.hero::after{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(30,16,22,.95) 0%,rgba(30,16,22,.82) 42%,rgba(30,16,22,.58) 100%),
+    linear-gradient(180deg,rgba(30,16,22,.35) 0%,transparent 30%,rgba(30,16,22,.9) 100%),
+    url("https://www.topshelfsolutions.io/assets/img/library/beauty_spa/beauty_spa-06-lash-brow-studio-treatment.webp") 62% 50%/cover no-repeat}
+@media (max-width:919px){.hero::after{background:
+    linear-gradient(180deg,rgba(30,16,22,.7) 0%,rgba(30,16,22,.86) 45%,rgba(30,16,22,.96) 100%),
+    url("https://www.topshelfsolutions.io/assets/img/library/beauty_spa/beauty_spa-06-lash-brow-studio-treatment.webp") 60% 30%/cover no-repeat}}
 .hero::before{content:"";position:absolute;z-index:-1;width:120vmax;height:120vmax;right:-55vmax;top:-60vmax;
   border-radius:50%;background:radial-gradient(closest-side,rgba(217,142,118,.22),rgba(217,142,118,0))}
 .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
