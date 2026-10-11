@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5EFE6">
+<title>Styles By Elenor | Hair Salon in Denton, TX</title>
+<meta name="description" content="Styles By Elenor is a hair salon at 725 N Elm St Ste 26 in Denton, TX. Open every day, 9:00 am to 5:00 pm. Call (940) 442-8266.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Styles By Elenor | Hair Salon in Denton, TX">
+<meta property="og:description" content="A sample website made for Styles By Elenor by Top Shelf Business Solutions.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/styles-by-elenor/assets/listing.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231E1916'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='21' fill='%23D9B77A'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/listing.jpg" fetchpriority="high">
+<style>
+/* ============================================================
+   Styles By Elenor. Editorial salon direction:
+   warm ivory paper, espresso ink, one brass accent, arch frames.
+   Funnel A: the one action is CALL. Motion is restrained.
+   ============================================================ */
+:root{
+  --paper:#F5EFE6;
+  --paper-2:#ECE2D3;
+  --card:#FFFCF7;
+  --ink:#1E1916;
+  --ink-2:#4B423B;
+  --muted:#6B6057;
+  --line:#D9CCB9;
+  --brass:#A67C3D;
+  --brass-deep:#7F5A21;
+  --brass-light:#D9B77A;
+  --espresso:#1C1613;
+  --g-star:#FBBC04;
+  --serif:"Fraunces","Iowan Old Style",Georgia,serif;
+  --sans:"Figtree","Segoe UI",system-ui,Arial,sans-serif;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.21,1);
+  --bar-h:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.65;
+  color:var(--ink);background:var(--paper);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom));
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--serif);font-weight:340;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(2.1rem,7.4vw,3.6rem);line-height:1.04}
+h2 em,h1 em{font-style:italic;font-weight:300}
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(4rem,11vw,7.5rem)}
+.eyebrow{
+  font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass-deep);display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{content:"";width:1.8rem;height:1px;background:currentColor}
+.lede{color:var(--ink-2);font-size:clamp(1.05rem,2.6vw,1.2rem);max-width:46ch}
+:focus-visible{outline:2px solid var(--brass-deep);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.7rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+.ic{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.25rem;padding:.85rem 1.5rem;border-radius:999px;
+  font-weight:600;font-size:1rem;text-decoration:none;white-space:nowrap;
+  border:1px solid transparent;
+  transition:transform .25s var(--ease),background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);
+}
+.btn:active{transform:scale(.97)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-brass{background:var(--brass-light);color:var(--ink)}
+.btn-paper{background:var(--paper);color:var(--ink)}
+@media (hover:hover){
+  .btn-ink:hover{background:var(--brass-deep)}
+  .btn-line:hover{background:var(--ink);color:var(--paper)}
+  .btn-brass:hover,.btn-paper:hover{background:#fff}
+}
+
+/* Sample ribbon */
+.ribbon{
+  background:var(--espresso);color:#CDBFAE;text-align:center;
+  font-size:.78rem;letter-spacing:.03em;padding:.5rem var(--gutter);
+}
+.ribbon strong{color:var(--brass-light);font-weight:600}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(245,239,230,.86);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid rgba(30,25,22,.08);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem}
+.brand{font-family:var(--serif);font-size:1.3rem;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.brand em{font-style:italic;color:var(--brass-deep)}
+.site-nav{display:none}
+.site-nav a{
+  text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink-2);
+  padding:.5rem 0;position:relative;
+}
+.site-nav a::after{
+  content:"";position:absolute;left:0;right:0;bottom:.2rem;height:1px;background:var(--brass-deep);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);
+}
+@media (hover:hover){.site-nav a:hover::after{transform:scaleX(1)}}
+.header-call{min-height:2.75rem;padding:.5rem 1.05rem;font-size:.92rem}
+.header-call .num{display:none}
+
+/* Hero */
+.hero{padding-block:clamp(1.75rem,5vw,4rem) clamp(3rem,8vw,5.5rem);position:relative}
+.hero-grid{display:grid;gap:1.5rem;grid-template-areas:"head" "fig" "body"}
+.hero-head{grid-area:head}
+.hero-body{grid-area:body}
+.hero-fig{grid-area:fig}
+.hero h1{
+  margin-top:1.1rem;line-height:.86;
+  font-size:clamp(2.6rem,12vw,5rem);
+}
+.hero h1 span{display:block;font-weight:300}
+.hero h1 em{
+  display:block;color:var(--brass-deep);
+  font-size:clamp(5.2rem,27vw,11.5rem);margin-left:-.04em;letter-spacing:-.04em;
+  padding-bottom:.08em;
+}
+.hero-fig{position:relative;margin:0}
+.arch{
+  border-radius:999px 999px 20px 20px;overflow:hidden;background:var(--paper-2);
+  height:min(44svh,25rem);
+  box-shadow:0 24px 60px rgba(30,25,22,.18);
+}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:45% 42%}
+.rating-card{
+  position:absolute;left:-.25rem;bottom:-1.35rem;
+  display:flex;align-items:center;gap:.8rem;text-decoration:none;
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:.7rem 1rem .7rem .8rem;box-shadow:0 14px 34px rgba(30,25,22,.16);
+}
+.rating-card .g{width:1.9rem;height:1.9rem}
+.rating-card b{font-family:var(--serif);font-weight:500;font-size:1.5rem;line-height:1}
+.rating-card small{display:block;font-size:.78rem;color:var(--muted);line-height:1.2;margin-top:.15rem}
+.stars{display:flex;gap:.12rem;color:var(--g-star)}
+.stars svg{width:.95rem;height:.95rem;fill:currentColor}
+.rating-top{display:flex;align-items:center;gap:.5rem}
+.hero-body{padding-top:1.9rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
+.hero-actions .btn{flex:1 1 13rem}
+.open-chip{
+  display:inline-flex;align-items:center;gap:.55rem;margin-top:1.4rem;
+  font-size:.9rem;color:var(--ink-2);
+}
+.open-chip i{width:.55rem;height:.55rem;border-radius:50%;background:var(--brass)}
+.open-chip.is-open i{background:#2E9E5B;box-shadow:0 0 0 4px rgba(46,158,91,.18)}
+
+/* Marquee */
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding-block:1rem}
+.marquee-track{display:flex;width:max-content}
+.marquee ul{
+  display:flex;flex:none;gap:2.5rem;margin:0;padding:0 1.25rem;list-style:none;
+  font-family:var(--serif);font-style:italic;font-size:1.25rem;font-weight:300;white-space:nowrap;
+}
+.marquee li{display:flex;align-items:center;gap:2.5rem}
+.marquee li::after{content:"";width:.4rem;height:.4rem;border-radius:50%;background:var(--brass-light)}
+
+/* About */
+.about-grid{display:grid;gap:2.5rem}
+.about h2{margin-top:1.2rem}
+.about .lede{margin-top:1.4rem}
+.about .lede + .lede{margin-top:1rem}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:2.2rem 0 0;padding:0;border-top:1px solid var(--line)}
+.facts div{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.facts div:nth-child(odd){padding-right:1rem}
+.facts dt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.facts dd{margin:.25rem 0 0;font-family:var(--serif);font-size:1.35rem;line-height:1.2}
+
+/* Services */
+.services{background:var(--paper-2)}
+.services-grid{display:grid;gap:1.4rem}
+.services h2{margin-top:1.2rem}
+.services .btn{margin-top:1.8rem}
+
+/* Reviews */
+.reviews{background:var(--espresso);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+.reviews::before{
+  content:"";position:absolute;inset:auto -20% -55% -20%;height:90%;
+  background:radial-gradient(closest-side,rgba(217,183,122,.2),transparent);pointer-events:none;
+}
+.reviews .wrap{position:relative}
+.reviews .eyebrow{color:var(--brass-light);justify-content:center}
+.reviews .eyebrow::after{content:"";width:1.8rem;height:1px;background:currentColor}
+.score{
+  font-family:var(--serif);font-style:italic;font-weight:300;line-height:.9;letter-spacing:-.05em;
+  font-size:clamp(8rem,42vw,17rem);color:var(--brass-light);margin-top:.6rem;
+}
+.reviews .stars{justify-content:center;gap:.4rem;margin-top:.4rem}
+.reviews .stars svg{width:clamp(1.6rem,6vw,2.2rem);height:clamp(1.6rem,6vw,2.2rem)}
+.reviews h2{font-size:clamp(1.7rem,6vw,2.6rem);margin-top:1.6rem}
+.gword{font-family:"Product Sans",Arial,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.02em}
+.gword .b{color:#4285F4}.gword .r{color:#EA4335}.gword .y{color:#FBBC05}.gword .gr{color:#34A853}
+.reviews .btn{margin-top:2rem}
+
+/* Visit */
+.visit{background:var(--paper-2)}
+.visit-grid{display:grid;gap:2.2rem}
+.visit h2{margin-top:1.2rem}
+.hours{width:100%;border-collapse:collapse;margin-top:1.8rem;font-size:1.02rem}
+.hours th,.hours td{padding:.85rem 0;border-bottom:1px solid var(--line);font-weight:400;text-align:left}
+.hours td{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.hours tr.today th,.hours tr.today td{font-weight:600;color:var(--ink)}
+.hours tr.today th::after{
+  content:"Today";margin-left:.6rem;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);padding:.18rem .5rem;border-radius:999px;vertical-align:.12em;
+}
+.place{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.8rem 1.5rem;align-self:start;
+}
+.place dl{margin:0}
+.place dt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.place dd{margin:.3rem 0 1.4rem;font-family:var(--serif);font-size:1.45rem;line-height:1.25}
+.place dd a{text-decoration:none}
+.place .btn{width:100%}
+.place .btn + .btn{margin-top:.7rem}
+
+/* Final CTA */
+.cta{background:var(--brass-light);text-align:center}
+.cta h2{font-size:clamp(2.8rem,12vw,6rem);line-height:.95}
+.cta p{margin:1.2rem auto 0;max-width:30rem;color:#3A2E22}
+.cta .big{
+  display:inline-block;margin-top:1.8rem;font-family:var(--serif);font-weight:400;text-decoration:none;
+  font-size:clamp(2rem,9vw,4rem);letter-spacing:-.02em;line-height:1;border-bottom:2px solid var(--ink);padding-bottom:.25rem;
+  font-variant-numeric:lining-nums;
+}
+.cta .btn{margin-top:2rem}
+
+/* Footer */
+.site-footer{background:var(--espresso);color:#CDBFAE;padding-block:3rem 2rem;font-size:.95rem}
+.footer-top{display:grid;gap:1.4rem;padding-bottom:2rem}
+.site-footer .brand{color:var(--paper);font-size:1.7rem}
+.site-footer .brand em{color:var(--brass-light)}
+.site-footer address{font-style:normal;line-height:1.7}
+.site-footer a{text-decoration:none}
+.footer-meta{border-top:1px solid rgba(217,183,122,.18);padding-top:1.4rem;font-size:.85rem;color:#9C8E7E}
+.attribution{
+  border-top:1px solid rgba(217,183,122,.18);margin-top:1.6rem;padding-top:1.8rem;
+  text-align:center;font-size:.85rem;color:#9C8E7E;
+}
+.attribution img{height:30px;width:auto;margin:0 auto .7rem;opacity:.9}
+.attribution p{margin-bottom:.3rem}
+.attribution a{color:var(--brass-light)}
+.site-footer :focus-visible,.reviews :focus-visible{outline-color:var(--brass-light)}
+
+/* Mobile action bar */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  display:grid;grid-template-columns:1.5fr 1fr;gap:.6rem;
+  padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(245,239,230,.92);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid rgba(30,25,22,.1);
+}
+.bar .btn{min-height:3rem;padding:.6rem 1rem}
+
+/* Desktop */
+@media (min-width:860px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .site-nav{display:flex;gap:2rem}
+  .header-call .num{display:inline}
+  .header-call .lbl{display:none}
+  .header-inner{min-height:4.6rem}
+  .hero-grid{
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    grid-template-areas:"head fig" "body fig";grid-template-rows:auto 1fr;
+    column-gap:clamp(2.5rem,6vw,6rem);row-gap:0;align-items:start;
+  }
+  .hero-head{padding-top:clamp(1rem,5vh,4rem)}
+  .hero h1{font-size:clamp(3.4rem,5.4vw,5rem)}
+  .hero h1 em{font-size:clamp(8rem,15vw,13rem)}
+  .arch{height:min(80vh,46rem)}
+  .rating-card{left:-2.5rem;bottom:3rem;padding:1rem 1.3rem 1rem 1.1rem}
+  .hero-actions .btn{flex:0 0 auto}
+  .arch img{object-position:38% 50%}
+  .about-grid{grid-template-columns:1.1fr .9fr;gap:5rem;align-items:end}
+  .facts{margin-top:0}
+  .services-grid,.visit-grid{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .visit-grid{align-items:start}
+  .place{padding:2.4rem}
+  .footer-top{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
+}
+
+/* Motion: restrained. One hero entrance, soft scroll reveals, a slow marquee. */
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.09)}to{transform:none}}
+@keyframes unveil{from{clip-path:inset(100% 0 0 0 round 999px 999px 20px 20px)}to{clip-path:inset(0 0 0 0 round 999px 999px 20px 20px)}}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-head > *,.hero-body > *{animation:rise .8s var(--ease) both}
+  .hero h1{animation-delay:.08s}
+  .hero-body > :nth-child(1){animation-delay:.3s}
+  .hero-body > :nth-child(2){animation-delay:.38s}
+  .hero-body > :nth-child(3){animation-delay:.46s}
+  .arch{animation:unveil 1.1s var(--ease) .1s both}
+  .arch img{animation:settle 1.8s var(--ease) both}
+  .rating-card{animation:rise .8s var(--ease) .7s both}
+  .marquee-track{animation:slide 38s linear infinite}
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Styles By Elenor",
+  "telephone":"+19404428266",
+  "address":{"@type":"PostalAddress","streetAddress":"725 N Elm St Ste 26","addressLocality":"Denton","addressRegion":"TX","postalCode":"76201","addressCountry":"US"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"17:00"}],
+  "hasMap":"https://www.google.com/maps?cid=6084028273724526494"
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></symbol>
+  <symbol id="g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<p class="ribbon">A sample website made for <strong>Styles By Elenor</strong> by Top Shelf Business Solutions</p>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Styles By Elenor, back to top">Styles By <em>Elenor</em></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#salon">The salon</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours and location</a>
+    </nav>
+    <a class="btn btn-ink header-call" href="tel:+19404428266">
+      <svg class="ic" aria-hidden="true"><use href="#phone"/></svg>
+      <span class="lbl">Call</span><span class="num">(940) 442-8266</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-head">
+        <p class="eyebrow">Hair salon in Denton, Texas</p>
+        <h1><span>Styles By</span> <em>Elenor</em></h1>
+      </div>
+
+      <figure class="hero-fig">
+        <div class="arch">
+          <img src="assets/listing.jpg" alt="Photo from the Styles By Elenor Google listing" width="1400" height="1867" fetchpriority="high">
+        </div>
+        <a class="rating-card" href="https://www.google.com/maps?cid=6084028273724526494" target="_blank" rel="noopener noreferrer" aria-label="5.0 stars from 80 Google reviews. Opens Google Maps.">
+          <svg class="g" aria-hidden="true"><use href="#g"/></svg>
+          <span>
+            <span class="rating-top">
+              <b>5.0</b>
+              <span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>
+            </span>
+            <small>80 Google reviews</small>
+          </span>
+        </a>
+      </figure>
+
+      <div class="hero-body">
+        <p class="lede">Good hair days start on Elm Street. Open every day of the week, 9:00 am to 5:00 pm.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="tel:+19404428266"><svg class="ic" aria-hidden="true"><use href="#phone"/></svg>Call (940) 442-8266</a>
+          <a class="btn btn-line" href="https://www.google.com/maps?cid=6084028273724526494" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#pin"/></svg>Get directions</a>
+        </div>
+        <p class="open-chip" id="open-chip"><i aria-hidden="true"></i><span>Open daily, 9:00 am to 5:00 pm</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <ul><li>Hair salon</li><li>Denton, Texas</li><li>Open seven days</li><li>9:00 am to 5:00 pm</li><li>5.0 on Google</li><li>725 N Elm St, Ste 26</li></ul>
+      <ul><li>Hair salon</li><li>Denton, Texas</li><li>Open seven days</li><li>9:00 am to 5:00 pm</li><li>5.0 on Google</li><li>725 N Elm St, Ste 26</li></ul>
+    </div>
+  </div>
+
+  <!-- The salon -->
+  <section class="section about" id="salon">
+    <div class="wrap about-grid">
+      <div class="rv">
+        <p class="eyebrow">The salon</p>
+        <h2>Five stars on Google, <em>right here in Denton.</em></h2>
+        <p class="lede">Styles By Elenor is a hair salon in Suite 26 at 725 N Elm St. It's open seven days a week, 9:00 am to 5:00 pm.</p>
+        <p class="lede">Call the salon at <a href="tel:+19404428266">(940) 442-8266</a>.</p>
+      </div>
+      <dl class="facts rv d1">
+        <div><dt>Google rating</dt><dd>5.0 stars</dd></div>
+        <div><dt>Google reviews</dt><dd>80</dd></div>
+        <div><dt>Open</dt><dd>7 days a week</dd></div>
+        <div><dt>Where</dt><dd>N Elm St, Denton</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="wrap services-grid">
+      <div class="rv">
+        <p class="eyebrow">Services</p>
+        <h2>For services and prices, <em>call the salon.</em></h2>
+      </div>
+      <div class="rv d1">
+        <p class="lede">Call during opening hours, 9:00 am to 5:00 pm, any day of the week.</p>
+        <a class="btn btn-ink" href="tel:+19404428266"><svg class="ic" aria-hidden="true"><use href="#phone"/></svg>Call (940) 442-8266</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow rv">Reviews</p>
+      <p class="score rv" aria-hidden="true">5.0</p>
+      <div class="stars rv d1" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+      <h2 class="rv d1">5.0 stars from 80 reviews on <span class="gword" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span></h2>
+      <a class="btn btn-brass rv d2" href="https://www.google.com/maps?cid=6084028273724526494" target="_blank" rel="noopener noreferrer">Read the reviews on Google<svg class="ic" aria-hidden="true"><use href="#arrow"/></svg></a>    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section visit" id="visit">
+    <div class="wrap visit-grid">
+      <div class="rv">
+        <p class="eyebrow">Hours and location</p>
+        <h2>Open every day, <em>9 to 5.</em></h2>
+        <table class="hours">
+          <caption class="skip">Opening hours</caption>
+          <tbody>
+            <tr data-day="Monday"><th scope="row">Monday</th><td>9:00 am to 5:00 pm</td></tr>
+            <tr data-day="Tuesday"><th scope="row">Tuesday</th><td>9:00 am to 5:00 pm</td></tr>
+            <tr data-day="Wednesday"><th scope="row">Wednesday</th><td>9:00 am to 5:00 pm</td></tr>
+            <tr data-day="Thursday"><th scope="row">Thursday</th><td>9:00 am to 5:00 pm</td></tr>
+            <tr data-day="Friday"><th scope="row">Friday</th><td>9:00 am to 5:00 pm</td></tr>
+            <tr data-day="Saturday"><th scope="row">Saturday</th><td>9:00 am to 5:00 pm</td></tr>
+            <tr data-day="Sunday"><th scope="row">Sunday</th><td>9:00 am to 5:00 pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="place rv d1">
+        <dl>
+          <dt>Address</dt>
+          <dd>725 N Elm St Ste 26<br>Denton, TX 76201</dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:+19404428266">(940) 442-8266</a></dd>
+        </dl>
+        <a class="btn btn-ink" href="https://www.google.com/maps?cid=6084028273724526494" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#pin"/></svg>Open in Google Maps</a>
+        <a class="btn btn-line" href="tel:+19404428266"><svg class="ic" aria-hidden="true"><use href="#phone"/></svg>Call the salon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta">
+    <div class="wrap rv">
+      <h2>Call <em>the salon.</em></h2>
+      <p>Open 9:00 am to 5:00 pm, every day of the week.</p>
+      <a class="big" href="tel:+19404428266">(940) 442-8266</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#top">Styles By <em>Elenor</em></a>
+      <address>725 N Elm St Ste 26<br>Denton, TX 76201</address>
+      <p><a href="tel:+19404428266">(940) 442-8266</a><br>Open daily, 9:00 am to 5:00 pm</p>
+    </div>
+    <p class="footer-meta">&copy; 2026 Styles By Elenor</p>
+    <!-- Top Shelf sample attribution -->
+    <div class="attribution">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions logo" loading="lazy">
+      <p>This sample website was prepared by Top Shelf Business Solutions.</p>
+      <p>Call or text <a href="tel:+14698333033">(469) 833-3033</a> &middot; <a href="mailto:contact@topshelfsolutions.io">contact@topshelfsolutions.io</a> &middot; <a href="https://www.topshelfsolutions.io">topshelfsolutions.io</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-ink" href="tel:+19404428266"><svg class="ic" aria-hidden="true"><use href="#phone"/></svg>Call the salon</a>
+  <a class="btn btn-line" href="https://www.google.com/maps?cid=6084028273724526494" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#pin"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var doc=document.documentElement;
+  doc.classList.add('js');
+
+  // Scroll reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+
+  // Today's row + open-now chip, on Denton time. Listing hours: 9:00-17:00 every day.
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',hour:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var day,hour;
+    parts.forEach(function(p){if(p.type==='weekday'){day=p.value;}if(p.type==='hour'){hour=+p.value;}});
+    var row=document.querySelector('.hours tr[data-day="'+day+'"]');
+    if(row){row.classList.add('today');}
+    var chip=document.getElementById('open-chip');
+    if(chip&&!isNaN(hour)){
+      var open=hour>=9&&hour<17;
+      chip.classList.toggle('is-open',open);
+      chip.querySelector('span').textContent=open?'Open now, until 5:00 pm':(hour<9?'Opens today at 9:00 am':'Closed now. Opens 9:00 am tomorrow');
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Lucy's Bakery in Denton, TX. Open Monday to Saturday, 6 am to 9 pm, at 3730 E McKinney St. Call (940) 484-1529.">
+<meta name="theme-color" content="#FBF0DC">
+<title>Lucy's Bakery | Denton, TX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23D6245E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-style='italic' font-weight='700' text-anchor='middle' fill='%23FBF0DC'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/listing.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Lucy's Bakery",
+  "telephone": "+1-940-484-1529",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3730 E McKinney St",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76208",
+    "addressCountry": "US"
+  },
+  "hasMap": "https://www.google.com/maps?cid=2764799010537339574",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "06:00",
+    "closes": "21:00"
+  }]
+}
+</script>
+<style>
+/* ================================================================
+   Lucy's Bakery demo. Panaderia morning: masa cream, rosa mexicano,
+   marigold, cacao. Fraunces display, Outfit body. Mobile first.
+   ================================================================ */
+:root{
+  --cream:#FBF0DC;
+  --paper:#FFF9EC;
+  --cacao:#2A1610;
+  --cacao-2:#3A2118;
+  --ink-2:#5B4337;
+  --ink-3:#7A6256;
+  --rosa:#D6245E;
+  --rosa-deep:#A8154A;
+  --marigold:#F4A62A;
+  --teal:#0F8B8D;
+  --line:rgba(42,22,16,.14);
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Outfit','Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shadow:0 18px 40px rgba(42,22,16,.16);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  color:var(--cacao);background:var(--cream);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  padding-bottom:calc(4.4rem + env(safe-area-inset-bottom));
+}
+img{max-width:100%;display:block}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+::selection{background:var(--rosa);color:#fff}
+.container{width:min(100% - 2.5rem,1120px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--cacao);color:var(--cream);border-radius:8px;font-weight:600}
+.skip-link:focus{top:1rem}
+
+h1,h2{font-family:var(--display);font-weight:700;line-height:.98;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+h2{font-size:clamp(2.2rem,7vw,3.9rem);text-wrap:balance}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--rosa)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-size:.8rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rosa-deep);
+}
+.eyebrow::before{content:"";width:.55em;height:.55em;background:var(--marigold);transform:rotate(45deg);flex:none}
+.lede{color:var(--ink-2);font-size:1.1rem;max-width:34rem}
+.section{position:relative;padding:clamp(4rem,10vw,7rem) 0}
+.section-head{display:grid;gap:1rem;margin-bottom:clamp(2rem,5vw,3rem)}
+
+/* ---- buttons --------------------------------------------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.85rem 1.6rem;border-radius:999px;border:2px solid transparent;
+  font-family:var(--body);font-size:1.0625rem;font-weight:600;text-decoration:none;line-height:1.1;
+  transition:transform .18s var(--ease),background-color .18s ease,box-shadow .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn svg{width:1.15rem;height:1.15rem;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-rosa{background:var(--rosa);color:#fff;box-shadow:0 10px 24px rgba(214,36,94,.3)}
+.btn-line{border-color:var(--cacao);color:var(--cacao)}
+.btn-cream{background:var(--cream);color:var(--cacao)}
+.btn-ghost-cream{border-color:rgba(251,240,220,.6);color:var(--cream)}
+@media (hover:hover) and (pointer:fine){
+  .btn-rosa:hover{background:var(--rosa-deep);transform:translateY(-2px);box-shadow:0 14px 28px rgba(214,36,94,.36)}
+  .btn-line:hover{background:var(--cacao);color:var(--cream);transform:translateY(-2px)}
+  .btn-cream:hover{background:#fff;transform:translateY(-2px)}
+  .btn-ghost-cream:hover{background:rgba(251,240,220,.12);border-color:var(--cream);transform:translateY(-2px)}
+}
+
+/* scroll reveal (JS adds .js; without JS everything is visible) */
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.08s}
+.js .reveal.d2{transition-delay:.16s}
+
+/* ---- header ---------------------------------------------------- */
+.site-header{
+  position:sticky;top:0;z-index:50;background:rgba(251,240,220,.86);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .25s ease;
+}
+.site-header.is-scrolled{border-bottom-color:var(--line)}
+.header-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.9rem}
+.wordmark{font-family:var(--display);font-size:1.45rem;font-weight:700;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.wordmark em{font-style:italic;font-weight:500;color:var(--rosa)}
+.site-nav{display:none;align-items:center;gap:1.8rem}
+.site-nav a{font-size:.95rem;font-weight:500;text-decoration:none;color:var(--ink-2);transition:color .18s ease}
+.site-nav a:hover{color:var(--rosa-deep)}
+.status{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .8rem;border-radius:999px;
+  background:var(--paper);border:1px solid var(--line);font-size:.82rem;font-weight:600;white-space:nowrap;
+}
+.status::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--ink-3);flex:none}
+.status.is-open::before{background:#1E9E5A;box-shadow:0 0 0 4px rgba(30,158,90,.18)}
+.status.is-closed::before{background:var(--rosa)}
+.header-call{display:none;min-height:2.7rem;padding:.5rem 1.2rem;font-size:.95rem}
+
+/* ---- hero ------------------------------------------------------ */
+.hero{position:relative;overflow:hidden;padding:0 0 clamp(4rem,9vw,6rem);
+  background:
+    radial-gradient(70% 50% at 100% 0%,rgba(244,166,42,.24),transparent 60%),
+    radial-gradient(60% 45% at 0% 100%,rgba(214,36,94,.12),transparent 65%),
+    var(--cream);
+}
+.garland{display:block;width:100%;height:clamp(62px,12vw,170px);margin-bottom:clamp(.5rem,3vw,1.5rem)}
+.garland .flag{transform-box:fill-box;transform-origin:50% 0;animation:sway 5s ease-in-out infinite alternate}
+.garland .flag:nth-child(even){animation-delay:-2.5s}
+.garland .flag:nth-child(3n){animation-duration:6.2s}
+@keyframes sway{from{transform:rotate(-2.2deg)}to{transform:rotate(2.2deg)}}
+/* phone order: name, photo with rating, call. Desktop: copy left, photo right. */
+.hero-grid{display:grid;gap:1rem}
+.hero h1{font-size:clamp(2.7rem,12.5vw,4.4rem);margin:.5rem 0 .55rem;font-weight:800}
+.hero h1 em{font-weight:400}
+.hero-tag{font-size:clamp(1.05rem,3.8vw,1.4rem);line-height:1.4;color:var(--ink-2);max-width:26rem}
+.hero-tag strong{color:var(--cacao);font-weight:600}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.hero-ctas .btn{flex:1 1 100%}
+.rating-chip{
+  position:absolute;left:50%;bottom:-1.25rem;transform:translateX(-50%);white-space:nowrap;
+  display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem .6rem .8rem;
+  border-radius:999px;background:var(--paper);border:2px solid var(--cacao);
+  font-size:.95rem;text-decoration:none;box-shadow:0 8px 18px rgba(42,22,16,.18);
+}
+.rating-chip strong{font-weight:700}
+.stars{
+  font-size:1.05em;letter-spacing:.08em;line-height:1;
+  background:linear-gradient(90deg,var(--marigold) 92%,rgba(42,22,16,.2) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.g-word{font-family:Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:-.02em}
+.g-word .b{color:#4285F4}.g-word .r{color:#EA4335}.g-word .y{color:#FBBC05}.g-word .g{color:#34A853}
+
+.arch-wrap{position:relative;margin:.4rem 6px 1.25rem}
+.arch{
+  position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:9.5rem 9.5rem 24px 24px;
+  background:var(--cacao-2);box-shadow:var(--shadow);
+  outline:2px solid var(--cacao);outline-offset:5px;
+}
+/* the taller box crops the window reflections along the top of the photo */
+.arch img{position:absolute;left:0;bottom:0;width:100%;height:120%;object-fit:cover;object-position:64% 100%}
+.badge{position:absolute;right:-.5rem;top:-.7rem;width:5.6rem;height:5.6rem;filter:drop-shadow(0 8px 16px rgba(42,22,16,.25))}
+.badge .spin{transform-origin:60px 60px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.rise{animation:rise .8s var(--ease) both}
+.rise-2{animation-delay:.1s}.rise-3{animation-delay:.2s}.rise-4{animation-delay:.3s}.rise-5{animation-delay:.42s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* ---- marquee --------------------------------------------------- */
+.marquee{background:var(--rosa);color:#fff;overflow:hidden;padding:.95rem 0;border-block:2px solid var(--cacao)}
+.marquee-track{display:flex;width:max-content;animation:slide 36s linear infinite}
+.marquee-track span{font-family:var(--display);font-style:italic;font-size:1.3rem;font-weight:500;white-space:nowrap;padding-right:1.4rem}
+.marquee-track i{font-style:normal;color:var(--marigold);padding:0 .9rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---- the day --------------------------------------------------- */
+.day-grid{display:grid;gap:1rem}
+.day-card{
+  position:relative;overflow:hidden;padding:1.7rem 1.6rem 1.6rem;border-radius:26px;
+  background:var(--paper);border:2px solid var(--cacao);box-shadow:6px 6px 0 var(--cacao);
+}
+.day-card .big{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,13vw,4.8rem);line-height:.9;letter-spacing:-.03em;font-variation-settings:"opsz" 144}
+.day-card .big small{font-size:.36em;font-weight:600;letter-spacing:0;margin-left:.15em}
+.day-card h3{font-family:var(--body);font-size:1.15rem;font-weight:600;margin:1rem 0 .3rem}
+.day-card p{color:var(--ink-2);font-size:1rem}
+.day-card.sun{background:var(--marigold)}
+.day-card.moon{background:var(--cacao);color:var(--cream);box-shadow:6px 6px 0 var(--rosa)}
+.day-card.moon p{color:rgba(251,240,220,.78)}
+.day-card.rest .big{color:var(--rosa)}
+.day-card .glyph{position:absolute;right:-1.2rem;top:-1.2rem;width:7rem;height:7rem;opacity:.2}
+.day-card.moon .glyph{opacity:.26}
+
+/* ---- menu ------------------------------------------------------ */
+.menu{background:var(--paper);border-block:2px solid var(--cacao)}
+.menu-copy{display:grid;justify-items:center;gap:1rem;text-align:center}
+.menu-copy .lede{margin-bottom:.6rem}
+
+/* ---- reviews --------------------------------------------------- */
+.reviews{background:var(--cacao);color:var(--cream);text-align:center}
+.scallop::before{
+  content:"";position:absolute;left:0;right:0;top:-15px;height:16px;
+  background:radial-gradient(circle at 14px 16px,var(--sc) 14px,transparent 14.6px) repeat-x;background-size:28px 16px;
+}
+.reviews{--sc:var(--cacao)}
+.reviews .eyebrow{color:var(--marigold);justify-content:center}
+.score{
+  font-family:var(--display);font-weight:800;font-size:clamp(8rem,38vw,15rem);line-height:.82;letter-spacing:-.05em;
+  color:var(--marigold);margin:1.2rem 0 .4rem;font-variation-settings:"opsz" 144;
+}
+.reviews .stars{font-size:clamp(1.9rem,8vw,2.8rem);display:inline-block;
+  background-image:linear-gradient(90deg,var(--marigold) 92%,rgba(251,240,220,.22) 92%)}
+.score-line{font-size:clamp(1.2rem,4.4vw,1.55rem);margin:1rem 0 .5rem}
+.score-line .g-word{font-size:1.12em}
+.reviews .sub{color:rgba(251,240,220,.72);max-width:28rem;margin:0 auto 1.8rem}
+
+/* ---- visit ----------------------------------------------------- */
+.visit-grid{display:grid;gap:1.25rem}
+.card{background:var(--paper);border:2px solid var(--cacao);border-radius:26px;padding:1.7rem 1.5rem}
+.card-label{display:block;font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rosa-deep);margin-bottom:.7rem}
+.addr{font-family:var(--display);font-size:clamp(1.6rem,6vw,2.1rem);font-weight:600;line-height:1.12;letter-spacing:-.015em;font-style:normal;display:block}
+.card .btn{margin-top:1.3rem;width:100%}
+.hours{margin:0}
+.hours-row{display:flex;justify-content:space-between;gap:1rem;padding:.6rem .7rem;border-radius:12px;font-size:1.02rem}
+.hours-row dt{font-weight:600}
+.hours-row dd{margin:0;color:var(--ink-2);font-variant-numeric:tabular-nums;text-align:right}
+.hours-row.today{background:var(--marigold)}
+.hours-row.today dd{color:var(--cacao);font-weight:600}
+.hours-row.shut dd{color:var(--rosa-deep);font-weight:600}
+.hours-status{margin-top:.9rem}
+.map{position:relative;border:2px solid var(--cacao);border-radius:26px;overflow:hidden;min-height:19rem;background:#E9DFC9}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---- final CTA ------------------------------------------------- */
+.cta{background:var(--rosa);color:#fff;text-align:center;--sc:var(--rosa)}
+.cta h2{color:#fff}
+.cta h2 em{color:var(--marigold)}
+.cta-phone{
+  display:inline-block;margin:1.4rem 0 .4rem;font-family:var(--display);font-weight:800;text-decoration:none;
+  font-size:clamp(2.5rem,12vw,5.4rem);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.cta p{color:rgba(255,255,255,.88);max-width:28rem;margin-inline:auto}
+.cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.8rem}
+.cta-btns .btn{flex:1 1 100%}
+
+/* ---- footer ---------------------------------------------------- */
+.site-footer{background:var(--cacao);color:rgba(251,240,220,.78);padding:3rem 0 1.5rem;font-size:.95rem}
+.footer-main{display:grid;gap:1.6rem;padding-bottom:2.2rem}
+.site-footer .wordmark{color:var(--cream);font-size:1.9rem}
+.site-footer a{text-underline-offset:3px}
+.footer-legal{font-size:.85rem;color:rgba(251,240,220,.55)}
+.attribution{border-top:1px solid rgba(251,240,220,.14);padding-top:1.6rem;text-align:center}
+.attribution p{font-size:.8rem;color:rgba(251,240,220,.5)}
+
+/* ---- mobile action bar ----------------------------------------- */
+.action-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(251,240,220,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+}
+.action-bar .btn{min-height:3.1rem;padding:.6rem 1rem;font-size:1rem}
+
+/* ---- larger screens -------------------------------------------- */
+@media (min-width:560px){
+  .hero-ctas .btn,.cta-btns .btn{flex:0 1 auto}
+  .card .btn{width:auto}
+  .day-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:860px){
+  body{padding-bottom:0}
+  .action-bar{display:none}
+  .site-nav{display:flex}
+  .header-call{display:inline-flex}
+  .hero-grid{grid-template-columns:1.05fr .95fr;column-gap:clamp(2.5rem,6vw,4.5rem);row-gap:0;
+    grid-template-areas:"head photo" "actions photo"}
+  .hero-head{grid-area:head;align-self:end}
+  .hero-actions{grid-area:actions;align-self:start}
+  .hero h1{font-size:clamp(5.5rem,10vw,8.6rem);margin:.9rem 0 1.2rem}
+  .hero h1 em{display:block;margin-left:.55em}
+  .arch-wrap{grid-area:photo;align-self:center;width:min(100%,29rem);margin:0 1rem 1.5rem auto}
+  .arch{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;outline-offset:8px}
+  .arch img{height:112%;object-position:60% 100%}
+  .badge{width:9rem;height:9rem;right:-2rem;top:1rem}
+  .rating-chip{font-size:1.05rem}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .map{grid-row:span 2;min-height:100%}
+  .footer-main{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
+  .section-head.split{grid-template-columns:1.1fr .9fr;align-items:end;gap:3rem}
+}
+
+/* ---- reduced motion -------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-bar">
+    <a class="wordmark" href="#home">Lucy's <em>Bakery</em></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#hours">Hours</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <span class="status" data-status="short">Opens 6 am</span>
+    <a class="btn btn-rosa header-call" href="tel:+19404841529">Call (940) 484-1529</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <svg class="garland" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="flag" overflow="visible">
+          <path fill="currentColor" d="M0 0H92V78q-11.500 18-23 0q-11.500 18-23 0q-11.500 18-23 0q-11.500 18-23 0Z"/>
+          <g fill="#FBF0DC">
+            <circle cx="46" cy="38" r="7"/>
+            <circle cx="46" cy="22" r="5"/><circle cx="60" cy="30" r="5"/><circle cx="60" cy="46" r="5"/>
+            <circle cx="46" cy="54" r="5"/><circle cx="32" cy="46" r="5"/><circle cx="32" cy="30" r="5"/>
+            <circle cx="12" cy="12" r="3.500"/><circle cx="80" cy="12" r="3.500"/>
+            <circle cx="12" cy="38" r="3.500"/><circle cx="80" cy="38" r="3.500"/>
+            <path d="M16 62l5 6-5 6-5-6ZM31 62l5 6-5 6-5-6ZM46 62l5 6-5 6-5-6ZM61 62l5 6-5 6-5-6ZM76 62l5 6-5 6-5-6Z"/>
+          </g>
+        </symbol>
+      </defs>
+      <path d="M-10 9Q600 61 1210 9" fill="none" stroke="#2A1610" stroke-width="2.500"/>
+      <g>
+        <use class="flag" href="#flag" x="14" y="13" style="color:#D6245E"/>
+        <use class="flag" href="#flag" x="122" y="20" style="color:#F4A62A"/>
+        <use class="flag" href="#flag" x="230" y="26" style="color:#0F8B8D"/>
+        <use class="flag" href="#flag" x="338" y="30" style="color:#D6245E"/>
+        <use class="flag" href="#flag" x="446" y="32" style="color:#F4A62A"/>
+        <use class="flag" href="#flag" x="554" y="33" style="color:#0F8B8D"/>
+        <use class="flag" href="#flag" x="662" y="32" style="color:#D6245E"/>
+        <use class="flag" href="#flag" x="770" y="30" style="color:#F4A62A"/>
+        <use class="flag" href="#flag" x="878" y="26" style="color:#0F8B8D"/>
+        <use class="flag" href="#flag" x="986" y="20" style="color:#D6245E"/>
+        <use class="flag" href="#flag" x="1094" y="13" style="color:#F4A62A"/>
+      </g>
+    </svg>
+
+    <div class="container hero-grid">
+      <div class="hero-head">
+        <p class="eyebrow rise">Buenos d&iacute;as, Denton</p>
+        <h1 class="rise rise-2">Lucy's <em>Bakery</em></h1>
+        <p class="hero-tag rise rise-3">Pan dulce on East McKinney. <strong>Doors open at 6 am</strong>, Monday through Saturday.</p>
+      </div>
+
+      <div class="arch-wrap rise rise-3">
+        <div class="arch">
+          <img src="assets/listing.jpg" alt="The glass display case at Lucy's Bakery, every shelf full of pan dulce" width="1400" height="788" fetchpriority="high">
+        </div>
+        <svg class="badge" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <circle cx="60" cy="60" r="59" fill="#F4A62A" stroke="#2A1610" stroke-width="2"/>
+          <defs><path id="ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+          <g class="spin">
+            <text font-family="Outfit,Arial,sans-serif" font-size="11.500" font-weight="700" letter-spacing="2.300" fill="#2A1610">
+              <textPath href="#ring">OPEN AT 6 AM &#10022; MONDAY TO SATURDAY &#10022;</textPath>
+            </text>
+          </g>
+          <text x="60" y="71" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="34" font-weight="800" fill="#2A1610">6<tspan font-size="15" font-weight="600" dx="1">am</tspan></text>
+        </svg>
+        <a class="rating-chip" href="https://www.google.com/maps?cid=2764799010537339574" target="_blank" rel="noopener" aria-label="4.6 stars from 392 Google reviews. Open the Google listing.">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span><strong>4.6</strong> &middot; 392 <span class="g-word" aria-hidden="true"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span> reviews</span>
+        </a>
+      </div>
+
+      <div class="hero-actions">
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-rosa" href="tel:+19404841529">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.600 10.800a15.100 15.100 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.250 11.400 11.400 0 0 0 3.600.600 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1 11.400 11.400 0 0 0 .600 3.600 1 1 0 0 1-.250 1Z"/></svg>
+            Call (940) 484-1529
+          </a>
+          <a class="btn btn-line" href="https://www.google.com/maps?cid=2764799010537339574" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Open at 6 am<i>&#10022;</i>Monday to Saturday<i>&#10022;</i>3730 E McKinney St<i>&#10022;</i>Denton, Texas<i>&#10022;</i>(940) 484-1529<i>&#10022;</i></span>
+      <span>Open at 6 am<i>&#10022;</i>Monday to Saturday<i>&#10022;</i>3730 E McKinney St<i>&#10022;</i>Denton, Texas<i>&#10022;</i>(940) 484-1529<i>&#10022;</i></span>
+    </div>
+  </div>
+
+  <!-- The day -->
+  <section class="section" id="hours">
+    <div class="container">
+      <div class="section-head split">
+        <div class="reveal">
+          <p class="eyebrow">The day at Lucy's</p>
+          <h2 style="margin-top:1rem">Open early. <em>Open late.</em></h2>
+        </div>
+        <p class="lede reveal d1">Stop in on the way to work or on the way home. The doors are open either way, six days a week.</p>
+      </div>
+      <div class="day-grid">
+        <article class="day-card sun reveal">
+          <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="#2A1610" stroke-width="5" stroke-linecap="round" aria-hidden="true"><circle cx="50" cy="50" r="20"/><path d="M50 8v12M50 80v12M8 50h12M80 50h12M20 20l9 9M71 71l9 9M80 20l-9 9M29 71l-9 9"/></svg>
+          <p class="big">6<small>am</small></p>
+          <h3>Doors open</h3>
+          <p>Monday through Saturday.</p>
+        </article>
+        <article class="day-card moon reveal d1">
+          <svg class="glyph" viewBox="0 0 100 100" fill="#F4A62A" aria-hidden="true"><path d="M62 12a40 40 0 1 0 26 62A34 34 0 0 1 62 12Z"/></svg>
+          <p class="big">9<small>pm</small></p>
+          <h3>Doors close</h3>
+          <p>Plenty of time to stop by after dinner.</p>
+        </article>
+        <article class="day-card rest reveal d2">
+          <p class="big">Sun<small>day</small></p>
+          <h3>Closed</h3>
+          <p>See you Monday at 6 am.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu (honest placeholder) -->
+  <section class="section menu" id="menu">
+    <div class="container menu-copy reveal">
+      <p class="eyebrow">Pan dulce</p>
+      <h2>What's in the <em>case</em> today?</h2>
+      <p class="lede">The quickest way to find out is to ask.</p>
+      <a class="btn btn-rosa" href="tel:+19404841529">Call the bakery</a>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews scallop" id="reviews">
+    <div class="container">
+      <p class="eyebrow reveal">What Denton says</p>
+      <p class="score reveal" aria-hidden="true">4.6</p>
+      <span class="stars reveal" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <h2 class="sr-only">4.6 stars from 392 Google reviews</h2>
+      <p class="score-line reveal" aria-hidden="true">4.6 stars from <strong>392</strong> <span class="g-word"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span> reviews</p>
+      <p class="sub reveal">Read them where people wrote them, on the Google listing.</p>
+      <a class="btn btn-cream reveal" href="https://www.google.com/maps?cid=2764799010537339574" target="_blank" rel="noopener">Read the reviews on Google</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Come by</p>
+        <h2>Find us on <em>East McKinney</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card reveal">
+          <span class="card-label">Address</span>
+          <address class="addr">3730 E McKinney St<br>Denton, TX 76208</address>
+          <a class="btn btn-line" href="https://www.google.com/maps?cid=2764799010537339574" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+        <div class="map reveal d1">
+          <iframe title="Map showing 3730 E McKinney St, Denton, TX 76208" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3730+E+McKinney+St,+Denton,+TX+76208&amp;output=embed"></iframe>
+        </div>
+        <div class="card reveal">
+          <span class="card-label">Hours</span>
+          <dl class="hours">
+            <div class="hours-row" data-day="1"><dt>Monday</dt><dd>6:00 am to 9:00 pm</dd></div>
+            <div class="hours-row" data-day="2"><dt>Tuesday</dt><dd>6:00 am to 9:00 pm</dd></div>
+            <div class="hours-row" data-day="3"><dt>Wednesday</dt><dd>6:00 am to 9:00 pm</dd></div>
+            <div class="hours-row" data-day="4"><dt>Thursday</dt><dd>6:00 am to 9:00 pm</dd></div>
+            <div class="hours-row" data-day="5"><dt>Friday</dt><dd>6:00 am to 9:00 pm</dd></div>
+            <div class="hours-row" data-day="6"><dt>Saturday</dt><dd>6:00 am to 9:00 pm</dd></div>
+            <div class="hours-row shut" data-day="0"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+          <span class="status hours-status" data-status>Mon to Sat, 6 am to 9 pm</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta scallop" id="call">
+    <div class="container">
+      <h2 class="reveal">Hungry? <em>Call the bakery.</em></h2>
+      <a class="cta-phone reveal" href="tel:+19404841529">(940) 484-1529</a>
+      <p class="reveal">Open Monday through Saturday, 6 am to 9 pm.</p>
+      <div class="cta-btns reveal">
+        <a class="btn btn-cream" href="tel:+19404841529">Call now</a>
+        <a class="btn btn-ghost-cream" href="https://www.google.com/maps?cid=2764799010537339574" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <span class="wordmark">Lucy's <em>Bakery</em></span>
+        <p style="margin-top:.5rem">Panader&iacute;a in Denton, Texas.</p>
+      </div>
+      <div>
+        <p>3730 E McKinney St<br>Denton, TX 76208</p>
+        <p style="margin-top:.5rem"><a href="tel:+19404841529">(940) 484-1529</a></p>
+      </div>
+      <div>
+        <p>Monday to Saturday<br>6:00 am to 9:00 pm</p>
+        <p style="margin-top:.5rem">Sunday closed</p>
+      </div>
+    </div>
+    <!-- Top Shelf sample attribution -->
+    <div class="attribution">
+      <p>Sample website prepared for Lucy's Bakery by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile action bar -->
+<div class="action-bar">
+  <a class="btn btn-rosa" href="tel:+19404841529">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.600 10.800a15.100 15.100 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.250 11.400 11.400 0 0 0 3.600.600 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1 11.400 11.400 0 0 0 .600 3.600 1 1 0 0 1-.250 1Z"/></svg>
+    Call
+  </a>
+  <a class="btn btn-line" href="https://www.google.com/maps?cid=2764799010537339574" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  var header=document.querySelector('.site-header');
+  var onScroll=function(){header.classList.toggle('is-scrolled',window.scrollY>8)};
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // Hours from the Google listing: Monday to Saturday 6:00 to 21:00, Sunday closed.
+  // day: 0 = Sunday. mins: minutes after midnight, Denton time.
+  function isOpen(day,mins){return day!==0&&mins>=360&&mins<1260}
+  console.assert(isOpen(1,360)&&isOpen(6,1259)&&!isOpen(0,600)&&!isOpen(6,1260)&&!isOpen(3,359),'hours check failed');
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){return parts.filter(function(p){return p.type===t})[0].value};
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var mins=(+get('hour'))*60+(+get('minute'));
+    var open=isOpen(day,mins);
+    var label=open?'Open now until 9 pm'
+      :(day!==0&&mins<360)?'Closed. Opens today at 6 am'
+      :(day===0||day===6)?'Closed. Opens Monday at 6 am'
+      :'Closed. Opens tomorrow at 6 am';
+    document.querySelectorAll('[data-status]').forEach(function(el){
+      el.textContent=el.dataset.status==='short'?(open?'Open now':'Closed now'):label;
+      el.classList.add(open?'is-open':'is-closed');
+    });
+    var row=document.querySelector('.hours-row[data-day="'+day+'"]');
+    if(row)row.classList.add('today');
+  }catch(e){/* static hours stay as written */}
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var targets=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduce.matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+    targets.forEach(function(el){io.observe(el)});
+  }else{
+    targets.forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>

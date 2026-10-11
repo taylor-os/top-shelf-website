@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Roman's Pizza, pizza and Italian restaurant at 3001 N Elm St #200 in Denton, TX. Call (940) 566-3000 to order.">
+<meta name="theme-color" content="#17110D">
+<title>Roman's Pizza | Pizza &amp; Italian in Denton, TX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 60V30a24 24 0 0 1 48 0v30z' fill='%23C9371F'/%3E%3Ctext x='32' y='49' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='34' fill='%23F6ECDD'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Roman's Pizza",
+  "telephone": "+1-940-566-3000",
+  "servesCuisine": ["Pizza", "Italian"],
+  "hasMap": "https://www.google.com/maps?cid=766221485520115131",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3001 N Elm St #200",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76207",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"], "opens": "11:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "22:00"}
+  ],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "609"}
+}
+</script>
+<style>
+:root{
+  --char:#17110D;
+  --char-2:#1F1712;
+  --char-3:#2A1F18;
+  --cream:#F6ECDD;
+  --cream-2:#EDE0CC;
+  --ink:#1E1510;
+  --ink-soft:#5C4D42;
+  --on-dark:#F6ECDD;
+  --on-dark-soft:#C4B4A2;
+  --on-dark-faint:#9C8C7C;
+  --tomato:#C9371F;
+  --tomato-hot:#DA4328;
+  --tomato-bright:#F0603F;
+  --flour:#EBC78C;
+  --basil:#7FA06B;
+  --line:rgba(246,236,221,.12);
+  --line-strong:rgba(246,236,221,.22);
+  --line-ink:rgba(30,21,16,.14);
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'DM Sans','Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --gutter:clamp(1.25rem,5vw,2.5rem);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  color:var(--on-dark);background:var(--char);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{max-width:100%;display:block}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--flour);outline-offset:3px;border-radius:4px}
+::selection{background:var(--tomato);color:#fff}
+section[id]{scroll-margin-top:4.5rem}
+.wrap{width:min(100% - 2 * var(--gutter),1140px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;padding:.7rem 1.1rem;background:var(--tomato);color:#fff;font-weight:600;border-radius:6px;transition:top .2s}
+.skip:focus{top:1rem}
+
+/* ---- sample ribbon ---- */
+.ribbon{background:#0F0B08;color:var(--on-dark-faint);font-size:.78rem;letter-spacing:.02em;text-align:center;padding:.5rem var(--gutter);border-bottom:1px solid var(--line)}
+.ribbon a{color:var(--flour);text-decoration:underline;text-underline-offset:3px}
+
+/* ---- shared ---- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.7em;
+  font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--flour);
+}
+.eyebrow::before{content:"";width:1.8em;height:1px;background:currentColor;opacity:.7}
+.on-cream .eyebrow{color:var(--tomato)}
+.h2{
+  font-family:var(--display);font-weight:600;font-variation-settings:"opsz" 144;
+  font-size:clamp(2.3rem,7vw,4.2rem);line-height:1;letter-spacing:-.025em;text-wrap:balance;
+}
+.h2 em{font-style:italic;font-weight:500;color:var(--tomato-bright)}
+.on-cream .h2 em{color:var(--tomato)}
+.lede{color:var(--on-dark-soft);max-width:34rem}
+.on-cream .lede{color:var(--ink-soft)}
+.section{position:relative;padding:clamp(4.5rem,11vw,8rem) 0}
+.on-cream{background:var(--cream);color:var(--ink)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.9rem 1.6rem;border-radius:999px;border:1px solid transparent;
+  font-family:var(--body);font-size:1.02rem;font-weight:700;letter-spacing:.01em;line-height:1;white-space:nowrap;
+  transition:transform .2s var(--ease),background-color .2s,border-color .2s,box-shadow .2s,color .2s;
+}
+.btn svg{width:1.15rem;height:1.15rem;flex:none}
+.btn-call{background:var(--tomato);color:#fff;box-shadow:0 12px 30px rgba(201,55,31,.35),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-ghost{border-color:var(--line-strong);color:var(--on-dark);background:rgba(246,236,221,.04)}
+.on-cream .btn-ghost{border-color:rgba(30,21,16,.28);color:var(--ink);background:transparent}
+.btn:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){
+  .btn-call:hover{background:var(--tomato-hot);transform:translateY(-2px);box-shadow:0 16px 36px rgba(201,55,31,.45),inset 0 1px 0 rgba(255,255,255,.2)}
+  .btn-ghost:hover{border-color:var(--flour);color:var(--flour);transform:translateY(-2px)}
+  .on-cream .btn-ghost:hover{border-color:var(--tomato);color:var(--tomato)}
+}
+
+/* reveal (JS adds .js; without JS everything is visible) */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.08s}
+.js .reveal.d2{transition-delay:.16s}
+.js .reveal.d3{transition-delay:.24s}
+
+/* ---- header ---- */
+.top{position:sticky;top:0;z-index:50;background:rgba(23,17,13,.8);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem}
+.brand{font-family:var(--display);font-size:1.45rem;font-weight:700;letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.brand em{font-style:italic;font-weight:500;color:var(--tomato-bright)}
+.nav{display:none;gap:1.9rem;font-size:.86rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-soft)}
+.nav a{transition:color .2s}
+.nav a:hover{color:var(--on-dark)}
+.top .btn{min-height:2.6rem;padding:.55rem 1.05rem;font-size:.92rem;box-shadow:none}
+@media (min-width:900px){.nav{display:flex}}
+
+/* ---- hero ---- */
+/* phone: the listing photo fills the top of the first screen, copy sits on the fade below it */
+.hero{
+  position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;
+  min-height:34rem;min-height:calc(100svh - 10.4rem);
+  padding:0 0 1.5rem;background:var(--char);
+}
+.hero-photo{position:absolute;inset:0 0 auto 0;height:60%;z-index:-2}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 100%;animation:settle 1.6s var(--ease) both}
+@keyframes settle{from{transform:scale(1.08)}to{transform:none}}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(23,17,13,.35) 0,rgba(23,17,13,0) 16%,rgba(23,17,13,0) 30%,rgba(23,17,13,.7) 48%,var(--char) 60%);
+}
+.hero-tag,.hero .btn-ghost{display:none}
+.hero .btn-call{flex:1}
+.hero h1{
+  text-shadow:0 2px 34px rgba(0,0,0,.6);
+  font-family:var(--display);font-variation-settings:"opsz" 144;font-weight:800;
+  font-size:clamp(4rem,20vw,9rem);line-height:.84;letter-spacing:-.045em;
+  margin:.9rem 0 1.3rem;
+}
+.hero h1 span{display:block}
+.hero h1 .pz{font-style:italic;font-weight:500;color:var(--tomato-bright);padding-left:.18em;letter-spacing:-.035em}
+.hero-tag{font-size:clamp(1.1rem,2.6vw,1.3rem);line-height:1.5;color:var(--on-dark-soft);max-width:27rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1rem}
+.chip{
+  display:inline-flex;align-items:center;gap:.55rem;min-height:2.6rem;padding:.45rem .95rem;
+  border:1px solid var(--line-strong);border-radius:999px;background:rgba(246,236,221,.05);
+  font-size:.92rem;color:var(--on-dark);line-height:1.2;
+}
+.chip strong{font-weight:700}
+.chip .g{width:1.1rem;height:1.1rem;flex:none}
+.chip .star{color:#FBBC04}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--flour);flex:none}
+.is-open .dot{background:#6FCF7C;box-shadow:0 0 0 0 rgba(111,207,124,.6);animation:pulse 2.2s ease-out infinite}
+.is-closed .dot{background:var(--on-dark-faint)}
+@keyframes pulse{to{box-shadow:0 0 0 .55rem rgba(111,207,124,0)}}
+
+.seal{display:none;position:absolute;z-index:1;filter:drop-shadow(0 8px 18px rgba(0,0,0,.45))}
+.seal-ring{animation:spin 32s linear infinite;transform-origin:50% 50%}
+.seal text{font-family:var(--body);font-size:9.6px;font-weight:700;letter-spacing:.2em;fill:var(--cream)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.rise{animation:rise .8s var(--ease) both}
+.rise-2{animation-delay:.1s}.rise-3{animation-delay:.2s}.rise-4{animation-delay:.3s}.rise-5{animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .hero-tag{display:block;margin-bottom:2rem}
+  .hero .btn-ghost{display:inline-flex}
+  .hero .btn-call{flex:none}
+  .hero-meta{margin-top:1.5rem}
+}
+/* desktop: photo bleeds off the right half, copy on the left */
+@media (min-width:900px){
+  .hero{align-items:center;min-height:min(88vh,52rem);padding:4.5rem 0}
+  .hero-photo{inset:0 0 0 44%;height:auto}
+  .hero-photo img{object-position:50% 65%}
+  .hero::after{background:linear-gradient(90deg,var(--char) 44%,rgba(23,17,13,.8) 51%,rgba(23,17,13,0) 68%)}
+  .hero h1{font-size:clamp(5.5rem,10vw,9.5rem)}
+  .seal{display:block;width:8.6rem;height:8.6rem;right:clamp(1.5rem,4vw,3.5rem);top:3rem}
+}
+
+/* ---- marquee ---- */
+.band{background:var(--tomato);color:#fff;overflow:hidden;border-block:1px solid rgba(0,0,0,.15)}
+.band-track{display:flex;width:max-content;animation:slide 26s linear infinite}
+.band-track span{
+  display:inline-flex;align-items:center;gap:1.6rem;padding:.85rem .8rem;
+  font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.25rem,3.4vw,1.7rem);line-height:1;white-space:nowrap;
+}
+.band-track span::after{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--flour)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---- what we do ---- */
+.offer-head{display:grid;gap:1.2rem;margin-bottom:clamp(2rem,5vw,3.2rem)}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-ink)}
+.row{
+  display:grid;grid-template-columns:auto 1fr;column-gap:1.1rem;row-gap:.5rem;align-items:baseline;
+  padding:clamp(1.5rem,4vw,2.3rem) 0;border-bottom:1px solid var(--line-ink);
+}
+.row-n{font-size:.8rem;font-weight:700;letter-spacing:.14em;color:var(--tomato)}
+.row h3{
+  font-family:var(--display);font-variation-settings:"opsz" 144;font-weight:700;
+  font-size:clamp(2.4rem,9vw,4.6rem);line-height:.95;letter-spacing:-.035em;transition:transform .35s var(--ease),color .35s;
+}
+.row p{grid-column:2;color:var(--ink-soft);max-width:30rem}
+@media (hover:hover) and (pointer:fine){.row:hover h3{transform:translateX(.6rem);color:var(--tomato)}}
+@media (min-width:860px){
+  .offer-head{grid-template-columns:1fr 1fr;align-items:end}
+  .row{grid-template-columns:4rem 1.1fr 1fr;align-items:center}
+  .row p{grid-column:3}
+}
+
+/* ---- menu ---- */
+.menu-grid{display:grid;gap:clamp(2.2rem,6vw,4rem);align-items:center}
+.menu-copy > * + *{margin-top:1.3rem}
+.card{
+  position:relative;background:var(--cream);color:var(--ink);border-radius:18px;
+  padding:clamp(1.6rem,5vw,2.4rem);box-shadow:0 40px 80px -30px rgba(0,0,0,.8);
+  transform:rotate(-1.4deg);
+}
+.card-title{font-family:var(--display);font-style:italic;font-weight:500;font-size:2rem;line-height:1;color:var(--tomato);text-align:center}
+.card-rule{height:1px;background:var(--line-ink);margin:1.1rem 0 1.3rem}
+.sk{display:grid;gap:1.05rem}
+.sk-row{display:flex;align-items:center;gap:.8rem}
+.sk-row i{display:block;height:.7rem;border-radius:99px;background:rgba(30,21,16,.16)}
+.sk-row i:nth-child(2){flex:1;height:0;border-radius:0;background:none;border-bottom:2px dotted rgba(30,21,16,.22)}
+.sk-row i:last-child{width:2.4rem;background:rgba(201,55,31,.35)}
+.card-foot{margin-top:1.5rem;text-align:center;font-size:.86rem;color:var(--ink-soft)}
+@media (min-width:860px){.menu-grid{grid-template-columns:1.05fr .95fr}}
+
+/* ---- reviews ---- */
+.rev{text-align:center}
+.rev .eyebrow{justify-content:center}
+.rev .eyebrow::after{content:"";width:1.8em;height:1px;background:currentColor;opacity:.7}
+.rev-num{
+  font-family:var(--display);font-variation-settings:"opsz" 144;font-weight:800;
+  font-size:clamp(7rem,34vw,15rem);line-height:.82;letter-spacing:-.06em;color:var(--ink);margin:1.2rem 0 1rem;
+}
+.stars{position:relative;display:inline-block;font-size:clamp(1.9rem,7vw,2.8rem);line-height:1;letter-spacing:.12em;color:rgba(30,21,16,.15)}
+.stars-fill{position:absolute;left:0;top:0;width:92%;overflow:hidden;white-space:nowrap;color:#FBBC04;transition:width 1.3s var(--ease) .25s}
+.js .reveal:not(.in) .stars-fill{width:0}
+.rev-count{margin-top:1rem;font-size:1.15rem;color:var(--ink)}
+.gword{font-family:Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:-.02em}
+.gword .b{color:#4285F4}.gword .r{color:#EA4335}.gword .y{color:#FBBC05}.gword .gr{color:#34A853}
+.rev .lede{margin:1rem auto 2rem}
+.rev .small{margin:1.6rem auto 0;max-width:30rem;font-size:.88rem;color:var(--ink-soft)}
+
+/* ---- visit ---- */
+.visit-grid{display:grid;gap:clamp(2.2rem,6vw,4rem)}
+.visit-copy > * + *{margin-top:1.3rem}
+.addr{font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,5vw,2.2rem);line-height:1.15;letter-spacing:-.02em;font-style:normal}
+.visit-cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.hours{margin:0;background:var(--char-2);border:1px solid var(--line);border-radius:18px;padding:.6rem clamp(1.1rem,4vw,1.8rem)}
+.hours div{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:600}
+.hours dd{margin:0;color:var(--on-dark-soft);font-variant-numeric:tabular-nums;text-align:right}
+.hours .today dt,.hours .today dd{color:var(--flour)}
+.hours .today dt::after{content:"Today";margin-left:.6rem;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.2rem .5rem;border-radius:99px;background:rgba(235,199,140,.15)}
+@media (min-width:860px){.visit-grid{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* ---- final call ---- */
+.final{
+  text-align:center;overflow:hidden;
+  background:radial-gradient(70% 90% at 50% 110%,rgba(218,67,40,.45),transparent 70%),var(--char);
+  border-top:1px solid var(--line);
+}
+.final .h2{font-size:clamp(3rem,13vw,7rem)}
+.final .lede{margin:1.2rem auto 2.2rem}
+.final-phone{
+  display:inline-block;font-family:var(--display);font-variation-settings:"opsz" 144;font-weight:700;
+  font-size:clamp(2.3rem,10.5vw,5.2rem);line-height:1;letter-spacing:-.035em;color:var(--on-dark);
+  border-bottom:3px solid var(--tomato);padding-bottom:.12em;transition:color .2s;white-space:nowrap;
+}
+.final-phone:hover{color:var(--tomato-bright)}
+
+/* ---- footer ---- */
+.foot{background:#0F0B08;border-top:1px solid var(--line);padding:2.6rem 0 2rem;color:var(--on-dark-faint);font-size:.9rem}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.2rem;align-items:flex-end}
+.foot-main a:hover{color:var(--on-dark)}
+.attr{margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line);text-align:center;font-size:.8rem}
+.attr img{height:26px;width:auto;margin:0 auto .7rem;opacity:.85}
+.attr a{text-decoration:underline;text-underline-offset:3px}
+
+/* ---- sticky mobile call bar ---- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:.6rem;
+  padding:.65rem var(--gutter) calc(.65rem + env(safe-area-inset-bottom));
+  background:rgba(15,11,8,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+}
+.bar .btn{flex:1;min-height:3rem;box-shadow:none}
+.bar .btn-ghost{flex:0 0 auto}
+body{padding-bottom:calc(4.4rem + env(safe-area-inset-bottom))}
+@media (min-width:760px){.bar{display:none}body{padding-bottom:0}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+  .band-track{flex-wrap:wrap;width:auto;justify-content:center}
+  .band-track span[aria-hidden]{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<p class="ribbon">Sample website made for Roman's Pizza by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home">Roman's <em>Pizza</em></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#offer">What we do</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours &amp; location</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+19405663000">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call to order
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-photo">
+      <img src="assets/listing.jpg" alt="A whole pizza from Roman's Pizza in its box, seen from above on a green and white checkered tablecloth" width="1400" height="1867" fetchpriority="high">
+    </div>
+    <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="59" fill="#C9371F"/>
+      <g class="seal-ring">
+        <defs><path id="ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+        <text><textPath href="#ring" textLength="270">PIZZA &#8226; ITALIAN &#8226; DELIVERY &#8226; DENTON TX &#8226;</textPath></text>
+      </g>
+      <text x="60" y="73" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:38px;letter-spacing:0">R</text>
+    </svg>
+    <div class="wrap">
+        <p class="eyebrow rise">Pizza &amp; Italian &middot; Denton, TX</p>
+        <h1 class="rise rise-2"><span>Roman's</span><span class="pz">Pizza</span></h1>
+        <p class="hero-tag rise rise-3">Pizza and Italian on North Elm Street. Call in your order, or ask us about delivery.</p>
+        <div class="hero-cta rise rise-4">
+          <a class="btn btn-call" href="tel:+19405663000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (940) 566-3000
+          </a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps?cid=766221485520115131" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="hero-meta rise rise-5">
+          <a class="chip" href="https://www.google.com/maps?cid=766221485520115131" target="_blank" rel="noopener" aria-label="4.6 stars from 609 Google reviews. Opens Google Maps.">
+            <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+            <span><strong>4.6</strong> <span class="star" aria-hidden="true">&#9733;</span> &middot; 609 Google reviews</span>
+          </a>
+          <span class="chip" id="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Open every day from 11 am</span></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- Band -->
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <span>Pizza</span><span>Italian</span><span>Delivery</span><span>Denton, Texas</span><span>Open 7 days</span>
+      <span>Pizza</span><span>Italian</span><span>Delivery</span><span>Denton, Texas</span><span>Open 7 days</span>
+      <span aria-hidden="true">Pizza</span><span aria-hidden="true">Italian</span><span aria-hidden="true">Delivery</span><span aria-hidden="true">Denton, Texas</span><span aria-hidden="true">Open 7 days</span>
+      <span aria-hidden="true">Pizza</span><span aria-hidden="true">Italian</span><span aria-hidden="true">Delivery</span><span aria-hidden="true">Denton, Texas</span><span aria-hidden="true">Open 7 days</span>
+    </div>
+  </div>
+
+  <!-- What we do -->
+  <section class="section on-cream" id="offer">
+    <div class="wrap">
+      <div class="offer-head reveal">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2 class="h2" style="margin-top:1rem">Pizza first. <em>Italian too.</em></h2>
+        </div>
+        <p class="lede">Roman's Pizza is at 3001 N Elm St in Denton. Call us to order.</p>
+      </div>
+      <ol class="rows">
+        <li class="row reveal">
+          <span class="row-n">01</span>
+          <h3>Pizza</h3>
+          <p>It's in the name. Call and tell us how you want yours.</p>
+        </li>
+        <li class="row reveal">
+          <span class="row-n">02</span>
+          <h3>Italian</h3>
+          <p>Roman's is an Italian restaurant as well as a pizza shop. Ask what else is on the menu when you call.</p>
+        </li>
+        <li class="row reveal">
+          <span class="row-n">03</span>
+          <h3>Delivery</h3>
+          <p>Staying in tonight? Call and we'll check whether we deliver to your address.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section" id="menu">
+    <div class="wrap menu-grid">
+      <div class="menu-copy reveal">
+        <p class="eyebrow">The menu</p>
+        <h2 class="h2">Call for <em>the menu.</em></h2>
+        <p class="lede">Ask about the menu and prices when you call, and place your order while you're on the line.</p>
+        <p><a class="btn btn-call" href="tel:+19405663000">Call (940) 566-3000</a></p>      </div>
+      <div class="card reveal d1" aria-label="Sample menu layout with no real items">
+        <p class="card-title">Menu</p>
+        <div class="card-rule"></div>
+        <div class="sk" aria-hidden="true">
+          <div class="sk-row"><i style="width:42%"></i><i></i><i></i></div>
+          <div class="sk-row"><i style="width:30%"></i><i></i><i></i></div>
+          <div class="sk-row"><i style="width:48%"></i><i></i><i></i></div>
+          <div class="sk-row"><i style="width:36%"></i><i></i><i></i></div>
+          <div class="sk-row"><i style="width:26%"></i><i></i><i></i></div>
+          <div class="sk-row"><i style="width:44%"></i><i></i><i></i></div>
+        </div>
+        <p class="card-foot">Sample layout. Your menu and prices go here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section on-cream rev" id="reviews">
+    <div class="wrap reveal">
+      <p class="eyebrow">Reviews</p>
+      <p class="rev-num" aria-hidden="true">4.6</p>
+      <div class="stars" role="img" aria-label="Rated 4.6 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="stars-fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2 class="rev-count"><strong>609</strong> reviews on <span class="gword" aria-label="Google"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="gr">l</span><span class="r">e</span></span></h2>
+      <p class="lede">They're all public. Read them for yourself on Google.</p>
+      <a class="btn btn-ghost" href="https://www.google.com/maps?cid=766221485520115131" target="_blank" rel="noopener">Read the reviews on Google</a>    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-copy reveal">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2 class="h2">Find us on <em>North Elm.</em></h2>
+        <address class="addr">3001 N Elm St #200<br>Denton, TX 76207</address>
+        <div class="visit-cta">
+          <a class="btn btn-call" href="https://www.google.com/maps?cid=766221485520115131" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-ghost" href="tel:+19405663000">(940) 566-3000</a>
+        </div>
+      </div>
+      <dl class="hours reveal d1" id="hours">
+        <div data-day="1"><dt>Monday</dt><dd>11 am to 9 pm</dd></div>
+        <div data-day="2"><dt>Tuesday</dt><dd>11 am to 9 pm</dd></div>
+        <div data-day="3"><dt>Wednesday</dt><dd>11 am to 9 pm</dd></div>
+        <div data-day="4"><dt>Thursday</dt><dd>11 am to 9 pm</dd></div>
+        <div data-day="5"><dt>Friday</dt><dd>11 am to 10 pm</dd></div>
+        <div data-day="6"><dt>Saturday</dt><dd>11 am to 10 pm</dd></div>
+        <div data-day="0"><dt>Sunday</dt><dd>11 am to 9 pm</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Final call -->
+  <section class="section final">
+    <div class="wrap reveal">
+      <p class="eyebrow">Order now</p>
+      <h2 class="h2" style="margin-top:1rem">Hungry? <em>Call us.</em></h2>
+      <p class="lede">Open every day from 11 am.</p>
+      <a class="final-phone" href="tel:+19405663000">(940) 566-3000</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-main">
+      <div>
+        <span class="brand" style="color:var(--on-dark)">Roman's <em>Pizza</em></span>
+        <p style="margin-top:.6rem">3001 N Elm St #200, Denton, TX 76207</p>
+        <p><a href="tel:+19405663000">(940) 566-3000</a></p>
+      </div>
+      <p>&copy; 2026 Roman's Pizza</p>
+    </div>
+    <div class="attr">
+      <img src="../_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" loading="lazy">
+      <p>This sample website was prepared by Top Shelf Business Solutions.</p>
+      <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">See what we do at topshelfsolutions.io</a>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-call" href="tel:+19405663000">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    Call to order
+  </a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps?cid=766221485520115131" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  // Hours from the Google listing: opens 11 every day; closes 22 Fri/Sat, 21 otherwise.
+  function status(day,hour){
+    var close=(day===5||day===6)?22:21;
+    if(hour>=11&&hour<close) return {open:true,text:'Open now · until '+(close-12)+' pm'};
+    return {open:false,text:hour<11?'Closed · opens 11 am today':'Closed · opens 11 am tomorrow'};
+  }
+  console.assert(status(5,21).open&&!status(4,21).open&&!status(0,10).open&&status(1,11).open,'hours logic');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){return parts.filter(function(p){return p.type===t})[0].value};
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var s=status(day,parseInt(get('hour'),10));
+    document.getElementById('status').classList.add(s.open?'is-open':'is-closed');
+    document.getElementById('status-text').textContent=s.text;
+    var row=document.querySelector('#hours [data-day="'+day+'"]');
+    if(row) row.classList.add('today');
+  }catch(e){}
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{
+    els.forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>

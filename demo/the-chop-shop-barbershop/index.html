@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#100E0C">
+<title>The CHOP SHOP Barbershop | Denton, TX</title>
+<meta name="description" content="The CHOP SHOP Barbershop, 400 S Carroll Blvd, Denton, TX. Book online or call (940) 395-3261.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23100E0C'/%3E%3Cpath d='M6 22 22 6h6L12 22zM6 32 32 6v6L12 32z' fill='%23C8322B'/%3E%3Cpath d='M6 12 12 6h6L6 18z' fill='%232F5FA8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://www.topshelfsolutions.io/assets/img/library/beauty_spa/beauty_spa-08-classic-barbershop-interior-leather.webp" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   The CHOP SHOP Barbershop. One-page demo.
+   Direction: barbershop poster. Ink ground, cream type,
+   barber-pole red and blue, checkerboard floor as the motif.
+   ============================================================ */
+:root{
+  --ink:#100E0C;
+  --coal:#1A1714;
+  --coal-2:#24201C;
+  --cream:#F3EADB;
+  --bone:#CFC3AE;
+  --mute:#9C9282;
+  --red:#C8322B;
+  --red-hot:#E4493C;
+  --blue:#2F5FA8;
+  --line:rgba(243,234,219,.14);
+  --line-2:rgba(243,234,219,.28);
+  --ease:cubic-bezier(.22,.61,.21,1);
+  --display:"Anton","Arial Narrow",Impact,sans-serif;
+  --body:"Archivo","Segoe UI",Arial,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --pole:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--cream) 14px 28px,var(--blue) 28px 42px,var(--cream) 42px 56px);
+  --bar-h:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;background:var(--ink);color:var(--cream);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;
+  padding-bottom:var(--bar-h);
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+h2{font-size:clamp(2.9rem,11vw,6.2rem);text-wrap:balance}
+h2 em,.serif{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;color:var(--red-hot);font-weight:400}
+::selection{background:var(--red);color:var(--cream)}
+:focus-visible{outline:2.5px solid var(--cream);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1180px,100% - clamp(2.5rem,8vw,5rem));margin-inline:auto}
+.section{padding:clamp(4.5rem,11vw,8.5rem) 0}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:300;background:var(--cream);color:var(--ink);padding:.7rem 1.1rem;border-radius:8px;font-weight:700;text-decoration:none}
+.skip:focus{top:1rem}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--bone);
+  margin-bottom:1.3rem;
+}
+.eyebrow::before{content:"";width:34px;height:8px;background:var(--pole);background-size:79.196px 100%;border-radius:2px}
+.lede{color:var(--bone);font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:46ch;text-wrap:pretty}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:56px;padding:0 1.7rem;border-radius:999px;border:1.5px solid transparent;
+  font-family:var(--body);font-weight:700;font-size:.95rem;letter-spacing:.09em;text-transform:uppercase;
+  text-decoration:none;white-space:nowrap;cursor:pointer;
+  transition:transform .25s var(--ease),background-color .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-red{background:var(--red);color:#FFF8EC;box-shadow:0 14px 34px rgba(200,50,43,.34)}
+.btn-line{border-color:var(--line-2);color:var(--cream);background:rgba(16,14,12,.35)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover){
+  .btn-red:hover{background:var(--red-hot);transform:translateY(-2px);box-shadow:0 20px 44px rgba(200,50,43,.44)}
+  .btn-line:hover{border-color:var(--cream);background:rgba(243,234,219,.08);transform:translateY(-2px)}
+  .btn-cream:hover{background:#fff;transform:translateY(-2px)}
+}
+
+/* Scroll feedback: the barber pole fills as you read */
+.progress{position:fixed;inset:0 0 auto 0;height:5px;z-index:200;background:var(--pole);background-size:79.196px 100%;transform-origin:0 50%;transform:scaleX(0);display:none}
+@supports (animation-timeline:scroll()){
+  @media (prefers-reduced-motion:no-preference){
+    .progress{display:block;animation:fill linear both;animation-timeline:scroll(root)}
+  }
+}
+@keyframes fill{to{transform:scaleX(1)}}
+
+/* ============================== Header ============================== */
+.top{position:sticky;top:0;z-index:100;background:rgba(16,14,12,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:66px}
+.mark{display:inline-flex;align-items:baseline;gap:.5rem;text-decoration:none;min-width:0}
+.mark b{font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:.03em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.mark i{font-family:var(--serif);font-size:1.15rem;color:var(--red-hot);white-space:nowrap}
+.top-nav{display:flex;align-items:center;gap:1.6rem}
+.top-nav a.lnk{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--bone);transition:color .2s var(--ease)}
+.top-nav a.lnk:hover{color:var(--cream)}
+.top .btn{min-height:44px;padding:0 1.2rem;font-size:.8rem}
+@media (max-width:859px){.top-nav a.lnk{display:none}.mark i{display:none}}
+
+/* ============================== Hero ============================== */
+.hero{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:calc(100svh - 67px - var(--bar-h));overflow:hidden}
+.hero-img{position:absolute;inset:0 0 auto 0;height:60%;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 100%;filter:grayscale(.3) contrast(1.08) brightness(.8)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(16,14,12,.45) 0%,rgba(16,14,12,.05) 14%,rgba(16,14,12,.2) 34%,rgba(16,14,12,.88) 52%,var(--ink) 60%)}
+.hero-in{padding-block:2rem clamp(2rem,5vw,4rem)}
+.status{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.5rem .95rem;border-radius:999px;border:1px solid var(--line-2);background:rgba(16,14,12,.6);
+  font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.status .dot{width:9px;height:9px;border-radius:50%;background:var(--mute);flex:none}
+.status.open .dot{background:#3FCB6B;box-shadow:0 0 0 0 rgba(63,203,107,.6)}
+@media (prefers-reduced-motion:no-preference){.status.open .dot{animation:pulse 2s infinite}}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(63,203,107,0)}100%{box-shadow:0 0 0 0 rgba(63,203,107,0)}}
+.hero h1{margin:1.1rem 0 0;font-size:30vw;line-height:.84;letter-spacing:-.005em}
+.hero h1 .the{display:block;font-family:var(--serif);font-style:italic;text-transform:none;font-size:.2em;line-height:1;color:var(--red-hot);margin:0 0 .12em .04em}
+.hero h1 .w{display:block}
+.hero h1 .kind{display:block;font-family:var(--body);font-weight:700;font-size:.8rem;letter-spacing:.3em;line-height:1.3;margin:1rem 0 0 .2rem;color:var(--bone)}
+.hero .lede{margin-top:1.5rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.cta .btn{flex:1 1 220px}
+.proof{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem .7rem;margin-top:1.2rem;text-decoration:none;font-size:.95rem;color:var(--bone)}
+/* Phone first screen: photo up top, then name, rating, Book. Nothing else. */
+@media (max-width:859px){
+  .hero .status{position:absolute;top:.8rem;left:clamp(1.25rem,4vw,2.5rem);max-width:calc(100% - 2.5rem);font-size:.68rem;letter-spacing:.06em}
+  .hero h1{font-size:min(30vw,26svh)}
+  .hero .lede,.hero .cta .btn-line{display:none}
+  .hero .cta{margin-top:1.3rem}
+  .hero-in{padding-bottom:1.4rem}
+}
+.proof strong{color:var(--cream);font-weight:700;font-size:1.05rem}
+.proof u{text-underline-offset:4px;text-decoration-color:var(--line-2)}
+.sample{position:absolute;right:.8rem;top:5.6rem;z-index:1;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);background:rgba(16,14,12,.62);border:1px solid var(--line);padding:.3rem .6rem;border-radius:999px}
+@media (min-width:860px){
+  .hero-img{inset:0;height:auto}
+  .hero-img img{object-position:70% 70%;filter:grayscale(.3) contrast(1.08) brightness(.7)}
+  .hero::before{background:linear-gradient(90deg,var(--ink) 0%,rgba(16,14,12,.9) 34%,rgba(16,14,12,.35) 78%,rgba(16,14,12,.2) 100%),linear-gradient(0deg,var(--ink) 0%,rgba(16,14,12,0) 34%)}
+  .hero h1{font-size:min(15.5vw,25svh,15rem)}
+  .hero h1 .w{display:inline-block;margin-right:.18em}
+  .hero h1 .the{font-size:.24em}
+  .hero h1 .kind{font-size:1rem;letter-spacing:.5em}
+  .cta .btn{flex:0 0 auto}
+  .sample{top:auto;bottom:1rem;right:1rem}
+}
+
+/* Stars + Google wordmark (brand colours) */
+.stars{position:relative;display:inline-block;font-size:1.05em;letter-spacing:.08em;line-height:1;color:rgba(243,234,219,.22)}
+.stars::before{content:"★★★★★"}
+.stars::after{content:"★★★★★";position:absolute;inset:0 auto 0 0;width:94%;overflow:hidden;white-space:nowrap;color:#FBBC05}
+.gword{font-family:Arial,"Helvetica Neue",sans-serif;font-weight:700;letter-spacing:-.02em;text-transform:none}
+.gword .b{color:#4285F4}.gword .r{color:#EA4335}.gword .y{color:#FBBC05}.gword .g{color:#34A853}
+.gicon{width:22px;height:22px;flex:none}
+
+/* ============================== Marquee ============================== */
+.ticker{border-block:1px solid var(--line);background:var(--cream);color:var(--ink);overflow:hidden;padding:.95rem 0}
+.ticker-in{display:flex;width:max-content}
+.ticker ul{display:flex;gap:2.6rem;list-style:none;margin:0;padding:0 1.3rem;flex:none}
+.ticker li{display:flex;align-items:center;gap:2.6rem;font-family:var(--display);font-size:clamp(1.25rem,3.4vw,1.9rem);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;line-height:1}
+.ticker li::after{content:"";width:.5em;height:.5em;background:var(--red);transform:rotate(45deg)}
+@media (prefers-reduced-motion:no-preference){.ticker-in{animation:slide 34s linear infinite}}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* Checkerboard rule, lifted from the shop floor */
+.checker{height:28px;background:conic-gradient(var(--cream) 25%,var(--ink) 0 50%,var(--cream) 0 75%,var(--ink) 0) 0 0/28px 28px;opacity:.92}
+
+/* ============================== The shop ============================== */
+.shop-grid{display:grid;gap:clamp(2.2rem,6vw,5rem);align-items:center}
+.shop-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--coal)}
+/* Real listing photo: tight on the chair, black and white so the dim room reads as mood. */
+.shop-photo img{width:100%;height:100%;object-fit:cover;object-position:65% 50%;transform:scale(1.3);transform-origin:55% 70%;filter:grayscale(1) contrast(1.12) brightness(.9)}
+.shop-photo::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(16,14,12,.85) 0%,rgba(16,14,12,0) 30%),radial-gradient(120% 90% at 50% 45%,rgba(16,14,12,0) 55%,rgba(16,14,12,.6) 100%)}
+.shop-photo::after{z-index:2;content:"";position:absolute;inset:auto 0 0 0;height:12px;background:var(--pole);background-size:79.196px 100%}
+@media (prefers-reduced-motion:no-preference){.shop-photo::after,.pole-rule{animation:spin 2.6s linear infinite}}
+@keyframes spin{to{background-position-x:79.196px}}
+.shop-copy p+p{margin-top:1rem}
+.shop-copy .lede{margin-top:1.5rem}
+@media (min-width:860px){.shop-grid{grid-template-columns:.9fr 1.1fr}}
+
+/* ============================== Three ways in ============================== */
+.ways{background:var(--coal);border-block:1px solid var(--line)}
+.ways-grid{display:grid;gap:1rem;margin-top:clamp(2.2rem,5vw,3.5rem)}
+.way{
+  position:relative;display:flex;flex-direction:column;gap:.5rem;min-height:230px;
+  padding:1.6rem 1.5rem 1.5rem;border-radius:18px;border:1px solid var(--line);background:var(--ink);
+  text-decoration:none;overflow:hidden;
+  transition:transform .3s var(--ease),border-color .3s var(--ease),background-color .3s var(--ease);
+}
+.way .n{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--red-hot);line-height:1}
+.way h3{font-size:clamp(2rem,5.5vw,2.6rem);margin-top:auto}
+.way p{color:var(--bone);font-size:.98rem}
+.way .go{display:inline-flex;align-items:center;gap:.5rem;margin-top:.7rem;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.way .go svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.way.is-main{background:var(--red);border-color:var(--red);color:#FFF8EC}
+.way.is-main .n,.way.is-main p{color:#FFE3D6}
+.way:active{transform:scale(.985)}
+@media (hover:hover){
+  .way:hover{transform:translateY(-5px);border-color:var(--line-2)}
+  .way.is-main:hover{background:var(--red-hot)}
+  .way:hover .go svg{transform:translateX(5px)}
+}
+@media (min-width:860px){.ways-grid{grid-template-columns:1.25fr 1fr 1fr}.way{min-height:300px}}
+
+/* ============================== Reviews ============================== */
+.rev{text-align:center;position:relative;overflow:hidden}
+.rev .eyebrow{justify-content:center}
+.rev-num{font-family:var(--display);font-size:clamp(9rem,44vw,22rem);line-height:.8;letter-spacing:-.02em;color:var(--cream);display:block;margin-top:.4rem}
+.rev .stars{font-size:clamp(1.9rem,7vw,3rem);margin-top:1.4rem}
+.rev-line{margin-top:1.1rem;font-size:clamp(1.1rem,2.4vw,1.4rem);color:var(--bone)}
+.rev-line .gword{font-size:1.15em}
+.rev-note{margin:1rem auto 0;max-width:38ch;color:var(--mute)}
+.rev .btn{margin-top:2rem}
+
+/* ============================== Visit ============================== */
+.visit{background:var(--cream);color:var(--ink)}
+.visit .eyebrow{color:#5B5245}
+.visit h2 em{color:var(--red)}
+.visit-grid{display:grid;gap:clamp(2.2rem,6vw,4.5rem);margin-top:clamp(2rem,5vw,3.2rem)}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours caption{text-align:left;font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5B5245;padding-bottom:.8rem}
+.hours th,.hours td{padding:.9rem 0;border-top:1px solid rgba(16,14,12,.16);font-size:1.05rem;text-align:left;font-weight:500}
+.hours td{text-align:right}
+.hours tr.shut td{color:#7A705F}
+.hours tr.is-today th,.hours tr.is-today td{font-weight:700}
+.hours tr.is-today th::after{content:"Today";margin-left:.7rem;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:.22rem .5rem;border-radius:999px;vertical-align:middle}
+.hours-src{margin-top:.9rem;font-size:.82rem;color:#6B6152}
+.addr{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.1rem,7vw,3.4rem);line-height:.96;font-style:normal;display:block}
+.addr small{display:block;font-family:var(--body);font-weight:600;font-size:.3em;letter-spacing:.2em;margin-top:.9em;color:#5B5245}
+.visit .cta{margin-top:1.6rem}
+.visit .btn-line{border-color:rgba(16,14,12,.35);color:var(--ink);background:transparent}
+@media (hover:hover){.visit .btn-line:hover{border-color:var(--ink);background:rgba(16,14,12,.06)}}
+.visit .btn-red{box-shadow:0 14px 30px rgba(200,50,43,.26)}
+@media (min-width:860px){.visit-grid{grid-template-columns:1fr 1fr;align-items:start}}
+
+/* ============================== Final call ============================== */
+.last{text-align:center;position:relative}
+.last h2{font-size:clamp(3.6rem,17vw,11rem);line-height:.86}
+.last .lede{margin:1.4rem auto 0}
+.last .cta{justify-content:center;margin-top:2.2rem}
+.pole-rule{height:14px;background:var(--pole);background-size:79.196px 100%}
+
+/* ============================== Footer ============================== */
+.foot{padding:2.6rem 0 2.2rem;color:var(--bone);font-size:.92rem}
+.foot-grid{display:grid;gap:1.6rem}
+.foot b{font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--cream);text-transform:uppercase;letter-spacing:.03em;display:block;line-height:1;margin-bottom:.6rem}
+.foot a{text-underline-offset:4px;text-decoration-color:var(--line-2)}
+.credit{display:flex;align-items:center;gap:.9rem;padding-top:1.5rem;margin-top:1.6rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--mute);line-height:1.5}
+.credit img{height:34px;width:auto;flex:none}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.2fr 1fr 1fr}}
+
+/* ============================== Mobile action bar ============================== */
+.bar{position:fixed;inset:auto 0 0 0;z-index:150;display:grid;grid-template-columns:1fr 1.5fr;gap:.6rem;
+  padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(16,14,12,.92);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.bar .btn{min-height:50px;padding:0 1rem;font-size:.85rem;box-shadow:none}
+@media (max-width:859px){:root{--bar-h:calc(71px + env(safe-area-inset-bottom))}}
+@media (min-width:860px){.bar{display:none}}
+
+/* ============================== Motion ============================== */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+  .js .rv.in{opacity:1;transform:none}
+  .hero .up{animation:rise .9s var(--ease) both;animation-delay:var(--d,0s)}
+  .hero h1 .w{animation:rise 1s var(--ease) both;animation-delay:var(--d,0s)}
+  .hero-img img{animation:settle 1.8s var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.08)}to{transform:none}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarberShop",
+  "name":"The CHOP SHOP Barbershop",
+  "telephone":"+19403953261",
+  "address":{"@type":"PostalAddress","streetAddress":"400 S Carroll Blvd","addressLocality":"Denton","addressRegion":"TX","postalCode":"76201","addressCountry":"US"},
+  "hasMap":"https://www.google.com/maps?cid=15541376234519494519",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"16:30"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="#top" aria-label="The CHOP SHOP Barbershop, back to top"><b>The Chop Shop</b><i>Barbershop</i></a>
+    <nav class="top-nav" aria-label="Main">
+      <a class="lnk" href="#shop">The shop</a>
+      <a class="lnk" href="#reviews">Reviews</a>
+      <a class="lnk" href="#visit">Hours</a>
+      <a class="btn btn-red" href="https://thechopshopbarbershop7.booksy.com" target="_blank" rel="noopener">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================== Hero ============================== -->
+<section class="hero" id="top">
+  <div class="hero-img">
+    <img src="https://www.topshelfsolutions.io/assets/img/library/beauty_spa/beauty_spa-08-classic-barbershop-interior-leather.webp" alt="" width="1366" height="768" fetchpriority="high">
+  </div>
+  <span class="sample">Sample photo</span>
+  <div class="wrap hero-in">
+    <p class="status up" id="status" style="--d:.05s"><span class="dot"></span><span id="status-text">Open Monday to Friday</span></p>
+    <h1 aria-label="The CHOP SHOP Barbershop">
+      <span class="the up" style="--d:.12s" aria-hidden="true">The</span>
+      <span class="w" style="--d:.18s" aria-hidden="true">Chop </span><span class="w" style="--d:.3s" aria-hidden="true">Shop</span>
+      <span class="kind up" style="--d:.46s" aria-hidden="true">Barbershop &middot; Denton, TX</span>
+    </h1>
+    <a class="proof up" style="--d:.52s" href="https://www.google.com/maps?cid=15541376234519494519" target="_blank" rel="noopener" aria-label="Rated 4.7 out of 5 from 51 Google reviews. Open on Google Maps.">
+      <svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.2z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.5-5.3l-7.1-5.5c-2 1.3-4.500 2.100-7.400 2.100-5.700 0-10.500-3.800-12.300-9H4.400v5.700C8 41.100 15.400 46 24 46z"/><path fill="#FBBC05" d="M11.700 28.300a13.200 13.200 0 0 1 0-8.600V14H4.400a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.700c3.200 0 6.100 1.100 8.400 3.300l6.300-6.300C34.900 4.200 29.900 2 24 2 15.400 2 8 6.900 4.400 14l7.300 5.700c1.800-5.200 6.600-9 12.300-9z"/></svg>
+      <strong>4.7</strong>
+      <span class="stars" aria-hidden="true"></span>
+      <u>51 Google reviews</u>
+    </a>
+    <p class="lede up" style="--d:.56s">A Denton barbershop on South Carroll Boulevard. Book your chair online, or call the shop.</p>
+    <div class="cta up" style="--d:.66s">
+      <a class="btn btn-red" href="https://thechopshopbarbershop7.booksy.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Book on Booksy
+      </a>
+      <a class="btn btn-line" href="tel:+19403953261">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        (940) 395-3261
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Ticker ============================== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-in">
+    <ul><li>Book online</li><li>Denton, Texas</li><li>Open Monday to Friday</li><li>4.7 on Google</li><li>400 S Carroll Blvd</li></ul>
+    <ul><li>Book online</li><li>Denton, Texas</li><li>Open Monday to Friday</li><li>4.7 on Google</li><li>400 S Carroll Blvd</li></ul>
+  </div>
+</div>
+
+<!-- ============================== The shop ============================== -->
+<section class="section" id="shop">
+  <div class="wrap shop-grid">
+    <figure class="shop-photo rv" style="margin:0">
+      <img src="assets/listing.jpg" alt="A barber chair and station inside The CHOP SHOP Barbershop" width="1400" height="1058" loading="lazy">
+    </figure>
+    <div class="shop-copy">
+      <p class="eyebrow rv">The shop</p>
+      <h2 class="rv" style="--d:.06s">A barbershop on <em>Carroll.</em></h2>
+      <p class="lede rv" style="--d:.12s">The CHOP SHOP Barbershop is at 400 S Carroll Blvd in Denton. The door opens at 8 on weekdays.</p>
+      <p class="lede rv" style="--d:.18s">Pick a time online before you head over, or just call.</p>
+      <div class="cta rv" style="--d:.24s">
+        <a class="btn btn-cream" href="https://thechopshopbarbershop7.booksy.com" target="_blank" rel="noopener">Book a time</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="checker" aria-hidden="true"></div>
+
+<!-- ============================== Three ways in ============================== -->
+<section class="section ways" id="book">
+  <div class="wrap">
+    <p class="eyebrow rv">Get in the chair</p>
+    <h2 class="rv" style="--d:.06s">Three ways <em>in.</em></h2>
+    <div class="ways-grid">
+      <a class="way is-main rv" href="https://thechopshopbarbershop7.booksy.com" target="_blank" rel="noopener">
+        <span class="n">No. 1</span>
+        <h3>Book online</h3>
+        <p>Pick a time on Booksy and you're set.</p>
+        <span class="go">Open Booksy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="way rv" style="--d:.08s" href="tel:+19403953261">
+        <span class="n">No. 2</span>
+        <h3>Call the shop</h3>
+        <p>(940) 395-3261. Tap and it dials.</p>
+        <span class="go">Call now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="way rv" style="--d:.16s" href="https://www.google.com/maps?cid=15541376234519494519" target="_blank" rel="noopener">
+        <span class="n">No. 3</span>
+        <h3>Find us</h3>
+        <p>400 S Carroll Blvd, Denton, TX 76201.</p>
+        <span class="go">Get directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Reviews ============================== -->
+<section class="section rev" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow rv">Google reviews</p>
+    <span class="rev-num rv" style="--d:.06s" aria-hidden="true">4.7</span>
+    <div class="rv" style="--d:.12s"><span class="stars" role="img" aria-label="4.7 out of 5 stars"></span></div>
+    <p class="rev-line rv" style="--d:.16s">from 51 reviews on
+      <span class="gword" aria-label="Google"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+    </p>
+    <p class="rev-note rv" style="--d:.2s">Read them where they were written.</p>
+    <a class="btn btn-line rv" style="--d:.24s" href="https://www.google.com/maps?cid=15541376234519494519" target="_blank" rel="noopener">Read the reviews on Google</a>
+  </div>
+</section>
+
+<!-- ============================== Visit ============================== -->
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <p class="eyebrow rv">Hours and location</p>
+    <h2 class="rv" style="--d:.06s">Come <em>by.</em></h2>
+    <div class="visit-grid">
+      <div class="rv">
+        <table class="hours">
+          <caption>Shop hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>8:00 am to 5:00 pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>8:00 am to 5:00 pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8:00 am to 5:00 pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>8:00 am to 5:00 pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8:00 am to 4:30 pm</td></tr>
+            <tr data-day="6" class="shut"><th scope="row">Saturday</th><td>Closed</td></tr>
+            <tr data-day="0" class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-src">Hours as shown on the shop's Google listing.</p>
+      </div>
+      <div class="rv" style="--d:.1s">
+        <address class="addr">400 S Carroll Blvd<br>Denton, TX 76201<small>The CHOP SHOP Barbershop</small></address>
+        <div class="cta">
+          <a class="btn btn-red" href="https://www.google.com/maps?cid=15541376234519494519" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.200 7-11.500a7 7 0 0 0-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+            Get directions
+          </a>
+          <a class="btn btn-line" href="tel:+19403953261">(940) 395-3261</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pole-rule" aria-hidden="true"></div>
+
+<!-- ============================== Final call ============================== -->
+<section class="section last">
+  <div class="wrap">
+    <h2 class="rv">Grab a <em>chair.</em></h2>
+    <p class="lede rv" style="--d:.08s">Book online, or call the shop and ask what's open.</p>
+    <div class="cta rv" style="--d:.16s">
+      <a class="btn btn-red" href="https://thechopshopbarbershop7.booksy.com" target="_blank" rel="noopener">Book on Booksy</a>
+      <a class="btn btn-line" href="tel:+19403953261">Call (940) 395-3261</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><b>The Chop Shop</b>Barbershop in Denton, Texas.</div>
+      <div>400 S Carroll Blvd<br>Denton, TX 76201<br><a href="https://www.google.com/maps?cid=15541376234519494519" target="_blank" rel="noopener">Directions</a></div>
+      <div><a href="tel:+19403953261">(940) 395-3261</a><br>Monday to Thursday, 8:00 am to 5:00 pm<br>Friday, 8:00 am to 4:30 pm</div>
+    </div>
+    <div class="credit">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" loading="lazy">
+      <span>A sample website made for The CHOP SHOP Barbershop by Top Shelf Business Solutions. It is not live and not the shop's official site. Questions: <a href="tel:+14698333033">(469) 833-3033</a> or <a href="mailto:contact@topshelfsolutions.io">contact@topshelfsolutions.io</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-line" href="tel:+19403953261">Call</a>
+  <a class="btn btn-red" href="https://thechopshopbarbershop7.booksy.com" target="_blank" rel="noopener">Book now</a>
+</nav>
+
+<script>
+(function(){
+  // Hours in minutes from midnight, index 0 = Sunday. Source: the shop's Google listing.
+  var H=[null,[480,1020],[480,1020],[480,1020],[480,1020],[480,990],null];
+  var D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,s=h>=12?'pm':'am';h=h%12||12;return h+':'+(mm<10?'0':'')+mm+' '+s}
+  // Pure: day 0-6 and minutes past midnight in, {open, text} out.
+  function shopStatus(day,mins){
+    var t=H[day];
+    if(t&&mins>=t[0]&&mins<t[1])return{open:true,text:'Open now, until '+fmt(t[1])};
+    if(t&&mins<t[0])return{open:false,text:'Opens today at '+fmt(t[0])};
+    for(var i=1;i<=7;i++){var d=(day+i)%7;if(H[d])return{open:false,text:'Closed now, opens '+(i===1?'tomorrow':D[d])+' at '+fmt(H[d][0])}}
+  }
+  console.assert(shopStatus(1,600).text==='Open now, until 5:00 pm','mon mid-morning');
+  console.assert(shopStatus(5,990).text==='Closed now, opens Monday at 8:00 am','fri at close');
+  console.assert(shopStatus(5,989).text==='Open now, until 4:30 pm','fri last minute');
+  console.assert(shopStatus(0,700).text==='Closed now, opens tomorrow at 8:00 am','sunday');
+  console.assert(shopStatus(2,300).text==='Opens today at 8:00 am','tue early');
+
+  try{
+    // Shop time, wherever the visitor is.
+    var p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+    var day=D.indexOf(p.weekday),s=shopStatus(day,(+p.hour)*60+(+p.minute));
+    document.getElementById('status-text').textContent=s.text;
+    if(s.open)document.getElementById('status').classList.add('open');
+    var row=document.querySelector('.hours tr[data-day="'+day+'"]');if(row)row.classList.add('is-today');
+  }catch(e){}
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Two Gentlemen of Verona. Gelato, caffè and pastry at 120 W Oak St in Denton, TX. Open every day from 7 am.">
+<meta name="theme-color" content="#F7EFE1">
+<title>Two Gentlemen of Verona | Gelato, Caffè &amp; Pastry in Denton, TX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23BF2F45'/%3E%3Cpath d='M10 14a6 6 0 1 1 12 0M9 14h14M10.500 14 16 27l5.500-13' fill='none' stroke='%23EAD877' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/listing.jpg" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["IceCreamShop", "CafeOrCoffeeShop", "Bakery"],
+  "name": "Two Gentlemen of Verona",
+  "telephone": "+19408081342",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "120 W Oak St",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76201",
+    "addressCountry": "US"
+  },
+  "hasMap": "https://www.google.com/maps?cid=10148525791357181726",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"], "opens": "07:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "07:00", "closes": "23:00"}
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   Two Gentlemen of Verona - bespoke one-page demo
+   Palette is taken from the shop's own sign: red board, gold lettering,
+   on cream paper with espresso ink. Fraunces + DM Sans.
+   Conversion page: the ONE action is "Get directions".
+   (--green is the deep sign-red used for dark panels.)
+   ============================================================ */
+:root{
+  --cream:#F7EFE1;
+  --paper:#FFF9EE;
+  --ink:#24140E;
+  --ink-2:#5B4338;
+  --green:#4A1522;
+  --pistachio:#EFE3A6;
+  --berry:#BF2F45;
+  --berry-deep:#9C2437;
+  --blush:#F3D5CC;
+  --butter:#EAD877;
+  --line:rgba(36,20,14,.14);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans','Segoe UI',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --wrap:1160px;
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.65;
+  color:var(--ink);background:var(--cream);
+  -webkit-font-smoothing:antialiased;padding-bottom:var(--bar);
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:6px}
+::selection{background:var(--pistachio);color:var(--ink)}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+section[id]{scroll-margin-top:5rem}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:300;background:var(--ink);color:var(--cream);
+  padding:.75rem 1.2rem;border-radius:999px;font-weight:700;text-decoration:none}
+.skip:focus-visible{top:1rem}
+
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--berry)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.25rem;padding:.85rem 1.6rem;border-radius:999px;
+  font:700 1rem/1.2 var(--sans);text-decoration:none;border:1.5px solid transparent;
+  transition:transform .2s var(--ease),background-color .2s var(--ease),box-shadow .2s var(--ease),color .2s var(--ease);
+}
+.btn svg{flex:none}
+.btn:active{transform:scale(.97)}
+.btn-berry{background:var(--berry);color:#fff;box-shadow:0 10px 24px -8px rgba(184,50,58,.6)}
+.btn-ink{background:var(--ink);color:var(--cream)}
+.btn-line{border-color:currentColor;color:var(--ink)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn-line-light{border-color:rgba(247,239,225,.5);color:var(--cream)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-berry:hover{background:var(--berry-deep)}
+  .btn-line:hover{background:var(--ink);color:var(--cream)}
+  .btn-line-light:hover{background:var(--cream);color:var(--ink)}
+}
+
+/* Demo ribbon */
+.ribbon{background:var(--ink);color:var(--cream);text-align:center;font-size:.78rem;padding:.5rem 1rem;line-height:1.4}
+.ribbon a{color:var(--butter);text-underline-offset:3px}
+
+/* Header */
+.head{position:sticky;top:0;z-index:100;background:rgba(247,239,225,.86);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+.head.scrolled{border-bottom-color:var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem}
+.mark{text-decoration:none;font-family:var(--serif);line-height:1;display:flex;flex-direction:column;gap:.2rem}
+.mark b{font-weight:600;font-style:italic;font-size:1.3rem;letter-spacing:-.02em}
+.mark span{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--berry)}
+.nav{display:flex;align-items:center;gap:1.8rem}
+.nav a:not(.btn){font-weight:500;font-size:.95rem;text-decoration:none;padding:.4rem 0;
+  background:linear-gradient(var(--berry),var(--berry)) 0 100%/0 2px no-repeat;transition:background-size .25s var(--ease)}
+@media (hover:hover){.nav a:not(.btn):hover{background-size:100% 2px}}
+.nav .btn{min-height:2.6rem;padding:.5rem 1.2rem;font-size:.92rem}
+@media (max-width:760px){.nav a:not(.btn){display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:clamp(1.8rem,5vw,4.5rem) 0 clamp(3rem,7vw,6rem)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(34rem 26rem at 96% 8%,rgba(234,216,119,.45),transparent 62%),
+    radial-gradient(28rem 22rem at -6% 96%,rgba(243,213,204,.85),transparent 60%)}
+.hero-grid{position:relative;display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.6rem,11vw,5.8rem);margin:.6rem 0 1rem}
+.hero h1 em{display:block;font-style:italic;font-weight:400;color:var(--berry)}
+.lede{font-size:clamp(1.08rem,1.2vw + .8rem,1.3rem);color:var(--ink-2);max-width:30rem;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.1rem 0 1.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:0;padding:0}
+.chip{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .95rem;border-radius:999px;
+  background:var(--paper);border:1px solid var(--line);font-size:.9rem;font-weight:500;text-decoration:none}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--ink-2);flex:none}
+.is-open .dot{background:#2E8B57;box-shadow:0 0 0 0 rgba(46,139,87,.55)}
+.chip .star{color:#D79A1B}
+
+/* The shop's own sign is the hero. Phone: photo first, then name, rating, Directions. */
+.hero-art{position:relative;justify-self:center;width:min(100%,38rem);order:-1}
+.hero-art::before{content:"";position:absolute;width:60%;aspect-ratio:1;border-radius:50%;
+  background:var(--butter);right:-8%;top:-9%;opacity:.9}
+.arch{position:relative;margin:0;aspect-ratio:4/3;border-radius:1.6rem;overflow:hidden;
+  background:var(--berry);box-shadow:0 30px 60px -30px rgba(36,20,14,.6)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:-2%;bottom:-9%;width:clamp(5.4rem,22vw,8.6rem);aspect-ratio:1;
+  border-radius:50%;background:var(--green);color:var(--cream);box-shadow:0 14px 30px -12px rgba(74,21,34,.7)}
+.badge svg{width:100%;height:100%}
+.badge .ring{transform-origin:60px 60px}
+@media (max-width:899px){
+  .hero{padding-top:1rem}
+  .hero-grid{gap:1.5rem}
+}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:.9fr 1.1fr}
+  .hero-art{order:0}
+  .badge{right:auto;left:-5%}
+}
+
+/* Marquee */
+.marquee{background:var(--berry);color:var(--cream);overflow:hidden;padding:.95rem 0;
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,3.4vw,1.9rem);white-space:nowrap}
+.marquee-track{display:inline-flex}
+.marquee-track span{display:inline-flex;align-items:center;gap:1.4rem;padding-right:1.4rem}
+.marquee i{font-style:normal;color:var(--butter);font-size:.6em}
+
+/* Acts */
+.acts{background:var(--green);color:var(--cream);padding:clamp(4rem,9vw,7.5rem) 0}
+.acts .eyebrow{color:var(--butter)}
+.sec-h{font-size:clamp(2.3rem,7vw,4.4rem);margin:.8rem 0 clamp(2rem,5vw,3.5rem);max-width:14ch}
+.sec-h em{font-style:italic}
+.act-grid{display:grid;gap:1.1rem}
+@media (min-width:820px){.act-grid{grid-template-columns:repeat(3,1fr)}
+  .act:nth-child(2){transform:translateY(2.2rem)}}
+.act{color:var(--ink);border-radius:1.8rem;padding:clamp(1.6rem,3vw,2.2rem);display:flex;flex-direction:column;min-height:19rem}
+.act-1{background:var(--cream)}
+.act-2{background:var(--blush)}
+.act-3{background:var(--pistachio)}
+.act-no{font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+.act svg{width:5.5rem;height:5.5rem;margin:1.6rem 0 auto;color:var(--berry)}
+.act h3{font-size:clamp(2.2rem,5vw,3rem);font-style:italic;margin:1.4rem 0 .5rem}
+.act p{color:var(--ink-2);font-size:1.02rem;line-height:1.5}
+
+/* Photo band */
+.band{padding:clamp(4.5rem,9vw,7rem) 0 0}
+.band-fig{position:relative;margin:0;border-radius:2rem;overflow:hidden;height:clamp(13rem,36vw,22rem);background:var(--blush)}
+.band-fig img{width:100%;height:120%;object-fit:cover;object-position:50% 78%}
+.band-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(36,20,14,.72),rgba(36,20,14,0) 58%)}
+.band-fig figcaption{position:absolute;z-index:1;left:clamp(1.2rem,4vw,2.6rem);bottom:clamp(1.1rem,3.5vw,2.2rem);right:1.2rem;color:var(--cream)}
+.band-fig strong{display:block;font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(2.2rem,8vw,5rem);line-height:1;letter-spacing:-.02em}
+.band-fig small{display:block;margin-top:.6rem;font-size:.78rem;opacity:.85}
+
+/* Menu (sample layout) */
+.menu{padding:clamp(4.5rem,9vw,7.5rem) 0}
+.menu-card{background:var(--paper);border:1px solid var(--line);border-radius:2rem;padding:clamp(1.5rem,4vw,3rem)}
+.menu-cols{display:grid;gap:2.2rem}
+@media (min-width:820px){.menu-cols{grid-template-columns:repeat(3,1fr);gap:3rem}}
+.menu-col h3{font-size:1.9rem;font-style:italic;padding-bottom:.7rem;border-bottom:2px solid var(--ink)}
+.menu-col ul{list-style:none;margin:0;padding:0}
+.menu-col li{display:flex;align-items:center;gap:.7rem;padding:1rem 0;border-bottom:1px dashed var(--line)}
+.menu-col li i{height:.7rem;border-radius:999px;background:rgba(36,20,14,.1)}
+.menu-col li i:first-child{flex:0 0 var(--w,55%)}
+.menu-col li u{flex:1;border-bottom:2px dotted rgba(36,20,14,.2);text-decoration:none;height:0}
+.menu-col li i:last-child{flex:0 0 2.2rem;background:rgba(184,50,58,.22)}
+.note{margin-top:1.4rem;font-size:.8rem;color:var(--ink-2);text-align:center}
+
+/* Reviews */
+.reviews{background:var(--blush);padding:clamp(4.5rem,9vw,7.5rem) 0;text-align:center}
+.gword{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border-radius:999px;padding:.45rem 1.1rem;
+  font-size:.9rem;font-weight:500;color:#3C4043;box-shadow:0 2px 10px rgba(36,20,14,.08)}
+.gword b{font:700 1.08rem/1 var(--sans);letter-spacing:-.02em}
+.score{font-family:var(--serif);font-size:clamp(7rem,34vw,14rem);line-height:.9;letter-spacing:-.05em;margin:1.4rem 0 .6rem}
+.stars{position:relative;display:inline-block;font:400 clamp(1.8rem,7vw,2.6rem)/1 Arial,sans-serif;letter-spacing:.12em;color:rgba(36,20,14,.16);margin-right:-.12em}
+.stars::before{content:"\2605\2605\2605\2605\2605"}
+.stars span{position:absolute;left:0;top:0;width:90%;overflow:hidden;white-space:nowrap;color:#D79A1B}
+.stars span::before{content:"\2605\2605\2605\2605\2605"}
+.reviews h2{font-size:clamp(1.7rem,5vw,2.6rem);font-style:italic;margin:1rem 0 .8rem}
+.reviews p{color:var(--ink-2);max-width:28rem;margin:0 auto 1.8rem}
+
+/* Visit */
+.visit{background:var(--ink);color:var(--cream);padding:clamp(4.5rem,9vw,7.5rem) 0}
+.visit .eyebrow{color:var(--butter)}
+.visit-grid{display:grid;gap:clamp(2.2rem,5vw,4rem);align-items:start}
+@media (min-width:900px){.visit-grid{grid-template-columns:1.05fr .95fr}}
+.visit h2{font-size:clamp(2.4rem,8vw,4.6rem);margin:.8rem 0 1.4rem}
+.visit h2 em{font-style:italic;color:var(--butter)}
+.addr{font-style:normal;font-size:1.2rem;line-height:1.5}
+.addr a{text-decoration-color:rgba(247,239,225,.4);text-underline-offset:4px}
+.visit-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.8rem 0 0}
+.hours{background:var(--green);border-radius:1.8rem;padding:clamp(1.5rem,4vw,2.4rem)}
+.hours h3{font-size:1.9rem;font-style:italic}
+.status{display:inline-flex;align-items:center;gap:.5rem;margin:.8rem 0 1.2rem;font-size:.92rem;font-weight:500;color:var(--pistachio)}
+.status .dot{background:var(--pistachio)}
+.status.is-open .dot{background:#6FDC9B}
+.hours ul{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.72rem .9rem;border-radius:.8rem;font-variant-numeric:tabular-nums}
+.hours li + li{margin-top:.15rem}
+.hours li span:first-child{font-weight:500}
+.hours li span{white-space:nowrap}
+@media (max-width:380px){.hours li{font-size:.92em}}
+.hours li.today{background:var(--cream);color:var(--ink);font-weight:700}
+.hours li.today span:first-child::after{content:" \00B7  today";font-weight:500;color:var(--berry)}
+
+/* Footer */
+.foot{background:var(--cream);padding:3rem 0 2.2rem;text-align:center}
+.foot .mark{display:inline-flex;align-items:center}
+.foot .mark b{font-size:1.7rem}
+.foot p{color:var(--ink-2);font-size:.92rem;margin-top:.9rem}
+.ts{margin:2rem auto 0;padding-top:1.5rem;max-width:30rem;border-top:1px solid var(--line)}
+.ts img{width:1.65rem;height:auto;margin:0 auto .55rem}
+.ts p{font-size:.8rem;line-height:1.6;margin:0}
+.ts a{color:var(--berry);font-weight:700;text-underline-offset:3px}
+
+/* Mobile action bar: the ONE action always in reach */
+.bar{display:none}
+@media (max-width:760px){
+  :root{--bar:calc(4.4rem + env(safe-area-inset-bottom))}
+  .bar{position:fixed;z-index:120;left:0;right:0;bottom:0;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+    padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));
+    background:rgba(247,239,225,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+  .bar .btn{min-height:3.1rem;padding:.6rem .8rem}
+}
+
+/* Motion: restrained. Load stagger, reveals, a slow marquee and badge. */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *,.hero-art{animation:rise .8s var(--ease) both}
+  .hero-copy > :nth-child(2){animation-delay:.07s}
+  .hero-copy > :nth-child(3){animation-delay:.14s}
+  .hero-copy > :nth-child(4){animation-delay:.21s}
+  .hero-copy > :nth-child(5){animation-delay:.28s}
+  .hero-art{animation-delay:.2s}
+  @keyframes rise{from{opacity:0;transform:translateY(1.4rem)}to{opacity:1;transform:none}}
+  .marquee-track{animation:slide 28s linear infinite}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .badge .ring{animation:spin 26s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .is-open .dot{animation:pulse 2.2s ease-out infinite}
+  @keyframes pulse{to{box-shadow:0 0 0 .5rem rgba(46,139,87,0)}}
+  html.js [data-reveal]{opacity:0;transform:translateY(1.4rem);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  html.js [data-reveal].in{opacity:1;transform:none}
+  html.js .act-grid > [data-reveal]:nth-child(2),html.js .menu-cols > [data-reveal]:nth-child(2){transition-delay:.09s}
+  html.js .act-grid > [data-reveal]:nth-child(3),html.js .menu-cols > [data-reveal]:nth-child(3){transition-delay:.18s}
+  @media (min-width:820px){html.js .act:nth-child(2)[data-reveal]{transform:translateY(3.6rem)}
+    html.js .act:nth-child(2)[data-reveal].in{transform:translateY(2.2rem)}}
+  /* Scroll feedback: the band photo drifts a little as it passes. */
+  @supports (animation-timeline:view()){
+    .band-fig img{animation:drift linear both;animation-timeline:view();animation-range:cover}
+    @keyframes drift{from{transform:translateY(0)}to{transform:translateY(-10%)}}
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<p class="ribbon">A sample website made for Two Gentlemen of Verona by <a href="https://www.topshelfsolutions.io">Top Shelf Business Solutions</a></p>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="mark" href="#top" aria-label="Two Gentlemen of Verona, home">
+      <b>Two Gentlemen</b>
+      <span>of Verona</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#shop">The shop</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours</a>
+      <a class="btn btn-ink" href="https://www.google.com/maps?cid=10148525791357181726" target="_blank" rel="noopener">Directions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Gelato &middot; Caffè &middot; Pastry</p>
+        <h1>Two Gentlemen <em>of Verona</em></h1>
+        <ul class="chips">
+          <li><a class="chip" href="#reviews"><span class="star" aria-hidden="true">&#9733;</span> 4.5 &middot; 223 Google reviews</a></li>
+          <li class="chip" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Open every day from 7 am</span></li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-berry" href="https://www.google.com/maps?cid=10148525791357181726" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.100-7-11a7 7 0 1 1 14 0c0 5.900-7 11-7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.400" stroke="currentColor" stroke-width="2"/></svg>
+            Get directions
+          </a>
+          <a class="btn btn-line" href="tel:+19408081342">Call (940) 808-1342</a>
+        </div>
+        <p class="lede">Gelato, caffè and pastry at 120 W Oak St in Denton. We open at 7 every morning and stay open until 10 at night. On Fridays and Saturdays it's 11.</p>
+      </div>
+
+      <div class="hero-art">
+        <figure class="arch">
+          <img src="assets/listing.jpg" alt="The shop's red and gold sign on a brick storefront. It reads Two Gentlemen of Verona: Gelato, Caffè, Pastry." width="1400" height="1050" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+            <g class="ring"><text fill="currentColor" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" letter-spacing="2"><textPath href="#ring" textLength="268">OPEN SEVEN DAYS &#183; FROM 7 AM &#183;</textPath></text></g>
+            <g fill="none" stroke="#E8B94F" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round" transform="translate(36 34) scale(.75)"><path d="M20 28a12 12 0 1 1 24 0M16 28h32M19 28l13 30 13-30M25.500 28 36 49M38.500 28 28 49"/><circle cx="32" cy="11" r="3"/></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Gelato <i>&#10022;</i> Caffè <i>&#10022;</i> Pastry <i>&#10022;</i> Open seven days <i>&#10022;</i> 120 W Oak St <i>&#10022;</i> Denton, Texas <i>&#10022;</i></span>
+      <span>Gelato <i>&#10022;</i> Caffè <i>&#10022;</i> Pastry <i>&#10022;</i> Open seven days <i>&#10022;</i> 120 W Oak St <i>&#10022;</i> Denton, Texas <i>&#10022;</i></span>
+    </div>
+  </div>
+
+  <!-- The shop, in three acts -->
+  <section class="acts" id="shop">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>The shop</p>
+      <h2 class="sec-h" data-reveal>Three reasons to <em>come in.</em></h2>
+      <div class="act-grid">
+        <article class="act act-1" data-reveal>
+          <span class="act-no">Act I</span>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 28a12 12 0 1 1 24 0M16 28h32M19 28l13 30 13-30M25.500 28 36 49M38.500 28 28 49"/><circle cx="32" cy="11" r="3"/></svg>
+          <h3>Gelato</h3>
+          <p>We're open until 10 pm, and until 11 on Fridays and Saturdays.</p>
+        </article>
+        <article class="act act-2" data-reveal>
+          <span class="act-no">Act II</span>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 26h30v10a15 15 0 0 1-30 0zM44 29h4a6 6 0 0 1 0 12h-5M10 57h38M24 18c-3-4 3-6 0-10M34 18c-3-4 3-6 0-10"/></svg>
+          <h3>Caffè</h3>
+          <p>We open at 7 am, every day of the week.</p>
+        </article>
+        <article class="act act-3" data-reveal>
+          <span class="act-no">Act III</span>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 42c2-16 14-26 24-26s22 10 24 26c-6 4-12 2-14-4-2-6-6-8-10-8s-8 2-10 8c-2 6-8 8-14 4zM21 21l5 11M32 16v14M43 21l-5 11"/></svg>
+          <h3>Pastry</h3>
+          <p>Have one with your coffee, or skip the coffee.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo band -->
+  <div class="band">
+    <div class="wrap">
+      <figure class="band-fig" data-reveal>
+        <img src="https://www.topshelfsolutions.io/assets/img/library/food_retail/food_retail-04-bakery-display-case-filled.webp" alt="A wooden display case filled with pastries in warm light" width="1366" height="768" loading="lazy" decoding="async">
+        <figcaption>
+          <strong>Come hungry.</strong>
+          <small>Sample photo</small>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Menu: an honest sample layout, no invented items -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Menu</p>
+      <h2 class="sec-h" data-reveal>On the <em>menu.</em></h2>
+      <div class="menu-card" data-reveal>
+        <div class="menu-cols" aria-hidden="true">
+          <div class="menu-col" data-reveal>
+            <h3>Gelato</h3>
+            <ul>
+              <li style="--w:58%"><i></i><u></u><i></i></li>
+              <li style="--w:42%"><i></i><u></u><i></i></li>
+              <li style="--w:66%"><i></i><u></u><i></i></li>
+              <li style="--w:50%"><i></i><u></u><i></i></li>
+            </ul>
+          </div>
+          <div class="menu-col" data-reveal>
+            <h3>Caffè</h3>
+            <ul>
+              <li style="--w:46%"><i></i><u></u><i></i></li>
+              <li style="--w:62%"><i></i><u></u><i></i></li>
+              <li style="--w:38%"><i></i><u></u><i></i></li>
+              <li style="--w:55%"><i></i><u></u><i></i></li>
+            </ul>
+          </div>
+          <div class="menu-col" data-reveal>
+            <h3>Pastry</h3>
+            <ul>
+              <li style="--w:60%"><i></i><u></u><i></i></li>
+              <li style="--w:48%"><i></i><u></u><i></i></li>
+              <li style="--w:54%"><i></i><u></u><i></i></li>
+              <li style="--w:40%"><i></i><u></u><i></i></li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Sample layout. Your menu goes here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews: the real rating and a link, no quotes -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <p class="gword" data-reveal>
+        <b aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></b>
+        reviews
+      </p>
+      <p class="score" data-reveal>4.5</p>
+      <div class="stars" role="img" aria-label="4.5 out of 5 stars" data-reveal><span aria-hidden="true"></span></div>
+      <h2 data-reveal>from 223 Google reviews</h2>
+      <p data-reveal>We'd rather you read them where people wrote them.</p>
+      <a class="btn btn-ink" data-reveal href="https://www.google.com/maps?cid=10148525791357181726" target="_blank" rel="noopener">Read the reviews on Google
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="visit" id="visit">
+    <div class="wrap visit-grid">
+      <div data-reveal>
+        <p class="eyebrow">Visit</p>
+        <h2>Come by. We're at <em>120 W Oak St.</em></h2>
+        <address class="addr">
+          120 W Oak St<br>
+          Denton, TX 76201<br>
+          <a href="tel:+19408081342">(940) 808-1342</a>
+        </address>
+        <div class="visit-cta">
+          <a class="btn btn-cream" href="https://www.google.com/maps?cid=10148525791357181726" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-line-light" href="tel:+19408081342">Call the shop</a>
+        </div>
+      </div>
+
+      <div class="hours" data-reveal>
+        <h3>Hours</h3>
+        <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Open every day from 7 am</span></p>
+        <ul>
+          <li data-day="1"><span>Monday</span><span>7 am to 10 pm</span></li>
+          <li data-day="2"><span>Tuesday</span><span>7 am to 10 pm</span></li>
+          <li data-day="3"><span>Wednesday</span><span>7 am to 10 pm</span></li>
+          <li data-day="4"><span>Thursday</span><span>7 am to 10 pm</span></li>
+          <li data-day="5"><span>Friday</span><span>7 am to 11 pm</span></li>
+          <li data-day="6"><span>Saturday</span><span>7 am to 11 pm</span></li>
+          <li data-day="0"><span>Sunday</span><span>7 am to 10 pm</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Two Gentlemen of Verona, back to top">
+      <b>Two Gentlemen</b>
+      <span>of Verona</span>
+    </a>
+    <p>120 W Oak St, Denton, TX 76201 &middot; <a href="tel:+19408081342">(940) 808-1342</a></p>
+    <p>&copy; 2026 Two Gentlemen of Verona</p>
+    <!-- Top Shelf sample attribution -->
+    <div class="ts">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" width="26" height="26" loading="lazy" decoding="async">
+      <p>This sample website was prepared by Top Shelf Business Solutions. The pastry case photo is a sample.<br>
+      <a href="https://www.topshelfsolutions.io">See what we do at topshelfsolutions.io</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-berry" href="https://www.google.com/maps?cid=10148525791357181726" target="_blank" rel="noopener">Get directions</a>
+  <a class="btn btn-line" href="tel:+19408081342">Call</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  var head=document.querySelector('.head');
+  function onScroll(){head.classList.toggle('scrolled',window.scrollY>8);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Hours from the Google listing: open 7:00 daily; close 23:00 Fri/Sat, 22:00 otherwise.
+  function status(day,mins){
+    var close=(day===5||day===6)?23:22;
+    if(mins>=420&&mins<close*60) return {open:true,text:'Open now · until '+(close-12)+' pm'};
+    return {open:false,text:mins<420?'Closed now · opens 7 am':'Closed now · opens 7 am tomorrow'};
+  }
+  console.assert(status(5,1350).open&&!status(1,1350).open&&!status(0,419).open&&status(0,420).open&&!status(6,1380).open,'hours logic');
+
+  try{
+    // The shop's clock, not the visitor's.
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var p={};parts.forEach(function(x){p[x.type]=x.value;});
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);
+    var s=status(day,(+p.hour%24)*60+(+p.minute));
+    document.querySelectorAll('[data-status]').forEach(function(el){
+      el.classList.toggle('is-open',s.open);
+      el.querySelector('[data-status-text]').textContent=s.text;
+    });
+    var li=document.querySelector('.hours li[data-day="'+day+'"]');
+    if(li) li.classList.add('today');
+  }catch(e){/* static hours stay as written */}
+
+  var reveals=document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    reveals.forEach(function(el){io.observe(el);});
+  }else{
+    reveals.forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
+</body>
+</html>

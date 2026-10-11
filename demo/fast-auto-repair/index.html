@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Fast Auto Repair is an auto repair shop at 1023 Dallas Dr, Denton, TX 76205. Call (940) 566-4946.">
+<meta name="theme-color" content="#0B0C0E">
+<title>Fast Auto Repair | Auto repair shop in Denton, TX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0C0E'/%3E%3Cpath d='M15 46 L36 18 h13 L28 46 Z' fill='%23FF5B1F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/listing.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Fast Auto Repair",
+  "telephone": "+1-940-566-4946",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1023 Dallas Dr",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76205",
+    "addressCountry": "US"
+  },
+  "hasMap": "https://www.google.com/maps?cid=12666616345218476520",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00"}
+  ]
+}
+</script>
+<style>
+/* ================================================================
+   Fast Auto Repair demo: asphalt black, signal orange, slanted type
+   ================================================================ */
+:root{
+  --bg:#0B0C0E;
+  --bg-2:#101216;
+  --surface:#15171C;
+  --surface-2:#1B1E24;
+  --line:rgba(255,255,255,.09);
+  --line-strong:rgba(255,255,255,.18);
+  --text:#F4F1EA;
+  --muted:#A9ABB3;
+  --faint:#83858E;
+  --accent:#FF5B1F;
+  --accent-hot:#FF7038;
+  --accent-text:#FF8552;
+  --ink:#0B0C0E;
+  --open:#4ADE80;
+  --font-display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --font-body:'Barlow','Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --radius:12px;
+  --skew:-14deg;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;
+  color:var(--text);background:var(--bg);color-scheme:dark;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{margin:0;font-family:var(--font-display);text-transform:uppercase;line-height:1}
+h2{font-size:clamp(2.4rem,7.5vw,4.25rem);font-weight:800;font-style:italic;letter-spacing:.005em;text-wrap:balance}
+h3{font-size:1.5rem;font-weight:700;letter-spacing:.02em}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent-text);outline-offset:3px;border-radius:4px}
+::selection{background:var(--accent);color:var(--ink)}
+
+.container{width:min(100% - 2.5rem,1160px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:1rem;top:-4rem;z-index:100;padding:.7rem 1.1rem;background:var(--accent);color:var(--ink);font-weight:600;border-radius:6px;transition:top .2s ease}
+.skip-link:focus{top:1rem}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.7em;margin:0 0 1.1rem;
+  font:600 .8125rem/1 var(--font-body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent-text);
+}
+.eyebrow::before{content:"";width:1.4em;height:.6em;flex:none;transform:skewX(var(--skew));
+  background:linear-gradient(90deg,var(--accent) 0 55%,transparent 55% 70%,var(--accent) 70% 100%)}
+.section{position:relative;padding:clamp(4.25rem,10vw,7.5rem) 0}
+.lede{color:var(--muted);max-width:34rem;font-size:1.0625rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.5rem;padding:.85rem 1.6rem;border-radius:10px;border:1px solid transparent;
+  font-family:var(--font-display);font-size:1.35rem;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;line-height:1;white-space:nowrap;cursor:pointer;
+  transition:transform .18s var(--ease),background-color .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-primary{background:var(--accent);color:var(--ink);box-shadow:0 12px 34px rgba(255,91,31,.3),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-primary:hover{background:var(--accent-hot);transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,91,31,.4),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-ghost{background:rgba(255,255,255,.05);color:var(--text);border-color:var(--line-strong);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:var(--accent);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* scroll reveal (JS adds .js to <html>; without JS everything is visible) */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- header --------------------------------------------------- */
+.site-header{
+  position:sticky;top:0;z-index:50;background:rgba(11,12,14,.82);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+}
+.header-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem}
+.wordmark{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-display);font-size:1.3rem;font-weight:800;font-style:italic;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.wordmark::before{content:"";width:.8rem;height:1rem;flex:none;transform:skewX(var(--skew));background:var(--accent)}
+.wordmark b{color:var(--accent-text);font-weight:800}
+.site-nav{display:flex;align-items:center;gap:.25rem}
+.site-nav a.nav-link{padding:.5rem .8rem;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-radius:6px;transition:color .18s ease}
+.site-nav a.nav-link:hover{color:var(--text)}
+.nav-cta{min-height:2.6rem;padding:.5rem 1rem;font-size:1.05rem;margin-left:.6rem}
+@media (max-width:760px){.site-nav a.nav-link{display:none}.nav-cta{margin-left:0}}
+
+/* ---- hero ------------------------------------------------------ */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:flex-end;
+  min-height:calc(100vh - 3.75rem);min-height:calc(100svh - 3.75rem);
+  padding:7rem 0 clamp(1.75rem,5vw,4.5rem);
+}
+.hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:36% 50%; /* phone crop: the two centre lifts and the back bay */
+  filter:saturate(1.08) contrast(1.06);animation:drift 18s var(--ease) both}
+@keyframes drift{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(11,12,14,.5) 0%,rgba(11,12,14,.28) 26%,rgba(11,12,14,.86) 62%,var(--bg) 96%),
+    linear-gradient(90deg,rgba(11,12,14,.72),transparent 70%);
+}
+.hero h1{
+  font-size:clamp(4.4rem,19.5vw,7rem);font-weight:800;font-style:italic;line-height:.84;letter-spacing:-.005em;
+  margin:0 0 1.15rem;text-shadow:0 2px 30px rgba(0,0,0,.45);
+}
+.hero h1 span{display:block}
+.hero h1 .fast{color:var(--accent);position:relative;width:max-content}
+.hero h1 .fast::after{
+  content:"";position:absolute;left:104%;top:50%;width:38vw;max-width:22rem;height:.09em;
+  background:linear-gradient(90deg,var(--accent),transparent);transform-origin:left;
+  transform:skewX(var(--skew)) scaleX(0);animation:streak .9s .55s var(--ease) forwards;
+}
+@keyframes streak{to{transform:skewX(var(--skew)) scaleX(1)}}
+.hero-tagline{max-width:30rem;margin:0 0 1.35rem;font-size:clamp(1.0625rem,2.4vw,1.3rem);line-height:1.5;color:#D9D6CF}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.5rem}
+.chip{
+  display:inline-flex;align-items:center;gap:.5rem;min-height:2.5rem;padding:.4rem .9rem;border-radius:999px;
+  border:1px solid var(--line-strong);background:rgba(11,12,14,.6);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:.9375rem;font-weight:500;
+}
+.chip svg{width:1.05rem;height:1.05rem;flex:none}
+.chip strong{font-weight:600}
+.chip .star{color:#FBBC05}
+a.chip:hover{border-color:var(--accent)}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--faint);flex:none}
+.is-open .dot{background:var(--open);box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2s infinite}
+@keyframes pulse{to{box-shadow:0 0 0 .5rem rgba(74,222,128,0)}}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem}
+@media (max-width:560px){.hero-ctas .btn{flex:1 1 100%}}
+@media (min-width:900px){
+  .hero{padding-bottom:5.5rem}
+  .hero h1{font-size:clamp(7rem,11.5vw,11.5rem);margin-bottom:1.6rem}
+  .hero h1 .rest{display:inline}
+  .hero-photo{left:-10%;right:auto;width:140%;max-width:none;object-position:50% 62%} /* wide crop: trims the far-left wall and far-right post */
+}
+
+.rise{animation:rise .7s var(--ease) both}
+.rise-2{animation-delay:.1s}.rise-3{animation-delay:.2s}.rise-4{animation-delay:.3s}.rise-5{animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ---- ticker ---------------------------------------------------- */
+.ticker{position:relative;z-index:2;overflow:hidden;background:var(--accent);color:var(--ink);
+  transform:rotate(-1.4deg);width:104%;margin:-.6rem 0 0 -2%;padding:.7rem 0;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ticker-track{display:flex;width:max-content;animation:ticker 34s linear infinite}
+.ticker ul{display:flex;flex:none;margin:0;padding:0;list-style:none}
+.ticker li{display:flex;align-items:center;font-family:var(--font-display);font-style:italic;font-weight:800;
+  font-size:clamp(1.3rem,3.6vw,1.9rem);letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.ticker li::after{content:"";width:.5em;height:.7em;margin:0 1.1em;transform:skewX(var(--skew));background:var(--ink)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* ---- services -------------------------------------------------- */
+.section-head{margin-bottom:clamp(2rem,5vw,3.25rem)}
+.section-head h2{margin-bottom:1rem}
+.svc-grid{display:grid;grid-template-columns:1fr;margin:0;padding:0;list-style:none;counter-reset:svc;border-top:1px solid var(--line)}
+.svc{
+  position:relative;display:grid;grid-template-columns:3.4rem 1fr;column-gap:.5rem;align-items:start;
+  padding:1.35rem 0;border-bottom:1px solid var(--line);counter-increment:svc;
+}
+.svc::before{
+  content:"0" counter(svc);grid-row:span 2;font-family:var(--font-display);font-style:italic;font-weight:800;
+  font-size:2.1rem;line-height:1;color:var(--accent);
+}
+.svc h3{margin-bottom:.35rem}
+.svc p{grid-column:2;color:var(--muted);font-size:1rem;line-height:1.55}
+@media (min-width:700px){
+  .svc-grid{grid-template-columns:repeat(2,1fr);gap:1rem;border-top:0}
+  .svc{
+    display:block;padding:1.6rem 1.5rem 1.7rem;overflow:hidden;
+    background:linear-gradient(180deg,var(--surface-2),var(--surface));
+    border:1px solid var(--line);border-radius:var(--radius);
+    transition:transform .25s var(--ease),border-color .25s ease,box-shadow .25s ease;
+  }
+  .svc::before{display:block;font-size:3.4rem;margin-bottom:1.4rem;color:transparent;-webkit-text-stroke:1.5px var(--accent);transition:color .25s ease}
+  .svc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+  .svc h3{margin-bottom:.5rem}
+}
+@media (min-width:1040px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+@media (hover:hover) and (min-width:700px){
+  .svc:hover{transform:translateY(-5px);border-color:rgba(255,91,31,.45);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  .svc:hover::before{color:var(--accent)}
+  .svc:hover::after{transform:scaleX(1)}
+}
+.svc-foot{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:2.25rem}
+.svc-foot p{margin:0;color:var(--muted)}
+
+/* ---- reviews --------------------------------------------------- */
+.reviews{background:var(--bg-2);border-block:1px solid var(--line)}
+.rating{display:grid;gap:clamp(1.5rem,5vw,4.5rem);align-items:center}
+.score{position:relative;line-height:.8}
+.score-num{
+  display:block;font-family:var(--font-display);font-style:italic;font-weight:800;
+  font-size:clamp(10rem,46vw,19rem);line-height:.8;letter-spacing:-.03em;margin-left:-.04em;padding-right:.1em;width:max-content;
+  background:linear-gradient(175deg,#FFFFFF 12%,#C9C6BE 55%,#6D6F77 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.stars{
+  display:inline-block;margin-top:1.1rem;font-size:clamp(1.9rem,6.5vw,2.6rem);line-height:1;letter-spacing:.14em;
+  background:linear-gradient(90deg,#FBBC05 94%,rgba(255,255,255,.2) 94%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.gword{font-family:'Product Sans',Arial,Helvetica,sans-serif;font-weight:700;font-style:normal;letter-spacing:-.02em;text-transform:none}
+.gword i{font-style:normal}
+.g-b{color:#4285F4}.g-r{color:#EA4335}.g-y{color:#FBBC05}.g-g{color:#34A853}
+.rating-count{margin:.9rem 0 0;font-size:1.25rem;font-weight:500;color:var(--text)}
+.rating-copy h2{margin-bottom:1.1rem}
+.rating-copy .lede{margin-bottom:1.75rem}
+@media (min-width:860px){.rating{grid-template-columns:auto 1fr}}
+
+/* ---- quote band ------------------------------------------------ */
+.quote{padding:clamp(5rem,13vw,9rem) 0;background:var(--surface);border-block:1px solid var(--line)}
+.quote-inner{max-width:34rem}
+.quote h2{margin-bottom:1.1rem}
+.quote .lede{color:#D9D6CF;margin-bottom:1.9rem}
+
+/* ---- visit ----------------------------------------------------- */
+.visit-grid{display:grid;gap:1.25rem}
+@media (min-width:900px){.visit-grid{grid-template-columns:1.05fr .95fr;gap:1.5rem;align-items:stretch}}
+.card{padding:clamp(1.5rem,4vw,2.25rem);background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:16px}
+.card-label{display:block;margin-bottom:.9rem;font:600 .78rem/1 var(--font-body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent-text)}
+.addr{font-family:var(--font-display);font-weight:700;font-size:clamp(1.9rem,5.6vw,2.6rem);line-height:1.05;text-transform:uppercase;letter-spacing:.01em;font-style:normal;margin-bottom:1rem}
+.addr span{display:block}
+.card p{color:var(--muted)}
+.card .btn{margin-top:1.4rem}
+.hours{margin:0}
+.hours-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.8rem .75rem;margin-inline:-.75rem;border-bottom:1px solid var(--line);border-radius:8px}
+.hours-row:last-child{border-bottom:0}
+.hours-row dt{font-family:var(--font-display);font-weight:700;font-size:1.2rem;letter-spacing:.05em;text-transform:uppercase}
+.hours-row dd{margin:0;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.hours-row dt,.hours-row dd{white-space:nowrap}
+@media (max-width:420px){.hours-row dt,.hours-row dd{font-size:.92em}.hours-row.today dt::after{margin-left:.35rem}}
+.hours-row.today{background:rgba(255,91,31,.12);border-bottom-color:transparent}
+.hours-row.today dt,.hours-row.today dd{color:var(--text)}
+.hours-row.today dt::after{content:"Today";margin-left:.6rem;padding:.15rem .45rem;border-radius:4px;background:var(--accent);color:var(--ink);font-size:.72rem;letter-spacing:.1em;vertical-align:.15em}
+.status{display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1.1rem;font-weight:600}
+
+/* ---- final cta ------------------------------------------------- */
+.final{text-align:center;overflow:hidden;background:radial-gradient(70% 90% at 50% 115%,rgba(255,91,31,.22),transparent 65%),var(--bg-2);border-top:1px solid var(--line)}
+.final h2{font-size:clamp(3.2rem,13vw,7.5rem);line-height:.86;margin-bottom:1.1rem}
+.final .lede{margin:0 auto 2rem}
+.final .btn{min-height:4.25rem;padding-inline:2.2rem;font-size:clamp(1.5rem,5.6vw,2rem)}
+.final .status{display:flex;justify-content:center;margin:1.5rem 0 0;color:var(--muted);font-weight:500}
+
+/* ---- footer ---------------------------------------------------- */
+.site-footer{background:#08090A;border-top:1px solid var(--line)}
+.footer-main{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;padding:2.75rem 0 2rem}
+.footer-main p{margin:.55rem 0 0;color:var(--muted);font-size:.9375rem}
+.footer-main a:hover{color:var(--accent-text)}
+.footer-legal{color:var(--faint);font-size:.875rem}
+.attribution{border-top:1px solid var(--line);padding:1.6rem 0 1.9rem;text-align:center}
+.attribution img{height:26px;width:auto;margin:0 auto .65rem;opacity:.85}
+.attribution p{margin:0 0 .25rem;color:var(--faint);font-size:.8125rem}
+.attribution a{font-size:.8125rem;color:var(--faint);text-decoration:underline;text-underline-offset:3px}
+.attribution a:hover{color:var(--muted)}
+
+/* ---- mobile call bar ------------------------------------------ */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(11,12,14,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+  transform:translateY(110%);transition:transform .35s var(--ease);
+}
+.callbar.show{transform:none}
+.callbar .btn{flex:1;min-height:3.1rem;font-size:1.2rem;padding-inline:.8rem;box-shadow:none}
+.callbar .btn-ghost{flex:0 0 38%}
+@media (max-width:760px){.js .callbar{display:flex}.js .site-footer{padding-bottom:4.75rem}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+  .ticker-track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="g-logo" viewBox="0 0 48 48">
+    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container header-bar">
+    <a class="wordmark" href="#home"><span><b>Fast</b> Auto Repair</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#reviews">Reviews</a>
+      <a class="nav-link" href="#visit">Hours and location</a>
+      <a class="btn btn-primary nav-cta" href="tel:+19405664946"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img class="hero-photo" src="assets/listing.jpg" alt="Inside the Fast Auto Repair shop" width="1400" height="1050" fetchpriority="high">
+    <div class="container">
+      <p class="eyebrow rise">Auto repair shop &middot; Denton, TX</p>
+      <h1 class="rise rise-2"><span class="fast">Fast</span> <span class="rest">Auto</span> <span class="rest">Repair</span></h1>
+      <p class="hero-tagline rise rise-3">Brakes, A/C, diagnostics, diesel work and oil changes at 1023 Dallas Dr.</p>
+      <div class="chips rise rise-4">
+        <a class="chip" href="https://www.google.com/maps?cid=12666616345218476520" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#g-logo"/></svg>
+          <span><strong>4.7</strong> <span class="star" aria-hidden="true">&#9733;</span> &middot; 249 Google reviews</span>
+        </a>
+        <span class="chip" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Open Monday to Saturday</span></span>
+      </div>
+      <div class="hero-ctas rise rise-5" id="hero-ctas">
+        <a class="btn btn-primary" href="tel:+19405664946"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (940) 566-4946</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps?cid=12666616345218476520" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticker (decorative; the same list is in the services section) -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <ul><li>Brakes</li><li>A/C repair</li><li>Diagnostics</li><li>Diesel engine repair</li><li>Engine rebuilding</li><li>Oil changes</li><li>Car inspections</li><li>Repair and maintenance</li></ul>
+      <ul><li>Brakes</li><li>A/C repair</li><li>Diagnostics</li><li>Diesel engine repair</li><li>Engine rebuilding</li><li>Oil changes</li><li>Car inspections</li><li>Repair and maintenance</li></ul>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What we work on</p>
+        <h2>Tell us what it's doing</h2>
+        <p class="lede">Not sure which of these you need? Call and describe the problem.</p>
+      </div>
+      <ul class="svc-grid">
+        <li class="svc reveal"><h3>Brakes</h3><p>Grinding, squealing, or a pedal that feels soft. Have it looked at before it gets worse.</p></li>
+        <li class="svc reveal"><h3>A/C repair</h3><p>Blowing warm air? Get it fixed before the heat sets in.</p></li>
+        <li class="svc reveal"><h3>Diagnostics</h3><p>A check engine light, or a noise you can't place. We start by finding the cause.</p></li>
+        <li class="svc reveal"><h3>Diesel engine repair</h3><p>We work on diesel engines. Call with the year, the make and what it's doing.</p></li>
+        <li class="svc reveal"><h3>Engine rebuilding</h3><p>If the engine is worth saving, ask us about a rebuild.</p></li>
+        <li class="svc reveal"><h3>Oil changes</h3><p>Call ahead and we'll tell you when to come by.</p></li>
+        <li class="svc reveal"><h3>Car inspections</h3><p>We're a car inspection station. Call to check what you need to bring.</p></li>
+        <li class="svc reveal"><h3>Repair and maintenance</h3><p>General repairs, plus the routine upkeep that keeps small problems small.</p></li>
+      </ul>
+      <div class="svc-foot reveal">
+        <a class="btn btn-primary" href="tel:+19405664946"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+        <p>(940) 566-4946</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="container rating">
+      <div class="score reveal">
+        <span class="score-num">4.7</span>
+        <span class="stars" role="img" aria-label="Rated 4.7 stars on Google">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="rating-count">249 <span class="gword" aria-label="Google"><i class="g-b">G</i><i class="g-r">o</i><i class="g-y">o</i><i class="g-b">g</i><i class="g-g">l</i><i class="g-r">e</i></span> reviews</p>
+      </div>
+      <div class="rating-copy reveal">
+        <p class="eyebrow">Reviews</p>
+        <h2>Read them yourself</h2>
+        <p class="lede">Every one of them is on Google.</p>
+        <a class="btn btn-ghost" href="https://www.google.com/maps?cid=12666616345218476520" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#g-logo"/></svg>Read the reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call for a quote -->
+  <section class="quote" id="quote">
+    <div class="container">
+      <div class="quote-inner reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2>Call for a quote</h2>
+        <p class="lede">What a repair costs depends on the car and what's wrong with it, so call and tell us what's going on.</p>
+        <a class="btn btn-primary" href="tel:+19405664946"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (940) 566-4946</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Hours and location</p>
+        <h2>Find the shop</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card reveal">
+          <span class="card-label">Address</span>
+          <address class="addr"><span>1023 Dallas Dr</span><span>Denton, TX 76205</span></address>
+          <p>Fast Auto Repair is an auto repair shop in Denton, open six days a week.</p>
+          <a class="btn btn-ghost" href="https://www.google.com/maps?cid=12666616345218476520" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Open in Google Maps</a>        </div>
+        <div class="card reveal">
+          <span class="card-label">Hours</span>
+          <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Closed Sundays</span></p>
+          <dl class="hours">
+            <div class="hours-row" data-day="1"><dt>Monday</dt><dd>9:00 am to 5:00 pm</dd></div>
+            <div class="hours-row" data-day="2"><dt>Tuesday</dt><dd>9:00 am to 5:00 pm</dd></div>
+            <div class="hours-row" data-day="3"><dt>Wednesday</dt><dd>9:00 am to 5:00 pm</dd></div>
+            <div class="hours-row" data-day="4"><dt>Thursday</dt><dd>9:00 am to 5:00 pm</dd></div>
+            <div class="hours-row" data-day="5"><dt>Friday</dt><dd>9:00 am to 5:00 pm</dd></div>
+            <div class="hours-row" data-day="6"><dt>Saturday</dt><dd>9:00 am to 4:00 pm</dd></div>
+            <div class="hours-row" data-day="0"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section final" id="contact">
+    <div class="container reveal">
+      <p class="eyebrow">Fast Auto Repair</p>
+      <h2>Car acting up?</h2>
+      <p class="lede">Call the shop and tell us what it's doing.</p>
+      <a class="btn btn-primary" href="tel:+19405664946"><svg aria-hidden="true"><use href="#i-phone"/></svg>(940) 566-4946</a>
+      <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>1023 Dallas Dr, Denton, TX 76205</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <span class="wordmark"><span><b>Fast</b> Auto Repair</span></span>
+        <p>1023 Dallas Dr, Denton, TX 76205 &middot; <a href="tel:+19405664946">(940) 566-4946</a></p>
+      </div>
+      <p class="footer-legal">&copy; 2026 Fast Auto Repair</p>
+    </div>
+    <!-- Top Shelf sample attribution -->
+    <div class="attribution">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" loading="lazy">
+      <p>This website was prepared by Top Shelf Business Solutions.</p>
+      <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar" id="callbar">
+  <a class="btn btn-primary" href="tel:+19405664946"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps?cid=12666616345218476520" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Map</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  /* ---- open-now status, from the listed hours, in Denton's time zone ---- */
+  var HOURS={1:[540,1020],2:[540,1020],3:[540,1020],4:[540,1020],5:[540,1020],6:[540,960]}; /* minutes from midnight; no key = closed */
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(m){var h=Math.floor(m/60),mm=m%60;return (h%12||12)+':'+(mm<10?'0':'')+mm+(h<12?' am':' pm')}
+  function status(day,min){
+    var t=HOURS[day];
+    if(t&&min>=t[0]&&min<t[1])return {open:true,text:'Open now, until '+fmt(t[1])};
+    if(t&&min<t[0])return {open:false,text:'Closed now, opens today at '+fmt(t[0])};
+    for(var i=1;i<=7;i++){
+      var d=(day+i)%7;
+      if(HOURS[d])return {open:false,text:'Closed now, opens '+(i===1?'tomorrow':DAYS[d])+' at '+fmt(HOURS[d][0])};
+    }
+  }
+  /* self-check: fails loudly in the console if the hours logic breaks */
+  console.assert(status(1,600).open&&status(5,1019).open,'weekday open');
+  console.assert(!status(5,1020).open&&!status(0,600).open&&!status(6,960).open,'closed edges');
+  console.assert(status(6,960).text.indexOf('Monday at 9:00 am')>0&&status(0,600).text.indexOf('tomorrow')>0,'next opening');
+  console.assert(status(2,480).text==='Closed now, opens today at 9:00 am'&&status(6,600).text==='Open now, until 4:00 pm','labels');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var p={};parts.forEach(function(x){p[x.type]=x.value});
+    var day=DAYS.indexOf(p.weekday),s=status(day,(+p.hour)*60+(+p.minute));
+    if(day>-1&&s){
+      document.querySelectorAll('[data-status]').forEach(function(el){
+        el.classList.toggle('is-open',s.open);
+        el.querySelector('[data-status-text]').textContent=s.text;
+      });
+      var row=document.querySelector('.hours-row[data-day="'+day+'"]');
+      if(row)row.classList.add('today');
+    }
+  }catch(e){/* old browser: the static hours text stays */}
+
+  /* ---- scroll reveal ---- */
+  var targets=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var sibs=en.target.parentNode.querySelectorAll(':scope > .reveal');
+        en.target.style.transitionDelay=Math.min(Array.prototype.indexOf.call(sibs,en.target),7)*55+'ms';
+        en.target.classList.add('in');io.unobserve(en.target);
+        setTimeout(function(){en.target.style.transitionDelay=''},1400); /* so the stagger never delays hover */
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+    targets.forEach(function(el){io.observe(el)});
+  }else{
+    targets.forEach(function(el){el.classList.add('in')});
+  }
+
+  /* ---- mobile call bar: appears once the hero buttons scroll away ---- */
+  var bar=document.getElementById('callbar'),cta=document.getElementById('hero-ctas');
+  if(bar&&cta&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){bar.classList.toggle('show',!e[0].isIntersecting)}).observe(cta);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Taqueria Los Pinos is a Mexican and taco restaurant at 305 W Hundley Dr in Lake Dallas, TX. Open Monday through Saturday, 8 am to 8 pm. Call (214) 480-0204.">
+<meta name="theme-color" content="#0E2F23">
+<title>Taqueria Los Pinos | Tacos in Lake Dallas, TX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230E2F23'/%3E%3Cpath d='M32 10 42 26H36L46 40H38L50 54H14L26 40H18L28 26H22Z' fill='%23F2A91E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Rozha+One&family=Yellowtail&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Taqueria Los Pinos",
+  "servesCuisine": "Mexican",
+  "telephone": "+1-214-480-0204",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "305 W Hundley Dr",
+    "addressLocality": "Lake Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75065",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  }],
+  "hasMap": "https://www.google.com/maps?cid=7453725827454098566"
+}
+</script>
+<style>
+/* ================================================================
+   Taqueria Los Pinos - one-page demo
+   Hand-painted-sign poster: pine green, chili, marigold, rosa, cream
+   ================================================================ */
+:root{
+  --pine:#12392B;
+  --pine-deep:#0E2F23;
+  --pine-ink:#0A2119;
+  --chili:#B93019;
+  --chili-bright:#DC4A2C;
+  --marigold:#F2A91E;
+  --rosa:#E8457A;
+  --agua:#2BA6A0;
+  --cream:#F6ECD9;
+  --paper:#FBF5E8;
+  --ink:#1B1410;
+  --ink-soft:#54463B;
+  --display:'Rozha One',Georgia,'Times New Roman',serif;
+  --script:'Yellowtail','Brush Script MT',cursive;
+  --body:'Figtree','Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  padding-bottom:calc(4.4rem + env(safe-area-inset-bottom,0px));
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:4px}
+::selection{background:var(--marigold);color:var(--ink)}
+.wrap{width:min(100% - 2.5rem,1120px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;padding:.7rem 1.1rem;background:var(--marigold);color:var(--ink);font-weight:700;border-radius:8px;text-decoration:none}
+.skip:focus{top:1rem}
+
+/* ---- shared ---------------------------------------------------- */
+.picado{display:block;width:100%;height:76px;filter:drop-shadow(0 6px 8px rgba(0,0,0,.28))}
+.script{font-family:var(--script);font-weight:400;line-height:1;transform:rotate(-4deg);transform-origin:left bottom;display:inline-block}
+.section{position:relative;padding:clamp(4.25rem,10vw,7rem) 0}
+.section h2{font-family:var(--display);font-weight:400;font-size:clamp(2.5rem,8.5vw,4.4rem);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.lede{font-size:clamp(1.06rem,1.6vw,1.2rem);line-height:1.65;max-width:34rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.85rem 1.6rem;border-radius:999px;border:2px solid transparent;
+  font:800 1.02rem/1 var(--body);letter-spacing:.01em;text-decoration:none;white-space:nowrap;
+  transition:transform .16s var(--ease),box-shadow .2s var(--ease),background-color .2s ease,color .2s ease;
+}
+.btn svg{width:1.15rem;height:1.15rem;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-sun{background:var(--marigold);color:var(--ink);box-shadow:0 5px 0 #B87A08}
+.btn-ink{background:var(--ink);color:var(--cream);box-shadow:0 5px 0 rgba(0,0,0,.35)}
+.btn-line{border-color:currentColor;background:transparent}
+@media (hover:hover) and (pointer:fine){
+  .btn-sun:hover{transform:translateY(-2px);box-shadow:0 7px 0 #B87A08}
+  .btn-ink:hover{transform:translateY(-2px);box-shadow:0 7px 0 rgba(0,0,0,.35)}
+  .btn-line:hover{background:var(--cream);color:var(--pine-deep);border-color:var(--cream)}
+  .btn-line.on-light:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.08s}
+.js .reveal.d2{transition-delay:.16s}
+
+/* ---- hero ------------------------------------------------------ */
+.hero{
+  position:relative;overflow:hidden;color:var(--cream);
+  background:
+    radial-gradient(90% 60% at 80% 18%,rgba(242,169,30,.16),transparent 62%),
+    radial-gradient(70% 50% at 0% 100%,rgba(232,69,122,.14),transparent 60%),
+    linear-gradient(180deg,var(--pine-deep),var(--pine) 70%,var(--pine-deep));
+}
+.hero::after{content:"";position:absolute;inset:0;background:var(--grain);background-size:160px;opacity:.07;pointer-events:none}
+.hero > .picado{position:absolute;top:0;left:0;z-index:3}
+.hero-grid{position:relative;z-index:2}
+/* phone: the photo is the first thing on screen, full width; the name sits on its lower edge */
+.hero-photo{position:relative;margin:0;height:42vh;height:clamp(15rem,42svh,23rem)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(14,47,35,.35) 0,transparent 24%,transparent 76%,rgba(14,47,35,.7) 91%,var(--pine-deep) 100%);
+}
+.hero-copy{position:relative;margin-top:-2.6rem;padding:0 1.25rem clamp(3rem,8vw,4.5rem)}
+.hero .script{font-size:clamp(2rem,7vw,3rem);color:var(--cream);text-shadow:0 2px 12px rgba(10,33,25,.75);margin:0 0 .1rem}
+.hero h1{text-shadow:0 2px 20px rgba(10,33,25,.6)}
+.hero h1{
+  font-family:var(--display);font-weight:400;line-height:.86;letter-spacing:-.01em;
+  font-size:clamp(3.2rem,15.5vw,6.8rem);
+}
+.hero h1 span{display:block}
+.hero h1 .gold{color:var(--marigold);text-shadow:.045em .045em 0 var(--chili)}
+.hero .lede{margin-top:1.5rem;color:rgba(246,236,217,.88)}
+.status{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;padding:.55rem 1rem;border-radius:999px;
+  background:rgba(246,236,217,.09);border:1px solid rgba(246,236,217,.2);font-weight:600;font-size:.97rem;
+}
+.status .dot{width:.62rem;height:.62rem;border-radius:50%;background:var(--marigold);flex:none}
+.status.open .dot{background:#5FD38D;box-shadow:0 0 0 0 rgba(95,211,141,.6);animation:pulse 2.4s ease-out infinite}
+.status.closed .dot{background:var(--chili-bright)}
+@keyframes pulse{to{box-shadow:0 0 0 .7rem rgba(95,211,141,0)}}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.1rem}
+.hero-ctas .btn{flex:1 1 13rem}
+.rating-chip{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:.9rem;text-decoration:none;
+  font-weight:600;font-size:.97rem;color:rgba(246,236,217,.92);
+}
+.rating-chip .stars{font-size:1.1rem}
+.rating-chip u{text-underline-offset:4px;text-decoration-color:rgba(246,236,217,.4)}
+.stars{
+  letter-spacing:.08em;line-height:1;
+  background:linear-gradient(90deg,var(--marigold) 96%,rgba(128,128,128,.4) 96%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.seal-wrap{display:none}
+.seal{width:100%;height:100%;filter:drop-shadow(0 14px 24px rgba(0,0,0,.45))}
+.seal .ring{transform-origin:150px 150px;animation:spin 48s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rise{animation:rise .75s var(--ease) both}
+.r1{animation-delay:.05s}.r2{animation-delay:.14s}.r3{animation-delay:.24s}.r4{animation-delay:.34s}.r5{animation-delay:.44s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* ---- marquee --------------------------------------------------- */
+.marquee{background:var(--marigold);color:var(--ink);overflow:hidden;border-block:3px solid var(--ink)}
+.marquee-track{display:flex;width:max-content;animation:slide 30s linear infinite}
+.marquee ul{display:flex;flex:none;margin:0;padding:.85rem 0;list-style:none}
+.marquee li{display:flex;align-items:center;font-family:var(--display);font-size:clamp(1.25rem,4vw,1.7rem);line-height:1;white-space:nowrap}
+.marquee li::after{content:"";width:.7rem;height:.7rem;margin:0 1.4rem;background:var(--chili);transform:rotate(45deg)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---- about ----------------------------------------------------- */
+.about{background:var(--paper)}
+.about::before{content:"";position:absolute;inset:0;background:var(--grain);background-size:160px;opacity:.05;pointer-events:none}
+.about-grid{position:relative;display:grid;gap:clamp(2.5rem,6vw,4rem);align-items:center}
+.about .script{font-size:clamp(1.9rem,6vw,2.6rem);color:var(--chili);margin-bottom:.5rem}
+.about h2{color:var(--pine)}
+.about .lede{margin-top:1.3rem;color:var(--ink-soft)}
+.facts{display:grid;gap:.75rem;margin:1.8rem 0 0;padding:0;list-style:none}
+.facts li{
+  display:flex;align-items:center;gap:.9rem;padding:.9rem 1.1rem;border-radius:14px;
+  background:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-weight:600;
+}
+.facts li:nth-child(2){box-shadow:4px 4px 0 var(--chili)}
+.facts li:nth-child(3){box-shadow:4px 4px 0 var(--marigold)}
+.facts svg{width:1.5rem;height:1.5rem;flex:none;color:var(--chili)}
+.facts span small{display:block;font-weight:500;font-size:.88rem;color:var(--ink-soft)}
+
+/* ---- menu / call ----------------------------------------------- */
+.menu{background:var(--chili);color:var(--cream);overflow:hidden;text-align:center}
+.menu .wrap{position:relative}
+.menu .script{transform-origin:center}
+.menu .lede{margin-inline:auto}
+.menu::before{
+  content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background:radial-gradient(60% 80% at 100% 0%,rgba(242,169,30,.35),transparent 60%);
+}
+.menu .script{font-size:clamp(1.9rem,6vw,2.6rem);color:var(--marigold);margin-bottom:.5rem}
+.menu .lede{margin-top:1.2rem;color:rgba(246,236,217,.94)}
+.big-phone{
+  display:inline-block;margin-top:1.5rem;font-family:var(--display);line-height:1;text-decoration:none;
+  font-size:clamp(2.1rem,10vw,5rem);color:var(--marigold);text-shadow:.04em .04em 0 var(--pine-ink);
+  white-space:nowrap;transition:transform .2s var(--ease);
+}
+@media (hover:hover){.big-phone:hover{transform:translateY(-3px)}}
+.menu .btn{margin-top:1.6rem}
+.note{margin-top:2.2rem;font-size:.84rem;color:rgba(246,236,217,.8)}
+
+/* ---- reviews --------------------------------------------------- */
+.reviews{background:var(--cream);text-align:center}
+.reviews::before{content:"";position:absolute;inset:0;background:var(--grain);background-size:160px;opacity:.06;pointer-events:none}
+.reviews .wrap{position:relative}
+.reviews .script{font-size:clamp(1.9rem,6vw,2.6rem);color:var(--chili);transform-origin:center}
+.score{
+  font-family:var(--display);line-height:.8;color:var(--pine);
+  font-size:clamp(8.5rem,42vw,17rem);letter-spacing:-.03em;margin-top:.4rem;
+  text-shadow:.03em .03em 0 var(--marigold);
+}
+.reviews .stars{display:inline-block;font-size:clamp(2.1rem,9vw,3.2rem);margin-top:1rem}
+.count{margin-top:1rem;font-weight:700;font-size:clamp(1.15rem,3.6vw,1.45rem)}
+.g{font-weight:800;letter-spacing:-.01em}
+.g .b{color:#4285F4}.g .r{color:#EA4335}.g .y{color:#FBBC05}.g .gr{color:#34A853}
+.reviews .lede{margin:1rem auto 0;color:var(--ink-soft)}
+.reviews .btn{margin-top:1.8rem}
+
+/* ---- visit ----------------------------------------------------- */
+.visit{background:linear-gradient(180deg,var(--pine),var(--pine-deep));color:var(--cream)}
+.visit::after{content:"";position:absolute;inset:0;background:var(--grain);background-size:160px;opacity:.07;pointer-events:none}
+.visit .wrap{position:relative;z-index:1}
+.visit .script{font-size:clamp(1.9rem,6vw,2.6rem);color:var(--rosa);margin-bottom:.5rem}
+.visit h2 em{font-style:normal;color:var(--marigold)}
+.visit-grid{display:grid;gap:1.5rem;margin-top:2.4rem}
+.card{padding:1.6rem 1.4rem;border-radius:18px;background:rgba(246,236,217,.06);border:1px solid rgba(246,236,217,.18)}
+.card h3{font:800 .78rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin-bottom:1rem}
+.addr{font-family:var(--display);font-size:clamp(1.6rem,5.4vw,2.1rem);line-height:1.12;font-style:normal;display:block}
+.card .btn{margin-top:1.3rem;width:100%}
+.card .btn + .btn{margin-top:.8rem}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;gap:1rem;padding:.62rem .7rem;border-radius:9px;font-size:1rem}
+.hours div + div{margin-top:.1rem}
+.hours dt{font-weight:700}
+.hours dd{margin:0;color:rgba(246,236,217,.82);font-variant-numeric:tabular-nums;text-align:right}
+.hours .today{background:var(--marigold);color:var(--ink)}
+.hours .today dd{color:var(--ink);font-weight:700}
+.hours .shut dd{color:var(--rosa);font-weight:700}
+.hours .today.shut dd{color:var(--chili)}
+.map{overflow:hidden;border-radius:18px;border:3px solid var(--marigold);background:var(--pine-ink);min-height:19rem}
+.map iframe{display:block;width:100%;height:100%;min-height:19rem;border:0}
+
+/* ---- footer ---------------------------------------------------- */
+.foot{background:var(--pine-ink);color:var(--cream);text-align:center}
+.foot .picado{transform:scaleY(-1);height:60px;opacity:.9}
+.foot-main{padding:1.5rem 0 2.2rem}
+.foot-name{font-family:var(--display);font-size:clamp(2rem,7vw,2.8rem);line-height:1}
+.foot-name b{font-weight:400;color:var(--marigold)}
+.foot p{margin-top:.7rem;color:rgba(246,236,217,.78);font-size:.97rem}
+.foot a{text-underline-offset:4px}
+.attribution{border-top:1px solid rgba(246,236,217,.12);padding:1.6rem 0 1.9rem}
+.attribution img{height:26px;width:auto;margin:0 auto .65rem;opacity:.9}
+.attribution p{margin:0 0 .25rem;font-size:.8125rem;color:rgba(246,236,217,.62)}
+.attribution a{font-size:.8125rem;color:rgba(246,236,217,.62)}
+
+/* ---- sticky phone bar ------------------------------------------ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom,0px));
+  background:rgba(10,33,25,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(246,236,217,.16);
+}
+.dock .btn{min-height:3.1rem;padding:.6rem .8rem;box-shadow:none;font-size:1rem}
+.dock .btn-line{color:var(--cream);border-color:rgba(246,236,217,.5)}
+
+/* ---- wider screens --------------------------------------------- */
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .dock{display:none}
+  .picado{height:92px}
+  .hero-ctas .btn{flex:0 0 auto}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .map{grid-column:1 / -1}
+}
+@media (min-width:980px){
+  /* desktop: copy left, the photo framed large on the right with the seal pinned to its corner */
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:3.5rem;
+    width:min(100% - 2.5rem,1120px);margin-inline:auto;padding:8.5rem 0 6.5rem;
+  }
+  .hero-copy{order:-1;margin:0;padding:0}
+  .hero h1{font-size:clamp(4.6rem,7.2vw,6.2rem)}
+  .hero .script{color:var(--rosa);text-shadow:none}
+  .hero-photo{
+    height:auto;aspect-ratio:4/3;transform:rotate(2deg);
+    border:5px solid var(--cream);border-radius:22px;box-shadow:16px 16px 0 var(--marigold);
+  }
+  .hero-photo img{border-radius:16px}
+  .hero-photo::after{display:none}
+  .seal-wrap{display:block;position:absolute;right:-1.5rem;top:-2.5rem;width:10rem;height:10rem;transform:rotate(-2deg)}
+  .about-grid{grid-template-columns:1.1fr .9fr}
+  .facts{margin-top:0}
+  .visit-grid{grid-template-columns:1fr 1fr 1.25fr}
+  .map{grid-column:auto}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- shared icons + papel picado pattern -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.3 2-.9 1.5L11 13.3V7h2z"/></symbol>
+    <symbol id="i-fork" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2v7a2 2 0 0 0 1.5 1.94V22h2V10.94A2 2 0 0 0 12 9V2h-1.5v6h-1V2H8v6H7V2zm9 0c-1.66 0-3 2.24-3 5v5h2v10h2V2z"/></symbol>
+    <symbol id="flag" viewBox="0 0 60 76"><path fill-rule="evenodd" d="M2 8h56v50l-7 8-7-8-7 8-7-8-7 8-7-8-7 8-7-8zM30 18l9 13-9 13-9-13zM12 14l4 6-4 6-4-6zM48 14l4 6-4 6-4-6zM12 38l4 6-4 6-4-6zM48 38l4 6-4 6-4-6zM30 46l3 4.5-3 4.5-3-4.5z"/></symbol>
+    <pattern id="pp" width="300" height="76" patternUnits="userSpaceOnUse">
+      <use href="#flag" width="60" height="76" x="0" fill="#E8457A"/>
+      <use href="#flag" width="60" height="76" x="60" fill="#F2A91E"/>
+      <use href="#flag" width="60" height="76" x="120" fill="#2BA6A0"/>
+      <use href="#flag" width="60" height="76" x="180" fill="#DC4A2C"/>
+      <use href="#flag" width="60" height="76" x="240" fill="#F6ECD9"/>
+      <rect y="6" width="300" height="3" fill="#F6ECD9"/>
+    </pattern>
+  </defs>
+</svg>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <svg class="picado" aria-hidden="true" focusable="false"><rect width="100%" height="76" fill="url(#pp)"/></svg>
+    <div class="hero-grid">
+      <figure class="hero-photo">
+        <img src="assets/listing.jpg" alt="A plate of tacos with a lime wedge at Taqueria Los Pinos" width="1400" height="1050" fetchpriority="high">
+        <div class="seal-wrap" aria-hidden="true">
+          <svg class="seal" viewBox="0 0 300 300" focusable="false">
+            <circle cx="150" cy="150" r="148" fill="#F2A91E"/>
+            <circle cx="150" cy="150" r="140" fill="#B93019"/>
+            <circle cx="150" cy="150" r="134" fill="none" stroke="#F6ECD9" stroke-width="1.5" stroke-dasharray="2 6"/>
+            <g class="ring">
+              <path id="ringpath" d="M150,150 m-112,0 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0" fill="none"/>
+              <text font-family="Figtree,Arial,sans-serif" font-weight="800" font-size="19" fill="#F6ECD9">
+                <textPath href="#ringpath" textLength="696" lengthAdjust="spacing">TAQUERIA LOS PINOS • LAKE DALLAS, TEXAS • </textPath>
+              </text>
+            </g>
+            <circle cx="150" cy="150" r="92" fill="#F6ECD9"/>
+            <circle cx="150" cy="150" r="92" fill="none" stroke="#12392B" stroke-width="3"/>
+            <circle cx="150" cy="132" r="46" fill="#F2A91E"/>
+            <g fill="#12392B">
+              <g transform="translate(98 198) scale(1.3)"><path d="M0-50 13-30H-13zM0-39 17-16H-17zM0-26 21 0H-21z"/><rect x="-3" width="6" height="9" fill="#B93019"/></g>
+              <g transform="translate(202 198) scale(1.3)"><path d="M0-50 13-30H-13zM0-39 17-16H-17zM0-26 21 0H-21z"/><rect x="-3" width="6" height="9" fill="#B93019"/></g>
+              <g transform="translate(150 192) scale(2)"><path d="M0-50 13-30H-13zM0-39 17-16H-17zM0-26 21 0H-21z"/><rect x="-3" width="6" height="9" fill="#B93019"/></g>
+              <rect x="84" y="209" width="132" height="3" rx="1.5"/>
+            </g>
+          </svg>
+        </div>
+      </figure>
+      <div class="hero-copy">
+        <p class="script rise r1">Bienvenidos a</p>
+        <h1 class="rise r1"><span>Taqueria</span><span class="gold">Los Pinos</span></h1>
+        <a class="rating-chip rise r2" href="#reviews">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span><strong>4.8</strong> stars from <u>389 Google reviews</u></span>
+        </a>
+        <div class="hero-ctas rise r3">
+          <a class="btn btn-sun" href="tel:+12144800204"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (214) 480-0204</a>
+          <a class="btn btn-line" href="https://www.google.com/maps?cid=7453725827454098566" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        </div>
+        <p class="status rise r4" id="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Mon to Sat, 8 am to 8 pm</span></p>
+        <p class="lede rise r4">Tacos and Mexican food on W Hundley Dr in Lake Dallas. Open Monday through Saturday, 8 am to 8 pm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <ul><li>Tacos</li><li>Lake Dallas, Texas</li><li>Monday to Saturday</li><li>8 am to 8 pm</li><li>(214) 480-0204</li></ul>
+      <ul><li>Tacos</li><li>Lake Dallas, Texas</li><li>Monday to Saturday</li><li>8 am to 8 pm</li><li>(214) 480-0204</li></ul>
+      <ul><li>Tacos</li><li>Lake Dallas, Texas</li><li>Monday to Saturday</li><li>8 am to 8 pm</li><li>(214) 480-0204</li></ul>
+      <ul><li>Tacos</li><li>Lake Dallas, Texas</li><li>Monday to Saturday</li><li>8 am to 8 pm</li><li>(214) 480-0204</li></ul>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="script reveal">Los Pinos means the pines</p>
+        <h2 class="reveal">Your taqueria in Lake Dallas</h2>
+        <p class="lede reveal d1">We are a Mexican and taco restaurant at 305 W Hundley Dr. Come by any day but Sunday, or call first and ask what is on the menu.</p>
+      </div>
+      <ul class="facts">
+        <li class="reveal"><svg aria-hidden="true"><use href="#i-fork"/></svg><span>Mexican food and tacos</span></li>
+        <li class="reveal d1"><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Open 8 am to 8 pm<small>Monday through Saturday</small></span></li>
+        <li class="reveal d2"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>305 W Hundley Dr<small>Lake Dallas, TX 75065</small></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Menu / call -->
+  <section class="section menu" id="menu">
+    <div class="wrap">
+      <p class="script reveal">¿Tienes hambre?</p>
+      <h2 class="reveal">Hungry? Call us.</h2>
+      <p class="lede reveal d1">Ask what is on the menu today. Tap the number and you are talking to us.</p>
+      <a class="big-phone reveal d1" href="tel:+12144800204">(214) 480-0204</a>
+      <div class="reveal d2"><a class="btn btn-ink" href="tel:+12144800204"><svg aria-hidden="true"><use href="#i-phone"/></svg>Tap to call</a></div>
+      <p class="note">Sample page: your full menu would go here.</p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <p class="script reveal">Muchas gracias</p>
+      <p class="score reveal" aria-hidden="true">4.8</p>
+      <p class="stars reveal d1" role="img" aria-label="4.8 out of 5 stars">★★★★★</p>
+      <h2 class="sr-only">Google reviews</h2>
+      <p class="count reveal d1">389 reviews on
+        <span class="g" role="img" aria-label="Google"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="gr">l</span><span class="r">e</span></span>
+      </p>
+      <p class="lede reveal d1">Read what people wrote on Google, or leave a review of your own.</p>
+      <a class="btn btn-ink reveal d2" href="https://www.google.com/maps?cid=7453725827454098566" target="_blank" rel="noopener">Read the reviews on Google</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section visit" id="visit">
+    <div class="wrap">
+      <p class="script reveal">Te esperamos</p>
+      <h2 class="reveal">Come eat at <em>Los Pinos</em></h2>
+      <div class="visit-grid">
+        <div class="card reveal">
+          <h3>Find us</h3>
+          <address class="addr">305 W Hundley Dr<br>Lake Dallas, TX 75065</address>
+          <a class="btn btn-sun" href="tel:+12144800204"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (214) 480-0204</a>
+          <a class="btn btn-line" href="https://www.google.com/maps?cid=7453725827454098566" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Open in Google Maps</a>
+        </div>
+        <div class="card reveal d1">
+          <h3>Hours</h3>
+          <dl class="hours">
+            <div data-day="Monday"><dt>Monday</dt><dd>8:00 am to 8:00 pm</dd></div>
+            <div data-day="Tuesday"><dt>Tuesday</dt><dd>8:00 am to 8:00 pm</dd></div>
+            <div data-day="Wednesday"><dt>Wednesday</dt><dd>8:00 am to 8:00 pm</dd></div>
+            <div data-day="Thursday"><dt>Thursday</dt><dd>8:00 am to 8:00 pm</dd></div>
+            <div data-day="Friday"><dt>Friday</dt><dd>8:00 am to 8:00 pm</dd></div>
+            <div data-day="Saturday"><dt>Saturday</dt><dd>8:00 am to 8:00 pm</dd></div>
+            <div data-day="Sunday" class="shut"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+        <div class="map reveal d2">
+          <iframe title="Map showing Taqueria Los Pinos at 305 W Hundley Dr, Lake Dallas, TX" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Taqueria+Los+Pinos,+305+W+Hundley+Dr,+Lake+Dallas,+TX+75065&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <svg class="picado" aria-hidden="true" focusable="false"><rect width="100%" height="76" fill="url(#pp)"/></svg>
+  <div class="wrap">
+    <div class="foot-main">
+      <p class="foot-name">Taqueria <b>Los Pinos</b></p>
+      <p>305 W Hundley Dr, Lake Dallas, TX 75065<br><a href="tel:+12144800204">(214) 480-0204</a></p>
+      <p>Monday to Saturday, 8 am to 8 pm. Closed Sunday.</p>
+    </div>
+    <!-- Top Shelf sample attribution -->
+    <div class="attribution">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" loading="lazy">
+      <p>This sample website was prepared for Taqueria Los Pinos by Top Shelf Business Solutions.</p>
+      <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky phone bar (mobile only) -->
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn btn-sun" href="tel:+12144800204"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
+  <a class="btn btn-line" href="https://www.google.com/maps?cid=7453725827454098566" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  // Open-now status from the listed hours: Mon-Sat 8:00-20:00, Central time.
+  // ponytail: knows nothing about holidays or one-off closures; wire to the
+  // Google listing's special hours if that ever matters.
+  function hoursStatus(day,h){
+    if(day!=='Sunday'&&h>=8&&h<20)return{open:true,text:'Open now until 8 pm'};
+    var next=day==='Sunday'||(day==='Saturday'&&h>=20)?'Monday':(h<8?'today':'tomorrow');
+    return{open:false,text:'Closed now. Opens '+next+' at 8 am'};
+  }
+  // self-check
+  console.assert(hoursStatus('Monday',8).open&&!hoursStatus('Monday',20).open&&!hoursStatus('Sunday',12).open
+    &&/Monday/.test(hoursStatus('Saturday',21).text)&&/today/.test(hoursStatus('Tuesday',6).text)
+    &&/tomorrow/.test(hoursStatus('Tuesday',22).text),'hoursStatus');
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',hour:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var day,h;
+    parts.forEach(function(p){if(p.type==='weekday')day=p.value;if(p.type==='hour')h=parseInt(p.value,10)%24});
+    var s=hoursStatus(day,h);
+    document.getElementById('status').classList.add(s.open?'open':'closed');
+    document.getElementById('status-text').textContent=s.text;
+    var row=document.querySelector('.hours [data-day="'+day+'"]');
+    if(row)row.classList.add('today');
+  }catch(e){/* static hours text stays */}
+
+  var targets=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+    targets.forEach(function(el){io.observe(el)});
+  }else{
+    targets.forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Cowboy Car Wash and Twice the Ice | Self-Service Car Wash in Lake Dallas, TX</title>
+<meta name="description" content="Cowboy Car Wash and Twice the Ice is a self-service car wash at 304 S Shady Shores Dr in Lake Dallas, TX. Open 24 hours, every day.">
+<meta name="theme-color" content="#060A13">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cowboy Car Wash and Twice the Ice">
+<meta property="og:description" content="Self-service car wash in Lake Dallas. Open 24 hours, every day.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/cowboy-car-wash-and-twice-the-ice/assets/listing.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="760">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060A13'/%3E%3Cpath d='M32 9l6.6 14.6 15.9 1.8-11.8 10.8 3.2 15.7L32 44l-13.9 7.9 3.2-15.7L9.5 25.4l15.9-1.8z' fill='%23FF9A3D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=Rye&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoWash",
+  "name": "Cowboy Car Wash and Twice the Ice",
+  "telephone": "+12145515978",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "304 S Shady Shores Dr",
+    "addressLocality": "Lake Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75065",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "hasMap": "https://www.google.com/maps?cid=385716900364993853"
+}
+</script>
+<style>
+/* ================================================================
+   Cowboy Car Wash and Twice the Ice - "the light that's always on"
+   Night sky, one amber neon, one ice-cyan neon. Funnel A: fast, clear,
+   one action (Get directions). No libraries, no photos to wait on.
+   ================================================================ */
+:root{
+  --night:#060A13;
+  --deep:#0A1120;
+  --surface:#0F182B;
+  --surface-2:#142038;
+  --line:rgba(160,200,255,.12);
+  --line-strong:rgba(160,200,255,.24);
+  --text:#EDF5FF;
+  --muted:#9DB0CB;
+  --faint:#7488A6;
+  --amber:#FF9A3D;
+  --amber-hot:#FFE7CC;
+  --amber-deep:#FF7A18;
+  --ice:#5FE3FF;
+  --ice-hot:#C9F8FF;
+  --ice-deep:#18B7E6;
+  --open:#3DF0A0;
+  --font-sign:'Rye','Rockwell','Georgia',serif;
+  --font-display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --font-body:'Barlow','Segoe UI',Arial,sans-serif;
+  --radius:16px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --glow-amber:0 0 6px #FFB35C,0 0 18px #FF8A1F,0 0 44px rgba(255,122,24,.7),0 0 96px rgba(255,98,0,.4);
+  --glow-ice:0 0 8px rgba(120,235,255,.95),0 0 26px rgba(34,211,238,.6),0 0 64px rgba(14,165,233,.5);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;
+  color:var(--text);background:var(--night);color-scheme:dark;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+h1,h2,h3,p{margin:0}
+a{color:var(--ice);text-decoration:none}
+:focus-visible{outline:2px solid var(--ice-hot);outline-offset:3px;border-radius:6px}
+::selection{background:var(--amber);color:#1a0d00}
+.container{width:min(100% - 2.5rem,1100px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:1rem;top:-4rem;z-index:100;padding:.7rem 1.1rem;background:var(--amber);color:#1a0d00;font-weight:600;border-radius:8px}
+.skip-link:focus{top:1rem}
+
+/* ---- shared ---------------------------------------------------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.7em;margin-bottom:1rem;
+  font:600 .8rem/1 var(--font-body);letter-spacing:.24em;text-transform:uppercase;color:var(--ice);
+}
+.eyebrow::before{content:"";width:1.6em;height:2px;background:var(--ice);box-shadow:0 0 10px var(--ice)}
+.eyebrow.amber{color:var(--amber)}
+.eyebrow.amber::before{background:var(--amber);box-shadow:0 0 10px var(--amber)}
+h2{
+  font-family:var(--font-display);font-weight:800;text-transform:uppercase;
+  font-size:clamp(2.5rem,8.5vw,4.6rem);line-height:.95;letter-spacing:.01em;text-wrap:balance;
+}
+.lede{color:var(--muted);font-size:clamp(1.05rem,1.5vw,1.2rem);max-width:34rem;margin-top:1.1rem}
+.section{position:relative;padding:clamp(4.5rem,11vw,7.5rem) 0}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.5rem;padding:.9rem 1.6rem;border-radius:12px;border:1px solid transparent;
+  font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;line-height:1;cursor:pointer;white-space:nowrap;
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease),background-color .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-go{
+  background:linear-gradient(180deg,#FFB265,var(--amber-deep));color:#1C0E00;
+  box-shadow:0 0 0 1px rgba(255,220,180,.35) inset,0 10px 34px rgba(255,122,24,.38),0 0 60px rgba(255,122,24,.18);
+}
+.btn-go:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,220,180,.5) inset,0 14px 40px rgba(255,122,24,.5),0 0 80px rgba(255,122,24,.28)}
+.btn-go:active,.btn-ghost:active{transform:translateY(0) scale(.98)}
+.btn-ghost{background:rgba(95,227,255,.06);color:var(--ice-hot);border-color:rgba(95,227,255,.4)}
+.btn-ghost:hover{transform:translateY(-2px);background:rgba(95,227,255,.12);border-color:var(--ice);box-shadow:0 0 30px rgba(34,211,238,.22)}
+
+/* Google wordmark: Google's own brand colours */
+.g-word{font-family:Arial,'Helvetica Neue',sans-serif;font-weight:700;letter-spacing:-.02em}
+.g-word .b{color:#4285F4}.g-word .r{color:#EA4335}.g-word .y{color:#FBBC05}.g-word .g{color:#34A853}
+
+.stars{position:relative;display:inline-block;line-height:1;white-space:nowrap;letter-spacing:.1em;color:rgba(255,255,255,.2)}
+.stars i{position:absolute;left:0;top:0;width:82%;overflow:hidden;color:#FBBC05;font-style:normal}
+
+/* scroll reveal: JS adds .js; without JS everything is simply visible */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.08s}.js .reveal.d2{transition-delay:.16s}.js .reveal.d3{transition-delay:.24s}
+
+/* ---- hero ------------------------------------------------------ */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  background:
+    radial-gradient(120% 55% at 50% 108%,rgba(255,122,24,.30),rgba(255,122,24,0) 62%),
+    radial-gradient(90% 60% at 50% 30%,rgba(24,183,230,.16),rgba(24,183,230,0) 70%),
+    linear-gradient(180deg,#04070E 0%,#081226 52%,#0C1730 100%);
+}
+/* stars */
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;opacity:.75;
+  background-image:
+    radial-gradient(1.2px 1.2px at 12% 14%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 27% 31%,#cfe8ff 50%,transparent 51%),
+    radial-gradient(1.4px 1.4px at 41% 9%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 58% 22%,#cfe8ff 50%,transparent 51%),
+    radial-gradient(1.3px 1.3px at 73% 12%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 88% 27%,#cfe8ff 50%,transparent 51%),
+    radial-gradient(1px 1px at 6% 42%,#fff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 94% 6%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 66% 38%,#cfe8ff 50%,transparent 51%),
+    radial-gradient(1px 1px at 34% 46%,#fff 50%,transparent 51%);
+  -webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 62%);mask-image:linear-gradient(180deg,#000 30%,transparent 62%);
+}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:max(1.1rem,env(safe-area-inset-top));min-height:3.6rem}
+.place{display:inline-flex;align-items:center;gap:.45rem;font:600 .8rem/1 var(--font-body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.place svg{width:1rem;height:1rem;color:var(--amber)}
+.open-pill{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .85rem;border-radius:999px;
+  font:600 .8rem/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--open);white-space:nowrap;
+  background:rgba(61,240,160,.08);border:1px solid rgba(61,240,160,.32);
+}
+.dot{position:relative;width:.55rem;height:.55rem;border-radius:50%;background:var(--open);box-shadow:0 0 10px var(--open)}
+.dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--open);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+
+.hero-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.5rem 0 3rem}
+.sign-wrap{position:relative;display:inline-block}
+.lone-star{width:clamp(1.6rem,5vw,2.4rem);height:auto;margin:0 auto .5rem;color:var(--amber-hot);filter:drop-shadow(0 0 6px #FFB35C) drop-shadow(0 0 18px #FF8A1F)}
+.sign{display:flex;flex-direction:column;align-items:center;text-transform:uppercase;white-space:nowrap;animation:power-on 1.5s steps(1,end) both}
+.s-cowboy{
+  font-family:var(--font-sign);font-weight:400;font-size:clamp(3.2rem,16vw,8.5rem);line-height:1;letter-spacing:.02em;
+  color:var(--amber-hot);text-shadow:var(--glow-amber);
+}
+.s-wash{
+  font-family:var(--font-display);font-weight:800;font-size:clamp(3.8rem,19vw,10rem);line-height:.92;letter-spacing:.03em;
+  color:var(--ice-hot);text-shadow:var(--glow-ice);margin-top:.04em;
+}
+@supports (-webkit-text-stroke:1px #000){
+  .s-wash{color:transparent;-webkit-text-stroke:2px var(--ice-hot)}
+}
+.s-ice{
+  display:flex;align-items:center;gap:.9em;margin-top:.9em;
+  font:700 clamp(.95rem,3.6vw,1.5rem)/1 var(--font-display);letter-spacing:.34em;
+  color:var(--ice-hot);text-shadow:0 0 12px rgba(95,227,255,.8);
+}
+.s-ice::before,.s-ice::after{content:"";width:clamp(1.2rem,6vw,3.2rem);height:2px;background:var(--amber);box-shadow:0 0 10px var(--amber-deep),0 0 22px var(--amber-deep)}
+.s-ice::after{margin-left:-.34em}
+@keyframes power-on{
+  0%{opacity:.08}7%{opacity:1}11%{opacity:.18}19%{opacity:1}23%{opacity:.4}29%{opacity:1}55%{opacity:.82}58%,100%{opacity:1}
+}
+/* wet-pavement line + mirrored sign */
+.ground{height:2px;margin-top:1.1rem;width:130%;margin-left:-15%;
+  background:linear-gradient(90deg,transparent,rgba(255,170,90,.75) 30%,rgba(140,235,255,.8) 70%,transparent);
+  box-shadow:0 0 22px rgba(255,140,50,.5)}
+/* The reflection gets its own reserved strip (sign-wrap margin = reflection height),
+   clipped, so it never runs behind the copy below. */
+.sign-wrap{margin-bottom:2.5rem}
+.reflection{
+  position:absolute;left:0;right:0;top:100%;height:2.5rem;overflow:hidden;pointer-events:none;z-index:-1;
+  opacity:.3;filter:blur(4px);
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 88%);mask-image:linear-gradient(180deg,#000 0%,transparent 88%);
+}
+/* flipped in place about its own centre, so the sign's bottom line meets the ground */
+.reflection .sign{transform:scaleY(-1)}
+
+.hero-copy{position:relative;margin-top:.6rem;display:flex;flex-direction:column;align-items:center}
+.now{font:600 .95rem/1.3 var(--font-body);letter-spacing:.04em;color:var(--open);min-height:1.3em}
+.tagline{font-size:clamp(1.15rem,3.9vw,1.5rem);line-height:1.4;color:var(--text);max-width:24rem;margin-top:.5rem;text-wrap:balance}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1.6rem;width:100%}
+.g-chip{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;padding:.55rem 1rem;border-radius:999px;
+  background:#fff;color:#202124;font:600 .95rem/1 var(--font-body);
+  box-shadow:0 8px 28px rgba(0,0,0,.45);transition:transform .18s var(--ease);
+}
+.g-chip:hover{transform:translateY(-2px)}
+.g-chip .g-word{font-size:1.05rem}
+.g-chip .stars{font-size:.95rem;color:#DADCE0}
+.g-chip small{font-size:.85rem;font-weight:500;color:#5F6368}
+
+/* ---- hours ----------------------------------------------------- */
+.hours{background:linear-gradient(180deg,#0C1730 0%,var(--deep) 30%,var(--night) 100%);overflow:hidden}
+.hours-grid{display:grid;gap:clamp(2.5rem,7vw,5rem);align-items:center}
+.dial{position:relative;width:min(100%,24rem);aspect-ratio:1;margin-inline:auto}
+.dial-ticks{
+  position:absolute;inset:0;border-radius:50%;
+  background:repeating-conic-gradient(from -.6deg,var(--ice) 0 1.2deg,transparent 1.2deg 15deg);
+  -webkit-mask-image:radial-gradient(closest-side,transparent 86%,#000 87%,#000 99%,transparent 100%);
+  mask-image:radial-gradient(closest-side,transparent 86%,#000 87%,#000 99%,transparent 100%);
+  filter:drop-shadow(0 0 8px rgba(34,211,238,.8));
+}
+.dial-ring{position:absolute;inset:11%;border-radius:50%;border:1px solid var(--line-strong);
+  background:radial-gradient(closest-side,rgba(24,183,230,.10),rgba(24,183,230,0) 75%);
+  box-shadow:0 0 60px rgba(24,183,230,.14) inset}
+.dial-lbl{position:absolute;font:600 .72rem/1 var(--font-body);letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
+.dial-lbl.t{top:15%;left:50%;transform:translateX(-50%)}
+.dial-lbl.b{bottom:15%;left:50%;transform:translateX(-50%)}
+.dial-lbl.l{left:15%;top:50%;transform:translateY(-50%)}
+.dial-lbl.r{right:15%;top:50%;transform:translateY(-50%)}
+/* zero-width spoke through the dial centre: rotating it can never reach past the dial's own circle */
+.dial-hand{position:absolute;left:50%;top:0;bottom:0;width:0;display:none;transition:transform 1.2s var(--ease)}
+.js .dial-hand{display:block}
+.dial-hand::before{
+  content:"";position:absolute;left:50%;top:calc(3.6% - .525rem);width:1.05rem;height:1.05rem;margin-left:-.525rem;border-radius:50%;
+  background:var(--amber-hot);box-shadow:0 0 8px #FFB35C,0 0 22px var(--amber-deep),0 0 46px rgba(255,122,24,.7);
+}
+.dial-core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.dial-time{font:800 clamp(3rem,13vw,4.6rem)/.9 var(--font-display);letter-spacing:.02em;color:var(--text);font-variant-numeric:tabular-nums}
+.dial-sub{margin-top:.5rem;font:700 1.05rem/1 var(--font-display);letter-spacing:.3em;margin-right:-.3em;color:var(--open);text-shadow:0 0 14px rgba(61,240,160,.7)}
+.week{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--line);max-width:30rem}
+.week li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem .2rem;border-bottom:1px solid var(--line);color:var(--muted);transition:color .3s ease}
+.week li span:first-child{font:700 1.2rem/1 var(--font-display);letter-spacing:.1em;text-transform:uppercase}
+.week li span:last-child{font-size:.95rem}
+.week li.today{color:var(--text)}
+.week li.today span:first-child{color:var(--amber);text-shadow:0 0 14px rgba(255,122,24,.6)}
+.week li.today span:last-child::after{content:"  ·  today";color:var(--open)}
+
+/* ---- the wash -------------------------------------------------- */
+.wash{background:var(--night)}
+.wash::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 50% at 85% 20%,rgba(255,122,24,.10),transparent 70%)}
+.wash-grid{display:grid;gap:clamp(2.5rem,6vw,4.5rem);align-items:center;position:relative}
+.wash p.body{color:var(--muted);margin-top:1.1rem;max-width:34rem;font-size:clamp(1.05rem,1.5vw,1.15rem)}
+.wash p.body strong{color:var(--text);font-weight:600}
+.shot{margin:0;position:relative;width:min(100%,34rem);margin-inline:auto}
+.shot img{width:100%;height:auto;aspect-ratio:1280/760;object-fit:cover;border-radius:var(--radius);background:var(--surface);
+  border:1px solid rgba(255,170,90,.5);box-shadow:0 0 0 6px rgba(255,122,24,.06),0 0 50px rgba(255,122,24,.22),0 30px 60px rgba(0,0,0,.5)}
+.shot figcaption{margin-top:.8rem;font-size:.85rem;color:var(--faint);text-align:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:clamp(2.5rem,6vw,4rem);position:relative}
+.tile{padding:1.4rem .6rem 1.2rem;text-align:center;border-radius:var(--radius);background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line)}
+.tile b{display:block;font:800 clamp(2.8rem,12vw,5rem)/.9 var(--font-display);letter-spacing:.01em;color:var(--ice-hot);text-shadow:var(--glow-ice);font-variant-numeric:tabular-nums}
+.tile:nth-child(2) b{color:var(--amber-hot);text-shadow:var(--glow-amber)}
+.tile span{display:block;margin-top:.7rem;font:600 .74rem/1.35 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* ---- reviews --------------------------------------------------- */
+.reviews{background:linear-gradient(180deg,var(--night),var(--deep))}
+.g-card{
+  position:relative;overflow:hidden;text-align:center;
+  padding:clamp(2.4rem,7vw,4.2rem) clamp(1.3rem,5vw,3rem);border-radius:24px;
+  background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line-strong);
+  box-shadow:0 40px 80px rgba(0,0,0,.4);
+}
+.g-card::before{content:"";position:absolute;left:10%;right:10%;top:0;height:2px;
+  background:linear-gradient(90deg,#4285F4 0 25%,#EA4335 25% 50%,#FBBC05 50% 75%,#34A853 75% 100%)}
+.g-card .g-word{font-size:1.7rem}
+.g-score{display:block;margin-top:.6rem;font:800 clamp(5.5rem,26vw,10rem)/.85 var(--font-display);color:var(--text);font-variant-numeric:tabular-nums}
+.g-card .stars{font-size:clamp(1.7rem,7vw,2.4rem);margin-top:.9rem}
+.g-count{margin-top:.9rem;color:var(--muted);font-size:1.05rem}
+.g-card .lede{margin-inline:auto}
+.g-card .btn{margin-top:1.8rem;max-width:100%;white-space:normal;text-align:center;line-height:1.15}
+
+/* ---- find us --------------------------------------------------- */
+.find{background:var(--deep)}
+.find-grid{display:grid;gap:2rem;align-items:stretch}
+.addr{font:800 clamp(2.3rem,8.4vw,4.2rem)/.95 var(--font-display);text-transform:uppercase;letter-spacing:.01em}
+.addr small{display:block;margin-top:.5rem;font:600 clamp(1.1rem,3.6vw,1.5rem)/1.2 var(--font-display);letter-spacing:.14em;color:var(--muted)}
+.find-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.facts{margin:2rem 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;gap:1.5rem;padding:.85rem .2rem;border-bottom:1px solid var(--line)}
+.facts dt{font:600 .76rem/1.6 var(--font-body);letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.facts dd{margin:0;text-align:right;color:var(--text)}
+.facts dd a{color:var(--ice-hot)}
+/* static directions card: no embed to break, the whole card is the link */
+.map{position:relative;min-height:20rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-strong);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center;padding:2rem 1.2rem;color:var(--text);
+  background:
+    radial-gradient(45% 45% at 50% 42%,rgba(255,122,24,.22),transparent 70%),
+    repeating-linear-gradient(0deg,rgba(160,200,255,.07) 0 1px,transparent 1px 44px),
+    repeating-linear-gradient(90deg,rgba(160,200,255,.07) 0 1px,transparent 1px 44px),
+    var(--surface);
+  box-shadow:0 30px 60px rgba(0,0,0,.4);transition:transform .25s var(--ease),border-color .25s ease}
+.map:hover{transform:translateY(-3px);border-color:var(--ice)}
+.map svg{width:3.4rem;height:3.4rem;color:var(--amber-hot);filter:drop-shadow(0 0 8px #FFB35C) drop-shadow(0 0 22px var(--amber-deep))}
+.map b{font:800 clamp(1.6rem,5vw,2.2rem)/1 var(--font-display);letter-spacing:.03em;text-transform:uppercase;margin-top:.4rem}
+.map span{color:var(--muted)}
+.map em{font-style:normal;margin-top:.9rem;font:700 1.1rem/1 var(--font-display);letter-spacing:.14em;text-transform:uppercase;color:var(--ice-hot)}
+
+/* ---- closing + footer ------------------------------------------ */
+.closing{
+  position:relative;overflow:hidden;text-align:center;padding:clamp(5rem,13vw,8rem) 0;
+  background:radial-gradient(110% 80% at 50% 115%,rgba(255,122,24,.30),transparent 62%),linear-gradient(180deg,var(--deep),#04070E);
+}
+.closing-sign{font:800 clamp(3.4rem,16.5vw,9rem)/.9 var(--font-display);text-transform:uppercase;letter-spacing:.02em;color:var(--amber-hot);text-shadow:var(--glow-amber)}
+.closing-sign span{display:block;color:var(--ice-hot);text-shadow:var(--glow-ice)}
+.closing p{color:var(--muted);margin:1.4rem auto 0;max-width:26rem}
+.closing .btn{margin-top:1.8rem}
+.site-footer{background:#04070E;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;font-size:.95rem;color:var(--muted)}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.4rem}
+.foot-name{font:700 1.35rem/1.1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;color:var(--text)}
+.foot-main a{color:var(--muted)}
+.foot-main a:hover{color:var(--ice-hot)}
+.foot-legal{margin-top:1.6rem;font-size:.82rem;color:var(--faint)}
+.attribution{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1rem;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--faint)}
+.attribution img{height:28px;width:auto}
+.attribution a{color:var(--muted);border-bottom:1px solid var(--line-strong)}
+
+/* ---- sticky mobile action bar ---------------------------------- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.5fr 1fr;gap:.6rem;
+  padding:.7rem .9rem calc(.7rem + env(safe-area-inset-bottom));
+  background:rgba(6,10,19,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line-strong);
+  transform:translateY(110%);transition:transform .35s var(--ease);
+}
+.dock.show{transform:none}
+.dock .btn{min-height:3.1rem;font-size:1.15rem;padding:.7rem .8rem}
+
+@media (max-width:759px){
+  .hero-body{padding:.5rem 0 2rem}
+  .tagline{font-size:1.05rem}
+  .hero-ctas{margin-top:1.2rem;gap:.6rem}
+  .hero-ctas .btn{flex:1 1 100%;min-height:3.25rem}
+  .g-chip{margin-top:1rem}
+  .find-ctas .btn{flex:1 1 100%}
+  body{padding-bottom:4.6rem}
+  .site-footer{padding-bottom:1.6rem}
+}
+@media (max-width:480px){
+  .topbar{gap:.6rem}
+  .place{font-size:.66rem;letter-spacing:.08em;gap:.35rem}
+  .open-pill{font-size:.66rem;letter-spacing:.08em;gap:.45rem;padding:.45rem .7rem}
+}
+@media (min-width:760px){
+  .dock{display:none}
+  .hours-grid{grid-template-columns:minmax(0,24rem) 1fr}
+  .wash-grid{grid-template-columns:1fr minmax(0,1.15fr)}
+  .sign-wrap{margin-bottom:6.5rem}
+  .reflection{height:6.5rem}
+  .find-grid{grid-template-columns:1fr 1.05fr}
+  .map{min-height:26rem}
+  .tiles{gap:1.2rem}
+  .tile{padding:2.2rem 1rem 1.8rem}
+  .tile span{font-size:.82rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#hours">Skip to main content</a>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container topbar">
+    <span class="place">
+      <svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.800 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>
+      Lake Dallas, TX
+    </span>
+    <span class="open-pill"><span class="dot" aria-hidden="true"></span>Open 24 hours</span>
+  </div>
+
+  <div class="container hero-body">
+    <div class="sign-wrap">
+      <svg class="lone-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.800l3 6.700 7.300.800-5.400 5 1.500 7.200L12 17.900l-6.400 3.600 1.500-7.200-5.400-5 7.300-.800z"/></svg>
+      <h1 class="sign">
+        <span class="s-cowboy">Cowboy</span>
+        <span class="s-wash">Car Wash</span>
+        <span class="s-ice">and Twice the Ice</span>
+      </h1>
+      <div class="ground" aria-hidden="true"></div>
+      <div class="reflection" aria-hidden="true">
+        <div class="sign">
+          <span class="s-cowboy">Cowboy</span>
+          <span class="s-wash">Car Wash</span>
+          <span class="s-ice">and Twice the Ice</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <p class="now" id="now" aria-live="polite">Open right now.</p>
+      <p class="tagline">Self-service car wash in Lake Dallas. Open 24 hours, every day of the week.</p>
+      <div class="hero-ctas" id="hero-ctas">
+        <a class="btn btn-go" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.700 2.300a1 1 0 0 0-1-.200l-18 7a1 1 0 0 0 0 1.900l7.300 2.900 2.900 7.300a1 1 0 0 0 1.900 0l7-18a1 1 0 0 0-.100-.900z"/></svg>
+          Get directions
+        </a>
+        <a class="btn btn-ghost" href="tel:+12145515978">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.600 10.800a15.100 15.100 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.200 11.400 11.400 0 0 0 3.600.600 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.200.200 2.400.600 3.600a1 1 0 0 1-.200 1z"/></svg>
+          (214) 551-5978
+        </a>
+      </div>
+      <a class="g-chip" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener" aria-label="Rated 4.1 stars from 38 reviews on Google. Open the Google listing.">
+        <span class="g-word" aria-hidden="true"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+        <span aria-hidden="true">4.1</span>
+        <span class="stars" aria-hidden="true">★★★★★<i>★★★★★</i></span>
+        <small aria-hidden="true">38 reviews</small>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hours -->
+  <section class="section hours" id="hours">
+    <div class="container hours-grid">
+      <div class="dial reveal" role="img" aria-label="24-hour clock. Open every hour of the day.">
+        <div class="dial-ticks"></div>
+        <div class="dial-ring"></div>
+        <span class="dial-lbl t">12 am</span>
+        <span class="dial-lbl r">6 am</span>
+        <span class="dial-lbl b">12 pm</span>
+        <span class="dial-lbl l">6 pm</span>
+        <div class="dial-hand" id="dial-hand"></div>
+        <div class="dial-core">
+          <span class="dial-time" id="dial-time">24/7</span>
+          <span class="dial-sub">Open</span>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <p class="eyebrow">Hours</p>
+        <h2>The lights never go off.</h2>
+        <p class="lede">Mud on the truck at midnight, pollen on the hood at six in the morning. Pull in whenever it suits you. Cowboy Car Wash is open 24 hours a day, seven days a week.</p>
+        <ul class="week" id="week">
+          <li data-day="Monday"><span>Monday</span><span>Open 24 hours</span></li>
+          <li data-day="Tuesday"><span>Tuesday</span><span>Open 24 hours</span></li>
+          <li data-day="Wednesday"><span>Wednesday</span><span>Open 24 hours</span></li>
+          <li data-day="Thursday"><span>Thursday</span><span>Open 24 hours</span></li>
+          <li data-day="Friday"><span>Friday</span><span>Open 24 hours</span></li>
+          <li data-day="Saturday"><span>Saturday</span><span>Open 24 hours</span></li>
+          <li data-day="Sunday"><span>Sunday</span><span>Open 24 hours</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- The wash -->
+  <section class="section wash" id="wash">
+    <div class="container">
+      <div class="wash-grid">
+        <div class="reveal">
+          <p class="eyebrow amber">The wash</p>
+          <h2>Wash it yourself, any hour.</h2>
+          <p class="body"><strong>Cowboy Car Wash and Twice the Ice</strong> is a self-service car wash at 304 S Shady Shores Dr in Lake Dallas. You do the washing, and you pick the time. Day or night, we're open.</p>
+        </div>
+        <figure class="shot reveal d1">
+          <img src="assets/listing.jpg" alt="Blue awning lettered Cowboy Car Wash with a star, with red neon letters above it" width="1280" height="760" loading="lazy">
+          <figcaption>The Cowboy Car Wash sign. Photo from the Google listing.</figcaption>
+        </figure>
+      </div>
+      <div class="tiles">
+        <div class="tile reveal"><b>24</b><span>Hours a day</span></div>
+        <div class="tile reveal d1"><b>7</b><span>Days a week</span></div>
+        <div class="tile reveal d2"><b>4.1</b><span>Stars on Google</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="g-card reveal">
+        <span class="g-word" aria-hidden="true"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+        <span class="sr-only">Google rating</span>
+        <span class="g-score">4.1</span>
+        <span class="stars" role="img" aria-label="4.1 out of 5 stars">★★★★★<i>★★★★★</i></span>
+        <p class="g-count">38 Google reviews</p>
+        <p class="lede">The reviews live on Google, so that's where we send you. Read what customers wrote, word for word.</p>
+        <a class="btn btn-ghost" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener">Read the reviews on Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find us -->
+  <section class="section find" id="find">
+    <div class="container find-grid">
+      <div class="reveal">
+        <p class="eyebrow">Find us</p>
+        <h2 class="addr">304 S Shady Shores Dr<small>Lake Dallas, TX 75065</small></h2>
+        <div class="find-ctas">
+          <a class="btn btn-go" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-ghost" href="tel:+12145515978">Call (214) 551-5978</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Hours</dt><dd>Open 24 hours, every day</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+12145515978">(214) 551-5978</a></dd></div>
+          <div><dt>What we are</dt><dd>Self-service car wash</dd></div>
+        </dl>
+      </div>
+      <a class="map reveal d1" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <b>304 S Shady Shores Dr</b>
+        <span>Lake Dallas, TX 75065</span>
+        <em>Open in Google Maps &#8599;</em>
+      </a>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="closing">
+    <div class="container reveal">
+      <p class="closing-sign">Open <span>24 hours</span></p>
+      <p>304 S Shady Shores Dr, Lake Dallas. Come by whenever the car needs it.</p>
+      <a class="btn btn-go" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-main">
+      <div>
+        <p class="foot-name">Cowboy Car Wash and Twice the Ice</p>
+        <p>304 S Shady Shores Dr, Lake Dallas, TX 75065</p>
+      </div>
+      <div>
+        <p><a href="tel:+12145515978">(214) 551-5978</a></p>
+        <p>Open 24 hours, every day</p>
+      </div>
+    </div>
+    <p class="foot-legal">&copy; 2026 Cowboy Car Wash and Twice the Ice.</p>
+    <!-- Top Shelf sample attribution -->
+    <div class="attribution">
+      <img src="https://www.topshelfsolutions.io/demo/_assets/topshelf-logo.png" alt="Top Shelf Business Solutions" loading="lazy">
+      <p>This website was prepared by Top Shelf Business Solutions.</p>
+      <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">View our business solutions at topshelfsolutions.io</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile actions -->
+<div class="dock" id="dock">
+  <a class="btn btn-go" href="https://www.google.com/maps?cid=385716900364993853" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-ghost" href="tel:+12145515978">Call</a>
+</div>
+
+<script>
+(function(){
+  var d=document;
+  d.documentElement.classList.add('js');
+
+  // Live clock in the shop's own time zone. The shop is open 24 hours every day,
+  // so "open" is always true; only the time and the highlighted day change.
+  function tick(){
+    try{
+      var p={};
+      new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',hour:'numeric',minute:'2-digit',hour12:true})
+        .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+      var h12=parseInt(p.hour,10),m=parseInt(p.minute,10),pm=/p/i.test(p.dayPeriod);
+      var h24=(h12%12)+(pm?12:0);
+      var t=h12+':'+p.minute+' '+p.dayPeriod;
+      d.getElementById('now').textContent="It's "+t+' on '+p.weekday+" in Lake Dallas. We're open.";
+      d.getElementById('dial-time').textContent=h12+':'+p.minute;
+      d.getElementById('dial-hand').style.transform='rotate('+((h24+m/60)/24*360)+'deg)';
+      d.querySelectorAll('#week li').forEach(function(li){li.classList.toggle('today',li.getAttribute('data-day')===p.weekday)});
+    }catch(e){}
+  }
+  tick();setInterval(tick,20000);
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets=d.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    if(reduce){targets.forEach(function(el){el.classList.add('in')})}
+    else{
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+      },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+      targets.forEach(function(el){io.observe(el)});
+    }
+    // Mobile action bar appears once the hero buttons scroll away.
+    var dock=d.getElementById('dock');
+    new IntersectionObserver(function(es){dock.classList.toggle('show',!es[0].isIntersecting)},{threshold:0})
+      .observe(d.getElementById('hero-ctas'));
+  }else{
+    targets.forEach(function(el){el.classList.add('in')});
+    d.getElementById('dock').classList.add('show');
+  }
+})();
+</script>
+</body>
+</html>
