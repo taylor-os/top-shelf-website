@@ -174,6 +174,7 @@
         </div>
 
         <form id="appForm" novalidate>
+          <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
 
           <div class="appsec first">
             <h3>Bankruptcy</h3>
@@ -439,17 +440,24 @@
     e.preventDefault();
     var err = document.getElementById('err');
     var required = form.querySelectorAll('[required]');
-    var firstBad = null, badEmail = false;
-    required.forEach(function (el) {
-      var valid = el.type === 'checkbox' ? el.checked : !!el.value.trim();
-      if (valid && el.id === 'email') { valid = EMAIL_RE.test(el.value.trim()); if (!valid) badEmail = true; }
+    var firstBad = null, why = '';
+    function mark(el, valid, message) {
       el.setAttribute('aria-invalid', valid ? 'false' : 'true');
-      if (!valid && !firstBad) firstBad = el;
+      if (!valid && !firstBad) { firstBad = el; why = message || ''; }
+    }
+    function digitsOf(el) { return el.value.replace(/\D/g, ''); }
+    required.forEach(function (el) {
+      mark(el, el.type === 'checkbox' ? el.checked : !!el.value.trim());
     });
+    // Checks beyond "filled in". Optional fields are only checked when used.
+    var f = form.elements;
+    if (f.email.value.trim()) mark(f.email, EMAIL_RE.test(f.email.value.trim()), 'That email address doesn’t look right. Please double-check it so we can reach you.');
+    if (f.ssn.value.trim()) mark(f.ssn, digitsOf(f.ssn).length === 9, 'A Social Security number has 9 digits. Please check yours.');
+    if (!f.job_years.value.trim() && !f.job_months.value.trim()) mark(f.job_years, false, 'Please tell us how long you’ve been at this job.');
+    if (f.co_email.value.trim()) mark(f.co_email, EMAIL_RE.test(f.co_email.value.trim()), 'The co-applicant’s email address doesn’t look right. Please check it or leave it blank.');
+    if (f.co_ssn.value.trim()) mark(f.co_ssn, digitsOf(f.co_ssn).length === 9, 'The co-applicant’s Social Security number needs 9 digits.');
     if (firstBad) {
-      err.textContent = (badEmail && firstBad.id === 'email')
-        ? 'That email address doesn’t look right — please double-check it so we can reach you.'
-        : 'Please complete the highlighted fields and agree to the authorization above.';
+      err.textContent = why || 'Please complete the highlighted fields and agree to the authorization above.';
       err.style.display = 'block';
       firstBad.focus();
       firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -476,10 +484,13 @@
     var btnLabel = btn.firstChild.nodeValue;
     btn.firstChild.nodeValue = 'Sending… ';
 
-    function failed() {
+    function failed(res) {
       btn.disabled = false;
       btn.firstChild.nodeValue = btnLabel;
-      err.innerHTML = 'We couldn’t send your application just now. Please try again in a moment, or call us at <a href="tel:+19724361600">(972) 436-1600</a> and we’ll take it by phone.';
+      // 422 = the CRM read the form but would not accept something in it; retrying unchanged won't help.
+      err.innerHTML = (res && res.status === 422)
+        ? 'Something on the form doesn’t look right. Please check your email address and phone number, then send it again. Or call us at <a href="tel:+19724361600">(972) 436-1600</a>.'
+        : 'We couldn’t send your application just now. Please try again in a moment, or call us at <a href="tel:+19724361600">(972) 436-1600</a> and we’ll take it by phone.';
       err.style.display = 'block';
       err.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -489,14 +500,14 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data)
     }).then(function (res) {
-      if (!res.ok) return failed();
+      if (!res.ok) return failed(res);
       var first = document.getElementById('first').value.trim();
       document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
       document.getElementById('app-panel').style.display = 'none';
       var s = document.getElementById('app-success'); s.style.display = 'block'; s.classList.add('in');
       form.reset();
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }).catch(failed);
+    }).catch(function () { failed(); });
   });
 })();
 </script>

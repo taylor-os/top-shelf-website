@@ -226,7 +226,6 @@
               <small>200+ reviews on Google</small>
             </span>
           </div>
-          <p class="lede" style="max-width:42ch;">The people behind the 4.7, in their own words.</p>
         </div>
         <div class="proof__fig reveal" data-d="1">
           <div class="frame">
@@ -234,24 +233,6 @@
             <span class="frame__fallback">Keys in hand.</span>
           </div>
         </div>
-      </div>
-
-      <div class="reviews-grid">
-        <article class="review reveal" data-d="0">
-          <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>"Fresh out of a Chapter 7 and convinced no one would touch me. Reids didn't blink. Walked in nervous, drove home in a 2022 with nothing down. They treated my bankruptcy like a chapter, not a character flaw."</blockquote>
-          <div class="review__who"><span class="av" aria-hidden="true">M</span><span><b>Marcus R.</b><small>Verified Google review</small></span></div>
-        </article>
-        <article class="review reveal" data-d="1">
-          <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>"First car ever, zero credit history, and three other lots had already turned me down that same day. Reids had me approved in about fifteen minutes and actually explained every number. Never once felt pressured."</blockquote>
-          <div class="review__who"><span class="av" aria-hidden="true">D</span><span><b>Destiny W.</b><small>Verified Google review</small></span></div>
-        </article>
-        <article class="review reveal" data-d="2">
-          <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>"After a repossession my score was in the gutter and I was embarrassed to even ask. They found me a truck I actually wanted, not some tired beater. Six months in and my credit is already climbing. Grateful doesn't cover it."</blockquote>
-          <div class="review__who"><span class="av" aria-hidden="true">J</span><span><b>James T.</b><small>Verified Google review</small></span></div>
-        </article>
       </div>
 
       <div class="howcta reveal" style="margin-top:clamp(2rem,4vw,2.8rem);">
@@ -286,6 +267,7 @@
 
         <div class="apply reveal" data-d="1">
           <form id="applyForm" class="apply__form" novalidate>
+            <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
             <span class="kicker apply__k">Fresh Start Program · By appointment only</span>
             <h3>Start here</h3>
             <div class="field">
@@ -364,8 +346,8 @@
 
 <script src="assets/js/site.js"></script>
 <script>
-/* Homepage quick-start form — concept comp, no backend: confirm inline.
-   The full credit application lives on get-approved.html. */
+/* Homepage quick-start form: saves the lead to the CRM, then hands off to the
+   full credit application on get-approved.html. */
 (function () {
   "use strict";
   var form = document.getElementById('applyForm');
@@ -383,7 +365,7 @@
     fetch('https://app.topshelfsolutions.io/api/applications/rc_a7f3e91b8d264c05b9e2f6a1c4d78e30', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ form: 'quick_start', first: form.fname.value.trim(), phone: form.phone.value.trim(), situation: form.situation.value })
+      body: JSON.stringify({ form: 'quick_start', first: form.fname.value.trim(), phone: form.phone.value.trim(), situation: form.situation.value, website: form.website.value })
     }).then(function (res) { clearTimeout(timer); go(res.ok); })
       .catch(function () { clearTimeout(timer); go(false); });
   });
