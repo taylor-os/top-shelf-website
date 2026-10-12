@@ -1,0 +1,15 @@
+# Reids Auto Connection - live site on IONOS (uploaded as .htaccess; kept under this
+# name in the repo so it never takes effect on the topshelfsolutions.io demo copy).
+RewriteEngine On
+
+# One address: https://reidscars.com (host-scoped so the IONOS preview domain still works over http)
+RewriteCond %{HTTP_HOST} reidscars\.com$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://reidscars.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.reidscars\.com$ [NC]
+RewriteRule ^(.*)$ https://reidscars.com/$1 [L,R=301]
+
+# The old three-page site's addresses
+RewriteRule ^application\.htm$ /get-approved.html [L,R=301,NC]
+RewriteRule ^Gallery\.htm$ / [L,R=301,NC]
+RewriteRule ^index\.htm$ / [L,R=301,NC]

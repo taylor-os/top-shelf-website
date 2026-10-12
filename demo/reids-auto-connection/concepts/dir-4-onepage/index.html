@@ -9,7 +9,9 @@
 <meta property="og:title" content="Reids Auto Connection — The Fresh Start Vehicle Program" />
 <meta property="og:description" content="A hard chapter isn't the whole story. Veteran-owned auto financing through bankruptcy, repossession, and no credit — $0 down on most loans." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/img/og.jpg" />
+<meta property="og:image" content="https://reidscars.com/assets/img/og.jpg" />
+<meta property="og:url" content="https://reidscars.com/" />
+<link rel="canonical" href="https://reidscars.com/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -371,8 +373,19 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    // TODO: email this lead to the dealership here (FormSubmit/Formspree or CRM), then continue.
-    window.location.href = 'get-approved.html?submitted=1';
+    // Save the lead in the dealership's CRM, then carry on to the application.
+    // The "we've got your info" note only shows when the CRM confirmed it.
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn.disabled) return;
+    btn.disabled = true;
+    var go = function (saved) { window.location.href = 'get-approved.html' + (saved ? '?submitted=1' : ''); };
+    var timer = setTimeout(function () { go(false); }, 6000);
+    fetch('https://app.topshelfsolutions.io/api/applications/rc_a7f3e91b8d264c05b9e2f6a1c4d78e30', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ form: 'quick_start', first: form.fname.value.trim(), phone: form.phone.value.trim(), situation: form.situation.value })
+    }).then(function (res) { clearTimeout(timer); go(res.ok); })
+      .catch(function () { clearTimeout(timer); go(false); });
   });
 })();
 </script>

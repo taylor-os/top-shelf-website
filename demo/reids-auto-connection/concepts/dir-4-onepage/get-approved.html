@@ -9,7 +9,9 @@
 <meta property="og:title" content="Get Approved — Reids Auto Connection" />
 <meta property="og:description" content="The Fresh Start credit application. Bad credit, no credit, repossession, or bankruptcy — fill it out and we do the rest. $0 down on most loans." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/img/og.jpg" />
+<meta property="og:image" content="https://reidscars.com/assets/img/og.jpg" />
+<meta property="og:url" content="https://reidscars.com/get-approved.html" />
+<link rel="canonical" href="https://reidscars.com/get-approved.html" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +22,7 @@
 
 <script type="application/ld+json">
 { "@context":"https://schema.org","@type":"AutoDealer","name":"Reids Auto Connection",
-  "url":"get-approved.html","telephone":"+1-972-436-1600","priceRange":"$$",
+  "url":"https://reidscars.com/","telephone":"+1-972-436-1600","priceRange":"$$",
   "slogan":"A hard chapter isn't the whole story.",
   "foundingDate":"2009",
   "areaServed":{"@type":"Country","name":"United States"},"knowsLanguage":["en","es"],
@@ -275,7 +277,7 @@
                 <div class="field"><label for="co_state">State</label><input id="co_state" name="co_state" placeholder="State" autocomplete="off" /></div>
               </div>
 
-              <label class="co-same"><input type="checkbox" id="coSameAddr" checked /> <span>Co-applicant lives at the same address as me</span></label>
+              <label class="co-same"><input type="checkbox" id="coSameAddr" name="co_same_address" value="yes" checked /> <span>Co-applicant lives at the same address as me</span></label>
               <div id="coAddr" hidden>
                 <div class="co-sub">Co-applicant current address</div>
                 <div class="field"><label for="co_addr">Street address, city, ZIP</label><input id="co_addr" name="co_address" autocomplete="off" /></div>
@@ -334,7 +336,7 @@
             </div>
           </div>
 
-          <label class="consent"><input type="checkbox" id="consent" required /><span>I certify the information above is accurate and I authorize Reids Auto Connection to obtain a credit report and verify the information to process my application. I understand this does not obligate me to purchase.</span></label>
+          <label class="consent"><input type="checkbox" id="consent" name="consent" value="yes" required /><span>I certify the information above is accurate and I authorize Reids Auto Connection to obtain a credit report and verify the information to process my application. I understand this does not obligate me to purchase.</span></label>
 
           <p class="err" id="err" role="alert">Please complete the highlighted fields and agree to the authorization above.</p>
 
@@ -462,32 +464,39 @@
     if (data.ssn) data.ssn = digits(data.ssn);
     if (data.co_ssn) data.co_ssn = digits(data.co_ssn);
 
-    /* ═══════════════════════════════════════════════════════════════════
-       INTEGRATION HOOK — deliver the application (incl. SSN) to REID.
-       ───────────────────────────────────────────────────────────────────
-       No live cross-origin POST is baked in on purpose. `data` (which
-       contains the applicant's real Social Security number) must ONLY be
-       sent to an endpoint Reid controls and has authorized — his own CRM,
-       his DMS, or his secure form provider (e.g. a Cognito Forms entry
-       API) — over HTTPS, and that endpoint must allow this origin via CORS.
-       Wire it here, then this branded form becomes the live application:
+    // The same-address tick only means something when there is a co-applicant.
+    if (!data.co_first) delete data.co_same_address;
 
-           fetch('https://REID-AUTHORIZED-ENDPOINT.example/applications', {
-             method: 'POST',
-             headers: { 'Content-Type': 'application/json' },
-             body: JSON.stringify(data)
-           }).catch(function () {});   // never block the applicant on a network hiccup
+    // Send the application to the dealership's CRM. The applicant only sees the
+    // confirmation once the CRM has actually saved it; if it cannot be reached
+    // they are told so and given the phone number, never a false "received".
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn.disabled) return;
+    btn.disabled = true;
+    var btnLabel = btn.firstChild.nodeValue;
+    btn.firstChild.nodeValue = 'Sending… ';
 
-       Until that URL is filled in, the form confirms receipt client-side
-       (below) so the demo is fully clickable without shipping anyone's SSN
-       to a third party.
-       ═══════════════════════════════════════════════════════════════════ */
+    function failed() {
+      btn.disabled = false;
+      btn.firstChild.nodeValue = btnLabel;
+      err.innerHTML = 'We couldn’t send your application just now. Please try again in a moment, or call us at <a href="tel:+19724361600">(972) 436-1600</a> and we’ll take it by phone.';
+      err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
 
-    var first = document.getElementById('first').value.trim();
-    document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
-    document.getElementById('app-panel').style.display = 'none';
-    var s = document.getElementById('app-success'); s.style.display = 'block'; s.classList.add('in');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    fetch('https://app.topshelfsolutions.io/api/applications/rc_a7f3e91b8d264c05b9e2f6a1c4d78e30', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (res) {
+      if (!res.ok) return failed();
+      var first = document.getElementById('first').value.trim();
+      document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
+      document.getElementById('app-panel').style.display = 'none';
+      var s = document.getElementById('app-success'); s.style.display = 'block'; s.classList.add('in');
+      form.reset();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }).catch(failed);
   });
 })();
 </script>
