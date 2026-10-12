@@ -13,3 +13,18 @@ RewriteRule ^(.*)$ https://reidscars.com/$1 [L,R=301]
 RewriteRule ^application\.htm$ /get-approved.html [L,R=301,NC]
 RewriteRule ^Gallery\.htm$ / [L,R=301,NC]
 RewriteRule ^index\.htm$ / [L,R=301,NC]
+
+# Speed: compress text, and let browsers keep images/fonts/CSS/JS (pages are always re-checked)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
