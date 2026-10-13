@@ -372,8 +372,18 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ form: 'quick_start', first: form.fname.value.trim(), phone: form.phone.value.trim(), situation: form.situation.value, website: form.website.value })
-    }).then(function (res) { clearTimeout(timer); go(res.ok); })
-      .catch(function () { clearTimeout(timer); go(false); });
+    }).then(function (res) {
+      clearTimeout(timer);
+      if (!res.ok) return go(false);
+      // Remember who this is for the application on the next page, so it lands on the
+      // same customer in the CRM and they do not retype their name and phone.
+      return res.json().catch(function () { return {}; }).then(function (body) {
+        try {
+          sessionStorage.setItem('reidsLead', JSON.stringify({ lead: body.lead || '', first: form.fname.value.trim(), phone: form.phone.value.trim() }));
+        } catch (e) {}
+        go(true);
+      });
+    }).catch(function () { clearTimeout(timer); go(false); });
   });
 })();
 </script>

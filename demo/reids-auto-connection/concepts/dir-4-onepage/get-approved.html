@@ -455,6 +455,12 @@
   });
   syncCoConsent();
 
+  // Came from the home page's short form: carry their lead reference and what they typed.
+  var carried = {};
+  try { carried = JSON.parse(sessionStorage.getItem('reidsLead') || '{}') || {}; } catch (e) {}
+  if (carried.first && !form.elements.first.value) form.elements.first.value = carried.first;
+  if (carried.phone && !form.elements.phone.value) form.elements.phone.value = carried.phone;
+
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   form.addEventListener('input', function (e) {
     if (e.target.getAttribute && e.target.getAttribute('aria-invalid') === 'true') e.target.setAttribute('aria-invalid', 'false');
@@ -499,6 +505,7 @@
 
     // The same-address tick only means something when there is a co-applicant.
     if (!coUsed()) { delete data.co_same_address; delete data.co_consent; }
+    if (carried.lead) data.lead = carried.lead;
 
     // Send the application to the dealership's CRM. The applicant only sees the
     // confirmation once the CRM has actually saved it; if it cannot be reached
@@ -526,6 +533,7 @@
       body: JSON.stringify(data)
     }).then(function (res) {
       if (!res.ok) return failed(res);
+      try { sessionStorage.removeItem('reidsLead'); } catch (e) {}
       var first = document.getElementById('first').value.trim();
       document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
       document.getElementById('app-panel').style.display = 'none';
