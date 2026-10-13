@@ -152,8 +152,7 @@ a{color:inherit}
 }
 .topbar{display:none}
 .hero-photo{position:relative;aspect-ratio:5/4;max-height:42vh;max-height:42svh;width:100%;overflow:hidden}
-/* crop to source x 210-790 from y 665 down at every frame ratio: no wall sign, no faces, no cup or bottle label */
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35.6%;transform:scale(2.414);transform-origin:25.6% 60.8%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
 .hero-photo::after{
   content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(23,12,16,.25) 0,transparent 22%,transparent 55%,rgba(23,12,16,.78) 86%,var(--night) 100%);
@@ -347,7 +346,7 @@ a{color:inherit}
   <div class="hero-grid">
     <figure class="hero-photo">
       <img src="assets/listing.jpg" width="1400" height="1867" fetchpriority="high" decoding="async"
-           alt="The dining room at El Viejon Cocina y Cantina, with wooden tables, black chairs, a bright yellow wall and the bar at the back">
+           alt="The dining room at El Viejon Cocina y Cantina">
     </figure>
     <div class="hero-copy">
       <p class="kicker">Mexican restaurant in Denton, TX</p>

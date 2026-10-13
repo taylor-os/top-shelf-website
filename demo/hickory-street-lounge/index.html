@@ -97,9 +97,8 @@ h1,h2,p{margin:0}
 /* hero: phone first */
 .hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:540px;height:calc(100vh - var(--bar-h) - 46px);height:calc(100svh - var(--bar-h) - 46px);overflow:hidden;isolation:isolate}
 .hero-photo{position:absolute;inset:0;margin:0;z-index:-2}
-/* crop to the bar top and candle: the bottle shelves and the TV stay out of frame at every width.
-   The img is 190% of its frame, pinned right, pulled up so the frame opens about 66% down the photo. */
-.hero-photo img,.strip img{position:absolute;top:0;right:0;width:190%;max-width:none;height:auto;margin-top:-167%}
+.hero-photo img,.strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 70%}
+.strip img{object-position:60% 92%}
 .hero-photo img{-webkit-mask-image:linear-gradient(to bottom,#000 88%,transparent);mask-image:linear-gradient(to bottom,#000 88%,transparent)}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(80% 34% at 78% 0%,rgba(232,169,79,.2),transparent 72%),linear-gradient(to bottom,rgba(15,8,6,.28) 0%,rgba(15,8,6,0) 20%,rgba(15,8,6,.5) 48%,rgba(15,8,6,.93) 76%,var(--ink) 100%)}
 .hero-copy{padding:0 var(--gutter) 26px}
@@ -194,8 +193,8 @@ body{padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
   .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(32px,5vw,72px);height:auto;min-height:0;max-width:1180px;margin:0 auto;padding:16px var(--gutter) 88px;overflow:visible}
   .hero::before{display:none}
   .hero-copy{padding:0;order:1}
-  .hero-photo{position:relative;inset:auto;z-index:0;order:2;overflow:hidden;aspect-ratio:1/1;box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 120px -20px rgba(232,169,79,.22)}
-  .hero-photo img{margin-top:-152%;-webkit-mask-image:none;mask-image:none}
+  .hero-photo{position:relative;inset:auto;z-index:0;order:2;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 120px -20px rgba(232,169,79,.22)}
+  .hero-photo img{-webkit-mask-image:none;mask-image:none}
   .hero h1{font-size:clamp(64px,7vw,104px);text-shadow:none;margin:18px 0 22px}
   .hero .lede{display:block}
   .hero .btn{flex:0 1 auto}
@@ -235,7 +234,7 @@ body{padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
 <main id="top">
   <div class="hero">
     <figure class="hero-photo frame">
-      <img src="assets/listing.jpg" width="1400" height="1867" alt="The back bar at Hickory Street Lounge at night: tall wooden shelves of bottles in warm amber light, with a candle on the polished bar top" fetchpriority="high">
+      <img src="assets/listing.jpg" width="1400" height="1867" alt="The bar at Hickory Street Lounge, lit warm amber, with a candle on the bar top" fetchpriority="high">
     </figure>
     <div class="hero-copy">
       <p class="eyebrow">Cocktail bar &amp; pub &middot; Denton, Texas</p>
@@ -267,7 +266,7 @@ body{padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
       <div class="reveal">
         <div class="rule"><i></i><span class="eyebrow">The room</span></div>
         <h2 class="display">Amber light, wooden shelves, <em>a candle on the bar.</em></h2>
-        <p>Our back bar is tall wooden shelves, rows of bottles, and warm light on all of it. The bar top is polished wood. There's a TV in the corner and a candle burning in front of you.</p>
+        <p>Our back bar is wooden shelves with warm amber light on all of it. The bar top is polished wood, and there's a candle burning in front of you.</p>
         <p>We're a cocktail bar and a pub at 212 E Hickory St in Denton, and we're open late every night of the week. Come by in the afternoon or come by at midnight.</p>
       </div>
       <figure class="strip reveal">

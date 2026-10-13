@@ -89,8 +89,7 @@ h1 em{font-style:italic;font-weight:400;color:var(--amber)}
 .chip.shut::before{background:#e2553b}
 .lede{color:var(--cream-mute);font-size:1.0625rem;max-width:34ch;margin-top:18px}
 .hero-photo{position:relative}
-/* crop to the camera shelf + pegboard (source x 121-777, y 315-753): clip-path picks the window, scale fills the frame with it */
-.hero-photo img{object-position:0 50%;clip-path:inset(40% 34.22% 4.44% 10.22%);transform:scale(1.8);transform-origin:23% 90%}
+.hero-photo img{aspect-ratio:16/9;object-position:40% 55%}
 
 /* sections */
 .sec{padding:clamp(56px,9vw,104px) 0}
@@ -104,9 +103,9 @@ h2 em{font-style:italic;font-weight:400;color:var(--red)}
 .cell{margin:0}
 .cell .film{box-shadow:0 18px 34px -20px rgba(29,21,16,.7)}
 .crop{aspect-ratio:3/2;background-image:url(assets/listing.jpg);background-repeat:no-repeat;background-size:300% auto;background-color:#2a2019}
-.c1{background-position:16% 68%}
-.c2{background-position:70% 94%}
-.c3{background-position:2% 100%}
+.c1{background-position:12% 50%}
+.c2{background-position:42% 60%}
+.c3{background-position:8% 85%}
 .cell figcaption{padding:14px 2px 0}
 .cell h3{font-size:1.375rem;font-weight:600;letter-spacing:-.01em}
 .cell p{color:var(--mute);margin-top:4px}
@@ -182,7 +181,6 @@ footer .holes{margin-bottom:28px;opacity:.5}
   .hero-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:center}
   .hero-photo .film{transform:rotate(1.4deg)}
   .film img{aspect-ratio:16/9}
-  .hero-photo img{clip-path:inset(40% 41.78% 4.44% 2.67%);transform-origin:6% 90%}
   .holes{height:18px;background-size:32px 18px}
   .edge{font-size:.6875rem;padding:4px 16px}
   .sheet{grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
@@ -239,7 +237,7 @@ footer .holes{margin-bottom:28px;opacity:.5}
       <div class="hero-photo">
         <figure class="film">
           <div class="film-top"><div class="holes"></div><div class="edge" aria-hidden="true"><span>Denton Camera Exchange</span><span>&#9656; Piner St</span></div></div>
-          <img src="assets/listing.jpg" width="1400" height="788" alt="Inside Denton Camera Exchange: a wooden shelf of cameras beside a pegboard hung with camera gear, and a wooden chair." fetchpriority="high">
+          <img src="assets/listing.jpg" width="1400" height="788" alt="Inside Denton Camera Exchange: shelves of cameras beside a pegboard hung with small packaged items, and a wooden chair." fetchpriority="high">
           <div class="film-bot"><div class="edge" aria-hidden="true"><span>&#9656; Denton TX</span><span>Inside the shop</span></div><div class="holes"></div></div>
         </figure>
       </div>
@@ -260,8 +258,8 @@ footer .holes{margin-bottom:28px;opacity:.5}
           <figcaption><h3>Cameras</h3><p>Shelf after shelf of them, lined up lens out.</p></figcaption>
         </figure>
         <figure class="cell rv">
-          <div class="film"><div class="film-top"><div class="holes"></div></div><div class="crop c2" role="img" aria-label="Wooden shelves stacked with boxes"></div><div class="film-bot"><div class="holes"></div></div></div>
-          <figcaption><h3>Film</h3><p>Boxes of it, stacked along the wooden shelves.</p></figcaption>
+          <div class="film"><div class="film-top"><div class="holes"></div></div><div class="crop c2" role="img" aria-label="A pegboard hung with small packaged items"></div><div class="film-bot"><div class="holes"></div></div></div>
+          <figcaption><h3>On the wall</h3><p>A pegboard hung with rows of small packaged items.</p></figcaption>
         </figure>
         <figure class="cell rv">
           <div class="film"><div class="film-top"><div class="holes"></div></div><div class="crop c3" role="img" aria-label="A wooden chair beside the camera shelves"></div><div class="film-bot"><div class="holes"></div></div></div>
