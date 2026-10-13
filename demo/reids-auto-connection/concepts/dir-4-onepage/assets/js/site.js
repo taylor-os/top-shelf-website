@@ -36,3 +36,34 @@
     reveals.forEach(function (el) { io.observe(el); });
   }
 })();
+
+/* Phone numbers are always entered one way: (972) 555-1212. Formats as you type on
+   every phone box, and tidies email boxes when you leave them. */
+(function () {
+  "use strict";
+  function formatPhone(v) {
+    var d = String(v || '').replace(/\D/g, '');
+    if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1);
+    d = d.slice(0, 10);
+    if (d.length === 0) return '';
+    if (d.length < 4) return '(' + d;
+    if (d.length < 7) return '(' + d.slice(0, 3) + ') ' + d.slice(3);
+    return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6);
+  }
+  window.reidsFormatPhone = formatPhone;
+  document.querySelectorAll('input[type="tel"]').forEach(function (el) {
+    el.setAttribute('inputmode', 'tel');
+    el.setAttribute('maxlength', '16');
+    if (el.value) el.value = formatPhone(el.value);
+    el.addEventListener('input', function () {
+      var atEnd = el.selectionStart === el.value.length;
+      var next = formatPhone(el.value);
+      if (next !== el.value) { el.value = next; if (!atEnd) { try { el.setSelectionRange(next.length, next.length); } catch (e) {} } }
+      var n = next.replace(/\D/g, '').length;
+      el.setCustomValidity(n === 0 || n === 10 ? '' : 'Please enter all 10 digits of the phone number.');
+    });
+  });
+  document.querySelectorAll('input[type="email"]').forEach(function (el) {
+    el.addEventListener('blur', function () { el.value = el.value.replace(/\s+/g, '').toLowerCase(); });
+  });
+})();

@@ -405,7 +405,7 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261012"></script>
+<script src="assets/js/site.js?v=20261013"></script>
 <script>
 (function () {
   var form = document.getElementById('appForm');
@@ -489,6 +489,10 @@
     // Checks beyond "filled in". Optional fields are only checked when used.
     var f = form.elements;
     if (f.email.value.trim()) mark(f.email, EMAIL_RE.test(f.email.value.trim()), 'That email address doesn’t look right. Please double-check it so we can reach you.');
+    // Every phone box that has something in it must be a full 10-digit number.
+    form.querySelectorAll('input[type="tel"]').forEach(function (el) {
+      if (el.value.trim()) mark(el, digitsOf(el).length === 10, 'Please enter all 10 digits of the phone number.');
+    });
     if (f.ssn.value.trim()) mark(f.ssn, digitsOf(f.ssn).length === 9, 'A Social Security number has 9 digits. Please check yours.');
     if (!f.job_years.value.trim() && !f.job_months.value.trim()) mark(f.job_years, false, 'Please tell us how long you’ve been at this job.');
     if (f.co_email.value.trim()) mark(f.co_email, EMAIL_RE.test(f.co_email.value.trim()), 'The co-applicant’s email address doesn’t look right. Please check it or leave it blank.');
