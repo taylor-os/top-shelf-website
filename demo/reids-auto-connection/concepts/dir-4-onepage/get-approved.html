@@ -437,11 +437,22 @@
 
   // The co-applicant's own authorization shows only while a co-applicant is being added.
   var coConsentWrap = document.getElementById('coConsentWrap'), coBox = document.getElementById('coFields');
+  // "Used" = the co-applicant section is open and something in it has been filled in or chosen.
+  function coUsed() {
+    if (!coBox || coBox.hidden) return false;
+    return Array.prototype.some.call(coBox.querySelectorAll('input, select'), function (el) {
+      if (el.type === 'checkbox') return false;
+      if (el.tagName === 'SELECT') return el.selectedIndex > 0;
+      return !!el.value.trim();
+    });
+  }
   function syncCoConsent() {
-    coConsentWrap.hidden = !coBox || coBox.hidden;
+    coConsentWrap.hidden = !coUsed();
     if (coConsentWrap.hidden) form.elements.co_consent.checked = false;
   }
-  form.addEventListener('click', function () { setTimeout(syncCoConsent, 0); });
+  ['click', 'input', 'change'].forEach(function (ev) {
+    form.addEventListener(ev, function () { setTimeout(syncCoConsent, 0); });
+  });
   syncCoConsent();
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -468,7 +479,7 @@
     if (f.ssn.value.trim()) mark(f.ssn, digitsOf(f.ssn).length === 9, 'A Social Security number has 9 digits. Please check yours.');
     if (!f.job_years.value.trim() && !f.job_months.value.trim()) mark(f.job_years, false, 'Please tell us how long you’ve been at this job.');
     if (f.co_email.value.trim()) mark(f.co_email, EMAIL_RE.test(f.co_email.value.trim()), 'The co-applicant’s email address doesn’t look right. Please check it or leave it blank.');
-    if (f.co_first.value.trim()) mark(f.co_consent, f.co_consent.checked, 'The co-applicant needs to check their authorization box too.');
+    if (coUsed()) mark(f.co_consent, f.co_consent.checked, 'The co-applicant needs to check their authorization box too.');
     if (f.co_ssn.value.trim()) mark(f.co_ssn, digitsOf(f.co_ssn).length === 9, 'The co-applicant’s Social Security number needs 9 digits.');
     if (firstBad) {
       err.textContent = why || 'Please complete the highlighted fields and agree to the authorization above.';
@@ -487,7 +498,7 @@
     if (data.co_ssn) data.co_ssn = digits(data.co_ssn);
 
     // The same-address tick only means something when there is a co-applicant.
-    if (!data.co_first) { delete data.co_same_address; delete data.co_consent; }
+    if (!coUsed()) { delete data.co_same_address; delete data.co_consent; }
 
     // Send the application to the dealership's CRM. The applicant only sees the
     // confirmation once the CRM has actually saved it; if it cannot be reached
