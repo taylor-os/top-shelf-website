@@ -379,7 +379,7 @@
       // same customer in the CRM and they do not retype their name and phone.
       return res.json().catch(function () { return {}; }).then(function (body) {
         try {
-          sessionStorage.setItem('reidsLead', JSON.stringify({ lead: body.lead || '', first: form.fname.value.trim(), phone: form.phone.value.trim() }));
+          sessionStorage.setItem('reidsLead', JSON.stringify({ lead: body.lead || '', first: form.fname.value.trim(), phone: form.phone.value.trim(), at: Date.now() }));
         } catch (e) {}
         go(true);
       });

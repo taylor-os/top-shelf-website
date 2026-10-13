@@ -455,11 +455,18 @@
   });
   syncCoConsent();
 
-  // Came from the home page's short form: carry their lead reference and what they typed.
+  // Came from the home page's short form a moment ago: carry their lead reference and what
+  // they typed. It is only trusted for 30 minutes and only for the same first name, so the
+  // next person on a shared computer never inherits the previous visitor's details.
   var carried = {};
   try { carried = JSON.parse(sessionStorage.getItem('reidsLead') || '{}') || {}; } catch (e) {}
+  if (!carried.at || Date.now() - carried.at > 30 * 60 * 1000) {
+    carried = {};
+    try { sessionStorage.removeItem('reidsLead'); } catch (e) {}
+  }
   if (carried.first && !form.elements.first.value) form.elements.first.value = carried.first;
   if (carried.phone && !form.elements.phone.value) form.elements.phone.value = carried.phone;
+  function sameFirst(a, b) { return String(a || '').trim().toLowerCase() === String(b || '').trim().toLowerCase(); }
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   form.addEventListener('input', function (e) {
@@ -505,7 +512,7 @@
 
     // The same-address tick only means something when there is a co-applicant.
     if (!coUsed()) { delete data.co_same_address; delete data.co_consent; }
-    if (carried.lead) data.lead = carried.lead;
+    if (carried.lead && sameFirst(carried.first, data.first)) data.lead = carried.lead;
 
     // Send the application to the dealership's CRM. The applicant only sees the
     // confirmation once the CRM has actually saved it; if it cannot be reached
