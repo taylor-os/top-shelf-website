@@ -81,6 +81,10 @@
   .field label .lc{text-transform:none; letter-spacing:0; font-weight:400; color:var(--ink-dim);}
   .field-3{display:grid; grid-template-columns:repeat(3,1fr); gap:0 1.1rem;}
   .dur{display:flex; gap:.5rem;}
+  /* An address: street on its own row, then city / state / ZIP. On a narrow phone the city takes a row and state + ZIP share the next. */
+  .addr-row{display:grid; grid-template-columns:1fr 1fr; gap:0 1.1rem;}
+  .addr-row .addr-city{grid-column:1 / -1;}
+  @media (min-width:480px){ .addr-row{grid-template-columns:1.5fr 1.25fr 1fr;} .addr-row .addr-city{grid-column:auto;} }
   @media (max-width:640px){ .field-3{grid-template-columns:1fr;} }
 
   /* SSN privacy: masked to dots on blur, revealed only while focused.
@@ -200,13 +204,19 @@
               <div class="field"><label for="dl">Driver's license number <span class="req">*</span></label><input id="dl" name="dl" required autocomplete="off" /></div>
               <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email" /></div>
               <div class="field"><label for="phone">Phone <span class="req">*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel" /></div>
-              <div class="field"><label for="state">State <span class="req">*</span></label><input id="state" name="state" placeholder="State" required autocomplete="address-level1" /></div>
+              <div class="field"><label for="state">Driver's license state <span class="req">*</span></label><input id="state" name="state" placeholder="TX" required autocomplete="off" /></div>
             </div>
           </div>
 
           <div class="appsec">
             <h3>Current address</h3>
-            <div class="field"><label for="addr">Street address, city, ZIP <span class="req">*</span></label><input id="addr" name="address" required autocomplete="street-address" /></div>
+            <p class="appsec-hint">Lenders need at least the past 2 years of residence.</p>
+            <div class="field"><label for="addr">Street address <span class="req">*</span></label><input id="addr" name="address" required autocomplete="address-line1" /></div>
+            <div class="addr-row">
+              <div class="field addr-city"><label for="city">City <span class="req">*</span></label><input id="city" name="city" required autocomplete="address-level2" /></div>
+              <div class="field"><label for="addr_state">State <span class="req">*</span></label><select id="addr_state" name="addr_state" required autocomplete="address-level1"><option value="">State</option><option value="AL">AL - Alabama</option><option value="AK">AK - Alaska</option><option value="AZ">AZ - Arizona</option><option value="AR">AR - Arkansas</option><option value="CA">CA - California</option><option value="CO">CO - Colorado</option><option value="CT">CT - Connecticut</option><option value="DE">DE - Delaware</option><option value="DC">DC - District of Columbia</option><option value="FL">FL - Florida</option><option value="GA">GA - Georgia</option><option value="HI">HI - Hawaii</option><option value="ID">ID - Idaho</option><option value="IL">IL - Illinois</option><option value="IN">IN - Indiana</option><option value="IA">IA - Iowa</option><option value="KS">KS - Kansas</option><option value="KY">KY - Kentucky</option><option value="LA">LA - Louisiana</option><option value="ME">ME - Maine</option><option value="MD">MD - Maryland</option><option value="MA">MA - Massachusetts</option><option value="MI">MI - Michigan</option><option value="MN">MN - Minnesota</option><option value="MS">MS - Mississippi</option><option value="MO">MO - Missouri</option><option value="MT">MT - Montana</option><option value="NE">NE - Nebraska</option><option value="NV">NV - Nevada</option><option value="NH">NH - New Hampshire</option><option value="NJ">NJ - New Jersey</option><option value="NM">NM - New Mexico</option><option value="NY">NY - New York</option><option value="NC">NC - North Carolina</option><option value="ND">ND - North Dakota</option><option value="OH">OH - Ohio</option><option value="OK">OK - Oklahoma</option><option value="OR">OR - Oregon</option><option value="PA">PA - Pennsylvania</option><option value="RI">RI - Rhode Island</option><option value="SC">SC - South Carolina</option><option value="SD">SD - South Dakota</option><option value="TN">TN - Tennessee</option><option value="TX" selected>TX - Texas</option><option value="UT">UT - Utah</option><option value="VT">VT - Vermont</option><option value="VA">VA - Virginia</option><option value="WA">WA - Washington</option><option value="WV">WV - West Virginia</option><option value="WI">WI - Wisconsin</option><option value="WY">WY - Wyoming</option></select></div>
+              <div class="field"><label for="zip">ZIP code <span class="req">*</span></label><input id="zip" name="zip" required inputmode="numeric" maxlength="10" data-zip autocomplete="postal-code" /></div>
+            </div>
             <div class="field-3">
               <div class="field"><label for="own">Own, rent or live with others</label><select id="own" name="housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
               <div class="field"><label for="mo">Monthly amount</label><input id="mo" name="housing_amount" inputmode="numeric" placeholder="$" /></div>
@@ -215,8 +225,13 @@
           </div>
 
           <div class="appsec">
-            <h3>Previous address <span class="lc">(if less than 3 years at current)</span></h3>
-            <div class="field"><label for="paddr">Previous street address, city, ZIP</label><input id="paddr" name="prev_address" autocomplete="off" /></div>
+            <h3>Previous address <span class="lc">(if less than 2 years at current)</span></h3>
+            <div class="field"><label for="paddr">Previous street address</label><input id="paddr" name="prev_address" autocomplete="off" /></div>
+            <div class="addr-row">
+              <div class="field addr-city"><label for="prev_city">City</label><input id="prev_city" name="prev_city" autocomplete="off" /></div>
+              <div class="field"><label for="prev_state">State</label><select id="prev_state" name="prev_state" autocomplete="off"><option value="">State</option><option value="AL">AL - Alabama</option><option value="AK">AK - Alaska</option><option value="AZ">AZ - Arizona</option><option value="AR">AR - Arkansas</option><option value="CA">CA - California</option><option value="CO">CO - Colorado</option><option value="CT">CT - Connecticut</option><option value="DE">DE - Delaware</option><option value="DC">DC - District of Columbia</option><option value="FL">FL - Florida</option><option value="GA">GA - Georgia</option><option value="HI">HI - Hawaii</option><option value="ID">ID - Idaho</option><option value="IL">IL - Illinois</option><option value="IN">IN - Indiana</option><option value="IA">IA - Iowa</option><option value="KS">KS - Kansas</option><option value="KY">KY - Kentucky</option><option value="LA">LA - Louisiana</option><option value="ME">ME - Maine</option><option value="MD">MD - Maryland</option><option value="MA">MA - Massachusetts</option><option value="MI">MI - Michigan</option><option value="MN">MN - Minnesota</option><option value="MS">MS - Mississippi</option><option value="MO">MO - Missouri</option><option value="MT">MT - Montana</option><option value="NE">NE - Nebraska</option><option value="NV">NV - Nevada</option><option value="NH">NH - New Hampshire</option><option value="NJ">NJ - New Jersey</option><option value="NM">NM - New Mexico</option><option value="NY">NY - New York</option><option value="NC">NC - North Carolina</option><option value="ND">ND - North Dakota</option><option value="OH">OH - Ohio</option><option value="OK">OK - Oklahoma</option><option value="OR">OR - Oregon</option><option value="PA">PA - Pennsylvania</option><option value="RI">RI - Rhode Island</option><option value="SC">SC - South Carolina</option><option value="SD">SD - South Dakota</option><option value="TN">TN - Tennessee</option><option value="TX">TX - Texas</option><option value="UT">UT - Utah</option><option value="VT">VT - Vermont</option><option value="VA">VA - Virginia</option><option value="WA">WA - Washington</option><option value="WV">WV - West Virginia</option><option value="WI">WI - Wisconsin</option><option value="WY">WY - Wyoming</option></select></div>
+              <div class="field"><label for="prev_zip">ZIP code</label><input id="prev_zip" name="prev_zip" inputmode="numeric" maxlength="10" data-zip autocomplete="off" /></div>
+            </div>
             <div class="field-3">
               <div class="field"><label for="pown">Own, rent or live with others</label><select id="pown" name="prev_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
               <div class="field"><label for="pmo">Monthly amount</label><input id="pmo" name="prev_housing_amount" inputmode="numeric" placeholder="$" /></div>
@@ -226,22 +241,34 @@
 
           <div class="appsec">
             <h3>Employment information</h3>
+            <p class="appsec-hint">Lenders need at least the past 2 years of employment.</p>
             <div class="form-grid">
               <div class="field"><label for="emp">Employer <span class="req">*</span></label><input id="emp" name="employer" required /></div>
               <div class="field"><label for="empphone">Employer phone <span class="req">*</span></label><input id="empphone" name="employer_phone" type="tel" required /></div>
               <div class="field"><label for="title">Position or title <span class="req">*</span></label><input id="title" name="title" required /></div>
               <div class="field"><label for="salary">Gross monthly salary <span class="req">*</span></label><input id="salary" name="salary" inputmode="numeric" placeholder="$" required /></div>
             </div>
-            <div class="field" style="margin-top:.2rem;"><label>How long at this job? <span class="req">*</span></label><div class="dur" style="max-width:240px;"><input name="job_years" inputmode="numeric" placeholder="Years" aria-label="Years at job" /><input name="job_months" inputmode="numeric" placeholder="Months" aria-label="Months at job" /></div></div>
+            <div class="field" style="margin-top:.2rem;"><label>How long at this job? <span class="req">*</span></label><div class="dur" style="max-width:240px;"><input name="job_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at job" /><input name="job_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at job (0 to 11)" /></div></div>
           </div>
 
-          <div class="appsec">
-            <h3>Previous employer <span class="lc">(if less than 3 years at current)</span></h3>
+          <div class="appsec" id="prevJob">
+            <h3>Previous employer <span class="lc">(if less than 2 years at current job)</span></h3>
             <div class="form-grid">
-              <div class="field"><label for="pemp">Previous employer</label><input id="pemp" name="prev_employer" /></div>
-              <div class="field"><label for="pempphone">Previous employer phone</label><input id="pempphone" name="prev_employer_phone" type="tel" /></div>
+              <div class="field"><label for="pemp">Previous employer <span class="req" hidden>*</span></label><input id="pemp" name="prev_employer" /></div>
+              <div class="field"><label for="pempphone">Previous employer phone <span class="req" hidden>*</span></label><input id="pempphone" name="prev_employer_phone" type="tel" /></div>
+              <div class="field"><label for="ptitle">Position or title there <span class="req" hidden>*</span></label><input id="ptitle" name="prev_title" /></div>
             </div>
-            <div class="field" style="margin-top:.2rem;"><label>How long?</label><div class="dur" style="max-width:240px;"><input name="pjob_years" inputmode="numeric" placeholder="Years" aria-label="Years at previous job" /><input name="pjob_months" inputmode="numeric" placeholder="Months" aria-label="Months at previous job" /></div></div>
+            <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="pjob_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at previous job" /><input name="pjob_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at previous job (0 to 11)" /></div></div>
+          </div>
+
+          <div class="appsec" id="prev2Job" hidden>
+            <h3>Second previous employer</h3>
+            <div class="form-grid">
+              <div class="field"><label for="p2emp">Second previous employer <span class="req" hidden>*</span></label><input id="p2emp" name="prev2_employer" /></div>
+              <div class="field"><label for="p2empphone">Second previous employer phone <span class="req" hidden>*</span></label><input id="p2empphone" name="prev2_employer_phone" type="tel" /></div>
+              <div class="field"><label for="p2title">Position or title there <span class="req" hidden>*</span></label><input id="p2title" name="prev2_title" /></div>
+            </div>
+            <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="p2job_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at second previous job" /><input name="p2job_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at second previous job (0 to 11)" /></div></div>
           </div>
 
           <div class="appsec">
@@ -278,20 +305,31 @@
                 <div class="field"><label for="co_dl">Driver's license number</label><input id="co_dl" name="co_dl" autocomplete="off" /></div>
                 <div class="field"><label for="co_email">Email</label><input id="co_email" name="co_email" type="email" autocomplete="off" /></div>
                 <div class="field"><label for="co_phone">Phone</label><input id="co_phone" name="co_phone" type="tel" autocomplete="off" /></div>
-                <div class="field"><label for="co_state">State</label><input id="co_state" name="co_state" placeholder="State" autocomplete="off" /></div>
+                <div class="field"><label for="co_state">Driver's license state</label><input id="co_state" name="co_state" placeholder="TX" autocomplete="off" /></div>
               </div>
 
               <label class="co-same"><input type="checkbox" id="coSameAddr" name="co_same_address" value="yes" checked /> <span>Co-applicant lives at the same address as me</span></label>
               <div id="coAddr" hidden>
                 <div class="co-sub">Co-applicant current address</div>
-                <div class="field"><label for="co_addr">Street address, city, ZIP</label><input id="co_addr" name="co_address" autocomplete="off" /></div>
+                <p class="appsec-hint">Lenders need at least the past 2 years of residence.</p>
+                <div class="field"><label for="co_addr">Street address</label><input id="co_addr" name="co_address" autocomplete="off" /></div>
+                <div class="addr-row">
+                  <div class="field addr-city"><label for="co_city">City</label><input id="co_city" name="co_city" autocomplete="off" /></div>
+                  <div class="field"><label for="co_addr_state">State</label><select id="co_addr_state" name="co_addr_state" autocomplete="off"><option value="">State</option><option value="AL">AL - Alabama</option><option value="AK">AK - Alaska</option><option value="AZ">AZ - Arizona</option><option value="AR">AR - Arkansas</option><option value="CA">CA - California</option><option value="CO">CO - Colorado</option><option value="CT">CT - Connecticut</option><option value="DE">DE - Delaware</option><option value="DC">DC - District of Columbia</option><option value="FL">FL - Florida</option><option value="GA">GA - Georgia</option><option value="HI">HI - Hawaii</option><option value="ID">ID - Idaho</option><option value="IL">IL - Illinois</option><option value="IN">IN - Indiana</option><option value="IA">IA - Iowa</option><option value="KS">KS - Kansas</option><option value="KY">KY - Kentucky</option><option value="LA">LA - Louisiana</option><option value="ME">ME - Maine</option><option value="MD">MD - Maryland</option><option value="MA">MA - Massachusetts</option><option value="MI">MI - Michigan</option><option value="MN">MN - Minnesota</option><option value="MS">MS - Mississippi</option><option value="MO">MO - Missouri</option><option value="MT">MT - Montana</option><option value="NE">NE - Nebraska</option><option value="NV">NV - Nevada</option><option value="NH">NH - New Hampshire</option><option value="NJ">NJ - New Jersey</option><option value="NM">NM - New Mexico</option><option value="NY">NY - New York</option><option value="NC">NC - North Carolina</option><option value="ND">ND - North Dakota</option><option value="OH">OH - Ohio</option><option value="OK">OK - Oklahoma</option><option value="OR">OR - Oregon</option><option value="PA">PA - Pennsylvania</option><option value="RI">RI - Rhode Island</option><option value="SC">SC - South Carolina</option><option value="SD">SD - South Dakota</option><option value="TN">TN - Tennessee</option><option value="TX">TX - Texas</option><option value="UT">UT - Utah</option><option value="VT">VT - Vermont</option><option value="VA">VA - Virginia</option><option value="WA">WA - Washington</option><option value="WV">WV - West Virginia</option><option value="WI">WI - Wisconsin</option><option value="WY">WY - Wyoming</option></select></div>
+                  <div class="field"><label for="co_zip">ZIP code</label><input id="co_zip" name="co_zip" inputmode="numeric" maxlength="10" data-zip autocomplete="off" /></div>
+                </div>
                 <div class="field-3">
                   <div class="field"><label for="co_own">Own, rent or live with others</label><select id="co_own" name="co_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
                   <div class="field"><label for="co_mo">Monthly amount</label><input id="co_mo" name="co_housing_amount" inputmode="numeric" placeholder="$" /></div>
                   <div class="field"><label>How long?</label><div class="dur"><input name="co_addr_years" inputmode="numeric" placeholder="Yrs" aria-label="Years at co-applicant address" /><input name="co_addr_months" inputmode="numeric" placeholder="Mos" aria-label="Months at co-applicant address" /></div></div>
                 </div>
-                <div class="co-sub">Co-applicant previous address <span class="co-subnote">(if less than 3 years at current)</span></div>
-                <div class="field"><label for="co_paddr">Previous street address, city, ZIP</label><input id="co_paddr" name="co_prev_address" autocomplete="off" /></div>
+                <div class="co-sub">Co-applicant previous address <span class="co-subnote">(if less than 2 years at current)</span></div>
+                <div class="field"><label for="co_paddr">Previous street address</label><input id="co_paddr" name="co_prev_address" autocomplete="off" /></div>
+                <div class="addr-row">
+                  <div class="field addr-city"><label for="co_prev_city">City</label><input id="co_prev_city" name="co_prev_city" autocomplete="off" /></div>
+                  <div class="field"><label for="co_prev_state">State</label><select id="co_prev_state" name="co_prev_state" autocomplete="off"><option value="">State</option><option value="AL">AL - Alabama</option><option value="AK">AK - Alaska</option><option value="AZ">AZ - Arizona</option><option value="AR">AR - Arkansas</option><option value="CA">CA - California</option><option value="CO">CO - Colorado</option><option value="CT">CT - Connecticut</option><option value="DE">DE - Delaware</option><option value="DC">DC - District of Columbia</option><option value="FL">FL - Florida</option><option value="GA">GA - Georgia</option><option value="HI">HI - Hawaii</option><option value="ID">ID - Idaho</option><option value="IL">IL - Illinois</option><option value="IN">IN - Indiana</option><option value="IA">IA - Iowa</option><option value="KS">KS - Kansas</option><option value="KY">KY - Kentucky</option><option value="LA">LA - Louisiana</option><option value="ME">ME - Maine</option><option value="MD">MD - Maryland</option><option value="MA">MA - Massachusetts</option><option value="MI">MI - Michigan</option><option value="MN">MN - Minnesota</option><option value="MS">MS - Mississippi</option><option value="MO">MO - Missouri</option><option value="MT">MT - Montana</option><option value="NE">NE - Nebraska</option><option value="NV">NV - Nevada</option><option value="NH">NH - New Hampshire</option><option value="NJ">NJ - New Jersey</option><option value="NM">NM - New Mexico</option><option value="NY">NY - New York</option><option value="NC">NC - North Carolina</option><option value="ND">ND - North Dakota</option><option value="OH">OH - Ohio</option><option value="OK">OK - Oklahoma</option><option value="OR">OR - Oregon</option><option value="PA">PA - Pennsylvania</option><option value="RI">RI - Rhode Island</option><option value="SC">SC - South Carolina</option><option value="SD">SD - South Dakota</option><option value="TN">TN - Tennessee</option><option value="TX">TX - Texas</option><option value="UT">UT - Utah</option><option value="VT">VT - Vermont</option><option value="VA">VA - Virginia</option><option value="WA">WA - Washington</option><option value="WV">WV - West Virginia</option><option value="WI">WI - Wisconsin</option><option value="WY">WY - Wyoming</option></select></div>
+                  <div class="field"><label for="co_prev_zip">ZIP code</label><input id="co_prev_zip" name="co_prev_zip" inputmode="numeric" maxlength="10" data-zip autocomplete="off" /></div>
+                </div>
                 <div class="field-3">
                   <div class="field"><label for="co_pown">Own, rent or live with others</label><select id="co_pown" name="co_prev_housing"><option value="">Choose</option><option>Own</option><option>Rent</option><option>Live with others</option></select></div>
                   <div class="field"><label for="co_pmo">Monthly amount</label><input id="co_pmo" name="co_prev_housing_amount" inputmode="numeric" placeholder="$" /></div>
@@ -300,20 +338,33 @@
               </div>
 
               <div class="co-sub">Co-applicant employment</div>
+              <p class="appsec-hint">Lenders need at least the past 2 years of employment.</p>
               <div class="form-grid">
                 <div class="field"><label for="co_emp">Employer</label><input id="co_emp" name="co_employer" /></div>
                 <div class="field"><label for="co_empphone">Employer phone</label><input id="co_empphone" name="co_employer_phone" type="tel" /></div>
                 <div class="field"><label for="co_title">Position or title</label><input id="co_title" name="co_title" /></div>
                 <div class="field"><label for="co_salary">Gross monthly salary</label><input id="co_salary" name="co_salary" inputmode="numeric" placeholder="$" /></div>
               </div>
-              <div class="field" style="margin-top:.2rem;"><label>How long at this job?</label><div class="dur" style="max-width:240px;"><input name="co_job_years" inputmode="numeric" placeholder="Years" aria-label="Years at co-applicant job" /><input name="co_job_months" inputmode="numeric" placeholder="Months" aria-label="Months at co-applicant job" /></div></div>
+              <div class="field" style="margin-top:.2rem;"><label>How long at this job?</label><div class="dur" style="max-width:240px;"><input name="co_job_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at co-applicant job" /><input name="co_job_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at co-applicant job (0 to 11)" /></div></div>
 
-              <div class="co-sub">Co-applicant previous employer <span class="co-subnote">(if less than 3 years at current)</span></div>
-              <div class="form-grid">
-                <div class="field"><label for="co_pemp">Previous employer</label><input id="co_pemp" name="co_prev_employer" /></div>
-                <div class="field"><label for="co_pempphone">Previous employer phone</label><input id="co_pempphone" name="co_prev_employer_phone" type="tel" /></div>
+              <div id="co_prevJob">
+                <div class="co-sub">Co-applicant previous employer <span class="co-subnote">(if less than 2 years at current job)</span></div>
+                <div class="form-grid">
+                  <div class="field"><label for="co_pemp">Previous employer <span class="req" hidden>*</span></label><input id="co_pemp" name="co_prev_employer" /></div>
+                  <div class="field"><label for="co_pempphone">Previous employer phone <span class="req" hidden>*</span></label><input id="co_pempphone" name="co_prev_employer_phone" type="tel" /></div>
+                  <div class="field"><label for="co_ptitle">Position or title there <span class="req" hidden>*</span></label><input id="co_ptitle" name="co_prev_title" /></div>
+                </div>
+                <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="co_pjob_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at co-applicant previous job" /><input name="co_pjob_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at co-applicant previous job (0 to 11)" /></div></div>
               </div>
-              <div class="field" style="margin-top:.2rem;"><label>How long?</label><div class="dur" style="max-width:240px;"><input name="co_pjob_years" inputmode="numeric" placeholder="Years" aria-label="Years at co-applicant previous job" /><input name="co_pjob_months" inputmode="numeric" placeholder="Months" aria-label="Months at co-applicant previous job" /></div></div>
+              <div id="co_prev2Job" hidden>
+                <div class="co-sub">Co-applicant second previous employer</div>
+                <div class="form-grid">
+                  <div class="field"><label for="co_p2emp">Second previous employer <span class="req" hidden>*</span></label><input id="co_p2emp" name="co_prev2_employer" /></div>
+                  <div class="field"><label for="co_p2empphone">Second previous employer phone <span class="req" hidden>*</span></label><input id="co_p2empphone" name="co_prev2_employer_phone" type="tel" /></div>
+                  <div class="field"><label for="co_p2title">Position or title there <span class="req" hidden>*</span></label><input id="co_p2title" name="co_prev2_title" /></div>
+                </div>
+                <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="co_p2job_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at co-applicant second previous job" /><input name="co_p2job_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at co-applicant second previous job (0 to 11)" /></div></div>
+              </div>
 
               <div class="co-sub">Co-applicant other income</div>
               <div class="form-grid">
@@ -455,6 +506,57 @@
   });
   syncCoConsent();
 
+  // ZIP codes: digits only, with the hyphen put in after the fifth (75057 or 75057-1234).
+  var ZIP_RE = /^\d{5}(-\d{4})?$/;
+  form.querySelectorAll('[data-zip]').forEach(function (el) {
+    el.addEventListener('input', function () {
+      var d = el.value.replace(/\D/g, '').slice(0, 9);
+      var next = d.length > 5 ? d.slice(0, 5) + '-' + d.slice(5) : d;
+      if (next !== el.value) el.value = next;
+    });
+  });
+  // Years and months at a job are whole numbers, sent without a leading zero ("06" is 6).
+  function tidyNum(el) {
+    var d = el.value.replace(/\D/g, '');
+    el.value = d === '' ? '' : String(parseInt(d, 10));
+  }
+  form.querySelectorAll('[data-num]').forEach(function (el) {
+    el.addEventListener('input', function () {
+      var d = el.value.replace(/\D/g, '');
+      if (d !== el.value) el.value = d;
+    });
+    el.addEventListener('blur', function () { tidyNum(el); });
+  });
+  // Nothing inside a part of the form that is hidden is checked or sent.
+  function shown(el) { return !el.closest('[hidden]'); }
+
+  // Work history: lenders need two years. Under two years at the current job makes the
+  // previous employer required; still under two years with that one brings in a second.
+  // '' is the applicant, 'co_' the co-applicant.
+  function monthsAt(p, t) {
+    var y = form.elements[p + t + '_years'].value, m = form.elements[p + t + '_months'].value;
+    return y === '' && m === '' ? null : (parseInt(y, 10) || 0) * 12 + (parseInt(m, 10) || 0);
+  }
+  function workHistory(p) {
+    // A co-applicant with no employer (living on other income) has no work history to give.
+    if (p && !form.elements.co_employer.value.trim()) return { needPrev: false, needPrev2: false };
+    var cur = monthsAt(p, 'job'), prev = monthsAt(p, 'pjob');
+    var needPrev = cur !== null && cur < 24;
+    return { needPrev: needPrev, needPrev2: needPrev && prev !== null && cur + prev < 24 };
+  }
+  function syncWorkHistory() {
+    ['', 'co_'].forEach(function (p) {
+      var h = workHistory(p), one = document.getElementById(p + 'prevJob'), two = document.getElementById(p + 'prev2Job');
+      one.querySelectorAll('.req').forEach(function (star) { star.hidden = !h.needPrev; });
+      two.querySelectorAll('.req').forEach(function (star) { star.hidden = false; });
+      two.hidden = !h.needPrev2;
+    });
+  }
+  ['input', 'change', 'click'].forEach(function (ev) {
+    form.addEventListener(ev, function () { setTimeout(syncWorkHistory, 0); });
+  });
+  syncWorkHistory();
+
   // Came from the home page's short form a moment ago: carry their lead reference and what
   // they typed. It is only trusted for 30 minutes and only for the same first name, so the
   // next person on a shared computer never inherits the previous visitor's details.
@@ -471,6 +573,9 @@
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   form.addEventListener('input', function (e) {
     if (e.target.getAttribute && e.target.getAttribute('aria-invalid') === 'true') e.target.setAttribute('aria-invalid', 'false');
+    // Years and months are one answer: typing in either clears the highlight on both.
+    var dur = e.target.closest && e.target.closest('.dur');
+    if (dur) dur.querySelectorAll('input').forEach(function (el) { el.setAttribute('aria-invalid', 'false'); });
   });
 
   form.addEventListener('submit', function (e) {
@@ -491,10 +596,47 @@
     if (f.email.value.trim()) mark(f.email, EMAIL_RE.test(f.email.value.trim()), 'That email address doesn’t look right. Please double-check it so we can reach you.');
     // Every phone box that has something in it must be a full 10-digit number.
     form.querySelectorAll('input[type="tel"]').forEach(function (el) {
-      if (el.value.trim()) mark(el, digitsOf(el).length === 10, 'Please enter all 10 digits of the phone number.');
+      if (el.value.trim() && shown(el)) mark(el, digitsOf(el).length === 10, 'Please enter all 10 digits of the phone number.');
+    });
+    // Every address is street, city, state and ZIP. Yours is required; any other one is
+    // optional, but once any part of it is filled in the rest is needed too.
+    [['prev_address', 'prev_city', 'prev_state', 'prev_zip', 'your previous address'],
+     ['co_address', 'co_city', 'co_addr_state', 'co_zip', 'the co-applicant’s address'],
+     ['co_prev_address', 'co_prev_city', 'co_prev_state', 'co_prev_zip', 'the co-applicant’s previous address']].forEach(function (a) {
+      var parts = a.slice(0, 4).map(function (n) { return f[n]; });
+      // Left empty (or hidden): nothing to finish, and no highlight left over from an earlier try.
+      if (!shown(parts[0]) || !parts.some(function (el) { return !!el.value.trim(); })) {
+        parts.forEach(function (el) { el.setAttribute('aria-invalid', 'false'); });
+        return;
+      }
+      parts.forEach(function (el) { mark(el, !!el.value.trim(), 'Please finish ' + a[4] + ': street, city, state and ZIP.'); });
+    });
+    form.querySelectorAll('[data-zip]').forEach(function (el) {
+      if (el.value.trim() && shown(el)) mark(el, ZIP_RE.test(el.value.trim()), 'A ZIP code is 5 digits (75057), or 9 with a hyphen (75057-1234).');
     });
     if (f.ssn.value.trim()) mark(f.ssn, digitsOf(f.ssn).length === 9, 'A Social Security number has 9 digits. Please check yours.');
     if (!f.job_years.value.trim() && !f.job_months.value.trim()) mark(f.job_years, false, 'Please tell us how long you’ve been at this job.');
+    // The co-applicant's job time is asked for only when they have an employer.
+    mark(f.co_job_years, !(coUsed() && f.co_employer.value.trim()) || !!(f.co_job_years.value.trim() || f.co_job_months.value.trim()), 'Please tell us how long the co-applicant has been at their job.');
+    form.querySelectorAll('[data-num][name$="_months"]').forEach(function (el) {
+      if (el.value && shown(el)) mark(el, parseInt(el.value, 10) <= 11, 'Months should be a number from 0 to 11. Put full years in the Years box.');
+    });
+    // Two years of work history (see workHistory above).
+    ['', 'co_'].forEach(function (p) {
+      if (p && !coUsed()) return;
+      var h = workHistory(p), whose = p ? 'the co-applicant’s' : 'your';
+      [[h.needPrev, 'prev', 'pjob', 'previous employer'], [h.needPrev2, 'prev2', 'p2job', 'second previous employer']].forEach(function (b) {
+        var names = [p + b[1] + '_employer', p + b[1] + '_employer_phone', p + b[1] + '_title'];
+        if (!b[0]) {
+          // No longer asked for: an empty box keeps no highlight from an earlier try.
+          names.concat(p + b[2] + '_years').forEach(function (n) { if (!f[n].value.trim()) f[n].setAttribute('aria-invalid', 'false'); });
+          return;
+        }
+        var msg = 'Lenders need at least the past 2 years of employment. Please fill in ' + whose + ' ' + b[3] + '.';
+        names.forEach(function (n) { mark(f[n], !!f[n].value.trim(), msg); });
+        if (monthsAt(p, b[2]) === null) mark(f[p + b[2] + '_years'], false, msg);
+      });
+    });
     if (f.co_email.value.trim()) mark(f.co_email, EMAIL_RE.test(f.co_email.value.trim()), 'The co-applicant’s email address doesn’t look right. Please check it or leave it blank.');
     if (coUsed()) mark(f.co_consent, f.co_consent.checked, 'The co-applicant needs to check their authorization box too.');
     if (f.co_ssn.value.trim()) mark(f.co_ssn, digitsOf(f.co_ssn).length === 9, 'The co-applicant’s Social Security number needs 9 digits.');
@@ -508,8 +650,12 @@
     err.style.display = 'none';
 
     // Collect the application. SSN is kept as digits only (formatting stripped).
+    form.querySelectorAll('[data-num]').forEach(tidyNum);
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
+    form.querySelectorAll('[hidden] [name]').forEach(function (el) { delete data[el.name]; });
+    // Tells the CRM this is the form with each address in parts and two years of work history.
+    data.form_version = 2;
     function digits(x) { return String(x || '').replace(/\D/g, ''); }
     if (data.ssn) data.ssn = digits(data.ssn);
     if (data.co_ssn) data.co_ssn = digits(data.co_ssn);
@@ -527,11 +673,17 @@
     var btnLabel = btn.firstChild.nodeValue;
     btn.firstChild.nodeValue = 'Sending… ';
 
-    function failed(res) {
+    function failed(res, body) {
       btn.disabled = false;
       btn.firstChild.nodeValue = btnLabel;
       // 422 = the CRM read the form but would not accept something in it; retrying unchanged won't help.
-      err.innerHTML = (res && res.status === 422)
+      // When it says which boxes and why, show its first reason and mark the boxes.
+      var named = (res && res.status === 422 && body && body.errors) ? Object.keys(body.errors).filter(function (k) { return form.elements[k] && form.elements[k].setAttribute; }) : [];
+      named.forEach(function (k) { form.elements[k].setAttribute('aria-invalid', 'true'); });
+      if (named.length) {
+        err.textContent = String(body.errors[named[0]][0]) + ' ';
+        err.insertAdjacentHTML('beforeend', 'Or call us at <a href="tel:+19724361600">(972) 436-1600</a>.');
+      } else err.innerHTML = (res && res.status === 422)
         ? 'Something on the form doesn’t look right. Please check your email address and phone number, then send it again. Or call us at <a href="tel:+19724361600">(972) 436-1600</a>.'
         : 'We couldn’t send your application just now. Please try again in a moment, or call us at <a href="tel:+19724361600">(972) 436-1600</a> and we’ll take it by phone.';
       err.style.display = 'block';
@@ -543,7 +695,7 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data)
     }).then(function (res) {
-      if (!res.ok) return failed(res);
+      if (!res.ok) return res.json().then(function (body) { failed(res, body); }, function () { failed(res); });
       try { sessionStorage.removeItem('reidsLead'); } catch (e) {}
       var first = document.getElementById('first').value.trim();
       document.getElementById('successName').textContent = "You're on your way" + (first ? ", " + first : "") + "!";
