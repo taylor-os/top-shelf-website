@@ -262,16 +262,6 @@
             <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="pjob_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at previous job" /><input name="pjob_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at previous job (0 to 11)" /></div></div>
           </div>
 
-          <div class="appsec" id="prev2Job" hidden>
-            <h3>Second previous employer</h3>
-            <div class="form-grid">
-              <div class="field"><label for="p2emp">Second previous employer <span class="req" hidden>*</span></label><input id="p2emp" name="prev2_employer" /></div>
-              <div class="field"><label for="p2empphone">Second previous employer phone <span class="req" hidden>*</span></label><input id="p2empphone" name="prev2_employer_phone" type="tel" /></div>
-              <div class="field"><label for="p2title">Position or title there <span class="req" hidden>*</span></label><input id="p2title" name="prev2_title" /></div>
-            </div>
-            <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="p2job_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at second previous job" /><input name="p2job_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at second previous job (0 to 11)" /></div></div>
-          </div>
-
           <div class="appsec">
             <h3>Other income</h3>
             <div class="form-grid">
@@ -356,15 +346,6 @@
                   <div class="field"><label for="co_ptitle">Position or title there <span class="req" hidden>*</span></label><input id="co_ptitle" name="co_prev_title" /></div>
                 </div>
                 <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="co_pjob_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at co-applicant previous job" /><input name="co_pjob_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at co-applicant previous job (0 to 11)" /></div></div>
-              </div>
-              <div id="co_prev2Job" hidden>
-                <div class="co-sub">Co-applicant second previous employer</div>
-                <div class="form-grid">
-                  <div class="field"><label for="co_p2emp">Second previous employer <span class="req" hidden>*</span></label><input id="co_p2emp" name="co_prev2_employer" /></div>
-                  <div class="field"><label for="co_p2empphone">Second previous employer phone <span class="req" hidden>*</span></label><input id="co_p2empphone" name="co_prev2_employer_phone" type="tel" /></div>
-                  <div class="field"><label for="co_p2title">Position or title there <span class="req" hidden>*</span></label><input id="co_p2title" name="co_prev2_title" /></div>
-                </div>
-                <div class="field" style="margin-top:.2rem;"><label>How long? <span class="req" hidden>*</span></label><div class="dur" style="max-width:240px;"><input name="co_p2job_years" inputmode="numeric" maxlength="2" data-num placeholder="Years" aria-label="Years at co-applicant second previous job" /><input name="co_p2job_months" inputmode="numeric" maxlength="2" data-num placeholder="Months" aria-label="Months at co-applicant second previous job (0 to 11)" /></div></div>
               </div>
 
               <div class="co-sub">Co-applicant other income</div>
@@ -531,8 +512,8 @@
   // Nothing inside a part of the form that is hidden is checked or sent.
   function shown(el) { return !el.closest('[hidden]'); }
 
-  // Work history: lenders need two years. Under two years at the current job makes the
-  // previous employer required; still under two years with that one brings in a second.
+  // Work history: under two years at the current job makes the previous employer required.
+  // One previous employer is all that is asked, even when the two add up to less.
   // '' is the applicant, 'co_' the co-applicant.
   function monthsAt(p, t) {
     var y = form.elements[p + t + '_years'].value, m = form.elements[p + t + '_months'].value;
@@ -540,17 +521,14 @@
   }
   function workHistory(p) {
     // A co-applicant with no employer (living on other income) has no work history to give.
-    if (p && !form.elements.co_employer.value.trim()) return { needPrev: false, needPrev2: false };
-    var cur = monthsAt(p, 'job'), prev = monthsAt(p, 'pjob');
-    var needPrev = cur !== null && cur < 24;
-    return { needPrev: needPrev, needPrev2: needPrev && prev !== null && cur + prev < 24 };
+    if (p && !form.elements.co_employer.value.trim()) return { needPrev: false };
+    var cur = monthsAt(p, 'job');
+    return { needPrev: cur !== null && cur < 24 };
   }
   function syncWorkHistory() {
     ['', 'co_'].forEach(function (p) {
-      var h = workHistory(p), one = document.getElementById(p + 'prevJob'), two = document.getElementById(p + 'prev2Job');
+      var h = workHistory(p), one = document.getElementById(p + 'prevJob');
       one.querySelectorAll('.req').forEach(function (star) { star.hidden = !h.needPrev; });
-      two.querySelectorAll('.req').forEach(function (star) { star.hidden = false; });
-      two.hidden = !h.needPrev2;
     });
   }
   ['input', 'change', 'click'].forEach(function (ev) {
@@ -630,11 +608,11 @@
     form.querySelectorAll('[data-num][name$="_months"]').forEach(function (el) {
       if (el.value && shown(el)) mark(el, parseInt(el.value, 10) <= 11, 'Months should be a number from 0 to 11. Put full years in the Years box.');
     });
-    // Two years of work history (see workHistory above).
+    // The previous employer, when the current job is under two years (see workHistory above).
     ['', 'co_'].forEach(function (p) {
       if (p && !coUsed()) return;
       var h = workHistory(p), whose = p ? 'the co-applicant’s' : 'your';
-      [[h.needPrev, 'prev', 'pjob', 'previous employer'], [h.needPrev2, 'prev2', 'p2job', 'second previous employer']].forEach(function (b) {
+      [[h.needPrev, 'prev', 'pjob', 'previous employer']].forEach(function (b) {
         var names = [p + b[1] + '_employer', p + b[1] + '_employer_phone', p + b[1] + '_title'];
         if (!b[0]) {
           // No longer asked for: an empty box keeps no highlight from an earlier try.
@@ -663,7 +641,7 @@
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
     form.querySelectorAll('[hidden] [name]').forEach(function (el) { delete data[el.name]; });
-    // Tells the CRM this is the form with each address in parts and two years of work history.
+    // Tells the CRM this is the form with each address in parts and its work history rule.
     data.form_version = 2;
     function digits(x) { return String(x || '').replace(/\D/g, ''); }
     if (data.ssn) data.ssn = digits(data.ssn);
