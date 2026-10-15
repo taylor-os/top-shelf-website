@@ -211,7 +211,7 @@
 
           <div class="appsec">
             <h3>Current address</h3>
-            <p class="appsec-hint">Lenders need at least the past 2 years of residence.</p>
+            <p class="appsec-hint">Lenders like to see 2 years of address history. If you've lived here less than 2 years, add your previous address below.</p>
             <div class="field"><label for="addr">Street address <span class="req">*</span></label><input id="addr" name="address" required autocomplete="address-line1" /></div>
             <div class="addr-row">
               <div class="field addr-city"><label for="city">City <span class="req">*</span></label><input id="city" name="city" required autocomplete="address-level2" /></div>
@@ -242,7 +242,7 @@
 
           <div class="appsec">
             <h3>Employment information</h3>
-            <p class="appsec-hint">Lenders need at least the past 2 years of employment.</p>
+            <p class="appsec-hint">Lenders like to see 2 years of work history. If you've been at this job less than 2 years, add your previous employer below.</p>
             <div class="form-grid">
               <div class="field"><label for="emp">Employer <span class="req">*</span></label><input id="emp" name="employer" required /></div>
               <div class="field"><label for="empphone">Employer phone <span class="req">*</span></label><input id="empphone" name="employer_phone" type="tel" required /></div>
@@ -302,7 +302,7 @@
               <label class="co-same"><input type="checkbox" id="coSameAddr" name="co_same_address" value="yes" checked /> <span>Co-applicant lives at the same address as me</span></label>
               <div id="coAddr" hidden>
                 <div class="co-sub">Co-applicant current address</div>
-                <p class="appsec-hint">Lenders need at least the past 2 years of residence.</p>
+                <p class="appsec-hint">Lenders like to see 2 years of address history. If the co-applicant has lived there less than 2 years, add their previous address below.</p>
                 <div class="field"><label for="co_addr">Street address</label><input id="co_addr" name="co_address" autocomplete="off" /></div>
                 <div class="addr-row">
                   <div class="field addr-city"><label for="co_city">City</label><input id="co_city" name="co_city" autocomplete="off" /></div>
@@ -329,7 +329,7 @@
               </div>
 
               <div class="co-sub">Co-applicant employment</div>
-              <p class="appsec-hint">Lenders need at least the past 2 years of employment.</p>
+              <p class="appsec-hint">Lenders like to see 2 years of work history. If the co-applicant has been at this job less than 2 years, add their previous employer below.</p>
               <div class="form-grid">
                 <div class="field"><label for="co_emp">Employer</label><input id="co_emp" name="co_employer" /></div>
                 <div class="field"><label for="co_empphone">Employer phone</label><input id="co_empphone" name="co_employer_phone" type="tel" /></div>
@@ -619,7 +619,7 @@
           names.concat(p + b[2] + '_years').forEach(function (n) { if (!f[n].value.trim()) f[n].setAttribute('aria-invalid', 'false'); });
           return;
         }
-        var msg = 'Lenders need at least the past 2 years of employment. Please fill in ' + whose + ' ' + b[3] + '.';
+        var msg = 'Lenders like to see 2 years of work history. Please fill in ' + whose + ' ' + b[3] + '.';
         names.forEach(function (n) { mark(f[n], !!f[n].value.trim(), msg); });
         if (monthsAt(p, b[2]) === null) mark(f[p + b[2] + '_years'], false, msg);
       });
