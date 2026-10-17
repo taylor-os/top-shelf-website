@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="3D Smoke Shop &amp; Vape Shop at 3115 S Cooper St, Unit 275, Arlington, TX. Tobacco shop and cigar shop, open from 8 am Monday to Saturday. Adults 21+ only. Call (682) 270-0359.">
+<meta name="theme-color" content="#141318">
+<title>3D Smoke Shop &amp; Vape Shop | Tobacco and Cigar Shop in Arlington, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="3D Smoke Shop &amp; Vape Shop | Arlington, TX">
+<meta property="og:description" content="Tobacco shop and cigar shop at 3115 S Cooper St, Unit 275, Arlington. Open from 8 am Monday to Saturday. Adults 21+ only.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/3d-smoke-shop-arlington/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23FFC23D' d='M32 6 56 19 32 32 8 19Z'/%3E%3Cpath fill='%23FF4FAE' d='M8 19 32 32V60L8 47Z'/%3E%3Cpath fill='%234C86FF' d='M56 19 32 32V60L56 47Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "3D Smoke Shop & Vape Shop",
+  "telephone": "+1-682-270-0359",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3115 S Cooper St Unit 275",
+    "addressLocality": "Arlington",
+    "addressRegion": "TX",
+    "postalCode": "76015",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "08:00", "closes": "00:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "21:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=11020431146890334485"
+}
+</script>
+<style>
+/* ================================================================
+   3D Smoke Shop & Vape Shop - one-page demo
+   Deep charcoal with the jewel colours from their own display case
+   (emerald, sapphire, magenta, gold). The device is depth: an
+   isometric cube mark, extruded block type, keycap buttons that
+   press down, and photo frames stacked like layers.
+   ================================================================ */
+:root{
+  --char:#141318;
+  --char-2:#1E1D25;
+  --paper:#F3F0E8;
+  --white:#FFFFFF;
+  --emerald:#1ED68A; --emerald-d:#0E8A57;
+  --sapphire:#4C86FF; --sapphire-d:#1F4FC2;
+  --magenta:#FF4FAE; --magenta-d:#B5226F;
+  --gold:#FFC23D; --gold-d:#B8841C;
+  --on-char-muted:#B9B6C3;
+  --on-paper-muted:#4A4852;
+  --rule:rgba(20,19,24,.14);
+  --rule-char:rgba(255,255,255,.16);
+  --display:'Bungee','Arial Black',Impact,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--char);background:var(--char);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.on-light :focus-visible{outline-color:var(--sapphire-d)}
+::selection{background:var(--gold);color:var(--char)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--gold);color:var(--char);font-weight:800;border-radius:10px;text-decoration:none}
+.skip:focus{top:1rem}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.6em;font-size:.8125rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;line-height:1.2}
+.eyebrow svg{width:1.1em;height:1.1em;flex:none}
+
+/* keycap buttons: a solid edge underneath, the key travels down on press */
+.btn{
+  --face:var(--gold);--edge:var(--gold-d);--ink:var(--char);
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.8rem 1.4rem;margin-bottom:5px;border-radius:14px;border:0;
+  background:var(--face);color:var(--ink);
+  font:800 1.0625rem/1 var(--body);text-decoration:none;white-space:nowrap;
+  box-shadow:0 5px 0 var(--edge);
+  transition:transform .14s var(--ease),box-shadow .14s var(--ease);
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-white{--face:#fff;--edge:#8E8A9C}
+.btn-ink{--face:var(--char);--edge:#000;--ink:#fff}
+.btn-emerald{--face:var(--emerald);--edge:var(--emerald-d)}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--edge)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--edge)}
+  .btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--edge)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon --------------------------------- */
+.ribbon{background:var(--gold);color:var(--char);text-align:center;font-size:.75rem;font-weight:600;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{font-weight:800;text-underline-offset:2px}
+
+/* ---- header ------------------------------------------------------ */
+.top{position:sticky;top:0;z-index:50;background:rgba(20,19,24,.94);color:#fff;border-bottom:1px solid var(--rule-char);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--display);font-size:1rem;line-height:1;text-decoration:none;white-space:nowrap}
+.brand svg{width:1.75rem;height:1.75rem;flex:none}
+.top-right{display:flex;align-items:center;gap:1.25rem;min-width:0}
+.top nav{display:none;gap:1.4rem;font-size:.9375rem;font-weight:600}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:3px;text-underline-offset:6px}
+.top .place{font-size:.8125rem;font-weight:600;color:var(--on-char-muted);white-space:nowrap}
+.top .btn{display:none;min-height:2.5rem;padding:.5rem 1rem;font-size:.9375rem;border-radius:11px;box-shadow:0 4px 0 var(--edge);margin-bottom:4px}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:900px){.top nav{display:flex}}
+
+.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:600;color:var(--on-char-muted);white-space:nowrap}
+.status::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--on-char-muted);flex:none}
+.status.is-open{color:#fff}
+.status.is-open::before{background:var(--emerald);box-shadow:0 0 0 4px rgba(30,214,138,.22)}
+.hero .status{padding:.38rem .85rem;border-radius:999px;background:rgba(20,19,24,.6);border:1px solid var(--rule-char)}
+
+/* ---- hero -------------------------------------------------------- */
+/* Their own photo fills the hero. Phones: the lit case shows at the top,
+   then the copy sits on a charcoal fade. Desktop: copy on the left,
+   the colour of the shelves opens up on the right. */
+.hero{position:relative;color:#fff;background:var(--char);overflow:clip;padding:9.5rem 0 2.25rem}
+.hero-bg{position:absolute;inset:0;margin:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+@media (min-width:900px){.hero-bg img{object-position:50% 6%}}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,19,24,.12) 0%,rgba(20,19,24,.3) 22%,rgba(20,19,24,.86) 46%,var(--char) 70%);
+}
+.hero-copy{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;max-width:40rem}
+.hero h1{display:flex;flex-direction:column;align-items:flex-start;padding:0 14px 10px 0}
+.h-3d{
+  font-size:clamp(6.25rem,34vw,8rem);line-height:.82;color:#fff;
+  text-shadow:3px 3px 0 var(--emerald),6px 6px 0 var(--sapphire),9px 9px 0 var(--magenta),12px 12px 0 var(--gold);
+  animation:lift .8s .1s var(--ease) both;
+}
+.h-main{
+  margin-top:.5rem;font-size:clamp(2.1rem,10.5vw,3rem);line-height:.95;color:#fff;
+  text-shadow:1px 1px 0 var(--sapphire-d),2px 2px 0 var(--sapphire-d),3px 3px 0 var(--sapphire-d),4px 4px 0 var(--sapphire-d);
+}
+.h-sub{margin-top:.55rem;font-size:clamp(1.15rem,5.4vw,1.5rem);line-height:1;color:var(--gold)}
+@keyframes lift{
+  from{transform:translate(9px,9px);text-shadow:0 0 0 var(--emerald),0 0 0 var(--sapphire),0 0 0 var(--magenta),0 0 0 var(--gold)}
+  to{transform:none;text-shadow:3px 3px 0 var(--emerald),6px 6px 0 var(--sapphire),9px 9px 0 var(--magenta),12px 12px 0 var(--gold)}
+}
+.hero-sub{max-width:31rem;color:var(--on-char-muted);font-size:1rem}
+.hero-sub strong{color:#fff;font-weight:600}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .95rem .4rem .45rem;
+  border:1px solid var(--rule-char);border-radius:999px;background:rgba(255,255,255,.08);
+  font-size:.9375rem;font-weight:600;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.6rem;height:1.6rem;padding:.28rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04}
+.rating .sep{color:var(--on-char-muted);font-weight:400}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;width:100%;margin-top:.2rem}
+
+.rise{animation:rise .6s var(--ease) both}
+.rise-2{animation-delay:.08s}.rise-3{animation-delay:.16s}.rise-4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-white{display:none} /* Call lives in the phone bar */
+}
+@media (min-width:900px){
+  .hero{display:flex;align-items:center;min-height:clamp(36rem,80vh,46rem);padding:5rem 0 5.5rem}
+  .hero-bg::after{
+    background:
+      linear-gradient(90deg,var(--char) 0%,rgba(20,19,24,.9) 30%,rgba(20,19,24,.42) 62%,rgba(20,19,24,.12) 100%),
+      linear-gradient(0deg,rgba(20,19,24,.7) 0%,transparent 30%);
+  }
+  .hero-copy{gap:1.15rem}
+  .h-3d{font-size:clamp(8rem,13vw,11rem);text-shadow:4px 4px 0 var(--emerald),8px 8px 0 var(--sapphire),12px 12px 0 var(--magenta),16px 16px 0 var(--gold)}
+  @keyframes lift{
+    from{transform:translate(12px,12px);text-shadow:0 0 0 var(--emerald),0 0 0 var(--sapphire),0 0 0 var(--magenta),0 0 0 var(--gold)}
+    to{transform:none;text-shadow:4px 4px 0 var(--emerald),8px 8px 0 var(--sapphire),12px 12px 0 var(--magenta),16px 16px 0 var(--gold)}
+  }
+  .h-main{font-size:clamp(3rem,5vw,4.25rem);text-shadow:1px 1px 0 var(--sapphire-d),2px 2px 0 var(--sapphire-d),3px 3px 0 var(--sapphire-d),4px 4px 0 var(--sapphire-d),5px 5px 0 var(--sapphire-d),6px 6px 0 var(--sapphire-d)}
+  .h-sub{font-size:clamp(1.5rem,2.4vw,2rem)}
+  .hero-sub{font-size:1.1875rem}
+}
+
+/* ---- the four blocks --------------------------------------------- */
+.blocks-sec{background:var(--char);padding:1rem 0 clamp(3.25rem,8vw,5rem)}
+.blocks{list-style:none;margin:0;padding:0 8px 8px 0;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.2rem}
+.block{
+  --c:var(--emerald);--d:var(--emerald-d);
+  display:flex;flex-direction:column;justify-content:space-between;gap:.5rem;min-width:0;
+  padding:1rem 1.05rem 1.05rem;border-radius:16px;background:var(--c);color:var(--char);
+  box-shadow:3px 3px 0 var(--d),6px 6px 0 var(--d);
+}
+.block.b2{--c:var(--sapphire);--d:var(--sapphire-d)}
+.block.b3{--c:var(--magenta);--d:var(--magenta-d)}
+.block.b4{--c:var(--gold);--d:var(--gold-d)}
+.block strong{display:flex;align-items:center;gap:.3rem;font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,8vw,2.6rem);line-height:1;white-space:nowrap}
+.block strong svg{width:.7em;height:.7em;fill:currentColor}
+.block span{font-size:.875rem;font-weight:700;line-height:1.3}
+@media (min-width:900px){
+  .blocks{grid-template-columns:repeat(4,1fr);gap:1.5rem}
+  .block{padding:1.4rem 1.4rem 1.5rem;box-shadow:4px 4px 0 var(--d),8px 8px 0 var(--d)}
+  .block span{font-size:.9375rem}
+}
+
+/* ---- sections ------------------------------------------------------ */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.paper{background:var(--paper);color:var(--char)}
+.head{max-width:44rem;margin-bottom:clamp(1.75rem,4vw,3rem)}
+.head .eyebrow{margin-bottom:1rem}
+.head h2{font-size:clamp(2rem,7.6vw,3.75rem)}
+.paper .eyebrow{color:var(--sapphire-d)}
+
+/* ---- the shop ------------------------------------------------------ */
+.shop-grid{display:grid;gap:2.25rem}
+.kinds{list-style:none;margin:0;padding:0;border-top:3px solid var(--char)}
+.kinds li{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--rule);
+  font-family:var(--display);font-size:clamp(1.8rem,8.4vw,3.5rem);line-height:1;white-space:nowrap;
+}
+.kinds li svg{width:.8em;height:.8em;flex:none;transition:transform .35s var(--ease)}
+@media (hover:hover){.kinds li:hover svg{transform:rotate(-12deg) translateY(-3px)}}
+.shop-copy{margin-top:1.4rem;max-width:32rem;color:var(--on-paper-muted);font-size:1.0625rem}
+.ask{
+  align-self:start;margin:0 10px 10px 0;padding:clamp(1.5rem,4vw,2.25rem);
+  background:var(--char);color:#fff;border-radius:20px;
+  box-shadow:5px 5px 0 var(--sapphire),10px 10px 0 var(--magenta);
+}
+.ask h3{font-size:clamp(1.5rem,5.4vw,2rem);margin-bottom:.8rem}
+.ask p{max-width:26rem;color:var(--on-char-muted)}
+.ask .tel{display:block;margin:1rem 0 1.25rem;font-family:var(--display);font-size:clamp(1.6rem,7.6vw,2.3rem);line-height:1;text-decoration:none;white-space:nowrap;color:var(--gold)}
+.ask .btn{width:100%}
+@media (min-width:900px){.shop-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:4rem;align-items:center}}
+
+/* second, tighter crop of their photo: just the middle shelves of colour */
+.case{position:relative;margin:clamp(2.75rem,6vw,4.5rem) 12px 12px 0}
+.case img{
+  width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:50% 40%;
+  border-radius:18px;background:var(--char-2);
+  box-shadow:4px 4px 0 var(--emerald),8px 8px 0 var(--sapphire),12px 12px 0 var(--magenta);
+}
+.case figcaption{
+  position:absolute;left:.9rem;bottom:.9rem;max-width:calc(100% - 1.8rem);padding:.45rem .85rem;border-radius:999px;
+  background:var(--char);color:#fff;font-size:.8125rem;font-weight:700;
+}
+@media (min-width:900px){
+  .case img{aspect-ratio:4/5;object-position:6% 60%;border-radius:24px;box-shadow:6px 6px 0 var(--emerald),12px 12px 0 var(--sapphire),18px 18px 0 var(--magenta)}
+  .case{margin-right:18px;margin-bottom:18px;max-width:420px}
+  .case figcaption{left:1.4rem;bottom:1.4rem;font-size:.875rem}
+}
+
+/* ---- reviews --------------------------------------------------------- */
+.reviews{background:var(--char);color:#fff;text-align:center}
+.reviews .eyebrow{color:var(--gold)}
+.score{
+  display:inline-block;font-family:var(--display);font-size:clamp(6.5rem,34vw,13rem);line-height:.85;margin:1rem 0 1.4rem;padding:0 12px 12px 0;
+  color:#fff;text-shadow:3px 3px 0 var(--gold-d),6px 6px 0 var(--gold-d),9px 9px 0 var(--gold-d);
+}
+/* one row of five: dim underneath, the same row in gold on top, clipped to 90% (4.5 of 5) */
+.stars{position:relative;display:block;width:max-content;margin:0 auto;font:400 clamp(2.25rem,12vw,3rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap;color:rgba(255,255,255,.18)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:90%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-family:var(--body);font-weight:800;font-size:clamp(1.45rem,4.6vw,2.1rem);letter-spacing:-.02em;line-height:1.15;margin-top:1.4rem}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:26rem;margin:.9rem auto 0;color:var(--on-char-muted)}
+.reviews .btn{margin-top:1.9rem}
+
+/* ---- visit ------------------------------------------------------------ */
+.visit-grid{display:grid;gap:1.5rem;padding-right:8px}
+.card{padding:clamp(1.4rem,4vw,2.1rem);border-radius:20px;min-width:0}
+.card.white{background:#fff;color:var(--char);box-shadow:4px 4px 0 var(--sapphire),8px 8px 0 var(--sapphire-d)}
+.card.emerald{background:var(--emerald);color:var(--char);box-shadow:4px 4px 0 var(--emerald-d),8px 8px 0 var(--emerald-d)}
+.card.char{background:var(--char);color:#fff;box-shadow:4px 4px 0 var(--magenta),8px 8px 0 var(--magenta-d)}
+.card .label{display:block;margin-bottom:.9rem;font-size:.8125rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.card.white .label{color:var(--sapphire-d)}
+.card.char .label{color:var(--gold)}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.58rem 0;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:800;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--on-paper-muted);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.84em}}
+.hours .today dd{color:var(--char);font-weight:800}
+.hours .today dt::after{content:"Today";padding:.2rem .5rem;border-radius:99px;background:var(--gold);color:var(--char);font-size:.6875rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.age-note{margin-top:1rem;padding-top:1rem;border-top:2px solid var(--char);font-weight:800;font-size:.9375rem}
+.big{display:block;font-family:var(--display);font-size:clamp(1.45rem,6.4vw,2.1rem);line-height:1.1;text-decoration:none}
+address.big{font-style:normal}
+.card .note{margin-top:.7rem}
+.card .btn{margin-top:1.3rem;width:100%}
+.stack{display:grid;gap:1.5rem;min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:2rem}}
+
+/* ---- closing CTA -------------------------------------------------------- */
+.close{background:var(--gold);color:var(--char);text-align:center;padding:clamp(4rem,11vw,7.5rem) 0}
+.close h2{font-size:clamp(2.2rem,9.4vw,5.25rem);text-shadow:2px 2px 0 #fff,4px 4px 0 var(--gold-d)}
+.close p{max-width:32rem;margin:1.3rem auto 0;font-size:1.125rem;font-weight:600}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem;margin-top:1.9rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer --------------------------------------------------------------- */
+.foot{background:var(--char);color:var(--on-char-muted);font-size:.9375rem}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{color:#fff;font-size:1.05rem;margin-bottom:.8rem;white-space:normal}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;display:inline-flex;align-items:center;gap:.5rem;color:#fff;font-weight:800;letter-spacing:.04em}
+.foot .age::before{content:"";width:.6rem;height:.6rem;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+.credit{border-top:1px solid var(--rule-char);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar ------------------------------------------------------ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.7rem + env(safe-area-inset-bottom));
+  background:rgba(20,19,24,.96);border-top:1px solid var(--rule-char);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:1rem;border-radius:12px;box-shadow:0 4px 0 var(--edge);margin-bottom:4px}
+@media (max-width:720px){body{padding-bottom:calc(4.6rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion --------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 64 64"><path fill="#FFC23D" d="M32 6 56 19 32 32 8 19Z"/><path fill="#FF4FAE" d="M8 19 32 32V60L8 47Z"/><path fill="#4C86FF" d="M56 19 32 32V60L56 47Z"/></symbol>
+  <symbol id="i-cube-e" viewBox="0 0 64 64"><path fill="#1ED68A" d="M32 6 56 19 32 32 8 19Z"/><path fill="#0E8A57" d="M8 19 32 32V60L8 47Z"/><path fill="#141318" d="M56 19 32 32V60L56 47Z"/></symbol>
+  <symbol id="i-cube-m" viewBox="0 0 64 64"><path fill="#FF4FAE" d="M32 6 56 19 32 32 8 19Z"/><path fill="#B5226F" d="M8 19 32 32V60L8 47Z"/><path fill="#141318" d="M56 19 32 32V60L56 47Z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for 3D Smoke Shop &amp; Vape Shop by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="3D Smoke Shop and Vape Shop, back to top">
+      <svg aria-hidden="true"><use href="#i-cube"/></svg><span>3D Smoke Shop</span>
+    </a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#shop">The shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <span class="place">Arlington, TX</span>
+      <a class="btn" href="tel:+16822700359"><svg aria-hidden="true"><use href="#i-phone"/></svg>(682) 270-0359</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero on-char" id="home">
+    <figure class="hero-bg" aria-hidden="true">
+      <img src="assets/listing.jpg" width="1400" height="1050" fetchpriority="high" decoding="async" alt="">
+    </figure>
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="status js-status rise">Open from 8 am Monday to Saturday</p>
+        <h1 class="rise rise-2" aria-label="3D Smoke Shop &amp; Vape Shop">
+          <span class="h-3d" aria-hidden="true">3D</span>
+          <span class="h-main" aria-hidden="true">Smoke Shop</span>
+          <span class="h-sub" aria-hidden="true">&amp; Vape Shop</span>
+        </h1>
+        <p class="hero-sub rise rise-3">Tobacco shop and cigar shop at <strong>3115 S Cooper St, Unit 275</strong> in Arlington. Doors open at 8 am, Monday to Saturday.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener" aria-label="Rated 4.5 out of 5 from 610 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <span>4.5</span>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep">·</span>
+          <span>610 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn" href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-white" href="tel:+16822700359"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (682) 270-0359</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Four blocks -->
+  <section class="blocks-sec" aria-label="At a glance">
+    <div class="wrap">
+      <ul class="blocks">
+        <li class="block reveal"><strong>4.5<svg aria-hidden="true"><use href="#i-star"/></svg></strong><span>Stars on Google</span></li>
+        <li class="block b2 reveal"><strong>610</strong><span>Google reviews</span></li>
+        <li class="block b3 reveal"><strong>8 am</strong><span>Doors open, Monday to Saturday</span></li>
+        <li class="block b4 reveal"><strong>#275</strong><span>Our unit at 3115 S Cooper St</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The shop -->
+  <section class="section paper on-light" id="shop">
+    <div class="wrap">
+      <div class="shop-grid">
+        <div class="reveal">
+          <div class="head">
+            <p class="eyebrow"><svg aria-hidden="true"><use href="#i-cube"/></svg>The shop</p>
+            <h2>Tobacco and cigars on S Cooper St</h2>
+          </div>
+          <ul class="kinds">
+            <li><svg aria-hidden="true"><use href="#i-cube-e"/></svg>Tobacco shop</li>
+            <li><svg aria-hidden="true"><use href="#i-cube-m"/></svg>Cigar shop</li>
+          </ul>
+          <p class="shop-copy">You'll find us in Unit 275 at 3115 S Cooper St, Arlington. Look for the lit glass case full of color.</p>
+        </div>
+        <div class="ask reveal">
+          <h3>Hunting for one thing?</h3>
+          <p>Want to know if it is in the case? Call and ask.</p>
+          <a class="tel" href="tel:+16822700359">(682) 270-0359</a>
+          <a class="btn" href="tel:+16822700359"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+        </div>
+      </div>
+      <figure class="case reveal">
+        <img src="assets/listing.jpg" width="1400" height="1050" loading="lazy" decoding="async"
+             alt="Our glass display case, lit from above, with rows of colorful products in greens, blues, pinks and gold on glass shelves.">
+        <figcaption>Our display case, Unit 275</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews on-char" id="reviews">
+    <div class="wrap reveal">
+      <p class="eyebrow">Reviews</p>
+      <div><p class="score" aria-hidden="true">4.5</p></div>
+      <div class="stars" role="img" aria-label="4.5 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>4.5 stars from 610 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>610 of them, all on Google.</p>
+      <a class="btn btn-white" href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener"><svg aria-hidden="true" style="width:1.3em;height:1.3em"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section paper on-light" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#i-cube"/></svg>Visit</p>
+        <h2>Open 8 am to 11 pm most days</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card white reveal">
+          <span class="label">Hours</span>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>8 am to 11 pm</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>8 am to 11 pm</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>8 am to 11 pm</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>8 am to 11 pm</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>8 am to midnight</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>8 am to midnight</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>11 am to 9 pm</dd></div>
+          </dl>
+          <p class="age-note">Adults 21+ only.</p>
+        </div>
+        <div class="stack">
+          <div class="card emerald reveal">
+            <span class="label">Address</span>
+            <address class="big">3115 S Cooper St<br>Unit 275<br>Arlington, TX 76015</address>
+            <a class="btn btn-ink" href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card char on-char reveal">
+            <span class="label">Phone</span>
+            <a class="big" href="tel:+16822700359">(682) 270-0359</a>
+            <p class="status js-status note">Open from 8 am Monday to Saturday</p>
+            <a class="btn btn-white" href="tel:+16822700359"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="close on-light">
+    <div class="wrap reveal">
+      <h2>See you on S Cooper St.</h2>
+      <p>3115 S Cooper St, Unit 275, Arlington, TX 76015. Open from 8 am Monday to Saturday and from 11 am on Sunday.</p>
+      <div class="close-ctas">
+        <a class="btn btn-ink" href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-white" href="tel:+16822700359"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (682) 270-0359</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand"><svg aria-hidden="true"><use href="#i-cube"/></svg><span>3D Smoke Shop &amp; Vape Shop</span></p>
+      <p>3115 S Cooper St, Unit 275, Arlington, TX 76015</p>
+      <p><a href="tel:+16822700359">(682) 270-0359</a> · <a href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">Adults 21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn" href="https://www.google.com/maps?cid=11020431146890334485" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-white" href="tel:+16822700359"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Minutes from midnight, Sunday first. Fri/Sat close at midnight (1440).
+  var OPEN=[660,480,480,480,480,480,480], CLOSE=[1260,1380,1380,1380,1380,1440,1440];
+  function label(m){ if(m===1440) return 'midnight'; var h=Math.floor(m/60); return (h%12||12)+(h>=12?' pm':' am'); }
+  function isOpen(d,m){ return m>=OPEN[d] && m<CLOSE[d]; }
+  function text(d,m){
+    if(isOpen(d,m)) return 'Open now until '+label(CLOSE[d]);
+    return m<OPEN[d] ? 'Closed now, opens '+label(OPEN[d]) : 'Closed now, opens '+label(OPEN[(d+1)%7])+' tomorrow';
+  }
+  // self-check: Sun 10:59 am closed, Sun 8:59 pm open, Sun 9 pm closed, Fri 11:59 pm open, Mon 7:59 am closed, Thu 11 pm closed
+  console.assert(!isOpen(0,659) && isOpen(0,1259) && !isOpen(0,1260) && isOpen(5,1439) && !isOpen(1,479) && !isOpen(4,1380), 'hours logic');
+  console.assert(text(0,1300)==='Closed now, opens 8 am tomorrow' && text(0,600)==='Closed now, opens 11 am' && text(5,500)==='Open now until midnight', 'hours text');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var open=isOpen(d,m), els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=text(d,m); els[i].classList.toggle('is-open',open); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Breathe Easy Vapes, a vaporizer store at 1966 S Main St, Weatherford, TX 76086. Call (682) 263-1332.">
+<meta name="theme-color" content="#F5F2EA">
+<title>Breathe Easy Vapes | Vaporizer Store in Weatherford, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Breathe Easy Vapes">
+<meta property="og:description" content="Vaporizer store at 1966 S Main St, Weatherford, TX.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/breathe-easy-vapes-weatherford/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F5F2EA'/%3E%3Cpath d='M17 27c5-5 10 5 15 0s10-5 15 0M17 37c5-5 10 5 15 0s10-5 15 0' fill='none' stroke='%233F4D31' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Albert+Sans:wght@400..600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Breathe Easy Vapes",
+  "telephone": "+1-682-263-1332",
+  "image": "https://www.topshelfsolutions.io/demo/breathe-easy-vapes-weatherford/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1966 S Main St",
+    "addressLocality": "Weatherford",
+    "addressRegion": "TX",
+    "postalCode": "76086",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=13045813327053829129",
+  "sameAs": ["https://www.facebook.com/breatheeasyvapes"]
+}
+</script>
+<style>
+/* ================================================================
+   Breathe Easy Vapes - one-page demo
+   Light and airy: warm paper, the shop's own olive, brass from the
+   Edison bulbs. Lots of room around everything.
+   Signature device: the week hung as seven Edison bulbs. Cord length
+   is how long we're open that day; today's bulb lights up when the
+   shop is open.
+   ================================================================ */
+:root{
+  --paper:#F5F2EA;
+  --paper-2:#FBF9F4;
+  --sage-bg:#E7EADE;
+  --olive:#3F4D31;
+  --olive-deep:#2F3A25;
+  --ink:#1F251B;
+  --muted:#5B6353;
+  --brass:#B5843F;
+  --brass-text:#86602A;
+  --brass-soft:#D7A764;
+  --glow:#F2B866;
+  --line:rgba(31,37,27,.12);
+  --line-brass:rgba(181,132,63,.45);
+  --serif:'Hedvig Letters Serif',Georgia,'Times New Roman',serif;
+  --sans:'Albert Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--paper);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--olive)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:72rem;margin-inline:auto;padding-inline:var(--gutter)}
+.label{
+  display:flex;align-items:center;gap:.65rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-text);
+}
+.label::before{content:"";width:1.4rem;height:1px;background:currentColor;flex:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--olive);color:var(--paper);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Ribbon (the one attribution) ---------- */
+.ribbon{
+  background:var(--olive-deep);color:rgba(245,242,234,.78);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.5rem var(--gutter);
+}
+.ribbon a{color:var(--paper);text-underline-offset:2px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3.25rem;padding:.8rem 1.4rem;border-radius:999px;
+  font-family:var(--sans);font-weight:600;font-size:.9375rem;letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;border:1px solid transparent;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease);
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-olive{background:var(--olive);color:var(--paper)}
+.btn-line{border-color:rgba(31,37,27,.3);color:var(--ink);background:transparent}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-olive:hover{background:var(--olive-deep);box-shadow:0 12px 28px -12px rgba(63,77,49,.7)}
+  .btn-line:hover{border-color:var(--olive);color:var(--olive)}
+}
+.btn:active{transform:scale(.97)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* ---------- Brand mark ---------- */
+.mark{
+  display:grid;place-items:center;flex:none;width:2.4rem;aspect-ratio:1;border-radius:50%;
+  border:1px solid var(--olive);color:var(--olive);background:var(--paper-2);
+}
+.mark svg{width:1.3rem;height:1.3rem}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;min-width:0}
+.brand b{font-family:var(--serif);font-weight:400;font-size:1.125rem;letter-spacing:-.01em;white-space:nowrap}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;isolation:isolate;
+  background:
+    radial-gradient(60rem 30rem at 85% 0%,rgba(215,167,100,.16),rgba(215,167,100,0) 70%),
+    radial-gradient(50rem 30rem at 0% 100%,rgba(138,154,120,.18),rgba(138,154,120,0) 70%),
+    var(--paper);
+}
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem var(--gutter);max-width:72rem;margin-inline:auto;
+}
+.top-call{
+  display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;
+  font-weight:600;font-size:.875rem;text-decoration:none;
+  padding:.55rem .9rem;border:1px solid rgba(31,37,27,.25);border-radius:999px;
+  transition:border-color .18s var(--ease),color .18s var(--ease);
+}
+.top-call svg{width:.95rem;height:.95rem}
+.top-call .num{display:none}
+@media (min-width:480px){.top-call .num{display:inline}.top-call .word{display:none}}
+@media (hover:hover){.top-call:hover{border-color:var(--olive);color:var(--olive)}}
+
+.hero-grid{
+  display:grid;gap:1.15rem;max-width:72rem;margin-inline:auto;
+  padding:.25rem var(--gutter) 2.5rem;
+}
+/* The arch: a window into the shop, with a brass outline that breathes */
+.arch{position:relative;margin:.6rem .4rem 0}
+.arch::before{
+  content:"";position:absolute;inset:-.6rem;z-index:-1;pointer-events:none;
+  border:1px solid var(--line-brass);
+  border-radius:50% 50% 1.6rem 1.6rem / 40% 40% 1.6rem 1.6rem;
+}
+.arch-frame{
+  position:relative;overflow:hidden;background:var(--sage-bg);
+  height:clamp(15rem,33svh,21rem);
+  border-radius:50% 50% 1rem 1rem / 38% 38% 1rem 1rem;
+  box-shadow:0 30px 60px -36px rgba(47,58,37,.55);
+}
+.arch-frame img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 50%;
+  filter:saturate(.95) contrast(1.02);
+}
+.arch-frame::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(242,184,102,.12) 0%,rgba(242,184,102,0) 40%,rgba(31,37,27,.32) 100%);
+}
+.chip{
+  position:absolute;left:.85rem;bottom:.85rem;z-index:2;
+  display:flex;width:max-content;max-width:calc(100% - 1.7rem);align-items:center;gap:.5rem;white-space:nowrap;
+  font-size:.8125rem;font-weight:600;
+  padding:.42rem .8rem;border-radius:999px;background:rgba(251,249,244,.94);color:var(--muted);
+  box-shadow:0 6px 18px -8px rgba(31,37,27,.4);
+}
+.chip[hidden]{display:none}
+.chip .dot{width:.5rem;height:.5rem;border-radius:50%;background:#A39C8E;flex:none}
+.chip.is-open{color:var(--ink)}
+.chip.is-open .dot{background:var(--glow);box-shadow:0 0 0 3px rgba(242,184,102,.3)}
+
+h1{font-size:clamp(3.1rem,13.6vw,7.25rem);line-height:.93;letter-spacing:-.035em}
+h1 span{display:block}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;
+  font-size:.875rem;white-space:nowrap;color:var(--muted);
+}
+.rating strong{font-family:var(--serif);font-weight:400;font-size:1.375rem;color:var(--ink);line-height:1}
+.rating .g{width:1.15rem;height:1.15rem;flex:none}
+.stars{color:var(--brass);letter-spacing:.08em;font-size:.875rem}
+@media (hover:hover){.rating:hover span:last-child{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
+.hero .btn{flex:1 1 9.5rem}
+@media (max-width:420px){.hero .btn{padding-inline:.9rem}}
+.hero-sub{max-width:30rem;color:var(--muted)}
+
+@media (min-width:900px){
+  .hero-grid{
+    grid-template-columns:1.05fr .95fr;grid-template-areas:"text arch";
+    align-items:center;gap:2rem 4rem;
+    min-height:clamp(36rem,calc(100svh - 7rem),48rem);padding-bottom:4rem;
+  }
+  .hero-text{grid-area:text;display:grid;gap:1.4rem;align-content:center}
+  .arch{grid-area:arch;justify-self:end;width:100%;max-width:31rem;margin:1rem 1rem 1rem 0}
+  .arch-frame{height:clamp(30rem,72svh,42rem);border-radius:50% 50% 1.25rem 1.25rem / 34% 34% 1.25rem 1.25rem}
+  .arch::before{border-radius:50% 50% 1.85rem 1.85rem / 34% 34% 1.85rem 1.85rem}
+  .arch-frame img{object-position:60% 50%}
+  .hero .btn{flex:0 0 auto}
+}
+@media (max-width:899px){
+  .hero-text{display:grid;gap:1rem}
+  /* phones: name, rating and the buttons right under the photo; the line of copy follows */
+  .hero-sub{order:4}
+}
+
+/* ---------- Sections ---------- */
+section{padding:clamp(4.5rem,11vw,8rem) 0}
+h2{font-size:clamp(2.2rem,8.6vw,4rem);margin-top:1.1rem}
+.lede{margin-top:1.2rem;max-width:36rem;color:var(--muted);font-size:1.125rem}
+
+/* The shop */
+.shop{text-align:left}
+.facts{
+  display:grid;margin-top:3rem;border-top:1px solid var(--line);
+}
+.facts div{padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin-top:.35rem;font-family:var(--serif);font-size:clamp(1.4rem,5.6vw,1.85rem);line-height:1.2;letter-spacing:-.01em}
+@media (min-width:820px){
+  .facts{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+  .facts div{padding:1.75rem 2rem 1.75rem 0;border-bottom:0}
+  .facts div+div{padding-left:2rem;border-left:1px solid var(--line)}
+}
+
+/* Call block (stands in for a product list) */
+.ask{padding-top:0}
+.ask-card{
+  position:relative;overflow:hidden;border-radius:1.5rem;
+  padding:clamp(1.9rem,6vw,4rem);
+  background:
+    radial-gradient(26rem 18rem at 100% 0%,rgba(242,184,102,.22),rgba(242,184,102,0) 70%),
+    var(--olive-deep);
+  color:var(--paper);
+}
+.ask-card .label{color:var(--brass-soft)}
+.ask-card h2{margin-top:1rem;max-width:32rem;color:var(--paper)}
+.ask-card h2 em{color:var(--brass-soft)}
+.ask-card p{margin-top:1rem;max-width:30rem;color:rgba(245,242,234,.78)}
+.ask-tel{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1.75rem;
+  font-weight:600;font-size:clamp(1.05rem,5.2vw,1.6rem);letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;
+  padding:.85rem 1.35rem;border-radius:999px;background:var(--brass-soft);color:var(--ink);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+}
+.ask-tel svg{width:1.05em;height:1.05em;flex:none}
+@media (hover:hover){.ask-tel:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(242,184,102,.6)}}
+.ask-tel:active{transform:scale(.97)}
+
+/* Reviews */
+.reviews{background:var(--sage-bg)}
+.rev-grid{display:grid;gap:2.25rem;align-items:center}
+.score{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}
+.score b{
+  font-family:var(--serif);font-weight:400;font-size:clamp(6rem,30vw,11rem);line-height:.8;letter-spacing:-.05em;
+  color:var(--olive);
+}
+.score span{font-size:.875rem;color:var(--muted);padding-bottom:.4rem;white-space:nowrap}
+.score .stars{display:block;font-size:1.25rem;margin-bottom:.2rem}
+.gcard{
+  display:flex;align-items:center;gap:1rem;padding:1.15rem 1.35rem;margin-top:1.75rem;max-width:26rem;
+  border:1px solid var(--line);border-radius:1rem;background:var(--paper-2);text-decoration:none;
+  transition:border-color .2s var(--ease),transform .2s var(--ease);
+}
+.gcard .g{width:2.1rem;height:2.1rem;flex:none}
+.gcard strong{display:block;font-weight:600;font-size:.9375rem}
+.gcard small{display:block;font-size:.875rem;color:var(--muted)}
+.gcard .arrow{margin-left:auto;color:var(--brass);font-size:1.25rem}
+@media (hover:hover){.gcard:hover{border-color:var(--brass);transform:translateY(-2px)}}
+@media (min-width:820px){.rev-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* Visit */
+.visit-grid{display:grid;gap:3rem;margin-top:2.75rem}
+.info{display:grid;gap:1.75rem;align-content:start}
+.info dt{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-text);margin-bottom:.4rem}
+.info dd{font-size:1.125rem;line-height:1.45}
+.info dd a{text-decoration-color:var(--line-brass);text-underline-offset:4px}
+.hours{width:100%;max-width:24rem;border-collapse:collapse;font-size:.9375rem;font-variant-numeric:tabular-nums}
+.hours th,.hours td{padding:.65rem 0;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left;font-weight:400}
+.hours td{text-align:right;padding-left:1rem}
+.hours tr.today th,.hours tr.today td{color:var(--olive);font-weight:600}
+.hours tr.today th::after{content:" \2022  today";font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-text)}
+.age{margin-top:.9rem;font-size:.875rem;color:var(--muted)}
+@media (max-width:389px){
+  .hours{font-size:.8125rem}
+  .hours tr.today th::after{content:" \2022"}
+}
+
+/* Signature: the week as seven hanging Edison bulbs */
+.week{border:1px solid var(--line);border-radius:1.5rem;background:var(--paper-2);padding:1.6rem 1.1rem 1.4rem}
+.week-head{padding-inline:.25rem}
+.week-head .cap{margin-top:.6rem;font-family:var(--serif);font-size:1.2rem;line-height:1.3;color:var(--ink)}
+.pendants{
+  display:grid;grid-template-columns:repeat(7,1fr);margin-top:1.4rem;
+  border-top:2px solid rgba(47,58,37,.75);border-radius:2px;
+}
+.pd{display:flex;flex-direction:column;align-items:center;height:12.5rem}
+/* --len = minutes open that day; Mon to Sat is 660, so the full drop is 7.5rem */
+.cord{width:1px;height:calc(var(--len) / 660 * 7.5rem);background:rgba(31,37,27,.5);transform-origin:50% 0}
+.bulb{
+  position:relative;width:1.3rem;height:1.7rem;margin-top:.5rem;
+  border-radius:50% 50% 50% 50% / 58% 58% 42% 42%;
+  border:1.5px solid rgba(31,37,27,.32);background:rgba(255,255,255,.55);
+}
+.bulb::before{
+  content:"";position:absolute;left:50%;top:-.55rem;width:.55rem;height:.55rem;margin-left:-.275rem;
+  background:#2B3024;border-radius:2px 2px 1px 1px;
+}
+.bulb::after{
+  content:"";position:absolute;left:32%;right:32%;top:38%;height:26%;
+  border:1px solid rgba(181,132,63,.55);border-top:0;border-radius:0 0 50% 50%;
+}
+.pd.today .bulb{border-color:var(--brass)}
+.pd.lit .bulb{
+  border-color:#C98E43;
+  background:radial-gradient(circle at 50% 42%,#FFF1D2 0%,#F7C97F 45%,#D9953E 100%);
+  box-shadow:0 0 0 5px rgba(242,184,102,.16),0 0 26px 8px rgba(242,184,102,.5);
+}
+.pd.lit .bulb::after{border-color:rgba(255,255,255,.85)}
+.pd .day{margin-top:auto;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pd .t{display:none;margin-top:.15rem;font-size:.75rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pd.today .day{color:var(--olive)}
+@media (min-width:600px){.pd .t{display:block}.pd{height:13.5rem}}
+@media (min-width:820px){
+  .visit-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}
+  .week{padding:2.1rem 2rem 1.75rem}
+  .bulb{width:1.6rem;height:2.1rem}
+}
+
+/* Map */
+.map{
+  margin-top:3rem;border-radius:1.5rem;overflow:hidden;border:1px solid var(--line);
+  aspect-ratio:4/3;background:var(--sage-bg);
+}
+.map iframe{width:100%;height:100%;border:0;filter:saturate(.6) sepia(.12)}
+@media (min-width:820px){.map{aspect-ratio:21/8}}
+
+/* Footer */
+footer{background:var(--olive-deep);color:rgba(245,242,234,.75);padding:3rem 0 2.25rem;font-size:.9375rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem 3rem;align-items:flex-start;justify-content:space-between}
+.foot .brand b{color:var(--paper)}
+.foot .mark{background:transparent;border-color:var(--brass-soft);color:var(--brass-soft)}
+.foot p+p{margin-top:.25rem}
+.foot a{text-underline-offset:3px}
+.foot a:focus-visible{outline-color:var(--brass-soft)}
+.credit{margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(245,242,234,.14);font-size:.8125rem}
+
+/* Sticky phone bar */
+.bar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;
+    padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom,0px));
+    background:rgba(251,249,244,.95);border-top:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.875rem}
+}
+
+/* Restrained motion: soft reveals, the arch outline breathing, the bulbs dropping in */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+@keyframes breathe{from{transform:scale(1);opacity:.55}to{transform:scale(1.018);opacity:1}}
+.arch::before{animation:breathe 4.5s ease-in-out infinite alternate}
+@keyframes glow{from{box-shadow:0 0 0 5px rgba(242,184,102,.12),0 0 18px 5px rgba(242,184,102,.38)}to{box-shadow:0 0 0 7px rgba(242,184,102,.2),0 0 32px 10px rgba(242,184,102,.58)}}
+.pd.lit .bulb{animation:glow 4.5s ease-in-out infinite alternate}
+.js .week .cord{transform:scaleY(0);transition:transform .9s var(--ease)}
+.js .week .bulb{opacity:0;transform:translateY(-6px);transition:opacity .5s var(--ease) .55s,transform .5s var(--ease) .55s}
+.js .week.in .cord{transform:scaleY(1)}
+.js .week.in .bulb{opacity:1;transform:none}
+.js .week.in .pd:nth-child(2) .cord{transition-delay:.06s}
+.js .week.in .pd:nth-child(3) .cord{transition-delay:.12s}
+.js .week.in .pd:nth-child(4) .cord{transition-delay:.18s}
+.js .week.in .pd:nth-child(5) .cord{transition-delay:.24s}
+.js .week.in .pd:nth-child(6) .cord{transition-delay:.3s}
+.js .week.in .pd:nth-child(7) .cord{transition-delay:.36s}
+.js .week.in .pd:nth-child(2) .bulb{transition-delay:.61s}
+.js .week.in .pd:nth-child(3) .bulb{transition-delay:.67s}
+.js .week.in .pd:nth-child(4) .bulb{transition-delay:.73s}
+.js .week.in .pd:nth-child(5) .bulb{transition-delay:.79s}
+.js .week.in .pd:nth-child(6) .bulb{transition-delay:.85s}
+.js .week.in .pd:nth-child(7) .bulb{transition-delay:.91s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .arch::before,.pd.lit .bulb{animation:none}
+  .js .week .cord,.js .week .bulb{opacity:1;transform:none;transition:none}
+  .btn,.gcard,.ask-tel,.top-call{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">Sample website made for Breathe Easy Vapes by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></div>
+
+<header class="hero">
+  <div class="top">
+    <a class="brand" href="#main" aria-label="Breathe Easy Vapes">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9.5c2.7-2.6 5.3 2.6 8 0s5.3-2.6 8 0M4 14.5c2.7-2.6 5.3 2.6 8 0s5.3-2.6 8 0"/></svg></span>
+      <b>Breathe Easy Vapes</b>
+    </a>
+    <a class="top-call" href="tel:+16822631332" aria-label="Call (682) 263-1332">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span class="word">Call</span><span class="num">(682) 263-1332</span>
+    </a>
+  </div>
+
+  <div class="hero-grid">
+    <div class="arch">
+      <div class="arch-frame">
+        <img src="assets/listing.jpg" alt="Inside Breathe Easy Vapes: olive green walls, Edison bulbs hanging from a dark ceiling, a wood counter at the back and tall lit glass cabinets on the right" width="1400" height="1050" fetchpriority="high" decoding="async">
+      </div>
+      <span class="chip" id="openChip" hidden><span class="dot"></span><span id="openText"></span></span>
+    </div>
+
+    <div class="hero-text">
+      <h1><span>Breathe</span><span><em>Easy</em></span><span>Vapes</span></h1>
+      <p class="hero-sub">A vaporizer store on South Main in Weatherford, open every day of the week.</p>
+      <a class="rating" href="https://www.google.com/maps?cid=13045813327053829129" target="_blank" rel="noopener" aria-label="Rated 4.9 from 308 Google reviews. Open on Google Maps.">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <strong>4.9</strong>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>308 Google reviews</span>
+      </a>
+      <div class="btn-row">
+        <a class="btn btn-olive" href="https://www.google.com/maps?cid=13045813327053829129" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get directions
+        </a>
+        <a class="btn btn-line" href="tel:+16822631332">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the shop
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <p class="label rv">The shop</p>
+      <h2 id="shop-h" class="rv">Plenty of room <em>to breathe.</em></h2>
+      <p class="lede rv">Olive walls, warm Edison bulbs overhead and a wood counter at the back. Tall glass cabinets run along the right wall, all lit up, so you can see what's there before you even reach the counter.</p>
+      <dl class="facts rv">
+        <div><dt>What we are</dt><dd>A vaporizer store</dd></div>
+        <div><dt>Where</dt><dd>1966 S Main St, Weatherford</dd></div>
+        <div><dt>When</dt><dd>Every day, from noon on Sundays</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask-card rv">
+        <p class="label">Before you make the trip</p>
+        <h2 id="ask-h">Not sure we have it? <em>Just ask.</em></h2>
+        <p>Call the counter and tell us what you're after. We'll take a look and let you know.</p>
+        <a class="ask-tel" href="tel:+16822631332">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (682) 263-1332
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-h">
+    <div class="wrap rev-grid">
+      <div class="rv">
+        <p class="label">Reviews</p>
+        <div class="score">
+          <b>4.9</b>
+          <span><span class="stars" aria-hidden="true">★★★★★</span>out of 5 on Google</span>
+        </div>
+      </div>
+      <div class="rv">
+        <h2 id="rev-h" style="margin-top:0">308 Google reviews <em>and counting.</em></h2>
+        <p class="lede">They are all on Google. Read a few, then come see the shop on South Main.</p>
+        <a class="gcard" href="https://www.google.com/maps?cid=13045813327053829129" target="_blank" rel="noopener">
+          <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>
+            <strong>4.9 stars on Google</strong>
+            <small>308 reviews</small>
+          </span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label rv">Visit</p>
+      <h2 id="visit-h" class="rv">Find us on <em>South Main.</em></h2>
+      <div class="visit-grid">
+        <dl class="info">
+          <div class="rv">
+            <dt>Address</dt>
+            <dd>1966 S Main St<br>Weatherford, TX 76086</dd>
+          </div>
+          <div class="rv">
+            <dt>Phone</dt>
+            <dd><a href="tel:+16822631332">(682) 263-1332</a></dd>
+          </div>
+          <div class="rv">
+            <dt>Hours</dt>
+            <dd>
+              <table class="hours">
+                <tbody>
+                  <tr data-days="Mon Tue Wed Thu Fri Sat"><th scope="row">Mon to Sat</th><td>10:00 am to 9:00 pm</td></tr>
+                  <tr data-days="Sun"><th scope="row">Sunday</th><td>12:00 pm to 8:00 pm</td></tr>
+                </tbody>
+              </table>
+              <p class="age">Adults 21+ only.</p>
+            </dd>
+          </div>
+          <div class="btn-row rv">
+            <a class="btn btn-olive" href="https://www.google.com/maps?cid=13045813327053829129" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-line" href="tel:+16822631332">Call the shop</a>
+          </div>
+        </dl>
+
+        <div class="week rv" aria-hidden="true">
+          <div class="week-head">
+            <p class="label">Our week</p>
+            <p class="cap">One bulb for each day. The longer the cord, the longer we're open.</p>
+          </div>
+          <div class="pendants">
+            <div class="pd" data-d="Mon" style="--len:660"><i class="cord"></i><i class="bulb"></i><span class="day">Mon</span><span class="t">10 to 9</span></div>
+            <div class="pd" data-d="Tue" style="--len:660"><i class="cord"></i><i class="bulb"></i><span class="day">Tue</span><span class="t">10 to 9</span></div>
+            <div class="pd" data-d="Wed" style="--len:660"><i class="cord"></i><i class="bulb"></i><span class="day">Wed</span><span class="t">10 to 9</span></div>
+            <div class="pd" data-d="Thu" style="--len:660"><i class="cord"></i><i class="bulb"></i><span class="day">Thu</span><span class="t">10 to 9</span></div>
+            <div class="pd" data-d="Fri" style="--len:660"><i class="cord"></i><i class="bulb"></i><span class="day">Fri</span><span class="t">10 to 9</span></div>
+            <div class="pd" data-d="Sat" style="--len:660"><i class="cord"></i><i class="bulb"></i><span class="day">Sat</span><span class="t">10 to 9</span></div>
+            <div class="pd" data-d="Sun" style="--len:480"><i class="cord"></i><i class="bulb"></i><span class="day">Sun</span><span class="t">12 to 8</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map rv">
+        <iframe title="Map to Breathe Easy Vapes, 1966 S Main St, Weatherford" src="https://www.google.com/maps?q=Breathe+Easy+Vapes,+1966+S+Main+St,+Weatherford,+TX+76086&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9.5c2.7-2.6 5.3 2.6 8 0s5.3-2.6 8 0M4 14.5c2.7-2.6 5.3 2.6 8 0s5.3-2.6 8 0"/></svg></span><b>Breathe Easy Vapes</b></div>
+      <div>
+        <p>1966 S Main St, Weatherford, TX 76086</p>
+        <p><a href="tel:+16822631332">(682) 263-1332</a></p>
+        <p>Adults 21+ only.</p>
+      </div>
+      <p><a href="https://www.facebook.com/breatheeasyvapes" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="credit">Sample website by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-olive" href="https://www.google.com/maps?cid=13045813327053829129" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-line" href="tel:+16822631332">Call</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  /* Shop hours in America/Chicago, minutes from midnight:
+     Mon to Sat 10:00 to 21:00, Sun 12:00 to 20:00. */
+  var H={Mon:[600,1260],Tue:[600,1260],Wed:[600,1260],Thu:[600,1260],Fri:[600,1260],Sat:[600,1260],Sun:[720,1200]};
+  var ORDER=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function fmt(m){var h=Math.floor(m/60),mm=('0'+(m%60)).slice(-2);return (h%12||12)+':'+mm+' '+(h<12?'am':'pm');}
+  /* status(day, minutes) -> [isOpen, text] */
+  function status(d,m){
+    var t=H[d];
+    if(m>=t[0]&&m<t[1])return [true,'Open now · until '+fmt(t[1])];
+    if(m<t[0])return [false,'Closed · opens '+fmt(t[0])];
+    var next=ORDER[(ORDER.indexOf(d)+1)%7];
+    return [false,'Closed · opens '+fmt(H[next][0])+' '+(next==='Sun'?'Sunday':'tomorrow')];
+  }
+  /* self-check: logs loudly if the hours logic breaks */
+  console.assert(status('Mon',600)[0]&&!status('Mon',599)[0]&&!status('Sat',1260)[0]&&!status('Sun',719)[0]
+    &&status('Sun',1199)[0]&&status('Sat',1270)[1].indexOf('12:00 pm Sunday')>-1
+    &&status('Sun',1250)[1].indexOf('10:00 am tomorrow')>-1&&status('Tue',1000)[1].indexOf('9:00 pm')>-1,'hours logic');
+
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+    var m=(+p.hour%24)*60+(+p.minute), s=status(p.weekday,m);
+    var chip=document.getElementById('openChip');
+    document.getElementById('openText').textContent=s[1];
+    chip.classList.toggle('is-open',s[0]);
+    chip.hidden=false;
+    document.querySelectorAll('.hours tr').forEach(function(r){
+      if(r.getAttribute('data-days').indexOf(p.weekday)>-1)r.classList.add('today');
+    });
+    var pd=document.querySelector('.pd[data-d="'+p.weekday+'"]');
+    if(pd){pd.classList.add('today');if(s[0])pd.classList.add('lit');}
+  }catch(e){}
+
+  /* Scroll reveal */
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>

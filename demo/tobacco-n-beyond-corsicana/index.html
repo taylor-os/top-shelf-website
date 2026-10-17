@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Tobacco N Beyond Vapes Smoke Shop, a tobacco shop at 1430 W 7th Ave Suite B, Corsicana, TX. Open 8 am to 10 pm Monday to Saturday, 9 am to 9 pm Sunday. Adults 21+ only. Call (903) 467-3262.">
+<meta name="theme-color" content="#0C3436">
+<title>Tobacco N Beyond Vapes Smoke Shop | Tobacco Shop in Corsicana, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tobacco N Beyond Vapes Smoke Shop | Corsicana, TX">
+<meta property="og:description" content="Tobacco shop at 1430 W 7th Ave Suite B, Corsicana. Open seven days a week.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/tobacco-n-beyond-corsicana/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='14' width='56' height='36' rx='7' fill='%23145A5B' stroke='%23F7EFE1' stroke-width='3'/%3E%3Cpath fill='%23F0C37A' d='M20 23h24v6h-9v15h-6V29h-9z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Tobacco N Beyond Vapes Smoke Shop",
+  "telephone": "+1-903-467-3262",
+  "image": "https://www.topshelfsolutions.io/demo/tobacco-n-beyond-corsicana/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1430 W 7th Ave Suite B",
+    "addressLocality": "Corsicana",
+    "addressRegion": "TX",
+    "postalCode": "75110",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "09:00", "closes": "21:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=9696732885776515639"
+}
+</script>
+<style>
+/* ================================================================
+   Tobacco N Beyond, Corsicana - one-page demo
+   Small-town Texas warmth: deep teal, honey wood, cream, and Arvo,
+   a sturdy slab serif. Signature device: the teal street-sign blade
+   (white rule inset, like the sign at the corner of W 7th Ave), used
+   for every label, plus honey-wood plank signs for the shop's facts.
+   ================================================================ */
+:root{
+  --ink:#0C3436;
+  --teal:#145A5B;
+  --teal-2:#1D6F6E;
+  --sign:#0F6A5F;
+  --honey:#D99A3D;
+  --honey-lt:#F0C37A;
+  --wood:#9A5A22;
+  --cream:#F7EFE1;
+  --paper:#FFF9EF;
+  --text:#1D2B2B;
+  --muted-dark:#BCD3CE;
+  --muted-light:#4E5D5B;
+  --rule:rgba(12,52,54,.14);
+  --rule-dark:rgba(240,195,122,.3);
+  --display:'Arvo','Rockwell','Roboto Slab',Georgia,serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--text);background:var(--cream);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;letter-spacing:-.015em;text-wrap:balance;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--honey-lt);outline-offset:3px;border-radius:4px}
+.on-light :focus-visible{outline-color:var(--teal)}
+::selection{background:var(--honey-lt);color:var(--ink)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--honey-lt);color:var(--ink);font-weight:600;border-radius:4px;text-decoration:none}
+.skip:focus{top:1rem}
+
+/* ---- the street-sign blade --------------------------------------- */
+.blade{
+  display:inline-flex;align-items:center;gap:.5em;max-width:100%;
+  padding:.42em .95em .38em;border-radius:7px;
+  background:var(--sign);color:#fff;
+  box-shadow:inset 0 0 0 2px var(--sign),inset 0 0 0 3.5px #fff,0 2px 0 rgba(0,0,0,.18);
+  font:700 .78rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+}
+.blade b{font-weight:700;opacity:.65}
+@media (max-width:380px){.blade{letter-spacing:.08em;font-size:.72rem}}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.3rem;padding:.8rem 1.5rem;border-radius:8px;border:2px solid transparent;
+  font:700 1rem/1 var(--body);letter-spacing:.01em;text-decoration:none;white-space:nowrap;
+  transition:transform .18s var(--ease),filter .18s ease,background-color .18s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-honey{background:var(--honey-lt);color:var(--ink);border-color:var(--honey-lt);box-shadow:0 3px 0 var(--wood)}
+.btn-line{background:rgba(12,52,54,.35);color:var(--cream);border-color:rgba(247,239,225,.55)}
+.btn-teal{background:var(--teal);color:var(--cream);border-color:var(--teal)}
+.btn-cream{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+  .btn-line:hover{background:rgba(12,52,54,.6)}
+  .btn:active{transform:scale(.97)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon ----------------------------------- */
+.ribbon{background:var(--honey-lt);color:var(--ink);text-align:center;font-size:.75rem;font-weight:500;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{font-weight:700;text-underline-offset:2px}
+
+/* ---- header -------------------------------------------------------- */
+.top{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--cream);border-bottom:3px solid var(--honey)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.4rem}
+.brand{font-family:var(--display);font-size:1.2rem;font-weight:700;line-height:1;text-decoration:none;white-space:nowrap}
+.brand em{font-style:italic;font-weight:400;color:var(--honey-lt)}
+.top-right{display:flex;align-items:center;gap:1.4rem;min-width:0}
+.top nav{display:none;gap:1.5rem;font-size:.9375rem;font-weight:600}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--honey-lt)}
+.top .place{font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dark);white-space:nowrap}
+.top .btn{display:none;min-height:2.5rem;padding:.5rem 1rem;font-size:.875rem;box-shadow:none}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:960px){.top nav{display:flex}}
+
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.9375rem;font-weight:600;color:var(--muted-dark);white-space:nowrap}
+.status::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--muted-dark);flex:none}
+.status.is-open{color:var(--cream)}
+.status.is-open::before{background:#8BDC94;box-shadow:0 0 0 4px rgba(139,220,148,.22)}
+.on-light .status{color:var(--muted-light)}
+.on-light .status::before{background:var(--muted-light)}
+
+/* ---- hero ---------------------------------------------------------- */
+/* Phones: their shop photo fills the first screen, with the name,
+   rating and Directions on a teal fade at the bottom. Desktop: teal
+   panel on the left, the photo framed in honey wood on the right like
+   a shop window with an arched top. Photo is anchored right so the
+   blurred shelving and lights lead, not the left edge of the frame. */
+.hero{position:relative;isolation:isolate;overflow:clip;background:var(--ink);color:var(--cream)}
+.hero-grid{display:flex;align-items:flex-end;min-height:calc(100vh - 11.5rem);min-height:calc(100svh - 11.5rem);padding:9rem 0 1.6rem}
+.hero-photo{position:absolute;inset:0;z-index:-2;margin:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:75% 50%;background:var(--wood)}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(12,52,54,.25) 0%,rgba(12,52,54,.35) 24%,rgba(12,52,54,.88) 54%,var(--ink) 100%),
+    linear-gradient(0deg,rgba(217,154,61,.12),rgba(217,154,61,.12));
+}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;min-width:0;max-width:38rem}
+@media (max-width:899px){
+  .hero-photo{inset:0 0 auto 0;height:60%}
+  .hero-photo img{object-position:78% 62%}
+  .hero::before{background:linear-gradient(180deg,rgba(12,52,54,.1) 0%,rgba(12,52,54,.15) 38%,rgba(12,52,54,.85) 56%,var(--ink) 64%)}
+}
+.hero h1{font-size:clamp(2.9rem,14vw,4.3rem);line-height:.98}
+.hero h1 span{display:block}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--honey-lt)}
+.hero .sub-name{font:400 italic clamp(1.15rem,5vw,1.5rem)/1.2 var(--display);color:var(--honey-lt);margin-top:-.25rem}
+.hero-sub{max-width:31rem;color:var(--muted-dark);font-size:1rem}
+.hero-sub strong{color:var(--cream);font-weight:600}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .95rem .4rem .45rem;
+  border:1px solid var(--rule-dark);border-radius:999px;background:rgba(12,52,54,.6);
+  font-size:.9375rem;font-weight:600;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.65rem;height:1.65rem;padding:.3rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04;flex:none}
+.rating .sep{color:var(--muted-dark)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;width:100%;margin-top:.25rem}
+
+.rise{animation:rise .7s var(--ease) both}
+.rise-2{animation-delay:.08s}.rise-3{animation-delay:.16s}.rise-4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-line{display:none} /* Call lives in the phone bar */
+}
+@media (max-width:400px){.hero-sub{display:none}}
+@media (min-width:900px){
+  .hero{background:radial-gradient(ellipse 60% 70% at 78% 45%,rgba(217,154,61,.2),transparent 70%),var(--ink)}
+  .hero::before{display:none}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(2.5rem,5vw,5rem);
+    min-height:min(calc(100vh - 6rem),50rem);padding:4.5rem 0}
+  .hero-copy{gap:1.15rem}
+  .hero h1{font-size:clamp(4.2rem,6.8vw,6.2rem)}
+  .hero-sub{font-size:1.1875rem}
+  .hero-photo{position:relative;inset:auto;z-index:0;order:2;
+    aspect-ratio:4/5;max-height:40rem;width:100%;justify-self:end;
+    border-radius:999px 999px 14px 14px;overflow:hidden;
+    border:12px solid var(--honey);
+    box-shadow:inset 0 0 0 2px rgba(0,0,0,.15),0 0 0 2px var(--wood),0 40px 70px -30px rgba(0,0,0,.6)}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(217,154,61,.1),rgba(12,52,54,.25));pointer-events:none}
+}
+
+/* ---- strip under the hero ------------------------------------------ */
+.strip{background:var(--honey);color:var(--ink);
+  background-image:repeating-linear-gradient(90deg,transparent 0 37px,rgba(154,90,34,.12) 37px 38px,transparent 38px 83px)}
+.strip ul{list-style:none;margin:0;padding:.95rem 0;display:flex;flex-wrap:wrap;justify-content:center;gap:.45rem 1.4rem;
+  font:700 .8125rem/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.strip li{display:inline-flex;align-items:center;white-space:nowrap}
+.strip li + li::before{content:"";width:.4rem;height:.4rem;margin-right:1.4rem;border-radius:50%;background:var(--ink);flex:none}
+@media (max-width:560px){.strip li + li::before{display:none}.strip ul{gap:.35rem 1.1rem;font-size:.75rem}}
+
+/* ---- sections -------------------------------------------------------- */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.head{max-width:44rem;margin:0 auto clamp(2rem,5vw,3.25rem);text-align:center}
+.head .blade{margin-bottom:1.25rem}
+.head h2{font-size:clamp(2.1rem,7.5vw,3.7rem)}
+.head h2 em{font-style:italic;font-weight:400;color:var(--teal)}
+.head p{max-width:34rem;margin:1rem auto 0;color:var(--muted-light);font-size:1.0625rem}
+
+/* ---- honey-wood plank signs ------------------------------------------ */
+.planks{list-style:none;margin:0;padding:0;display:grid;gap:1.25rem}
+.plank{
+  position:relative;padding:2rem 1.6rem 1.8rem;border-radius:10px;color:var(--ink);
+  background:
+    radial-gradient(circle at 1.1rem 1.1rem,#6E3F17 0 .22rem,transparent .26rem),
+    radial-gradient(circle at calc(100% - 1.1rem) 1.1rem,#6E3F17 0 .22rem,transparent .26rem),
+    repeating-linear-gradient(178deg,rgba(154,90,34,0) 0 9px,rgba(154,90,34,.13) 9px 10px,rgba(154,90,34,0) 10px 23px),
+    linear-gradient(170deg,#F2C47B,#DC9D45 60%,#CF8E36);
+  box-shadow:inset 0 -4px 0 rgba(110,63,23,.28),0 22px 40px -26px rgba(12,52,54,.55);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.plank .big-n{font:700 clamp(2.6rem,10vw,3.3rem)/1 var(--display);letter-spacing:-.02em}
+.plank .big-n small{font-size:.45em;font-weight:400;font-style:italic;margin-left:.15em}
+.plank h3{font:700 .8125rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;margin-top:.7rem;color:#5A3412}
+.plank p{margin-top:.6rem;color:#33291F;max-width:21rem}
+@media (hover:hover){.plank:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:inset 0 -4px 0 rgba(110,63,23,.28),0 30px 50px -26px rgba(12,52,54,.6)}}
+@media (min-width:760px){.planks{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}}
+
+/* the ask: a call card in teal */
+.ask{
+  margin-top:clamp(2.5rem,6vw,4rem);padding:clamp(1.75rem,5vw,2.75rem);
+  background:var(--teal);color:var(--cream);border-radius:12px;
+  box-shadow:inset 0 0 0 2px var(--teal),inset 0 0 0 4px rgba(247,239,225,.55);
+  display:grid;gap:1.25rem;align-items:center;
+}
+.ask h3{font-size:clamp(1.7rem,6vw,2.4rem)}
+.ask p{color:var(--muted-dark);margin-top:.5rem}
+.ask .tel{display:block;font-family:var(--display);font-size:clamp(1.8rem,8vw,2.6rem);font-weight:700;line-height:1;color:var(--honey-lt);text-decoration:none;white-space:nowrap}
+.ask .btn{width:100%}
+@media (min-width:860px){.ask{grid-template-columns:minmax(0,1.3fr) auto auto;gap:2.5rem}.ask .btn{width:auto}}
+
+/* ---- reviews ----------------------------------------------------------- */
+.reviews{background:var(--ink);color:var(--cream);text-align:center;
+  background-image:radial-gradient(ellipse 70% 60% at 50% 35%,rgba(29,111,110,.55),transparent 70%)}
+.score{font:700 clamp(5.5rem,26vw,8.5rem)/.9 var(--display);color:var(--honey-lt);letter-spacing:-.03em;margin-top:1.4rem}
+/* one row of five: dim underneath, the same row in gold on top, clipped to 92% (4.6 of 5). */
+.stars{position:relative;display:inline-block;margin-top:.9rem;font:400 clamp(2rem,10vw,2.6rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap;color:rgba(247,239,225,.2)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:92%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-family:var(--body);font-weight:600;font-size:clamp(1.35rem,4.6vw,1.9rem);letter-spacing:-.01em;line-height:1.25;margin-top:1.2rem}
+.goog{display:inline-block;padding:.05em .3em .1em;border-radius:6px;background:#fff;font-weight:600}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:26rem;margin:1rem auto 0;color:var(--muted-dark)}
+.reviews .btn{margin-top:1.9rem}
+
+/* ---- visit ------------------------------------------------------------- */
+.visit-grid{display:grid;gap:1.25rem}
+.card{position:relative;padding:clamp(1.5rem,4vw,2.2rem);border-radius:12px;min-width:0}
+.card.paper{background:var(--paper);border:2px solid var(--teal)}
+.card.honey{background:linear-gradient(165deg,var(--honey-lt),var(--honey));color:var(--ink)}
+.card.teal{background:var(--teal);color:var(--cream)}
+.card .label{display:block;margin-bottom:.9rem;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+.card.teal .label{color:var(--honey-lt)}
+.card.honey .label{color:#5A3412}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.62rem 0;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:600;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--muted-light);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.85em}}
+.hours .today dd{color:var(--ink);font-weight:700}
+.hours .today dt::after{content:"Today";padding:.22rem .5rem;border-radius:4px;background:var(--sign);color:#fff;font-size:.625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;line-height:1}
+.big{display:block;font-family:var(--display);font-size:clamp(1.6rem,6.5vw,2.2rem);font-weight:700;line-height:1.12;text-decoration:none}
+address.big{font-style:normal}
+.card .note{margin-top:.7rem}
+.card .btn{margin-top:1.4rem;width:100%}
+.card .btn-honey{box-shadow:none}
+.stack{display:grid;gap:1.25rem;min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:1.5rem}}
+
+/* ---- closing ------------------------------------------------------------ */
+.close{background:var(--teal);color:var(--cream);text-align:center;padding:clamp(4rem,11vw,7.5rem) 0;
+  background-image:radial-gradient(ellipse 80% 70% at 50% 0%,rgba(240,195,122,.2),transparent 70%)}
+.close h2{font-size:clamp(2.5rem,10vw,5.2rem);margin-top:1.3rem}
+.close h2 em{font-style:italic;font-weight:400;color:var(--honey-lt)}
+.close p{max-width:32rem;margin:1.2rem auto 0;color:var(--muted-dark);font-size:1.125rem}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer -------------------------------------------------------------- */
+.foot{background:var(--ink);color:var(--muted-dark);font-size:.9375rem;border-top:3px solid var(--honey)}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{display:block;color:var(--cream);font-size:1.5rem;margin-bottom:.7rem}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;font-size:.8125rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cream)}
+.credit{border-top:1px solid var(--rule-dark);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar ------------------------------------------------------ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--ink);border-top:3px solid var(--honey);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:.9375rem;box-shadow:none}
+@media (max-width:720px){body{padding-bottom:calc(4.4rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion --------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for Tobacco N Beyond Vapes Smoke Shop by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="Tobacco N Beyond, back to top">Tobacco <em>N</em> Beyond</a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#shop">The shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <span class="place">Corsicana, TX</span>
+      <a class="btn btn-honey" href="tel:+19034673262"><svg aria-hidden="true"><use href="#i-phone"/></svg>(903) 467-3262</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <figure class="hero-photo">
+        <img src="assets/listing.jpg" width="1400" height="1050" fetchpriority="high" decoding="async"
+             alt="Inside Tobacco N Beyond: a warm, softly lit shop with honey wood shelving along the back wall under recessed ceiling lights.">
+      </figure>
+      <div class="hero-copy">
+        <p class="status js-status rise">Open seven days a week</p>
+        <p class="blade rise">W 7th Ave <b aria-hidden="true">/</b> Corsicana</p>
+        <h1 class="rise rise-2"><span>Tobacco</span><span><em>N</em> Beyond</span></h1>
+        <p class="sub-name rise rise-2">Vapes &amp; Smoke Shop</p>
+        <p class="hero-sub rise rise-3">Your tobacco shop at <strong>1430 W 7th Ave, Suite B</strong>. Doors open at 8 am six days a week.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener" aria-label="Rated 4.6 out of 5 from 340 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <span>4.6</span>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep" aria-hidden="true">&middot;</span>
+          <span>340 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-honey" href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-line" href="tel:+19034673262"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (903) 467-3262</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <ul class="wrap">
+      <li>Tobacco shop</li>
+      <li>Open 7 days</li>
+      <li>Suite B, 1430 W 7th Ave</li>
+      <li>4.6 on Google</li>
+    </ul>
+  </div>
+
+  <!-- The shop -->
+  <section class="section on-light" id="shop">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="blade">The shop <b aria-hidden="true">/</b> Suite B</p>
+        <h2>Open at 8, <em>right here on 7th.</em></h2>
+        <p>Honey wood shelves line the back wall under bright ceiling lights. Stop in on the way to work or on the way home.</p>
+      </div>
+      <ul class="planks">
+        <li class="plank reveal">
+          <p class="big-n">8<small>am</small></p>
+          <h3>Doors open</h3>
+          <p>Monday through Saturday we open at 8 in the morning, early enough to swing by before your shift.</p>
+        </li>
+        <li class="plank reveal">
+          <p class="big-n">10<small>pm</small></p>
+          <h3>Doors close</h3>
+          <p>We stay open until 10 at night Monday through Saturday. Sundays run 9 am to 9 pm.</p>
+        </li>
+        <li class="plank reveal">
+          <p class="big-n">1430</p>
+          <h3>W 7th Ave, Suite B</h3>
+          <p>Tap Get directions and your phone takes you straight to our door in Corsicana.</p>
+        </li>
+      </ul>
+
+      <div class="ask reveal">
+        <div>
+          <h3>Looking for one item?</h3>
+          <p>Call the shop first and save yourself the drive.</p>
+        </div>
+        <a class="tel" href="tel:+19034673262">(903) 467-3262</a>
+        <a class="btn btn-honey" href="tel:+19034673262"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap reveal">
+      <p class="blade">Reviews <b aria-hidden="true">/</b> Google</p>
+      <p class="score" aria-hidden="true">4.6</p>
+      <div class="stars" role="img" aria-label="4.6 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>4.6 stars from 340 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>Read what 340 people had to say about the shop, in their own words.</p>
+      <a class="btn btn-cream" href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener"><svg aria-hidden="true" style="width:1.3em;height:1.3em"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section on-light" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="blade">Visit <b aria-hidden="true">/</b> Hours</p>
+        <h2>Open every day <em>of the week.</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card paper reveal">
+          <span class="label">Hours</span>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>8 am to 10 pm</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>8 am to 10 pm</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>8 am to 10 pm</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>8 am to 10 pm</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>8 am to 10 pm</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>8 am to 10 pm</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>9 am to 9 pm</dd></div>
+          </dl>
+        </div>
+        <div class="stack">
+          <div class="card honey reveal">
+            <span class="label">Address</span>
+            <address class="big">1430 W 7th Ave Suite B<br>Corsicana, TX 75110</address>
+            <a class="btn btn-teal" href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card teal reveal">
+            <span class="label">Phone</span>
+            <a class="big" href="tel:+19034673262">(903) 467-3262</a>
+            <p class="status js-status note">Open seven days a week</p>
+            <a class="btn btn-honey" href="tel:+19034673262"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="close">
+    <div class="wrap reveal">
+      <p class="blade">1430 W 7th Ave</p>
+      <h2>See you on <em>7th Avenue.</em></h2>
+      <p>Suite B at 1430 W 7th Ave in Corsicana. We open at 8 am Monday through Saturday and 9 am on Sunday.</p>
+      <div class="close-ctas">
+        <a class="btn btn-honey" href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-line" href="tel:+19034673262"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (903) 467-3262</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand">Tobacco <em>N</em> Beyond</p>
+      <p>Vapes &amp; Smoke Shop</p>
+      <p>1430 W 7th Ave Suite B, Corsicana, TX 75110</p>
+      <p><a href="tel:+19034673262">(903) 467-3262</a> &middot; <a href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">Adults 21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn btn-honey" href="https://www.google.com/maps?cid=9696732885776515639" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-cream" href="tel:+19034673262"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Minutes from midnight, index = day (0 Sun .. 6 Sat).
+  var MS=[480,1320], SUN=[540,1260];
+  var H=[SUN,MS,MS,MS,MS,MS,MS];
+  function fmt(m){ var h=Math.floor(m/60); return (h%12||12)+(h<12?' am':' pm'); }
+  function status(d,m){
+    var t=H[d];
+    if(m>=t[0] && m<t[1]) return {open:true,text:'Open now until '+fmt(t[1])};
+    if(m<t[0]) return {open:false,text:'Closed now, opens '+fmt(t[0])};
+    return {open:false,text:'Closed now, opens '+fmt(H[(d+1)%7][0])+' tomorrow'};
+  }
+  // self-check
+  console.assert(!status(1,479).open && status(1,480).open && status(1,1319).open && !status(1,1320).open, 'Mon hours');
+  console.assert(status(6,1330).text==='Closed now, opens 9 am tomorrow', 'Sat night to Sun');
+  console.assert(!status(0,1260).open && status(0,540).text==='Open now until 9 pm', 'Sun hours');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var s=status(d,m);
+      var els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=s.text; els[i].classList.toggle('is-open',s.open); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

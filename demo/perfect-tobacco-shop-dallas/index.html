@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Perfect Tobacco Shop at 738 Jefferson Blvd, Dallas, TX. Tobacco shop, cigar shop and hookah store, open every day from 9 am to midnight. Adults 21+ only. Call (469) 372-1040.">
+<meta name="theme-color" content="#1A120D">
+<title>Perfect Tobacco Shop | Tobacco, Cigars and Hookahs in Dallas, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Perfect Tobacco Shop | Dallas, TX">
+<meta property="og:description" content="Tobacco shop, cigar shop and hookah store at 738 Jefferson Blvd, Dallas. Open every day, 9 am to midnight.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/perfect-tobacco-shop-dallas/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A120D'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%23B0142F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Perfect Tobacco Shop",
+  "telephone": "+1-469-372-1040",
+  "image": "https://www.topshelfsolutions.io/demo/perfect-tobacco-shop-dallas/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "738 Jefferson Blvd",
+    "addressLocality": "Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75208",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "00:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=528000055187635131"
+}
+</script>
+<style>
+/* ================================================================
+   Perfect Tobacco Shop - one-page demo
+   "Perfect" read as precise: espresso brown, cream, one crimson accent,
+   a single geometric sans (Outfit). Signature device: the 24-hour dial,
+   a crimson arc that runs from 9 am to midnight with a live "now" dot.
+   Supporting detail: ruler ticks and crop marks, drafted and exact.
+   ================================================================ */
+:root{
+  --esp:#1A120D;
+  --roast:#261A13;
+  --wall:#3B281E;
+  --cream:#F2EADF;
+  --paper:#FBF7F1;
+  --crimson:#B0142F;
+  --crimson-hi:#D6334D;
+  --mute-d:#BFAF9F;
+  --mute-l:#66503F;
+  --rule-l:rgba(26,18,13,.14);
+  --rule-d:rgba(242,234,223,.16);
+  --font:'Outfit',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font);font-size:1.0625rem;line-height:1.6;font-weight:400;
+  color:var(--esp);background:var(--cream);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-weight:600;line-height:1.02;letter-spacing:-.03em;text-wrap:balance;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--crimson-hi);outline-offset:3px;border-radius:4px}
+.on-light :focus-visible{outline-color:var(--crimson)}
+::selection{background:var(--crimson);color:var(--cream)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--cream);color:var(--esp);font-weight:600;border-radius:6px;text-decoration:none}
+.skip:focus{top:1rem}
+
+/* label: small caps text with a perfect crimson dot */
+.label{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+.label::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--crimson);flex:none}
+.on-dark .label::before{background:var(--crimson-hi)}
+
+/* ruler: hour ticks with a taller tick every fifth */
+.ruler{height:14px;opacity:.55;
+  background:
+    repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 60px) left bottom/100% 14px no-repeat,
+    repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 12px) left bottom/100% 7px no-repeat}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.3rem;padding:.8rem 1.5rem;border-radius:999px;border:1px solid transparent;
+  font:600 .9375rem/1 var(--font);letter-spacing:.02em;text-decoration:none;white-space:nowrap;
+  transition:transform .18s var(--ease),background-color .18s ease,border-color .18s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-red{background:var(--crimson);color:var(--cream)}
+.btn-line{background:rgba(26,18,13,.35);color:var(--cream);border-color:rgba(242,234,223,.45)}
+.btn-dark{background:var(--esp);color:var(--cream)}
+.btn-cream{background:var(--cream);color:var(--esp)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red:hover{background:#9A0F27}
+  .btn-line:hover{border-color:var(--cream)}
+  .btn:active{transform:scale(.97)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon ----------------------------------- */
+.ribbon{background:var(--crimson);color:var(--cream);text-align:center;font-size:.75rem;font-weight:400;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{font-weight:600;text-underline-offset:2px}
+
+/* ---- header -------------------------------------------------------- */
+.top{position:sticky;top:0;z-index:50;background:var(--esp);color:var(--cream);border-bottom:1px solid var(--rule-d)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-size:1.0625rem;font-weight:400;letter-spacing:-.01em;line-height:1;text-decoration:none;white-space:nowrap}
+.brand b{font-weight:700}
+.brand::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--crimson-hi);flex:none}
+.top-right{display:flex;align-items:center;gap:1.5rem;min-width:0}
+.top nav{display:none;gap:1.5rem;font-size:.875rem;font-weight:500}
+.top nav a{text-decoration:none;color:var(--mute-d)}
+.top nav a:hover{color:var(--cream)}
+.top .place{font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mute-d);white-space:nowrap}
+.top .btn{display:none;min-height:2.5rem;padding:.5rem 1.1rem;font-size:.875rem}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:960px){.top nav{display:flex}}
+@media (max-width:359px){.top .place{display:none}}
+
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.875rem;font-weight:500;color:var(--mute-d);white-space:nowrap}
+.status::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--mute-d);flex:none}
+.status.is-open{color:var(--cream)}
+.status.is-open::before{background:#7FD08A;box-shadow:0 0 0 4px rgba(127,208,138,.2)}
+
+/* ---- hero ------------------------------------------------------------ */
+/* Phones/tablets: their shop photo fills the hero; name, rating and the
+   Directions button sit on a dark fade at the bottom. The hero is never
+   wider than it is tall, so with the photo pinned left the cooler at the
+   photo's right edge always stays out of frame. Desktop: split layout,
+   copy left, a 4:5 photo right (also pinned left), framed by crop marks. */
+.hero{position:relative;isolation:isolate;overflow:clip;background:var(--esp);color:var(--cream);
+  display:flex;align-items:flex-end;
+  min-height:max(calc(100vh - 10.5rem),100vw);min-height:max(calc(100svh - 10.5rem),100vw);
+  padding:8rem 0 1.75rem}
+.hero-photo{position:absolute;inset:0;z-index:-2;margin:0;background:var(--wall)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:0% 25%}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(26,18,13,.1) 0%,rgba(26,18,13,.25) 25%,rgba(26,18,13,.85) 55%,var(--esp) 100%);
+}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.95rem;min-width:0;max-width:38rem}
+.hero h1{display:flex;flex-direction:column;gap:.55rem}
+.hero h1 .w1{font-size:clamp(3.6rem,19vw,5.2rem);font-weight:700;line-height:.86;letter-spacing:-.045em}
+.hero h1 .w2{display:inline-flex;align-items:center;gap:.8rem;font-size:clamp(.95rem,4.2vw,1.15rem);font-weight:500;letter-spacing:.34em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.hero h1 .w2::before{content:"";width:2.2rem;height:2px;background:var(--crimson-hi);flex:none}
+.hero-sub{max-width:31rem;color:var(--mute-d);font-size:1rem;font-weight:300}
+.hero-sub strong{color:var(--cream);font-weight:500}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .95rem .4rem .45rem;
+  border:1px solid var(--rule-d);border-radius:999px;background:rgba(26,18,13,.6);
+  font-size:.9375rem;font-weight:500;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.65rem;height:1.65rem;padding:.3rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04;flex:none}
+.rating .sep{color:var(--mute-d)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;width:100%;margin-top:.2rem}
+
+.rise{animation:rise .7s var(--ease) both}
+.rise-2{animation-delay:.08s}.rise-3{animation-delay:.16s}.rise-4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-line{display:none} /* Call lives in the phone bar */
+}
+@media (min-width:900px){
+  .hero{display:block;min-height:0;padding:clamp(2.5rem,5vw,4rem) 0;
+    background:repeating-linear-gradient(180deg,rgba(242,234,223,.035) 0 1px,transparent 1px 30px),var(--esp)}
+  .hero::before{display:none}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2.5rem,5vw,5rem);align-items:center}
+  .hero-photo{position:relative;inset:auto;z-index:auto;aspect-ratio:4/5;
+    width:min(40vw,34rem,calc((100vh - 13rem) * .8));width:min(40vw,34rem,calc((100svh - 13rem) * .8));min-width:20rem}
+  .hero-photo img{object-position:0% 40%}
+  /* four crimson crop marks just outside the photo */
+  .hero-photo::after{content:"";position:absolute;inset:-14px;pointer-events:none;
+    background:
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) left top/24px 2px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) left top/2px 24px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) right top/24px 2px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) right top/2px 24px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) left bottom/24px 2px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) left bottom/2px 24px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) right bottom/24px 2px,
+      linear-gradient(var(--crimson-hi),var(--crimson-hi)) right bottom/2px 24px;
+    background-repeat:no-repeat}
+  .hero-copy{gap:1.25rem}
+  .hero h1 .w1{font-size:clamp(5rem,8.4vw,8rem)}
+  .hero h1 .w2{font-size:1.35rem}
+  .hero-sub{font-size:1.1875rem}
+}
+
+/* ---- strip under the hero ----------------------------------------- */
+.strip{background:var(--roast);color:var(--cream);border-top:1px solid var(--rule-d)}
+.strip ul{list-style:none;margin:0;padding:1.05rem 0 .7rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.5rem;
+  font:500 .75rem/1.4 var(--font);letter-spacing:.24em;text-transform:uppercase}
+.strip li{display:inline-flex;align-items:center;white-space:nowrap}
+.strip li + li::before{content:"";width:.4rem;height:.4rem;margin-right:1.5rem;border-radius:50%;background:var(--crimson-hi);flex:none}
+.strip .ruler{color:var(--mute-d);opacity:.3}
+@media (max-width:560px){.strip li + li::before{display:none}.strip ul{gap:.4rem 1.2rem;letter-spacing:.18em}}
+
+/* ---- sections -------------------------------------------------------- */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.head{max-width:46rem;margin:0 0 clamp(2rem,5vw,3.25rem)}
+.head .label{margin-bottom:1.1rem}
+.head h2{font-size:clamp(2.3rem,8.4vw,4.2rem)}
+.head h2 em{font-style:normal;color:var(--crimson)}
+.head p{max-width:36rem;margin-top:1rem;color:var(--mute-l);font-size:1.0625rem}
+
+/* ---- the shop -------------------------------------------------------- */
+.cats{list-style:none;margin:0;padding:0;display:grid;gap:1rem;counter-reset:cat}
+.cat{
+  position:relative;padding:1.6rem 1.5rem 1.7rem;background:var(--paper);
+  border:1px solid var(--rule-l);border-radius:14px;min-width:0;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s ease;
+}
+.cat .no{display:flex;align-items:center;justify-content:space-between;font-size:.875rem;font-weight:600;letter-spacing:.12em;color:var(--crimson);font-variant-numeric:tabular-nums}
+.cat .no::after{content:"";width:2.4rem;height:2.4rem;border-radius:50%;border:1.5px solid var(--crimson);
+  background:radial-gradient(circle,var(--crimson) 0 .3rem,transparent .32rem)}
+.cat h3{font-size:clamp(1.7rem,6.4vw,2.1rem);margin-top:1.4rem}
+.cat p{color:var(--mute-l);margin-top:.6rem}
+@media (hover:hover){.cat:hover{transform:translateY(-4px);border-color:rgba(176,20,47,.4);box-shadow:0 24px 40px -30px rgba(26,18,13,.5)}}
+@media (min-width:760px){.cats{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}}
+
+/* the ask: a call card in espresso */
+.ask{
+  margin-top:clamp(2rem,5vw,3rem);padding:clamp(1.75rem,5vw,2.75rem);
+  background:var(--esp);color:var(--cream);border-radius:14px;border-left:6px solid var(--crimson);
+  display:grid;gap:1.25rem;align-items:center;
+}
+.ask h3{font-size:clamp(1.7rem,6vw,2.4rem)}
+.ask p{color:var(--mute-d);margin-top:.5rem;font-weight:300}
+.ask .tel{display:block;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;letter-spacing:-.02em;line-height:1;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ask .btn{width:100%}
+@media (min-width:860px){.ask{grid-template-columns:minmax(0,1.3fr) auto auto;gap:2.5rem}.ask .btn{width:auto}}
+
+/* ---- reviews --------------------------------------------------------- */
+.reviews{background:var(--esp);color:var(--cream);text-align:center;
+  background-image:radial-gradient(ellipse 60% 55% at 50% 35%,rgba(176,20,47,.22),transparent 70%)}
+.reviews .label{color:var(--mute-d)}
+.score{display:block;margin:1.4rem auto 0;font-size:clamp(6.5rem,32vw,11rem);font-weight:200;line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+/* one row of five: dim underneath, the same row in Google yellow on top, clipped to 96% (4.8 of 5) */
+.stars{position:relative;display:inline-block;margin-top:.9rem;font:400 clamp(1.8rem,9vw,2.4rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.1em;white-space:nowrap;color:rgba(242,234,223,.18)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:96%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-weight:500;font-size:clamp(1.35rem,4.6vw,2rem);letter-spacing:-.01em;line-height:1.25;margin-top:1.3rem}
+.goog{display:inline-block;padding:.05em .3em .1em;border-radius:6px;background:#fff;font-weight:600}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:27rem;margin:1rem auto 0;color:var(--mute-d);font-weight:300}
+.reviews .btn{margin-top:1.9rem}
+
+/* ---- visit ------------------------------------------------------------- */
+.visit-grid{display:grid;gap:1.25rem}
+.card{position:relative;padding:clamp(1.5rem,4vw,2.2rem);border-radius:14px;min-width:0}
+.card.paper{background:var(--paper);border:1px solid var(--rule-l)}
+.card.red{background:var(--crimson);color:var(--cream)}
+.card.dark{background:var(--esp);color:var(--cream)}
+.card .tag{display:block;margin-bottom:.9rem;font-size:.75rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--crimson)}
+.card.red .tag,.card.dark .tag{color:var(--mute-d)}
+.card.red .tag{color:rgba(242,234,223,.8)}
+
+/* the dial: 24 hours, crimson arc from 9 am round to midnight */
+.dial{width:min(17rem,100%);margin:0 auto 1.6rem;overflow:visible}
+.dial .track{stroke:var(--rule-l)}
+.dial .arc{stroke:var(--crimson)}
+.dial .ticks{stroke:rgba(26,18,13,.35)}
+.dial .major{stroke:var(--esp)}
+.dial text{font-family:var(--font);fill:var(--mute-l)}
+.dial .lbl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.dial .big{font-size:30px;font-weight:600;letter-spacing:-.03em;fill:var(--esp)}
+.dial .small{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.dial .now circle{fill:var(--paper);stroke:var(--esp);stroke-width:3}
+.js .dial .arc{stroke-dasharray:0 603.19;transition:stroke-dasharray 1.4s var(--ease) .25s}
+.js .in .dial .arc{stroke-dasharray:376.99 226.2}
+
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--rule-l);font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:600;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--mute-l);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.85em}}
+.hours .today dd{color:var(--esp);font-weight:600}
+.hours .today dt::after{content:"Today";padding:.22rem .5rem;border-radius:999px;background:var(--crimson);color:var(--cream);font-size:.625rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1}
+
+.bigtext{display:block;font-size:clamp(1.7rem,7vw,2.3rem);font-weight:500;letter-spacing:-.02em;line-height:1.1;text-decoration:none}
+address.bigtext{font-style:normal}
+.card .note{margin-top:.8rem}
+.card .btn{margin-top:1.4rem;width:100%}
+.stack{display:grid;gap:1.25rem;min-width:0}
+@media (min-width:900px){
+  .visit-grid{grid-template-columns:1.1fr 1fr;align-items:stretch;gap:1.5rem}
+  .card.paper{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2rem;align-items:center}
+  .card.paper .tag{grid-column:1 / -1;margin-bottom:0}
+  .dial{width:14rem;margin:0}
+}
+@media (min-width:900px) and (max-width:1080px){.card.paper{grid-template-columns:1fr}.dial{margin:0 auto}}
+
+/* ---- closing ------------------------------------------------------------ */
+.close{background:var(--esp);color:var(--cream);text-align:center;padding:0 0 clamp(4rem,11vw,7.5rem)}
+.close .ruler{color:var(--mute-d);opacity:.25;margin-bottom:clamp(3.5rem,9vw,6rem)}
+.close h2{font-size:clamp(2.5rem,10vw,5.4rem);max-width:15ch;margin-inline:auto}
+.close h2 em{font-style:normal;color:var(--crimson-hi)}
+.close p{max-width:32rem;margin:1.2rem auto 0;color:var(--mute-d);font-size:1.125rem;font-weight:300}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer -------------------------------------------------------------- */
+.foot{background:var(--roast);color:var(--mute-d);font-size:.9375rem;border-top:1px solid var(--rule-d)}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{display:flex;color:var(--cream);font-size:1.25rem;margin-bottom:.9rem}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;font-size:.8125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cream)}
+.credit{border-top:1px solid var(--rule-d);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar ------------------------------------------------------ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--esp);border-top:1px solid var(--rule-d);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:.9375rem}
+@media (max-width:720px){body{padding-bottom:calc(4.3rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion --------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important;transition-delay:0s !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for Perfect Tobacco Shop by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="Perfect Tobacco Shop, back to top"><span><b>Perfect</b> Tobacco Shop</span></a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#shop">The shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <span class="place">Dallas, TX</span>
+      <a class="btn btn-red" href="tel:+14693721040"><svg aria-hidden="true"><use href="#i-phone"/></svg>(469) 372-1040</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero on-dark" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="status js-status rise">Open every day, 9 am to midnight</p>
+        <h1 class="rise rise-2"><span class="w1">Perfect</span><span class="w2">Tobacco Shop</span></h1>
+        <p class="hero-sub rise rise-3">A tobacco shop, cigar shop and hookah store at <strong>738 Jefferson Blvd</strong> in Dallas, open every day until midnight.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener" aria-label="Rated 4.8 out of 5 from 400 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <span>4.8</span>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep" aria-hidden="true">&middot;</span>
+          <span>400 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-red" href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-line" href="tel:+14693721040"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (469) 372-1040</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/listing.jpg" width="1120" height="1050" fetchpriority="high" decoding="async"
+             alt="Inside Perfect Tobacco Shop: a dark brown slat wall of shelves with hookahs along the top and a long glass display counter in front.">
+      </figure>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <ul class="wrap">
+      <li>Tobacco shop</li>
+      <li>Cigar shop</li>
+      <li>Hookah store</li>
+      <li>Open daily 9 am to midnight</li>
+    </ul>
+    <div class="ruler"></div>
+  </div>
+
+  <!-- The shop -->
+  <section class="section on-light" id="shop">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="label">The shop</p>
+        <h2>Tobacco, cigars and hookahs at <em>one counter.</em></h2>
+        <p>Shelves run the length of our brown slat wall, a long glass counter stands up front, and the hookahs sit along the top shelf where you'll spot them first.</p>
+      </div>
+      <ol class="cats">
+        <li class="cat reveal">
+          <p class="no">01</p>
+          <h3>Tobacco shop</h3>
+          <p>Stop in for tobacco any day of the week. We open at 9 am and stay open until midnight.</p>
+        </li>
+        <li class="cat reveal">
+          <p class="no">02</p>
+          <h3>Cigar shop</h3>
+          <p>We're a cigar shop as well. Ask at the counter and we'll show you what we have in today.</p>
+        </li>
+        <li class="cat reveal">
+          <p class="no">03</p>
+          <h3>Hookah store</h3>
+          <p>Look up when you come through the door. Our hookahs line the top shelf of the wall.</p>
+        </li>
+      </ol>
+
+      <div class="ask reveal">
+        <div>
+          <h3>Not sure we carry it?</h3>
+          <p>Call the shop and ask. Someone's behind the counter until midnight, seven days a week.</p>
+        </div>
+        <a class="tel" href="tel:+14693721040">(469) 372-1040</a>
+        <a class="btn btn-red" href="tel:+14693721040"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews on-dark" id="reviews">
+    <div class="wrap reveal">
+      <p class="label">Reviews</p>
+      <b class="score" aria-hidden="true">4.8</b>
+      <div class="stars" role="img" aria-label="4.8 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>4.8 stars from 400 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>Read them on our Google listing. If you've been in, we'd be glad to have yours too.</p>
+      <a class="btn btn-cream" href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener"><svg aria-hidden="true" style="width:1.3em;height:1.3em"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section on-light" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="label">Visit</p>
+        <h2>Open every day, <em>9 am to midnight.</em></h2>
+        <p>Same hours all week, weekends included.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="card paper reveal">
+          <span class="tag">Hours</span>
+          <svg class="dial" viewBox="0 0 240 240" role="img" aria-label="Clock dial: open from 9 am to midnight, every day">
+            <circle class="track" cx="120" cy="120" r="96" fill="none" stroke-width="10"/>
+            <circle class="arc" cx="120" cy="120" r="96" fill="none" stroke-width="10" stroke-dasharray="376.99 226.2" stroke-dashoffset="-226.2" transform="rotate(-90 120 120)"/>
+            <circle class="ticks" cx="120" cy="120" r="80" fill="none" stroke-width="6" stroke-dasharray="1.2 19.744" stroke-dashoffset=".6" transform="rotate(-90 120 120)"/>
+            <circle class="major" cx="120" cy="120" r="80" fill="none" stroke-width="10" stroke-dasharray="2 123.664" stroke-dashoffset="1" transform="rotate(-90 120 120)"/>
+            <text class="lbl" x="120" y="62" text-anchor="middle" dominant-baseline="central">Midnight</text>
+            <text class="lbl" x="120" y="178" text-anchor="middle" dominant-baseline="central">Noon</text>
+            <text class="lbl" x="162" y="160" text-anchor="middle" dominant-baseline="central">9 am</text>
+            <text class="big" x="120" y="112" text-anchor="middle" dominant-baseline="central">Open</text>
+            <text class="small" x="120" y="138" text-anchor="middle" dominant-baseline="central">every day</text>
+            <g class="now" visibility="hidden"><circle cx="120" cy="24" r="7"/></g>
+          </svg>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>9 am to midnight</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>9 am to midnight</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>9 am to midnight</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>9 am to midnight</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>9 am to midnight</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>9 am to midnight</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>9 am to midnight</dd></div>
+          </dl>
+        </div>
+        <div class="stack">
+          <div class="card red reveal">
+            <span class="tag">Address</span>
+            <address class="bigtext">738 Jefferson Blvd<br>Dallas, TX 75208</address>
+            <a class="btn btn-cream" href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card dark reveal">
+            <span class="tag">Phone</span>
+            <a class="bigtext" href="tel:+14693721040">(469) 372-1040</a>
+            <p class="status js-status note">Open every day, 9 am to midnight</p>
+            <a class="btn btn-red" href="tel:+14693721040"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="close on-dark">
+    <div class="ruler" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <h2>Out late? We're open until <em>midnight.</em></h2>
+      <p>738 Jefferson Blvd, Dallas, TX 75208. Seven days a week.</p>
+      <div class="close-ctas">
+        <a class="btn btn-red" href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-line" href="tel:+14693721040"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (469) 372-1040</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand"><span><b>Perfect</b> Tobacco Shop</span></p>
+      <p>738 Jefferson Blvd, Dallas, TX 75208</p>
+      <p><a href="tel:+14693721040">(469) 372-1040</a> &middot; <a href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">Adults 21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn btn-red" href="https://www.google.com/maps?cid=528000055187635131" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-cream" href="tel:+14693721040"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Same hours every day: 9 am (540) until midnight (1440), minutes from midnight.
+  var OPEN=540, CLOSE=1440;
+  function isOpen(m){ return m>=OPEN && m<CLOSE; }
+  function text(m){ return isOpen(m) ? 'Open now until midnight' : 'Closed now, opens at 9 am'; }
+  // self-check: 12:00 am closed, 8:59 am closed, 9 am open, 11:59 pm open
+  console.assert(!isOpen(0) && !isOpen(539) && isOpen(540) && isOpen(1439), 'hours logic');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=text(m); els[i].classList.toggle('is-open',isOpen(m)); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+      // the "now" dot on the dial, at the current Dallas time
+      var now=document.querySelector('.dial .now');
+      if(now){ now.setAttribute('transform','rotate('+(m/1440*360)+' 120 120)'); now.setAttribute('visibility','visible'); }
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

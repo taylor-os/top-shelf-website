@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Scorpion Smoke Shop, a smoke shop and vaporizer store at 2304 W Main St, Gun Barrel City, TX 75156. Open every day, 9 am to 11 pm. Call (903) 802-7014.">
+<meta name="theme-color" content="#0F0C0A">
+<title>Scorpion Smoke Shop | Smoke Shop &amp; Vaporizer Store in Gun Barrel City, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scorpion Smoke Shop">
+<meta property="og:description" content="Smoke shop and vaporizer store at 2304 W Main St, Gun Barrel City, TX.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/scorpion-smoke-shop-gun-barrel-city/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230F0C0A'/%3E%3Cpath d='M14 56C12 36 22 16 40 12c14-3 20 8 14 18' fill='none' stroke='%23EA3B30' stroke-width='6'/%3E%3Ccircle cx='51' cy='35' r='5' fill='%23EA3B30'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Scorpion Smoke Shop",
+  "telephone": "+1-903-802-7014",
+  "image": "https://www.topshelfsolutions.io/demo/scorpion-smoke-shop-gun-barrel-city/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2304 W Main St",
+    "addressLocality": "Gun Barrel City",
+    "addressRegion": "TX",
+    "postalCode": "75156",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "23:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=2606317156810350177",
+  "sameAs": ["https://www.facebook.com/100078339400424"]
+}
+</script>
+<style>
+/* ================================================================
+   Scorpion Smoke Shop - one-page demo
+   Desert bold: warm black, sand, and the red of the shop's shelving.
+   Sharp condensed display type, hard square edges.
+   Signature device: the scorpion's stinger, a segmented tail curve,
+   reused as the mark, over the photo, and as the 11 pm tip of the
+   daily hours dial.
+   ================================================================ */
+:root{
+  --ink:#0F0C0A;
+  --ink-2:#1A1511;
+  --sand:#E8D9BC;
+  --sand-2:#DCC9A4;
+  --sand-mute:#B9A88A;
+  --red:#EA3B30;        /* buttons, accents on ink */
+  --red-deep:#B3201A;   /* text on sand, the reviews band */
+  --red-ink:#140504;
+  --line:rgba(232,217,188,.14);
+  --line-strong:rgba(232,217,188,.32);
+  --display:'Big Shoulders Display',Impact,'Arial Narrow Bold','Arial Narrow',sans-serif;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--sand);background:var(--ink);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.005em;text-wrap:balance}
+h2 em,h3 em{font-style:normal;color:var(--red)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{width:100%;max-width:76rem;margin-inline:auto;padding-inline:var(--gutter)}
+.label{
+  display:flex;align-items:center;gap:.65rem;
+  font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);
+}
+.label::before{content:"";width:.45rem;height:.45rem;background:currentColor;transform:rotate(45deg);flex:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--red);color:var(--red-ink);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Ribbon (the one attribution) ---------- */
+.ribbon{
+  background:#080605;color:var(--sand-mute);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.5rem var(--gutter);
+  border-bottom:1px solid var(--line);
+}
+.ribbon a{color:var(--sand);text-underline-offset:2px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3.25rem;padding:.8rem 1.4rem;border-radius:0;
+  font-family:var(--sans);font-weight:700;font-size:.9375rem;letter-spacing:.02em;
+  text-decoration:none;white-space:nowrap;border:2px solid transparent;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease),color .18s var(--ease);
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-red{background:var(--red);color:var(--red-ink);box-shadow:4px 4px 0 var(--sand)}
+.btn-ghost{border-color:var(--line-strong);color:var(--sand);background:rgba(15,12,10,.5)}
+@media (hover:hover){
+  .btn:hover{transform:translate(-2px,-2px)}
+  .btn-red:hover{box-shadow:6px 6px 0 var(--sand)}
+  .btn-ghost:hover{border-color:var(--red);color:var(--red)}
+}
+.btn:active{transform:translate(2px,2px)}
+.btn-red:active{box-shadow:1px 1px 0 var(--sand)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.85rem}
+
+/* ---------- Mark: the stinger in a square ---------- */
+.mark{
+  display:grid;place-items:center;flex:none;width:2.5rem;aspect-ratio:1;
+  border:2px solid var(--red);color:var(--red);background:var(--ink);
+}
+.mark svg{width:72%;height:72%}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.brand span.where{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-mute);white-space:nowrap}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.375rem;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--ink);isolation:isolate}
+.hero::before{ /* faint sand heat haze at the top */
+  content:"";position:absolute;inset:0 0 auto 0;height:60%;z-index:-1;pointer-events:none;
+  background:radial-gradient(80% 70% at 85% 0%,rgba(232,217,188,.08),rgba(232,217,188,0) 70%);
+}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1rem}
+.top-call{
+  font-weight:600;font-size:.8125rem;text-decoration:none;white-space:nowrap;letter-spacing:.02em;
+  padding:.55rem .85rem;border:1px solid var(--line-strong);
+  transition:border-color .18s var(--ease),color .18s var(--ease);
+}
+@media (hover:hover){.top-call:hover{border-color:var(--red);color:var(--red)}}
+
+.hero-grid{display:flex;flex-direction:column;gap:1.25rem;padding-bottom:2.25rem}
+.shot{
+  order:-1;position:relative;
+  height:clamp(13rem,30svh,20rem);
+  margin-right:8px; /* room for the hard red offset */
+  background:var(--ink-2);box-shadow:8px 8px 0 var(--red);
+}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:saturate(1.05) contrast(1.04)}
+.shot::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(15,12,10,.25) 0%,rgba(15,12,10,0) 35%,rgba(15,12,10,.1) 60%,rgba(15,12,10,.78) 100%);
+}
+.shot .sting{
+  position:absolute;z-index:2;right:.9rem;top:.75rem;width:clamp(5.5rem,30%,10rem);
+  color:var(--sand);filter:drop-shadow(0 3px 12px rgba(0,0,0,.6));pointer-events:none;
+}
+.chip{
+  position:absolute;z-index:2;left:.85rem;bottom:.85rem;
+  display:flex;width:max-content;max-width:calc(100% - 1.7rem);align-items:center;gap:.5rem;white-space:nowrap;
+  font-size:.75rem;font-weight:600;letter-spacing:.04em;
+  padding:.4rem .75rem;border:1px solid var(--line-strong);background:rgba(15,12,10,.82);color:var(--sand-mute);
+}
+.chip[hidden]{display:none}
+.chip .dot{width:.5rem;height:.5rem;background:var(--sand-mute);transform:rotate(45deg)}
+.chip.is-open{color:var(--sand);border-color:rgba(234,59,48,.6)}
+.chip.is-open .dot{background:var(--red);box-shadow:0 0 0 3px rgba(234,59,48,.25)}
+
+h1{line-height:.84}
+h1 span{display:block}
+h1 .big{font-size:clamp(4.4rem,19vw,8.5rem);font-weight:900;letter-spacing:.01em;color:var(--sand)}
+h1 .small{font-size:clamp(1.85rem,8.2vw,3.6rem);font-weight:800;color:var(--red);letter-spacing:.06em;margin-top:.15em}
+.hero-sub{margin-top:.9rem;max-width:30rem;color:var(--sand-mute);font-size:1rem;line-height:1.5}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;margin-top:.9rem;text-decoration:none;
+  font-size:.8125rem;font-weight:500;white-space:nowrap;color:var(--sand-mute);
+}
+.rating strong{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--sand);line-height:1}
+.rating .g{width:1.15rem;height:1.15rem;flex:none}
+.stars{color:var(--red);letter-spacing:.08em;font-size:.875rem}
+@media (hover:hover){.rating:hover span:last-child{color:var(--sand)}}
+.hero .btn-row{margin-top:1.15rem}
+.hero .btn{flex:1 1 9.5rem}
+@media (max-width:420px){.hero .btn{padding-inline:.9rem}}
+
+@media (min-width:1024px){
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;
+    min-height:clamp(34rem,calc(100svh - 7.5rem),44rem);padding:1rem var(--gutter) 4.5rem;
+  }
+  .shot{order:0;height:clamp(30rem,64svh,40rem);margin-right:12px;box-shadow:12px 12px 0 var(--red)}
+  .shot img{object-position:40% 30%}
+  .shot .sting{width:9.5rem;right:1.25rem;top:1.25rem}
+  .chip{left:1.25rem;bottom:1.25rem}
+  h1 .big{font-size:min(8.5rem,9.2vw)}
+  h1 .small{font-size:min(3.6rem,3.9vw)}
+  .hero-sub{font-size:1.125rem;margin-top:1.4rem}
+  .rating{margin-top:1.2rem}
+  .hero .btn-row{margin-top:1.75rem}
+  .hero .btn{flex:0 0 auto}
+}
+
+/* Stinger "strike" settle on load */
+.js .shot .sting{opacity:0;transform:rotate(-14deg) translateY(-6px);transform-origin:20% 95%;
+  transition:opacity .6s var(--ease) .25s,transform .9s cubic-bezier(.2,1.4,.4,1) .25s}
+.js .loaded .shot .sting{opacity:1;transform:none}
+
+/* ---------- Dune edge (ink to sand) ---------- */
+.dune{display:block;width:100%;height:clamp(2.5rem,6vw,5rem);color:var(--sand);background:var(--ink)}
+.dune svg{width:100%;height:100%}
+
+/* ---------- Sections ---------- */
+section{padding:clamp(4rem,10vw,7rem) 0}
+h2{font-size:clamp(2.6rem,11vw,5rem);margin-top:1rem}
+.lede{margin-top:1.1rem;max-width:36rem;color:var(--sand-mute)}
+
+/* The shop (sand) */
+.shop{background:var(--sand);color:var(--ink);padding-top:clamp(2rem,6vw,4rem)}
+.shop .label{color:var(--red-deep)}
+.shop h2 em{color:var(--red-deep)}
+.shop .lede{color:#4A3E31}
+.cats{display:grid;gap:1.25rem;margin-top:2.5rem}
+.cat{
+  position:relative;overflow:hidden;padding:1.75rem 1.5rem 1.6rem;
+  background:var(--ink);color:var(--sand);border:2px solid var(--ink);
+  box-shadow:6px 6px 0 var(--red-deep);margin-right:6px;
+}
+.cat .num{font-family:var(--display);font-weight:900;font-size:1rem;letter-spacing:.2em;color:var(--red)}
+.cat h3{font-size:clamp(2.2rem,9vw,3.4rem);margin-top:.5rem}
+.cat p{margin-top:.7rem;color:var(--sand-mute);max-width:28rem}
+.cat .sting{position:absolute;right:-1.25rem;bottom:-1.5rem;width:7.5rem;color:rgba(232,217,188,.07);pointer-events:none}
+@media (min-width:820px){
+  .cats{grid-template-columns:1fr 1fr;gap:2rem}
+  .cat{padding:2.5rem 2.25rem 2.25rem}
+  .cat .sting{width:10rem}
+}
+
+/* Call block */
+.ask{padding-top:clamp(4rem,10vw,7rem)}
+.ask-card{
+  position:relative;overflow:hidden;
+  padding:clamp(1.75rem,6vw,3.5rem);
+  background:var(--ink-2);border:2px solid var(--red);
+}
+.ask-card .sting{position:absolute;right:clamp(-2rem,-3vw,-1rem);top:50%;width:clamp(8rem,26vw,15rem);transform:translateY(-50%);color:rgba(234,59,48,.12);pointer-events:none}
+.ask-card > *:not(.sting){position:relative;z-index:1}
+.ask-card h2{margin-top:.9rem;max-width:34rem}
+.ask-card p.body{margin-top:.9rem;max-width:30rem;color:var(--sand-mute)}
+.ask-tel{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1.6rem;
+  font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,7.4vw,2.5rem);letter-spacing:.03em;
+  text-decoration:none;white-space:nowrap;line-height:1;
+  padding:.8rem 1.2rem;background:var(--red);color:var(--red-ink);box-shadow:5px 5px 0 var(--sand);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+}
+.ask-tel svg{width:.8em;height:.8em;flex:none}
+@media (hover:hover){.ask-tel:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--sand)}}
+.ask-tel:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--sand)}
+
+/* Reviews (deep red band) */
+.reviews{background:var(--red-deep);color:var(--sand)}
+.reviews .label{color:var(--sand)}
+.reviews h2 em{color:var(--ink)}
+.reviews .lede{color:#F1E4CC}
+.rev-grid{display:grid;gap:2rem;align-items:center}
+.score{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.score b{font-family:var(--display);font-weight:900;font-size:clamp(7rem,36vw,13rem);line-height:.78;letter-spacing:-.01em}
+.score span{font-size:.875rem;font-weight:600;padding-bottom:.4rem;white-space:nowrap}
+.score .stars{display:block;font-size:1.3rem;color:var(--sand);margin-bottom:.2rem;letter-spacing:.1em}
+.gcard{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;margin-top:1.75rem;max-width:26rem;margin-right:6px;
+  background:var(--sand);color:var(--ink);text-decoration:none;box-shadow:6px 6px 0 var(--ink);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.gcard .g{width:2.1rem;height:2.1rem;flex:none}
+.gcard strong{display:block;font-weight:700;font-size:.9375rem}
+.gcard small{display:block;font-size:.875rem;color:#4A3E31}
+.gcard .arrow{margin-left:auto;color:var(--red-deep);font-size:1.25rem;font-weight:700}
+@media (hover:hover){.gcard:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}}
+@media (min-width:820px){.rev-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* Visit */
+.visit-grid{display:grid;gap:3rem;margin-top:2.5rem}
+.info{display:grid;gap:1.75rem;align-content:start}
+.info dt{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.info dd{font-size:1.125rem;line-height:1.45}
+.info dd a{text-decoration-color:rgba(234,59,48,.6);text-underline-offset:4px}
+.hours{width:100%;max-width:24rem;border-collapse:collapse;font-size:.9375rem}
+.hours th,.hours td{padding:.6rem 0;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left;font-weight:500}
+.hours td{text-align:right;padding-left:1rem}
+.age{margin-top:.9rem;font-size:.875rem;color:var(--sand-mute)}
+@media (max-width:389px){.hours{font-size:.875rem}}
+
+/* Signature: the day as a dial, the open span drawn as the tail */
+.dayc{border:1px solid var(--line);background:var(--ink-2);padding:1.5rem 1.25rem}
+.dayc-head{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1rem;flex-wrap:wrap}
+.dayc-head .cap{font-size:.9375rem;color:var(--sand-mute)}
+.dial{width:100%;max-width:20rem;margin:1.5rem auto .5rem}
+.dial .ticks{fill:none;stroke:rgba(232,217,188,.35);stroke-width:7;stroke-dasharray:1.6 26.674}
+.dial .track{fill:none;stroke:rgba(232,217,188,.1);stroke-width:12}
+.dial .arc{fill:none;stroke:var(--red);stroke-width:12;stroke-dasharray:351.86 603.19;stroke-dashoffset:-226.19}
+.js .dial .arc{stroke-dasharray:0 603.19;transition:stroke-dasharray 1.5s var(--ease) .2s}
+.js .in .dial .arc{stroke-dasharray:351.86 603.19}
+.dial .t{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;fill:var(--sand-mute)}
+.dial .big{font-family:var(--display);font-size:46px;font-weight:900;letter-spacing:.02em;fill:var(--sand)}
+.dial .sm{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.22em;fill:var(--red)}
+.dial .tip{fill:var(--red)}
+.dial .start{fill:var(--sand)}
+.dial .now circle{fill:var(--sand);stroke:var(--ink-2);stroke-width:3}
+@media (min-width:820px){
+  .visit-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}
+  .dayc{padding:2rem}
+}
+
+/* Map */
+.map{margin-top:3rem;overflow:hidden;border:2px solid var(--line-strong);aspect-ratio:4/3;background:var(--ink-2)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.85) sepia(.35) contrast(1.02)}
+@media (min-width:820px){.map{aspect-ratio:21/8}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:2.75rem 0 2.25rem;color:var(--sand-mute);font-size:.9375rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem 3rem;align-items:flex-start;justify-content:space-between}
+.foot .brand b{color:var(--sand)}
+.foot p+p{margin-top:.25rem}
+.foot a{text-underline-offset:3px}
+.credit{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.8125rem}
+
+/* Sticky phone bar */
+.bar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+    padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom,0px));
+    background:rgba(15,12,10,.95);border-top:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.875rem;box-shadow:none}
+}
+
+/* Restrained reveals, only when JS runs */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .js .shot .sting{opacity:1;transform:none;transition:none}
+  .js .dial .arc{stroke-dasharray:351.86 603.19;transition:none}
+  .btn,.gcard,.ask-tel,.top-call{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- The stinger: a segmented tail curling over into the barb -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="stinger" viewBox="0 0 120 120">
+    <path d="M16 114C10 72 30 26 70 16c30-7 46 14 34 34" fill="none" stroke="currentColor" stroke-width="9" stroke-dasharray="14 3.5"/>
+    <ellipse cx="99" cy="59" rx="7" ry="9.5" transform="rotate(31 99 59)" fill="currentColor"/>
+    <path d="M93 64Q96 80 77 85Q88 76 89 66Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div class="ribbon">Sample website made for Scorpion Smoke Shop by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></div>
+
+<header class="hero" id="hero">
+  <div class="wrap top">
+    <a class="brand" href="#main" aria-label="Scorpion Smoke Shop">
+      <span class="mark" aria-hidden="true"><svg><use href="#stinger"/></svg></span>
+      <span class="where">Gun Barrel City, TX</span>
+    </a>
+    <a class="top-call" href="tel:+19038027014" aria-label="Call (903) 802-7014">(903) 802-7014</a>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1><span class="big">Scorpion</span><span class="small">Smoke Shop</span></h1>
+      <p class="hero-sub">Smoke shop and vaporizer store on W Main St in Gun Barrel City. Open every day from 9 am to 11 pm.</p>
+      <a class="rating" href="https://www.google.com/maps?cid=2606317156810350177" target="_blank" rel="noopener" aria-label="Rated 4.8 from 378 Google reviews. Open on Google Maps.">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <strong>4.8</strong>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>378 Google reviews</span>
+      </a>
+      <div class="btn-row">
+        <a class="btn btn-red" href="https://www.google.com/maps?cid=2606317156810350177" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get directions
+        </a>
+        <a class="btn btn-ghost" href="tel:+19038027014">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the shop
+        </a>
+      </div>
+    </div>
+
+    <figure class="shot">
+      <img src="assets/listing.jpg" alt="Red shelves inside Scorpion Smoke Shop, packed with rows of colorful boxes" width="1400" height="1142" fetchpriority="high" decoding="async">
+      <svg class="sting" aria-hidden="true"><use href="#stinger"/></svg>
+      <span class="chip" id="openChip" hidden><span class="dot"></span><span id="openText"></span></span>
+    </figure>
+  </div>
+</header>
+
+<div class="dune" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 80V48C210 8 400 4 640 34s420 40 590 2c90-20 160-24 210-14v60z"/></svg>
+</div>
+
+<main id="main">
+
+  <section class="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <p class="label rv">The shop</p>
+      <h2 id="shop-h" class="rv">Red shelves, <em>packed tight.</em></h2>
+      <p class="lede rv">Scorpion is a smoke shop and vaporizer store at 2304 W Main St. Come in, take your time with the wall, and ask us anything at the counter.</p>
+      <ul class="cats">
+        <li class="cat rv">
+          <span class="num">01</span>
+          <h3>Smoke <em>shop</em></h3>
+          <p>Row after row on the red shelves. Can't spot what you came for? Ask, and we'll check for you.</p>
+          <svg class="sting" aria-hidden="true"><use href="#stinger"/></svg>
+        </li>
+        <li class="cat rv">
+          <span class="num">02</span>
+          <h3>Vaporizer <em>store</em></h3>
+          <p>A wall of color to look through. Tell us what you like and we'll help you narrow it down.</p>
+          <svg class="sting" aria-hidden="true"><use href="#stinger"/></svg>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask-card rv">
+        <svg class="sting" aria-hidden="true"><use href="#stinger"/></svg>
+        <p class="label">Save yourself a trip</p>
+        <h2 id="ask-h">Want to know if it's <em>in stock?</em></h2>
+        <p class="body">Call the shop and ask before you leave the house. It's a quick call.</p>
+        <a class="ask-tel" href="tel:+19038027014">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (903) 802-7014
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-h">
+    <div class="wrap rev-grid">
+      <div class="rv">
+        <p class="label">Reviews</p>
+        <div class="score">
+          <b>4.8</b>
+          <span><span class="stars" aria-hidden="true">★★★★★</span>out of 5 on Google</span>
+        </div>
+      </div>
+      <div class="rv">
+        <h2 id="rev-h" style="margin-top:0">378 reviews on <em>Google.</em></h2>
+        <p class="lede">Read through them, then come see the red shelves for yourself.</p>
+        <a class="gcard" href="https://www.google.com/maps?cid=2606317156810350177" target="_blank" rel="noopener">
+          <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>
+            <strong>4.8 stars on Google</strong>
+            <small>378 reviews</small>
+          </span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label rv">Visit</p>
+      <h2 id="visit-h" class="rv">Come see us on <em>W Main St.</em></h2>
+      <p class="lede rv">On W Main St in Gun Barrel City.</p>
+      <div class="visit-grid">
+        <dl class="info">
+          <div class="rv">
+            <dt>Address</dt>
+            <dd>2304 W Main St<br>Gun Barrel City, TX 75156</dd>
+          </div>
+          <div class="rv">
+            <dt>Phone</dt>
+            <dd><a href="tel:+19038027014">(903) 802-7014</a></dd>
+          </div>
+          <div class="rv">
+            <dt>Hours</dt>
+            <dd>
+              <table class="hours">
+                <tbody>
+                  <tr><th scope="row">Every day</th><td>9:00 am to 11:00 pm</td></tr>
+                </tbody>
+              </table>
+              <p class="age">Adults 21+ only.</p>
+            </dd>
+          </div>
+          <div class="btn-row rv">
+            <a class="btn btn-red" href="https://www.google.com/maps?cid=2606317156810350177" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+19038027014">Call the shop</a>
+          </div>
+        </dl>
+
+        <div class="dayc rv" aria-hidden="true">
+          <div class="dayc-head">
+            <p class="label">Our day</p>
+            <p class="cap">Same hours, seven days a week.</p>
+          </div>
+          <svg class="dial" viewBox="0 0 240 240">
+            <circle class="ticks" cx="120" cy="120" r="108" transform="rotate(-90 120 120)"/>
+            <circle class="track" cx="120" cy="120" r="96"/>
+            <!-- open span: 9:00 to 23:00 of a 24h ring, midnight at top -->
+            <circle class="arc" cx="120" cy="120" r="96" transform="rotate(-90 120 120)"/>
+            <circle class="start" cx="187.88" cy="187.88" r="5"/>
+            <circle class="tip" cx="95.15" cy="27.27" r="8"/>
+            <text class="t" x="168" y="174" text-anchor="end">9 AM</text>
+            <text class="t" x="104" y="60" text-anchor="middle">11 PM</text>
+            <text class="big" x="120" y="132" text-anchor="middle">OPEN</text>
+            <text class="sm" x="120" y="152" text-anchor="middle">EVERY DAY</text>
+            <g class="now" id="nowMark" display="none"><circle cx="120" cy="24" r="6"/></g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="map rv">
+        <iframe title="Map to Scorpion Smoke Shop, 2304 W Main St, Gun Barrel City" src="https://www.google.com/maps?q=Scorpion+Smoke+Shop,+2304+W+Main+St,+Gun+Barrel+City,+TX+75156&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><span class="mark" aria-hidden="true"><svg><use href="#stinger"/></svg></span><b>Scorpion Smoke Shop</b></div>
+      <div>
+        <p>2304 W Main St, Gun Barrel City, TX 75156</p>
+        <p><a href="tel:+19038027014">(903) 802-7014</a></p>
+      </div>
+      <p><a href="https://www.facebook.com/100078339400424" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="credit">Sample website by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-red" href="https://www.google.com/maps?cid=2606317156810350177" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-ghost" href="tel:+19038027014">Call</a>
+</nav>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){document.getElementById('hero').classList.add('loaded');});});
+
+  /* Shop hours in America/Chicago: every day 9:00 to 23:00 (minutes from midnight). */
+  var OPEN=540, CLOSE=1380;
+  function fmt(m){var h=Math.floor(m/60),mm=('0'+(m%60)).slice(-2);return (h%12||12)+':'+mm+' '+(h<12?'am':'pm');}
+  /* status(minutes) -> [isOpen, text] */
+  function status(m){
+    if(m>=OPEN&&m<CLOSE)return [true,'Open now · until '+fmt(CLOSE)];
+    if(m<OPEN)return [false,'Closed · opens '+fmt(OPEN)];
+    return [false,'Closed · opens '+fmt(OPEN)+' tomorrow'];
+  }
+  /* self-check: logs loudly if the hours logic breaks */
+  console.assert(status(540)[0]&&status(1379)[0]&&!status(1380)[0]&&!status(539)[0]
+    &&status(600)[1].indexOf('11:00 pm')>-1&&status(100)[1]==='Closed · opens 9:00 am'
+    &&status(1400)[1].indexOf('tomorrow')>-1,'hours logic');
+
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+    var m=(+p.hour%24)*60+(+p.minute), s=status(m);
+    var chip=document.getElementById('openChip');
+    document.getElementById('openText').textContent=s[1];
+    chip.classList.toggle('is-open',s[0]);
+    chip.hidden=false;
+    var now=document.getElementById('nowMark');
+    now.setAttribute('transform','rotate('+(m/1440*360).toFixed(2)+' 120 120)');
+    now.removeAttribute('display');
+  }catch(e){}
+
+  /* Scroll reveal */
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
