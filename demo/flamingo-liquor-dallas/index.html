@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Flamingo Liquor at 4125 Fairmount St, Dallas, TX. A liquor, wine and beer store and tobacco shop, open Monday to Saturday from noon to 9 pm. Call (469) 399-1165.">
+<meta name="theme-color" content="#17121A">
+<title>Flamingo Liquor | Liquor Store on Fairmount St, Dallas, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flamingo Liquor | Dallas, TX">
+<meta property="og:description" content="Liquor, wine, beer and tobacco at 4125 Fairmount St, Dallas. Open Monday to Saturday, noon to 9 pm.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/flamingo-liquor-dallas/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317121A'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23FF7EB0' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@600&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LiquorStore",
+  "name": "Flamingo Liquor",
+  "telephone": "+1-469-399-1165",
+  "image": "https://www.topshelfsolutions.io/demo/flamingo-liquor-dallas/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4125 Fairmount St",
+    "addressLocality": "Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75219",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "12:00", "closes": "21:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=13419475206658374546"
+}
+</script>
+<style>
+/* ================================================================
+   Flamingo Liquor - one-page demo (structure from uptown-liquors-dallas)
+   Night plum-black, blush paper and a flamingo-pink neon accent.
+   The signature device is their own wire shelving: a thin pink wire
+   grid returns as the header trim, the hero frame, the rack strip
+   under the hero, the edge of the call card, the top of the hours
+   card, and a neon grid floor under the closing call.
+   ================================================================ */
+:root{
+  --ink:#17121A;
+  --ink-2:#211A24;
+  --blush:#FBEEEE;
+  --paper:#FFF8F6;
+  --pink:#FF7EB0;
+  --pink-hi:#FFA6C8;
+  --pink-ink:#A8245B;
+  --mute-d:#C9BCC4;
+  --mute-l:#5E5058;
+  --rule-l:rgba(23,18,26,.14);
+  --rule-d:rgba(255,126,176,.32);
+  --wire:rgba(255,126,176,.45);
+  --display:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --label:'Josefin Sans','Futura','Century Gothic',system-ui,sans-serif;
+  --body:'Red Hat Text',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--blush);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;letter-spacing:.005em;text-wrap:balance;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:2px}
+.on-light :focus-visible{outline-color:var(--pink-ink)}
+::selection{background:var(--pink);color:var(--ink)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--pink);color:var(--ink);font-weight:600;text-decoration:none}
+.skip:focus{top:1rem}
+
+/* ---- the wire rack ------------------------------------------------ */
+.rack{
+  --cell:22px;
+  background-color:var(--ink);
+  background-image:linear-gradient(90deg,var(--wire) 1.5px,transparent 1.5px),linear-gradient(var(--wire) 1.5px,transparent 1.5px);
+  background-size:var(--cell) var(--cell);
+}
+.band{height:30px;border-block:1.5px solid var(--pink)}
+
+/* small caps label */
+.label{display:inline-flex;align-items:center;gap:.7rem;font:600 .78rem/1 var(--label);letter-spacing:.24em;text-transform:uppercase;color:var(--pink-ink)}
+.label::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:currentColor;flex:none}
+.dark .label{color:var(--pink)}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.25rem;padding:.85rem 1.5rem;border:1.5px solid transparent;border-radius:999px;
+  font:600 .9rem/1 var(--label);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  transition:transform .18s var(--ease),background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none;margin-top:-.15em}
+.btn-pink{background:var(--pink);color:var(--ink);border-color:var(--pink)}
+.btn-line{background:rgba(23,18,26,.35);color:var(--paper);border-color:rgba(255,248,246,.6)}
+.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-paper{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover){
+  .btn-pink:hover{background:var(--pink-hi);border-color:var(--pink-hi);box-shadow:0 0 22px rgba(255,126,176,.45)}
+  .btn-line:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  .btn-ink:hover{background:var(--ink-2);color:var(--pink-hi)}
+  .btn-paper:hover{background:var(--pink-hi);border-color:var(--pink-hi)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything shows */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon --------------------------------- */
+.ribbon{background:var(--pink);color:var(--ink);text-align:center;font-size:.75rem;font-weight:500;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{font-weight:600;text-underline-offset:2px}
+
+/* ---- header ------------------------------------------------------- */
+.top{position:sticky;top:0;z-index:50;background:var(--blush);color:var(--ink)}
+.top::after{content:"";display:block;height:3px;background:var(--pink)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.5rem;font:400 1.4rem/1 var(--display);text-decoration:none;white-space:nowrap}
+.brand::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--pink);box-shadow:0 0 0 3px rgba(255,126,176,.25);flex:none}
+.top-right{display:flex;align-items:center;gap:1.6rem;min-width:0}
+.top nav{display:none;gap:1.6rem;font:600 .8rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase}
+.top nav a{text-decoration:none;padding-block:.4rem;border-bottom:1px solid transparent;transition:border-color .2s ease}
+.top nav a:hover{border-color:var(--pink-ink)}
+.top .place{font:600 .75rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--mute-l);white-space:nowrap}
+.top .btn{display:none;min-height:2.6rem;padding:.55rem 1.05rem;font-size:.8rem}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:960px){.top nav{display:flex}}
+@media (max-width:370px){.brand{font-size:1.25rem}.top .place{letter-spacing:.12em}}
+
+/* live open / closed chip */
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.875rem;font-weight:500;white-space:nowrap}
+.status::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;opacity:.55;flex:none}
+.dark .status{color:var(--mute-d)}
+.dark .status.is-open{color:var(--paper)}
+.dark .status.is-open::before{background:#7FD08A;opacity:1;box-shadow:0 0 0 4px rgba(127,208,138,.2)}
+.on-light .status{color:var(--mute-l)}
+.on-light .status.is-open{color:var(--ink)}
+.on-light .status.is-open::before{background:#2E8B4B;opacity:1;box-shadow:0 0 0 4px rgba(46,139,75,.16)}
+.hero .status{padding:.38rem .85rem;border-radius:999px;background:rgba(23,18,26,.62);border:1px solid var(--rule-d)}
+
+/* ---- hero --------------------------------------------------------- */
+/* Phones: their shop fills the first screen as a soft, pink-washed
+   texture; name, rating and Directions sit on an ink fade at the
+   bottom. Wide screens: copy on ink at left, the photo at right in a
+   4:3 frame of pink wire grid, cropped to the shelves and floor. */
+.hero{position:relative;isolation:isolate;overflow:clip;background:var(--ink);color:var(--paper);
+  display:flex;align-items:flex-end;min-height:calc(100vh - 10.5rem);min-height:calc(100svh - 10.5rem);padding:9rem 0 1.6rem}
+.hero-photo{position:absolute;inset:0;z-index:-2;margin:0;background:var(--ink-2)}
+.hero-photo .ph{display:block;height:100%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:55% 40%;filter:blur(4px) saturate(1.1)}
+.hero-photo figcaption{display:none}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 45% at 70% 12%,rgba(255,126,176,.22),transparent 70%),
+    linear-gradient(180deg,rgba(23,18,26,.18) 0%,rgba(23,18,26,.32) 26%,rgba(23,18,26,.88) 52%,var(--ink) 100%);
+}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.95rem;min-width:0;max-width:38rem}
+.hero .label{color:var(--pink)}
+.hero h1{font-size:clamp(3.1rem,15vw,4.3rem);line-height:.95}
+.hero h1 span{display:block}
+.hero h1 .ch{color:var(--pink);font-style:italic;text-shadow:0 0 22px rgba(255,126,176,.55),0 0 2px rgba(255,166,200,.8)}
+.hero-sub{max-width:30rem;color:var(--mute-d);font-size:1rem}
+.hero-sub strong{color:var(--paper);font-weight:500}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .95rem .4rem .45rem;
+  border:1px solid var(--rule-d);border-radius:999px;background:rgba(23,18,26,.62);
+  font-size:.9375rem;font-weight:500;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.65rem;height:1.65rem;padding:.3rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04;flex:none}
+.rating .sep{color:var(--mute-d)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;width:100%;margin-top:.15rem}
+
+.rise{animation:rise .7s var(--ease) both}
+.rise-2{animation-delay:.08s}.rise-3{animation-delay:.16s}.rise-4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-line{display:none} /* Call lives in the phone bar */
+}
+@media (min-width:900px){
+  .hero{display:block;min-height:0;padding:clamp(3.5rem,6vw,5.5rem) 0}
+  .hero::before{background:radial-gradient(ellipse 45% 60% at 78% 50%,rgba(255,126,176,.16),transparent 70%)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+  .hero-copy{gap:1.25rem}
+  .hero h1{font-size:clamp(4.4rem,6.8vw,6.6rem)}
+  .hero-sub{font-size:1.1875rem}
+  .hero-photo{position:relative;inset:auto;z-index:auto;justify-self:end;width:min(100%,34rem);padding:14px;
+    border:1.5px solid var(--pink);
+    background-color:var(--ink);
+    background-image:linear-gradient(90deg,var(--wire) 1.5px,transparent 1.5px),linear-gradient(var(--wire) 1.5px,transparent 1.5px);
+    background-size:14px 14px}
+  .hero-photo .ph{height:auto;overflow:hidden;background:var(--ink-2);position:relative}
+  .hero-photo .ph::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(160deg,rgba(255,126,176,.18),rgba(23,18,26,.28))}
+  .hero-photo img{height:auto;aspect-ratio:4/3;object-position:50% 30%;filter:blur(3px) saturate(1.1)}
+  .hero-photo figcaption{display:block;position:absolute;left:-1.25rem;bottom:2rem;padding:.65rem 1rem;background:var(--pink);color:var(--ink);
+    font:600 .72rem/1 var(--label);letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+}
+
+/* ---- sections ------------------------------------------------------- */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.dark{background:var(--ink);color:var(--paper)}
+h2{font-size:clamp(2.4rem,9.5vw,4.2rem)}
+h2 em{color:var(--pink-ink)}
+.dark h2 em{color:var(--pink)}
+
+/* ---- the shop: copy + the category board ---------------------------- */
+.shop-grid{display:grid;gap:2.25rem}
+.shop-copy .label{margin-bottom:1.2rem}
+.shop-copy p{margin-top:1.1rem;color:var(--mute-l);max-width:32rem}
+.shop-copy p.lead{color:var(--ink);font-weight:500}
+.board{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1.5px solid var(--ink)}
+.tile{
+  aspect-ratio:1;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:.5rem;
+  padding:clamp(.9rem,3.5vw,1.4rem);background:var(--paper);color:var(--ink);
+  transition:background-color .3s ease,color .3s ease;
+}
+.tile .n{font:600 .72rem/1 var(--label);letter-spacing:.2em;color:var(--pink-ink)}
+.tile h3{font-size:clamp(1.35rem,5.6vw,2.1rem);line-height:1.05}
+.tile p{font:600 .68rem/1.45 var(--label);letter-spacing:.16em;text-transform:uppercase;color:var(--mute-l)}
+/* 2x2: ink on 1 and 4 */
+.tile:nth-child(1),.tile:nth-child(4){background:var(--ink);color:var(--paper)}
+.tile:nth-child(1) .n,.tile:nth-child(4) .n{color:var(--pink)}
+.tile:nth-child(1) p,.tile:nth-child(4) p{color:var(--mute-d)}
+@media (hover:hover){
+  .tile:hover{background:var(--pink) !important;color:var(--ink) !important}
+  .tile:hover .n,.tile:hover p{color:var(--ink) !important}
+}
+@media (min-width:900px){
+  .shop-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3rem,6vw,5rem);align-items:center}
+  .tile h3{font-size:clamp(1.7rem,2.4vw,2.3rem)}
+}
+
+/* the call card */
+.ask{
+  position:relative;margin-top:clamp(2.75rem,6vw,4.5rem);padding:clamp(1.75rem,5vw,2.75rem);padding-left:calc(clamp(1.75rem,5vw,2.75rem) + 22px);
+  background:var(--ink);color:var(--paper);display:grid;gap:1.25rem;align-items:center;overflow:hidden;
+}
+.ask::before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;border-right:1.5px solid var(--pink);
+  background-image:linear-gradient(90deg,var(--wire) 1.5px,transparent 1.5px),linear-gradient(var(--wire) 1.5px,transparent 1.5px);
+  background-size:11px 11px}
+.ask h3{font-size:clamp(1.9rem,7vw,2.6rem)}
+.ask p{color:var(--mute-d);margin-top:.6rem;max-width:30rem}
+.ask .tel{display:block;font:400 clamp(1.8rem,8vw,2.6rem)/1 var(--display);color:var(--pink);text-decoration:none;white-space:nowrap}
+.ask .btn{width:100%}
+@media (min-width:900px){.ask{grid-template-columns:minmax(0,1.4fr) auto auto;gap:2.5rem}.ask .btn{width:auto}}
+
+/* ---- reviews --------------------------------------------------------- */
+.reviews{text-align:center;position:relative;overflow:clip;isolation:isolate}
+.reviews::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(90deg,var(--wire) 1px,transparent 1px),linear-gradient(var(--wire) 1px,transparent 1px);
+  background-size:48px 48px;background-position:50% 0;
+  -webkit-mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 10%,transparent 72%);
+          mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 10%,transparent 72%)}
+.score{position:relative;width:clamp(10rem,44vw,12.5rem);aspect-ratio:1;margin:2.4rem auto 2rem;display:grid;place-items:center;
+  border-radius:50%;border:1.5px solid var(--pink);background:var(--ink);
+  box-shadow:0 0 0 7px var(--ink),0 0 0 8px var(--rule-d),0 0 40px rgba(255,126,176,.25)}
+.score b{font:400 clamp(3.8rem,17vw,4.8rem)/1 var(--display);color:var(--pink);text-shadow:0 0 18px rgba(255,126,176,.5)}
+/* five stars, gold row clipped to 90% over a dim row (4.5 of 5) */
+.stars{position:relative;display:inline-block;font:400 clamp(1.9rem,9vw,2.4rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap;color:rgba(255,248,246,.18)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:90%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-family:var(--body);font-weight:500;font-size:clamp(1.35rem,4.6vw,1.9rem);letter-spacing:-.01em;line-height:1.3;margin-top:1.2rem}
+.goog{display:inline-block;padding:.05em .3em .1em;border-radius:6px;background:#fff;font-weight:600}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:27rem;margin:1rem auto 0;color:var(--mute-d)}
+.reviews .btn{margin-top:1.9rem}
+
+/* ---- visit ------------------------------------------------------------ */
+.head{max-width:44rem;margin:0 auto clamp(2rem,5vw,3.25rem);text-align:center}
+.head .label{margin-bottom:1.2rem}
+.visit-grid{display:grid;gap:1.25rem}
+.card{position:relative;padding:clamp(1.5rem,4vw,2.2rem);min-width:0}
+.card.hours-card{background:var(--paper);border:1.5px solid var(--ink);padding-top:calc(clamp(1.5rem,4vw,2.2rem) + 16px)}
+.card.hours-card::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;border-bottom:1.5px solid var(--pink);
+  background-color:var(--ink);
+  background-image:linear-gradient(90deg,var(--wire) 1.5px,transparent 1.5px),linear-gradient(var(--wire) 1.5px,transparent 1.5px);
+  background-size:16px 16px}
+.card.ink{background:var(--ink);color:var(--paper)}
+.card.line{background:var(--paper);border:1.5px solid var(--ink)}
+.card .cap{display:flex;justify-content:space-between;gap:1rem;margin-bottom:.9rem;font:600 .74rem/1 var(--label);letter-spacing:.22em;text-transform:uppercase;color:var(--pink-ink)}
+.card.ink .cap{color:var(--pink)}
+.hours-card .cap{padding-bottom:.85rem;margin-bottom:.2rem;border-bottom:1.5px solid var(--ink)}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.62rem 0;border-bottom:1px solid var(--rule-l);font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:600;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--mute-l);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+.hours .shut dd{color:var(--pink-ink);font-weight:600}
+.hours .today dd{color:var(--ink);font-weight:600}
+.hours .today dt::after{content:"Today";padding:.25rem .5rem .2rem;border-radius:999px;background:var(--ink);color:var(--pink);font:600 .6rem/1 var(--label);letter-spacing:.16em;text-transform:uppercase}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.85em}}
+.big{display:block;font:400 clamp(1.8rem,7vw,2.4rem)/1.1 var(--display);text-decoration:none}
+address.big{font-style:normal}
+.card .note{margin-top:.8rem}
+.card .btn{margin-top:1.4rem;width:100%}
+.stack{display:grid;gap:1.25rem;min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:1.5rem}}
+
+/* ---- closing: a neon wire-grid floor in perspective ---------------------- */
+.close{position:relative;overflow:clip;isolation:isolate;text-align:center;padding:clamp(4.5rem,12vw,8rem) 0 clamp(7rem,16vw,11rem)}
+.close .floor{position:absolute;left:-60%;right:-60%;bottom:0;height:62%;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(90deg,rgba(255,126,176,.6) 2px,transparent 2px),linear-gradient(rgba(255,126,176,.6) 2px,transparent 2px);
+  background-size:64px 64px;background-position:50% 100%;
+  transform:perspective(420px) rotateX(64deg);transform-origin:50% 100%;
+  -webkit-mask-image:linear-gradient(to top,#000 10%,transparent 85%);
+          mask-image:linear-gradient(to top,#000 10%,transparent 85%)}
+.close .label{margin-bottom:1.3rem}
+.close h2{font-size:clamp(2.6rem,11vw,5.4rem)}
+.close h2 em{text-shadow:0 0 20px rgba(255,126,176,.5)}
+.close p{max-width:32rem;margin:1.2rem auto 0;color:var(--mute-d);font-size:1.0625rem}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer --------------------------------------------------------------- */
+.foot{background:var(--ink-2);color:var(--mute-d);font-size:.9375rem}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{display:flex;color:var(--paper);font-size:1.5rem;margin-bottom:.8rem}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;font:600 .78rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--paper)}
+.credit{border-top:1px solid var(--rule-d);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar -------------------------------------------------------- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--ink);border-top:1px solid var(--rule-d);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:.82rem}
+@media (max-width:720px){body{padding-bottom:calc(4.3rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion ----------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for Flamingo Liquor by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top on-light">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="Flamingo Liquor, back to top">Flamingo Liquor</a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#shop">The shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <span class="place">Dallas, TX</span>
+      <a class="btn btn-ink" href="tel:+14693991165"><svg aria-hidden="true"><use href="#i-phone"/></svg>(469) 399-1165</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero dark" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="status js-status rise">Mon to Sat, noon to 9 pm</p>
+        <p class="label rise">Fairmount St &middot; Dallas</p>
+        <h1 class="rise rise-2"><span class="ch">Flamingo</span><span>Liquor</span></h1>
+        <p class="hero-sub rise rise-3">Liquor, wine, beer and tobacco in one bright shop at <strong>4125 Fairmount St</strong>.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener" aria-label="Rated 4.5 out of 5 from 83 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <span>4.5</span>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep" aria-hidden="true">&middot;</span>
+          <span>83 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-pink" href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-line" href="tel:+14693991165"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (469) 399-1165</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <span class="ph"><img src="assets/listing.jpg" width="1400" height="1867" fetchpriority="high" decoding="async"
+             alt="Inside Flamingo Liquor, softly blurred: a bright store with a dark wood floor, wire shelving lined with bottles, and red shopping baskets by the door."></span>
+        <figcaption aria-hidden="true">4125 Fairmount St</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="rack band" aria-hidden="true"></div>
+
+  <!-- The shop -->
+  <section class="section on-light" id="shop">
+    <div class="wrap shop-grid">
+      <div class="shop-copy reveal">
+        <p class="label">The shop</p>
+        <h2>Bright aisles. A <em>dark wood</em> floor.</h2>
+        <p class="lead">One shop on Fairmount St for liquor, wine, beer and tobacco.</p>
+        <p>Wire shelving full of bottles runs down the aisles under bright lights. Red baskets wait by the door, so grab one and take your time.</p>
+      </div>
+      <ul class="board reveal" aria-label="What we are">
+        <li class="tile"><span class="n">01</span><div><h3>Liquor store</h3><p>Shelves of bottles</p></div></li>
+        <li class="tile"><span class="n">02</span><div><h3>Wine store</h3><p>Same aisles</p></div></li>
+        <li class="tile"><span class="n">03</span><div><h3>Beer store</h3><p>Same stop</p></div></li>
+        <li class="tile"><span class="n">04</span><div><h3>Tobacco shop</h3><p>Right here too</p></div></li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <div class="ask dark reveal">
+        <div>
+          <h3>Got a bottle in mind?</h3>
+          <p>Call the shop with your question, then come by any day but Sunday, from noon to 9 pm.</p>
+        </div>
+        <a class="tel" href="tel:+14693991165">(469) 399-1165</a>
+        <a class="btn btn-pink" href="tel:+14693991165"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews dark" id="reviews">
+    <div class="wrap reveal">
+      <p class="label">Reviews</p>
+      <div class="score" aria-hidden="true"><b>4.5</b></div>
+      <div class="stars" role="img" aria-label="4.5 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>4.5 stars from 83 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>Read them on our Google listing, and add yours after your next stop on Fairmount.</p>
+      <a class="btn btn-paper" href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener"><svg aria-hidden="true" style="width:1.3em;height:1.3em"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section on-light" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="label">Visit</p>
+        <h2>Monday to Saturday, <em>noon to 9 pm.</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card hours-card reveal">
+          <span class="cap"><span>Hours</span><span>Closed Sunday</span></span>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>12 pm to 9 pm</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>12 pm to 9 pm</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>12 pm to 9 pm</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>12 pm to 9 pm</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>12 pm to 9 pm</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>12 pm to 9 pm</dd></div>
+            <div data-day="0" class="shut"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+        <div class="stack">
+          <div class="card ink dark reveal">
+            <span class="cap">Address</span>
+            <address class="big">4125 Fairmount St<br>Dallas, TX 75219</address>
+            <a class="btn btn-pink" href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card line reveal">
+            <span class="cap">Phone</span>
+            <a class="big" href="tel:+14693991165">(469) 399-1165</a>
+            <p class="status js-status note">Mon to Sat, noon to 9 pm</p>
+            <a class="btn btn-ink" href="tel:+14693991165"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="close dark">
+    <div class="floor" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <p class="label">Liquor &middot; Wine &middot; Beer &middot; Tobacco</p>
+      <h2>See you on <em>Fairmount</em></h2>
+      <p>4125 Fairmount St, Dallas, TX 75219. Open noon to 9 pm, Monday through Saturday.</p>
+      <div class="close-ctas">
+        <a class="btn btn-pink" href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-line" href="tel:+14693991165"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (469) 399-1165</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand">Flamingo Liquor</p>
+      <p>4125 Fairmount St, Dallas, TX 75219</p>
+      <p><a href="tel:+14693991165">(469) 399-1165</a> &middot; <a href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">Adults 21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn btn-pink" href="https://www.google.com/maps?cid=13419475206658374546" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-paper" href="tel:+14693991165"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Mon (1) to Sat (6), noon (720) to 9 pm (1260), minutes from midnight. Sunday closed.
+  var OPEN=720, CLOSE=1260;
+  function isOpen(d,m){ return d>=1 && d<=6 && m>=OPEN && m<CLOSE; }
+  function text(d,m){
+    if(isOpen(d,m)) return 'Open now until 9 pm';
+    if(d>=1 && d<=6 && m<OPEN) return 'Closed now, opens at noon';
+    if(d>=1 && d<=5) return 'Closed now, opens tomorrow at noon';
+    return 'Closed now, opens Monday at noon';
+  }
+  // self-check
+  console.assert(!isOpen(1,719) && isOpen(1,720) && isOpen(6,1259) && !isOpen(6,1260) && !isOpen(0,800), 'hours logic');
+  console.assert(text(5,1300)==='Closed now, opens tomorrow at noon' && text(6,1300)==='Closed now, opens Monday at noon' && text(0,800)==='Closed now, opens Monday at noon' && text(3,600)==='Closed now, opens at noon', 'status text');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=text(d,m); els[i].classList.toggle('is-open',isOpen(d,m)); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
