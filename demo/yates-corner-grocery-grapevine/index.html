@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Yates Corner Grocery at 2190 E Dove Rd, Grapevine, TX. A convenience store with beer, wine, cigars, bait and lottery, open seven days a week. Call (817) 481-1083.">
+<meta name="theme-color" content="#17110D">
+<title>Yates Corner Grocery | Convenience Store on E Dove Rd, Grapevine, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yates Corner Grocery | Grapevine, TX">
+<meta property="og:description" content="Beer, wine, cigars, bait and lottery at 2190 E Dove Rd, Grapevine. Open seven days a week.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/yates-corner-grocery-grapevine/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317110D'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23FFB547'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@600&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ConvenienceStore",
+  "name": "Yates Corner Grocery",
+  "telephone": "+1-817-481-1083",
+  "image": "https://www.topshelfsolutions.io/demo/yates-corner-grocery-grapevine/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2190 E Dove Rd",
+    "addressLocality": "Grapevine",
+    "addressRegion": "TX",
+    "postalCode": "76092",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "06:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "19:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=8807074872044442273"
+}
+</script>
+<style>
+/* ================================================================
+   Yates Corner Grocery - one-page demo (structure from flamingo-liquor-dallas)
+   Dark barn wood, warm cream and marquee-bulb amber. The signature
+   device is their own lit Beer Cave marquee: a row of glowing bulbs
+   returns as the strip under the hero, the hero frame, the edge of
+   the call card, the top of the hours card and a bulb-lit floor
+   under the closing call.
+   ================================================================ */
+:root{
+  --ink:#17110D;
+  --ink-2:#221912;
+  --cream:#F7EFE3;
+  --paper:#FFF9F0;
+  --bulb:#FFB547;
+  --bulb-hi:#FFCB7A;
+  --bulb-ink:#9A4F0C;
+  --mute-d:#CDBFAE;
+  --mute-l:#5F5145;
+  --rule-l:rgba(23,17,13,.14);
+  --rule-d:rgba(255,181,71,.32);
+  --dots:radial-gradient(circle,var(--bulb) 0 2.5px,rgba(255,181,71,.28) 3.5px,transparent 6px);
+  --display:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --label:'Josefin Sans','Futura','Century Gothic',system-ui,sans-serif;
+  --body:'Red Hat Text',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--cream);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;letter-spacing:.005em;text-wrap:balance;overflow-wrap:normal;word-break:normal;hyphens:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bulb);outline-offset:3px;border-radius:2px}
+.on-light :focus-visible{outline-color:var(--bulb-ink)}
+::selection{background:var(--bulb);color:var(--ink)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--bulb);color:var(--ink);font-weight:600;text-decoration:none}
+.skip:focus{top:1rem}
+
+/* ---- the marquee bulbs -------------------------------------------- */
+.bulbs{background-color:var(--ink);background-image:var(--dots);background-size:22px 22px;background-position:center}
+.band{height:30px;border-block:1.5px solid var(--rule-d)}
+
+/* small caps label */
+.label{display:inline-flex;align-items:center;gap:.7rem;font:600 .78rem/1 var(--label);letter-spacing:.24em;text-transform:uppercase;color:var(--bulb-ink)}
+.label::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:currentColor;flex:none}
+.dark .label{color:var(--bulb)}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.25rem;padding:.85rem 1.5rem;border:1.5px solid transparent;border-radius:999px;
+  font:600 .9rem/1 var(--label);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  transition:transform .18s var(--ease),background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none;margin-top:-.15em}
+.btn-bulb{background:var(--bulb);color:var(--ink);border-color:var(--bulb)}
+.btn-line{background:rgba(23,17,13,.35);color:var(--paper);border-color:rgba(255,249,240,.6)}
+.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-paper{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover){
+  .btn-bulb:hover{background:var(--bulb-hi);border-color:var(--bulb-hi);box-shadow:0 0 22px rgba(255,181,71,.45)}
+  .btn-line:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  .btn-ink:hover{background:var(--ink-2);color:var(--bulb-hi)}
+  .btn-paper:hover{background:var(--bulb-hi);border-color:var(--bulb-hi)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything shows */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon --------------------------------- */
+.ribbon{background:var(--bulb);color:var(--ink);text-align:center;font-size:.75rem;font-weight:500;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{font-weight:600;text-underline-offset:2px}
+
+/* ---- header ------------------------------------------------------- */
+.top{position:sticky;top:0;z-index:50;background:var(--cream);color:var(--ink)}
+.top::after{content:"";display:block;height:3px;background:var(--bulb)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.5rem;font:400 1.4rem/1 var(--display);text-decoration:none;white-space:nowrap}
+.brand::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--bulb);box-shadow:0 0 0 3px rgba(255,181,71,.3);flex:none}
+.top-right{display:flex;align-items:center;gap:1.6rem;min-width:0}
+.top nav{display:none;gap:1.6rem;font:600 .8rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase}
+.top nav a{text-decoration:none;padding-block:.4rem;border-bottom:1px solid transparent;transition:border-color .2s ease}
+.top nav a:hover{border-color:var(--bulb-ink)}
+.top .place{font:600 .75rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--mute-l);white-space:nowrap}
+.top .btn{display:none;min-height:2.6rem;padding:.55rem 1.05rem;font-size:.8rem}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:960px){.top nav{display:flex}}
+@media (max-width:520px){.top .place{display:none}}
+@media (max-width:370px){.brand{font-size:1.25rem}}
+
+/* live open / closed chip */
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.875rem;font-weight:500;white-space:nowrap}
+.status::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;opacity:.55;flex:none}
+.dark .status{color:var(--mute-d)}
+.dark .status.is-open{color:var(--paper)}
+.dark .status.is-open::before{background:#7FD08A;opacity:1;box-shadow:0 0 0 4px rgba(127,208,138,.2)}
+.on-light .status{color:var(--mute-l)}
+.on-light .status.is-open{color:var(--ink)}
+.on-light .status.is-open::before{background:#2E8B4B;opacity:1;box-shadow:0 0 0 4px rgba(46,139,75,.16)}
+.hero .status{padding:.38rem .85rem;border-radius:999px;background:rgba(23,17,13,.62);border:1px solid var(--rule-d)}
+
+/* ---- hero --------------------------------------------------------- */
+/* Phones: their lit Beer Cave marquee fills the top of the first
+   screen; name, rating and Directions sit on a dark wood fade at the
+   bottom. Wide screens: copy at left, the whole photo at right in a
+   4:3 frame of marquee bulbs. */
+.hero{position:relative;isolation:isolate;overflow:clip;background:var(--ink);color:var(--paper);
+  display:flex;align-items:flex-end;min-height:calc(100vh - 10.5rem);min-height:calc(100svh - 10.5rem);padding:9rem 0 1.6rem}
+.hero-photo{position:absolute;inset:0;z-index:-2;margin:0;background:var(--ink-2)}
+.hero-photo .ph{display:block;height:100%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:55% 0%}
+.hero-photo figcaption{display:none}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 30% at 55% 10%,rgba(255,181,71,.18),transparent 70%),
+    linear-gradient(180deg,rgba(23,17,13,.08) 0%,rgba(23,17,13,.3) 28%,rgba(23,17,13,.88) 52%,var(--ink) 100%);
+}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.95rem;min-width:0;max-width:38rem}
+.hero .label{color:var(--bulb)}
+.hero h1{font-size:clamp(3rem,14vw,4.2rem);line-height:.95}
+.hero h1 .ch{display:block;color:var(--bulb);font-style:italic;text-shadow:0 0 22px rgba(255,181,71,.55),0 0 2px rgba(255,203,122,.8)}
+.hero-sub{max-width:30rem;color:var(--mute-d);font-size:1rem}
+.hero-sub strong{color:var(--paper);font-weight:500}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .95rem .4rem .45rem;
+  border:1px solid var(--rule-d);border-radius:999px;background:rgba(23,17,13,.62);
+  font-size:.9375rem;font-weight:500;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.65rem;height:1.65rem;padding:.3rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04;flex:none}
+.rating .sep{color:var(--mute-d)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;width:100%;margin-top:.15rem}
+
+.rise{animation:rise .7s var(--ease) both}
+.rise-2{animation-delay:.08s}.rise-3{animation-delay:.16s}.rise-4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-line{display:none} /* Call lives in the phone bar */
+}
+@media (min-width:900px){
+  .hero{display:block;min-height:0;padding:clamp(3.5rem,6vw,5.5rem) 0}
+  .hero::before{background:radial-gradient(ellipse 45% 60% at 78% 50%,rgba(255,181,71,.14),transparent 70%)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+  .hero-copy{gap:1.25rem}
+  .hero h1{font-size:clamp(3.4rem,5vw,4.2rem)}
+  .hero-sub{font-size:1.1875rem}
+  .hero-photo{position:relative;inset:auto;z-index:auto;justify-self:end;width:min(100%,36rem);padding:16px;
+    border:1.5px solid var(--rule-d);border-radius:4px;
+    background-color:var(--ink);background-image:var(--dots);background-size:16px 16px;background-position:center}
+  .hero-photo .ph{height:auto;overflow:hidden;background:var(--ink-2);position:relative}
+  .hero-photo img{height:auto;aspect-ratio:4/3;object-position:50% 50%}
+  .hero-photo figcaption{display:block;position:absolute;left:-1.25rem;bottom:2rem;padding:.65rem 1rem;background:var(--bulb);color:var(--ink);
+    font:600 .72rem/1 var(--label);letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+}
+
+/* ---- sections ------------------------------------------------------- */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.dark{background:var(--ink);color:var(--paper)}
+h2{font-size:clamp(2.4rem,9.5vw,4.2rem)}
+h2 em{color:var(--bulb-ink)}
+.dark h2 em{color:var(--bulb)}
+
+/* ---- the shop: copy + the category board ---------------------------- */
+.shop-grid{display:grid;gap:2.25rem}
+.shop-copy .label{margin-bottom:1.2rem}
+.shop-copy p{margin-top:1.1rem;color:var(--mute-l);max-width:32rem}
+.shop-copy p.lead{color:var(--ink);font-weight:500}
+.board{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1.5px solid var(--ink)}
+.tile{
+  aspect-ratio:1;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:.5rem;
+  padding:clamp(.9rem,3.5vw,1.4rem);background:var(--paper);color:var(--ink);
+  transition:background-color .3s ease,color .3s ease;
+}
+.tile .n{font:600 .72rem/1 var(--label);letter-spacing:.2em;color:var(--bulb-ink)}
+.tile h3{font-size:clamp(1.25rem,5.2vw,2rem);line-height:1.05}
+.tile p{margin-top:.35rem;font:600 .68rem/1.45 var(--label);letter-spacing:.16em;text-transform:uppercase;color:var(--mute-l)}
+/* 2 x 3 checkerboard: ink on 1, 4 and 5 */
+.tile:nth-child(1),.tile:nth-child(4),.tile:nth-child(5){background:var(--ink);color:var(--paper)}
+.tile:nth-child(1) .n,.tile:nth-child(4) .n,.tile:nth-child(5) .n{color:var(--bulb)}
+.tile:nth-child(1) p,.tile:nth-child(4) p,.tile:nth-child(5) p{color:var(--mute-d)}
+@media (hover:hover){
+  .tile:hover{background:var(--bulb) !important;color:var(--ink) !important}
+  .tile:hover .n,.tile:hover p{color:var(--ink) !important}
+}
+@media (min-width:900px){
+  .shop-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3rem,6vw,5rem);align-items:center}
+  .tile{aspect-ratio:3/2}
+  .tile h3{font-size:clamp(1.6rem,2.2vw,2.1rem)}
+}
+
+/* the call card */
+.ask{
+  position:relative;margin-top:clamp(2.75rem,6vw,4.5rem);padding:clamp(1.75rem,5vw,2.75rem);padding-left:calc(clamp(1.75rem,5vw,2.75rem) + 22px);
+  background:var(--ink);color:var(--paper);display:grid;gap:1.25rem;align-items:center;overflow:hidden;
+}
+.ask::before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;border-right:1.5px solid var(--rule-d);
+  background-image:var(--dots);background-size:22px 22px}
+.ask h3{font-size:clamp(1.9rem,7vw,2.6rem)}
+.ask p{color:var(--mute-d);margin-top:.6rem;max-width:30rem}
+.ask .tel{display:block;font:400 clamp(1.8rem,8vw,2.6rem)/1 var(--display);color:var(--bulb);text-decoration:none;white-space:nowrap}
+.ask .btn{width:100%}
+@media (min-width:900px){.ask{grid-template-columns:minmax(0,1.4fr) auto auto;gap:2.5rem}.ask .btn{width:auto}}
+
+/* ---- reviews --------------------------------------------------------- */
+.reviews{text-align:center;position:relative;overflow:clip;isolation:isolate}
+.reviews::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.3;
+  background-image:var(--dots);background-size:44px 44px;background-position:50% 0;
+  -webkit-mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 10%,transparent 72%);
+          mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 10%,transparent 72%)}
+.score{position:relative;width:clamp(10rem,44vw,12.5rem);aspect-ratio:1;margin:2.4rem auto 2rem;display:grid;place-items:center;
+  border-radius:50%;border:1.5px solid var(--bulb);background:var(--ink);
+  box-shadow:0 0 0 7px var(--ink),0 0 0 8px var(--rule-d),0 0 40px rgba(255,181,71,.25)}
+.score b{font:400 clamp(3.8rem,17vw,4.8rem)/1 var(--display);color:var(--bulb);text-shadow:0 0 18px rgba(255,181,71,.5)}
+/* five stars, gold row clipped to 86% over a dim row (4.3 of 5) */
+.stars{position:relative;display:inline-block;font:400 clamp(1.9rem,9vw,2.4rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap;color:rgba(255,249,240,.18)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:86%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-family:var(--body);font-weight:500;font-size:clamp(1.35rem,4.6vw,1.9rem);letter-spacing:-.01em;line-height:1.3;margin-top:1.2rem}
+.goog{display:inline-block;padding:.05em .3em .1em;border-radius:6px;background:#fff;font-weight:600}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:27rem;margin:1rem auto 0;color:var(--mute-d)}
+.reviews .btn{margin-top:1.9rem}
+
+/* ---- visit ------------------------------------------------------------ */
+.head{max-width:44rem;margin:0 auto clamp(2rem,5vw,3.25rem);text-align:center}
+.head .label{margin-bottom:1.2rem}
+.visit-grid{display:grid;gap:1.25rem}
+.card{position:relative;padding:clamp(1.5rem,4vw,2.2rem);min-width:0}
+.card.hours-card{background:var(--paper);border:1.5px solid var(--ink);padding-top:calc(clamp(1.5rem,4vw,2.2rem) + 18px)}
+.card.hours-card::before{content:"";position:absolute;left:0;right:0;top:0;height:18px;border-bottom:1.5px solid var(--bulb);
+  background-color:var(--ink);background-image:var(--dots);background-size:18px 18px}
+.card.ink{background:var(--ink);color:var(--paper)}
+.card.line{background:var(--paper);border:1.5px solid var(--ink)}
+.card .cap{display:flex;justify-content:space-between;gap:1rem;margin-bottom:.9rem;font:600 .74rem/1 var(--label);letter-spacing:.22em;text-transform:uppercase;color:var(--bulb-ink)}
+.card.ink .cap{color:var(--bulb)}
+.hours-card .cap{padding-bottom:.85rem;margin-bottom:.2rem;border-bottom:1.5px solid var(--ink)}
+.hours-card .cap span{white-space:nowrap}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.62rem 0;border-bottom:1px solid var(--rule-l);font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:600;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--mute-l);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+.hours .today dd{color:var(--ink);font-weight:600}
+.hours .today dt::after{content:"Today";padding:.25rem .5rem .2rem;border-radius:999px;background:var(--ink);color:var(--bulb);font:600 .6rem/1 var(--label);letter-spacing:.16em;text-transform:uppercase}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.85em}}
+.big{display:block;font:400 clamp(1.8rem,7vw,2.4rem)/1.1 var(--display);text-decoration:none}
+address.big{font-style:normal}
+.card .note{margin-top:.8rem}
+.card .btn{margin-top:1.4rem;width:100%}
+.stack{display:grid;gap:1.25rem;min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:1.5rem}}
+
+/* ---- closing: a bulb-lit floor in perspective ---------------------------- */
+.close{position:relative;overflow:clip;isolation:isolate;text-align:center;padding:clamp(4.5rem,12vw,8rem) 0 clamp(7rem,16vw,11rem)}
+.close .floor{position:absolute;left:-60%;right:-60%;bottom:0;height:62%;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(circle,var(--bulb) 0 5px,rgba(255,181,71,.3) 7px,transparent 12px);
+  background-size:56px 56px;background-position:50% 100%;
+  transform:perspective(420px) rotateX(64deg);transform-origin:50% 100%;
+  -webkit-mask-image:linear-gradient(to top,#000 10%,transparent 85%);
+          mask-image:linear-gradient(to top,#000 10%,transparent 85%)}
+.close .label{margin-bottom:1.3rem}
+.close h2{font-size:clamp(2.6rem,11vw,5.4rem)}
+.close h2 em{text-shadow:0 0 20px rgba(255,181,71,.5)}
+.close p{max-width:32rem;margin:1.2rem auto 0;color:var(--mute-d);font-size:1.0625rem}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer --------------------------------------------------------------- */
+.foot{background:var(--ink-2);color:var(--mute-d);font-size:.9375rem}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{display:flex;color:var(--paper);font-size:1.5rem;margin-bottom:.8rem;white-space:normal}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;font:600 .78rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--paper)}
+.credit{border-top:1px solid var(--rule-d);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar -------------------------------------------------------- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--ink);border-top:1px solid var(--rule-d);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:.82rem}
+@media (max-width:720px){body{padding-bottom:calc(4.3rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion ----------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for Yates Corner Grocery by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top on-light">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="Yates Corner Grocery, back to top">Yates Corner Grocery</a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#shop">The store</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <span class="place">Grapevine, TX</span>
+      <a class="btn btn-ink" href="tel:+18174811083"><svg aria-hidden="true"><use href="#i-phone"/></svg>(817) 481-1083</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero dark" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="status js-status rise">Open seven days a week</p>
+        <p class="label rise">E Dove Rd &middot; Grapevine</p>
+        <h1 class="rise rise-2"><span class="ch">Yates</span> Corner Grocery</h1>
+        <p class="hero-sub rise rise-3">Beer, wine, cigars, bait and lottery, all at one convenience store at <strong>2190 E Dove Rd</strong>.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener" aria-label="Rated 4.3 out of 5 from 63 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <span>4.3</span>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep" aria-hidden="true">&middot;</span>
+          <span>63 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-bulb" href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-line" href="tel:+18174811083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (817) 481-1083</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <span class="ph"><img src="assets/listing.jpg" width="1400" height="1050" fetchpriority="high" decoding="async"
+             alt="The beer cave at Yates Corner Grocery: a lit marquee sign spelling Beer Cave over a wall of glass door coolers."></span>
+        <figcaption aria-hidden="true">2190 E Dove Rd</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="bulbs band" aria-hidden="true"></div>
+
+  <!-- The store -->
+  <section class="section on-light" id="shop">
+    <div class="wrap shop-grid">
+      <div class="shop-copy reveal">
+        <p class="label">The store</p>
+        <h2>One stop on <em>E Dove Rd.</em></h2>
+        <p class="lead">Yates Corner Grocery is a convenience store in Grapevine with beer, wine, cigars, bait and lottery under one roof.</p>
+        <p>Look for the coolers along the wall. A marquee lit bulb by bulb spells out Beer Cave right above them.</p>
+      </div>
+      <ul class="board reveal" aria-label="What we are">
+        <li class="tile"><span class="n">01</span><div><h3>Convenience store</h3><p>Every day</p></div></li>
+        <li class="tile"><span class="n">02</span><div><h3>Beer store</h3><p>The beer cave</p></div></li>
+        <li class="tile"><span class="n">03</span><div><h3>Wine store</h3><p>Same stop</p></div></li>
+        <li class="tile"><span class="n">04</span><div><h3>Cigar shop</h3><p>Adults 21+</p></div></li>
+        <li class="tile"><span class="n">05</span><div><h3>Bait shop</h3><p>Same stop</p></div></li>
+        <li class="tile"><span class="n">06</span><div><h3>Lottery retailer</h3><p>Same stop</p></div></li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <div class="ask dark reveal">
+        <div>
+          <h3>Looking for something?</h3>
+          <p>Call the store and ask before you head over. We open at 6 am Monday to Saturday and 7 am on Sunday.</p>
+        </div>
+        <a class="tel" href="tel:+18174811083">(817) 481-1083</a>
+        <a class="btn btn-bulb" href="tel:+18174811083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the store</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews dark" id="reviews">
+    <div class="wrap reveal">
+      <p class="label">Reviews</p>
+      <div class="score" aria-hidden="true"><b>4.3</b></div>
+      <div class="stars" role="img" aria-label="4.3 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>4.3 stars from 63 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>Read them on our Google listing, and leave yours after your next stop on Dove Rd.</p>
+      <a class="btn btn-paper" href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener"><svg aria-hidden="true" style="width:1.3em;height:1.3em"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section on-light" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="label">Visit</p>
+        <h2>Open <em>seven days</em> a week.</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card hours-card reveal">
+          <span class="cap"><span>Hours</span><span>Every day</span></span>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>6 am to 8 pm</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>6 am to 8 pm</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>6 am to 8 pm</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>6 am to 8 pm</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>6 am to 8 pm</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>6 am to 8 pm</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>7 am to 7 pm</dd></div>
+          </dl>
+        </div>
+        <div class="stack">
+          <div class="card ink dark reveal">
+            <span class="cap">Address</span>
+            <address class="big">2190 E Dove Rd<br>Grapevine, TX 76092</address>
+            <a class="btn btn-bulb" href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card line reveal">
+            <span class="cap">Phone</span>
+            <a class="big" href="tel:+18174811083">(817) 481-1083</a>
+            <p class="status js-status note">Open seven days a week</p>
+            <a class="btn btn-ink" href="tel:+18174811083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the store</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="close dark">
+    <div class="floor" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <p class="label">Beer &middot; Wine &middot; Cigars &middot; Bait &middot; Lottery</p>
+      <h2>See you at <em>the corner</em></h2>
+      <p>2190 E Dove Rd, Grapevine, TX 76092. Open 6 am to 8 pm Monday to Saturday, and 7 am to 7 pm on Sunday.</p>
+      <div class="close-ctas">
+        <a class="btn btn-bulb" href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-line" href="tel:+18174811083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (817) 481-1083</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand">Yates Corner Grocery</p>
+      <p>2190 E Dove Rd, Grapevine, TX 76092</p>
+      <p><a href="tel:+18174811083">(817) 481-1083</a> &middot; <a href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">Adults 21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn btn-bulb" href="https://www.google.com/maps?cid=8807074872044442273" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-paper" href="tel:+18174811083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Minutes from midnight. Mon (1) to Sat (6): 6 am to 8 pm. Sun (0): 7 am to 7 pm.
+  function hrs(d){ return d===0 ? [420,1140] : [360,1200]; }
+  function isOpen(d,m){ var h=hrs(d); return m>=h[0] && m<h[1]; }
+  function fmt(min){ var h=Math.floor(min/60), ap=h>=12?'pm':'am'; return (h%12||12)+' '+ap; }
+  function text(d,m){
+    var h=hrs(d);
+    if(isOpen(d,m)) return 'Open now until '+fmt(h[1]);
+    if(m<h[0]) return 'Closed now, opens at '+fmt(h[0]);
+    return 'Closed now, opens tomorrow at '+fmt(hrs((d+1)%7)[0]);
+  }
+  // self-check
+  console.assert(!isOpen(1,359) && isOpen(1,360) && isOpen(6,1199) && !isOpen(6,1200) && !isOpen(0,400) && isOpen(0,420) && !isOpen(0,1140), 'hours logic');
+  console.assert(text(1,700)==='Open now until 8 pm' && text(0,700)==='Open now until 7 pm' && text(3,300)==='Closed now, opens at 6 am' && text(0,300)==='Closed now, opens at 7 am' && text(6,1250)==='Closed now, opens tomorrow at 7 am' && text(0,1200)==='Closed now, opens tomorrow at 6 am', 'status text');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=text(d,m); els[i].classList.toggle('is-open',isOpen(d,m)); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
