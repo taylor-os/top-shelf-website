@@ -514,7 +514,7 @@ figure { margin: 0; }
 
 .big-count { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
 .big-count b { font: 400 clamp(5rem, 14vw, 10rem)/.8 var(--display); color: var(--red); text-shadow: 0 0 60px oklch(55% .22 25 / .4); }
-.big-count span { font: 600 clamp(1.1rem, 2vw, 1.5rem)/1.2 var(--cond); text-transform: uppercase; letter-spacing: .08em; max-width: 14ch; }
+.big-count > span { font: 600 clamp(1.1rem, 2vw, 1.5rem)/1.2 var(--cond); text-transform: uppercase; letter-spacing: .08em; max-width: 14ch; }
 
 /* ---------- CTA band ---------- */
 .cta-band {
@@ -570,7 +570,7 @@ figure { margin: 0; }
 .panel .ico-xl svg { width: 44px; height: 44px; }
 .panel.red { background: linear-gradient(150deg, var(--red), var(--glow) 60%, oklch(20% .08 25)); border-color: transparent; }
 .panel.red .ico-xl { background: oklch(100% 0 0 / .15); color: #fff; }
-.panel .panel-big { display: block; white-space: nowrap; font: 400 clamp(2rem, 4.5vw, 3.4rem)/.95 var(--display); text-transform: uppercase; }
+.panel .panel-big { display: block; font: 400 clamp(2rem, 4.5vw, 3.4rem)/.95 var(--display); text-transform: uppercase; }
 @media (max-width: 860px) {
   .svc-grid { grid-template-columns: 1fr; }
   .svc.flip .svc-grid > :first-child { order: 0; }
@@ -739,3 +739,19 @@ figure { margin: 0; }
 .cta-phone { padding: .35rem 0; }
 .info-row p a { display: inline-block; padding: .55rem 0; }
 .ftr-bottom a { min-height: 0; }
+
+/* phone browsers widen the layout viewport to fit anything that bleeds past the edge (body overflow-x is not enough):
+   keep the decorative glows inside their sections and clip the root too */
+html { overflow-x: clip; }
+.glow-tl, .glow-br { overflow-x: clip; }
+.panel.red .panel-big { white-space: nowrap; }   /* only the phone number must stay on one line */
+@media (max-width: 420px) { .chip { font-size: .76rem; letter-spacing: .06em; } }
+.form-note a, .info-row a[href^="tel:"] { white-space: nowrap; }
+/* small phones (320-360px) */
+.hours td:last-child { white-space: nowrap; padding-left: .8rem; }
+@media (max-width: 360px) {
+  .callbar .btn { font-size: .9rem; letter-spacing: .05em; padding: .6rem .5rem; white-space: nowrap; }
+  .callbar { grid-template-columns: 1.15fr 1fr; }
+  .info-row p, .hours td { font-size: .92rem; }
+  .ribbon .rb-long { display: none; }
+}
