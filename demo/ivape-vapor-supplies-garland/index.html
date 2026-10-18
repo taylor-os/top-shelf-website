@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="iVape Vapor Supplies, a vaporizer store at 6850 N Shiloh Rd #K, Garland, TX 75044. Call (469) 929-6047. Adults 21+ only.">
+<meta name="theme-color" content="#08080A">
+<title>iVape Vapor Supplies | Vaporizer Store in Garland, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="iVape Vapor Supplies">
+<meta property="og:description" content="Vaporizer store at 6850 N Shiloh Rd #K, Garland, TX. Open seven days a week.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/ivape-vapor-supplies-garland/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080A'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23FF7A1A' stroke-width='4'/%3E%3Crect x='29.5' y='26' width='5' height='16' rx='2.5' fill='%23F4EFE9'/%3E%3Ccircle cx='32' cy='20.5' r='2.8' fill='%23F4EFE9'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "iVape Vapor Supplies",
+  "telephone": "+1-469-929-6047",
+  "image": "https://www.topshelfsolutions.io/demo/ivape-vapor-supplies-garland/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6850 N Shiloh Rd #K",
+    "addressLocality": "Garland",
+    "addressRegion": "TX",
+    "postalCode": "75044",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=6024331674272816983",
+  "sameAs": ["https://www.facebook.com/ivapevaporsupplies"]
+}
+</script>
+<style>
+/* ================================================================
+   iVape Vapor Supplies - one-page demo
+   Tech-noir: near-black, warm white, one sunset-orange glow taken
+   from the ring around the shop's own sign.
+   Signature device: the ring. It is the brand mark, and in Visit it
+   becomes a 24-hour dial with today's open hours lit as an arc.
+   ================================================================ */
+:root{
+  --bg:#08080A;
+  --bg-2:#0E0E11;
+  --panel:#131317;
+  --text:#F4EFE9;
+  --muted:#A29B94;
+  --sun:#FF7A1A;
+  --gold:#FFC15E;
+  --ember:#E2401C;
+  --sun-ink:#1A0A00;
+  --line:rgba(244,239,233,.11);
+  --line-sun:rgba(255,122,26,.34);
+  --glow:0 0 22px rgba(255,122,26,.55);
+  --ring:conic-gradient(from 210deg,var(--gold),var(--sun) 30%,var(--ember) 55%,var(--sun) 78%,var(--gold));
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--text);background:var(--bg);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-weight:800;font-stretch:118%;line-height:1;letter-spacing:-.03em;text-wrap:balance}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:72rem;margin-inline:auto;padding-inline:var(--gutter)}
+.label{
+  display:flex;align-items:center;gap:.65rem;
+  font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--sun);
+}
+.label::before{
+  content:"";flex:none;width:.6rem;height:.6rem;border-radius:50%;
+  border:1.5px solid var(--sun);box-shadow:0 0 8px rgba(255,122,26,.6);
+}
+.glow{color:var(--sun);text-shadow:0 0 28px rgba(255,122,26,.45)}
+.skip{position:absolute;left:-999px;top:0;background:var(--sun);color:var(--sun-ink);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Ribbon (the one attribution) ---------- */
+.ribbon{
+  background:#000;color:var(--muted);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.5rem var(--gutter);
+  border-bottom:1px solid var(--line);
+}
+.ribbon a{color:var(--text);text-underline-offset:2px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3.25rem;padding:.8rem 1.4rem;border-radius:999px;
+  font-family:var(--sans);font-weight:700;font-size:.9375rem;letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;border:1px solid transparent;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease),color .18s var(--ease);
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-sun{background:linear-gradient(135deg,var(--gold),var(--sun) 55%,#F05A1E);color:var(--sun-ink);box-shadow:0 8px 28px -12px rgba(255,122,26,.8)}
+.btn-ghost{border-color:rgba(244,239,233,.34);color:var(--text);background:rgba(8,8,10,.5)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-sun:hover{box-shadow:0 12px 34px -10px rgba(255,122,26,.9)}
+  .btn-ghost:hover{border-color:var(--sun);color:var(--sun)}
+}
+.btn:active{transform:scale(.97)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* ---------- Ring mark ---------- */
+.mark{
+  position:relative;display:grid;place-items:center;flex:none;width:2.4rem;aspect-ratio:1;border-radius:50%;
+  font-weight:800;font-size:1.05rem;line-height:1;color:var(--text);background:rgba(8,8,10,.6);
+}
+.mark::before{
+  content:"";position:absolute;inset:0;border-radius:50%;background:var(--ring);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 2px));
+          mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 2px));
+  filter:drop-shadow(0 0 6px rgba(255,122,26,.7));
+}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.brand b{font-weight:700;font-stretch:112%;font-size:1.0625rem;letter-spacing:-.01em;white-space:nowrap}
+.top .brand b{display:none}
+@media (min-width:600px){.top .brand b{display:inline}}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;display:flex;flex-direction:column;isolation:isolate;
+  /* phones: leave room for the ribbon and the sticky Directions/Call bar */
+  min-height:max(36rem,calc(100svh - 3rem - var(--bar)));
+  background:
+    radial-gradient(90% 45% at 0% 100%,rgba(255,110,26,.17),rgba(255,110,26,0) 70%),
+    var(--bg);
+}
+.hero-media{position:absolute;left:0;right:0;top:0;height:60%;z-index:0;background:var(--bg-2)}
+.hero-media img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:28% 50%;
+  filter:saturate(.9) brightness(.84) contrast(1.06);
+}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(8,8,10,.7) 0%,rgba(8,8,10,.08) 20%,rgba(8,8,10,.12) 58%,var(--bg) 100%),
+    linear-gradient(0deg,rgba(255,110,26,.12),rgba(255,110,26,0) 55%);
+}
+.top{
+  position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  width:100%;max-width:72rem;margin-inline:auto;padding:1rem var(--gutter);
+}
+.top-call{
+  font-family:var(--mono);font-weight:500;font-size:.8125rem;text-decoration:none;white-space:nowrap;
+  padding:.55rem .85rem;border:1px solid rgba(244,239,233,.3);border-radius:999px;background:rgba(8,8,10,.55);
+  transition:border-color .18s var(--ease),color .18s var(--ease);
+}
+@media (hover:hover){.top-call:hover{border-color:var(--sun);color:var(--sun)}}
+.hero-body{position:relative;z-index:2;margin-top:auto;padding-top:2rem;padding-bottom:1.75rem}
+.chip{
+  display:flex;width:max-content;max-width:100%;align-items:center;gap:.5rem;white-space:nowrap;
+  font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.03em;
+  padding:.38rem .75rem;border-radius:999px;border:1px solid var(--line);background:rgba(8,8,10,.72);color:var(--muted);
+  margin-bottom:1rem;
+}
+.chip[hidden]{display:none}
+.chip .dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--muted)}
+.chip.is-open{border-color:var(--line-sun);color:var(--text)}
+.chip.is-open .dot{background:var(--sun);box-shadow:0 0 0 3px rgba(255,122,26,.2),0 0 10px rgba(255,122,26,.8)}
+h1{letter-spacing:0;line-height:1}
+h1 span{display:block}
+.h1-a{font-size:clamp(4.5rem,24vw,10rem);font-weight:900;font-stretch:125%;line-height:.86;letter-spacing:-.045em}
+.h1-a i{font-style:normal;color:var(--sun);text-shadow:0 0 30px rgba(255,122,26,.55)}
+.h1-b{margin-top:.5rem;font-size:clamp(1.5rem,6.6vw,2.75rem);font-weight:500;font-stretch:112%;letter-spacing:-.015em;color:#E2DAD2}
+.hero-sub{margin-top:1rem;max-width:30rem;color:#CFC7BF}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;margin-top:1rem;text-decoration:none;
+  font-family:var(--mono);font-size:.8125rem;white-space:nowrap;color:var(--muted);
+}
+.rating strong{font-family:var(--sans);font-weight:800;font-size:1.375rem;color:var(--text);line-height:1}
+.rating .g{width:1.15rem;height:1.15rem;flex:none}
+@media (hover:hover){.rating:hover span:last-child{color:var(--text)}}
+/* 4.6 of 5 stars: the lit row is clipped to 92% */
+.stars{position:relative;display:inline-block;letter-spacing:.1em;font-size:.875rem;color:rgba(244,239,233,.22);line-height:1}
+.stars::after{content:"\2605\2605\2605\2605\2605";position:absolute;left:0;top:0;width:var(--pct,92%);overflow:hidden;white-space:nowrap;color:var(--sun)}
+.hero .btn-row{margin-top:1.35rem}
+.hero .btn{flex:1 1 9.5rem}
+@media (max-width:420px){.hero .btn{padding-inline:.9rem}}
+
+@media (min-width:960px){
+  .hero{
+    min-height:clamp(40rem,calc(100svh - 2.25rem),54rem);
+    background:radial-gradient(60% 70% at 0% 70%,rgba(255,110,26,.14),rgba(255,110,26,0) 70%),var(--bg);
+  }
+  /* the photo is its own panel to the right of the text column */
+  .hero-media{
+    left:calc(max(var(--gutter),(100% - 72rem) / 2 + var(--gutter)) + min(36rem,42%) + 2rem);
+    height:auto;bottom:0;
+  }
+  .hero-media img{object-position:34% 50%}
+  .hero-media::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:1px;z-index:1;
+    background:linear-gradient(180deg,rgba(255,122,26,0),rgba(255,122,26,.75) 50%,rgba(255,122,26,0));
+    box-shadow:var(--glow);
+  }
+  .hero-media::after{
+    background:
+      linear-gradient(90deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,0) 24%),
+      linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,0) 18%,rgba(8,8,10,0) 76%,rgba(8,8,10,.85) 100%);
+  }
+  .hero-body{margin-block:auto;padding-block:2rem 4rem}
+  .hero-body>*{max-width:min(36rem,42vw)}
+  .h1-a{font-size:clamp(5rem,10.5vw,9.5rem)}
+  .hero .btn{flex:0 0 auto}
+}
+
+/* ---------- Sections ---------- */
+section{padding:clamp(4rem,10vw,7rem) 0}
+h2{font-size:clamp(2.1rem,8.6vw,3.9rem);margin-top:1rem}
+.lede{margin-top:1.1rem;max-width:36rem;color:var(--muted)}
+
+/* The store */
+.store{border-top:1px solid var(--line)}
+.store-grid{display:grid;gap:2.75rem}
+.specs{border:1px solid var(--line);border-radius:1.25rem;background:var(--bg-2);overflow:hidden;align-self:start}
+.specs div{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.15rem 1.35rem;border-top:1px solid var(--line)}
+.specs div:first-child{border-top:0}
+.specs dt{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.specs dd{font-weight:600;text-align:right}
+.specs dd a{text-decoration-color:var(--line-sun);text-underline-offset:4px}
+@media (min-width:820px){.store-grid{grid-template-columns:7fr 5fr;gap:4.5rem;align-items:end}}
+
+/* Call block (stands in for a product list) */
+.ask{padding-top:0}
+.ask-card{
+  position:relative;overflow:hidden;isolation:isolate;border-radius:1.25rem;
+  padding:clamp(1.75rem,6vw,3.5rem);
+  background:radial-gradient(70% 90% at 100% 50%,rgba(255,110,26,.14),rgba(255,110,26,0) 70%),var(--panel);
+  border:1px solid var(--line-sun);
+}
+.ask-card::after{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  width:22rem;aspect-ratio:1;border-radius:50%;right:-12rem;top:50%;margin-top:-11rem;
+  background:var(--ring);opacity:.8;
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 8px));
+          mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 8px));
+  filter:drop-shadow(0 0 18px rgba(255,122,26,.65));
+}
+@media (min-width:700px){.ask-card::after{right:-5rem}}
+.ask-card h2{margin-top:.9rem;max-width:30rem}
+.ask-card p{margin-top:.9rem;max-width:28rem;color:var(--muted)}
+.ask-tel{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1.6rem;
+  font-family:var(--mono);font-weight:500;font-size:clamp(1.05rem,5.2vw,1.75rem);
+  text-decoration:none;white-space:nowrap;
+  padding:.85rem 1.3rem;border-radius:999px;color:var(--sun-ink);
+  background:linear-gradient(135deg,var(--gold),var(--sun) 55%,#F05A1E);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+}
+.ask-tel svg{width:1.05em;height:1.05em;flex:none}
+@media (hover:hover){.ask-tel:hover{transform:translateY(-2px);box-shadow:0 12px 34px -10px rgba(255,122,26,.9)}}
+.ask-tel:active{transform:scale(.97)}
+
+/* Reviews */
+.reviews{background:var(--bg-2);border-block:1px solid var(--line)}
+.rev-grid{display:grid;gap:2.25rem;align-items:center}
+.score{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}
+.score b{font-weight:900;font-stretch:125%;font-size:clamp(5.5rem,28vw,10rem);line-height:.8;letter-spacing:-.05em}
+.score span{font-family:var(--mono);font-size:.8125rem;color:var(--muted);padding-bottom:.35rem;white-space:nowrap}
+.score .stars{display:block;font-size:1.25rem;margin-bottom:.4rem}
+.gcard{
+  display:flex;align-items:center;gap:1rem;padding:1.15rem 1.35rem;margin-top:1.75rem;max-width:26rem;
+  border:1px solid var(--line);border-radius:1rem;background:var(--bg);text-decoration:none;
+  transition:border-color .2s var(--ease),transform .2s var(--ease);
+}
+.gcard .g{width:2.1rem;height:2.1rem;flex:none}
+.gcard strong{display:block;font-weight:700;font-size:.9375rem}
+.gcard small{display:block;font-size:.875rem;color:var(--muted)}
+.gcard .arrow{margin-left:auto;color:var(--sun);font-size:1.25rem}
+@media (hover:hover){.gcard:hover{border-color:var(--sun);transform:translateY(-2px)}}
+@media (min-width:820px){.rev-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* Visit */
+.visit-grid{display:grid;gap:3rem;margin-top:2.5rem}
+.info{display:grid;gap:1.75rem;align-content:start}
+.info dt{font-family:var(--mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);margin-bottom:.4rem}
+.info dd{font-size:1.125rem;line-height:1.45}
+.info dd a{text-decoration-color:var(--line-sun);text-underline-offset:4px}
+.hours{width:100%;max-width:24rem;border-collapse:collapse;font-family:var(--mono);font-size:.875rem}
+.hours th,.hours td{padding:.6rem 0;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left;font-weight:400}
+.hours td{text-align:right;padding-left:1rem}
+.hours tr.today th,.hours tr.today td{color:var(--sun)}
+.age{margin-top:.9rem;font-size:.875rem;color:var(--muted)}
+@media (max-width:389px){.hours{font-size:.8125rem}}
+
+/* Signature: the ring as a 24-hour dial */
+.dial-card{
+  border:1px solid var(--line);border-radius:1.25rem;background:var(--bg-2);
+  padding:1.5rem 1.25rem 1.75rem;display:grid;justify-items:center;gap:1.25rem;
+}
+.dial-card .label{justify-self:start}
+.dial{position:relative;width:min(100%,20rem);aspect-ratio:1}
+.dial svg{width:100%;height:100%;overflow:visible}
+.dial .track{fill:none;stroke:rgba(244,239,233,.08);stroke-width:10}
+.dial .ticks{fill:none;stroke:rgba(244,239,233,.28);stroke-width:5}
+.dial .arc{fill:none;stroke:url(#sun);stroke-width:10;stroke-linecap:round;filter:drop-shadow(0 0 7px rgba(255,122,26,.75))}
+.dial .hr{font-family:var(--mono);font-size:9px;letter-spacing:.08em;fill:var(--muted);text-anchor:middle;dominant-baseline:middle}
+.dial .now circle{fill:var(--text);stroke:var(--bg-2);stroke-width:3}
+.dial .now.is-open circle{fill:#fff;filter:drop-shadow(0 0 5px rgba(255,193,94,.9))}
+.dial .now[hidden]{display:none}
+.dial-mid{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:.2rem}
+.dial-mid small{font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sun)}
+.dial-mid b{font-weight:800;font-stretch:118%;font-size:clamp(1.6rem,8vw,2.25rem);line-height:1;letter-spacing:-.02em}
+.dial-mid span{font-family:var(--mono);font-size:.8125rem;color:var(--muted);white-space:nowrap}
+.dial-cap{font-size:.9375rem;color:var(--muted);text-align:center;max-width:22rem}
+@media (min-width:820px){
+  .visit-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}
+  .dial-card{padding:2rem 2rem 2.25rem}
+}
+
+/* Map */
+.map{margin-top:3rem;border-radius:1.25rem;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--bg-2)}
+.map iframe{width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.5) brightness(.92)}
+@media (min-width:820px){.map{aspect-ratio:21/8}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:2.75rem 0 2.25rem;color:var(--muted);font-size:.9375rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem 3rem;align-items:flex-start;justify-content:space-between}
+.foot .brand b{color:var(--text)}
+.foot p+p{margin-top:.25rem}
+.foot a{text-underline-offset:3px}
+.credit{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.8125rem}
+
+/* Sticky phone bar */
+.bar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;
+    padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom,0px));
+    background:rgba(8,8,10,.94);border-top:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.875rem}
+}
+
+/* Restrained motion: reveals and the dial arc drawing in, only when JS runs */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .dial-card .arc{transition:stroke-dasharray 1.2s var(--ease) .15s}
+.js .dial-card:not(.in) .arc{stroke-dasharray:0 1440}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .js .dial-card .arc{transition:none}
+  .btn,.gcard,.ask-tel,.top-call{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">Sample website made for iVape Vapor Supplies by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></div>
+
+<header class="hero">
+  <div class="hero-media">
+    <img src="assets/listing.jpg" alt="Inside iVape Vapor Supplies: black leather sofas, a long black counter with tall stools, and the glowing ivape sign on the back wall" width="1400" height="788" fetchpriority="high" decoding="async">
+  </div>
+
+  <div class="top">
+    <a class="brand" href="#main" aria-label="iVape Vapor Supplies">
+      <span class="mark" aria-hidden="true">i</span>
+      <b>iVape Vapor Supplies</b>
+    </a>
+    <a class="top-call" href="tel:+14699296047" aria-label="Call (469) 929-6047">(469) 929-6047</a>
+  </div>
+
+  <div class="hero-body wrap">
+    <span class="chip" id="openChip" hidden><span class="dot"></span><span id="openText"></span></span>
+    <h1><span class="h1-a"><i>i</i>Vape</span><span class="h1-b">Vapor Supplies</span></h1>
+    <p class="hero-sub">A vaporizer store on N Shiloh Rd in Garland, open seven days a week.</p>
+    <a class="rating" href="https://www.google.com/maps?cid=6024331674272816983" target="_blank" rel="noopener" aria-label="Rated 4.6 from 214 Google reviews. Open on Google Maps.">
+      <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <strong>4.6</strong>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>214 Google reviews</span>
+    </a>
+    <div class="btn-row">
+      <a class="btn btn-sun" href="https://www.google.com/maps?cid=6024331674272816983" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Get directions
+      </a>
+      <a class="btn btn-ghost" href="tel:+14699296047">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call the store
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="store" aria-labelledby="store-h">
+    <div class="wrap store-grid">
+      <div>
+        <p class="label rv">The store</p>
+        <h2 id="store-h" class="rv">Look for <span class="glow">the ring.</span></h2>
+        <p class="lede rv">It glows orange on the back wall, the first thing you see when you walk in. Black leather sofas and a glass coffee table sit along one side, under a big, colorful mural. Across from them runs a long black counter lined with tall stools, with our shelves right behind it.</p>
+      </div>
+      <dl class="specs rv">
+        <div><dt>We are</dt><dd>A vaporizer store</dd></div>
+        <div><dt>Open</dt><dd>Every day</dd></div>
+        <div><dt>Find us</dt><dd>6850 N Shiloh Rd #K</dd></div>
+        <div><dt>Google</dt><dd><a href="https://www.google.com/maps?cid=6024331674272816983" target="_blank" rel="noopener">4.6 stars, 214 reviews</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask-card rv">
+        <p class="label">Quick question?</p>
+        <h2 id="ask-h">Call the counter.</h2>
+        <p>Checking on something in particular? Ask us over the phone. It only takes a minute.</p>
+        <a class="ask-tel" href="tel:+14699296047">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (469) 929-6047
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-h">
+    <div class="wrap rev-grid">
+      <div class="rv">
+        <p class="label">Reviews</p>
+        <div class="score">
+          <b>4.6</b>
+          <span><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>out of 5 on Google</span>
+        </div>
+      </div>
+      <div class="rv">
+        <h2 id="rev-h" style="margin-top:0">214 Google reviews. <span class="glow">See what they wrote.</span></h2>
+        <p class="lede">Then stop in on Shiloh and see the store in person.</p>
+        <a class="gcard" href="https://www.google.com/maps?cid=6024331674272816983" target="_blank" rel="noopener">
+          <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>
+            <strong>4.6 stars on Google</strong>
+            <small>214 reviews</small>
+          </span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label rv">Visit</p>
+      <h2 id="visit-h" class="rv">Find us on <span class="glow">N Shiloh Rd.</span></h2>
+      <div class="visit-grid">
+        <dl class="info">
+          <div class="rv">
+            <dt>Address</dt>
+            <dd>6850 N Shiloh Rd #K<br>Garland, TX 75044</dd>
+          </div>
+          <div class="rv">
+            <dt>Phone</dt>
+            <dd><a href="tel:+14699296047">(469) 929-6047</a></dd>
+          </div>
+          <div class="rv">
+            <dt>Hours</dt>
+            <dd>
+              <table class="hours">
+                <tbody>
+                  <tr data-days="Mon Tue Wed Thu Fri Sat"><th scope="row">Mon to Sat</th><td>10:00 am to 9:00 pm</td></tr>
+                  <tr data-days="Sun"><th scope="row">Sunday</th><td>12:00 pm to 8:00 pm</td></tr>
+                </tbody>
+              </table>
+              <p class="age">Adults 21+ only.</p>
+            </dd>
+          </div>
+          <div class="btn-row rv">
+            <a class="btn btn-sun" href="https://www.google.com/maps?cid=6024331674272816983" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+14699296047">Call the store</a>
+          </div>
+        </dl>
+
+        <div class="dial-card rv" aria-hidden="true">
+          <p class="label" id="dialLabel">Mon to Sat</p>
+          <div class="dial">
+            <svg viewBox="0 0 240 240">
+              <defs>
+                <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FFC15E"/>
+                  <stop offset=".55" stop-color="#FF7A1A"/>
+                  <stop offset="1" stop-color="#E2401C"/>
+                </linearGradient>
+              </defs>
+              <!-- pathLength 1440 = minutes in a day; rotate(-90) puts midnight at the top -->
+              <circle class="ticks" cx="120" cy="120" r="110" pathLength="1440" stroke-dasharray="3 57" stroke-dashoffset="1.5" transform="rotate(-90 120 120)"/>
+              <circle class="track" cx="120" cy="120" r="96"/>
+              <circle class="arc" id="dialArc" cx="120" cy="120" r="96" pathLength="1440" transform="rotate(-90 120 120)" stroke-dasharray="660 1440" stroke-dashoffset="-600"/>
+              <text class="hr" x="120" y="50">MIDNIGHT</text>
+              <text class="hr" x="120" y="190">NOON</text>
+              <g class="now" id="dialNow" hidden><circle cx="120" cy="24" r="7"/></g>
+            </svg>
+            <div class="dial-mid">
+              <small id="dialDay">Open</small>
+              <b id="dialOpen">10 am</b>
+              <span id="dialClose">to 9 pm</span>
+            </div>
+          </div>
+          <p class="dial-cap">Our day as a ring, midnight at the top. Sundays we open at noon and close at 8 pm.</p>
+        </div>
+      </div>
+
+      <div class="map rv">
+        <iframe title="Map to iVape Vapor Supplies, 6850 N Shiloh Rd #K, Garland" src="https://www.google.com/maps?q=iVape+Vapor+Supplies,+6850+N+Shiloh+Rd+%23K,+Garland,+TX+75044&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><span class="mark" aria-hidden="true">i</span><b>iVape Vapor Supplies</b></div>
+      <div>
+        <p>6850 N Shiloh Rd #K, Garland, TX 75044</p>
+        <p><a href="tel:+14699296047">(469) 929-6047</a></p>
+      </div>
+      <div>
+        <p><a href="https://www.facebook.com/ivapevaporsupplies" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <p class="credit">Sample website by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-sun" href="https://www.google.com/maps?cid=6024331674272816983" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-ghost" href="tel:+14699296047">Call</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  /* Store hours in America/Chicago, minutes from midnight:
+     Mon-Sat 10:00-21:00, Sun 12:00-20:00. */
+  var A=[600,1260], H={Mon:A,Tue:A,Wed:A,Thu:A,Fri:A,Sat:A,Sun:[720,1200]};
+  var ORDER=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var FULL={Sun:'Sunday',Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday'};
+  function fmt(m){var h=Math.floor(m/60),mm=('0'+(m%60)).slice(-2);return (h%12||12)+':'+mm+' '+(h<12?'am':'pm');}
+  function short(m){var h=Math.floor(m/60);return h===12?'noon':(h%12)+' '+(h<12?'am':'pm');}
+  /* status(day, minutes) -> [isOpen, text] */
+  function status(d,m){
+    var t=H[d];
+    if(m>=t[0]&&m<t[1])return [true,'Open now · until '+fmt(t[1])];
+    if(m<t[0])return [false,'Closed · opens '+fmt(t[0])];
+    var next=ORDER[(ORDER.indexOf(d)+1)%7];
+    return [false,'Closed · opens '+fmt(H[next][0])+' tomorrow'];
+  }
+  /* self-check: logs loudly if the hours logic breaks */
+  console.assert(status('Mon',600)[0]&&!status('Mon',1260)[0]&&!status('Sun',719)[0]&&status('Sun',1199)[0]
+    &&status('Sat',1300)[1].indexOf('12:00 pm')>-1&&status('Sun',1250)[1].indexOf('10:00 am')>-1
+    &&short(720)==='noon'&&short(1260)==='9 pm','hours logic');
+
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+    var d=p.weekday, m=(+p.hour%24)*60+(+p.minute), s=status(d,m), t=H[d];
+    var chip=document.getElementById('openChip');
+    document.getElementById('openText').textContent=s[1];
+    chip.classList.toggle('is-open',s[0]);
+    chip.hidden=false;
+    document.querySelectorAll('.hours tr').forEach(function(r){
+      if(r.getAttribute('data-days').indexOf(d)>-1)r.classList.add('today');
+    });
+    /* the dial: today's hours as a lit arc, plus a dot for right now */
+    document.getElementById('dialLabel').textContent='Today, '+FULL[d];
+    document.getElementById('dialDay').textContent=s[0]?'Open now':'Today';
+    document.getElementById('dialOpen').textContent=short(t[0]);
+    document.getElementById('dialClose').textContent='to '+short(t[1]);
+    var arc=document.getElementById('dialArc');
+    arc.setAttribute('stroke-dasharray',(t[1]-t[0])+' 1440');
+    arc.setAttribute('stroke-dashoffset',-t[0]);
+    var now=document.getElementById('dialNow');
+    now.setAttribute('transform','rotate('+(m/4)+' 120 120)');
+    now.classList.toggle('is-open',s[0]);
+    now.hidden=false;
+  }catch(e){}
+
+  /* Scroll reveal */
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>

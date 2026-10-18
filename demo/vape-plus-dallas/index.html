@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Vape Plus, a vaporizer store, tobacco shop and cigar shop at 18918 Midway Rd #124, Dallas, TX 75287. Call (469) 709-8094.">
+<meta name="theme-color" content="#0A0B0B">
+<title>Vape Plus | Vape, Tobacco &amp; Cigar Shop in Dallas, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vape Plus">
+<meta property="og:description" content="Vaporizer store, tobacco shop and cigar shop at 18918 Midway Rd #124, Dallas, TX.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/vape-plus-dallas/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0B0B'/%3E%3Crect x='27' y='14' width='10' height='36' fill='%236FF2BF'/%3E%3Crect x='14' y='27' width='36' height='10' fill='%236FF2BF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Vape Plus",
+  "telephone": "+1-469-709-8094",
+  "image": "https://www.topshelfsolutions.io/demo/vape-plus-dallas/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18918 Midway Rd #124",
+    "addressLocality": "Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75287",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "08:00", "closes": "23:59"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "22:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=11969454288458877399",
+  "sameAs": ["https://www.facebook.com/vapeplusdallas"]
+}
+</script>
+<style>
+/* ================================================================
+   Vape Plus - one-page demo
+   Black like the shop walls, one fresh mint accent, a heavy wide
+   grotesk. Signature device: the plus sign, drawn in CSS, used as
+   the mark, the hero badge, the bullet and the "4.9 + 182" score.
+   ================================================================ */
+:root{
+  --bg:#0A0B0B;
+  --bg-2:#111413;
+  --panel:#151918;
+  --text:#F1F5F3;
+  --muted:#9BA6A1;
+  --mint:#6FF2BF;
+  --mint-ink:#03140C;
+  --line:rgba(241,245,243,.12);
+  --line-mint:rgba(111,242,191,.32);
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--text);background:var(--bg);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-weight:800;font-stretch:112%;line-height:1;letter-spacing:-.02em;text-wrap:balance}
+h2 em,h1 em{font-style:normal;color:var(--mint)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--mint);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:76rem;margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-999px;top:0;background:var(--mint);color:var(--mint-ink);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* The plus: two bars painted as backgrounds, so it is pure decoration */
+.x{
+  --c:var(--mint);--t:16%;
+  display:inline-block;flex:none;width:1rem;aspect-ratio:1;
+  background:
+    linear-gradient(var(--c),var(--c)) center/100% var(--t) no-repeat,
+    linear-gradient(var(--c),var(--c)) center/var(--t) 100% no-repeat;
+}
+.label{
+  display:flex;align-items:center;gap:.65rem;
+  font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mint);
+}
+.label .x{width:.7rem;--t:22%}
+
+/* ---------- Ribbon (the one attribution) ---------- */
+.ribbon{
+  background:#050606;color:var(--muted);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.5rem var(--gutter);
+  border-bottom:1px solid var(--line);
+}
+.ribbon a{color:var(--text);text-underline-offset:2px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3.25rem;padding:.8rem 1.4rem;border-radius:.75rem;
+  font-family:var(--sans);font-weight:700;font-size:.9375rem;letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;border:1px solid transparent;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease),color .18s var(--ease);
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-mint{background:var(--mint);color:var(--mint-ink)}
+.btn-ghost{border-color:rgba(241,245,243,.32);color:var(--text);background:rgba(10,11,11,.5)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-mint:hover{box-shadow:0 12px 30px -12px rgba(111,242,191,.7)}
+  .btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+}
+.btn:active{transform:scale(.97)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* ---------- Brand ---------- */
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;min-width:0}
+.mark{
+  display:grid;place-items:center;flex:none;width:2.25rem;aspect-ratio:1;border-radius:.55rem;background:var(--mint);
+}
+.mark .x{--c:var(--mint-ink);--t:24%;width:1.1rem}
+.brand b{font-weight:800;font-stretch:125%;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+
+/* ---------- Hero ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:76rem;margin-inline:auto;padding:.9rem var(--gutter)}
+.top-call{
+  font-family:var(--mono);font-weight:500;font-size:.8125rem;text-decoration:none;white-space:nowrap;
+  padding:.5rem .8rem;border:1px solid rgba(241,245,243,.28);border-radius:.6rem;
+  transition:border-color .18s var(--ease),color .18s var(--ease);
+}
+@media (hover:hover){.top-call:hover{border-color:var(--mint);color:var(--mint)}}
+.hero{padding-bottom:clamp(2.5rem,7vw,5rem)}
+.hero-grid{display:grid;gap:1.4rem;max-width:76rem;margin-inline:auto;padding-inline:var(--gutter)}
+.photo{position:relative;margin:0;border-radius:1.1rem;overflow:hidden;aspect-ratio:3/2;background:var(--bg-2);isolation:isolate}
+.photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%;
+  filter:saturate(.9) contrast(1.05) brightness(.92);
+}
+.photo::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(10,11,11,.55) 0%,rgba(10,11,11,0) 28%,rgba(10,11,11,0) 62%,rgba(10,11,11,.45) 100%);
+}
+.badge{
+  position:absolute;right:clamp(.85rem,3vw,1.5rem);bottom:clamp(.85rem,3vw,1.5rem);z-index:2;
+  width:clamp(3.25rem,14vw,6.5rem);--t:30%;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.55));
+}
+.chip{
+  position:absolute;left:.85rem;top:.85rem;z-index:2;
+  display:flex;width:max-content;max-width:calc(100% - 1.7rem);align-items:center;gap:.5rem;white-space:nowrap;overflow:hidden;
+  font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.03em;
+  padding:.38rem .7rem;border-radius:.55rem;border:1px solid var(--line);background:rgba(10,11,11,.78);color:var(--muted);
+}
+.chip[hidden]{display:none}
+.chip .dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--muted);flex:none}
+.chip.is-open{border-color:var(--line-mint);color:var(--text)}
+.chip.is-open .dot{background:var(--mint);box-shadow:0 0 0 3px rgba(111,242,191,.2)}
+h1{
+  font-stretch:125%;font-weight:800;text-transform:uppercase;
+  font-size:clamp(3.25rem,21vw,8.5rem);line-height:.86;letter-spacing:-.02em;overflow-wrap:anywhere;
+}
+h1 span{display:block}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;margin-top:1rem;text-decoration:none;
+  font-family:var(--mono);font-size:.8125rem;white-space:nowrap;color:var(--muted);
+}
+.rating strong{font-family:var(--sans);font-weight:800;font-size:1.375rem;color:var(--text);line-height:1}
+.rating .g{width:1.15rem;height:1.15rem;flex:none}
+.stars{color:var(--mint);letter-spacing:.1em;font-size:.875rem}
+@media (hover:hover){.rating:hover span:last-child{color:var(--text)}}
+.hero .btn-row{margin-top:1.25rem}
+.hero .btn{flex:1 1 9.5rem}
+.hero-sub{margin-top:1.25rem;max-width:30rem;color:#C5CEC9}
+@media (max-width:420px){.hero .btn{padding-inline:.9rem}}
+@media (min-width:960px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:3.5rem;align-items:center;padding-top:1.5rem}
+  .hero-text{order:-1}
+  .photo{aspect-ratio:4/3}
+  h1{font-size:clamp(4rem,9vw,8.5rem)}
+  .hero .btn{flex:0 0 auto}
+}
+
+/* ---------- Divider with plus ends ---------- */
+.rule{display:flex;align-items:center;gap:.75rem}
+.rule::before{content:"";order:1;flex:1;height:1px;background:var(--line)}
+.rule .x{width:.8rem;--t:14%;--c:rgba(111,242,191,.7)}
+.rule .x:last-child{order:2}
+
+/* ---------- Sections ---------- */
+section{padding:clamp(4rem,10vw,7rem) 0}
+h2{font-size:clamp(2.2rem,9vw,4rem);margin-top:1rem}
+.lede{margin-top:1.1rem;max-width:36rem;color:var(--muted)}
+
+/* The shop */
+.cats{display:grid;gap:1rem;margin-top:2.5rem}
+.cat{padding:1.6rem 1.5rem;border:1px solid var(--line);border-radius:1rem;background:var(--bg-2)}
+.cat .x{width:1.5rem;--t:20%}
+.cat h3{font-size:clamp(1.45rem,5.5vw,1.85rem);margin-top:1.1rem}
+.cat p{margin-top:.55rem;color:var(--muted)}
+@media (min-width:820px){.cats{grid-template-columns:repeat(3,1fr)}.cat{padding:2rem 1.75rem}}
+
+/* Hours */
+.hours-sec{padding-top:0}
+.hours-grid{display:grid;gap:2.5rem;margin-top:2.5rem}
+.big{display:grid;gap:1rem}
+.big div{padding:1.4rem 1.5rem;border-radius:1rem;border:1px solid var(--line-mint);background:var(--panel)}
+.big b{display:block;font-weight:800;font-stretch:112%;font-size:clamp(2.4rem,6.5vw,3.75rem);line-height:1;letter-spacing:-.03em;color:var(--mint);white-space:nowrap}
+.big span{display:block;margin-top:.5rem;font-family:var(--mono);font-size:.8125rem;color:var(--muted)}
+.hours{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.9375rem}
+.hours th,.hours td{padding:.7rem 0;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left;font-weight:400}
+.hours td{text-align:right;padding-left:1rem}
+.hours th::before{
+  content:"";display:inline-block;vertical-align:middle;width:.65rem;height:.65rem;margin:-.15rem .6rem 0 0;opacity:0;
+  background:linear-gradient(var(--mint),var(--mint)) center/100% 2px no-repeat,linear-gradient(var(--mint),var(--mint)) center/2px 100% no-repeat;
+}
+.hours tr.today th,.hours tr.today td{color:var(--mint)}
+.hours tr.today th::before{opacity:1}
+.age{margin-top:1rem;font-size:.875rem;color:var(--muted)}
+@media (max-width:389px){.hours{font-size:.8125rem}}
+@media (min-width:600px) and (max-width:899px){.big{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.hours-grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:start}}
+
+/* Call block (stands in for a product list) */
+.ask{padding-top:0}
+.ask-card{
+  position:relative;overflow:hidden;border-radius:1.25rem;
+  padding:clamp(1.75rem,6vw,3.5rem);
+  background:var(--mint);color:var(--mint-ink);
+}
+.ask-card .label{color:var(--mint-ink)}
+.ask-card .label .x{--c:var(--mint-ink)}
+.ask-card h2{max-width:34rem}
+.ask-card p{margin-top:.9rem;max-width:30rem;color:rgba(3,20,12,.78)}
+.ask-card .corner{position:absolute;right:clamp(1.25rem,5vw,3rem);top:clamp(1.25rem,5vw,3rem);width:clamp(2.5rem,9vw,4.5rem);--c:rgba(3,20,12,.85);--t:26%}
+.ask-tel{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1.6rem;
+  font-family:var(--mono);font-weight:500;font-size:clamp(1.05rem,5.2vw,1.75rem);
+  text-decoration:none;white-space:nowrap;
+  padding:.85rem 1.3rem;border-radius:.85rem;background:var(--mint-ink);color:var(--mint);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+}
+.ask-tel svg{width:1.05em;height:1.05em;flex:none}
+@media (hover:hover){.ask-tel:hover{transform:translateY(-2px);box-shadow:0 12px 30px -12px rgba(3,20,12,.8)}}
+.ask-tel:active{transform:scale(.97)}
+.ask-card h2{padding-right:clamp(3rem,10vw,5rem)}
+
+/* Reviews: the signature score, 4.9 + 182 */
+.reviews{background:var(--bg-2);border-block:1px solid var(--line)}
+.score{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.6rem 1.1rem;margin-top:1.75rem}
+.score .n b{display:block;font-weight:800;font-stretch:112%;font-size:clamp(3.75rem,17vw,8.5rem);line-height:.85;letter-spacing:-.04em}
+.score .n span{display:block;margin-top:.65rem;font-family:var(--mono);font-size:.8125rem;color:var(--muted);white-space:nowrap}
+.score .n .stars{display:inline;font-size:.9rem;margin-right:.35rem}
+.score>.x{width:clamp(2rem,9vw,4.25rem);--t:26%;margin-top:clamp(.6rem,3vw,1.6rem)}
+.rev-copy{margin-top:2.5rem;display:grid;gap:1.75rem}
+.gcard{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;max-width:26rem;
+  border:1px solid var(--line);border-radius:1rem;background:var(--bg);text-decoration:none;
+  transition:border-color .2s var(--ease),transform .2s var(--ease);
+}
+.gcard .g{width:2.1rem;height:2.1rem;flex:none}
+.gcard strong{display:block;font-weight:700;font-size:.9375rem}
+.gcard small{display:block;font-size:.875rem;color:var(--muted)}
+.gcard .arrow{margin-left:auto;color:var(--mint);font-size:1.25rem}
+@media (hover:hover){.gcard:hover{border-color:var(--mint);transform:translateY(-2px)}}
+@media (min-width:900px){.rev-copy{grid-template-columns:1.2fr 1fr;align-items:end;gap:4rem}}
+
+/* Visit */
+.visit-grid{display:grid;gap:2.5rem;margin-top:2.5rem}
+.info{display:grid;gap:1.6rem;align-content:start}
+.info dt{font-family:var(--mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);margin-bottom:.35rem}
+.info dd{font-size:1.125rem;line-height:1.45}
+.info dd a{text-decoration-color:var(--line-mint);text-underline-offset:4px}
+.map{border-radius:1.25rem;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--bg-2)}
+.map iframe{width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.4) brightness(.92)}
+@media (min-width:860px){.visit-grid{grid-template-columns:5fr 7fr;gap:4rem;align-items:start}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:2.75rem 0 2.25rem;color:var(--muted);font-size:.9375rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem 3rem;align-items:flex-start;justify-content:space-between}
+.foot .brand b{color:var(--text)}
+.foot p+p{margin-top:.25rem}
+.foot a{text-underline-offset:3px}
+.credit{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.8125rem}
+
+/* Sticky phone bar */
+.bar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;
+    padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom,0px));
+    background:rgba(10,11,11,.94);border-top:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.875rem}
+}
+
+/* Restrained motion: the badge turns in once, sections fade up */
+@keyframes plusIn{from{opacity:0;transform:rotate(-90deg) scale(.5)}to{opacity:1;transform:none}}
+.js .badge{animation:plusIn .7s .2s var(--ease) both}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .badge{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .btn,.gcard,.ask-tel,.top-call{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">Sample website made for Vape Plus by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></div>
+
+<header class="hero">
+  <div class="top">
+    <a class="brand" href="#main" aria-label="Vape Plus">
+      <span class="mark" aria-hidden="true"><i class="x"></i></span>
+      <b>Vape Plus</b>
+    </a>
+    <a class="top-call" href="tel:+14697098094" aria-label="Call (469) 709-8094">(469) 709-8094</a>
+  </div>
+
+  <div class="hero-grid">
+    <figure class="photo">
+      <img src="assets/listing.jpg" alt="Inside Vape Plus: black walls, lit glass counters on a wood floor and a shelved back counter" width="1400" height="1050" fetchpriority="high" decoding="async">
+      <span class="chip" id="openChip" hidden><span class="dot"></span><span id="openText"></span></span>
+      <i class="x badge" aria-hidden="true"></i>
+    </figure>
+
+    <div class="hero-text">
+      <h1><span>Vape</span><span><em>Plus</em></span></h1>
+      <a class="rating" href="https://www.google.com/maps?cid=11969454288458877399" target="_blank" rel="noopener" aria-label="Rated 4.9 from 182 Google reviews. Open on Google Maps.">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <strong>4.9</strong>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>182 Google reviews</span>
+      </a>
+      <div class="btn-row">
+        <a class="btn btn-mint" href="https://www.google.com/maps?cid=11969454288458877399" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get directions
+        </a>
+        <a class="btn btn-ghost" href="tel:+14697098094">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the shop
+        </a>
+      </div>
+      <p class="hero-sub">A vape, tobacco and cigar shop on Midway Rd in Dallas, open seven days a week.</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap rule" aria-hidden="true"><i class="x"></i><i class="x"></i></div>
+
+  <section aria-labelledby="shop-h">
+    <div class="wrap">
+      <p class="label rv"><i class="x"></i>The shop</p>
+      <h2 id="shop-h" class="rv">Vape <em>+</em> tobacco <em>+</em> cigar.</h2>
+      <p class="lede rv">It's all one shop at 18918 Midway Rd. Black walls and lit glass counters, with shelves stacked up behind the back counter.</p>
+      <ul class="cats">
+        <li class="cat rv">
+          <i class="x" aria-hidden="true"></i>
+          <h3>Vaporizer store</h3>
+          <p>It's the first word in our name. Come look through the cases.</p>
+        </li>
+        <li class="cat rv">
+          <i class="x" aria-hidden="true"></i>
+          <h3>Tobacco shop</h3>
+          <p>Tobacco is here too, so you can pick it up on the same stop.</p>
+        </li>
+        <li class="cat rv">
+          <i class="x" aria-hidden="true"></i>
+          <h3>Cigar shop</h3>
+          <p>We carry cigars as well. Ask at the counter what's in today.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hours-sec" aria-labelledby="hours-h">
+    <div class="wrap">
+      <p class="label rv"><i class="x"></i>Hours</p>
+      <h2 id="hours-h" class="rv">Here early, <em>here late.</em></h2>
+      <div class="hours-grid">
+        <div class="big rv">
+          <div><b>8 am</b><span>Doors open, Monday to Saturday</span></div>
+          <div><b>Midnight</b><span>Closing time, Friday + Saturday</span></div>
+        </div>
+        <div class="rv">
+          <table class="hours">
+            <tbody>
+              <tr data-d="Mon"><th scope="row">Monday</th><td>8 am to 11 pm</td></tr>
+              <tr data-d="Tue"><th scope="row">Tuesday</th><td>8 am to 11 pm</td></tr>
+              <tr data-d="Wed"><th scope="row">Wednesday</th><td>8 am to 11 pm</td></tr>
+              <tr data-d="Thu"><th scope="row">Thursday</th><td>8 am to 11 pm</td></tr>
+              <tr data-d="Fri"><th scope="row">Friday</th><td>8 am to midnight</td></tr>
+              <tr data-d="Sat"><th scope="row">Saturday</th><td>8 am to midnight</td></tr>
+              <tr data-d="Sun"><th scope="row">Sunday</th><td>9 am to 10 pm</td></tr>
+            </tbody>
+          </table>
+          <p class="age">Adults 21+ only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask-card rv">
+        <i class="x corner" aria-hidden="true"></i>
+        <p class="label"><i class="x"></i>Before the drive</p>
+        <h2 id="ask-h">Looking for one thing in particular?</h2>
+        <p>Call and ask. It takes a minute and saves you a trip down Midway for nothing.</p>
+        <a class="ask-tel" href="tel:+14697098094">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (469) 709-8094
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-h">
+    <div class="wrap">
+      <p class="label rv"><i class="x"></i>Reviews</p>
+      <div class="score rv" aria-label="4.9 stars from 182 Google reviews">
+        <div class="n"><b>4.9</b><span><span class="stars" aria-hidden="true">★★★★★</span>on Google</span></div>
+        <i class="x" aria-hidden="true"></i>
+        <div class="n"><b>182</b><span>reviews</span></div>
+      </div>
+      <div class="rev-copy">
+        <div class="rv">
+          <h2 id="rev-h" style="margin-top:0">Read what people wrote <em>about us.</em></h2>
+          <p class="lede">Find them on our Google listing, then come see the place yourself.</p>
+        </div>
+        <a class="gcard rv" href="https://www.google.com/maps?cid=11969454288458877399" target="_blank" rel="noopener">
+          <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>
+            <strong>Read our Google reviews</strong>
+            <small>4.9 stars, 182 reviews</small>
+          </span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label rv"><i class="x"></i>Visit</p>
+      <h2 id="visit-h" class="rv">Find us at <em>18918 Midway Rd.</em></h2>
+      <div class="visit-grid">
+        <dl class="info">
+          <div class="rv">
+            <dt>Address</dt>
+            <dd>18918 Midway Rd #124<br>Dallas, TX 75287</dd>
+          </div>
+          <div class="rv">
+            <dt>Phone</dt>
+            <dd><a href="tel:+14697098094">(469) 709-8094</a></dd>
+          </div>
+          <div class="btn-row rv">
+            <a class="btn btn-mint" href="https://www.google.com/maps?cid=11969454288458877399" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+14697098094">Call the shop</a>
+          </div>
+        </dl>
+        <div class="map rv">
+          <iframe title="Map to Vape Plus, 18918 Midway Rd #124, Dallas" src="https://www.google.com/maps?q=Vape+Plus,+18918+Midway+Rd+%23124,+Dallas,+TX+75287&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><span class="mark" aria-hidden="true"><i class="x"></i></span><b>Vape Plus</b></div>
+      <div>
+        <p>18918 Midway Rd #124, Dallas, TX 75287</p>
+        <p><a href="tel:+14697098094">(469) 709-8094</a></p>
+      </div>
+      <p><a href="https://www.facebook.com/vapeplusdallas" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="credit">Sample website by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-mint" href="https://www.google.com/maps?cid=11969454288458877399" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-ghost" href="tel:+14697098094">Call</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  /* Shop hours in America/Chicago, minutes from midnight:
+     Mon-Thu 8:00-23:00, Fri-Sat 8:00-24:00, Sun 9:00-22:00. */
+  var H={Mon:[480,1380],Tue:[480,1380],Wed:[480,1380],Thu:[480,1380],Fri:[480,1440],Sat:[480,1440],Sun:[540,1320]};
+  var ORDER=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function fmt(m){
+    if(m>=1440)return 'midnight';
+    var h=Math.floor(m/60),mm=m%60;
+    return (h%12||12)+(mm?':'+('0'+mm).slice(-2):'')+' '+(h<12?'am':'pm');
+  }
+  /* status(day, minutes) -> [isOpen, text] */
+  function status(d,m){
+    var t=H[d];
+    if(m>=t[0]&&m<t[1])return [true,'Open now · until '+fmt(t[1])];
+    if(m<t[0])return [false,'Closed · opens '+fmt(t[0])];
+    var next=ORDER[(ORDER.indexOf(d)+1)%7];
+    return [false,'Closed · opens '+fmt(H[next][0])+' '+(next==='Sun'?'Sunday':'tomorrow')];
+  }
+  /* self-check: logs loudly if the hours logic breaks */
+  console.assert(status('Mon',480)[0]&&!status('Mon',1380)[0]&&status('Fri',1439)[0]
+    &&status('Fri',1000)[1].indexOf('midnight')>-1&&!status('Sun',539)[0]&&status('Sun',1319)[0]
+    &&status('Sat',300)[1].indexOf('8 am')>-1&&status('Sun',1330)[1].indexOf('8 am tomorrow')>-1
+    &&status('Sat',1440)[1].indexOf('9 am Sunday')>-1,'hours logic');
+
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+    var m=(+p.hour%24)*60+(+p.minute), s=status(p.weekday,m);
+    var chip=document.getElementById('openChip');
+    document.getElementById('openText').textContent=s[1];
+    chip.classList.toggle('is-open',s[0]);
+    chip.hidden=false;
+    var row=document.querySelector('.hours tr[data-d="'+p.weekday+'"]');
+    if(row)row.classList.add('today');
+  }catch(e){}
+
+  /* Scroll reveal */
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
