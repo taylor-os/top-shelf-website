@@ -733,3 +733,9 @@ figure { margin: 0; }
 .hdr { top: 30px; transition: top .25s var(--ease), background-color .3s, border-color .3s; }
 .hdr.solid, .menu-open .hdr { top: 0; }
 .ftr-bottom a { display: inline; min-height: 0; text-decoration: underline; text-underline-offset: 2px; }
+
+/* mobile tap targets */
+.ftr a { min-height: 44px; }
+.cta-phone { padding: .35rem 0; }
+.info-row p a { display: inline-block; padding: .55rem 0; }
+.ftr-bottom a { min-height: 0; }

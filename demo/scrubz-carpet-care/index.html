@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
-<link rel="preload" as="image" href="img/hero-extraction.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-extraction.jpg" imagesrcset="img/hero-extraction-640.webp 640w, img/hero-extraction-1024.webp 1024w, img/hero-extraction.jpg 1344w" imagesizes="100vw" fetchpriority="high">
 <script>document.documentElement.classList.add('js');setTimeout(function(){window.scrubzReady||document.documentElement.classList.remove('js')},3000)</script>
 <script type="application/ld+json">
 {
@@ -87,7 +87,7 @@
 
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-media"><img src="img/hero-extraction.jpg" alt="Carpet cleaning wand pulling soapy water out of dark carpet, leaving a clean stripe, with bubbles floating in the air" width="1344" height="896" fetchpriority="high"></div>
+    <div class="hero-media"><img src="img/hero-extraction.jpg" srcset="img/hero-extraction-640.webp 640w, img/hero-extraction-1024.webp 1024w, img/hero-extraction.jpg 1344w" sizes="100vw" alt="Carpet cleaning wand pulling soapy water out of dark carpet, leaving a clean stripe, with bubbles floating in the air" width="1344" height="896" fetchpriority="high"></div>
     <canvas class="bubbles" data-bubbles="1.2" aria-hidden="true"></canvas>
     <div class="wrap">
       <div class="hero-copy">
@@ -144,19 +144,19 @@
       </div>
       <div class="bento">
         <a class="tile photo span-7 row-2 wide-m" href="services.html#carpet-cleaning" data-reveal>
-          <img src="img/wand-living-room.jpg" alt="Cleaning wand mid-pass on a living room carpet next to a wood floor" width="1200" height="1548" loading="lazy">
+          <img src="img/wand-living-room.jpg" srcset="img/wand-living-room-640.webp 640w, img/wand-living-room-1024.webp 1024w, img/wand-living-room.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="Cleaning wand mid-pass on a living room carpet next to a wood floor" width="1200" height="1548" loading="lazy">
           <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           <h3>Carpet Cleaning</h3>
           <p>Deep steam extraction and Rotovac system cleaning that lifts years of soil and restores the pile.</p>
         </a>
         <a class="tile photo span-5" href="services.html#upholstery" data-reveal style="--d:.08s">
-          <img src="img/sofa-after.jpg" alt="Gray microfiber sofa with fresh cleaning lines after upholstery cleaning" width="955" height="468" loading="lazy">
+          <img src="img/sofa-after.jpg" srcset="img/sofa-after-640.webp 640w, img/sofa-after.jpg 955w" sizes="(max-width: 860px) 100vw, 50vw" alt="Gray microfiber sofa with fresh cleaning lines after upholstery cleaning" width="955" height="468" loading="lazy">
           <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           <h3>Upholstery Cleaning</h3>
           <p>Sofas, sectionals and chairs. Fabric-safe solutions that dry quickly.</p>
         </a>
         <a class="tile photo span-5" href="services.html#tile-grout" data-reveal style="--d:.14s">
-          <img src="img/tile-red.jpg" alt="Shiny red tile floor in a large room right after cleaning" width="1200" height="1600" loading="lazy" style="object-position:50% 70%">
+          <img src="img/tile-red.jpg" srcset="img/tile-red-640.webp 640w, img/tile-red-1024.webp 1024w, img/tile-red.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="Shiny red tile floor in a large room right after cleaning" width="1200" height="1600" loading="lazy" style="object-position:50% 70%">
           <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           <h3>Tile &amp; Grout</h3>
           <p>Kitchens, bathrooms and entryways scrubbed back to their original color and shine.</p>
@@ -190,7 +190,7 @@
       </div>
       <div class="diff">
         <figure class="frame capped stairs" data-reveal="wipe">
-          <img src="img/stairs-mid-clean.jpg" alt="Carpeted staircase halfway through cleaning: the lower steps are clean and bright, the upper steps are still dark" width="1200" height="1600" loading="lazy">
+          <img src="img/stairs-mid-clean.jpg" srcset="img/stairs-mid-clean-640.webp 640w, img/stairs-mid-clean-1024.webp 1024w, img/stairs-mid-clean.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="Carpeted staircase halfway through cleaning: the lower steps are clean and bright, the upper steps are still dark" width="1200" height="1600" loading="lazy">
           <span class="tag tl">Before</span>
           <span class="tag after bl" style="bottom:4.2rem">After</span>
           <figcaption>Halfway up the stairs. The bottom steps are done and the top ones are still waiting their turn.</figcaption>
@@ -198,13 +198,13 @@
         <div class="diff-stack">
           <figure class="frame pair-frame" data-reveal="wipe" style="--d:.1s">
             <div class="pair">
-              <figure><img src="img/sofa-before.jpg" alt="Gray sofa covered in dark stains before cleaning" width="955" height="468" loading="lazy"><span class="tag tl">Before</span></figure>
-              <figure><img src="img/sofa-after.jpg" alt="The same gray sofa after cleaning, stains gone" width="955" height="468" loading="lazy"><span class="tag after tl">After</span></figure>
+              <figure><img src="img/sofa-before.jpg" srcset="img/sofa-before-640.webp 640w, img/sofa-before.jpg 955w" sizes="(max-width: 520px) 100vw, 30vw" alt="Gray sofa covered in dark stains before cleaning" width="955" height="468" loading="lazy"><span class="tag tl">Before</span></figure>
+              <figure><img src="img/sofa-after.jpg" srcset="img/sofa-after-640.webp 640w, img/sofa-after.jpg 955w" sizes="(max-width: 520px) 100vw, 30vw" alt="The same gray sofa after cleaning, stains gone" width="955" height="468" loading="lazy"><span class="tag after tl">After</span></figure>
             </div>
             <figcaption class="below">Same sofa, before and after an upholstery cleaning.</figcaption>
           </figure>
           <figure class="frame capped grout" data-reveal="wipe" style="--d:.2s">
-            <img src="img/tile-grout.jpg" alt="Tile floor with dark, dirty grout lines at the top and clean light grout at the bottom" width="1200" height="2058" loading="lazy">
+            <img src="img/tile-grout.jpg" srcset="img/tile-grout-640.webp 640w, img/tile-grout-1024.webp 1024w, img/tile-grout.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="Tile floor with dark, dirty grout lines at the top and clean light grout at the bottom" width="1200" height="2058" loading="lazy">
             <span class="tag tl">Before</span>
             <span class="tag after br">After</span>
             <figcaption>Grout lines, dirty on top and scrubbed clean below.</figcaption>
@@ -218,7 +218,7 @@
   <section class="section glow-br" aria-labelledby="promise-title">
     <div class="wrap split">
       <figure class="frame tall" data-reveal="wipe">
-        <img src="img/van-truckmount.jpg" alt="Red and black Scrubz Carpet Care van with the side door open, showing the extraction unit mounted inside, a crew member standing beside it" width="1200" height="1600" loading="lazy">
+        <img src="img/van-truckmount.jpg" srcset="img/van-truckmount-640.webp 640w, img/van-truckmount-1024.webp 1024w, img/van-truckmount.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="Red and black Scrubz Carpet Care van with the side door open, showing the extraction unit mounted inside, a crew member standing beside it" width="1200" height="1600" loading="lazy">
         <span class="badge-float">We're Old Skool. We Do It Right!</span>
       </figure>
       <div data-reveal>
