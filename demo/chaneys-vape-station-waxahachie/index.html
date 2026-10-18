@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Chaney's Vape Station, a vaporizer store at 1008 Ferris Ave in Waxahachie, TX. Open seven days a week. Adults 21+ only. Call (972) 937-2469.">
+<meta name="theme-color" content="#0F1114">
+<title>Chaney's Vape Station | Waxahachie, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chaney's Vape Station | Waxahachie, TX">
+<meta property="og:description" content="Vaporizer store at 1008 Ferris Ave in Waxahachie. Open seven days a week. 21+ only.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/chaneys-vape-station-waxahachie/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1114'/%3E%3Cpath d='M8 32H22M42 32H56' stroke='%23FFB31A' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='9' fill='none' stroke='%23FFB31A' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Chaney's Vape Station",
+  "telephone": "+1-972-937-2469",
+  "image": "https://www.topshelfsolutions.io/demo/chaneys-vape-station-waxahachie/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1008 Ferris Ave",
+    "addressLocality": "Waxahachie",
+    "addressRegion": "TX",
+    "postalCode": "75165",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday"], "opens": "10:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "20:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=4892911509588972757"
+}
+</script>
+<style>
+/* ================================================================
+   Chaney's Vape Station - one-page demo
+   Night platform: charcoal, warm paper text, one signal-amber accent.
+   Signature device: a transit route line with station stops. It runs
+   across the hero, and in the hours band it becomes today's line,
+   an arc from opening to 8 pm with a live marker for right now.
+   Layout based on the eagle-mount-smoke-shop-fort-worth demo.
+   ================================================================ */
+:root{
+  --night-0:#0F1114;
+  --night-1:#15181D;
+  --night-2:#1D2128;
+  --night-3:#272C35;
+  --paper:#F3EFE6;
+  --muted:#A6ADB8;
+  --amber:#FFB31A;
+  --amber-2:#FFC64F;
+  --amber-ink:#1B1400;
+  --rule:rgba(243,239,230,.12);
+  --go:#3DD68C;
+  --display:'Unbounded','Arial Black',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --lift:0 1px 2px rgba(0,0,0,.3),0 14px 34px -14px rgba(0,0,0,.7);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  color:var(--paper);background:var(--night-0);overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:8px}
+::selection{background:var(--amber);color:var(--amber-ink)}
+
+.wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.7rem 1.1rem;background:var(--amber);color:var(--amber-ink);font-weight:700;border-radius:10px;text-decoration:none}
+.skip:focus{top:1rem}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6em;color:var(--amber);
+  font-size:.8125rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;line-height:1.2;
+}
+.eyebrow::before{
+  content:"";width:1.9em;height:.95em;flex:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 16'%3E%3Cpath d='M2 8H11M21 8H30' stroke='%23FFB31A' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='8' r='4.2' fill='none' stroke='%23FFB31A' stroke-width='2.6'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:3.4rem;padding:.8rem 1.5rem;border-radius:999px;border:1.5px solid transparent;
+  font:700 1.0625rem/1 var(--body);text-decoration:none;white-space:nowrap;
+  transition:transform .16s var(--ease),box-shadow .25s ease,background-color .2s ease,border-color .2s ease;
+}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-amber{background:var(--amber);color:var(--amber-ink);box-shadow:0 10px 26px -12px rgba(255,179,26,.65)}
+.btn-line{background:transparent;color:var(--paper);border-color:rgba(243,239,230,.32)}
+.btn-dark{background:var(--night-0);color:var(--paper)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover){
+  .btn-amber:hover{background:var(--amber-2);box-shadow:0 14px 30px -12px rgba(255,179,26,.75)}
+  .btn-line:hover{border-color:var(--paper)}
+  .btn-dark:hover{background:var(--night-2)}
+}
+
+/* scroll reveal: JS adds .js to <html>; without JS everything is visible */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---- the one attribution ribbon --------------------------------- */
+.ribbon{background:#08090B;color:var(--muted);text-align:center;font-size:.75rem;font-weight:500;line-height:1.35;padding:.4rem 1.25rem}
+.ribbon a{color:var(--paper);font-weight:700;text-underline-offset:2px}
+
+/* ---- header ------------------------------------------------------ */
+.top{position:sticky;top:0;z-index:50;background:rgba(15,17,20,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.top-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--display);font-weight:600;font-size:1rem;letter-spacing:-.01em;line-height:1;text-decoration:none;white-space:nowrap;color:var(--paper);min-width:0}
+.brand svg{width:1.9rem;height:1rem;color:var(--amber);flex:none}
+.top-right{display:flex;align-items:center;gap:1.5rem;min-width:0}
+.top nav{display:none;gap:1.5rem;font-size:.9375rem;font-weight:600}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--paper)}
+.top .place{font-size:.8125rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.top .btn{display:none;min-height:2.6rem;padding:.5rem 1.1rem;font-size:.9375rem}
+@media (max-width:460px){.top .place{display:none}}
+@media (max-width:370px){.brand{font-size:.9rem}}
+@media (min-width:721px){.top .btn{display:inline-flex}.top .place{display:none}}
+@media (min-width:960px){.top nav{display:flex}}
+
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.875rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.status::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:#6B7380;flex:none}
+.status.is-open{color:var(--paper)}
+.status.is-open::before{background:var(--go);box-shadow:0 0 0 4px rgba(61,214,140,.2)}
+
+/* ---- hero -------------------------------------------------------- */
+/* Phones: the shop photo fills the top of the hero and fades into the
+   night background, so name, rating and button sit on it in the first
+   screen. Desktop: copy left, the same photo in a 4:3 window right
+   (kept moderate because the source is small and soft). */
+.hero{position:relative;overflow:clip;background:var(--night-0)}
+.hero-grid{position:relative;display:flex;flex-direction:column}
+.shot{position:absolute;inset:0 0 auto 0;height:clamp(21rem,50svh,26rem);z-index:0;overflow:hidden;background:var(--night-2)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:saturate(1.08) brightness(.92)}
+.shot::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(15,17,20,.15) 0%,rgba(15,17,20,.1) 24%,rgba(15,17,20,.88) 54%,var(--night-0) 70%);
+}
+.route{
+  position:absolute;z-index:2;top:.4rem;left:50%;transform:translateX(-50%);
+  width:max(100%,900px);height:auto;pointer-events:none;color:var(--amber);
+}
+.route path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.route path[pathLength]{stroke-dasharray:1;stroke-dashoffset:0}
+.route circle{fill:var(--night-0);stroke:currentColor;stroke-width:3.5}
+.js .route path[pathLength]{animation:draw 1.8s var(--ease) .2s both}
+.js .route circle{animation:fadein .4s ease 1.4s both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+
+.hero-copy{
+  position:relative;z-index:3;display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;min-width:0;
+  width:min(100% - 2.5rem,1180px);margin-inline:auto;
+  padding:clamp(10rem,25svh,13rem) 0 2.5rem;
+}
+.hero .status{padding:.4rem .85rem .4rem .7rem;border-radius:999px;background:var(--night-2);border:1px solid var(--rule);box-shadow:var(--lift)}
+.hero h1{display:flex;flex-direction:column;gap:.55rem}
+.hero h1 .name{font-size:clamp(2.6rem,13vw,4.5rem);line-height:.92;letter-spacing:-.035em;color:var(--paper);text-shadow:0 2px 20px rgba(0,0,0,.65)}
+.hero h1 .name span{display:block}
+.hero h1 .name span + span{color:var(--amber)}
+.hero h1 .kind{font-family:var(--body);font-weight:700;font-size:.9375rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.hero-sub{max-width:31rem;color:var(--muted);font-size:1rem}
+.hero-sub strong{color:var(--paper);font-weight:600}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.4rem 1rem .4rem .45rem;
+  border:1px solid var(--rule);border-radius:999px;background:var(--night-2);box-shadow:var(--lift);
+  font-size:.9375rem;font-weight:600;text-decoration:none;white-space:nowrap;
+}
+.rating .g{width:1.65rem;height:1.65rem;padding:.28rem;border-radius:50%;background:#fff;flex:none}
+.rating .star{width:1rem;height:1rem;fill:#FBBC04}
+.rating b{font-weight:700}
+.rating .sep{color:#6B7380}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;width:100%;margin-top:.35rem}
+
+.rise{animation:rise .7s var(--ease) both}
+.rise-2{animation-delay:.08s}.rise-3{animation-delay:.16s}.rise-4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-ctas .btn-line{display:none} /* Call lives in the phone bar */
+  .hero-sub{font-size:.975rem}
+}
+@media (min-width:900px){
+  .hero{background:radial-gradient(52rem 32rem at 78% 40%,rgba(255,179,26,.10),transparent 70%),var(--night-0)}
+  .hero-grid{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3rem,5vw,5rem);align-items:center;
+    width:min(100% - 2.5rem,1180px);margin-inline:auto;padding:clamp(5rem,8vw,7rem) 0 clamp(4rem,7vw,6rem);
+  }
+  .hero-copy{width:auto;margin:0;padding:0;gap:1.3rem}
+  .shot{
+    position:relative;inset:auto;height:auto;justify-self:end;width:100%;max-width:34rem;aspect-ratio:4/3;
+    border-radius:28px;border:1px solid var(--rule);box-shadow:0 0 0 8px var(--night-2),0 34px 70px -30px rgba(0,0,0,.9);
+  }
+  .shot::after{background:linear-gradient(180deg,rgba(255,179,26,.08),rgba(15,17,20,0) 45%,rgba(15,17,20,.25))}
+  .route{top:1.2rem}
+  .hero h1 .name{font-size:clamp(3.75rem,6vw,5.75rem)}
+  .hero h1 .kind{font-size:1.0625rem}
+  .hero-sub{font-size:1.1875rem}
+}
+
+/* ---- sections -------------------------------------------------------- */
+.section{padding:clamp(3.75rem,9vw,7rem) 0}
+.head{max-width:46rem;margin-bottom:clamp(1.75rem,4vw,3rem)}
+.head .eyebrow{margin-bottom:1rem}
+.head h2{font-size:clamp(2.1rem,9vw,4rem)}
+.head h2 em{font-style:normal;color:var(--amber)}
+.head p{margin-top:1rem;max-width:34rem;color:var(--muted);font-size:1.0625rem}
+
+/* ---- today's line: hours as an arc ------------------------------------- */
+.dayline{background:var(--night-1);border-block:1px solid var(--rule)}
+.dayline-grid{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+.dayline h2{margin-top:1rem;font-size:clamp(2.1rem,9vw,4rem)}
+.dayline h2 em{font-style:normal;color:var(--amber)}
+.dayline .lede{margin-top:1rem;max-width:32rem;color:var(--muted)}
+.facts{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.facts li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+.facts span{color:var(--muted);font-weight:500}
+.facts b{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,5vw,1.45rem);letter-spacing:-.02em}
+@media (max-width:370px){.facts span{font-size:.9rem}.facts b{font-size:1.02rem}}
+
+.line-card{
+  position:relative;padding:clamp(1.25rem,4vw,2rem) clamp(1rem,3.5vw,2rem) clamp(1.1rem,3vw,1.6rem);
+  border-radius:28px;background:linear-gradient(180deg,var(--night-2),var(--night-1));border:1px solid var(--rule);overflow:hidden;min-width:0;
+}
+.line-card .cap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1rem;margin-bottom:.5rem}
+.line-card .cap .day{font-family:var(--display);font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.arc{width:100%;height:auto;overflow:visible}
+.arc .horizon{stroke:rgba(243,239,230,.28);stroke-width:3;stroke-dasharray:3 10;stroke-linecap:round}
+.arc .tick{stroke:rgba(243,239,230,.28);stroke-width:3}
+.arc .fill{fill:url(#arcFill)}
+.arc .line{fill:none;stroke:var(--amber);stroke-width:6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+.arc .end{fill:var(--night-0);stroke:var(--amber);stroke-width:5}
+.arc .now{opacity:0}
+.arc .now.on{opacity:1}
+.arc .now circle{fill:var(--paper);stroke:var(--night-0);stroke-width:6}
+.arc .now .halo{fill:rgba(255,179,26,.28);stroke:none;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+@keyframes halo{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.9);opacity:0}}
+.js .dayline:not(.in) .arc .line{stroke-dashoffset:1}
+.js .dayline:not(.in) .arc .fill,.js .dayline:not(.in) .arc .end{opacity:0}
+.js .dayline .arc .line{transition:stroke-dashoffset 1.6s var(--ease)}
+.js .dayline .arc .fill,.js .dayline .arc .end{transition:opacity .6s ease 1.2s}
+.marks{position:relative;height:1.4rem;margin-top:.3rem;font-size:.8125rem;font-weight:600;color:var(--muted)}
+.marks span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+@media (min-width:900px){.dayline-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+
+/* ---- the shop ---------------------------------------------------------- */
+.shop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.tile{
+  position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:2.2rem;
+  min-height:11rem;padding:1.15rem 1.15rem 1.3rem;border-radius:24px;border:1px solid var(--rule);box-shadow:var(--lift);
+  background:radial-gradient(circle at 105% -5%,rgba(255,179,26,.14),rgba(255,179,26,0) 60%),var(--night-2);
+}
+.tile svg{width:2.6rem;height:1.3rem;color:var(--amber)}
+.tile h3{font-size:clamp(1.35rem,6vw,2.2rem);line-height:1}
+.tile h3 span{display:block;color:var(--amber)}
+@media (max-width:430px){.tile h3{font-size:1.05rem;overflow-wrap:normal;word-break:keep-all;hyphens:none}}
+.ask{
+  grid-column:1 / -1;padding:clamp(1.5rem,4vw,2.25rem);border-radius:24px;background:var(--amber);color:var(--amber-ink);
+}
+.ask h3{font-size:clamp(1.6rem,6.4vw,2.3rem);margin-bottom:.7rem}
+.ask p{max-width:28rem;color:#3D3110}
+.ask .tel{display:block;margin:1rem 0 1.25rem;font-family:var(--display);font-weight:600;font-size:clamp(1.55rem,7.2vw,2.4rem);letter-spacing:-.02em;line-height:1;text-decoration:none;white-space:nowrap}
+.ask .btn{width:100%}
+@media (min-width:900px){
+  .shop-grid{grid-template-columns:1fr 1fr 1.25fr;gap:1.25rem;align-items:stretch}
+  .tile{min-height:16rem;padding:1.6rem}
+  .ask{grid-column:auto;display:flex;flex-direction:column;justify-content:center}
+  .ask .btn{width:auto;align-self:flex-start}
+}
+
+/* ---- reviews ---------------------------------------------------------- */
+.reviews{text-align:center;background:linear-gradient(180deg,var(--night-0),var(--night-1))}
+.reviews .eyebrow{justify-content:center}
+.score{font-family:var(--display);font-weight:700;font-size:clamp(6rem,34vw,12rem);line-height:.9;letter-spacing:-.05em;margin:1.2rem 0 1rem;color:var(--paper)}
+/* one row of five: dim underneath, the same row in gold on top, clipped to 90% (4.5 of 5).
+   Both spans share font, line-height, letter-spacing and nowrap, so they overlap exactly. */
+.stars{position:relative;display:inline-block;font:400 clamp(2.25rem,12vw,3rem)/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap;color:rgba(243,239,230,.16)}
+.stars span{display:block}
+.stars .fill{position:absolute;top:0;left:0;width:90%;overflow:hidden;color:#FBBC04}
+.reviews h2{font-family:var(--body);font-weight:700;letter-spacing:-.01em;font-size:clamp(1.4rem,4.6vw,2rem);line-height:1.25;margin-top:1.3rem}
+.goog{display:inline-block;padding:0 .3em;border-radius:.3em;background:#fff}
+.goog .b{color:#4285F4}.goog .r{color:#EA4335}.goog .y{color:#FBBC05}.goog .gr{color:#34A853}
+.reviews p{max-width:27rem;margin:.9rem auto 0;color:var(--muted)}
+.reviews .btn{margin-top:1.9rem}
+.reviews .btn .gi{width:1.3em;height:1.3em;padding:.14em;border-radius:50%;background:#fff}
+
+/* ---- visit ------------------------------------------------------------ */
+.visit-grid{display:grid;gap:1.1rem}
+.card{padding:clamp(1.4rem,4vw,2.1rem);border-radius:24px;border:1px solid var(--rule);background:var(--night-2);box-shadow:var(--lift);min-width:0}
+.card .label{display:block;margin-bottom:.9rem;font-size:.8125rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.hours{margin:0}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.62rem .6rem;margin:0 -.6rem;border-bottom:1px solid var(--rule);border-radius:10px;font-variant-numeric:tabular-nums}
+.hours div:last-child{border-bottom:0}
+.hours dt{font-weight:700;display:inline-flex;align-items:center;gap:.5rem}
+.hours dd{margin:0;color:var(--muted);text-align:right}
+.hours dt,.hours dd{white-space:nowrap}
+@media (max-width:420px){.hours dt,.hours dd{font-size:.92em}}
+@media (max-width:370px){.hours dt,.hours dd{font-size:.84em}}
+.hours .today{background:rgba(255,179,26,.12);border-bottom-color:transparent}
+.hours .today dd{color:var(--paper);font-weight:700}
+.hours .today dt::after{content:"Today";padding:.2rem .5rem;border-radius:99px;background:var(--amber);color:var(--amber-ink);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.big{display:block;font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,6vw,2rem);line-height:1.15;letter-spacing:-.02em;text-decoration:none}
+address.big{font-style:normal}
+.card .note{margin-top:.7rem;color:var(--muted)}
+.card .btn{margin-top:1.3rem;width:100%}
+.stack{display:grid;gap:1.1rem;min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:1.4rem}.stack{gap:1.4rem}}
+
+/* ---- closing CTA -------------------------------------------------------- */
+.close{position:relative;overflow:clip;text-align:center;padding:clamp(4.5rem,12vw,8rem) 0;background:radial-gradient(40rem 22rem at 50% 100%,rgba(255,179,26,.12),transparent 70%),var(--night-1);border-top:1px solid var(--rule)}
+.close .route{top:auto;bottom:1rem}
+.close .wrap{position:relative;z-index:3}
+.close h2{font-size:clamp(2.2rem,10vw,5.5rem);letter-spacing:-.035em}
+.close h2 span{display:block;color:var(--amber)}
+.close p{max-width:31rem;margin:1.3rem auto 0;font-size:1.0625rem;color:var(--muted)}
+.close-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
+@media (max-width:560px){.close-ctas .btn{flex:1 1 100%}}
+
+/* ---- footer --------------------------------------------------------------- */
+.foot{background:#08090B;color:var(--muted);font-size:.9375rem}
+.foot-main{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;padding:2.5rem 0 2rem}
+.foot .brand{color:var(--paper);font-size:1.05rem;margin-bottom:.8rem;white-space:normal}
+.foot a{text-underline-offset:3px}
+.foot .age{align-self:flex-end;color:var(--paper);font-weight:700;letter-spacing:.04em}
+.credit{border-top:1px solid var(--rule);padding:1.2rem 0 1.5rem;text-align:center;font-size:.8125rem}
+
+/* ---- phone action bar ------------------------------------------------------ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(15,17,20,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-top:1px solid var(--rule);box-shadow:0 -8px 24px -12px rgba(0,0,0,.8);
+}
+.dock .btn{min-height:3rem;padding:.55rem .75rem;font-size:1rem}
+@media (max-width:720px){body{padding-bottom:calc(4.3rem + env(safe-area-inset-bottom))}}
+@media (min-width:721px){.dock{display:none}}
+
+/* ---- reduced motion --------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important;transition-delay:0s !important}
+  .js .reveal{opacity:1;transform:none}
+  .js .route path,.js .dayline .arc .line{stroke-dashoffset:0}
+  .js .dayline .arc .fill,.js .dayline .arc .end{opacity:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-stop" viewBox="0 0 32 16"><path d="M2 8H11M21 8H30" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><circle cx="16" cy="8" r="4.2" fill="none" stroke="currentColor" stroke-width="2.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+</svg>
+
+<p class="ribbon">Sample website made for Chaney's Vape Station by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+
+<header class="top">
+  <div class="wrap top-bar">
+    <a class="brand" href="#home" aria-label="Chaney's Vape Station, back to top"><svg aria-hidden="true"><use href="#i-stop"/></svg><span>Chaney's Vape Station</span></a>
+    <div class="top-right">
+      <nav aria-label="Sections">
+        <a href="#hours">Hours</a>
+        <a href="#shop">The shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <span class="place">Waxahachie, TX</span>
+      <a class="btn btn-amber" href="tel:+19729372469"><svg aria-hidden="true"><use href="#i-phone"/></svg>(972) 937-2469</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <svg class="route" viewBox="0 0 1440 170" aria-hidden="true" focusable="false">
+      <path pathLength="1" d="M-20 120H400L460 60H1000L1060 120H1460"/>
+      <circle cx="230" cy="120" r="9"/>
+      <circle cx="720" cy="60" r="11"/>
+      <circle cx="1240" cy="120" r="9"/>
+    </svg>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="status js-status rise">Open seven days a week</p>
+        <h1 class="rise rise-2">
+          <span class="name"><span>Chaney's</span><span>Vape</span><span>Station</span></span>
+          <span class="kind">Vaporizer store</span>
+        </h1>
+        <p class="hero-sub rise rise-3">Find us at <strong>1008 Ferris Ave in Waxahachie</strong>. Open seven days a week, until 8 pm every night.</p>
+        <a class="rating rise rise-3" href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener" aria-label="Rated 4.5 out of 5 from 208 Google reviews. Open our listing on Google.">
+          <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
+          <b>4.5</b>
+          <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="sep">|</span>
+          <span>208 Google reviews</span>
+        </a>
+        <div class="hero-ctas rise rise-4">
+          <a class="btn btn-amber" href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-line" href="tel:+19729372469"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (972) 937-2469</a>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/listing.jpg" width="1200" height="675" fetchpriority="high" decoding="async"
+             alt="Inside Chaney's Vape Station: a dark slat wall lined with rows of shelves.">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Today's line: hours -->
+  <section class="section dayline" id="hours" aria-labelledby="hours-h">
+    <div class="wrap dayline-grid">
+      <div class="reveal">
+        <p class="eyebrow">Hours</p>
+        <h2 id="hours-h">Open <em>seven days.</em></h2>
+        <p class="lede">We open at 9 am Tuesday through Sunday and at 10 am on Monday. Every night we close at 8 pm.</p>
+        <ul class="facts">
+          <li><span>Tue to Sun</span><b>Open at 9 am</b></li>
+          <li><span>Monday</span><b>Open at 10 am</b></li>
+          <li><span>Every day</span><b>Until 8 pm</b></li>
+        </ul>
+      </div>
+      <div class="line-card reveal">
+        <div class="cap">
+          <span class="day js-day">Open 9 am to 8 pm</span>
+          <span class="status js-status">Open seven days a week</span>
+        </div>
+        <svg class="arc" viewBox="0 0 1000 262" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="arcFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFB31A" stop-opacity=".32"/>
+              <stop offset="1" stop-color="#FFB31A" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line class="horizon" x1="80" y1="240" x2="920" y2="240"/>
+          <line class="tick" x1="80" y1="232" x2="80" y2="248"/>
+          <line class="tick" x1="290" y1="232" x2="290" y2="248"/>
+          <line class="tick" x1="500" y1="232" x2="500" y2="248"/>
+          <line class="tick" x1="710" y1="232" x2="710" y2="248"/>
+          <line class="tick" x1="920" y1="232" x2="920" y2="248"/>
+          <path class="fill js-arc-fill" d="M237.5 240A288.75 190 0 0 1 815 240Z"/>
+          <path class="line js-arc" pathLength="1" d="M237.5 240A288.75 190 0 0 1 815 240"/>
+          <circle class="end js-arc-start" cx="237.5" cy="240" r="12"/>
+          <circle class="end" cx="815" cy="240" r="12"/>
+          <g class="now js-now">
+            <circle class="halo" cx="0" cy="0" r="28"/>
+            <circle cx="0" cy="0" r="16"/>
+          </g>
+        </svg>
+        <div class="marks" aria-hidden="true">
+          <span class="js-open-mark" style="left:23.75%">9 am</span>
+          <span style="left:81.5%">8 pm</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The shop -->
+  <section class="section" id="shop">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">The shop</p>
+        <h2>A vaporizer store on <em>Ferris Ave.</em></h2>
+        <p>A full wall of shelves, stocked from top to bottom, right here in Waxahachie.</p>
+      </div>
+      <div class="shop-grid reveal">
+        <div class="tile"><svg aria-hidden="true"><use href="#i-stop"/></svg><h3>Vaporizer <span>store</span></h3></div>
+        <div class="tile"><svg aria-hidden="true"><use href="#i-stop"/></svg><h3>Open <span>7 days</span></h3></div>
+        <div class="ask">
+          <h3>Looking for something?</h3>
+          <p>Call and we will tell you before you drive over.</p>
+          <a class="tel" href="tel:+19729372469">(972) 937-2469</a>
+          <a class="btn btn-dark" href="tel:+19729372469"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap reveal">
+      <p class="eyebrow">Reviews</p>
+      <p class="score" aria-hidden="true">4.5</p>
+      <div class="stars" role="img" aria-label="4.5 out of 5 stars">
+        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <h2>208 reviews on
+        <span class="goog" aria-label="Google"><span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="gr" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span></span>
+      </h2>
+      <p>Read the reviews for yourself on Google.</p>
+      <a class="btn btn-amber" href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener"><svg class="gi" aria-hidden="true"><use href="#i-g"/></svg>Read our reviews</a>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Visit</p>
+        <h2>Find us on <em>Ferris Ave</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card reveal">
+          <span class="label">Hours</span>
+          <dl class="hours">
+            <div data-day="1"><dt>Monday</dt><dd>10 am to 8 pm</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>9 am to 8 pm</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>9 am to 8 pm</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>9 am to 8 pm</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>9 am to 8 pm</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>9 am to 8 pm</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>9 am to 8 pm</dd></div>
+          </dl>
+        </div>
+        <div class="stack">
+          <div class="card reveal">
+            <span class="label">Address</span>
+            <address class="big">1008 Ferris Ave<br>Waxahachie, TX 75165</address>
+            <a class="btn btn-amber" href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+          </div>
+          <div class="card reveal">
+            <span class="label">Phone</span>
+            <a class="big" href="tel:+19729372469">(972) 937-2469</a>
+            <p class="status js-status note">Open seven days a week</p>
+            <a class="btn btn-line" href="tel:+19729372469"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="close">
+    <svg class="route" viewBox="0 0 1440 170" aria-hidden="true" focusable="false">
+      <path pathLength="1" d="M-20 50H520L580 110H1460"/>
+      <circle cx="300" cy="50" r="9"/>
+      <circle cx="900" cy="110" r="9"/>
+    </svg>
+    <div class="wrap reveal">
+      <h2>Next stop: <span>Ferris Ave.</span></h2>
+      <p>1008 Ferris Ave, Waxahachie. Open 9 am to 8 pm Tuesday through Sunday, and 10 am to 8 pm on Monday.</p>
+      <div class="close-ctas">
+        <a class="btn btn-amber" href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-line" href="tel:+19729372469"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (972) 937-2469</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-main">
+    <div>
+      <p class="brand"><svg aria-hidden="true"><use href="#i-stop"/></svg><span>Chaney's Vape Station</span></p>
+      <p>1008 Ferris Ave, Waxahachie, TX 75165</p>
+      <p><a href="tel:+19729372469">(972) 937-2469</a> | <a href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+    <p class="age">Adults 21+ only</p>
+  </div>
+  <p class="credit wrap">Sample website by <a href="https://www.topshelfsolutions.io" target="_blank" rel="noopener">Top Shelf Business Solutions</a></p>
+</footer>
+
+<!-- Phone action bar -->
+<div class="dock">
+  <a class="btn btn-amber" href="https://www.google.com/maps?cid=4892911509588972757" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="btn btn-line" href="tel:+19729372469"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  // Minutes from midnight, Sunday first. Opens 10 am Monday, 9 am every other day; closes 8 pm daily.
+  var OPEN=[540,600,540,540,540,540,540], CLOSE=1200;
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function label(m){ var h=Math.floor(m/60); return (h>12?h-12:h)+(h>=12?' pm':' am'); }
+  function isOpen(d,m){ return m>=OPEN[d] && m<CLOSE; }
+  function text(d,m){
+    if(isOpen(d,m)) return 'Open now until '+label(CLOSE);
+    return m<OPEN[d] ? 'Closed now, opens '+label(OPEN[d]) : 'Closed now, opens '+label(OPEN[(d+1)%7])+' tomorrow';
+  }
+  // Arc geometry: 6 am to 10 pm spans x 80 to 920 on a 1000-wide viewBox (52.5 per hour), horizon at y=240.
+  var BASE=240, RY=190;
+  function X(m){ return 80+(m/60-6)*52.5; }
+  function arcD(open){ var x0=X(open), x1=X(CLOSE), rx=(x1-x0)/2; return 'M'+x0+' '+BASE+'A'+rx+' '+RY+' 0 0 1 '+x1+' '+BASE; }
+  function point(m,open){
+    var x0=X(open), x1=X(CLOSE), rx=(x1-x0)/2, t=Math.PI*(1-(m-open)/(CLOSE-open));
+    return [x0+rx+rx*Math.cos(t), BASE-RY*Math.sin(t)];
+  }
+  // self-check: Mon 9:59 am closed, Mon 10 am open, Tue 9 am open, Sun 7:59 pm open, Sun 8 pm closed, labels, arc ends
+  var p0=point(540,540), p1=point(1200,540);
+  console.assert(!isOpen(1,599) && isOpen(1,600) && isOpen(2,540) && isOpen(0,1199) && !isOpen(0,1200)
+    && label(600)==='10 am' && label(540)==='9 am' && label(1200)==='8 pm'
+    && text(1,550)==='Closed now, opens 10 am' && text(0,1250)==='Closed now, opens 10 am tomorrow'
+    && text(1,1250)==='Closed now, opens 9 am tomorrow'
+    && Math.abs(p0[0]-237.5)<.01 && Math.abs(p1[0]-815)<.01 && Math.abs(p1[1]-BASE)<.01
+    && arcD(540)==='M237.5 240A288.75 190 0 0 1 815 240', 'hours logic');
+
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){for(var i=0;i<parts.length;i++){if(parts[i].type===t)return parts[i].value}};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    if(d>-1 && !isNaN(m)){
+      var open=isOpen(d,m), o=OPEN[d], els=document.querySelectorAll('.js-status');
+      for(var i=0;i<els.length;i++){ els[i].textContent=text(d,m); els[i].classList.toggle('is-open',open); }
+      var row=document.querySelector('.hours [data-day="'+d+'"]');
+      if(row) row.classList.add('today');
+      // today's line
+      var dz=arcD(o);
+      document.querySelector('.js-arc').setAttribute('d',dz);
+      document.querySelector('.js-arc-fill').setAttribute('d',dz+'Z');
+      document.querySelector('.js-arc-start').setAttribute('cx',X(o));
+      var mark=document.querySelector('.js-open-mark');
+      mark.textContent=label(o); mark.style.left=(X(o)/10)+'%';
+      document.querySelector('.js-day').textContent=DAYS[d]+', '+label(o)+' to '+label(CLOSE);
+      if(open){
+        var pt=point(m,o), now=document.querySelector('.js-now');
+        now.setAttribute('transform','translate('+pt[0].toFixed(1)+' '+pt[1].toFixed(1)+')');
+        now.classList.add('on');
+      }
+    }
+  }catch(e){}
+
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var line=document.getElementById('hours');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -12% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    io.observe(line);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Rebel Smoke Shop, a smoke shop, tobacco shop and vaporizer store at 5620 Bryant Irvin Rd, Fort Worth, TX 76132. Open 8 am to 10 pm Monday to Saturday, 11 am to 9 pm Sunday. Call (682) 250-2460.">
+<meta name="theme-color" content="#0E1113">
+<title>Rebel Smoke Shop | Smoke Shop, Tobacco Shop &amp; Vaporizer Store in Fort Worth, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rebel Smoke Shop">
+<meta property="og:description" content="Smoke shop, tobacco shop and vaporizer store at 5620 Bryant Irvin Rd, Fort Worth, TX.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/rebel-smoke-shop-fort-worth/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%230E1113'/%3E%3Cpolygon points='60,12 71.76,45.82 107.55,46.55 79.02,68.18 89.39,102.45 60,82 30.61,102.45 40.98,68.18 12.45,46.55 48.24,45.82' fill='%232FB5B0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Rebel Smoke Shop",
+  "telephone": "+1-682-250-2460",
+  "image": "https://www.topshelfsolutions.io/demo/rebel-smoke-shop-fort-worth/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5620 Bryant Irvin Rd",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "TX",
+    "postalCode": "76132",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:00", "closes": "21:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=15955721217034849644",
+  "sameAs": ["https://www.facebook.com/rebelsmoketx"]
+}
+</script>
+<style>
+/* ================================================================
+   Rebel Smoke Shop - one-page demo (structure from the Scorpion demo)
+   Night shift: charcoal of the shop's black ceiling, off-white of the
+   glass counters, and the teal of the door at the back of the aisle.
+   Sharp condensed display type, hard square edges.
+   Signature device: an outlined lone star, used as the mark, over the
+   photo, and as the closing tip of today's hours dial.
+   ================================================================ */
+:root{
+  --ink:#0E1113;
+  --ink-2:#171C1F;
+  --paper:#F2EFE9;
+  --mute:#A9B3B5;
+  --teal:#2FB5B0;       /* buttons, accents on ink */
+  --teal-deep:#0F6F6C;  /* text on paper, the reviews band */
+  --teal-ink:#06201F;
+  --line:rgba(242,239,233,.14);
+  --line-strong:rgba(242,239,233,.32);
+  --display:'Big Shoulders Display',Impact,'Arial Narrow Bold','Arial Narrow',sans-serif;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--paper);background:var(--ink);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.005em;text-wrap:balance}
+h2 em,h3 em{font-style:normal;color:var(--teal)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.wrap{width:100%;max-width:76rem;margin-inline:auto;padding-inline:var(--gutter)}
+.label{
+  display:flex;align-items:center;gap:.65rem;
+  font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--teal);
+}
+.label::before{content:"";width:.45rem;height:.45rem;background:currentColor;transform:rotate(45deg);flex:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--teal);color:var(--teal-ink);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Ribbon (the one attribution) ---------- */
+.ribbon{
+  background:#070909;color:var(--mute);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.5rem var(--gutter);
+  border-bottom:1px solid var(--line);
+}
+.ribbon a{color:var(--paper);text-underline-offset:2px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3.25rem;padding:.8rem 1.4rem;border-radius:0;
+  font-family:var(--sans);font-weight:700;font-size:.9375rem;letter-spacing:.02em;
+  text-decoration:none;white-space:nowrap;border:2px solid transparent;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease),color .18s var(--ease);
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-teal{background:var(--teal);color:var(--teal-ink);box-shadow:4px 4px 0 var(--paper)}
+.btn-ghost{border-color:var(--line-strong);color:var(--paper);background:rgba(14,17,19,.5)}
+@media (hover:hover){
+  .btn:hover{transform:translate(-2px,-2px)}
+  .btn-teal:hover{box-shadow:6px 6px 0 var(--paper)}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+}
+.btn:active{transform:translate(2px,2px)}
+.btn-teal:active{box-shadow:1px 1px 0 var(--paper)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.85rem}
+
+/* ---------- Mark: the star in a square ---------- */
+.mark{
+  display:grid;place-items:center;flex:none;width:2.5rem;aspect-ratio:1;
+  border:2px solid var(--teal);color:var(--teal);background:var(--ink);
+}
+.mark svg{width:74%;height:74%}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.brand span.where{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.375rem;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--ink);isolation:isolate}
+.hero::before{ /* faint teal glow at the top */
+  content:"";position:absolute;inset:0 0 auto 0;height:60%;z-index:-1;pointer-events:none;
+  background:radial-gradient(80% 70% at 85% 0%,rgba(47,181,176,.09),rgba(47,181,176,0) 70%);
+}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1rem}
+.top-call{
+  font-weight:600;font-size:.8125rem;text-decoration:none;white-space:nowrap;letter-spacing:.02em;
+  padding:.55rem .85rem;border:1px solid var(--line-strong);
+  transition:border-color .18s var(--ease),color .18s var(--ease);
+}
+@media (hover:hover){.top-call:hover{border-color:var(--teal);color:var(--teal)}}
+
+.hero-grid{display:flex;flex-direction:column;gap:1.25rem;padding-bottom:2.25rem}
+.shot{
+  order:-1;position:relative;
+  height:clamp(13rem,30svh,20rem);
+  margin-right:8px; /* room for the hard teal offset */
+  background:var(--ink-2);box-shadow:8px 8px 0 var(--teal);
+}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 55%;filter:saturate(1.05) contrast(1.04)}
+.shot::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(14,17,19,.3) 0%,rgba(14,17,19,0) 35%,rgba(14,17,19,.1) 60%,rgba(14,17,19,.8) 100%);
+}
+.shot .star{
+  position:absolute;z-index:2;right:.9rem;top:.75rem;width:clamp(4.5rem,24%,8rem);
+  color:var(--paper);filter:drop-shadow(0 3px 12px rgba(0,0,0,.55));pointer-events:none;
+}
+.chip{
+  position:absolute;z-index:2;left:.85rem;bottom:.85rem;
+  display:flex;width:max-content;max-width:calc(100% - 1.7rem);align-items:center;gap:.5rem;white-space:nowrap;
+  font-size:.75rem;font-weight:600;letter-spacing:.04em;
+  padding:.4rem .75rem;border:1px solid var(--line-strong);background:rgba(14,17,19,.84);color:var(--mute);
+}
+.chip[hidden]{display:none}
+.chip .dot{width:.5rem;height:.5rem;background:var(--mute);transform:rotate(45deg)}
+.chip.is-open{color:var(--paper);border-color:rgba(47,181,176,.6)}
+.chip.is-open .dot{background:var(--teal);box-shadow:0 0 0 3px rgba(47,181,176,.25)}
+
+h1{line-height:.84}
+h1 span{display:block}
+h1 .big{font-size:clamp(4.4rem,22vw,9.5rem);font-weight:900;letter-spacing:.01em;color:var(--paper)}
+h1 .small{font-size:clamp(1.85rem,8.2vw,3.6rem);font-weight:800;color:var(--teal);letter-spacing:.06em;margin-top:.15em}
+.hero-sub{margin-top:.9rem;max-width:30rem;color:var(--mute);font-size:1rem;line-height:1.5}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;margin-top:.9rem;text-decoration:none;
+  font-size:.8125rem;font-weight:500;white-space:nowrap;color:var(--mute);
+}
+.rating strong{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--paper);line-height:1}
+.rating .g{width:1.15rem;height:1.15rem;flex:none}
+/* Stars filled to the real rating (4.6 of 5) */
+.stars{position:relative;display:inline-block;white-space:nowrap;color:rgba(242,239,233,.25);letter-spacing:.08em;font-size:.875rem;line-height:1}
+.stars::before{content:"★★★★★";position:absolute;left:0;top:0;width:92%;overflow:hidden;color:var(--teal)}
+@media (hover:hover){.rating:hover span:last-child{color:var(--paper)}}
+.hero .btn-row{margin-top:1.15rem}
+.hero .btn{flex:1 1 9.5rem}
+@media (max-width:420px){.hero .btn{padding-inline:.9rem}}
+
+@media (min-width:1024px){
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;
+    min-height:clamp(34rem,calc(100svh - 7.5rem),44rem);padding:1rem var(--gutter) 4.5rem;
+  }
+  .shot{order:0;height:clamp(30rem,64svh,40rem);margin-right:12px;box-shadow:12px 12px 0 var(--teal)}
+  .shot img{object-position:68% 50%}
+  .shot .star{width:7.5rem;right:1.25rem;top:1.25rem}
+  .chip{left:1.25rem;bottom:1.25rem}
+  h1 .big{font-size:min(10rem,11vw)}
+  h1 .small{font-size:min(3.6rem,3.9vw)}
+  .hero-sub{font-size:1.125rem;margin-top:1.4rem}
+  .rating{margin-top:1.2rem}
+  .hero .btn-row{margin-top:1.75rem}
+  .hero .btn{flex:0 0 auto}
+}
+
+/* Star settle on load */
+.js .shot .star{opacity:0;transform:rotate(-24deg) scale(.85);
+  transition:opacity .6s var(--ease) .25s,transform .9s cubic-bezier(.2,1.4,.4,1) .25s}
+.js .loaded .shot .star{opacity:1;transform:none}
+
+/* ---------- Angled edge (ink to paper) ---------- */
+.edge{display:block;width:100%;height:clamp(2.5rem,6vw,5rem);color:var(--paper);background:var(--ink)}
+.edge svg{width:100%;height:100%}
+
+/* ---------- Sections ---------- */
+section{padding:clamp(4rem,10vw,7rem) 0}
+h2{font-size:clamp(2.6rem,11vw,5rem);margin-top:1rem}
+.lede{margin-top:1.1rem;max-width:36rem;color:var(--mute)}
+
+/* The shop (paper) */
+.shop{background:var(--paper);color:var(--ink);padding-top:clamp(2rem,6vw,4rem)}
+.shop .label{color:var(--teal-deep)}
+.shop h2 em{color:var(--teal-deep)}
+.shop .lede{color:#3D4548}
+.cats{display:grid;gap:1.25rem;margin-top:2.5rem}
+.cat{
+  position:relative;overflow:hidden;padding:1.75rem 1.5rem 1.6rem;
+  background:var(--ink);color:var(--paper);border:2px solid var(--ink);
+  box-shadow:6px 6px 0 var(--teal-deep);margin-right:6px;
+}
+.cat .num{font-family:var(--display);font-weight:900;font-size:1rem;letter-spacing:.2em;color:var(--teal)}
+.cat h3{font-size:clamp(2.2rem,9vw,3.4rem);margin-top:.5rem}
+.cat p{margin-top:.7rem;color:var(--mute);max-width:28rem}
+.cat .star{position:absolute;right:-1.25rem;bottom:-1.5rem;width:7rem;color:rgba(242,239,233,.07);pointer-events:none}
+@media (min-width:900px){
+  .cats{grid-template-columns:repeat(3,1fr);gap:2rem}
+  .cat{padding:2.25rem 2rem 2rem}
+  .cat h3{font-size:clamp(2rem,3.3vw,3.2rem)}
+  .cat .star{width:9rem}
+}
+
+/* Call block */
+.ask{padding-top:clamp(4rem,10vw,7rem)}
+.ask-card{
+  position:relative;overflow:hidden;
+  padding:clamp(1.75rem,6vw,3.5rem);
+  background:var(--ink-2);border:2px solid var(--teal);
+}
+.ask-card .star{position:absolute;right:clamp(-2rem,-3vw,-1rem);top:50%;width:clamp(8rem,26vw,15rem);transform:translateY(-50%);color:rgba(47,181,176,.12);pointer-events:none}
+.ask-card > *:not(.star){position:relative;z-index:1}
+.ask-card h2{margin-top:.9rem;max-width:34rem}
+.ask-card p.body{margin-top:.9rem;max-width:30rem;color:var(--mute)}
+.ask-tel{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1.6rem;
+  font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,7.4vw,2.5rem);letter-spacing:.03em;
+  text-decoration:none;white-space:nowrap;line-height:1;
+  padding:.8rem 1.2rem;background:var(--teal);color:var(--teal-ink);box-shadow:5px 5px 0 var(--paper);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+}
+.ask-tel svg{width:.8em;height:.8em;flex:none}
+@media (hover:hover){.ask-tel:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--paper)}}
+.ask-tel:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--paper)}
+
+/* Reviews (deep teal band) */
+.reviews{background:var(--teal-deep);color:var(--paper)}
+.reviews .label{color:var(--paper)}
+.reviews h2 em{color:var(--ink)}
+.reviews .lede{color:#E2EFEE}
+.rev-grid{display:grid;gap:2rem;align-items:center}
+.score{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.score b{font-family:var(--display);font-weight:900;font-size:clamp(7rem,36vw,13rem);line-height:.78;letter-spacing:-.01em}
+.score > span{font-size:.875rem;font-weight:600;padding-bottom:.4rem;white-space:nowrap}
+.score .stars{display:block;width:max-content;font-size:1.3rem;margin-bottom:.35rem;letter-spacing:.1em;color:rgba(242,239,233,.3)}
+.score .stars::before{color:var(--paper)}
+.gcard{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;margin-top:1.75rem;max-width:26rem;margin-right:6px;
+  background:var(--paper);color:var(--ink);text-decoration:none;box-shadow:6px 6px 0 var(--ink);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.gcard .g{width:2.1rem;height:2.1rem;flex:none}
+.gcard strong{display:block;font-weight:700;font-size:.9375rem}
+.gcard small{display:block;font-size:.875rem;color:#3D4548}
+.gcard .arrow{margin-left:auto;color:var(--teal-deep);font-size:1.25rem;font-weight:700}
+@media (hover:hover){.gcard:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}}
+@media (min-width:820px){.rev-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* Visit */
+.visit-grid{display:grid;gap:3rem;margin-top:2.5rem}
+.info{display:grid;gap:1.75rem;align-content:start}
+.info dt{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.4rem}
+.info dd{font-size:1.125rem;line-height:1.45}
+.info dd a{text-decoration-color:rgba(47,181,176,.6);text-underline-offset:4px}
+.hours{width:100%;max-width:24rem;border-collapse:collapse;font-size:.9375rem}
+.hours th,.hours td{padding:.6rem 0;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left;font-weight:500}
+.hours td{text-align:right;padding-left:1rem}
+.hours tr.today th,.hours tr.today td{color:var(--teal);font-weight:700}
+.age{margin-top:.9rem;font-size:.875rem;color:var(--mute)}
+@media (max-width:389px){.hours{font-size:.875rem}}
+
+/* Signature: today as a dial, the open span drawn as an arc ending in the star */
+.dayc{border:1px solid var(--line);background:var(--ink-2);padding:1.5rem 1.25rem}
+.dayc-head{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1rem;flex-wrap:wrap}
+.dayc-head .cap{font-size:.9375rem;color:var(--mute)}
+.dial{width:100%;max-width:20rem;margin:1.5rem auto .5rem}
+.dial .ticks{fill:none;stroke:rgba(242,239,233,.35);stroke-width:7;stroke-dasharray:1.6 26.674}
+.dial .track{fill:none;stroke:rgba(242,239,233,.1);stroke-width:12}
+.dial .arc{fill:none;stroke:var(--teal);stroke-width:12;stroke-dasharray:var(--len,351.86) 603.19;stroke-dashoffset:var(--off,-201.06)}
+.js .dial .arc{stroke-dasharray:0 603.19;transition:stroke-dasharray 1.5s var(--ease) .2s}
+.js .in .dial .arc{stroke-dasharray:var(--len,351.86) 603.19}
+.dial .t{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;fill:var(--mute)}
+.dial .big{font-family:var(--display);font-size:46px;font-weight:900;letter-spacing:.02em;fill:var(--paper)}
+.dial .sm{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.22em;fill:var(--teal)}
+.dial .tip{color:var(--teal)}
+.dial .start{fill:var(--paper)}
+.dial .now circle{fill:var(--paper);stroke:var(--ink-2);stroke-width:3}
+@media (min-width:820px){
+  .visit-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}
+  .dayc{padding:2rem}
+}
+
+/* Map */
+.map{margin-top:3rem;overflow:hidden;border:2px solid var(--line-strong);aspect-ratio:4/3;background:var(--ink-2)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.8) contrast(1.02)}
+@media (min-width:820px){.map{aspect-ratio:21/8}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:2.75rem 0 2.25rem;color:var(--mute);font-size:.9375rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem 3rem;align-items:flex-start;justify-content:space-between}
+.foot .brand b{color:var(--paper)}
+.foot p+p{margin-top:.25rem}
+.foot a{text-underline-offset:3px}
+.credit{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.8125rem}
+
+/* Sticky phone bar */
+.bar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+    padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom,0px));
+    background:rgba(14,17,19,.95);border-top:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.875rem;box-shadow:none}
+}
+
+/* Restrained reveals, only when JS runs */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .js .shot .star{opacity:1;transform:none;transition:none}
+  .js .dial .arc{stroke-dasharray:var(--len,351.86) 603.19;transition:none}
+  .btn,.gcard,.ask-tel,.top-call{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- The lone star, outlined -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="star" viewBox="0 0 120 120">
+    <polygon points="60,12 71.76,45.82 107.55,46.55 79.02,68.18 89.39,102.45 60,82 30.61,102.45 40.98,68.18 12.45,46.55 48.24,45.82" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+  </symbol>
+</svg>
+
+<div class="ribbon">Sample website made for Rebel Smoke Shop by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></div>
+
+<header class="hero" id="hero">
+  <div class="wrap top">
+    <a class="brand" href="#main" aria-label="Rebel Smoke Shop">
+      <span class="mark" aria-hidden="true"><svg><use href="#star"/></svg></span>
+      <span class="where">Fort Worth, TX</span>
+    </a>
+    <a class="top-call" href="tel:+16822502460" aria-label="Call (682) 250-2460">(682) 250-2460</a>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1><span class="big">Rebel</span><span class="small">Smoke Shop</span></h1>
+      <p class="hero-sub">A smoke shop, tobacco shop and vaporizer store on Bryant Irvin Rd in Fort Worth. Open seven days a week.</p>
+      <a class="rating" href="https://www.google.com/maps?cid=15955721217034849644" target="_blank" rel="noopener" aria-label="Rated 4.6 from 130 Google reviews. Open on Google Maps.">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <strong>4.6</strong>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>130 Google reviews</span>
+      </a>
+      <div class="btn-row">
+        <a class="btn btn-teal" href="https://www.google.com/maps?cid=15955721217034849644" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get directions
+        </a>
+        <a class="btn btn-ghost" href="tel:+16822502460">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the shop
+        </a>
+      </div>
+    </div>
+
+    <figure class="shot">
+      <img src="assets/listing.jpg" alt="A long aisle inside Rebel Smoke Shop, with glass counters and wall shelving full of colorful products" width="1200" height="900" fetchpriority="high" decoding="async">
+      <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+      <span class="chip" id="openChip" hidden><span class="dot"></span><span id="openText"></span></span>
+    </figure>
+  </div>
+</header>
+
+<div class="edge" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 80V44L1440 6v74z"/></svg>
+</div>
+
+<main id="main">
+
+  <section class="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <p class="label rv">The shop</p>
+      <h2 id="shop-h" class="rv">One long aisle, <em>full of color.</em></h2>
+      <p class="lede rv">Rebel is a smoke shop, tobacco shop and vaporizer store at 5620 Bryant Irvin Rd. Take your time down the aisle and ask us anything at the counter.</p>
+      <ul class="cats">
+        <li class="cat rv">
+          <span class="num">01</span>
+          <h3>Smoke <em>shop</em></h3>
+          <p>Shelves run the length of the wall. Can't spot what you came for? Ask, and we'll check for you.</p>
+          <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+        </li>
+        <li class="cat rv">
+          <span class="num">02</span>
+          <h3>Tobacco <em>shop</em></h3>
+          <p>Tell us what you're after and we'll point you in the right direction.</p>
+          <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+        </li>
+        <li class="cat rv">
+          <span class="num">03</span>
+          <h3>Vaporizer <em>store</em></h3>
+          <p>Glass counters line the aisle. Not sure what to pick? We'll help you narrow it down.</p>
+          <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask-card rv">
+        <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+        <p class="label">Save yourself a trip</p>
+        <h2 id="ask-h">Want to know if it's <em>in stock?</em></h2>
+        <p class="body">Call the shop and ask before you head over. It's a quick call.</p>
+        <a class="ask-tel" href="tel:+16822502460">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (682) 250-2460
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-h">
+    <div class="wrap rev-grid">
+      <div class="rv">
+        <p class="label">Reviews</p>
+        <div class="score">
+          <b>4.6</b>
+          <span><span class="stars" aria-hidden="true">★★★★★</span>out of 5 on Google</span>
+        </div>
+      </div>
+      <div class="rv">
+        <h2 id="rev-h" style="margin-top:0">130 reviews on <em>Google.</em></h2>
+        <p class="lede">Read through them, then come take a look down the aisle yourself.</p>
+        <a class="gcard" href="https://www.google.com/maps?cid=15955721217034849644" target="_blank" rel="noopener">
+          <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>
+            <strong>4.6 stars on Google</strong>
+            <small>130 reviews</small>
+          </span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label rv">Visit</p>
+      <h2 id="visit-h" class="rv">Come see us on <em>Bryant Irvin.</em></h2>
+      <p class="lede rv">Open every day of the week. Here's where to find us and when.</p>
+      <div class="visit-grid">
+        <dl class="info">
+          <div class="rv">
+            <dt>Address</dt>
+            <dd>5620 Bryant Irvin Rd<br>Fort Worth, TX 76132</dd>
+          </div>
+          <div class="rv">
+            <dt>Phone</dt>
+            <dd><a href="tel:+16822502460">(682) 250-2460</a></dd>
+          </div>
+          <div class="rv">
+            <dt>Hours</dt>
+            <dd>
+              <table class="hours">
+                <tbody>
+                  <tr id="hMonSat"><th scope="row">Mon to Sat</th><td>8:00 am to 10:00 pm</td></tr>
+                  <tr id="hSun"><th scope="row">Sunday</th><td>11:00 am to 9:00 pm</td></tr>
+                </tbody>
+              </table>
+              <p class="age">Adults 21+ only.</p>
+            </dd>
+          </div>
+          <div class="btn-row rv">
+            <a class="btn btn-teal" href="https://www.google.com/maps?cid=15955721217034849644" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+16822502460">Call the shop</a>
+          </div>
+        </dl>
+
+        <div class="dayc rv" aria-hidden="true">
+          <div class="dayc-head">
+            <p class="label">Our day</p>
+            <p class="cap">Today's hours on a 24-hour dial.</p>
+          </div>
+          <svg class="dial" viewBox="0 0 240 240">
+            <circle class="ticks" cx="120" cy="120" r="108" transform="rotate(-90 120 120)"/>
+            <circle class="track" cx="120" cy="120" r="96"/>
+            <!-- open span on a 24h ring, midnight at top; defaults to Mon to Sat 8:00 to 22:00, JS swaps in Sunday -->
+            <circle class="arc" id="dArc" cx="120" cy="120" r="96" transform="rotate(-90 120 120)"/>
+            <circle class="start" id="dStart" cx="203.14" cy="168" r="5"/>
+            <svg class="tip" id="dTip" x="61" y="25.86" width="22" height="22" viewBox="0 0 120 120"><polygon points="60,12 71.76,45.82 107.55,46.55 79.02,68.18 89.39,102.45 60,82 30.61,102.45 40.98,68.18 12.45,46.55 48.24,45.82" fill="currentColor"/></svg>
+            <text class="t" id="dOpenT" x="180.62" y="159" text-anchor="middle">8 AM</text>
+            <text class="t" id="dCloseT" x="85" y="63.4" text-anchor="middle">10 PM</text>
+            <text class="big" x="120" y="132" text-anchor="middle">OPEN</text>
+            <text class="sm" id="dDay" x="120" y="152" text-anchor="middle">MON TO SAT</text>
+            <g class="now" id="nowMark" display="none"><circle cx="120" cy="24" r="6"/></g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="map rv">
+        <iframe title="Map to Rebel Smoke Shop, 5620 Bryant Irvin Rd, Fort Worth" src="https://www.google.com/maps?q=Rebel+Smoke+Shop,+5620+Bryant+Irvin+Rd,+Fort+Worth,+TX+76132&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><span class="mark" aria-hidden="true"><svg><use href="#star"/></svg></span><b>Rebel Smoke Shop</b></div>
+      <div>
+        <p>5620 Bryant Irvin Rd, Fort Worth, TX 76132</p>
+        <p><a href="tel:+16822502460">(682) 250-2460</a></p>
+      </div>
+      <p><a href="https://www.facebook.com/rebelsmoketx" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="credit">Sample website by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-teal" href="https://www.google.com/maps?cid=15955721217034849644" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-ghost" href="tel:+16822502460">Call</a>
+</nav>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){document.getElementById('hero').classList.add('loaded');});});
+
+  /* Shop hours in America/Chicago, minutes from midnight. Sunday (0) 11:00 to 21:00, Mon to Sat 8:00 to 22:00. */
+  function hrs(d){return d===0?[660,1260]:[480,1320];}
+  function fmt(m){var h=Math.floor(m/60),mm=('0'+(m%60)).slice(-2);return (h%12||12)+':'+mm+' '+(h<12?'am':'pm');}
+  /* status(day, minutes) -> [isOpen, text] */
+  function status(d,m){
+    var h=hrs(d);
+    if(m>=h[0]&&m<h[1])return [true,'Open now · until '+fmt(h[1])];
+    if(m<h[0])return [false,'Closed · opens '+fmt(h[0])];
+    return [false,'Closed · opens '+fmt(hrs((d+1)%7)[0])+' tomorrow'];
+  }
+  /* self-check: logs loudly if the hours logic breaks */
+  console.assert(status(1,480)[0]&&status(1,1319)[0]&&!status(1,1320)[0]&&!status(1,479)[0]
+    &&status(3,600)[1].indexOf('10:00 pm')>-1&&status(0,600)[1]==='Closed · opens 11:00 am'
+    &&status(6,1330)[1]==='Closed · opens 11:00 am tomorrow'&&status(0,1270)[1]==='Closed · opens 8:00 am tomorrow'
+    &&status(0,700)[1]==='Open now · until 9:00 pm','hours logic');
+
+  /* point on the 24h ring (midnight at top, clockwise) */
+  function pt(m,r){var a=m/1440*2*Math.PI;return [120+r*Math.sin(a),120-r*Math.cos(a)];}
+  var C=603.19;
+  function lab(m){var h=Math.floor(m/60);return (h%12||12)+' '+(h<12?'AM':'PM');}
+
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);
+    var m=(+p.hour%24)*60+(+p.minute), s=status(d,m), h=hrs(d);
+    var chip=document.getElementById('openChip');
+    document.getElementById('openText').textContent=s[1];
+    chip.classList.toggle('is-open',s[0]);
+    chip.hidden=false;
+    document.getElementById(d===0?'hSun':'hMonSat').className='today';
+
+    /* draw today's span on the dial */
+    var arc=document.getElementById('dArc');
+    arc.style.setProperty('--len',((h[1]-h[0])/1440*C).toFixed(2));
+    arc.style.setProperty('--off',(-h[0]/1440*C).toFixed(2));
+    var a=pt(h[0],96), b=pt(h[1],96), ta=pt(h[0],70), tb=pt(h[1],70);
+    var st=document.getElementById('dStart');st.setAttribute('cx',a[0].toFixed(2));st.setAttribute('cy',a[1].toFixed(2));
+    var tp=document.getElementById('dTip');tp.setAttribute('x',(b[0]-11).toFixed(2));tp.setAttribute('y',(b[1]-11).toFixed(2));
+    var o=document.getElementById('dOpenT');o.setAttribute('x',ta[0].toFixed(2));o.setAttribute('y',(ta[1]+4).toFixed(2));o.textContent=lab(h[0]);
+    var c=document.getElementById('dCloseT');c.setAttribute('x',tb[0].toFixed(2));c.setAttribute('y',(tb[1]+4).toFixed(2));c.textContent=lab(h[1]);
+    document.getElementById('dDay').textContent='TODAY';
+
+    var now=document.getElementById('nowMark');
+    now.setAttribute('transform','rotate('+(m/1440*360).toFixed(2)+' 120 120)');
+    now.removeAttribute('display');
+  }catch(e){}
+
+  /* Scroll reveal */
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>

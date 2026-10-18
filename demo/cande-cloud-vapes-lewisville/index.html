@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="CandE-Cloud Vapes, a smoke shop at 1081 W Main St #100, Lewisville, TX 75067. Open 8 am to midnight every day. Call (214) 513-0087.">
+<meta name="theme-color" content="#F4F5F9">
+<title>CandE-Cloud Vapes | Smoke Shop in Lewisville, TX</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="CandE-Cloud Vapes">
+<meta property="og:description" content="Smoke shop at 1081 W Main St #100, Lewisville, TX. Open 8 am to midnight every day.">
+<meta property="og:image" content="https://www.topshelfsolutions.io/demo/cande-cloud-vapes-lewisville/assets/listing.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F4F5F9'/%3E%3Cpath d='M21 43h22a8 8 0 0 0 1.2-15.9A11 11 0 0 0 23 25.4 8.8 8.8 0 0 0 21 43z' fill='none' stroke='%23C2357E' stroke-width='3.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Albert+Sans:wght@400..600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "CandE-Cloud Vapes",
+  "telephone": "+1-214-513-0087",
+  "image": "https://www.topshelfsolutions.io/demo/cande-cloud-vapes-lewisville/assets/listing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1081 W Main St #100",
+    "addressLocality": "Lewisville",
+    "addressRegion": "TX",
+    "postalCode": "75067",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "00:00"}
+  ],
+  "hasMap": "https://www.google.com/maps?cid=4882348070494367306",
+  "sameAs": ["https://www.facebook.com/CandECloudVapes"]
+}
+</script>
+<style>
+/* ================================================================
+   CandE-Cloud Vapes - one-page demo
+   Bright and clean like the room itself: cloud white, a deep
+   violet-ink for type and buttons, and the magenta from the mural
+   on the back wall as the one loud color.
+   Signature device: the week as seven day bars, midnight to
+   midnight. The colored part is when the shop is open; today's bar
+   turns magenta and carries a "now" line.
+   Layout based on demo/breathe-easy-vapes-weatherford.
+   ================================================================ */
+:root{
+  --paper:#F4F5F9;
+  --paper-2:#FBFBFD;
+  --cloud-bg:#E6E8F2;
+  --ink:#1B1A2B;
+  --violet:#2E2A4A;
+  --violet-deep:#201D36;
+  --muted:#565670;
+  --magenta:#C2357E;
+  --magenta-text:#A3286A;
+  --magenta-soft:#F09BC6;
+  --sky:#7FA7E8;
+  --line:rgba(27,26,43,.12);
+  --line-mag:rgba(194,53,126,.4);
+  --serif:'Hedvig Letters Serif',Georgia,'Times New Roman',serif;
+  --sans:'Albert Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bar:4.25rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--paper);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--magenta-text)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--magenta);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:72rem;margin-inline:auto;padding-inline:var(--gutter)}
+.label{
+  display:flex;align-items:center;gap:.65rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta-text);
+}
+.label::before{content:"";width:1.4rem;height:1px;background:currentColor;flex:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--violet);color:var(--paper);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Ribbon (the one attribution) ---------- */
+.ribbon{
+  background:var(--violet-deep);color:rgba(244,245,249,.78);text-align:center;
+  font-size:.75rem;line-height:1.35;padding:.5rem var(--gutter);
+}
+.ribbon a{color:var(--paper);text-underline-offset:2px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3.25rem;padding:.8rem 1.4rem;border-radius:999px;
+  font-family:var(--sans);font-weight:600;font-size:.9375rem;letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;border:1px solid transparent;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease);
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-main{background:var(--violet);color:var(--paper)}
+.btn-line{border-color:rgba(27,26,43,.3);color:var(--ink);background:transparent}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)}
+  .btn-main:hover{background:var(--violet-deep);box-shadow:0 12px 28px -12px rgba(46,42,74,.7)}
+  .btn-line:hover{border-color:var(--magenta);color:var(--magenta-text)}
+}
+.btn:active{transform:scale(.97)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* ---------- Brand mark ---------- */
+.mark{
+  display:grid;place-items:center;flex:none;width:2.4rem;aspect-ratio:1;border-radius:50%;
+  border:1px solid var(--violet);color:var(--magenta);background:var(--paper-2);
+}
+.mark svg{width:1.35rem;height:1.35rem}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;min-width:0}
+.brand b{font-family:var(--serif);font-weight:400;font-size:1.125rem;letter-spacing:-.01em;white-space:nowrap}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;isolation:isolate;
+  background:
+    radial-gradient(60rem 30rem at 85% 0%,rgba(240,155,198,.2),rgba(240,155,198,0) 70%),
+    radial-gradient(50rem 30rem at 0% 100%,rgba(127,167,232,.2),rgba(127,167,232,0) 70%),
+    var(--paper);
+}
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem var(--gutter);max-width:72rem;margin-inline:auto;
+}
+.top-call{
+  display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;
+  font-weight:600;font-size:.875rem;text-decoration:none;
+  padding:.55rem .9rem;border:1px solid rgba(27,26,43,.25);border-radius:999px;
+  transition:border-color .18s var(--ease),color .18s var(--ease);
+}
+.top-call svg{width:.95rem;height:.95rem}
+.top-call .num{display:none}
+@media (min-width:480px){.top-call .num{display:inline}.top-call .word{display:none}}
+@media (hover:hover){.top-call:hover{border-color:var(--magenta);color:var(--magenta-text)}}
+
+.hero-grid{
+  display:grid;gap:1.15rem;max-width:72rem;margin-inline:auto;
+  padding:.25rem var(--gutter) 2.5rem;
+}
+/* The arch: a window into the shop, with a magenta outline that breathes */
+.arch{position:relative;margin:.6rem .4rem 0}
+.arch::before{
+  content:"";position:absolute;inset:-.6rem;z-index:-1;pointer-events:none;
+  border:1px solid var(--line-mag);
+  border-radius:50% 50% 1.6rem 1.6rem / 40% 40% 1.6rem 1.6rem;
+}
+.arch-frame{
+  position:relative;overflow:hidden;background:var(--cloud-bg);
+  height:clamp(15rem,33svh,21rem);
+  border-radius:50% 50% 1rem 1rem / 38% 38% 1rem 1rem;
+  box-shadow:0 30px 60px -36px rgba(32,29,54,.55);
+}
+.arch-frame img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 45%;
+  filter:saturate(1.02) contrast(1.02);
+}
+.arch-frame::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(240,155,198,.1) 0%,rgba(240,155,198,0) 40%,rgba(27,26,43,.3) 100%);
+}
+.chip{
+  position:absolute;left:.85rem;bottom:.85rem;z-index:2;
+  display:flex;width:max-content;max-width:calc(100% - 1.7rem);align-items:center;gap:.5rem;white-space:nowrap;
+  font-size:.8125rem;font-weight:600;
+  padding:.42rem .8rem;border-radius:999px;background:rgba(251,251,253,.94);color:var(--muted);
+  box-shadow:0 6px 18px -8px rgba(27,26,43,.4);
+}
+.chip[hidden]{display:none}
+.chip .dot{width:.5rem;height:.5rem;border-radius:50%;background:#9C9AAE;flex:none}
+.chip.is-open{color:var(--ink)}
+.chip.is-open .dot{background:var(--magenta);box-shadow:0 0 0 3px rgba(194,53,126,.22)}
+
+h1{font-size:clamp(2.6rem,11vw,5rem);line-height:.95;letter-spacing:-.035em}
+h1 span{display:block}
+.rating{
+  display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;
+  font-size:.875rem;white-space:nowrap;color:var(--muted);
+}
+.rating strong{font-family:var(--serif);font-weight:400;font-size:1.375rem;color:var(--ink);line-height:1}
+.rating .g{width:1.15rem;height:1.15rem;flex:none}
+.stars{color:var(--magenta);letter-spacing:.08em;font-size:.875rem}
+@media (hover:hover){.rating:hover span:last-child{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
+.hero .btn{flex:1 1 9.5rem}
+@media (max-width:420px){.hero .btn{padding-inline:.9rem}}
+.hero-sub{max-width:30rem;color:var(--muted)}
+
+@media (min-width:900px){
+  .hero-grid{
+    grid-template-columns:1.05fr .95fr;grid-template-areas:"text arch";
+    align-items:center;gap:2rem 4rem;
+    min-height:clamp(36rem,calc(100svh - 7rem),48rem);padding-bottom:4rem;
+  }
+  h1{font-size:clamp(3rem,5.4vw,5rem)}
+  .hero-text{grid-area:text;display:grid;gap:1.4rem;align-content:center}
+  .arch{grid-area:arch;justify-self:end;width:100%;max-width:31rem;margin:1rem 1rem 1rem 0}
+  .arch-frame{height:clamp(30rem,72svh,42rem);border-radius:50% 50% 1.25rem 1.25rem / 34% 34% 1.25rem 1.25rem}
+  .arch::before{border-radius:50% 50% 1.85rem 1.85rem / 34% 34% 1.85rem 1.85rem}
+  .arch-frame img{object-position:40% 50%}
+  .hero .btn{flex:0 0 auto}
+}
+@media (max-width:899px){
+  .hero-text{display:grid;gap:1rem}
+  /* phones: name, rating and the buttons right under the photo; the line of copy follows */
+  .hero-sub{order:4}
+}
+
+/* ---------- Sections ---------- */
+section{padding:clamp(4.5rem,11vw,8rem) 0}
+h2{font-size:clamp(2.2rem,8.6vw,4rem);margin-top:1.1rem}
+.lede{margin-top:1.2rem;max-width:36rem;color:var(--muted);font-size:1.125rem}
+
+/* The shop */
+.facts{display:grid;margin-top:3rem;border-top:1px solid var(--line)}
+.facts div{padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin-top:.35rem;font-family:var(--serif);font-size:clamp(1.4rem,5.6vw,1.85rem);line-height:1.2;letter-spacing:-.01em}
+@media (min-width:820px){
+  .facts{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+  .facts div{padding:1.75rem 2rem 1.75rem 0;border-bottom:0}
+  .facts div+div{padding-left:2rem;border-left:1px solid var(--line)}
+}
+
+/* Call block (stands in for a product list) */
+.ask{padding-top:0}
+.ask-card{
+  position:relative;overflow:hidden;border-radius:1.5rem;
+  padding:clamp(1.9rem,6vw,4rem);
+  background:
+    radial-gradient(26rem 18rem at 100% 0%,rgba(194,53,126,.35),rgba(194,53,126,0) 70%),
+    radial-gradient(22rem 16rem at 0% 100%,rgba(127,167,232,.22),rgba(127,167,232,0) 70%),
+    var(--violet-deep);
+  color:var(--paper);
+}
+.ask-card .label{color:var(--magenta-soft)}
+.ask-card h2{margin-top:1rem;max-width:32rem;color:var(--paper)}
+.ask-card h2 em{color:var(--magenta-soft)}
+.ask-card p{margin-top:1rem;max-width:30rem;color:rgba(244,245,249,.8)}
+.ask-tel{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1.75rem;
+  font-weight:600;font-size:clamp(1.05rem,5.2vw,1.6rem);letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;
+  padding:.85rem 1.35rem;border-radius:999px;background:var(--magenta-soft);color:var(--ink);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+}
+.ask-tel svg{width:1.05em;height:1.05em;flex:none}
+@media (hover:hover){.ask-tel:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(240,155,198,.6)}}
+.ask-tel:active{transform:scale(.97)}
+
+/* Reviews */
+.reviews{background:var(--cloud-bg)}
+.rev-grid{display:grid;gap:2.25rem;align-items:center}
+.score{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}
+.score b{
+  font-family:var(--serif);font-weight:400;font-size:clamp(6rem,30vw,11rem);line-height:.8;letter-spacing:-.05em;
+  color:var(--violet);
+}
+.score span{font-size:.875rem;color:var(--muted);padding-bottom:.4rem;white-space:nowrap}
+.score .stars{display:block;font-size:1.25rem;margin-bottom:.2rem}
+.gcard{
+  display:flex;align-items:center;gap:1rem;padding:1.15rem 1.35rem;margin-top:1.75rem;max-width:26rem;
+  border:1px solid var(--line);border-radius:1rem;background:var(--paper-2);text-decoration:none;
+  transition:border-color .2s var(--ease),transform .2s var(--ease);
+}
+.gcard .g{width:2.1rem;height:2.1rem;flex:none}
+.gcard strong{display:block;font-weight:600;font-size:.9375rem}
+.gcard small{display:block;font-size:.875rem;color:var(--muted)}
+.gcard .arrow{margin-left:auto;color:var(--magenta);font-size:1.25rem}
+@media (hover:hover){.gcard:hover{border-color:var(--magenta);transform:translateY(-2px)}}
+@media (min-width:820px){.rev-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* Visit */
+.visit-grid{display:grid;gap:3rem;margin-top:2.75rem}
+.info{display:grid;gap:1.75rem;align-content:start}
+.info dt{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta-text);margin-bottom:.4rem}
+.info dd{font-size:1.125rem;line-height:1.45}
+.info dd a{text-decoration-color:var(--line-mag);text-underline-offset:4px}
+.hours{width:100%;max-width:24rem;border-collapse:collapse;font-size:.9375rem;font-variant-numeric:tabular-nums}
+.hours th,.hours td{padding:.65rem 0;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left;font-weight:400}
+.hours td{text-align:right;padding-left:1rem}
+.age{margin-top:.9rem;font-size:.875rem;color:var(--muted)}
+@media (max-width:389px){.hours{font-size:.8125rem}}
+
+/* Signature: the week as seven day bars, midnight at the top to midnight at the bottom */
+.week{border:1px solid var(--line);border-radius:1.5rem;background:var(--paper-2);padding:1.6rem 1.1rem 1.4rem}
+.week-head{padding-inline:.25rem}
+.week-head .cap{margin-top:.6rem;font-family:var(--serif);font-size:1.2rem;line-height:1.3;color:var(--ink)}
+.chart{display:flex;gap:.6rem;margin-top:1.5rem;align-items:flex-start}
+.axis{position:relative;flex:none;width:3.4rem;height:11rem}
+.axis span{
+  position:absolute;right:0;transform:translateY(-50%);
+  font-size:.6875rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+.cols{flex:1;min-width:0;display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem}
+.col{display:flex;flex-direction:column;align-items:stretch;min-width:0}
+.track{position:relative;height:11rem;border-radius:.6rem;background:var(--cloud-bg);overflow:hidden}
+/* open 8:00 to 0:00 = from one third of the way down to the bottom */
+.band{position:absolute;left:0;right:0;top:33.333%;bottom:0;border-radius:.45rem .45rem 0 0;background:var(--violet);transform-origin:50% 0}
+.col.today .band{background:var(--magenta)}
+.now{position:absolute;left:0;right:0;height:2px;margin-top:-1px;background:var(--ink);box-shadow:0 0 0 1px rgba(251,251,253,.85)}
+.now[hidden]{display:none}
+.col .day{margin-top:.55rem;text-align:center;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.col.today .day{color:var(--magenta-text)}
+@media (min-width:600px){.axis,.track{height:13rem}}
+@media (min-width:820px){
+  .visit-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}
+  .week{padding:2.1rem 2rem 1.75rem}
+}
+
+/* Map */
+.map{
+  margin-top:3rem;border-radius:1.5rem;overflow:hidden;border:1px solid var(--line);
+  aspect-ratio:4/3;background:var(--cloud-bg);
+}
+.map iframe{width:100%;height:100%;border:0;filter:saturate(.7)}
+@media (min-width:820px){.map{aspect-ratio:21/8}}
+
+/* Footer */
+footer{background:var(--violet-deep);color:rgba(244,245,249,.75);padding:3rem 0 2.25rem;font-size:.9375rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem 3rem;align-items:flex-start;justify-content:space-between}
+.foot .brand b{color:var(--paper)}
+.foot .mark{background:transparent;border-color:var(--magenta-soft);color:var(--magenta-soft)}
+.foot p+p{margin-top:.25rem}
+.foot a{text-underline-offset:3px}
+.foot a:focus-visible{outline-color:var(--magenta-soft)}
+.credit{margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(244,245,249,.14);font-size:.8125rem}
+
+/* Sticky phone bar */
+.bar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;
+    padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom,0px));
+    background:rgba(251,251,253,.95);border-top:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .bar .btn{min-height:3.1rem;padding:.6rem .5rem;font-size:.875rem}
+}
+
+/* Restrained motion: soft reveals, the arch outline breathing, the day bars filling in */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+@keyframes breathe{from{transform:scale(1);opacity:.55}to{transform:scale(1.018);opacity:1}}
+.arch::before{animation:breathe 4.5s ease-in-out infinite alternate}
+.js .week .band{transform:scaleY(0);transition:transform .9s var(--ease)}
+.js .week.in .band{transform:scaleY(1)}
+.js .week.in .col:nth-child(2) .band{transition-delay:.06s}
+.js .week.in .col:nth-child(3) .band{transition-delay:.12s}
+.js .week.in .col:nth-child(4) .band{transition-delay:.18s}
+.js .week.in .col:nth-child(5) .band{transition-delay:.24s}
+.js .week.in .col:nth-child(6) .band{transition-delay:.3s}
+.js .week.in .col:nth-child(7) .band{transition-delay:.36s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .arch::before{animation:none}
+  .js .week .band{transform:none;transition:none}
+  .btn,.gcard,.ask-tel,.top-call{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">Sample website made for CandE-Cloud Vapes by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></div>
+
+<header class="hero">
+  <div class="top">
+    <a class="brand" href="#main" aria-label="CandE-Cloud Vapes">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7.5 18h9.5a3.6 3.6 0 0 0 .5-7.15A5 5 0 0 0 8 9.9 4.05 4.05 0 0 0 7.5 18z"/></svg></span>
+      <b>CandE-Cloud Vapes</b>
+    </a>
+    <a class="top-call" href="tel:+12145130087" aria-label="Call (214) 513-0087">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span class="word">Call</span><span class="num">(214) 513-0087</span>
+    </a>
+  </div>
+
+  <div class="hero-grid">
+    <div class="arch">
+      <div class="arch-frame">
+        <img src="assets/listing.jpg" alt="Inside CandE-Cloud Vapes: a bright room lined with lit glass display cases, a glass case in the middle, a colorful mural and a stacked-stone wall at the back" width="1400" height="1050" fetchpriority="high" decoding="async">
+      </div>
+      <span class="chip" id="openChip" hidden><span class="dot"></span><span id="openText"></span></span>
+    </div>
+
+    <div class="hero-text">
+      <h1><span>CandE-Cloud</span><span><em>Vapes</em></span></h1>
+      <p class="hero-sub">A smoke shop on West Main in Lewisville. Open 8 am to midnight, seven days a week.</p>
+      <a class="rating" href="https://www.google.com/maps?cid=4882348070494367306" target="_blank" rel="noopener" aria-label="Rated 4.9 from 212 Google reviews. Open on Google Maps.">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <strong>4.9</strong>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>212 Google reviews</span>
+      </a>
+      <div class="btn-row">
+        <a class="btn btn-main" href="https://www.google.com/maps?cid=4882348070494367306" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get directions
+        </a>
+        <a class="btn btn-line" href="tel:+12145130087">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the shop
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section aria-labelledby="shop-h">
+    <div class="wrap">
+      <p class="label rv">The shop</p>
+      <h2 id="shop-h" class="rv">Bright, open and <em>easy to look around.</em></h2>
+      <p class="lede rv">Lit glass cases run all the way around the room, so you can see what's there from the door. Look for the colorful mural and the stacked stone.</p>
+      <dl class="facts rv">
+        <div><dt>What we are</dt><dd>A smoke shop</dd></div>
+        <div><dt>Where</dt><dd>1081 W Main St #100, Lewisville</dd></div>
+        <div><dt>When</dt><dd>8 am to midnight, every day</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask-card rv">
+        <p class="label">Before you make the trip</p>
+        <h2 id="ask-h">Not sure we have it? <em>Just ask.</em></h2>
+        <p>Call the counter and tell us what you're after. We'll take a look and let you know.</p>
+        <a class="ask-tel" href="tel:+12145130087">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (214) 513-0087
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-h">
+    <div class="wrap rev-grid">
+      <div class="rv">
+        <p class="label">Reviews</p>
+        <div class="score">
+          <b>4.9</b>
+          <span><span class="stars" aria-hidden="true">★★★★★</span>out of 5 on Google</span>
+        </div>
+      </div>
+      <div class="rv">
+        <h2 id="rev-h" style="margin-top:0">212 Google reviews <em>and counting.</em></h2>
+        <p class="lede">They're all on Google. Read a few, then come see the shop on West Main.</p>
+        <a class="gcard" href="https://www.google.com/maps?cid=4882348070494367306" target="_blank" rel="noopener">
+          <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>
+            <strong>4.9 stars on Google</strong>
+            <small>212 reviews</small>
+          </span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label rv">Visit</p>
+      <h2 id="visit-h" class="rv">Find us on <em>West Main.</em></h2>
+      <div class="visit-grid">
+        <dl class="info">
+          <div class="rv">
+            <dt>Address</dt>
+            <dd>1081 W Main St #100<br>Lewisville, TX 75067</dd>
+          </div>
+          <div class="rv">
+            <dt>Phone</dt>
+            <dd><a href="tel:+12145130087">(214) 513-0087</a></dd>
+          </div>
+          <div class="rv">
+            <dt>Hours</dt>
+            <dd>
+              <table class="hours">
+                <tbody>
+                  <tr><th scope="row">Every day</th><td>8:00 am to midnight</td></tr>
+                </tbody>
+              </table>
+              <p class="age">Adults 21+ only.</p>
+            </dd>
+          </div>
+          <div class="btn-row rv">
+            <a class="btn btn-main" href="https://www.google.com/maps?cid=4882348070494367306" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-line" href="tel:+12145130087">Call the shop</a>
+          </div>
+        </dl>
+
+        <div class="week rv" aria-hidden="true">
+          <div class="week-head">
+            <p class="label">Our week</p>
+            <p class="cap">Each bar is one day, midnight to midnight. The colored part is when we're open.</p>
+          </div>
+          <div class="chart">
+            <div class="axis"><span style="top:33.333%">8 am</span><span style="top:100%">midnight</span></div>
+            <div class="cols">
+              <div class="col" data-d="Mon"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Mon</span></div>
+              <div class="col" data-d="Tue"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Tue</span></div>
+              <div class="col" data-d="Wed"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Wed</span></div>
+              <div class="col" data-d="Thu"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Thu</span></div>
+              <div class="col" data-d="Fri"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Fri</span></div>
+              <div class="col" data-d="Sat"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Sat</span></div>
+              <div class="col" data-d="Sun"><div class="track"><i class="band"></i><i class="now" hidden></i></div><span class="day">Sun</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map rv">
+        <iframe title="Map to CandE-Cloud Vapes, 1081 W Main St #100, Lewisville" src="https://www.google.com/maps?q=CandE-Cloud+Vapes,+1081+W+Main+St+%23100,+Lewisville,+TX+75067&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7.5 18h9.5a3.6 3.6 0 0 0 .5-7.15A5 5 0 0 0 8 9.9 4.05 4.05 0 0 0 7.5 18z"/></svg></span><b>CandE-Cloud Vapes</b></div>
+      <div>
+        <p>1081 W Main St #100, Lewisville, TX 75067</p>
+        <p><a href="tel:+12145130087">(214) 513-0087</a></p>
+      </div>
+      <p><a href="https://www.facebook.com/CandECloudVapes" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="credit">Sample website by <a href="https://www.topshelfsolutions.io" rel="noopener">Top Shelf Business Solutions</a></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-main" href="https://www.google.com/maps?cid=4882348070494367306" target="_blank" rel="noopener">Directions</a>
+  <a class="btn btn-line" href="tel:+12145130087">Call</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  /* Shop hours in America/Chicago: every day 8:00 to 0:00 (midnight).
+     Minutes from midnight; open from 480 until the day ends. */
+  var OPEN=480;
+  function status(m){return m>=OPEN?[true,'Open now · until midnight']:[false,'Closed · opens 8:00 am'];}
+  /* self-check: logs loudly if the hours logic breaks */
+  console.assert(status(480)[0]&&!status(479)[0]&&status(1439)[0]&&!status(0)[0],'hours logic');
+
+  try{
+    var p={};
+    new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+    var m=(+p.hour%24)*60+(+p.minute), s=status(m);
+    var chip=document.getElementById('openChip');
+    document.getElementById('openText').textContent=s[1];
+    chip.classList.toggle('is-open',s[0]);
+    chip.hidden=false;
+    var col=document.querySelector('.col[data-d="'+p.weekday+'"]');
+    if(col){
+      col.classList.add('today');
+      var now=col.querySelector('.now');
+      now.style.top=(m/1440*100)+'%';
+      now.hidden=false;
+    }
+  }catch(e){}
+
+  /* Scroll reveal */
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
