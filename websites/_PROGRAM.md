@@ -1,6 +1,6 @@
 # Top Shelf — Sample Websites Program
 
-8 fictional companies, one per Top Shelf industry, each a full **5-page** premium site.
+9 fictional companies, one per Top Shelf industry (plus extra auto: mobile dent), each a full **5-6 page** premium site.
 These are the flagship sample sites prospects see. Built into this repo under
 `websites/<slug>/`, surfaced via a new **"Websites"** nav gallery (`websites.html`)
 and featured on each matching `industry-*.html` page.
@@ -17,6 +17,7 @@ and featured on each matching `industry-*.html` page.
 | 6 | Auto | Apex Auto Werks | `apex-auto-werks` | Near-black + electric red · precision | ✅ **LIVE** · Judge PASS (1st) |
 | 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | ✅ **LIVE** · Judge PASS (after 1 REVISE: image usage + featured-card contrast) |
 | 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Forest green + coral · caring | ✅ **LIVE** · Judge PASS (after 1 REVISE: contact-chip AA) |
+| 9 | Auto (mobile service) | Linewright Mobile Dent Co. | `linewright-mobile-dent` | Ink + line-lime · reflected light lines | ✅ **LIVE** · Judge PASS (after 1 REVISE: header contrast over light heroes). 6 pages, built from `scripts/build_linewright.py`; no address/hours by design |
 
 ## Per-site pipeline (each ends at a Judge PASS before ship)
 1. **Brief** — identity, background/story, services, page IA, copy points, asset manifest → `<slug>/BRIEF.md`
