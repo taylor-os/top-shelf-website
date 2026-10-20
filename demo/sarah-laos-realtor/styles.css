@@ -311,3 +311,6 @@ form.sent>*:not(.ok){display:none}
 /* listing price cell gets its own row on phones; about portrait frame may hang into the next section */
 @media (max-width:560px){.ldetail .specs div:first-child{flex-basis:100%;border-left:0;border-bottom:1px solid var(--line)}.ldetail .specs div:nth-child(2){border-left:0}}
 .phero.plain{overflow:visible;z-index:1}
+
+/* status note on pending/sold listing pages */
+.pnote{margin:1.4rem 0 0;padding:16px 20px;background:var(--ivory);border-left:2px solid var(--brass);font-size:.98rem}

@@ -55,7 +55,7 @@ if (shots.length) {
 }
 
 // mortgage calculator (principal + interest only)
-const calc = $('.calc');
+const calc = $('#c-price')?.closest('.calc');
 if (calc) {
   const run = () => {
     const price = +$('#c-price').value || 0, down = (+$('#c-down').value || 0) / 100, rate = (+$('#c-rate').value || 0) / 1200, n = 360;
