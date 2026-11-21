@@ -16,10 +16,10 @@ Why now: the $99 / $199 price is already printed on the counter desk ads (2026-1
 | Signature plan, 1-10 users | $99/mo | "we are just going to have the Signature" plan. Called a **plan**, never a blend (owner, again 2026-11-21) |
 | Signature plan, 11-25 users | $199/mo | |
 | Signature plan, 26+ users | Call for pricing | "26+ will be call for pricing". No price shown |
-| Phone line (calling + texting from the app) | $50/mo standard rate | Owner 2026-11-21: "we will charge them $50 as a standard rate per month for our phone unless their charges exceed the $50 a month then extra charges will apply we can figure that out later". Copy says $50/mo covers normal use and usage beyond that is billed; no caps or overage rates shown yet |
+| Phone line (calling + texting from the app) | $50/mo per line | Owner 2026-11-21 ("yes $50 per line"): "we will charge them $50 as a standard rate per month for our phone unless their charges exceed the $50 a month then extra charges will apply we can figure that out later". Copy says $50/mo covers normal use and usage beyond that is billed; no caps or overage rates shown yet |
 | Professional website | $499 one time | "a full website take off the page requirements just put for a professional website". No page count anywhere. Not included in Signature |
 
-Signature includes (owner 2026-11-20 in the facts file, reconfirmed 2026-11-21 "all of it is in"): the CRM (contacts, pipeline, follow-up reminders), an **AI receptionist that answers and books jobs**, missed-call text-back, online booking, dispatch board, customer hub, invoice by text, review requests, review replies, on-my-way texts, estimates, card payments, and an **AI chatbot added to the customer's current website** (owner: advertise it now, "Put on the site"). The business phone number (port the current one or get a new one) with calling and texting from the app is the $50/mo phone line above. No setup fee, month to month.
+Signature includes (owner 2026-11-20 in the facts file, reconfirmed 2026-11-21 "all of it is in"): the CRM (contacts, pipeline, follow-up reminders), an **AI receptionist that answers and books jobs**, missed-call text-back, online booking, dispatch board, customer hub, invoice by text, review requests, review replies, on-my-way texts, estimates, card payments, and an **AI chatbot added to the customer's current website** (owner: advertise it now, "Put on the site"). The business phone number (port the current one or get a new one) with calling and texting from the app is a $50/mo phone line, per line. No setup fee, month to month.
 
 The $499 website includes (owner 2026-11-21): a mobile-friendly custom design built by us, built so Google can read it (on-page basics only; no ongoing SEO service), a contact/booking form that feeds the CRM, and a logo if they need one. Hosting stays out of customer copy.
 
@@ -29,7 +29,7 @@ Removed from sale everywhere: Essentials ($299), the old Signature ($899) featur
 
 ## Goals
 
-1. Every page offers only Signature ($99 / $199 / call, plus the $50/mo phone line) and the $499 website, and every main button leads to the Try the CRM request form.
+1. Every page offers only Signature ($99 / $199 / call, plus $50/mo per phone line) and the $499 website, and every main button leads to the Try the CRM request form.
 2. No removed page returns a 404 or keeps serving old prices: each one 301-redirects to its closest surviving page.
 3. Old prices cannot come back on the next generator run: the change is made in the sources (`offer.py`, the page generators and their spec files), then pages are rebuilt.
 4. The real-estate CRM renders (9 screens) appear on the site paired with the matching website pages, under a fictional agent.
