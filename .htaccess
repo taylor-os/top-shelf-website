@@ -64,3 +64,26 @@ RedirectMatch 404 ^/demo/_archive(/|$)
 # deletes files on deploy, so send them to the hub.
 Redirect 301 /website-tune-up.html /custom-5-page-website.html
 Redirect 301 /business-photo-refresh.html /one-time-services.html
+
+# BEGIN crm-website-focus
+# 2026-11-21: the site now sells only the Signature plan and the website.
+# These pages were removed; this host never deletes files on deploy, so each
+# old address 301s to its closest surviving page.
+RedirectMatch 301 ^/marketing-for-(.+)\.html$ /for-$1.html
+Redirect 301 /get-found-package.html /pricing.html#website
+Redirect 301 /get-found-plus.html /pricing.html#website
+Redirect 301 /custom-5-page-website.html /pricing.html#website
+Redirect 301 /one-page-website.html /pricing.html#website
+Redirect 301 /take-back-your-website.html /pricing.html#website
+Redirect 301 /one-time-services.html /pricing.html
+Redirect 301 /get-found-listing-reviews.html /pricing.html
+Redirect 301 /google-business-profile-fix.html /pricing.html
+Redirect 301 /map-pack-push.html /pricing.html
+Redirect 301 /review-reply-catch-up.html /pricing.html
+Redirect 301 /sample-report.html /pricing.html
+Redirect 301 /sample-seo-report.pdf /pricing.html
+Redirect 301 /solution-marketing.html /solution-crm.html
+Redirect 301 /solution-pos.html /solution-crm.html
+Redirect 301 /solution-memberships.html /solution-crm.html
+Redirect 301 /answers-marketing.html /answers-crm.html
+# END crm-website-focus

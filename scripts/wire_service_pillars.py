@@ -26,8 +26,6 @@ SERVICE_MAP = {
         "Every trade misses calls in its own way. Here is how the AI receptionist answers and books for yours."),
     "solution-crm.html": ("CRM", ["crm"],
         "The follow-up that wins the job looks different in every trade. Here is what the CRM does for yours."),
-    "solution-marketing.html": ("Marketing", ["marketing"],
-        "What it takes to get found and stay busy changes by trade. Here is the marketing built for yours."),
     "solution-websites-seo.html": ("Websites & SEO", ["websites-seo"],
         "A site earns its keep differently for each trade. Here is what a Top Shelf website does for yours."),
     "solution-reviews.html": ("Review Software", ["review-software"],
@@ -49,7 +47,6 @@ TOPIC_HUB = {
     "solution-ai-phone.html": "answers-ai-receptionist.html",
     "solution-crm.html": "answers-crm.html",
     "solution-websites-seo.html": "answers-websites-seo.html",
-    "solution-marketing.html": "answers-marketing.html",
 }
 
 

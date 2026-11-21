@@ -31,8 +31,8 @@ def loc_and_priority(fname: str):
     stem = fname[:-5]
     if fname == "privacy.html":
         return f"{SITE}/{fname}", "0.3", "yearly"
-    if fname in ("pricing.html", "contact.html", "why-us.html", "sample-report.html"):
-        pr = "0.6" if fname == "sample-report.html" else "0.8"
+    if fname in ("pricing.html", "contact.html", "why-us.html"):
+        pr = "0.8"
         return f"{SITE}/{fname}", pr, "weekly"
     if stem.startswith(("industry-", "solution-", "for-")):
         return f"{SITE}/{fname}", "0.7", "weekly"   # hubs + trade pillars

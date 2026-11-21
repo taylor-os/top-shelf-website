@@ -118,4 +118,4 @@ def site_pages():
 def source_files():
     here = os.path.join(ROOT, "scripts")
     return sorted(p for p in glob.glob(os.path.join(here, "*.py"))
-                  if os.path.basename(p) != "focus_catalog.py")
+                  if not os.path.basename(p).startswith("focus_"))

@@ -182,3 +182,15 @@ def test_sitemap_has_no_removed():
     sm = read(os.path.join(cat.ROOT, "sitemap.xml"))
     left = [p for p in cat.REMOVED if "/" + p + "<" in sm]
     assert not left, "sitemap still lists: %s" % left
+
+
+def test_no_generator_emits_removed():
+    """No page source names a removed page, so a regenerated site can't bring one back."""
+    bad = []
+    for src in cat.source_files():
+        text = read(src)
+        for path in cat.REMOVED:
+            slug = path.rsplit(".", 1)[0]
+            if re.search(r'["\'/]%s(\.html|\.pdf)?["\']' % re.escape(slug), text):
+                bad.append("%s names %s" % (rel(src), path))
+    assert not bad, "%d sources still name removed pages:\n%s" % (len(bad), "\n".join(bad[:60]))

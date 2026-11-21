@@ -123,7 +123,7 @@ TOPICS = [
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If most of what people see from you is general electrical work, that is what they will call you for. If your Google profile, your photos, and your local content lean into generators, you start to be known for generators, and you show up when someone searches for a generator installer nearby. Marketing lets you point demand toward the higher-value jobs you actually want more of, instead of taking whatever happens to come in.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Post finished generator installs to your Google Business Profile with clear, real photos.</li><li>Answer the common questions about sizing, fuel type, transfer switches, and permits in local content, so you rank for them and look like the expert.</li><li>Gather reviews that mention generator work, so the next homeowner sees you have done it before.</li></ul>'}],
     "bridge_h2": "Get known for generators before the next outage",
     "bridge_text": 'Marketing for electricians keeps your Google Business Profile active and leans your photos, posts, and local content toward the work you want more of, so you build a reputation for generator installs and show up when a homeowner searches after the power goes out. You become the name they already know to call.',
-    "bridge_slug": "marketing-for-electricians",
+    "bridge_slug": "for-electricians",
     "bridge_label": "See marketing for electricians",
     "faqs": [
         ("Are ads or a strong local presence better for generator jobs?",

@@ -39,8 +39,6 @@ TOPIC_HUBS = {
             "Most jobs are lost after the first contact, not on price. These are the questions owners ask about following up on quotes, reviving cold leads, and whether a CRM is worth it, answered trade by trade."),
     "websites-seo": ("answers-websites-seo", "Website &amp; SEO Questions", "solution-websites-seo.html",
                      "A site only earns its keep if it gets found and turns visitors into calls. These are the questions owners ask about what a website costs and why they are not showing up on Google, answered trade by trade."),
-    "marketing": ("answers-marketing", "Marketing &amp; Getting-Found Questions", "solution-marketing.html",
-                  "Getting found and staying busy looks different in every trade. These are the questions owners ask about reviews, the map pack, and getting more customers, answered trade by trade."),
 }
 SMALL_SVC = ["online-booking", "automation", "review-software"]  # listed directly on answers.html
 SMALL_LABEL = {"online-booking": "Online Booking", "automation": "Automation &amp; Reminders", "review-software": "Reviews"}

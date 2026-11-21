@@ -166,7 +166,7 @@ TOPICS = [
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Getting found is usually a handful of fixable things, not a mystery. Google tends to trust profiles that look active and legitimate, and quietly buries the ones that look abandoned.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>A Google Business Profile that is verified, complete, and correct on your hours, services, and location.</li><li>A steady flow of real reviews, and a reply to each one, which reassures the next owner and helps your local ranking.</li><li>A website that loads fast and shows up for the towns you serve and the services you offer, from wellness and vaccines to dentals and surgery.</li><li>Answering the calls those searches create, so a new owner who finally reaches a person actually gets on the schedule.</li></ul><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">None of this requires gimmicks or invented promises, just steady attention to the profile and the site owners actually see. Do it consistently and a neglected profile can climb over a few weeks, then compound as reviews and photos build. What no one can honestly promise is a specific spot on the map, because Google decides that, but the levers above are the ones that move it, and the cheapest new business of all is keeping the clients you already win coming back.</p>'}],
     "bridge_h2": "Get found where new clients start",
     "bridge_text": "Most new-client searches begin in the map pack. Keeping your Google profile verified, active, and full of recent reviews is how a clinic shows up when an owner nearby is choosing who to call.",
-    "bridge_slug": "marketing-for-veterinary-clinics",
+    "bridge_slug": "for-veterinary-clinics",
     "bridge_label": "Marketing for veterinary clinics",
     "faqs": [
         ("Do we need a website to show up on Google Maps?",
@@ -192,7 +192,7 @@ if __name__ == "__main__":
         "is-a-crm-worth-it-for-a-veterinary-clinic": "crm-for-veterinary-clinics",
         "why-veterinary-clinics-miss-calls": "ai-receptionist-for-veterinary-clinics",
         "why-pet-owners-skip-wellness-visits": "crm-for-veterinary-clinics",
-        "how-do-veterinary-clinics-get-more-clients": "marketing-for-veterinary-clinics",
+        "how-do-veterinary-clinics-get-more-clients": "for-veterinary-clinics",
     }
     ALLOWED_PRICES = {"299", "899", "2500", "1500"}
 

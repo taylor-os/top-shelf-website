@@ -163,7 +163,7 @@ TOPICS = [
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">New clients are only half of it, and usually the more expensive half. The cheapest growth a med spa has is the client list it already earned. Aesthetic treatments repeat on a schedule and sell well as packages, memberships, and gift cards, so a spa that consistently rebooks its existing clients and revives the lapsed ones grows faster than one pouring everything into new faces that book once and disappear.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">In practice that means pairing the visibility above with the follow-up behind it. Answer every inquiry the moment it comes in so interest is not lost to voicemail, remind each client when she is coming due, nudge package clients to use the sessions they paid for, and give members and gift-card buyers a reason to come back. Do the visible part to fill the top and the follow-up part to keep clients cycling, and the two compound. What no honest company can promise is a specific number of new clients or any particular result from a treatment, but showing up where clients look and following up on the ones you have are the levers that reliably move bookings.</p>'}],
     "bridge_h2": "Get found, then keep them coming back",
     "bridge_text": "Most med spa growth starts in the map pack, in your reviews, and on Instagram, then compounds when you rebook the clients you already have. Marketing that does both is how a med spa fills the calendar and keeps it full.",
-    "bridge_slug": "marketing-for-med-spas",
+    "bridge_slug": "for-med-spas",
     "bridge_label": "Marketing for med spas",
     "faqs": [
         ("What is the fastest way for a med spa to get more clients?",

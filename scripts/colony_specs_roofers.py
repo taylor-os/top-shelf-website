@@ -145,7 +145,7 @@ TOPICS = [
          "body_html": '''<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">When a homeowner searches for a roofer after a storm, your Google Business Profile is often the first thing they see, before your website and before a directory. A profile that sits untouched for months looks abandoned next to one with recent job photos, before-and-after shots, and posts about the last storm you responded to. Keeping it active is a quiet, constant advertisement running in the exact moment a worried homeowner is looking.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Pair that with real reviews and steady visibility in the towns your crews actually work, and you build the specific recognition that turns into a call when a roof fails down the street. It is slower than buying leads, and that is the honest tradeoff, but it compounds and it is yours. The roofer who was invisible until the storm is bidding against everyone else at the most expensive moment. The one who stayed familiar all season just gets the call.</p>'''}],
     "bridge_h2": "Marketing makes you the name they <em>already know</em>",
     "bridge_text": "Buying leads is renting demand at the most expensive moment, against everyone else buying the same list. Marketing builds recognition you own: an active Google profile, local content, and visibility in the towns you work, so when a roof fails down the street, yours is the name the homeowner already trusts. See how it compounds instead of resetting every month.",
-    "bridge_slug": "marketing-for-roofers",
+    "bridge_slug": "for-roofers",
     "bridge_label": "See marketing for roofers",
     "faqs": [
         ("Is this faster than just buying leads?",

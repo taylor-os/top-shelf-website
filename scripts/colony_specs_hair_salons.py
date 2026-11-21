@@ -161,7 +161,7 @@ TOPICS = [
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The salons that grow are not doing something magic, they are doing the ordinary things every week without letting them slide when the chairs fill up. That consistency is what falls apart by hand and what a real system keeps running.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Keep the Google profile verified, complete, and active, and build a steady flow of real reviews by asking every happy client at the right moment. Post your work where new clients are looking, not once in a while but on a rhythm. And do not spend everything chasing strangers while the clients you already have quietly drift off: the cheapest new booking is a regular you rebook or a lapsed client you win back, which is why marketing and a CRM work best together. What no one can honestly promise is a specific spot on the map or a set number of new clients, because Google and Instagram decide who sees you. But the levers above are the ones that move it, and a free audit can show you which door is costing you the most new clients before you spend a dollar.</p>'}],
     "bridge_h2": "Get found where clients are looking",
     "bridge_text": "Most new salon clients start on Google, Instagram, and your reviews. Keeping your profile active, your work in front of people, and your reviews growing is how you show up when someone nearby is ready to book.",
-    "bridge_slug": "marketing-for-hair-salons",
+    "bridge_slug": "for-hair-salons",
     "bridge_label": "Marketing for hair salons",
     "faqs": [
         ("What is the fastest way for a salon to get more clients?",
