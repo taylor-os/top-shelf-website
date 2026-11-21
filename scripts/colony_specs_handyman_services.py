@@ -6,8 +6,7 @@ the ONE money page the question implies. Lighter than a money page.
 
 Each dict here owns UNIQUE, hand-written, handyman-specific substance (the generator owns shell,
 schema, events, keyword placement). Same honesty rules as the money specs: no invented stats,
-prices, or clients; hedge instead of overpromise; only the real prices ($299/$899/$2,500 plans,
-$1,500 one-time site) ever appear; no em/en dashes anywhere; "find the gap", never "leak" as a
+prices, or clients; hedge instead of overpromise; only the real prices ($99/$199 Signature plan, $499 website) ever appear; no em/en dashes anywhere; "find the gap", never "leak" as a
 money metaphor.
 
 Nine questions, mixed how-to / cost / problem, spread across all seven money pages:
@@ -65,7 +64,7 @@ TOPICS = [
     "bridge_label": "CRM for handyman services",
     "faqs": [
         ("What is the best CRM for a small handyman business?",
-         "The best one is whichever actually gets used and does the follow-up for you, not the one with the longest feature list. For a solo handyman that means simple enough to run from your phone, and connected to your calls and calendar so nothing has to be entered twice. Top Shelf includes one built for exactly that, in the Signature plan at $899 a month."),
+         "The best one is whichever actually gets used and does the follow-up for you, not the one with the longest feature list. For a solo handyman that means simple enough to run from your phone, and connected to your calls and calendar so nothing has to be entered twice. Top Shelf includes one built for exactly that, in the Signature plan at $99 a month for up to 10 users."),
         ("Is a CRM overkill if it is just me?",
          "Usually not. Even a one-person handyman shop serves more homes and sends more small quotes than anyone can track by memory. The question is not headcount, it is whether follow-up is falling through. If leftover to-dos and past customers keep slipping, a CRM earns its keep.")],
     "trade_slug": "handyman-services", "trade_plural": "handyman businesses",
@@ -101,19 +100,19 @@ TOPICS = [
     "h1": "How Much Does an Answering Service for a Handyman Cost?",
     "title": "How Much Does an Answering Service for a Handyman Cost? | Top Shelf Business Solutions",
     "meta_desc": "Answering services for a handyman often bill per call or minute, which adds up fast. Top Shelf includes an AI receptionist that answers around the clock, in the Signature plan from $899/mo.",
-    "answer": "Answering services for a handyman usually bill per call, per minute, or a monthly retainer, so a busy week runs up the tab fast. Top Shelf takes a different approach: an AI receptionist that answers every call around the clock and books the job is included in the Signature plan at $899 a month flat, with no per call fee.",
+    "answer": "Answering services for a handyman usually bill per call, per minute, or a monthly retainer, so a busy week runs up the tab fast. Top Shelf takes a different approach: an AI receptionist that answers every call around the clock and books the job is included in the Signature plan at $99 a month for up to 10 users.",
     "sections": [
         {"h2_html": "How answering services usually <em>charge</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Most answering services price around how much they work, which sounds fair until a good week turns into a big bill. A handyman also fields a steady stream of small calls all day while your hands are full, so the meter runs whether or not the call turns into real work. It helps to know the common models before you sign up for one.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Per-call pricing: you pay for every call answered, so a busy stretch or a wave of tire-kickers runs up the cost.</li><li>Per-minute pricing: you pay for talk time, so a chatty caller or a slow operator costs more than a quick one.</li><li>Monthly retainer plus overage: a base fee covers a bucket of minutes or calls, and you pay extra past it, usually right when you are busiest.</li><li>Setup and per-message fees that are easy to miss until the first invoice lands.</li></ul>'},
         {"h2_html": "What you are really paying for, and a <em>flat alternative</em>",
-         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The reason to have anyone answer is simple: a person with a small job does not leave a voicemail and wait, they call the next handyman on the list. The real cost of no coverage is not a monthly fee, it is the afternoon of easy work that went to whoever picked up. But a generic call center reading a script cannot capture a six-item honey-do list or tell a ten-minute job from a half-day, so you can pay for coverage and still get useless messages.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf handles this with an AI receptionist that answers on the first ring, takes down the whole list, roughs out the time, and books it on your calendar. It is included in the Signature plan, flat, at $899 a month, with no per-call or per-minute meter running. The extra jobs it books over a month, ones you would otherwise have missed, are usually worth well more than the plan, and everything after that is on top.</p>'}],
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The reason to have anyone answer is simple: a person with a small job does not leave a voicemail and wait, they call the next handyman on the list. The real cost of no coverage is not a monthly fee, it is the afternoon of easy work that went to whoever picked up. But a generic call center reading a script cannot capture a six-item honey-do list or tell a ten-minute job from a half-day, so you can pay for coverage and still get useless messages.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf handles this with an AI receptionist that answers on the first ring, takes down the whole list, roughs out the time, and books it on your calendar. It is included in the Signature plan at $99 a month for up to 10 users. Each phone line is $50 a month and covers normal use. The extra jobs it books over a month, ones you would otherwise have missed, are usually worth well more than the plan, and everything after that is on top.</p>'}],
     "bridge_h2": "Answer every call without the meter",
     "bridge_text": "Instead of paying per call for a service that reads a script, an AI receptionist answers around the clock, captures the whole list, and books it, all on a flat monthly plan.",
     "bridge_slug": "ai-receptionist-for-handyman-services",
     "bridge_label": "AI receptionist for handyman services",
     "faqs": [
         ("Is there a free answering service for a handyman?",
-         "Truly free options are usually just voicemail or a basic auto-reply, which a person with a small job tends to ignore before calling the next handyman. The cheaper honest question is flat versus per-call. Top Shelf includes an AI receptionist in the Signature plan at $899 a month with no per-call fee, so the cost does not climb on your busiest weeks."),
+         "Truly free options are usually just voicemail or a basic auto-reply, which a person with a small job tends to ignore before calling the next handyman. The cheaper honest question is flat versus per-call. Top Shelf includes an AI receptionist in the Signature plan at $99 a month for up to 10 users, so the cost does not climb on your busiest weeks."),
         ("Is an AI receptionist cheaper than a live answering service?",
          "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the small job it books instead of losing to voicemail.")],
     "trade_slug": "handyman-services", "trade_plural": "handyman businesses",

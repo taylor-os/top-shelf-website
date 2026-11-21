@@ -90,7 +90,7 @@ TOPICS = [
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
     "title": "How Much Does An Electrician Website Cost? | Top Shelf Business Solutions",
     "h1": "How Much Does An Electrician Website Cost?",
-    "meta_desc": "An electrician website ranges from a cheap DIY template to a custom build, and a site that never ranks is the costly one. Top Shelf builds yours for $1,500 one-time.",
+    "meta_desc": "An electrician website ranges from a cheap DIY template to a custom build, and a site that never ranks is the costly one. Top Shelf builds yours for $499 one time, and you own it.",
     "answer": "It depends on what you need. A basic template you build yourself is cheap but rarely ranks or captures calls, while a custom, done-for-you site that ranks locally and turns visitors into booked jobs costs more. Top Shelf builds a custom five-page site for $1,500 one-time, and you own it.",
     "sections": [
         {"h2_html": "What actually drives the <em>price</em>",

@@ -114,7 +114,7 @@ TOPICS = [
         ("Is a one-time website cheaper than a monthly plan?",
          "Up front, yes. A standalone site is $1,500 once, while the plans are monthly. But a site on its own does not get you found or answer your phone. The monthly plans do not include a website build. They add the system that actually brings in calls. It comes down to whether you need a website or you need customers."),
         ("Does the $299 plan include the CRM and AI receptionist?",
-         "No, and it is worth being clear about. Essentials at $299 covers keeping your website current, Google Business Profile, basic SEO, online booking, review requests, and missed-call text-back. The full CRM and the AI receptionist that answers 24/7 are on the Signature plan at $899 a month.")],
+         "No, and it is worth being clear about. Essentials at $299 covers keeping your website current, Google Business Profile, basic SEO, online booking, review requests, and missed-call text-back. The full CRM and the AI receptionist that answers 24/7 are on the Signature plan at $99 a month for up to 10 users.")],
     "trade_slug": "", "trade_plural": "local businesses",
     "hub_name": "Top Shelf", "hub_slug": "index.html",
 },

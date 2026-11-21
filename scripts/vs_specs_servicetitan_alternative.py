@@ -43,7 +43,7 @@ PAGE = {
         ("Do I need staff to run it?",
          "No, and that is the main difference in model. With an operations platform, your own team runs the system day to day. With Top Shelf, answering calls, following up on leads, and keeping the marketing going are all handled for you, so a small business gets the results without hiring an office to run software."),
         ("What does Top Shelf actually handle?",
-         "Your website and local SEO, an AI receptionist that answers the phone and books the job, a CRM that follows up on every lead, and your reviews and marketing. On the Signature plan at $899 a month, the AI receptionist and the CRM are included. It all comes as one flat bill with no setup fee, and your number and leads stay yours."),
+         "Your website and local SEO, an AI receptionist that answers the phone and books the job, a CRM that follows up on every lead, and your reviews and marketing. On the Signature plan at $99 a month for up to 10 users, the AI receptionist and the CRM are included. It all comes as one flat bill with no setup fee, and your number and leads stay yours."),
     ],
     "cta_h2": "See what a right-sized, done-for-you setup <em>looks like</em>",
     "cta_sub": "Get a free audit of where calls, leads, and jobs are slipping past your current setup, whether you work with us or not. No credit card, never a call center.",

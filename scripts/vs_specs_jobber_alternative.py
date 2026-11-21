@@ -23,7 +23,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits your business</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If getting found and getting jobs is already handled and what you need is software to schedule, quote, invoice, and dispatch and run yourself, Jobber is a strong, purpose-built choice. If the trouble is the other end of the business, the phone going to voicemail, leads going cold, no time to build a site or run marketing or chase every quote, and you would rather have it handled than log into one more system, then the done-for-you approach fits better. Some owners run both, using operations software for the field work and Top Shelf for the front office that feeds it. The honest way to choose is to look at what you truly want to run yourself and what you want off your plate, and you can compare the plans on the <a href="pricing.html">pricing page</a> or start with a free audit that shows where jobs are slipping.</p>'}],
     "bridge_h2": "One CRM that follows up on every lead, run for you",
-    "bridge_text": "Top Shelf's CRM captures every lead the site and the phone bring in, then follows up automatically so quotes do not go cold, and it comes with the Signature plan at $899 a month. There is no setup fee, and your number, your leads, and your data stay yours.",
+    "bridge_text": "Top Shelf's CRM captures every lead the site and the phone bring in, then follows up automatically so quotes do not go cold, and it comes with the Signature plan at $99 a month for up to 10 users. There is no setup fee, and your number, your leads, and your data stay yours.",
     "bridge_slug": "solution-crm",
     "bridge_label": "See how the CRM works",
     "faqs": [
@@ -32,7 +32,7 @@ PAGE = {
         ("Can Top Shelf answer my calls and follow up on my leads?",
          "Yes. The Signature plan includes an AI receptionist that answers around the clock and books the job, plus a CRM that follows up on every lead automatically. Answering inbound calls is a front-office job rather than what field-service management software is built to do, so check any tool's site for its current features."),
         ("What does Top Shelf cost, and is there a setup fee?",
-         "Essentials is $299 a month for website upkeep, local SEO, online booking, and reviews. Signature is $899 a month and adds the AI receptionist and the CRM. Fully done-for-you is $2,500 a month, or you can get a one-time custom five-page site for $1,500. There is no setup fee, and you always own your number, your leads, and your data."),
+         " Signature is $899 a month and adds the AI receptionist and the CRM. Fully done-for-you is $2,500 a month, or you can get a one-time custom five-page site for $1,500. There is no setup fee, and you always own your number, your leads, and your data."),
     ],
     "cta_h2": "See where jobs are slipping <em>before they book</em>",
     "cta_sub": "Get a free audit of where calls and leads are going cold in your business, whether you work with us or not. No credit card, no obligation.",

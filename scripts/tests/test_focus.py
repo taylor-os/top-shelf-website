@@ -19,8 +19,13 @@ def read(path):
         return fh.read()
 
 
+META_RE = re.compile(r'<meta\s+(?:name|property)="(?:description|og:description|og:title|twitter:title|twitter:description)"\s+content="([^"]*)"', re.I)
+
+
 def visible_text(page_html):
-    text = TAG_RE.sub(" ", BLOCK_RE.sub(" ", page_html))
+    """Visible text plus the meta descriptions/titles search results and shares show."""
+    metas = " . ".join(META_RE.findall(page_html))
+    text = TAG_RE.sub(" ", BLOCK_RE.sub(" ", page_html)) + " . " + metas
     return re.sub(r"\s+", " ", html.unescape(text))
 
 
