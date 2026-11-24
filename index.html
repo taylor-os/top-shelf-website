@@ -122,9 +122,13 @@
 #cc .c-tile-copy h3{padding-right:120px}
 #cc .c-t-calls{grid-column:span 7}
 #cc .c-t-disp{grid-column:span 5}
-#cc .c-t-est{grid-column:span 5}
-#cc .c-t-paid{grid-column:span 3}
-#cc .c-t-rev{grid-column:span 4}
+#cc .c-t-est,#cc .c-t-rev{grid-column:span 6}
+#cc .c-t-paid{grid-column:span 12}
+@media (min-width:1001px){
+#cc .c-t-paid{flex-direction:row;align-items:flex-end;gap:40px}
+#cc .c-t-paid .c-tile-copy{flex:0 1 34rem;align-self:center}
+#cc .c-t-paid .c-shot.c-ph{margin:36px 150px 0 auto}
+}
 #cc .c-shot{position:relative;margin:auto 18px 0;overflow:hidden;border-radius:12px 12px 0 0;background:var(--win);box-shadow:0 0 0 1px rgba(var(--sh),.1)}
 #cc .c-shot img{position:absolute;max-width:none;width:var(--z,100%);left:calc(var(--x,0%) * -1);top:0}
 #cc .c-shot.c-d{aspect-ratio:var(--ar,16/9)}
@@ -132,9 +136,7 @@
 #cc .c-shot.c-ph img{position:static;width:100%;border-radius:23px 23px 0 0}
 #cc .c-t-disp .c-shot.c-ph{height:360px;width:min(260px,70%)}
 @media (max-width:1000px){
-#cc .c-t-calls,#cc .c-t-disp{grid-column:span 12}
-#cc .c-t-est,#cc .c-t-rev{grid-column:span 6}
-#cc .c-t-paid{grid-column:span 12}
+#cc .c-t-calls,#cc .c-t-disp,#cc .c-t-est,#cc .c-t-rev,#cc .c-t-paid{grid-column:span 12}
 }
 @media (max-width:640px){
 #cc .c-bento{gap:12px}
@@ -259,13 +261,13 @@
 #cc .c-panel-eye{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:600}
 #cc .c-panel-x{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);cursor:pointer}
 #cc .c-panel-x svg{width:14px;height:14px}
-#cc .c-p-stage{position:relative;padding-bottom:34px;margin-bottom:26px}
+#cc .c-p-stage{position:relative;margin-bottom:22px}
 #cc .c-p-stage .c-win{border-radius:12px}
 #cc .c-p-stage .c-win-bar{height:24px}
-#cc .c-p-stage .c-phone{position:absolute;right:-4px;bottom:0;width:30%;padding:5px;border-radius:24px}
+#cc .c-p-stage .c-phone{float:right;position:relative;z-index:1;width:27%;margin:14px -4px 14px 18px;padding:5px;border-radius:24px}
 #cc .c-p-stage .c-phone img{border-radius:19px}
 #cc .c-p-stage.c-solo .c-win{display:none}
-#cc .c-p-stage.c-solo .c-phone{position:relative;right:auto;width:min(250px,70%);margin:0 auto;padding:8px;border-radius:38px}
+#cc .c-p-stage.c-solo .c-phone{float:none;position:relative;right:auto;width:min(250px,70%);margin:0 auto;padding:8px;border-radius:38px}
 #cc .c-p-stage.c-solo .c-phone img{border-radius:30px}
 #cc .c-panel h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.4rem);line-height:1.05}
 #cc .c-panel .c-p-desc{margin-top:12px;font-size:1.0625rem}
@@ -279,7 +281,7 @@
 #cc .c-panel{top:auto;left:0;width:auto;max-height:90vh;border-left:0;border-top:1px solid var(--line);border-radius:22px 22px 0 0;transform:translateY(100%)}
 #cc .c-panel::before{content:"";position:sticky;top:0;z-index:2;display:block;width:40px;height:4px;margin:10px auto 0;border-radius:99px;background:rgba(var(--sh),.2)}
 #cc .c-p-stage .c-win{display:none}
-#cc .c-p-stage .c-phone{position:relative;right:auto;width:min(250px,70%);margin:0 auto;padding:8px;border-radius:38px}
+#cc .c-p-stage .c-phone{float:none;position:relative;right:auto;width:min(250px,70%);margin:0 auto;padding:8px;border-radius:38px}
 #cc .c-p-stage .c-phone img{border-radius:30px}
 }
 #cc.c-js .c-rv{opacity:0;transform:translateY(18px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
@@ -403,9 +405,9 @@ body.drawer-open{overflow:hidden}
             <p>An AI receptionist answers the call and books the job. If a call still slips by, the caller gets a text back right away.</p>
             <ul class="c-feat"><li>AI receptionist</li><li>Missed-call text-back</li><li>One inbox</li></ul>
           </div>
-          <div class="c-shot c-d" style="--ar:16/9;--z:124%;--x:24%">
+          <div class="c-shot c-d" style="--ar:16/9">
             <picture><source media="(max-width:640px)" srcset="assets/img/crm/s1-call-m.jpg 1x, assets/img/crm/s1-call-m-4k.jpg 3.033x">
-            <img src="assets/img/crm/s1-call-d.jpg" srcset="assets/img/crm/s1-call-d.jpg 1x, assets/img/crm/s1-call-d-4k.jpg 2.667x" width="1440" height="900" loading="lazy" alt="The inbox for a sample HVAC company: a missed call, the automatic text back, the customer's reply, and a call the AI receptionist booked."></picture>
+            <img src="assets/img/crm/s1-call-dt.jpg" srcset="assets/img/crm/s1-call-dt.jpg 1x, assets/img/crm/s1-call-dt-4k.jpg 2.667x" width="684" height="385" loading="lazy" alt="The inbox for a sample HVAC company: a missed call and the automatic text back."></picture>
           </div>
         </article>
 
@@ -425,20 +427,12 @@ body.drawer-open{overflow:hidden}
             <h3>Estimates the same day</h3>
             <p>Build the estimate from your price book and send it before you leave the driveway.</p>
           </div>
-          <div class="c-shot c-d" style="--ar:4/3;--z:123%;--x:23%">
+          <div class="c-shot c-d" style="--ar:4/3">
             <picture><source media="(max-width:640px)" srcset="assets/img/crm/s3-estimate-m.jpg 1x, assets/img/crm/s3-estimate-m-4k.jpg 3.033x">
-            <img src="assets/img/crm/s3-estimate-d.jpg" srcset="assets/img/crm/s3-estimate-d.jpg 1x, assets/img/crm/s3-estimate-d-4k.jpg 2.667x" width="1440" height="900" loading="lazy" alt="An HVAC estimate built from price book items, awaiting the customer's response."></picture>
+            <img src="assets/img/crm/s3-estimate-dz.jpg" srcset="assets/img/crm/s3-estimate-dz.jpg 1x, assets/img/crm/s3-estimate-dz-4k.jpg 2.667x" width="720" height="540" loading="lazy" alt="An HVAC estimate built from price book items, awaiting the customer's response."></picture>
           </div>
         </article>
 
-        <article class="c-tile c-t-paid c-rv" data-panel="paid">
-          <button class="c-plus" type="button" aria-haspopup="dialog" aria-label="See invoices and payments"><b aria-hidden="true">+</b>See it</button>
-          <div class="c-tile-copy">
-            <h3>Get paid</h3>
-            <p>Invoice by text and take card payments.</p>
-          </div>
-          <div class="c-shot c-ph"><img src="assets/img/crm/s4-invoice-m.jpg" srcset="assets/img/crm/s4-invoice-m.jpg 1x, assets/img/crm/s4-invoice-m-4k.jpg 3.033x" width="585" height="1266" loading="lazy" alt="An invoice on a phone, marked Paid by card."></div>
-        </article>
 
         <article class="c-tile c-t-rev c-rv" data-panel="reviews">
           <button class="c-plus" type="button" aria-haspopup="dialog" aria-label="See review requests"><b aria-hidden="true">+</b>See it</button>
@@ -446,10 +440,18 @@ body.drawer-open{overflow:hidden}
             <h3>Reviews</h3>
             <p>Review requests go out by text after the job. See who has been asked and who left one.</p>
           </div>
-          <div class="c-shot c-d" style="--ar:4/3;--z:123%;--x:23%">
+          <div class="c-shot c-d" style="--ar:4/3">
             <picture><source media="(max-width:640px)" srcset="assets/img/crm/s5-reviews-m.jpg 1x, assets/img/crm/s5-reviews-m-4k.jpg 3.033x">
-            <img src="assets/img/crm/s5-reviews-d.jpg" srcset="assets/img/crm/s5-reviews-d.jpg 1x, assets/img/crm/s5-reviews-d-4k.jpg 2.667x" width="1440" height="900" loading="lazy" alt="The Reviews page: all four finished jobs asked by text, two requests still out and two customers who left 5 star reviews."></picture>
+            <img src="assets/img/crm/s5-reviews-dz.jpg" srcset="assets/img/crm/s5-reviews-dz.jpg 1x, assets/img/crm/s5-reviews-dz-4k.jpg 2.667x" width="720" height="540" loading="lazy" alt="The Reviews page: all four finished jobs asked by text, two requests still out and two customers who left 5 star reviews."></picture>
           </div>
+        </article>
+        <article class="c-tile c-t-paid c-rv" data-panel="paid">
+          <button class="c-plus" type="button" aria-haspopup="dialog" aria-label="See invoices and payments"><b aria-hidden="true">+</b>See it</button>
+          <div class="c-tile-copy">
+            <h3>Get paid</h3>
+            <p>Invoice by text and take card payments.</p>
+          </div>
+          <div class="c-shot c-ph"><img src="assets/img/crm/s4-invoice-m.jpg" srcset="assets/img/crm/s4-invoice-m.jpg 1x, assets/img/crm/s4-invoice-m-4k.jpg 3.033x" width="585" height="1266" loading="lazy" alt="An invoice on a phone, marked Paid by card."></div>
         </article>
       </div>
     </div>
@@ -608,7 +610,7 @@ body.drawer-open{overflow:hidden}
   <div class="c-panel-in">
     <div class="c-panel-top"><span class="c-panel-eye">Inside the CRM</span><button class="c-panel-x" id="panel-x" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
     <div class="c-p-stage" id="p-stage">
-      <div class="c-win"><span class="c-win-bar" aria-hidden="true"><i></i><i></i><i></i></span><img id="p-d" width="1440" height="900" alt=""></div>
+      <div class="c-win"><span class="c-win-bar" aria-hidden="true"><i></i><i></i><i></i></span><img id="p-d" width="720" height="540" alt=""></div>
       <div class="c-phone"><img id="p-m" width="585" height="1266" alt=""></div>
     </div>
     <h3 id="p-title"></h3>
@@ -690,32 +692,32 @@ body.drawer-open{overflow:hidden}
 
   /* side panel content: every line describes what its screens show */
   var A='assets/img/crm/';
-  /* 4K shots for sharp screens: desktop 3840 wide (2.667x), phone 3840 tall (3.033x) */
-  function ss(f){var d=/-d\.jpg$/.test(f);return A+f+' 1x, '+A+f.replace('.jpg','-4k.jpg')+(d?' 2.667x':' 3.033x')}
+  /* 4K shots for sharp screens: desktop crops cut from 3840-wide captures (2.667x), phone 3840 tall (3.033x) */
+  function ss(f){var d=/-dz\.jpg$/.test(f);return A+f+' 1x, '+A+f.replace('.jpg','-4k.jpg')+(d?' 2.667x':' 3.033x')}
   var P={
     calls:{t:'Answer every call',d:'The AI receptionist answers when you can’t and books the visit. If a call is missed, the caller gets a text back right away, and their reply lands in your inbox.',
       pts:['The AI receptionist answers and books the job','A missed call gets a text back on its own','Calls and texts in one inbox','Call and text from the app on your business number'],
-      dI:'s1-call-d.jpg',dA:'The inbox: a missed call at 7:15 AM, the automatic text back, the customer’s reply, and a call the AI receptionist booked.',
+      dI:'s1-call-dz.jpg',dA:'The inbox: a missed call at 7:15 AM and the automatic text back.',
       mI:'s1-call-m.jpg',mA:'Recent calls on a phone: the missed call, and the call the AI receptionist booked for Wednesday morning.',
       c:'Shown: a sample HVAC company’s early morning calls.'},
     dispatch:{t:'Book and dispatch',d:'Customers book online and jobs land on the schedule. Each tech has the day’s jobs on their phone, and one tap sends the customer an on-my-way text.',
       pts:['Online booking','Today’s jobs, with the tech on each one','Jobs on the tech’s phone','On-my-way texts in one tap'],
-      dI:'hero-dash-d.jpg',dA:'The owner’s Today screen: four jobs, each with its tech and status, one marked On my way.',
+      dI:'hero-dash-dz.jpg',dA:'The owner’s Today screen: four jobs, each with its tech and status, one marked On my way.',
       mI:'s2-job-m.jpg',mA:'The job on the tech’s phone, marked On my way.',
       c:'Shown: the owner’s Today screen and the tech’s phone.'},
     estimate:{t:'Estimates the same day',d:'Build the estimate from your price book and send it before you leave the driveway. It shows as awaiting a response until the customer answers.',
-      pts:['Lines come from your price book','Sent from the app on the spot','You can see when it went out'],
-      dI:'s3-estimate-d.jpg',dA:'An HVAC estimate built from price book items, sent a few minutes ago and awaiting the customer’s response.',
+      pts:['Lines come from your price book','Sent from the app on the spot'],
+      dI:'s3-estimate-dz.jpg',dA:'An HVAC estimate built from price book items, awaiting the customer’s response.',
       mI:'s3-estimate-m.jpg',mA:'The same estimate on a phone, awaiting the customer’s response.',
-      c:'Shown: a $473.29 estimate for an AC repair.'},
+      c:'Shown: an estimate for an AC repair.'},
     paid:{t:'Get paid by text',d:'The customer gets the invoice as a text and pays by card from their phone. The invoice shows paid the moment they do.',
       pts:['Invoices go out by text','Customers pay by card','Paid shows on the invoice right away'],
-      dI:'s4-invoice-d.jpg',dA:'A paid invoice on desktop: the line items, a $0.00 balance and the card payment.',
+      dI:'s4-invoice-dz.jpg',dA:'The invoice on desktop: paid in full by card, with a $0.00 balance.',
       mI:'s4-invoice-m.jpg',mA:'The same invoice on a phone, marked Paid by card.',
       c:'Shown: the owner’s view of a paid invoice.'},
     reviews:{t:'Review requests',d:'When the job is done, the customer gets a text asking for a Google review. You can see who has been asked and who left one.',
       pts:['Requests go out by text after the job','See who has been asked','See who left a review'],
-      dI:'s5-reviews-d.jpg',dA:'The Reviews page: all four finished jobs asked by text, two requests still out and two customers who left 5 star reviews.',
+      dI:'s5-reviews-dz.jpg',dA:'The Reviews page: all four finished jobs asked by text, two requests still out and two customers who left 5 star reviews.',
       mI:'s5-reviews-m.jpg',mA:'The Reviews page on a phone.',
       c:'Shown: review requests for a sample HVAC company.'}
   };
