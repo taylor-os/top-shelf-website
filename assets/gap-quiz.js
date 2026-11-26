@@ -13,8 +13,8 @@ var CONFIG = {
     name:"Top Shelf", logoText:"TOP SHELF", logoUrl:"assets/logo-mark.png", kicker:"Top Shelf Gap Finder",
     title:"60-Second Business Check",
     colors:{ground:"#0B0906",surface:"#100C08",gold:"#C9A86A",goldBright:"#E4C98A",ink:"#F4F0E8",ink2:"#CFC7B8",ink3:"#98907F",ink4:"#6E675A",hairline:"rgba(201,168,106,.20)"},
-    fontImport:"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap",
-    fontDisplay:"'Cormorant Garamond',Georgia,serif", fontBody:"'Jost',system-ui,sans-serif"
+    fontImport:"https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap",
+    fontDisplay:"'DM Serif Display',Georgia,serif", fontBody:"'DM Sans',system-ui,sans-serif"
   },
   behavior: {
     triggerSeconds: null, scrollPercent: 45, exitIntent: true,
