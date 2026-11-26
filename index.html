@@ -92,7 +92,8 @@
 #cc .c-stage .c-win{margin-right:calc(-1 * max(0px,(100vw - var(--wrap)) / 2) - var(--gut));border-radius:14px 0 0 14px}
 #cc .c-phone{position:relative;padding:9px;border-radius:44px;background:var(--black);box-shadow:0 36px 70px -28px rgba(var(--sh),.65),0 0 0 1px rgba(var(--sh),.2)}
 #cc .c-phone img{border-radius:36px;width:100%}
-#cc .c-stage .c-phone{width:min(300px,72vw);margin:0 auto}
+#cc .c-stage .c-phone{position:absolute;left:-6%;bottom:0;width:31%;max-width:230px}
+#cc .c-hero-m{display:none}
 #cc.c-vm .c-vd,#cc:not(.c-vm) .c-vmo{display:none}
 #cc .c-view{display:inline-flex;gap:4px;padding:4px;margin-top:22px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
 #cc:not(.c-js) .c-view{display:none}
@@ -102,7 +103,8 @@
 @media (max-width:900px){
 #cc .c-hero{padding:40px 0 32px}
 #cc .c-hero-grid{grid-template-columns:1fr;gap:36px}
-#cc .c-stage .c-win{margin-right:0;border-radius:14px}
+#cc .c-stage{display:none}
+#cc .c-hero-m{display:block;width:min(270px,72vw);margin:0 auto}
 }
 #cc section{scroll-margin-top:80px}
 #cc .c-sec{padding:clamp(80px,10vw,128px) 0}
@@ -376,14 +378,14 @@ body.drawer-open{overflow:hidden}
         </div>
         <p class="c-cta-how">Fill out a short form. We call you, then send you a demo.</p>
         <p class="c-shot-note">The screens are from the real app, shown with a sample HVAC company.</p>
-        <div class="c-view" role="group" aria-label="Show the screens as"><button type="button" data-v="d" aria-pressed="true">Desktop</button><button type="button" data-v="m" aria-pressed="false">Mobile</button></div>
       </div>
       <div class="c-stage c-rv">
-        <div class="c-win c-vd"><span class="c-win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="assets/img/crm/hero-dash-main.jpg" srcset="assets/img/crm/hero-dash-main.jpg 1x, assets/img/crm/hero-dash-main-4k.jpg 2.667x" width="1100" height="756" fetchpriority="high" alt="The owner's Today screen for a sample HVAC company: jobs done, money booked and collected, today's jobs with each tech, and what needs attention.">
+        <div class="c-win"><span class="c-win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img src="assets/img/crm/hero-dash-d.jpg" srcset="assets/img/crm/hero-dash-d.jpg 1x, assets/img/crm/hero-dash-d-4k.jpg 2.667x" width="1440" height="900" fetchpriority="high" alt="The owner's Today screen for a sample HVAC company: jobs done, money booked and collected, today's jobs with each tech, and what needs attention.">
         </div>
-        <div class="c-phone c-vmo"><img src="assets/img/crm/hero-dash-m.jpg" srcset="assets/img/crm/hero-dash-m.jpg 1x, assets/img/crm/hero-dash-m-4k.jpg 3.033x" width="585" height="1266" alt="The owner's Today screen on a phone for a sample HVAC company: jobs done, money booked and collected, and what needs attention."></div>
+        <div class="c-phone"><img src="assets/img/crm/hero-dash-m.jpg" srcset="assets/img/crm/hero-dash-m.jpg 1x, assets/img/crm/hero-dash-m-4k.jpg 3.033x" width="585" height="1266" alt="The same Today screen on a phone."></div>
       </div>
+      <div class="c-phone c-hero-m c-rv"><img src="assets/img/crm/hero-dash-m.jpg" srcset="assets/img/crm/hero-dash-m.jpg 1x, assets/img/crm/hero-dash-m-4k.jpg 3.033x" width="585" height="1266" alt="The owner's Today screen on a phone for a sample HVAC company: jobs done, money booked and collected, and what needs attention."></div>
     </div>
   </section>
 
@@ -742,7 +744,7 @@ body.drawer-open{overflow:hidden}
   document.querySelectorAll('.c-tile[data-panel]').forEach(function(t){
     t.addEventListener('click',function(){openPanel(t.dataset.panel,t.querySelector('.c-plus'))});
   });
-  /* Desktop / Mobile: one choice drives the hero, the cards and the panel */
+  /* Desktop / Mobile: one choice drives the cards and the panel (the hero shows both) */
   function setView(v){
     cc.classList.toggle('c-vm',v==='m');
     cc.querySelectorAll('.c-view button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v?'true':'false')});
