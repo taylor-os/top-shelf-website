@@ -4,9 +4,9 @@
 **Phone:** 123-456-7890 · **Email:** contact@halcourtvale.com
 
 ## Identity
-- **Name:** Halcourt &amp; Vale · **Type:** boutique business + litigation law firm.
+- **Name:** Halcourt &amp; Vale · **Type:** boutique family law, criminal defense, and estate planning firm.
 - **Tagline:** *Counsel you can build on.*
-- **One-liner:** Serious, senior-led legal counsel for businesses and the people who run them.
+- **One-liner:** Serious, senior-led legal counsel for families: divorce and custody, criminal defense, and wills, trusts, and probate.
 - **Locale (fictional):** One Merchant Square, downtown.
 - **Positioning:** A boutique firm where a senior attorney actually handles your matter, not a rotating cast of juniors. Plain-spoken, responsive, and straight with you about cost and odds. Big-firm capability, without the big-firm runaround.
 - **Established:** 2004.
@@ -21,12 +21,17 @@ Authoritative but human. Confident, precise, plain English (no legalese for its 
 - **Motion:** Lenis smooth scroll; restrained fade/rise reveals; a serif headline reveal; brass rule draw-ins; counters for experience stats. Dignified, never flashy. Reduced-motion respected.
 
 ## Practice areas (content)
-- **Business &amp; Corporate Law** — formation, governance, financing, M&amp;A, and the day-to-day counsel a growing company needs.
-- **Civil Litigation** — commercial disputes, contract fights, and business torts, handled with a plan and a straight assessment of your odds.
-- **Real Estate** — acquisitions, leasing, development, and title matters for owners, investors, and businesses.
-- **Estate Planning &amp; Probate** — wills, trusts, and succession planning that protects your family and your business.
-- **Employment Law** — counsel for employers on hiring, policies, disputes, and staying on the right side of the line.
-- **Contracts &amp; Transactions** — the agreements your business runs on, drafted to be clear and to hold up.
+Matches the approved Halcourt &amp; Vale CRM screens (practice filters: Family law, Criminal defense, Estate planning).
+- **Family Law**: divorce, child custody and visitation, custody modifications, child support, prenuptial agreements, mediation.
+- **Criminal Defense**: misdemeanor and felony charges, court settings and hearings, plea negotiations, trial defense, calls about a family member's case.
+- **Estate Planning &amp; Probate**: wills and trusts, powers of attorney, healthcare directives, asset protection, probate administration, trust and estate disputes.
+
+## Attorneys (focus lines)
+- **Eleanor Halcourt**, Founding Partner: family law and estate planning; also takes criminal cases to court. (CRM: managing attorney.)
+- **Marcus Vale**, Founding Partner: criminal defense through trial, and probate. (CRM: attorney.)
+- **Priya Anand**, Partner: estate planning and probate.
+- **James Okafor**, Senior Associate: family law and criminal defense.
+- CRM-only staff: Joanna Ferrante (paralegal), Tessa Rowan (intake).
 
 ## Proof (fictional, believable, no fabricated case specifics)
 - 20+ years · senior attorneys on every matter · responsive, fixed-fee where it fits · candid about cost and odds.
@@ -34,11 +39,11 @@ Authoritative but human. Confident, precise, plain English (no legalese for its 
 - Approach: **Listen → Assess honestly → Plan → Execute.**
 
 ## Pages (5)
-1. **index.html — Home:** editorial hero (serif headline + office image, "Request a consultation") -> firm intro/ethos -> practice areas grid (6) -> why us (senior-led / plain-spoken / responsive) -> approach (4 steps) -> experience stats -> attorney preview -> consultation CTA -> footer.
-2. **practice-areas.html — Practice Areas:** intro -> six deep practice sections (each: description + what we handle + representative work) -> CTA.
+1. **index.html — Home:** editorial hero (serif headline + office image, "Request a consultation") -> firm intro/ethos -> practice areas grid (3) -> why us (senior-led / plain-spoken / responsive) -> approach (4 steps) -> experience stats -> attorney preview -> consultation CTA -> footer.
+2. **practice-areas.html — Practice Areas:** intro -> three deep practice sections (each: description + what we handle + representative work) -> CTA.
 3. **attorneys.html — Attorneys:** firm intro -> attorney cards (photos, name, title, focus) -> values -> CTA.
 4. **results.html — Results &amp; Insights:** approach + representative results (general, with disclaimer) -> client outcomes stats -> a few plain-English insight notes -> CTA.
-5. **contact.html — Consultation:** consultation request form (name, phone, email, matter type, brief description) -> office/hours -> map/parking note -> confidentiality note.
+5. **contact.html — Consultation:** consultation request form (name, phone, email, matter type: family law / criminal defense / estate planning or probate / not sure yet, brief description; call directly after an arrest or before a court date) -> office/hours -> map/parking note -> confidentiality note.
 
 **Global:** cream sticky header (brass scales mark + "Halcourt &amp; Vale" serif wordmark; Home·Practice Areas·Attorneys·Results·Contact; phone + "Request a Consultation" button). Footer on deep ink-green: practice areas, firm, contact, Top Shelf sample credit, legal disclaimer line.
 

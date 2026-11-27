@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule · Wellspring Animal Hospital</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .side .brand .mark { background: var(--canvas); }
+  .side .brand .mark img { width: 24px; height: 24px; }
+  .band { padding: 12px 24px 10px; align-items: center; }
+  .seg-d { display: inline-flex; padding: 3px; border-radius: 12px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); }
+  .seg-d a { padding: 5px 14px; border-radius: 9px; font-size: 13px; font-weight: 600; color: var(--on-em); }
+  .seg-d a.on { background: var(--band-btn-bg); color: var(--band-btn-ink); }
+  .band .datel { font-size: 15px; font-weight: 600; color: var(--on-em); margin: 0 6px 0 4px; }
+  .band .btn.sm { min-height: 34px; }
+  .page { padding: 10px 24px 6px; }
+  .strip { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+  .strip b { font-weight: 600; color: var(--ink); }
+  .strip .leg { margin-left: auto; display: flex; gap: 6px; }
+  .strip .leg .chip { background: var(--panel); border: 1px solid var(--line); color: var(--ink-2); font-size: 11.5px; font-weight: 500; padding: 2px 9px; }
+  .strip .leg .dot { width: 8px; height: 8px; }
+  .sched { display: grid; grid-template-columns: minmax(0, 1fr) 248px; gap: 14px; align-items: start; }
+  .cal { --slot: 17.5px; grid-template-columns: 36px 1.12fr 1.42fr .82fr .66fr; grid-template-rows: 42px repeat(40, var(--slot)); }
+  .cal .lines { background-size: 100% calc(var(--slot) * 4); }
+  .cal .ch { padding: 0 8px; gap: 7px; }
+  .cal .ch b { font-size: 12.5px; white-space: nowrap; }
+  .cal .ch small { white-space: nowrap; font-size: 10.5px; }
+  .cal .ch.cat { background: color-mix(in srgb, rgb(var(--b-500)) 9%, var(--head)); }
+  .cal .ch .ic-box { width: 26px; height: 26px; border-radius: 8px; }
+  .catcol { grid-column: 4; grid-row: 2 / -1; background: rgb(var(--b-500) / .045); }
+  .cal .hr { white-space: nowrap; padding: 0 4px 0 0; font-size: 10px; }
+  /* events */
+  .ev { --doc: rgb(var(--b-500)); margin: 1px 3px; padding: 2px 6px 2px 7px; font-size: 10.5px; line-height: 13px; border-left: 4px solid var(--doc);
+    background: color-mix(in srgb, var(--doc) 9%, var(--panel)); border-radius: 6px; }
+  .ev.mr { --doc: var(--violet); } .ev.jk { --doc: var(--amber); }
+  .ev b { font-size: 11px; line-height: 13px; display: flex; align-items: center; gap: 3px; }
+  .ev b i { font-style: normal; font-weight: 500; color: var(--muted-2); margin-right: 1px; }
+  .ev b em { font-style: normal; font-weight: 500; color: var(--muted); }
+  .ev b svg { color: var(--muted); }
+  .ev span { font-size: 10.5px; line-height: 13px; }
+  .ev .ini { display: inline-block; margin-left: auto; flex-shrink: 0; font-size: 8.5px; font-weight: 700; letter-spacing: .03em; padding: 0 4px; line-height: 12px; border-radius: 4px; color: var(--on-accent); background: var(--doc); }
+  .ev .cl { display: flex; gap: 3px; align-items: center; margin-top: 1px; overflow: hidden; white-space: nowrap; }
+  .ev .chip { padding: 0 5px; font-size: 9px; line-height: 13px; gap: 2px; flex-shrink: 0; }
+  .ev .chip svg { width: 10px; height: 10px; }
+  .ev .tx { font-size: 10px; color: var(--muted-2); overflow: hidden; text-overflow: ellipsis; }
+  .ev.one { display: flex; align-items: center; gap: 3px; padding-top: 0; padding-bottom: 0; }
+  .ev.one b { font-size: 10px; }
+  .ev.one .chip { padding: 0 4px; }
+  .evnote { align-self: start; margin: 0 6px; padding: 2px 7px; border-radius: 0 0 6px 6px; background: color-mix(in srgb, var(--amber) 9%, var(--panel)); border: 1px solid color-mix(in srgb, var(--amber) 40%, var(--panel)); border-top: 0; font-size: 10px; line-height: 13px; color: var(--amber-ink); display: flex; flex-direction: column; align-items: flex-start; gap: 2px; white-space: nowrap; z-index: 4; padding-top: 3px; padding-bottom: 3px; }
+  .evnote .chip { padding: 0 6px; font-size: 9.5px; line-height: 14px; gap: 3px; }
+  .evnote .chip svg { width: 11px; height: 11px; }
+  .ev.tight { line-height: 11px; padding-top: 1px; padding-bottom: 1px; }
+  .ev.tight b, .ev.tight span, .ev.tight .tx { line-height: 11px; }
+  .ev.tight .cl { margin-top: 0; }
+  .ev.one b { flex: 1; min-width: 0; overflow: hidden; }
+  .ev.out { background: var(--head); --doc: var(--line-strong); }
+  .ev.out b, .ev.out span, .ev.out b i, .ev.out b em { color: var(--muted-2); }
+  .ev.out .ini { background: var(--muted-2); color: var(--panel); }
+  .ev.inroom { background: rgb(var(--b-600)); color: var(--on-accent); border-left-color: rgb(var(--b-300)); }
+  .ev.inroom b, .ev.inroom b i, .ev.inroom b em, .ev.inroom span, .ev.inroom b svg { color: var(--on-accent); }
+  .ev.inroom .chip { background: color-mix(in srgb, var(--on-accent) 22%, transparent); color: var(--on-accent); }
+  .ev.inroom.mrs { background: var(--violet); border-left-color: color-mix(in srgb, var(--on-accent) 60%, var(--violet)); }
+  .ev.inroom .ini { background: color-mix(in srgb, var(--on-accent) 25%, transparent); }
+  .ev.car { background: color-mix(in srgb, var(--teal) 14%, var(--panel)); }
+  .chip.teal { background: color-mix(in srgb, var(--teal) 16%, var(--panel)); color: color-mix(in srgb, var(--teal) 70%, var(--ink)); }
+  .ev.unc { background: color-mix(in srgb, var(--amber) 12%, var(--panel)); box-shadow: inset 0 0 0 1px var(--amber); }
+  .ev.sd { background: color-mix(in srgb, var(--amber) 10%, var(--panel)); box-shadow: inset 0 0 0 1.5px var(--amber); }
+  .ev.held { background: color-mix(in srgb, var(--amber) 6%, var(--panel)); border: 1.5px dashed var(--amber); border-left: 1.5px dashed var(--amber); display: flex; flex-direction: column; justify-content: center; }
+  .ev.held b { color: var(--amber-ink); }
+  .ev.held span { color: var(--amber-ink); }
+  .ev.open { background: var(--panel); border: 1.5px dashed rgb(var(--b-400)); border-left: 1.5px dashed rgb(var(--b-400)); display: flex; align-items: center; justify-content: center; }
+  .ev.open b { color: rgb(var(--b-700)); }
+  .ev.pick { background: var(--head); border-left: 3px solid var(--line-strong); margin: 3px 3px; padding: 0 6px; display: flex; align-items: center; }
+  .ev.pick b { font-weight: 500; color: var(--muted); font-size: 10.5px; }
+  .ev.pick b svg { color: var(--muted-2); }
+  .ev.block { --doc: var(--line-strong); display: flex; align-items: center; justify-content: center; }
+  .ev.block b { color: var(--muted-2); font-weight: 500; }
+  .ev.quiet { background: transparent; border: 1px dashed var(--line-strong); color: var(--muted-2); display: flex; align-items: center; justify-content: center; text-align: center; }
+  .ev.quiet span { white-space: normal; color: var(--muted-2); }
+  .cal .now { z-index: 5; }
+  .nowlbl { grid-column: 1; align-self: start; justify-self: end; margin: 5px 2px 0 0; z-index: 6; font-size: 9.5px; font-weight: 600; line-height: 13px; color: var(--badge-ink); background: var(--red); border-radius: 4px; padding: 0 3px; }
+  /* right rail */
+  .rail .card-h { padding: 8px 12px; font-size: 13.5px; }
+  .rail .card-h .r { display: inline-flex; align-items: center; gap: 3px; }
+  .dr { padding: 7px 12px; border-top: 1px solid var(--line); font-size: 12px; }
+  .dr:first-of-type { border-top: 0; }
+  .dr .top { display: flex; align-items: center; gap: 5px; }
+  .dr .n { font-size: 13px; font-weight: 600; }
+  .dr .s { font-size: 11.5px; color: var(--muted-2); line-height: 15px; }
+  .dr .ok { display: inline-flex; align-items: center; gap: 3px; color: var(--green-ink); font-weight: 600; font-size: 11px; }
+  .dr .top .chip { margin-left: auto; }
+  .sr { display: flex; align-items: flex-start; gap: 8px; padding: 7px 12px; border-top: 1px solid var(--line); font-size: 12px; }
+  .sr:first-of-type { border-top: 0; }
+  .sr .tm { width: 38px; flex-shrink: 0; font-weight: 600; font-variant-numeric: tabular-nums; font-size: 12.5px; }
+  .sr .n { font-weight: 600; font-size: 12.5px; }
+  .sr .s { font-size: 11.5px; color: var(--muted-2); line-height: 15px; }
+  .sr.left { background: color-mix(in srgb, var(--amber) 7%, var(--panel)); box-shadow: inset 3px 0 0 var(--amber); }
+  .lnk { display: flex; justify-content: flex-end; align-items: center; gap: 4px; padding: 6px 12px 8px; font-size: 12px; font-weight: 600; color: rgb(var(--b-700)); border-top: 1px solid var(--line); }
+  .tm-prog { height: 6px; border-radius: 999px; background: var(--amber-soft); margin: 7px 0 10px; overflow: hidden; }
+  .tm-prog i { display: block; height: 100%; width: 81%; background: rgb(var(--b-500)); }
+  body.t-vet { --teal: color-mix(in srgb, var(--blue) 45%, var(--green)); }
+</style>
+</head>
+<body class="t-vet">
+<script src="../../kit/icons.js"></script>
+<script src="species.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span class="mark"><img src="../../../../websites/wellspring-animal-hospital/assets/logo-mark.svg" alt=""></span><span>Wellspring Animal Hospital</span></div>
+    <nav class="nav">
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a class="on"><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Schedule</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Drop-offs</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Clients &amp; pets</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span><span class="badge">3</span></a>
+      <a><svg class="i"><use href="#bell"/></svg><span class="lbl">Reminders</span></a>
+      <a><svg class="i"><use href="#document-text"/></svg><span class="lbl">Estimates</span></a>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Payments</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+      <a><svg class="i"><use href="#user-group"/></svg><span class="lbl">Team</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">PS</span><div><b>Priya Shah</b><small>Practice manager</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Schedule</h1>
+        <p class="sub">4 rooms · 3 on the team today · 10:40 AM</p>
+      </div>
+      <div class="right">
+        <span class="seg-d"><a class="on">Rooms</a><a>Doctors</a><a>Week</a></span>
+        <span class="btn sm"><svg class="i s4"><use href="#chevron-left"/></svg></span>
+        <span class="btn sm">Today</span>
+        <span class="btn sm"><svg class="i s4"><use href="#chevron-right"/></svg></span>
+        <span class="datel">Wed, Dec 2</span>
+        <span class="btn primary sm"><svg class="i s4"><use href="#plus"/></svg>Book appointment</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="strip">
+        <span><b>27 appointments</b> · 25 confirmed · <b class="t-amber">2 unconfirmed</b> · 3 drop-offs · Same-day sick: 3 held, 2 filled, <b class="t-amber">1 left (3:00 Dr. Reed)</b></span>
+        <span class="leg"><span class="chip"><span class="dot" style="background:rgb(var(--b-500))"></span>Dr. Cho</span><span class="chip"><span class="dot" style="background:var(--violet)"></span>Dr. Reed</span><span class="chip"><span class="dot" style="background:var(--amber)"></span>Jesse (tech)</span></span>
+      </div>
+
+      <div class="sched">
+        <div class="cal">
+          <div class="corner"></div>
+          <div class="ch" style="grid-column:2"><span class="ic-box sm brand"><svg class="i s4"><use href="#dog"/></svg></span><div><b>Exam 1</b><small>Dr. Cho · 10 today</small></div></div>
+          <div class="ch" style="grid-column:3"><span class="ic-box sm brand"><svg class="i s4"><use href="#dog"/></svg></span><div><b>Exam 2</b><small>Jesse AM · Dr. Reed PM · 10</small></div></div>
+          <div class="ch cat" style="grid-column:4"><span class="ic-box sm brand"><svg class="i s4"><use href="#cat"/></svg></span><div><b>Exam 3 · Cat room</b><small>Dr. Cho · 4 today</small></div></div>
+          <div class="ch" style="grid-column:5"><span class="ic-box sm" style="color:var(--violet)"><svg class="i s4"><use href="#heart"/></svg></span><div><b>Surgery suite</b><small>Dr. Reed · 3</small></div></div>
+
+          <div class="catcol"></div>
+          <div class="lines"></div>
+          <div class="vl" style="grid-column:2"></div><div class="vl" style="grid-column:3"></div><div class="vl" style="grid-column:4"></div><div class="vl" style="grid-column:5"></div>
+          <span class="hr" style="grid-row:2">8 AM</span><span class="hr" style="grid-row:6">9 AM</span><span class="hr" style="grid-row:10">10 AM</span>
+          <span class="hr" style="grid-row:14">11 AM</span><span class="hr" style="grid-row:18">12 PM</span><span class="hr" style="grid-row:22">1 PM</span>
+          <span class="hr" style="grid-row:26">2 PM</span><span class="hr" style="grid-row:30">3 PM</span><span class="hr" style="grid-row:34">4 PM</span><span class="hr" style="grid-row:38">5 PM</span>
+
+          <!-- lunch 12:30 to 1:30, all rooms -->
+          <div class="ev block" style="grid-column:2;grid-row:20 / span 4"><b>Lunch · AI receptionist answers</b></div>
+          <div class="ev block" style="grid-column:3;grid-row:20 / span 4"><b>Lunch</b></div>
+          <div class="ev block" style="grid-column:4;grid-row:20 / span 4"><b>Lunch</b></div>
+          <div class="ev block" style="grid-column:5;grid-row:20 / span 4"><b>Lunch</b></div>
+
+          <!-- Exam 1 · Dr. Cho -->
+          <div class="ev out" style="grid-column:2;grid-row:2 / span 2"><b><i>8:00</i>Gus <svg class="i s3"><use href="#dog"/></svg><em>Gentry</em><span class="ini">EC</span></b><span>Wellness exam · Checked out</span></div>
+          <div class="ev out" style="grid-column:2;grid-row:6 / span 2"><b><i>9:00</i>Nala <svg class="i s3"><use href="#dog"/></svg><em>Hutchins</em><span class="ini">EC</span></b><span>Puppy visit · Checked out</span></div>
+          <div class="ev out" style="grid-column:2;grid-row:8 / span 3"><b><i>9:30</i>Duke, 13 <svg class="i s3"><use href="#dog"/></svg><em>Quarles</em><span class="ini">EC</span></b><span>Senior wellness exam</span><div class="cl"><span class="chip">Checked out</span></div></div>
+          <div class="ev inroom" style="grid-column:2;grid-row:11 / span 2"><b><i>10:15</i>Biscotti <svg class="i s3"><use href="#dog"/></svg><em>Dowell</em><span class="ini">EC</span></b><div class="cl"><span>Wellness exam</span><span class="chip">In room</span></div></div>
+          <div class="ev sd" style="grid-column:2;grid-row:13 / span 2;z-index:6"><b><i>10:45</i>Pepper <svg class="i s3"><use href="#dog"/></svg><em>Arbuckle</em><span class="ini">EC</span></b><div class="cl"><span>Sick visit (same day)</span><span class="chip amber">Same-day</span></div></div>
+          <div class="evnote" style="grid-column:2;grid-row:15 / span 2"><span class="chip teal"><svg class="i"><use href="#car"/></svg>On the way, ETA 10:44</span><span><svg class="i s3" style="vertical-align:-2px"><use href="#phone-arrow-down-left"/></svg> AI transfer 10:22 · booked by Callie</span></div>
+          <div class="ev" style="grid-column:2;grid-row:18 / span 2"><b><i>12:00</i>Maple <svg class="i s3"><use href="#dog"/></svg><em>Abernathy</em><span class="ini">EC</span></b><div class="cl"><span>Sick visit</span><span class="chip amber">Same-day</span><span class="chip green">✓ Confirmed</span></div></div>
+          <div class="ev unc" style="grid-column:2;grid-row:27 / span 3"><b><i>2:15</i>Rufus <svg class="i s3"><use href="#dog"/></svg><em>Dempsey</em><span class="ini">EC</span></b><span>Senior wellness exam</span><div class="cl"><span class="chip amber">Unconfirmed</span><span class="chip amber">$</span></div></div>
+          <div class="ev open" style="grid-column:2;grid-row:30 / span 2"><b>+ Open · 3:00</b></div>
+          <div class="ev" style="grid-column:2;grid-row:32 / span 3"><b><i>3:30</i>Clementine, 10 wks <svg class="i s3"><use href="#dog"/></svg><span class="ini">EC</span></b><span>Stroud · New-client exam</span><div class="cl"><span class="chip green">✓ Confirmed</span><span class="chip brand">NEW</span><span class="chip blue">AI</span></div></div>
+          <div class="ev unc" style="grid-column:2;grid-row:37 / span 2"><b><i>4:45</i>Moose <svg class="i s3"><use href="#dog"/></svg><em>Mancuso</em><span class="ini">EC</span></b><div class="cl"><span>Wellness exam</span><span class="chip amber">Unconfirmed</span></div></div>
+          <div class="ev" style="grid-column:2;grid-row:39 / span 2"><b><i>5:15</i>Bear <svg class="i s3"><use href="#dog"/></svg><em>Yancey</em><span class="ini">EC</span></b><div class="cl"><span>Wellness exam</span><span class="chip green">✓ Confirmed</span></div></div>
+
+          <!-- Exam 2 · Jesse AM (15 min tech visits), Dr. Reed PM -->
+          <div class="ev jk out one" style="grid-column:3;grid-row:3"><b><i>8:15</i>Peanut <svg class="i s3"><use href="#dog"/></svg><em>Kemper · Nail trim</em></b><span class="ini">JK</span></div>
+          <div class="ev jk out one" style="grid-column:3;grid-row:5"><b><i>8:45</i>Koda <svg class="i s3"><use href="#dog"/></svg><em>Sheffield · Vaccine visit</em></b><span class="ini">JK</span></div>
+          <div class="ev jk out one" style="grid-column:3;grid-row:8"><b><i>9:30</i>Bruno <svg class="i s3"><use href="#dog"/></svg><em>Zamora · Vaccine visit</em></b><span class="ini">JK</span></div>
+          <div class="ev jk inroom one" style="grid-column:3;grid-row:12"><b><i>10:30</i>Roxie <svg class="i s3"><use href="#dog"/></svg><em>Gaskins · Nail trim</em></b><span class="chip">In room</span><span class="ini" style="margin-left:3px">JK</span></div>
+          <div class="ev jk car one" style="grid-column:3;grid-row:14"><b><i>11:00</i>Ollie <svg class="i s3"><use href="#dog"/></svg><em>Pickens · Nail trim</em></b><span class="chip teal"><svg class="i"><use href="#car"/></svg>Waiting in car</span><span class="ini" style="margin-left:3px">JK</span></div>
+          <div class="ev jk one" style="grid-column:3;grid-row:16"><b><i>11:30</i>Daisy <svg class="i s3"><use href="#dog"/></svg><em>Ostrander · Vaccine visit</em></b><span class="chip green">✓</span><span class="ini" style="margin-left:3px">JK</span></div>
+          <div class="ev mr" style="grid-column:3;grid-row:24 / span 2"><b><i>1:30</i>Tank <svg class="i s3"><use href="#dog"/></svg><em>Hightower</em><span class="ini">MR</span></b><div class="cl"><span>Surgery consult</span><span class="chip green">✓ Confirmed</span><span class="chip blue">AI</span></div></div>
+          <div class="ev mr" style="grid-column:3;grid-row:26 / span 2"><b><i>2:00</i>Lola <svg class="i s3"><use href="#dog"/></svg><em>Cantu</em><span class="ini">MR</span></b><div class="cl"><span>Recheck</span><span class="chip green">✓ Confirmed</span><span class="chip amber">$</span></div></div>
+          <div class="ev mr" style="grid-column:3;grid-row:28 / span 2"><b><i>2:30</i>Finn <svg class="i s3"><use href="#dog"/></svg><em>Spurlock</em><span class="ini">MR</span></b><div class="cl"><span>Wellness exam</span><span class="chip green">✓ Confirmed</span></div></div>
+          <div class="ev held" style="grid-column:3;grid-row:30 / span 2"><b>3:00 · Held · same-day sick · Dr. Reed</b><span>Opens to online booking at 2:00 PM</span></div>
+          <div class="ev pick" style="grid-column:3;grid-row:32"><b><svg class="i s3"><use href="#arrow-right-start-on-rectangle"/></svg>3:30 Pickup · Bandit</b></div>
+          <div class="ev pick" style="grid-column:3;grid-row:34"><b><svg class="i s3"><use href="#arrow-right-start-on-rectangle"/></svg>4:00 Pickup · Waffles</b></div>
+          <div class="ev pick" style="grid-column:3;grid-row:36"><b><svg class="i s3"><use href="#arrow-right-start-on-rectangle"/></svg>4:30 Pickup · Mabel</b></div>
+          <div class="ev mr" style="grid-column:3;grid-row:38 / span 2"><b><i>5:00</i>Coco <svg class="i s3"><use href="#dog"/></svg><em>Ruelas</em><span class="ini">MR</span></b><div class="cl"><span>Wellness exam</span><span class="chip green">✓ Confirmed</span></div></div>
+
+          <!-- Exam 3 · Cat room · Dr. Cho -->
+          <div class="ev out" style="grid-column:4;grid-row:4 / span 2"><b><i>8:30</i>Miso <svg class="i s3"><use href="#cat"/></svg><em>Nakamura</em><span class="ini">EC</span></b><span>Wellness exam · Checked out</span></div>
+          <div class="ev" style="grid-column:4;grid-row:15 / span 3"><b><i>11:15</i>Ziggy + Lulu <svg class="i s3"><use href="#cat"/></svg><span class="ini">EC</span></b><span>Tibbetts · Wellness exam ×2</span><div class="cl"><span class="chip green">✓ Confirmed</span><span class="chip"><svg class="i"><use href="#users"/></svg>Family</span></div></div>
+          <div class="ev" style="grid-column:4;grid-row:24 / span 3"><b><i>1:30</i>Sir Pounce <svg class="i s3"><use href="#cat"/></svg><span class="ini">EC</span></b><span>Belhadj · New-client exam</span><div class="cl"><span class="chip green">✓ Confirmed</span><span class="chip brand">NEW</span></div></div>
+          <div class="ev" style="grid-column:4;grid-row:35 / span 2"><b><i>4:15</i>Pixel <svg class="i s3"><use href="#cat"/></svg><em>Escobedo</em><span class="ini">EC</span></b><div class="cl"><span>Kitten visit</span><span class="chip green">✓ Confirmed</span></div></div>
+
+          <!-- Surgery suite · Dr. Reed -->
+          <div class="ev out mr" style="grid-column:5;grid-row:4 / span 6"><b><i>8:30</i>Bandit <svg class="i s3"><use href="#dog"/></svg><span class="ini">MR</span></b><span>Villarreal</span><span>Neuter</span><div class="cl"><span class="chip">Done</span></div></div>
+          <div class="ev inroom mrs" style="grid-column:5;grid-row:10 / span 6"><b><i>10:00</i>Waffles <svg class="i s3"><use href="#cat"/></svg><span class="ini">MR</span></b><span>Eckhart</span><span>Dental cleaning</span><div class="cl"><span class="chip">In suite</span></div></div>
+          <div class="ev mr" style="grid-column:5;grid-row:16 / span 4"><b><i>11:30</i>Mabel <svg class="i s3"><use href="#dog"/></svg><span class="ini">MR</span></b><span>Driscoll · Spay</span><div class="cl"><span class="chip" style="background:var(--violet-soft);color:var(--violet)">Next</span></div></div>
+          <div class="ev quiet" style="grid-column:5;grid-row:25 / span 6"><span>Suite free this afternoon<br>Pickups go through Exam 2</span></div>
+
+          <div class="now" style="grid-row:12; margin-top:11.7px"></div>
+          <span class="nowlbl" style="grid-row:12">10:40</span>
+        </div>
+
+        <div class="rail stack" style="gap:10px">
+          <div class="card clip">
+            <div class="card-h"><svg class="i s4"><use href="#clipboard-document-check"/></svg>Drop-offs today<span class="count">3</span></div>
+            <div class="dr"><div class="top"><span class="n">Bandit</span><svg class="i s35 muted"><use href="#dog"/></svg><span class="s">· Villarreal</span><span class="chip brand">With the team</span></div><p class="s">In 7:36 AM · pickup 3:30 PM · <span class="ok">Deposit $150 ✓</span></p></div>
+            <div class="dr"><div class="top"><span class="n">Waffles</span><svg class="i s35 muted"><use href="#cat"/></svg><span class="s">· Eckhart</span><span class="chip brand">With the team</span></div><p class="s">In 7:48 AM · pickup 4:00 PM · <span class="ok">Deposit $150 ✓</span></p></div>
+            <div class="dr"><div class="top"><span class="n">Mabel</span><svg class="i s35 muted"><use href="#dog"/></svg><span class="s">· Driscoll</span><span class="chip">Dropped off</span></div><p class="s">In 7:55 AM · pickup 4:30 PM · <span class="ok">Deposit $150 ✓</span></p></div>
+            <div class="lnk">Open drop-offs <svg class="i s35"><use href="#arrow-right"/></svg></div>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h"><svg class="i s4"><use href="#clock"/></svg>Same-day sick slots<span class="r">2 of 3 filled</span></div>
+            <div class="sr"><span class="tm">10:45</span><div><p class="n">Dr. Cho · Pepper <svg class="i s3 muted" style="vertical-align:-1px"><use href="#dog"/></svg></p><p class="s">Filled 10:23 by Callie</p></div></div>
+            <div class="sr"><span class="tm">12:00</span><div><p class="n">Dr. Cho · Maple <svg class="i s3 muted" style="vertical-align:-1px"><use href="#dog"/></svg></p><p class="s">Filled 8:05</p></div></div>
+            <div class="sr left"><span class="tm">3:00</span><div><p class="n">Dr. Reed · open</p><span class="chip amber" style="margin-top:3px;white-space:normal;line-height:14px;padding:2px 8px">Held until 2:00 PM, then opens to online booking</span></div></div>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h"><svg class="i s4"><use href="#calendar"/></svg>Tomorrow · Thu, Dec 3</div>
+            <div class="card-b" style="padding:10px 12px 12px">
+              <p class="sm"><b class="fw6">27 booked</b> · 22 confirmed</p><p class="sm"><b class="fw6 t-amber">5 waiting</b> · 2 drop-offs</p>
+              <div class="tm-prog"><i></i></div>
+              <span class="btn outline sm block"><svg class="i s4"><use href="#paper-airplane"/></svg>Text the 5 again</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg></span></aside>
+</div>
+</body>
+</html>
