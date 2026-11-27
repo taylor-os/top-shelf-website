@@ -337,7 +337,7 @@
  },
  "medical-dental": {
   "label": "Medical & Dental",
-  "built_around": "Built around the day by chair, confirmations, filling open time, recall, and patient balances. No health details anywhere.",
+  "built_around": "Built around the day by chair, confirmations, filling open time, recall, and patient balances. Texts and reminders never say why a patient is coming in.",
   "screens": [
    {
     "file": "1-today-d.webp",

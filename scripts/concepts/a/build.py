@@ -296,6 +296,7 @@ def home_body(P, R):
     hero_m = frame(R, crm_rel("home-services", "6-ai-call-texts-m.webp"), "phone",
                    "Everline Home Services sample CRM: a call the AI receptionist booked", "Sample", "hero-m", True)
 
+    more_list = "".join(f"<li>{e(g['title'])}</li>" for g in C["crm"]["benefit_groups"])
     cards = []
     for idx, (card, hint) in enumerate(zip(s["crm"]["cards"], BENTO)):
         ok, rel, kind, p = hint_rel(hint)
@@ -303,7 +304,9 @@ def home_body(P, R):
         cards.append(f'<article class="bento-card b{idx} k-{kind}"><div class="bento-copy"><h3>{e(card["title"])}</h3>'
                      f'<p>{e(card["body"])}</p></div>{fig}</article>')
     cards.append(f'<a class="bento-card b5 more" href="{P}{s["crm"]["link_href"].replace("solution-crm.html", "crm.html")}">'
-                 f'<h3>{e(s["crm"]["link_label"])}</h3><span class="arrow" aria-hidden="true">&rarr;</span></a>')
+                 f'<h3>{e(s["crm"]["link_label"])}</h3>'
+                 f'<ul class="more-list">{more_list}</ul>'
+                 f'<span class="arrow" aria-hidden="true">&rarr;</span></a>')
 
     web_strip = "".join(
         f'<a class="web-thumb" href="{P}industries/{p["slug"]}-website.html" aria-label="{e(p["business"])} sample website">'

@@ -214,8 +214,8 @@ STAGE = [  # the five beats of one job, told with Everline's screens
     ("A call comes in", 0, "6-ai-call-texts-m.webp"),
     ("It's booked", 3, "2-dispatch-board-d.webp"),
     ("The estimate goes out", 2, "5-customer-estimate-m.webp"),
-    ("They pay from their phone", 1, "3-tech-get-paid-m.webp"),
-    ("You ask for the review", 4, "1-today-d.webp"),
+    ("Paid before the truck leaves", None, "3-tech-get-paid-m.webp"),
+    ("Your morning, all in one place", None, "1-today-d.webp"),
 ]
 
 
@@ -234,8 +234,9 @@ def home():
 
     beats, rail = [], []
     for i, (title, card, file) in enumerate(STAGE):
-        cd = s["crm"]["cards"][card]
         sc = caps.get(file)
+        # beats with no matching card use the screen's own caption, so copy and screen always agree
+        cd = s["crm"]["cards"][card] if card is not None else {"title": sc["role"] if sc else "", "body": sc["caption"] if sc else ""}
         fig = shot(cx, hs, sc, True, "beat-dev") if sc else ""
         beats.append(f'''<li class="beat"><div class="beat-copy"><p class="beat-n">0{i + 1}</p>
 <h3 class="beat-h">{e(title)}</h3><p class="beat-sub">{e(cd["title"])}</p><p>{e(cd["body"])}</p></div>

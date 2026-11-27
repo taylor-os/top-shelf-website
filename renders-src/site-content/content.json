@@ -23,7 +23,7 @@
       "From $99 a month for up to 10 users",
       "No setup fee",
       "Month to month, no contract",
-      "Websites from $499, one time"
+      "Websites $499, one time"
     ],
     "sections": {
       "crm": {
@@ -169,7 +169,7 @@
       {"step": "3", "title": "Send your first invoice", "body": "Pick the plan for your team size and your phone line, then text your first estimate or invoice."}
     ],
     "day_one": {
-      "h": "Your first-day checklist",
+      "h": "Your setup checklist",
       "items": [
         "Your phone line is on, with the number you have now or a new one",
         "Your team has their logins (up to 10 people on the $99 plan)",
@@ -179,7 +179,7 @@
       ]
     },
     "anti_trap": {
-      "h": "What you won't run into",
+      "h": "The terms, plainly",
       "items": [
         "No contract. The plan is month to month.",
         "No setup fee.",
@@ -202,7 +202,7 @@
       {"q": "How long does setup take?", "a": "It depends on your business and what you need set up. We go over that on your demo call."},
       {"q": "Who sets it up?", "a": "We call you and walk through how your business runs. We go over exactly what we set up for you on your demo call."},
       {"q": "Can I bring my customer list over?", "a": "We go over how to bring in the customers you have now on your demo call."},
-      {"q": "Who owns my data, and can I export it?", "a": "We go over how your data comes in and goes out on your demo call."},
+      {"q": "Who owns my data, and can I export it?", "a": "Your customer data is yours: every name, number and job, and you can take it with you if you ever leave. The website we build for you is yours too, and so are your phone number and your domain. We go over how the data comes out on your demo call."},
       {"q": "Can customers pay from their phone?", "a": "Yes. You text the invoice, and they pay by card from the link."},
       {"q": "What do card payments cost?", "a": "We go over the card rate on your demo call, so you know the number before you sign up."},
       {"q": "When do I get paid after a customer pays by card?", "a": "We go over payout timing on your demo call."},

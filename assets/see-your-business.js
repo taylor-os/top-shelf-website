@@ -83,6 +83,7 @@ function css(){
   '.syb-how{width:100%;margin:2px 0 0;font-size:13px;color:'+C.ink3+'}'+
   '#tssyb-tab{position:fixed;left:16px;bottom:16px;z-index:99989;background:linear-gradient(180deg,'+C.goldBright+','+C.gold+' 58%,#A98A4E);color:'+C.ground+';border:1px solid rgba(228,201,138,.6);border-radius:999px;padding:11px 18px;font-family:'+FB+';font-weight:600;font-size:13px;cursor:pointer;display:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 12px 28px -10px rgba(201,168,106,.55),0 3px 8px -2px rgba(0,0,0,.45);transition:transform .34s cubic-bezier(.34,1.3,.5,1)}'+
   '#tssyb-tab:hover{transform:translateY(-3px)}'+
+  '@media(max-width:768px){#tssyb-tab{bottom:74px}}'+ /* sit above the phone Call/Text bar, never on it */
   '#tssyb-tab:focus-visible{outline:2px solid '+C.ink+';outline-offset:2px}'+
   '@media(max-width:560px){#tssyb{padding:0}.syb-card{max-width:100%;max-height:100vh;min-height:100vh;border-radius:0;padding:20px 16px 28px}.syb-shots{grid-template-columns:1fr}.syb-chip{font-size:13px;padding:8px 12px}.syb-btn{flex:1 1 100%}}'+
   '@media(prefers-reduced-motion:reduce){.syb-card{animation:none}#tssyb-tab,.syb-chip,.syb-btn{transition:none}#tssyb-tab:hover{transform:none}}';

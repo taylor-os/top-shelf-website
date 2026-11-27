@@ -142,6 +142,8 @@ figure { margin: 0; }
 .bento-card.more h3 { color: #fff; font-size: 1.5rem; }
 .bento-card.more .arrow { font-size: 2rem; align-self: flex-end; transition: transform .25s; }
 .bento-card.more:hover .arrow { transform: translateX(6px); }
+.more-list { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.more-list li { font-size: .875rem; color: #dbe3f5; border: 1px solid rgba(255, 255, 255, .22); border-radius: 999px; padding: 5px 12px; }
 
 /* ---------- 3 steps */
 .steps-sec { padding-top: 24px; }
