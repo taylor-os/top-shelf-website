@@ -1,0 +1,464 @@
+{
+ "home-services": {
+  "label": "Home Services",
+  "built_around": "Built around the dispatch board, getting paid at the door, and good/better/best estimates the homeowner picks from.",
+  "screens": [
+   {
+    "file": "1-today-d.webp",
+    "device": "desktop",
+    "role": "Owner · Today",
+    "caption": "The owner's morning: jobs, money, and the 2 AM no-heat call still waiting for a tech."
+   },
+   {
+    "file": "2-dispatch-board-d.webp",
+    "device": "desktop",
+    "role": "Dispatcher · Day board",
+    "caption": "One row per tech, the unassigned tray, free gaps between stops, and a moved visit with \"tell the customer?\"."
+   },
+   {
+    "file": "3-tech-get-paid-m.webp",
+    "device": "phone",
+    "role": "Technician · Get paid",
+    "caption": "Paid at the front door: card, a tip that goes to the tech, tax on materials only."
+   },
+   {
+    "file": "4-estimates-awaiting-m.webp",
+    "device": "phone",
+    "role": "Owner · Estimates waiting",
+    "caption": "Estimates going cold, with who to call and when they were last contacted."
+   },
+   {
+    "file": "5-customer-estimate-m.webp",
+    "device": "phone",
+    "role": "Homeowner · Estimate",
+    "caption": "The company's own estimate page: repair or replace as good, better, best."
+   },
+   {
+    "file": "6-ai-call-texts-m.webp",
+    "device": "phone",
+    "role": "Inbox · 2 AM call",
+    "caption": "The AI receptionist booked a no-heat call overnight, then the confirmation and on-my-way texts."
+   }
+  ]
+ },
+ "car-lots": {
+  "label": "Car Lots",
+  "built_around": "Built around the car, the deal and the in-house loan: money in today, what's owed, and deals not finished.",
+  "screens": [
+   {
+    "file": "1-home-d.webp",
+    "device": "desktop",
+    "role": "Owner · Home",
+    "caption": "The lot's day: loan and down payments in, what's past due, cars by stage, sold deals still needing paperwork."
+   },
+   {
+    "file": "2-deal-jacket-d.webp",
+    "device": "desktop",
+    "role": "Owner · Deal jacket",
+    "caption": "One deal from car to title: how they pay, the trade, the payment grid, the figures."
+   },
+   {
+    "file": "3-collections-d.webp",
+    "device": "desktop",
+    "role": "Finance · Collections",
+    "caption": "Past-due loans sorted by missed promises and promises due today, with pay links and a contact log."
+   },
+   {
+    "file": "4-my-day-m.webp",
+    "device": "phone",
+    "role": "Salesperson · My day",
+    "caption": "New leads to take, test drives, find a car. No cost or gross on the salesperson's screen."
+   },
+   {
+    "file": "5-pay-page-m.webp",
+    "device": "phone",
+    "role": "Buyer · Car payment",
+    "caption": "The lot's own pay page: first name, amount due, pay by card."
+   },
+   {
+    "file": "6-text-thread-m.webp",
+    "device": "phone",
+    "role": "Texts · After-hours call",
+    "caption": "The AI receptionist answered an 8:47 pm call and booked a test drive, then one confirmation text."
+   }
+  ]
+ },
+ "auto-repair": {
+  "label": "Auto Repair",
+  "built_around": "Built around the shop board and the repair order the customer approves job by job from a text.",
+  "screens": [
+   {
+    "file": "1-owner-home-d.webp",
+    "device": "desktop",
+    "role": "Owner · Service today",
+    "caption": "Who to call: ready for pickup, money owed, waiting on an OK, and declined work to follow up."
+   },
+   {
+    "file": "2-shop-board-d.webp",
+    "device": "desktop",
+    "role": "Advisor · Shop board",
+    "caption": "Cars by stage, rush flags, ready-by times, waiting on parts, the tech's clock."
+   },
+   {
+    "file": "3-repair-order-d.webp",
+    "device": "desktop",
+    "role": "Advisor · Repair order",
+    "caption": "The concern, each job with labor and parts, photos, and approved / not answered / declined."
+   },
+   {
+    "file": "4-tech-my-jobs-m.webp",
+    "device": "phone",
+    "role": "Technician · My jobs",
+    "caption": "A big job clock, add photo, notes, waiting on parts. No prices or customer names."
+   },
+   {
+    "file": "5-customer-estimate-m.webp",
+    "device": "phone",
+    "role": "Car owner · Estimate",
+    "caption": "Approve or decline each job from a texted link, with photos of their own worn parts."
+   },
+   {
+    "file": "6-ai-call-thread-m.webp",
+    "device": "phone",
+    "role": "Advisor · Stranded driver",
+    "caption": "The AI receptionist answered a driver whose car died and booked her drop-off."
+   }
+  ]
+ },
+ "auto-detailing": {
+  "label": "Auto Detailing",
+  "built_around": "Built around packages priced by vehicle size, deposits, add-ons the customer approves, and no-shows.",
+  "screens": [
+   {
+    "file": "1-owner-home-d.webp",
+    "device": "desktop",
+    "role": "Owner · Home",
+    "caption": "Deposits held, money in, cars ready for pickup, add-ons waiting on the customer, detailer load."
+   },
+   {
+    "file": "2-work-order-d.webp",
+    "device": "desktop",
+    "role": "Owner · Work order",
+    "caption": "The Tahoe's work order: size price, deposit applied, a pet-hair add-on waiting on an OK, check-in photos."
+   },
+   {
+    "file": "3-front-desk-calendars-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Calendars",
+    "caption": "Did they come? The no-show step that keeps the deposit, plus check-ins and pickups."
+   },
+   {
+    "file": "4-detailer-my-jobs-m.webp",
+    "device": "phone",
+    "role": "Detailer · My jobs",
+    "caption": "Start/stop clock, photos, and an add-on locked until the customer says yes."
+   },
+   {
+    "file": "5-customer-booking-m.webp",
+    "device": "phone",
+    "role": "Customer · Booking",
+    "caption": "The shop's booking page: the price for her vehicle size, add-ons, and the deposit due now."
+   },
+   {
+    "file": "6-text-thread-m.webp",
+    "device": "phone",
+    "role": "Texts · Add-on approval",
+    "caption": "Booked by the AI receptionist, the add-on approved by text, then the ready text with a pay link."
+   }
+  ]
+ },
+ "real-estate": {
+  "label": "Real Estate",
+  "built_around": "Built around contract deadlines, who to call today, and listings that publish to her website.",
+  "screens": [
+   {
+    "file": "1-today-d.webp",
+    "device": "desktop",
+    "role": "Agent · Today",
+    "caption": "Contract deadlines in the next 48 hours first, then who to call and why, then today's calendar."
+   },
+   {
+    "file": "2-listings-d.webp",
+    "device": "desktop",
+    "role": "Agent · Listings",
+    "caption": "Each listing's MLS status next to what her website shows; a price change already live."
+   },
+   {
+    "file": "3-deal-d.webp",
+    "device": "desktop",
+    "role": "Coordinator · Deal",
+    "caption": "The TREC contract timeline: option period, earnest money, title, lender, each with a phone number."
+   },
+   {
+    "file": "4-buyer-m.webp",
+    "device": "phone",
+    "role": "Agent · Buyer on the go",
+    "caption": "The buyer's pre-approval, wish list, matching homes, and today's showings."
+   },
+   {
+    "file": "5-listing-page-m.webp",
+    "device": "phone",
+    "role": "Buyer · Her website",
+    "caption": "The listing page on Elena's own website, with Book a showing."
+   },
+   {
+    "file": "6-ai-call-m.webp",
+    "device": "phone",
+    "role": "Texts · Listing call",
+    "caption": "The AI receptionist booked a listing appointment while she was at a showing."
+   }
+  ]
+ },
+ "fitness": {
+  "label": "Gyms & Fitness",
+  "built_around": "Built around classes and capacity, check-in, keeping members coming, and membership payments.",
+  "screens": [
+   {
+    "file": "1-dashboard-d.webp",
+    "device": "desktop",
+    "role": "Owner · Dashboard",
+    "caption": "Today's classes and how full, payments to fix, members who haven't been in for two weeks."
+   },
+   {
+    "file": "2-classes-week-d.webp",
+    "device": "desktop",
+    "role": "Owner · Classes week",
+    "caption": "The class schedule with capacity, waitlists and one class's roster."
+   },
+   {
+    "file": "3-front-desk-checkin-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Check-in",
+    "caption": "Scan or type a member; a past-due member at the counter with collect, let in, or text."
+   },
+   {
+    "file": "4-coach-roster-m.webp",
+    "device": "phone",
+    "role": "Coach · Roster",
+    "caption": "Here or no-show for the class on now. No billing on the coach's screen."
+   },
+   {
+    "file": "5-member-app-m.webp",
+    "device": "phone",
+    "role": "Member · Gym app",
+    "caption": "The gym's own app: her booked class, spots left today, her check-in code."
+   },
+   {
+    "file": "6-ai-intro-text-m.webp",
+    "device": "phone",
+    "role": "Texts · Intro class",
+    "caption": "The AI receptionist booked an intro class from a 9:48 PM call."
+   }
+  ]
+ },
+ "salon-spa": {
+  "label": "Salon & Spa",
+  "built_around": "Built around each person's chair, color processing time, the ticket with tips, and rebooking.",
+  "screens": [
+   {
+    "file": "1-owner-today-d.webp",
+    "device": "desktop",
+    "role": "Owner · Today",
+    "caption": "Every chair's day, open hours, who hasn't confirmed, who's due back, yesterday's day close."
+   },
+   {
+    "file": "2-day-by-chair-d.webp",
+    "device": "desktop",
+    "role": "Owner · Day by chair",
+    "caption": "One column per person; another client booked inside a color client's processing time."
+   },
+   {
+    "file": "3-checkout-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Checkout",
+    "caption": "The ticket by person, deposit taken off, the tip split by who did what, book next visit."
+   },
+   {
+    "file": "4-stylist-calendar-m.webp",
+    "device": "phone",
+    "role": "Stylist · My day",
+    "caption": "The client in the chair with her last formula and photos, and who's next."
+   },
+   {
+    "file": "5-booking-m.webp",
+    "device": "phone",
+    "role": "Client · Booking",
+    "caption": "The salon's own booking page: pick the person, see the deposit and the 48-hour rule."
+   },
+   {
+    "file": "6-text-thread-m.webp",
+    "device": "phone",
+    "role": "Texts · Rebook",
+    "caption": "An after-hours booking, the deposit hold, the reminder, and her \"C\" to confirm."
+   }
+  ]
+ },
+ "restaurants": {
+  "label": "Restaurants & Bars",
+  "built_around": "Built around covers, the floor plan, guest notes and allergies, and private events.",
+  "screens": [
+   {
+    "file": "1-tonight-d.webp",
+    "device": "desktop",
+    "role": "Owner · Tonight",
+    "caption": "Covers by 15 minutes against the booking limit, and the regulars, occasions and allergies to know."
+   },
+   {
+    "file": "2-floor-plan-d.webp",
+    "device": "desktop",
+    "role": "Host · Floor plan",
+    "caption": "Tables by section: open, reserved, seated, clearing; who's arriving next and the waitlist."
+   },
+   {
+    "file": "3-events-d.webp",
+    "device": "desktop",
+    "role": "Events · Pipeline",
+    "caption": "Private events from inquiry to final count, with the event sheet and deposits."
+   },
+   {
+    "file": "4-my-tables-m.webp",
+    "device": "phone",
+    "role": "Server · My tables",
+    "caption": "Only their own tables, with the anniversary, the regular, and a red allergy band."
+   },
+   {
+    "file": "5-reserve-m.webp",
+    "device": "phone",
+    "role": "Guest · Reserve",
+    "caption": "The restaurant's own reservation page: party size, times, allergy field."
+   },
+   {
+    "file": "6-ai-call-m.webp",
+    "device": "phone",
+    "role": "Inbox · Table for 6",
+    "caption": "The AI receptionist took \"table for 6 at 7?\", offered times, and noted a tree nut allergy."
+   }
+  ]
+ },
+ "medical-dental": {
+  "label": "Medical & Dental",
+  "built_around": "Built around the day by chair, confirmations, filling open time, recall, and patient balances. No health details anywhere.",
+  "screens": [
+   {
+    "file": "1-today-d.webp",
+    "device": "desktop",
+    "role": "Dentist · Today",
+    "caption": "Are the chairs full, who hasn't confirmed, new patients booked while you were busy, balances to collect."
+   },
+   {
+    "file": "2-schedule-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Schedule",
+    "caption": "The day by operatory, and a cancellation filled from the ASAP list by text."
+   },
+   {
+    "file": "3-front-desk-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Counter",
+    "caption": "Checkouts, tomorrow's confirmations, and the recall list that books families together."
+   },
+   {
+    "file": "4-my-chair-m.webp",
+    "device": "phone",
+    "role": "Hygienist · My chair",
+    "caption": "Book the next cleaning before the patient leaves, then send them to checkout."
+   },
+   {
+    "file": "5-patient-page-m.webp",
+    "device": "phone",
+    "role": "Patient · Family page",
+    "caption": "The practice's page: the family's visits, a balance to pay, office details."
+   },
+   {
+    "file": "6-ai-receptionist-m.webp",
+    "device": "phone",
+    "role": "Inbox · Lunch call",
+    "caption": "The AI receptionist booked a new patient and her daughter at lunch. Texts never say why anyone is coming in."
+   }
+  ]
+ },
+ "legal": {
+  "label": "Law Firms",
+  "built_around": "Built around intake speed, conflict checks before consults, the matter pipeline, court dates and retainers. No case facts anywhere.",
+  "screens": [
+   {
+    "file": "1-today-d.webp",
+    "device": "desktop",
+    "role": "Attorney · Today",
+    "caption": "Everything that came in since Friday and how it was handled, plus today's consults and court."
+   },
+   {
+    "file": "2-matters-d.webp",
+    "device": "desktop",
+    "role": "Attorney · Matters",
+    "caption": "Consult booked, retainer sent, active, closed, with one matter's dates and fees open."
+   },
+   {
+    "file": "3-intake-d.webp",
+    "device": "desktop",
+    "role": "Intake · Desk",
+    "caption": "A ringing line, the conflict check, and a new client's consult with the fee paid."
+   },
+   {
+    "file": "4-back-from-court-m.webp",
+    "device": "phone",
+    "role": "Attorney · Back from court",
+    "caption": "What happened while in court, the next meeting, and a conflict check to clear."
+   },
+   {
+    "file": "5-client-page-m.webp",
+    "device": "phone",
+    "role": "Client · Firm page",
+    "caption": "The firm's own page: next date, the fee and what's left, pay now, the team."
+   },
+   {
+    "file": "6-ai-call-thread-m.webp",
+    "device": "phone",
+    "role": "Texts · 11 PM call",
+    "caption": "The AI receptionist screened an 11 PM call, said it can't give legal advice, and booked a consult."
+   }
+  ]
+ },
+ "retail": {
+  "label": "Retail & Local Shops",
+  "built_around": "Built around regulars, holds and special orders, the want list, and telling people when it's in.",
+  "screens": [
+   {
+    "file": "1-today-d.webp",
+    "device": "desktop",
+    "role": "Owner · Today",
+    "caption": "Holds going home today, items that came in, house accounts, and who to reach out to."
+   },
+   {
+    "file": "2-hold-shelf-d.webp",
+    "device": "desktop",
+    "role": "Owner · Hold shelf",
+    "caption": "The hold shelf by cubby: who it's for, what they owe, how long it's held."
+   },
+   {
+    "file": "3-customer-card-m.webp",
+    "device": "phone",
+    "role": "Shop lead · Customer card",
+    "caption": "Knowing the customer at the counter: what she loves and the wish list she shared."
+   },
+   {
+    "file": "4-want-list-m.webp",
+    "device": "phone",
+    "role": "Owner · Want list",
+    "caption": "Who asked for what, and one personal text to each person when it comes in."
+   },
+   {
+    "file": "5-order-is-in-m.webp",
+    "device": "phone",
+    "role": "Customer · It's in",
+    "caption": "The shop's own page: her order is in, on shelf A2, pay now or at pickup."
+   },
+   {
+    "file": "6-call-to-text-m.webp",
+    "device": "phone",
+    "role": "Texts · After hours",
+    "caption": "The AI receptionist took an after-hours call and never claims stock; the owner texts back in the morning."
+   }
+  ]
+ }
+}
