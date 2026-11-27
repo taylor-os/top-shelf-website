@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book an appointment · Studio Marlowe Salon &amp; Spa</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap">
+<style>
+  body.cx { background: var(--cx-bg); color: var(--cx-ink); }
+  .cx .phone { background: var(--cx-bg); }
+  .cx-top { border-bottom: 1px solid var(--cx-line); background: var(--cx-card); padding: 16px 20px 14px; }
+  .cx-logo { border-radius: 999px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 19px; font-weight: 700; letter-spacing: .04em; }
+  .cx-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 21px; font-weight: 700; letter-spacing: .01em; }
+  .cx-name small { font-family: var(--font); font-size: 12.5px; font-weight: 400; color: var(--cx-muted); margin-top: 1px; }
+  .cx-body { gap: 14px; padding: 14px 20px 18px; }
+  .stepline { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--cx-muted); }
+  .stepline a { display: inline-flex; align-items: center; gap: 4px; color: var(--cx-ink); font-weight: 500; }
+  .cx h2 { margin-top: 4px; }
+  .cx h3 { font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .picked { background: var(--cx-card); border: 1px solid var(--cx-line); border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: center; }
+  .picked .t { font-size: 15px; font-weight: 600; }
+  .picked .s { font-size: 13px; color: var(--cx-muted); }
+  .picked a { margin-left: auto; font-size: 13.5px; font-weight: 600; color: var(--accent); }
+  .days { gap: 7px; }
+  .days a { background: var(--cx-card); font-size: 11.5px; padding: 7px 0 8px; }
+  .days a b { font-size: 19px; line-height: 24px; }
+  .days a small { display: block; font-size: 10.5px; }
+  .slots a { background: var(--cx-card); padding: 11px 0; }
+  .slots a.on { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
+  .lbl { font-size: 13px; color: var(--cx-muted); margin-bottom: 8px; }
+  .policy { background: var(--accent-soft); border: 1px solid var(--cx-line); border-radius: 14px; padding: 12px 14px; display: flex; gap: 10px; font-size: 13.5px; line-height: 19.5px; color: var(--cx-ink-2); }
+  .policy svg { color: var(--accent); margin-top: 1px; }
+  .cx-btn { border-radius: 999px; }
+  .chosen { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--cx-ink); }
+  .chosen svg { color: var(--accent); }
+  .fine { text-align: center; font-size: 12px; color: var(--cx-muted); margin-top: -4px; }
+</style>
+</head>
+<body class="cx t-salon-spa">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <header class="cx-top">
+    <span class="cx-logo">SM</span>
+    <p class="cx-name">Studio Marlowe Salon &amp; Spa<small>McKinney, TX · (469) 555-0118</small></p>
+  </header>
+
+  <div class="cx-body">
+    <div>
+      <div class="stepline"><a><svg class="i s4"><use href="#chevron-left"/></svg>Back</a><span>Step 3 of 4</span></div>
+      <h2>Book an appointment</h2>
+    </div>
+
+    <div class="picked">
+      <div class="grow"><p class="t">Signature facial · 60 min · $100.00</p><p class="s flex" style="gap:0">with Sofia Lind, Esthetician<a>Change</a></p></div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:10px">Pick a day and time</h3>
+      <div class="days">
+        <a>Tue<b>8</b><small>Dec</small></a><a>Wed<b>9</b><small>Dec</small></a><a>Thu<b>10</b><small>Dec</small></a><a>Fri<b>11</b><small>Dec</small></a><a class="on">Sat<b>12</b><small>Dec</small></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="lbl">Times for Sofia, Sat 12/12</p>
+      <div class="slots">
+        <a>9:00 AM</a><a class="on">10:30 AM</a><a>1:00 PM</a>
+        <a>2:30 PM</a><a>4:00 PM</a>
+      </div>
+    </div>
+
+    <div class="chosen"><svg class="i s4"><use href="#calendar-days"/></svg>Sat, Dec 12 · 10:30 to 11:30 AM with Sofia</div>
+
+    <div class="policy">
+      <svg class="i s4"><use href="#information-circle"/></svg>
+      <p>A $25.00 deposit holds your time and comes off your bill. Cancel or move it free up to 48 hours before, from the link in your reminder. After that, or if you miss it, the fee is 50% ($50.00), and your deposit counts toward it.</p>
+    </div>
+
+    <a class="cx-btn">Next: your details</a>
+    <p class="fine">No account needed. We'll text you a reminder.</p>
+  </div>
+</div>
+</body>
+</html>

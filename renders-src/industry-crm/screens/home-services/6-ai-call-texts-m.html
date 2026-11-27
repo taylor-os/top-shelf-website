@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox · Gloria Banks · Prairie Air &amp; Heat (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .chead { background: var(--panel); border-bottom: 1px solid var(--line); padding: 6px 16px 12px; }
+  .chead .back { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 500; color: rgb(var(--b-600)); }
+  .chead .who { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+  .chead .who b { display: block; font-size: 18px; font-weight: 600; line-height: 1.25; }
+  .chead .who small { font-size: 13px; color: var(--muted-2); }
+  .callbtn { margin-left: auto; width: 42px; height: 42px; border-radius: 999px; display: grid; place-items: center; background: rgb(var(--b-500) / .14); color: rgb(var(--b-700)); }
+  .pills { display: flex; gap: 8px; margin-top: 10px; }
+  .pills a { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); font-size: 12.5px; font-weight: 500; color: var(--ink-2); background: var(--panel); white-space: nowrap; }
+  .pills a svg { color: rgb(var(--b-600)); }
+  .chat { padding: 8px 14px; gap: 4px; }
+  .callpill { align-self: center; display: inline-flex; align-items: center; gap: 7px; padding: 4px 6px 4px 12px; border-radius: 999px; background: rgb(var(--b-500) / .13); color: rgb(var(--b-800)); font-size: 12.5px; font-weight: 500; }
+  .callpill .pl { width: 22px; height: 22px; border-radius: 999px; background: rgb(var(--b-500)); color: var(--on-accent); display: grid; place-items: center; }
+  .ai-card { margin: 4px 0 6px; }
+  .ai-card .hd { padding: 8px 12px; font-size: 12.5px; letter-spacing: .04em; }
+  .ai-card .bd { padding: 9px 12px 11px; gap: 5px; font-size: 13px; line-height: 1.35; }
+  .ai-card .bd .k span:first-child { width: 62px; font-size: 12px; }
+  .msg { font-size: 13.5px; line-height: 1.36; padding: 7px 12px; max-width: 88%; }
+  .msg-t { padding: 2px 6px 1px; }
+  .composer { position: fixed; left: 0; right: 0; bottom: 64px; z-index: 9; }
+  .composer .send { width: auto; padding: 0 16px; border-radius: 999px; font-size: 14px; font-weight: 600; gap: 6px; display: flex; align-items: center; }
+</style>
+</head>
+<body class="t-home-services">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="statusbar light"><span>12:43</span><span class="icons"><svg class="i s4"><use href="#wifi"/></svg><svg class="i s6"><use href="#battery-100"/></svg></span></div>
+  <header class="chead">
+    <a class="back"><svg class="i s4"><use href="#arrow-left"/></svg>Inbox</a>
+    <div class="who">
+      <span class="av">GB</span>
+      <div><b>Gloria Banks</b><small>(469) 555-0182</small></div>
+      <span class="callbtn"><svg class="i"><use href="#phone"/></svg></span>
+    </div>
+    <div class="pills">
+      <a><svg class="i s35"><use href="#plus"/></svg>Book job</a>
+      <a><svg class="i s35"><use href="#user"/></svg>Brandi Kessler</a>
+      <a><svg class="i s35"><use href="#user-circle"/></svg>View client</a>
+    </div>
+  </header>
+
+  <div class="chat">
+    <span class="callpill"><svg class="i s35"><use href="#phone-arrow-down-left"/></svg>Incoming call · 3:41 · 2:14 AM<span class="pl"><svg class="i s3"><use href="#play"/></svg></span></span>
+
+    <div class="ai-card">
+      <div class="hd"><svg class="i s4"><use href="#sparkles"/></svg>AI SUMMARY<small>AI receptionist answered</small></div>
+      <div class="bd">
+        <div class="k"><span>Address</span><span>2208 Hollyberry Ln, McKinney</span></div>
+        <div class="k"><span>Problem</span><span>Furnace stopped overnight, no heat upstairs or down</span></div>
+        <div class="k"><span>Booked</span><span><b class="fw6">No-heat service, Wed, Nov 25, 1:00–3:00 PM</b></span></div>
+      </div>
+    </div>
+
+    <p class="msg-t r"><span class="tag">Confirmation</span> · 8:02 AM</p>
+    <div class="msg out">Hi Gloria, this is Prairie Air &amp; Heat. Your appointment is confirmed for Wednesday, Nov 25, 1:00 PM – 3:00 PM at 2208 Hollyberry Ln, McKinney, TX 75071. Your technician is Kyle. Need to reschedule? Just reply to this text.</div>
+    <p class="msg-t l">8:05 AM</p>
+    <div class="msg in">Thank you! Side gate is unlocked, the unit is in the attic.</div>
+    <p class="msg-t r"><span class="tag">On my way</span> · 12:41 PM</p>
+    <div class="msg out">Hi Gloria, this is Prairie Air &amp; Heat. Your technician is on the way and will be there shortly.</div>
+  </div>
+
+  <div class="composer">
+    <span class="in">Text back…</span>
+    <span class="send"><svg class="i s4"><use href="#paper-airplane"/></svg>Send</span>
+  </div>
+
+  <nav class="tabs">
+    <a><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Today</a>
+    <a><span class="ic"><svg class="i s6"><use href="#calendar-days"/></svg></span>Schedule</a>
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#inbox"/></svg></span>Inbox</a>
+    <a><span class="ic"><svg class="i s6"><use href="#wrench-screwdriver"/></svg></span>Jobs</a>
+    <a><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

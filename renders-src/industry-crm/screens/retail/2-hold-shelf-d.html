@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hold shelf · Larkhaven Goods</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .band { padding-bottom: 0; }
+  .band-tabs { margin-top: 10px; }
+  .band-tabs .count-pill { background: rgba(255,255,255,.2); color: var(--on-em); font-size: 11px; padding: 1px 7px; margin-left: 4px; }
+  .band-tabs a.on .count-pill { background: rgb(var(--b-500) / .15); color: rgb(var(--b-700)); }
+  .page { padding-top: 16px; }
+  .shelf-cols { display: grid; grid-template-columns: minmax(0, 2.25fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  /* the wooden shelf */
+  .shelf { background: linear-gradient(180deg, var(--head), var(--sink)); border: 1px solid var(--line-strong); border-radius: 14px; padding: 10px 12px 12px 10px;
+    box-shadow: var(--shadow); }
+  .sgrid { display: grid; grid-template-columns: 22px repeat(4, minmax(0, 1fr)); grid-template-rows: 20px repeat(5, 106px); gap: 7px; }
+  .sgrid .cn, .sgrid .rn { display: grid; place-items: center; font-size: 12px; font-weight: 600; color: var(--muted-2); }
+  .cub { position: relative; background: var(--panel); border-radius: 8px; border: 1px solid var(--line-strong); border-left: 4px solid var(--green);
+    padding: 8px 10px 8px 10px; display: flex; flex-direction: column; gap: 1px; min-width: 0; box-shadow: 0 1px 0 var(--line-strong), var(--shadow-sm); }
+  .cub .slot { position: absolute; top: 7px; right: 8px; font-size: 10.5px; font-weight: 600; color: var(--muted-2); }
+  .cub .nm { font-size: 13.5px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cub .it { font-size: 12px; line-height: 1.3; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cub .till { font-size: 11.5px; color: var(--muted-2); }
+  .cub .ft { margin-top: auto; display: flex; gap: 4px; flex-wrap: nowrap; overflow: hidden; }
+  .cub .chip { font-size: 10px; padding: 1px 8px; }
+  .cub.soon { border-left-color: var(--amber); background: color-mix(in srgb, var(--amber) 7%, var(--panel)); }
+  .cub.cole { border-left-color: var(--blue); }
+  .cub.acct { border-left-color: var(--faint); }
+  .cub.sel { border: 2px solid rgb(var(--b-500)); border-left: 4px solid rgb(var(--b-500)); box-shadow: 0 0 0 3px rgb(var(--b-500) / .18); background: rgb(var(--b-50)); }
+  .cub.open { background: var(--panel-2); border: 1.5px dashed var(--line-strong); box-shadow: none; align-items: center; justify-content: center; color: var(--muted-2); font-size: 12.5px; font-weight: 500; }
+  .shelf-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); padding: 10px 4px 0 32px; }
+  .shelf-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .shelf-legend i { width: 4px; height: 14px; border-radius: 2px; display: inline-block; }
+  .coming { display: flex; align-items: center; gap: 8px; margin-top: 12px; padding: 10px 14px; background: var(--panel); border-radius: 12px; box-shadow: var(--shadow); font-size: 13px; }
+  .coming .lbl { font-weight: 600; color: var(--ink-2); margin-right: 4px; white-space: nowrap; }
+  .coming .chip { font-size: 11.5px; font-weight: 500; padding: 3px 10px; color: var(--ink-2); }
+  /* detail panel */
+  .dp { padding: 0; overflow: hidden; }
+  .dp-h { padding: 14px 18px 12px; border-bottom: 1px solid var(--line); }
+  .dp-h .k { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgb(var(--b-600)); }
+  .dp-h h3 { font-size: 18px; font-weight: 600; margin-top: 2px; }
+  .dp-b { padding: 12px 18px 14px; display: flex; flex-direction: column; gap: 12px; }
+  .itembox { font-size: 13px; color: var(--ink-2); line-height: 1.4; }
+  .timeline { gap: 9px; padding-left: 30px; }
+  .timeline::before { left: 7px; top: 8px; bottom: 8px; }
+  .tl .pin { left: -30px; top: 3px; width: 16px; height: 16px; border-width: 2px; }
+  .tl .pin.f { background: rgb(var(--b-500)); }
+  .tl .t { font-size: 12.5px; font-weight: 500; line-height: 1.35; }
+  .tl .w { font-size: 11.5px; line-height: 1.3; }
+  .money { background: var(--well); border-radius: 10px; padding: 8px 12px; }
+  .money .sum-row { padding: 3px 0; font-size: 13px; }
+  .money .sum-row.total { margin-top: 4px; padding-top: 7px; font-size: 15px; }
+  .tog { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--ink-2); }
+  .sw { width: 34px; height: 20px; border-radius: 999px; background: rgb(var(--b-500)); position: relative; flex-shrink: 0; }
+  .sw::after { content: ""; position: absolute; right: 2px; top: 2px; width: 16px; height: 16px; border-radius: 999px; background: var(--panel); }
+  .acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .acts .primary { grid-column: 1 / -1; }
+</style>
+</head>
+<body class="t-retail">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">LG</span><span>Larkhaven Goods</span></div>
+    <nav class="nav">
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a class="on"><svg class="i"><use href="#archive-box"/></svg><span class="lbl">Hold shelf</span></a>
+      <a><svg class="i"><use href="#shopping-bag"/></svg><span class="lbl">Special orders</span></a>
+      <a><svg class="i"><use href="#heart"/></svg><span class="lbl">Want list</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Messages</span><span class="badge">1</span></a>
+      <a><svg class="i"><use href="#map-pin"/></svg><span class="lbl">Pickups &amp; delivery</span></a>
+      <a><svg class="i"><use href="#building-office-2"/></svg><span class="lbl">House accounts</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">CD</span><div><b>Claire Donovan</b><small>Owner</small></div></div>
+    <div class="side-co"><span class="av">L</span><div><b>Larkhaven Goods</b><small>Main Street, Grapevine</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div class="grow">
+        <h1>Hold shelf</h1>
+        <p class="sub"><b>14 of 20 slots in use</b> · 5 going home today · 1 leaves tomorrow</p>
+        <nav class="band-tabs">
+          <a class="on">Hold shelf</a><a>Special orders<span class="count-pill">6</span></a><a>Want list<span class="count-pill">5</span></a>
+        </nav>
+      </div>
+      <div class="right" style="align-self:flex-start;margin-top:4px">
+        <span class="btn sm"><svg class="i s4"><use href="#magnifying-glass"/></svg>Find a name</span>
+        <span class="btn primary sm"><svg class="i s4"><use href="#plus"/></svg>Put on hold</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="shelf-cols">
+        <div>
+          <div class="shelf">
+            <div class="sgrid">
+              <span></span><span class="cn">1</span><span class="cn">2</span><span class="cn">3</span><span class="cn">4</span>
+
+              <span class="rn">A</span>
+              <div class="cub"><p class="nm">Ellie Prescott ★</p><p class="it">Holiday card boxes ×4</p><p class="till">Till 12/15</p><div class="ft"><span class="chip green">Paid</span></div></div>
+              <div class="cub sel"><p class="nm">Priya Rigsby</p><p class="it">Stoneware dinner set ×4</p><p class="till">Till 12/14 · <span class="t-brand fw5">Special order</span></p><div class="ft"><span class="chip amber">$142.00 due</span></div></div>
+              <div class="cub open">Open</div>
+              <div class="cub"><p class="nm">Hank Otis</p><p class="it">Letterpress cards ×3 boxes</p><p class="till">Till 12/12</p><div class="ft"><span class="chip green">Paid</span></div></div>
+
+              <span class="rn">B</span>
+              <div class="cub soon"><p class="nm">Gloria Benavides</p><p class="it">Tea towels + bud vase</p><p class="till t-amber fw6">Leaves Wed</p><div class="ft"><span class="chip amber">$58.00 due</span></div></div>
+              <div class="cub acct"><p class="nm">Bramble &amp; Stone Realty</p><p class="it">Tag here · 12 boxes in back room</p><p class="till">Deliver Thu</p><div class="ft"><span class="chip">House account</span></div></div>
+              <div class="cub"><p class="nm">Tom Wexford</p><p class="it">Oat wool throw</p><p class="till">Till 12/12</p><div class="ft"><span class="chip green">Paid</span></div></div>
+              <div class="cub open">Open</div>
+
+              <span class="rn">C</span>
+              <div class="cub"><p class="nm">Ruth Akers</p><p class="it">Hand-dipped tapers ×6</p><p class="till">Till 12/12</p><div class="ft"><span class="chip green">Paid</span><span class="chip blue">Calls only</span></div></div>
+              <div class="cub"><p class="nm">Sofia Ralston ★</p><p class="it">Olivewood salad bowl</p><p class="till">Till 12/16</p><div class="ft"><span class="chip green">Paid</span></div></div>
+              <div class="cub cole"><p class="nm">Marcus Beckett</p><p class="it">Engraved pecan cutting board</p><p class="till">With Cole · Fri</p><div class="ft"><span class="chip">Deposit $20</span></div></div>
+              <div class="cub open">Open</div>
+
+              <span class="rn">D</span>
+              <div class="cub cole"><p class="nm">Jenna Morales</p><p class="it">Painted ornaments ×4</p><p class="till">With Cole · today</p><div class="ft"><span class="chip amber">$38.00 due</span></div></div>
+              <div class="cub"><p class="nm">Wes Calder</p><p class="it">Kids' puzzle + book set</p><p class="till">Till 12/11</p><div class="ft"><span class="chip green">Paid</span></div></div>
+              <div class="cub"><p class="nm">Mae Larrabee</p><p class="it">Linen napkins ×8</p><p class="till">Till 12/13</p><div class="ft"><span class="chip amber">$36.00 due</span></div></div>
+              <div class="cub open">Open</div>
+
+              <span class="rn">E</span>
+              <div class="cub"><p class="nm">Nora Whitfield</p><p class="it">Birthday gift basket</p><p class="till">Delivery tonight 7 PM</p><div class="ft"><span class="chip green">Paid</span></div></div>
+              <div class="cub"><p class="nm">Annie Cutler</p><p class="it">Wrapped candle trio</p><p class="till">Till 12/12</p><div class="ft"><span class="chip green">Paid</span></div></div>
+              <div class="cub open">Open</div>
+              <div class="cub open">Open</div>
+            </div>
+            <div class="shelf-legend">
+              <span><i style="background:var(--green)"></i>Waiting</span>
+              <span><i style="background:var(--amber)"></i>Leaves tomorrow</span>
+              <span><i style="background:var(--faint)"></i>House account</span>
+              <span><i style="background:var(--blue)"></i>With Cole</span>
+              <span><i style="background:transparent;border:1.5px dashed var(--line-strong);width:12px"></i>Open slot</span>
+            </div>
+          </div>
+          <div class="coming">
+            <span class="lbl">Coming in</span>
+            <span class="chip">Charcoal wool throw · Sofia R. · Fri</span>
+            <span class="chip">Monogrammed linen apron · Tasha G. · Sat</span>
+            <span class="chip">Stoneware mugs ×6 · want list · Dec 18</span>
+          </div>
+        </div>
+
+        <div class="card dp">
+          <div class="dp-h">
+            <p class="k">Slot A2</p>
+            <h3>Priya Rigsby</h3>
+            <div class="flex" style="margin-top:4px;flex-wrap:wrap;gap:6px">
+              <span class="sm muted">(972) 555-0148</span><span class="chip">Texts</span><span class="chip">Customer since 2024</span>
+            </div>
+          </div>
+          <div class="dp-b">
+            <p class="itembox"><b class="fw6" style="color:var(--ink)">Speckled stoneware dinner set, 4 settings</b><br>Special order from a Texas potter</p>
+            <div class="timeline">
+              <div class="tl"><span class="pin f"></span><p class="t">Ordered · deposit $100.00 paid by text</p><p class="w">Nov 10</p></div>
+              <div class="tl"><span class="pin f"></span><p class="t">Arrived</p><p class="w">Dec 7</p></div>
+              <div class="tl"><span class="pin f"></span><p class="t">"It's in" text sent</p><p class="w">Dec 7, 4:12 PM</p></div>
+              <div class="tl"><span class="pin f"></span><p class="t">Priya: "Yay! I'll come Tuesday after lunch"</p><p class="w">Dec 7, 4:30 PM</p></div>
+              <div class="tl"><span class="pin"></span><p class="t">Holding till Mon 12/14</p></div>
+            </div>
+            <div class="money">
+              <div class="sum-row"><span>Total (incl. tax)</span><b>$242.00</b></div>
+              <div class="sum-row"><span>Deposit</span><b>&minus;$100.00</b></div>
+              <div class="sum-row total"><span>Due at pickup</span><b>$142.00</b></div>
+            </div>
+            <div class="tog"><span class="sw"></span>Reminder text Sat 12/12 if not picked up</div>
+            <div class="acts">
+              <span class="btn primary sm"><svg class="i s4"><use href="#check"/></svg>Mark picked up</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#link"/></svg>Send pay link</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg>Text Priya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

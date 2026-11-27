@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check-in · Larkspur Strength Club</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .nav { gap: 2px; padding: 4px 8px; }
+  .nav a { padding: 8px 12px; }
+  .nav .sec { padding: 12px 12px 4px; }
+  .nav .sec.first { padding-top: 6px; }
+  .side .brand small { display: block; font-size: 12px; font-weight: 400; color: var(--on-em-dim); }
+  .band.slim { height: 64px; padding: 0 32px; align-items: center; }
+  .band.slim h1 { font-size: 20px; }
+  .search { display: flex; align-items: center; gap: 8px; width: 300px; height: 38px; padding: 0 14px; border-radius: 10px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: var(--on-em-dim); font-size: 14px; }
+  .band .bell { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; color: var(--on-em); }
+  .page { padding: 16px 32px 0; }
+  .split { display: grid; grid-template-columns: minmax(0, 68fr) minmax(0, 32fr); gap: 22px; align-items: start; }
+  .serif { font-family: var(--font); font-size: 26px; line-height: 34px; font-weight: 600; letter-spacing: -.025em; color: var(--ink); }
+  .lab { font-size: 14px; color: var(--muted); margin: 2px 0 12px; }
+  .scan-row { display: flex; gap: 10px; }
+  .scan-row .btn { min-height: 52px; }
+  .field { flex: 1; display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 16px; border-radius: 12px; background: var(--panel);
+    border: 1.5px solid rgb(var(--b-500)); box-shadow: 0 0 0 4px rgb(var(--b-500) / .18); font-size: 16px; color: var(--muted-2); }
+  .field .caret { width: 1.5px; height: 22px; background: var(--ink); margin-left: -6px; }
+  .field kbd { margin-left: auto; font: 500 12px var(--font); color: var(--muted-2); border: 1px solid var(--line); border-radius: 6px; padding: 2px 7px; background: var(--panel-2); }
+  .scanned { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-2); margin: 16px 0 8px; display: flex; gap: 6px; align-items: center; }
+  .mcard { display: flex; gap: 16px; padding: 18px 20px; border-left: 4px solid var(--amber); }
+  .mcard .av.lg { background: var(--amber-soft); color: var(--amber-ink); }
+  .mcard h3 { font-size: 20px; line-height: 26px; font-weight: 600; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; }
+  .mcard .s { font-size: 13.5px; color: var(--muted); line-height: 20px; }
+  .mcard .chip.red.lg { font-weight: 600; font-size: 12.5px; padding: 3px 12px; }
+  .mcard .why { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }
+  .mcard .btns { display: flex; gap: 8px; margin-top: 14px; }
+  .mcard .btns .btn { min-height: 42px; }
+  .mcard .fine { margin-top: 10px; font-size: 12.5px; color: var(--muted-2); display: flex; align-items: center; gap: 6px; }
+  .list-h { display: flex; align-items: center; gap: 8px; margin: 18px 0 8px; }
+  .list-h h2 { font-size: 15px; font-weight: 600; }
+  .list-h .r { margin-left: auto; font-size: 13px; font-weight: 600; color: rgb(var(--b-600)); }
+  .ci { display: flex; align-items: center; gap: 12px; padding: 7px 18px; }
+  .ci + .ci { border-top: 1px solid var(--line); }
+  .ci .tm { width: 62px; font-size: 13px; font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .ci .av { width: 30px; height: 30px; font-size: 11px; }
+  .ci .nm { flex: 1; font-size: 14px; font-weight: 500; }
+  .ci .cl { font-size: 12.5px; color: var(--muted); width: 110px; }
+  .ci .chips { width: 210px; }
+  .ci .undo { width: 44px; text-align: right; font-size: 13px; font-weight: 600; color: rgb(var(--b-600)); }
+  .ci.new { background: rgb(var(--b-500) / .06); }
+  .rail .card-h { padding: 10px 18px; font-size: 14px; }
+  .rail .bd { padding: 12px 18px 14px; font-size: 13.5px; color: var(--ink-2); line-height: 20px; }
+  .nc { display: flex; align-items: center; gap: 12px; }
+  .nc .time { width: 58px; }
+  .nc b { font-weight: 600; color: var(--ink); font-size: 15px; }
+  .cap { height: 5px; border-radius: 99px; background: var(--tint); margin-top: 6px; overflow: hidden; }
+  .cap i { display: block; height: 100%; background: rgb(var(--b-500)); }
+  .lnk { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 600; color: rgb(var(--b-600)); }
+  .ft { display: flex; gap: 10px; align-items: flex-start; }
+  .ft + .ft { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .ft b { color: var(--ink); font-weight: 600; }
+  .ft small { display: block; font-size: 12.5px; color: var(--muted); }
+  .live { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--ink); }
+  .live .dot { width: 8px; height: 8px; box-shadow: 0 0 0 4px var(--green-soft); }
+</style>
+</head>
+<body class="t-fitness">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">LS</span><span>Larkspur Strength Club<small>Tessa Villanueva · Front desk</small></span></div>
+    <nav class="nav">
+      <p class="sec first">Work</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Dashboard</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Members</span></a>
+      <a class="on"><svg class="i"><use href="#qr-code"/></svg><span class="lbl">Check-in</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Classes</span></a>
+      <a><svg class="i"><use href="#user"/></svg><span class="lbl">Personal training</span></a>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">2</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span></a>
+      <a><svg class="i"><use href="#user-plus"/></svg><span class="lbl">Leads</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span><span class="badge">3</span></a>
+      <p class="sec">Grow</p>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reputation</span></a>
+    </nav>
+    <div class="side-user"><span class="av">TV</span><div><b>Tessa Villanueva</b><small>Front desk</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band slim">
+      <h1>Check-in</h1>
+      <div class="right">
+        <span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search members…</span>
+        <span class="bell"><svg class="i"><use href="#bell"/></svg></span>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="split">
+        <div>
+          <h2 class="serif">Check-in</h2>
+          <p class="lab">Scan a member's check-in code or type a name</p>
+          <div class="scan-row">
+            <span class="btn outline"><svg class="i"><use href="#viewfinder-circle"/></svg>Scan with camera</span>
+            <span class="field"><svg class="i" style="color:rgb(var(--b-600))"><use href="#magnifying-glass"/></svg><span class="caret"></span>Code or name<kbd>Enter</kbd></span>
+          </div>
+
+          <p class="scanned"><svg class="i s35"><use href="#qr-code"/></svg>Scanned · 7:04 AM</p>
+          <div class="card mcard">
+            <span class="av lg">BH</span>
+            <div class="grow">
+              <h3>Brianna Harwick <span class="chip red lg">Past due · owes $59.00</span></h3>
+              <p class="s">Monthly · member since Mar 2025 · Last in Sat, Nov 28, 9:04 AM</p>
+              <p class="why">Card ending 4417 declined three times (Nov 22, 25, 29).</p>
+              <div class="btns">
+                <span class="btn primary"><svg class="i s4"><use href="#credit-card"/></svg>Collect $59.00</span>
+                <span class="btn outline"><svg class="i s4"><use href="#arrow-right-end-on-rectangle"/></svg>Let in anyway</span>
+                <span class="btn outline"><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text her</span>
+              </div>
+              <p class="fine"><svg class="i s35"><use href="#check-circle"/></svg>We texted her on Nov 29 to update her card.</p>
+            </div>
+          </div>
+
+          <div class="list-h"><h2>Checked in today</h2><span class="count-pill gray">since 5:00 AM</span><span class="r">See all →</span></div>
+          <div class="card clip">
+            <div class="ci new"><span class="tm">7:01 AM</span><span class="av">WI</span><span class="nm">Wes Ingram</span><span class="cl">Open gym</span><span class="chips"><span class="chip green">Paid</span></span><span class="undo">Undo</span></div>
+            <div class="ci"><span class="tm">6:52 AM</span><span class="av">TC</span><span class="nm">Tamara Coles</span><span class="cl">Open gym</span><span class="chips"><span class="chip green">Paid</span></span><span class="undo"></span></div>
+            <div class="ci"><span class="tm">6:36 AM</span><span class="av">CW</span><span class="nm">Caleb Wakefield</span><span class="cl">6:30 AM S&amp;C</span><span class="chips"><span class="chip green">Paid</span></span><span class="undo"></span></div>
+            <div class="ci"><span class="tm">6:27 AM</span><span class="av">PN</span><span class="nm">Priscilla Nguyen</span><span class="cl">6:30 AM S&amp;C</span><span class="chips"><span class="chip green">Paid</span></span><span class="undo"></span></div>
+            <div class="ci"><span class="tm">6:25 AM</span><span class="av">LC</span><span class="nm">Luis Cardenas</span><span class="cl">6:30 AM S&amp;C</span><span class="chips"><span class="chip amber">Retrying card</span></span><span class="undo"></span></div>
+            <div class="ci"><span class="tm">6:19 AM</span><span class="av">MV</span><span class="nm">Marisol Varner</span><span class="cl">6:30 AM S&amp;C</span><span class="chips"><span class="chip brand">First class</span><span class="chip green">Paid</span></span><span class="undo"></span></div>
+            <div class="ci"><span class="tm">6:16 AM</span><span class="av">JT</span><span class="nm">Jerome Tatum</span><span class="cl">6:30 AM S&amp;C</span><span class="chips"><span class="chip green">Paid</span></span><span class="undo"></span></div>
+            <div class="ci"><span class="tm">6:12 AM</span><span class="av">FS</span><span class="nm">Fatima Siddiqui</span><span class="cl">6:30 AM S&amp;C</span><span class="chips"><span class="chip green">Paid</span></span><span class="undo"></span></div>
+          </div>
+        </div>
+
+        <div class="stack rail" style="gap:14px;margin-top:4px">
+          <div class="card clip">
+            <div class="card-h">Next class</div>
+            <div class="bd">
+              <div class="nc"><span class="time"><b>9:00</b><small>AM</small></span>
+                <div class="grow"><b>Mobility</b><p class="muted" style="font-size:13px">Erin Sato · 7 of 20 booked</p><div class="cap"><i style="width:35%"></i></div></div></div>
+              <span class="lnk">See roster →</span>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h">First-timers today<span class="count">4</span></div>
+            <div class="bd">
+              <div class="ft"><span class="ic-box green sm"><svg class="i s35"><use href="#check"/></svg></span><p class="grow"><b>Marisol Varner</b><small>6:30 AM S&amp;C · checked in 6:19 AM</small></p></div>
+              <div class="ft"><span class="ic-box brand sm"><svg class="i s35"><use href="#clock"/></svg></span><p class="grow"><b>7:30 PM Intro / Foundations</b><small>Paige Corbin, Luke Ammons, Rina Desai</small></p></div>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h">Phones</div>
+            <div class="bd">
+              <p class="live"><span class="dot green"></span>AI receptionist is answering while you're busy</p>
+              <p class="muted mt-8" style="font-size:13px">Overnight: 2 calls, 1 intro booked</p>
+              <span class="lnk">Open Texts →</span>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h">Tasks<span class="count">3</span></div>
+            <div class="bd">
+              <div class="ft"><span class="ic-box sm"><svg class="i s35"><use href="#phone"/></svg></span><p class="grow"><b>Call back (469) 555-0143</b><small>Missed call last night, we texted back</small></p></div>
+              <div class="ft"><span class="ic-box sm"><svg class="i s35"><use href="#chat-bubble-left"/></svg></span><p class="grow"><b>Text Ethan Kowalski</b><small>Hasn't been in since Nov 14</small></p></div>
+              <div class="ft"><span class="ic-box sm"><svg class="i s35"><use href="#face-smile"/></svg></span><p class="grow"><b>Ask Marisol Varner about her first class</b><small>After the 6:30 AM S&amp;C</small></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

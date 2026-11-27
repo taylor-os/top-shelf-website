@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tonight · Wrenfield Kitchen &amp; Bar</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .page { padding: 16px 24px 16px; }
+  .tiles { margin-bottom: 16px; }
+  .tile { padding: 13px 16px; }
+  .tile .v { margin-top: 2px; }
+  .tile .s a { color: var(--amber-ink); font-weight: 600; }
+  .tile .s .was { color: var(--faint); }
+  .mid { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr); gap: 16px; margin-bottom: 16px; }
+  .low { display: grid; grid-template-columns: 1.12fr 1.12fr .96fr; gap: 16px; align-items: start; }
+  .card-h { padding: 0 18px; height: 40px; font-size: 14px; }
+
+  /* pacing chart */
+  .pace { padding: 12px 18px 14px; }
+  .pace .lg { display: flex; gap: 16px; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .pace .lg { flex-wrap: wrap; row-gap: 8px; }
+  .pace .lg span { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
+  .pace .lg .larpill { flex-basis: 100%; justify-content: flex-start; width: max-content; flex-grow: 0; max-width: max-content; font-size: 11.5px; font-weight: 600; color: rgb(var(--b-800)); background: rgb(var(--b-500) / .1); border: 1px dashed rgb(var(--b-500) / .5); border-radius: 999px; padding: 1px 9px; }
+  .pace .lg i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .chart { position: relative; height: 200px; display: grid; grid-template-columns: repeat(14, minmax(0,1fr)); gap: 8px; align-items: end;
+    border-bottom: 1px solid var(--line); }
+  .chart .limit { position: absolute; left: 0; right: 0; bottom: 108px; border-top: 2px dashed var(--line-strong); z-index: 1; }
+  .chart .limit span { position: absolute; left: 0; top: -20px; font-size: 11px; font-weight: 600; color: var(--muted); background: var(--panel); padding: 0 4px; }
+  .col-b { display: flex; flex-direction: column-reverse; align-items: stretch; position: relative; z-index: 2; }
+  .col-b .seg { background: rgb(var(--b-400)); border-radius: 0; }
+  .col-b .seg:first-child { border-radius: 0 0 2px 2px; }
+  .col-b .seg:last-of-type { border-top-left-radius: 5px; border-top-right-radius: 5px; }
+  .col-b .seg.amber { background: var(--amber); }
+  .col-b .seg.larder { background: rgb(var(--b-300) / .55); border: 1px dashed rgb(var(--b-500)); border-bottom: 0; display: grid; place-items: center;
+    font-size: 10px; font-weight: 600; color: rgb(var(--b-800)); line-height: 1.15; text-align: center; }
+  .col-b .n { font-size: 11px; font-weight: 600; text-align: center; color: var(--ink-2); margin-bottom: 2px; font-variant-numeric: tabular-nums; }
+  .col-b .n.amber { color: var(--amber-ink); }
+  .xl { display: grid; grid-template-columns: repeat(14, minmax(0,1fr)); gap: 8px; margin-top: 4px; font-size: 11px; color: var(--muted-2); text-align: center; font-variant-numeric: tabular-nums; }
+  .xl .hot { color: var(--amber-ink); font-weight: 600; }
+  .cap { margin-top: 10px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); background: var(--amber-soft);
+    border: 1px solid var(--line); border-radius: 10px; padding: 7px 12px; }
+  .cap svg { color: var(--amber); }
+
+  /* heads up */
+  .hu .r { display: flex; align-items: center; gap: 12px; padding: 6px 16px; }
+  .hu .r + .r { border-top: 1px solid var(--line); }
+  .hu .tm { width: 46px; flex-shrink: 0; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .hu .who { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .hu .who small { font-weight: 500; color: var(--muted-2); font-size: 12.5px; }
+  .hu .nt { font-size: 12.5px; color: var(--muted); line-height: 1.3; margin-top: 1px; }
+  .hu .chips { justify-content: flex-start; margin-top: 2px; gap: 4px; }
+  .hu .tb { margin-left: auto; flex-shrink: 0; min-width: 44px; text-align: center; font-size: 12px; font-weight: 600; color: rgb(var(--b-700));
+    background: rgb(var(--b-500) / .1); border-radius: 8px; padding: 4px 8px; }
+
+  /* bottom cards */
+  .li { display: flex; align-items: center; gap: 10px; padding: 8px 16px; }
+  .li + .li { border-top: 1px solid var(--line); }
+  .li .d { width: 56px; flex-shrink: 0; font-size: 12px; font-weight: 600; color: var(--ink-2); line-height: 1.25; }
+  .li .d small { display: block; font-weight: 500; color: var(--muted-2); }
+  .li .n { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .li .s2 { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-top: 2px; }
+  .li .s2 .chip { margin-left: auto; }
+  .foot-l { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+  .foot-l a { color: rgb(var(--b-600)); font-weight: 600; }
+  .rv { padding: 7px 16px; }
+  .rv + .rv { border-top: 1px solid var(--line); }
+  .stars { color: var(--amber); letter-spacing: 1px; font-size: 13px; }
+  .stars .off { color: var(--faint); }
+  .rv q { display: block; font-size: 13px; color: var(--ink); line-height: 1.35; margin: 2px 0 4px; quotes: "\201C" "\201D"; }
+  .rv .by { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted-2); }
+  .ph-row { display: flex; align-items: center; gap: 12px; padding: 7px 16px; }
+  .ph-row + .ph-row { border-top: 1px solid var(--line); }
+  .ph-row b { width: 30px; font-size: 20px; font-weight: 600; text-align: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .ph-row span { font-size: 13px; color: var(--ink-2); line-height: 1.3; }
+</style>
+</head>
+<body class="t-restaurants">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span>Wrenfield Kitchen &amp; Bar</span></div>
+    <nav class="nav">
+      <a class="on"><svg class="i"><use href="#moon"/></svg><span class="lbl">Tonight</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Reservations</span></a>
+      <a><svg class="i"><use href="#squares-2x2"/></svg><span class="lbl">Floor plan</span></a>
+      <a><svg class="i"><use href="#queue-list"/></svg><span class="lbl">Waitlist</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Guests</span></a>
+      <a><svg class="i"><use href="#gift"/></svg><span class="lbl">Events</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span><span class="badge">2</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+      <a><svg class="i"><use href="#credit-card"/></svg><span class="lbl">Payments</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">MV</span><div><b>Marisol Voss</b><small>Owner</small></div></div>
+    <div class="side-co"><span class="av">W</span><div><b>Wrenfield Kitchen &amp; Bar</b><small>Downtown McKinney</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Good afternoon, Marisol</h1>
+        <p class="sub">Friday, Dec 4 · <b>Dinner opens at 5:00</b> · 3:40 PM</p>
+      </div>
+      <div class="right"><span class="btn sm"><svg class="i s4"><use href="#phone"/></svg>(469) 555-0110</span><span class="avatar-ring">MV</span></div>
+    </header>
+
+    <div class="page">
+      <section class="tiles" style="--n:5">
+        <div class="tile"><p class="l">Covers tonight</p><p class="v">164 <small>Last Friday 151</small></p><p class="s">41 reservations · Larder 22</p></div>
+        <div class="tile"><p class="l">Confirmed</p><p class="v green">33 <small>of 41</small></p><p class="s"><a>Text the 8 unconfirmed &rarr;</a></p></div>
+        <div class="tile"><p class="l">Large parties (6+)</p><p class="v">5</p><p class="s">38 covers</p></div>
+        <div class="tile"><p class="l">Regulars booked</p><p class="v">9</p><p class="s">Wellers, Hale, Ortega +6</p></div>
+        <div class="tile"><p class="l">Google rating</p><p class="v">4.6 <small>&#9733;</small></p><p class="s">412 reviews · 4 new this week</p></div>
+      </section>
+
+      <div class="mid">
+        <div class="card clip">
+          <div class="card-h"><svg class="i s4"><use href="#chart-bar"/></svg>Pacing tonight<span class="r">Covers per 15 min</span></div>
+          <div class="pace">
+            <div class="lg">
+              <span><i style="background:rgb(var(--b-400))"></i>Dining room &amp; bar</span>
+                            <span><i style="background:var(--amber)"></i>At the limit</span>
+              <span class="larpill"><svg class="i s35"><use href="#gift"/></svg>The Larder · 22 at 7:00 · private room, not counted in the limit</span>
+            </div>
+            <div class="chart">
+              <div class="limit"><span>Booking limit 24 / 15 min</span></div>
+              <div class="col-b"><div class="seg" style="height:18px"></div><p class="n">4</p></div>
+              <div class="col-b"><div class="seg" style="height:18px"></div><p class="n">4</p></div>
+              <div class="col-b"><div class="seg" style="height:36px"></div><p class="n">8</p></div>
+              <div class="col-b"><div class="seg" style="height:27px"></div><p class="n">6</p></div>
+              <div class="col-b"><div class="seg" style="height:54px"></div><p class="n">12</p></div>
+              <div class="col-b"><div class="seg" style="height:45px"></div><p class="n">10</p></div>
+              <div class="col-b"><div class="seg" style="height:63px"></div><p class="n">14</p></div>
+              <div class="col-b"><div class="seg" style="height:54px"></div><p class="n">12</p></div>
+              <div class="col-b"><div class="seg" style="height:81px"></div><p class="n">18</p></div>
+              <div class="col-b"><div class="seg" style="height:54px"></div><p class="n">12</p></div>
+              <div class="col-b"><div class="seg amber" style="height:108px"></div><p class="n amber">24</p></div>
+              <div class="col-b"><div class="seg" style="height:36px"></div><p class="n">8</p></div>
+              <div class="col-b"><div class="seg" style="height:27px"></div><p class="n">6</p></div>
+              <div class="col-b"><div class="seg" style="height:18px"></div><p class="n">4</p></div>
+            </div>
+            <div class="xl"><span>5:00</span><span>5:15</span><span>5:30</span><span>5:45</span><span>6:00</span><span>6:15</span><span>6:30</span><span>6:45</span><span>7:00</span><span>7:15</span><span class="hot">7:30</span><span>7:45</span><span>8:00</span><span>8:15</span></div>
+            <p class="cap"><svg class="i s4"><use href="#sparkles"/></svg>7:30 is full online. The AI receptionist is offering 7:15 and 7:45.</p>
+          </div>
+        </div>
+
+        <div class="card clip hu">
+          <div class="card-h"><svg class="i s4"><use href="#bell-alert"/></svg>Heads up tonight<span class="count">6</span><span class="r">Reservations &rarr;</span></div>
+          <div class="r">
+            <span class="tm">6:00</span>
+            <div class="grow"><p class="who">Caleb Bishop <small>· party of 8</small></p>
+              <div class="chips"><span class="chip amber">Birthday</span><span class="nt">Bringing their own cake</span></div></div>
+            <span class="tb">T11</span>
+          </div>
+          <div class="r">
+            <span class="tm">7:00</span>
+            <div class="grow"><p class="who">Lyndale Media holiday party <small>· 22</small></p>
+              <div class="chips"><span class="chip brand">Private event</span><span class="nt">Final count in · deposit paid</span></div></div>
+            <span class="tb">Larder</span>
+          </div>
+          <div class="r">
+            <span class="tm">7:00</span>
+            <div class="grow"><p class="who">Tessa &amp; Mark Weller <small>· party of 2</small></p>
+              <div class="chips"><span class="chip amber">Anniversary</span><span class="chip green">Regular</span><span class="nt">11th anniversary · booth 12</span></div></div>
+            <span class="tb">T12</span>
+          </div>
+          <div class="r">
+            <span class="tm">7:15</span>
+            <div class="grow"><p class="who">Hannah Kim <small>· party of 4</small></p>
+              <div class="chips"><span class="chip red">Shellfish allergy</span></div></div>
+            <span class="tb">T5</span>
+          </div>
+          <div class="r">
+            <span class="tm">7:30</span>
+            <div class="grow"><p class="who">Priya Raman <small>· party of 6</small></p>
+              <div class="chips"><span class="chip amber">Birthday</span><span class="chip red">Gluten free (1)</span><span class="nt">Mom's 60th</span></div></div>
+            <span class="tb">T6</span>
+          </div>
+          <div class="r">
+            <span class="tm">7:30</span>
+            <div class="grow"><p class="who">Nate Winfield <small>· party of 6</small></p>
+              <div class="chips"><span class="chip blue">New guest</span><span class="chip red">Tree nut allergy (1)</span><span class="nt">Booked by AI receptionist</span></div></div>
+            <span class="tb">T16</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="low">
+        <div class="card clip">
+          <div class="card-h"><svg class="i s4"><use href="#gift"/></svg>Private events, next 10 days<span class="r">All events &rarr;</span></div>
+          <div class="li"><p class="d">Tonight<small>7:00 PM</small></p><div class="grow"><p class="n">Lyndale Media holiday party</p><p class="s2">22 guests · The Larder <span class="chip green">Deposit $500 paid</span></p></div></div>
+          <div class="li"><p class="d">Sat<small>Dec 5</small></p><div class="grow"><p class="n">Amberly-Ross rehearsal dinner</p><p class="s2">30 guests · The Larder <span class="chip amber">Final count due today</span></p></div></div>
+          <div class="li"><p class="d">Thu<small>Dec 10</small></p><div class="grow"><p class="n">Cobalt Ridge Engineering</p><p class="s2">18 guests · The Larder <span class="chip">Proposal sent, viewed 2x</span></p></div></div>
+          <div class="foot-l"><span>2 more: Dec 12 inquiry, Dec 13 deposit paid</span></div>
+        </div>
+
+        <div class="card clip">
+          <div class="card-h"><svg class="i s4"><use href="#star"/></svg>Reviews<span class="count">1 to reply</span></div>
+          <div class="rv">
+            <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <q>Short rib was unreal and our server Mia was great.</q>
+            <p class="by">Dana R. · Google · 2 days ago<span class="chip green sp">Replied</span></p>
+          </div>
+          <div class="rv">
+            <p class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></p>
+            <q>Food was great, but we waited 20 minutes past our reservation.</q>
+            <p class="by">Chris M. · Google · yesterday<span class="btn primary sm sp" style="min-height:28px;padding:3px 14px">Reply</span></p>
+          </div>
+          <div class="foot-l"><span>Review requests sent yesterday: 36</span><a>All reviews &rarr;</a></div>
+        </div>
+
+        <div class="card clip">
+          <div class="card-h"><svg class="i s4"><use href="#phone"/></svg>Phone, last 24 hours</div>
+          <div class="ph-row"><b>27</b><span>calls answered by the AI receptionist</span></div>
+          <div class="ph-row"><b>11</b><span>tables booked · 43 covers</span></div>
+          <div class="ph-row"><b>3</b><span>missed calls texted back</span></div>
+          <div class="ph-row"><b>2</b><span>handed to staff</span></div>
+          <div class="foot-l"><span>2 waiting in the inbox</span><a>Open inbox &rarr;</a></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg></span></aside>
+</div>
+</body>
+</html>

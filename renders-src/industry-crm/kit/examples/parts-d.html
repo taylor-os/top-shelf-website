@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit parts sampler</title>
+<link rel="stylesheet" href="../kit.css">
+</head>
+<body>
+<script src="../icons.js"></script>
+<!-- Not an industry screen: a sampler of the parts not used in the other examples
+     (collapsed rail, floor plan, listing cards, week calendar, buttons, pills). -->
+<div class="app collapsed">
+  <aside class="side">
+    <div class="brand"><span class="mark">SB</span><span>Sample</span></div>
+    <nav class="nav">
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#squares-2x2"/></svg><span class="lbl">Floor</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Week</span></a>
+      <a><svg class="i"><use href="#home-modern"/></svg><span class="lbl">Listings</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span><span class="badge">2</span></a>
+    </nav>
+    <div class="side-foot"><a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a><span class="toggle"><svg class="i"><use href="#chevron-double-right"/></svg></span></div>
+  </aside>
+
+  <main class="main">
+    <header class="band"><div><h1>Parts sampler</h1><p class="sub">Collapsed rail · floor plan · listing cards · week calendar · buttons</p></div></header>
+    <div class="page">
+      <div style="display:grid;grid-template-columns:1.05fr 1fr;gap:20px;align-items:start">
+        <div>
+          <div class="bar"><h2>Floor · dinner</h2><span class="count">11 of 14 seated</span></div>
+          <div class="floor" style="--cols:6;--cell:70px;gap:12px;padding:16px">
+            <div class="ftable seated"><b>1</b><span>2 · 0:35</span></div>
+            <div class="ftable ordered"><b>2</b><span>4 · ordered</span></div>
+            <div class="ftable check"><b>3</b><span>2 · check</span></div>
+            <div class="ftable free"><b>4</b><span>open</span></div>
+            <div class="zone">Bar</div>
+            <div class="ftable round seated"><b>5</b><span>2</span></div>
+            <div class="ftable round reserved"><b>6</b><span>7:30</span></div>
+            <div class="ftable seated" style="grid-column:span 2"><b>7</b><span>6 · birthday</span></div>
+            <div class="ftable dirty"><b>8</b><span>bus</span></div>
+            <div class="ftable ordered"><b>9</b><span>4</span></div>
+          </div>
+          <div class="legend mt-12">
+            <span><i class="free"></i>Open</span><span><i class="brand"></i>Seated</span>
+            <span><i class="blue"></i>Ordered</span><span><i class="amber"></i>Check dropped</span>
+            <span><i class="reserved"></i>Reserved</span>
+          </div>
+
+          <div class="flex mt-16" style="flex-wrap:wrap">
+            <span class="btn primary"><svg class="i s4"><use href="#plus"/></svg>Primary</span>
+            <span class="btn outline"><svg class="i s4"><use href="#paper-airplane"/></svg>Outline</span>
+            <span class="btn ghost">Ghost</span>
+            <span class="icon-btn"><svg class="i s4"><use href="#phone"/></svg></span>
+            <span class="icon-btn sm"><svg class="i s4"><use href="#map"/></svg></span>
+          </div>
+          <div class="flex mt-12" style="flex-wrap:wrap">
+            <span class="chip">Scheduled</span><span class="chip user"><svg class="i s3"><use href="#user"/></svg>Kyle</span>
+            <span class="chip green">Paid</span><span class="chip amber">Running late</span><span class="chip red">Unassigned</span>
+            <span class="chip blue">Booked online</span><span class="chip brand">New</span>
+            <span class="count-pill red">2</span><span class="count-pill amber">$180.00</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="lgrid" style="--n:2;gap:12px">
+            <div class="lcard"><div class="ph"><span class="chip">Active</span><span class="count">24 photos</span></div>
+              <div class="bd"><p class="price">$489,000</p><p class="t">1812 Copper Ridge Ln</p><p class="s">Allen, TX</p>
+              <div class="ft"><span><svg class="i s35"><use href="#home"/></svg>4 bd</span><span>3 ba</span><span>2,640 sqft</span><span class="sp">12 showings</span></div></div></div>
+            <div class="lcard"><div class="ph"><span class="chip">Pending</span><span class="count">18 photos</span></div>
+              <div class="bd"><p class="price">$380,000</p><p class="t">4410 Fairway Dr</p><p class="s">McKinney, TX</p>
+              <div class="ft"><span><svg class="i s35"><use href="#home"/></svg>3 bd</span><span>2 ba</span><span>1,980 sqft</span><span class="sp">Option ends Mon</span></div></div></div>
+          </div>
+          <div class="cal mt-16" style="--cols:5;--slots:8;--slot:24px">
+            <div class="corner"></div>
+            <div class="ch" style="grid-column:2"><div><b>Mon 23</b></div></div>
+            <div class="ch today" style="grid-column:3"><div><b>Tue 24</b><small>today</small></div></div>
+            <div class="ch" style="grid-column:4"><div><b>Wed 25</b></div></div>
+            <div class="ch" style="grid-column:5"><div><b>Thu 26</b></div></div>
+            <div class="ch" style="grid-column:6"><div><b>Fri 27</b></div></div>
+            <div class="lines"></div>
+            <div class="vl" style="grid-column:2"></div><div class="vl" style="grid-column:3"></div><div class="vl" style="grid-column:4"></div><div class="vl" style="grid-column:5"></div><div class="vl" style="grid-column:6"></div>
+            <span class="hr" style="grid-row:2">8 AM</span><span class="hr" style="grid-row:4">10 AM</span><span class="hr" style="grid-row:6">12 PM</span><span class="hr" style="grid-row:8">2 PM</span>
+            <div class="ev" style="grid-column:2;grid-row:2 / span 2"><b>Prescott</b></div>
+            <div class="ev blue" style="grid-column:3;grid-row:3 / span 3"><b>Whitfield</b><span>AC repair</span></div>
+            <div class="ev amber" style="grid-column:4;grid-row:2 / span 2"><b>Cole</b></div>
+            <div class="ev violet" style="grid-column:5;grid-row:5 / span 4"><b>Install</b><span>Ramsey</span></div>
+            <div class="ev gray" style="grid-column:6;grid-row:2 / span 2"><b>Open</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

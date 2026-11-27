@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar · Studio Marlowe Salon &amp; Spa</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .app.collapsed { grid-template-columns: var(--rail) 1fr 400px; }
+  .side .brand { justify-content: center; }
+  .nav { gap: 2px; }
+  .band { align-items: center; padding-top: 14px; padding-bottom: 14px; }
+  .sublinks { margin-top: 2px; font-size: 13.5px; color: var(--on-em-dim); }
+  .sublinks a { color: var(--on-em); font-weight: 500; text-decoration: underline; text-decoration-color: rgba(255,255,255,.4); text-underline-offset: 3px; }
+  .page { padding: 12px 24px 0; }
+  .ctrl { display: flex; align-items: center; gap: 8px; }
+  .ctrl .btn.sm { min-height: 34px; }
+  .ctrl .day { font-size: 16px; font-weight: 600; padding: 0 6px; }
+  .datef { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); font-size: 13px; color: var(--ink-2); }
+  .st-legend { display: flex; gap: 6px; margin: 8px 0 8px; }
+  .st-legend .chip { font-size: 11px; padding: 2px 9px; }
+  .st-legend .k { width: 12px; height: 9px; border-radius: 3px; display: inline-block; }
+
+  .cal { grid-template-rows: 48px repeat(var(--slots), var(--slot)); }
+  .cal .ch { gap: 7px; padding: 0 8px; }
+  .cal .ch b { font-size: 12.5px; line-height: 15px; white-space: nowrap; }
+  .cal .ch small { font-size: 10.5px; line-height: 13px; white-space: nowrap; }
+  .pdot { width: 9px; height: 9px; border-radius: 999px; background: var(--c); flex-shrink: 0; }
+  .ev { --c: #64748b; margin: 1px 3px; padding: 3px 6px; border-radius: 7px; font-size: 11px; line-height: 14px;
+    background: color-mix(in srgb, var(--c) 15%, var(--panel)); border-left: 3px solid var(--c); }
+  .ev b { font-size: 11.5px; line-height: 14px; }
+  .ev .stl { display: flex; align-items: center; gap: 4px; margin-top: 1px; font-size: 10.5px; font-weight: 600; color: var(--ink-2); white-space: nowrap; }
+  .ev .stl i { width: 7px; height: 7px; border-radius: 999px; display: inline-block; }
+  .ev.bkd { background: var(--panel); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 55%, var(--panel)); }
+  .ev.dn { background: var(--head); border-left-color: var(--line-strong); }
+  .ev.dn b, .ev.dn span, .ev.dn .stl { color: var(--muted-2); }
+  .ev.sel { box-shadow: 0 0 0 2px rgb(var(--b-500)), var(--shadow-sm); z-index: 3; }
+  .ev .proc { position: absolute; left: 0; right: 0; display: flex; align-items: flex-end; padding: 3px 6px;
+    background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--c) 42%, var(--panel)) 0 5px, color-mix(in srgb, var(--c) 12%, var(--panel)) 5px 10px);
+    font-size: 10px; font-weight: 600; color: color-mix(in srgb, var(--c) 70%, var(--ink)); text-shadow: 0 0 3px var(--panel), 0 0 2px var(--panel); }
+  .ev.over { margin-left: 44%; z-index: 4; box-shadow: 0 0 0 2px var(--panel), var(--shadow-sm); }
+  .ev.rent { background: color-mix(in srgb, #64748b 20%, var(--panel)); border-left-color: #64748b; }
+  .ev.rent b { color: var(--ink-2); }
+  .ev.openslot { background: var(--panel); border: 1.5px dashed color-mix(in srgb, var(--c) 60%, var(--panel)); display: grid; place-items: center; color: color-mix(in srgb, var(--c) 75%, var(--ink)); font-weight: 600; opacity: .8; }
+  .dep { display: inline-flex; align-items: center; gap: 2px; font-size: 10px; font-weight: 600; color: var(--green-ink); background: var(--green-soft); border-radius: 999px; padding: 0 6px; }
+  .now-l { position: absolute; left: -46px; top: -9px; font-size: 10.5px; font-weight: 700; color: rgb(var(--b-700)); background: var(--panel); padding: 1px 3px; border-radius: 4px; }
+  .cal .now { background: rgb(var(--b-500)); height: 2px; }
+  .cal .now::before { background: rgb(var(--b-500)); }
+  .scroll-chip { position: absolute; right: 8px; top: 12px; z-index: 5; }
+
+  /* visit panel */
+  .panel { background: var(--panel); border-left: 1px solid var(--line); box-shadow: var(--shadow); height: 100vh; display: flex; flex-direction: column; }
+  .panel .ph { padding: 18px 22px 14px; border-bottom: 1px solid var(--line); }
+  .panel h2 { font-size: 20px; line-height: 26px; font-weight: 600; }
+  .panel .pb { padding: 12px 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .sv { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; font-size: 13px; }
+  .sv + .sv { border-top: 1px solid var(--line); }
+  .sv .w { color: var(--muted-2); font-size: 12px; }
+  .sv b { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .formula { background: var(--well); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font-size: 13px; line-height: 19px; color: var(--ink); }
+  .lbl-up { font-size: 11px; margin-bottom: 4px; }
+  .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .photo { height: 120px; border-radius: 10px; position: relative; overflow: hidden; }
+  .photo span { position: absolute; left: 8px; bottom: 7px; font-size: 11px; font-weight: 600; color: #fff; background: rgba(0,0,0,.45); border-radius: 999px; padding: 1px 8px; }
+  .panel .pf { padding: 12px 22px 16px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 8px; }
+</style>
+</head>
+<body class="t-salon-spa">
+<script src="../../kit/icons.js"></script>
+<div class="app collapsed">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">SM</span><span>Studio Marlowe Salon &amp; Spa</span></div>
+    <nav class="nav">
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a class="on"><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <a><svg class="i"><use href="#credit-card"/></svg><span class="lbl">Checkout</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Clients</span></a>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reputation</span></a>
+      <a><svg class="i"><use href="#megaphone"/></svg><span class="lbl">Campaigns</span></a>
+      <a><svg class="i"><use href="#bolt"/></svg><span class="lbl">Automations</span></a>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Pay</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-right"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">HM</span><div><b>Harper Marlowe</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Appointments</h1>
+        <p class="sublinks"><a>Services</a> · <a>Team</a></p>
+      </div>
+      <div class="right"><span class="btn primary sm"><svg class="i s4"><use href="#plus"/></svg>Book an appointment</span></div>
+    </header>
+
+    <div class="page">
+      <div class="ctrl">
+        <span class="btn outline sm"><svg class="i s4"><use href="#chevron-left"/></svg></span>
+        <span class="day">Friday, Dec 4</span>
+        <span class="btn outline sm"><svg class="i s4"><use href="#chevron-right"/></svg></span>
+        <span class="btn outline sm">Today</span>
+        <span class="datef"><svg class="i s4" style="color:var(--muted-2)"><use href="#calendar"/></svg>12/04/2026</span>
+        <span class="sp xs muted-2">8 working today · 40 appointments</span><span class="chip lg brand">Sofia, Rafael &rarr;</span>
+      </div>
+      <div class="st-legend">
+        <span class="chip lg" style="background: var(--panel);box-shadow:inset 0 0 0 1px var(--line-strong)">Booked</span>
+        <span class="chip lg green">Confirmed</span>
+        <span class="chip lg"><i class="k" style="background:var(--amber);border-radius:999px;width:8px;height:8px"></i>Checked in</span>
+        <span class="chip lg"><i class="k" style="background:var(--green);border-radius:999px;width:8px;height:8px"></i>In chair</span>
+        <span class="chip lg muted"><svg class="i s35"><use href="#check"/></svg>Done</span>
+        <span class="chip lg" style="background:transparent"><i class="k" style="background:repeating-linear-gradient(135deg,var(--violet) 0 3px,var(--violet-soft) 3px 6px);width:16px"></i>Processing</span>
+      </div>
+
+      <div class="cal" style="--cols:6; --slots:24; --slot:27px; grid-template-columns:56px repeat(6, minmax(0,1fr))">
+        <div class="corner"></div>
+        <div class="ch" style="grid-column:2;--c:#7c3aed"><span class="pdot"></span><div><b>Harper Marlowe</b><small>Master stylist · 5</small></div></div>
+        <div class="ch" style="grid-column:3;--c:#0d9488"><span class="pdot"></span><div><b>Lena Osborne</b><small>Master stylist · 6</small></div></div>
+        <div class="ch" style="grid-column:4;--c:#db2777"><span class="pdot"></span><div><b>Jade Mercer</b><small>Senior stylist · 6</small></div></div>
+        <div class="ch" style="grid-column:5;--c:#d97706"><span class="pdot"></span><div><b>Tess Navarro</b><small>Junior stylist · 5</small></div></div>
+        <div class="ch" style="grid-column:6;--c:#64748b"><span class="pdot"></span><div><b>Dani Fairley</b><small>Booth renter · 5</small></div></div>
+        <div class="ch" style="grid-column:7;--c:#f97316"><span class="pdot"></span><div><b>Camila Rennick</b><small>Nail tech · 6</small></div></div>
+
+        <div class="lines"></div>
+        <div class="vl" style="grid-column:2"></div><div class="vl" style="grid-column:3"></div><div class="vl" style="grid-column:4"></div>
+        <div class="vl" style="grid-column:5"></div><div class="vl" style="grid-column:6"></div><div class="vl" style="grid-column:7"></div>
+
+        <span class="hr" style="grid-row:2">9 AM</span><span class="hr" style="grid-row:6">10</span><span class="hr" style="grid-row:10">11</span>
+        <span class="hr" style="grid-row:14">12 PM</span><span class="hr" style="grid-row:18">1</span><span class="hr" style="grid-row:22">2</span>
+
+        <!-- Harper -->
+        <div class="ev sel" style="--c:#7c3aed;grid-column:2;grid-row:2 / span 12">
+          <b>Olivia Grant</b><span>Balayage &amp; toner</span>
+          <span class="stl"><i style="background:var(--green)"></i>In chair</span>
+          <span class="dep" style="margin-top:3px">$ Deposit $55</span>
+          <div class="proc" style="top:33.3%;height:25%;align-items:flex-start">Processing</div>
+        </div>
+        <div class="ev dn over" style="--c:#7c3aed;grid-column:2;grid-row:6 / span 2"><b>Ryan Feld</b><span class="stl"><svg class="i s3"><use href="#check"/></svg>Done <svg class="i s3"><use href="#arrow-path"/></svg></span></div>
+        <div class="ev block" style="grid-column:2;grid-row:14 / span 2"><b>Break</b></div>
+        <div class="ev" style="--c:#7c3aed;grid-column:2;grid-row:16 / span 8">
+          <b>Natalie Salter</b><span>Bridal trial: updo</span><span class="stl">Confirmed</span><span class="dep" style="margin-top:3px">$ Deposit $30</span>
+        </div>
+
+        <!-- Lena -->
+        <div class="ev dn" style="--c:#0d9488;grid-column:3;grid-row:2 / span 3"><b>Holly Vickers</b><span>Women's cut</span><span class="stl"><svg class="i s3"><use href="#check"/></svg>Done</span></div>
+        <div class="ev" style="--c:#0d9488;grid-column:3;grid-row:6 / span 7">
+          <b>Claire Blakely</b><span>All-over color</span><span class="stl"><i style="background:var(--green)"></i>In chair</span>
+          <div class="proc" style="top:28.6%;height:42.9%">Processing</div>
+        </div>
+        <div class="ev" style="--c:#0d9488;grid-column:3;grid-row:14 / span 4"><b>Grace Wynn</b><span>Women's cut &amp; blowout</span><span class="stl">Confirmed</span></div>
+        <div class="ev block" style="grid-column:3;grid-row:18 / span 2"><b>Break</b></div>
+        <div class="ev bkd" style="--c:#0d9488;grid-column:3;grid-row:20 / span 6"><b>Sasha Bloom</b><span>Highlights</span><span class="stl">Booked</span></div>
+
+        <!-- Jade -->
+        <div class="ev dn" style="--c:#db2777;grid-column:4;grid-row:2 / span 5"><b>Brooke Adler</b><span>Women's cut &amp; blowout</span><span class="stl"><svg class="i s3"><use href="#check"/></svg>Done</span></div>
+        <div class="ev" style="--c:#db2777;grid-column:4;grid-row:8 / span 7">
+          <b>Tara Quaid</b><span>Partial highlights</span><span class="stl"><i style="background:var(--green)"></i>In chair</span>
+          <div class="proc" style="top:28.6%;height:38.1%">Processing</div>
+        </div>
+        <div class="ev over" style="--c:#db2777;grid-column:4;grid-row:10 / span 2;margin-top:6px"><b>Eli Vickers</b><span>Men's cut</span><span class="stl">Confirmed</span></div>
+        <div class="ev" style="--c:#db2777;grid-column:4;grid-row:16 / span 3"><b>Kim Abbott</b><span>Blowout</span><span class="stl">Confirmed</span></div>
+        <div class="ev openslot" style="--c:#db2777;grid-column:4;grid-row:20 / span 4">+ 1 hr open</div>
+        <div class="ev" style="--c:#db2777;grid-column:4;grid-row:24 / span 2"><b>Leah Stone</b><span>Women's cut</span><span class="stl">Confirmed</span></div>
+
+        <!-- Tess -->
+        <div class="ev dn" style="--c:#d97706;grid-column:5;grid-row:4 / span 3"><b>Mila Sexton</b><span>Kids' cut</span><span class="stl"><svg class="i s3"><use href="#check"/></svg>Done</span></div>
+        <div class="ev" style="--c:#d97706;grid-column:5;grid-row:9 / span 3"><b>Jordan Poindexter</b><span>Men's cut</span><span class="stl">Confirmed</span></div>
+        <div class="ev bkd" style="--c:#d97706;grid-column:5;grid-row:13 / span 2"><b>Olivia Grant <svg class="i s3" style="vertical-align:-1px"><use href="#link"/></svg></b><span>Blowout finish · Booked</span></div>
+        <div class="ev openslot" style="--c:#d97706;grid-column:5;grid-row:16 / span 4">+ 1 hr open</div>
+        <div class="ev bkd" style="--c:#d97706;grid-column:5;grid-row:22 / span 3"><b>Nora Kett</b><span>Blowout</span><span class="stl">Booked</span></div>
+
+        <!-- Dani (booth renter): time only -->
+        <div class="ev rent" style="grid-column:6;grid-row:2 / span 4"><b>Booked</b><span>9:00-10:00</span></div>
+        <div class="ev rent" style="grid-column:6;grid-row:7 / span 6"><b>Booked</b><span>10:15-11:45</span></div>
+        <div class="ev rent" style="grid-column:6;grid-row:14 / span 3"><b>Booked</b><span>12:00-12:45</span></div>
+        <div class="ev rent" style="grid-column:6;grid-row:20 / span 6"><b>Booked</b><span>1:30-3:00</span></div>
+
+        <!-- Camila -->
+        <div class="ev dn" style="--c:#f97316;grid-column:7;grid-row:2 / span 4"><b>Paige Turner</b><span>Gel manicure</span><span class="stl"><svg class="i s3"><use href="#check"/></svg>Done</span></div>
+        <div class="ev" style="--c:#f97316;grid-column:7;grid-row:6 / span 5"><b>Mei Chen</b><span>Spa pedicure</span><span class="stl"><i style="background:var(--green)"></i>In chair</span></div>
+        <div class="ev" style="--c:#f97316;grid-column:7;grid-row:12 / span 4"><b>Rosa Diaz</b><span>Gel manicure</span><span class="stl">Confirmed</span></div>
+        <div class="ev bkd" style="--c:#f97316;grid-column:7;grid-row:18 / span 4"><b>Joy Hale</b><span>Gel fill</span><span class="stl">Booked</span></div>
+        <div class="ev openslot" style="--c:#f97316;grid-column:7;grid-row:22 / span 4">+ 1 hr open</div>
+
+        <div class="now" style="grid-row:8; margin-top:18px"><span class="now-l">10:40</span></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- visit panel -->
+  <aside class="panel">
+    <div class="ph">
+      <div class="flex" style="align-items:flex-start">
+        <div class="grow"><h2>Olivia Grant</h2><p class="sm muted">(469) 555-0182</p></div>
+        <span class="icon-btn sm"><svg class="i s4"><use href="#phone"/></svg></span>
+        <span class="icon-btn sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg></span>
+        <span class="icon-btn sm" style="color:var(--muted-2)"><svg class="i s4"><use href="#x-mark"/></svg></span>
+      </div>
+      <div class="flex mt-8"><span class="chip lg green"><i style="width:7px;height:7px;border-radius:999px;background:var(--green);display:inline-block"></i>In chair</span><span class="chip lg brand">Deposit $55 paid</span></div>
+      <p class="xs muted mt-8">Today 9:00 AM to 12:15 PM · Harper Marlowe, Tess Navarro</p>
+    </div>
+    <div class="pb">
+      <div>
+        <p class="lbl-up">Services</p>
+        <div class="sv"><span>Balayage</span><span class="w">Harper Marlowe · 9:00</span><b>$185.00</b></div>
+        <div class="sv"><span>Toner</span><span class="w">Harper Marlowe · 10:45</span><b>$35.00</b></div>
+        <div class="sv"><span>Blowout finish</span><span class="w">Tess Navarro · 11:45</span><b>$40.00</b></div>
+      </div>
+      <div>
+        <p class="lbl-up">Formula (last visit, Sep 25)</p>
+        <p class="formula">Lightener + 20 vol, foils, 35 min · Toner 9V + 9P, 15 min</p>
+      </div>
+      <div>
+        <p class="lbl-up flex">Notes<a class="sp t-brand fw6" style="letter-spacing:0;text-transform:none;font-size:12px">Save notes</a></p>
+        <p class="sm">Keep the money piece bright. Coffee, oat milk.</p>
+      </div>
+      <div class="photos">
+        <div class="photo" style="background:radial-gradient(60% 70% at 40% 30%, #8a6446, transparent 70%), linear-gradient(165deg,#4e3424,#6f4c34 55%,#5a3d2a)"><span>Before · Sep 25</span></div>
+        <div class="photo" style="background:radial-gradient(55% 60% at 35% 25%, #f1dcae, transparent 70%), linear-gradient(165deg,#6e4a30,#b98c5a 45%,#e3c58f 80%)"><span>After · Sep 25</span></div>
+      </div>
+      <div>
+        <p class="lbl-up">Earlier visits</p>
+        <div class="sv"><span>Sep 25</span><span class="w">Balayage &amp; toner · Harper</span><b>$220.00</b></div>
+        <div class="sv"><span>Jul 17</span><span class="w">Balayage &amp; toner · Harper</span><b>$220.00</b></div>
+        <div class="sv"><span>May 8</span><span class="w">Root touch-up &amp; gloss · Lena</span><b>$120.00</b></div>
+      </div>
+    </div>
+    <div class="pf">
+      <span class="btn outline"><svg class="i s4"><use href="#check"/></svg>Done</span>
+      <span class="btn outline">Hand to<svg class="i s4"><use href="#chevron-down"/></svg></span>
+      <span class="btn primary"><svg class="i s4"><use href="#credit-card"/></svg>Checkout</span>
+    </div>
+  </aside>
+</div>
+</body>
+</html>

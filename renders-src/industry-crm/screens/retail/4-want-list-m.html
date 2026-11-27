@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Want list · Larkhaven Goods (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .pg { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+  .wi { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+  .wi .hd { display: flex; align-items: flex-start; gap: 8px; }
+  .wi .t { font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; flex: 1; }
+  .wi .s { font-size: 12.5px; color: var(--muted); }
+  .wi .names { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wi .names .chip { font-size: 12px; font-weight: 500; padding: 3px 10px; background: var(--well); color: var(--ink-2); }
+  .wi.sel { position: relative; z-index: 9; background: var(--panel); border: 2px solid rgb(var(--b-500)); box-shadow: 0 0 0 3px rgb(var(--b-500) / .15), var(--shadow); }
+  .wi .btn { align-self: flex-start; }
+  .scrim { position: fixed; left: 0; right: 0; top: 0; bottom: 64px; background: color-mix(in srgb, var(--ink) 32%, transparent); z-index: 8; }
+  .m-bar { position: relative; z-index: 9; }
+  .sheet { position: fixed; left: 0; right: 0; bottom: 64px; z-index: 9; background: var(--panel); border-radius: 22px 22px 0 0; padding: 8px 16px 14px; box-shadow: 0 -10px 30px color-mix(in srgb, var(--ink) 18%, transparent); display: flex; flex-direction: column; gap: 10px; }
+  .grab { width: 40px; height: 5px; border-radius: 999px; background: var(--line-strong); align-self: center; margin-bottom: 2px; }
+  .sheet h3 { font-size: 18px; font-weight: 600; display: flex; align-items: center; }
+  .sheet h3 .x { margin-left: auto; color: var(--muted-2); }
+  .to { font-size: 13.5px; color: var(--ink-2); }
+  .to b { font-weight: 600; }
+  .callnote { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink-2); background: var(--blue-soft); border-radius: 10px; padding: 8px 10px; }
+  .callnote svg { color: var(--blue-ink); }
+  .callnote.ok { background: var(--green-soft); margin-top: -4px; }
+  .callnote.ok svg { color: var(--green-ink); }
+  .bub { background: rgb(var(--b-500) / .12); border: 1px dashed rgb(var(--b-500) / .45); border-radius: 16px 16px 6px 16px; padding: 10px 12px; font-size: 14px; line-height: 1.42; color: var(--ink); position: relative; }
+  .bub .ed { position: absolute; right: 8px; bottom: -11px; width: 24px; height: 24px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); display: grid; place-items: center; color: rgb(var(--b-600)); }
+  .fine { font-size: 12px; color: var(--muted-2); }
+  .two { display: grid; grid-template-columns: 1.6fr 1fr; gap: 8px; }
+  .two .btn { min-height: 48px; font-size: 15px; font-weight: 600; border-radius: 14px; }
+</style>
+</head>
+<body class="t-retail">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#arrow-left"/></svg></a>
+    <p class="t">Want list<small>What customers asked for · 5 items · 13 people</small></p>
+    <a><svg class="i"><use href="#plus"/></svg></a>
+  </div>
+
+  <div class="pg">
+    <div class="card wi sel">
+      <div class="hd"><p class="t">Cedar &amp; sage candle, 3-wick</p><span class="chip green">Came in Mon</span></div>
+      <p class="s">4 asked since Nov 18</p>
+      <div class="names"><span class="chip"><svg class="i s3"><use href="#phone"/></svg>Ruth A.</span><span class="chip">Annie C.</span><span class="chip">Derek H.</span><span class="chip green"><svg class="i s3"><use href="#check"/></svg>Lena P. · held B4</span></div>
+      <span class="btn primary sm">Tell the 2 still waiting</span>
+    </div>
+
+    <div class="card wi">
+      <div class="hd"><p class="t">Speckled stoneware mugs</p><span class="chip blue">Ordered · due Dec 18</span></div>
+      <p class="s">3 asked</p>
+      <div class="names"><span class="chip">Ellie P. · wish list</span><span class="chip">Mae L.</span><span class="chip">Wes C.</span></div>
+    </div>
+
+    <div class="card wi">
+      <div class="hd"><p class="t">Olive linen table runner</p><span class="chip">Not ordered</span></div>
+      <p class="s">2 asked · Ellie P., Sofia R.</p>
+      <span class="btn outline sm">Mark ordered</span>
+    </div>
+
+    <div class="card wi">
+      <div class="hd"><p class="t">Charcoal wool throw</p><span class="chip brand">Special order · Fri</span></div>
+      <p class="s">2 asked · Sofia R. (deposit paid), Tom W.</p>
+    </div>
+
+    <div class="card wi">
+      <div class="hd"><p class="t">Kids' wooden advent calendar</p><span class="chip muted">Vendor's out for the season</span></div>
+      <p class="s">2 asked</p>
+      <span class="btn outline sm">Tell them "not this year"</span>
+    </div>
+  </div>
+
+  <div class="scrim"></div>
+  <div class="sheet">
+    <span class="grab"></span>
+    <h3>Tell them it's in<svg class="i x"><use href="#x-mark"/></svg></h3>
+    <p class="to">Texting 2: <b>Annie Cutler, Derek Hollis</b></p>
+    <div class="callnote"><svg class="i s4"><use href="#phone"/></svg><span><b class="fw6">Ruth Akers</b> prefers calls · added to Hailey's call list</span></div>
+    <div class="callnote ok"><svg class="i s4"><use href="#check-circle"/></svg><span><b class="fw6">Lena Park</b> · already held for her, shelf B4</span></div>
+    <div class="bub">Hi Annie, it's Claire at Larkhaven Goods. The cedar &amp; sage 3-wick candle you asked about just came in. Want me to set one aside? Reply YES and I'll hold it till Saturday.<span class="ed"><svg class="i s35"><use href="#pencil"/></svg></span></div>
+    <p class="fine">Each person gets their own text with their name.</p>
+    <div class="two">
+      <span class="btn primary"><svg class="i s4"><use href="#paper-airplane"/></svg>Send 2 texts</span>
+      <span class="btn outline">Cancel</span>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Today</a>
+    <a><span class="ic"><svg class="i s6"><use href="#archive-box"/></svg></span>Hold shelf</a>
+    <a><span class="ic"><svg class="i s6"><use href="#chat-bubble-left-right"/></svg><span class="badge">1</span></span>Messages</a>
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

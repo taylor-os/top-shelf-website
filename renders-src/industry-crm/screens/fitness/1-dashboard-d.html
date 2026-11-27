@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Larkspur Strength Club</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .nav { gap: 2px; padding: 4px 8px; }
+  .nav a { padding: 8px 12px; }
+  .nav .sec { padding: 12px 12px 4px; }
+  .nav .sec.first { padding-top: 6px; }
+  .side .brand small { display: block; font-size: 12px; font-weight: 400; color: var(--on-em-dim); }
+  .band.slim { height: 64px; padding: 0 32px; align-items: center; }
+  .band.slim h1 { font-size: 20px; }
+  .search { display: flex; align-items: center; gap: 8px; width: 300px; height: 38px; padding: 0 14px; border-radius: 10px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: var(--on-em-dim); font-size: 14px; }
+  .band .bell { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; color: var(--on-em); }
+  .title-row { display: flex; align-items: flex-end; gap: 16px; margin: 2px 0 12px; }
+  .serif { font-family: var(--font); font-size: 26px; line-height: 34px; font-weight: 600; letter-spacing: -.025em; color: var(--ink); }
+  .title-row .s { font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .title-row .date { margin-left: auto; font-size: 14px; font-weight: 500; color: var(--ink-2); display: flex; align-items: center; gap: 6px; }
+  .tiles { margin-bottom: 14px; }
+  .stack { gap: 10px; }
+  .tile { padding: 9px 16px; }
+  .tile .v { font-size: 22px; line-height: 28px; }
+  .tile .v { margin-top: 2px; }
+  .tile .s { margin-top: 2px; }
+  .home-grid { display: grid; grid-template-columns: minmax(0, 54fr) minmax(0, 46fr); gap: 18px; align-items: start; }
+  .card-h { padding: 9px 18px; }
+  .card-h a, .card-h .r { opacity: .92; }
+  .cls { display: flex; align-items: center; gap: 14px; padding: 7px 18px; }
+  .cls + .cls { border-top: 1px solid var(--line); }
+  .cls .time { width: 60px; padding: 6px 0; }
+  .cls .ty { display: flex; align-items: center; gap: 6px; font-size: 14.5px; font-weight: 600; line-height: 20px; }
+  .cls .ln { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); line-height: 17px; }
+  .cls .ln .cnt { margin-left: auto; font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .cls .chev { color: var(--faint); }
+  .cls.ended { opacity: .62; }
+  .cap { height: 5px; border-radius: 99px; background: var(--tint); margin-top: 5px; overflow: hidden; }
+  .cap i { display: block; height: 100%; border-radius: 99px; background: rgb(var(--b-500)); }
+  .cap.full i { background: var(--amber); }
+  .chip.on { background: rgb(var(--b-500)); color: var(--on-accent); }
+  .li { display: flex; align-items: flex-start; gap: 12px; padding: 7px 18px; }
+  .li + .li { border-top: 1px solid var(--line); }
+  .li .tx { flex: 1; min-width: 0; font-size: 13px; line-height: 18px; color: var(--ink); }
+  .li .tx small { display: block; margin-top: 2px; font-size: 12px; color: var(--muted-2); }
+  .li .chev { color: var(--faint); margin-top: 6px; }
+  .li .ic-box { width: 28px; height: 28px; border-radius: 9px; }
+  .ic-box.red { background: var(--red-soft); } .ic-box.amber { background: var(--amber-soft); }
+  .sub-h { padding: 7px 18px 0; font-size: 12.5px; color: var(--muted); }
+  .mem { display: flex; align-items: center; gap: 10px; padding: 5px 18px; }
+  .mem:first-of-type { padding-top: 8px; }
+  .mem .btn.sm { min-height: 28px; padding: 3px 10px; font-size: 12.5px; }
+  .mem .nm { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 18px; }
+  .mem .nm small { display: block; font-size: 12px; font-weight: 400; color: var(--muted-2); }
+  .card-f { padding: 6px 18px 8px; border-top: 1px solid var(--line); font-size: 12.5px; font-weight: 600; color: rgb(var(--b-600)); }
+  .ov { display: flex; align-items: flex-start; gap: 10px; padding: 7px 18px; font-size: 13px; line-height: 18px; color: var(--ink-2); }
+  .ov + .ov { border-top: 1px solid var(--line); }
+  .ov svg { color: rgb(var(--b-600)); margin-top: 1px; }
+  .ov b { font-weight: 600; color: var(--ink); }
+  .ov .w { color: var(--muted-2); font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body class="t-fitness">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">LS</span><span>Larkspur Strength Club<small>Graham Paxton · Owner</small></span></div>
+    <nav class="nav">
+      <p class="sec first">Work</p>
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Dashboard</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Members</span></a>
+      <a><svg class="i"><use href="#qr-code"/></svg><span class="lbl">Check-in</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Classes</span></a>
+      <a><svg class="i"><use href="#user"/></svg><span class="lbl">Personal training</span></a>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">2</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span></a>
+      <a><svg class="i"><use href="#user-plus"/></svg><span class="lbl">Leads</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span><span class="badge">3</span></a>
+      <p class="sec">Money</p>
+      <a><svg class="i"><use href="#credit-card"/></svg><span class="lbl">Plans</span></a>
+      <p class="sec">Grow</p>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reputation</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+    </nav>
+    <div class="side-user"><span class="av">GP</span><div><b>Graham Paxton</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band slim">
+      <h1>Dashboard</h1>
+      <div class="right">
+        <span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search members…</span>
+        <span class="bell"><svg class="i"><use href="#bell"/></svg></span>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="title-row">
+        <div>
+          <h2 class="serif">Larkspur Strength Club</h2>
+          <p class="s">412 members · <span class="t-green fw6">6 new this week</span></p>
+        </div>
+        <p class="date"><svg class="i s4"><use href="#calendar"/></svg>Tuesday, Dec 1</p>
+      </div>
+
+      <section class="tiles" style="--n:4">
+        <div class="tile"><p class="l">Booked today</p><p class="v">88 <small>of 120 spots</small></p><p class="s">8 classes</p></div>
+        <div class="tile"><p class="l">Checked in so far</p><p class="v">41</p><p class="s">since 5:00 AM</p></div>
+        <div class="tile"><p class="l">Overnight calls</p><p class="v">2</p><p class="s">AI receptionist booked 1 · 1 texted back</p></div>
+        <div class="tile"><p class="l">Reviews</p><p class="v">4.8 <span style="color:var(--amber)">★</span></p><p class="s">3 new this week · <span class="t-amber fw6">1 to reply</span></p></div>
+      </section>
+
+      <div class="home-grid">
+        <!-- Today's classes -->
+        <div class="card clip">
+          <div class="card-h">Today<span class="count">8 classes</span><span class="r">All classes →</span></div>
+          <div class="cls ended">
+            <span class="time"><b>5:30</b><small>AM</small></span>
+            <div class="grow"><p class="ty">Strength &amp; Conditioning <span class="chip muted">Ended</span></p>
+              <p class="ln">Malik Odom<span class="cnt">14 of 16</span></p><div class="cap"><i style="width:87.5%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time hot"><b>6:30</b><small>AM</small></span>
+            <div class="grow"><p class="ty">Strength &amp; Conditioning <span class="chip on">On now</span><span class="chip amber">Full</span></p>
+              <p class="ln">Malik Odom<span class="cnt">16 of 16</span></p><div class="cap full"><i style="width:100%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time"><b>9:00</b><small>AM</small></span>
+            <div class="grow"><p class="ty">Mobility</p>
+              <p class="ln">Erin Sato<span class="cnt">7 of 20</span></p><div class="cap"><i style="width:35%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time"><b>12:00</b><small>PM</small></span>
+            <div class="grow"><p class="ty">HIIT 45</p>
+              <p class="ln">Erin Sato<span class="cnt">11 of 16</span></p><div class="cap"><i style="width:68.75%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time"><b>4:30</b><small>PM</small></span>
+            <div class="grow"><p class="ty">Barbell Club</p>
+              <p class="ln">Malik Odom<span class="cnt">9 of 12</span></p><div class="cap"><i style="width:75%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time"><b>5:30</b><small>PM</small></span>
+            <div class="grow"><p class="ty">Strength &amp; Conditioning <span class="chip amber">Full</span></p>
+              <p class="ln">Dez Fuller<span class="cnt"><span class="t-amber" style="font-weight:600;margin-right:8px">3 waiting</span>16 of 16</span></p><div class="cap full"><i style="width:100%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time"><b>6:30</b><small>PM</small></span>
+            <div class="grow"><p class="ty">HIIT 45</p>
+              <p class="ln">Dez Fuller<span class="cnt">12 of 16</span></p><div class="cap"><i style="width:75%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+          <div class="cls">
+            <span class="time"><b>7:30</b><small>PM</small></span>
+            <div class="grow"><p class="ty">Intro / Foundations</p>
+              <p class="ln">Malik Odom<span class="cnt"><span class="muted-2" style="font-weight:400;margin-right:8px">3 first-timers</span>3 of 8</span></p><div class="cap"><i style="width:37.5%"></i></div></div>
+            <svg class="i s4 chev"><use href="#chevron-right"/></svg>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="stack">
+          <div class="card clip">
+            <div class="card-h">Payments · whole gym<span class="r">2 retrying · 1 past due</span></div>
+            <div class="li"><span class="ic-box red"><svg class="i s4"><use href="#exclamation-circle"/></svg></span>
+              <p class="tx">Brianna Harwick is past due: their card was declined three times and we've stopped trying. They owe $59.00. Update the card to retry.<small>Nov 29, 6:01 AM</small></p>
+              <svg class="i s4 chev"><use href="#chevron-right"/></svg></div>
+            <div class="li"><span class="ic-box amber"><svg class="i s4"><use href="#arrow-path"/></svg></span>
+              <p class="tx">Luis Cardenas's card was declined. We'll try again on Dec 4.<small>Nov 30, 6:02 AM</small></p>
+              <svg class="i s4 chev"><use href="#chevron-right"/></svg></div>
+            <div class="li"><span class="ic-box amber"><svg class="i s4"><use href="#arrow-path"/></svg></span>
+              <p class="tx">Omar Haddad's card was declined. We'll try again on Dec 3.<small>Nov 30, 6:02 AM</small></p>
+              <svg class="i s4 chev"><use href="#chevron-right"/></svg></div>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h">Check in with them<span class="count">3</span><span class="r">Haven't been in for 14 days or more</span></div>
+            <div class="mem"><span class="av sm">EK</span><p class="nm grow">Ethan Kowalski<small>Unlimited classes · last in Nov 14</small></p><span class="btn outline sm"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div>
+            <div class="mem"><span class="av sm">LB</span><p class="nm grow">Lindsey Barlow<small>Monthly · last in Nov 12</small></p><span class="btn outline sm"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div>
+            <div class="mem"><span class="av sm">TW</span><p class="nm grow">Tre Washington<small>Unlimited classes · joined Oct 20 · 3 visits</small></p><span class="btn outline sm"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div>
+            <p class="card-f">5 follow-up reminders due this week →</p>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h">Overnight<span class="r">2 calls · 1 text</span></div>
+            <div class="ov"><svg class="i s4"><use href="#phone"/></svg><p><span class="w">9:48 PM</span> · <b>Jasmine Pham</b> · AI receptionist booked Intro&nbsp;/&nbsp;Foundations, Sat&nbsp;9:00&nbsp;AM</p></div>
+            <div class="ov"><svg class="i s4" style="color:var(--red)"><use href="#phone-x-mark"/></svg><p><span class="w">10:21 PM</span> · <b>(469) 555-0143</b> · missed call, texted back</p></div>
+            <div class="ov"><svg class="i s4"><use href="#chat-bubble-left"/></svg><p><span class="w">5:52 AM</span> · <b>Caleb Wakefield</b> · "Running 5 min late to 6:30, still coming"</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

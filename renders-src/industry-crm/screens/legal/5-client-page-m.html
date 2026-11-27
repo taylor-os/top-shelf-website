@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client page · Holloway &amp; Vane Law</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .cx-top { flex-direction: column; align-items: flex-start; gap: 0; padding: 12px 18px 10px; border-bottom: 1px solid var(--cx-line); }
+  .wm { font-family: Georgia, "Times New Roman", serif; font-size: 21px; font-weight: 400; color: var(--accent); letter-spacing: .01em; line-height: 1.2; }
+  .wm-s { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--cx-muted); margin-top: 3px; }
+  .cx-body { padding: 8px 16px 6px; gap: 9px; }
+  .hi { font-family: Georgia, "Times New Roman", serif; font-size: 20px; color: var(--cx-ink); }
+  .cx-card { padding: 11px 14px; }
+  .k { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .big { font-size: 21px; font-weight: 600; letter-spacing: -.01em; color: var(--cx-ink); line-height: 1.2; }
+  .ln { font-size: 13.5px; color: var(--cx-ink-2); margin-top: 3px; }
+  .note { margin-top: 7px; padding: 6px 10px; border-radius: 10px; background: var(--accent-soft); font-size: 12.5px; letter-spacing: -.005em; color: var(--cx-ink); display: flex; gap: 7px; align-items: flex-start; }
+  .note svg { color: var(--accent); margin-top: 1px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .gb { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; border-radius: 11px; border: 1px solid var(--cx-line); font-size: 13.5px; font-weight: 500; color: var(--cx-ink); }
+  .gb svg { color: var(--accent); }
+  .sm-g { font-size: 12px; color: var(--cx-muted); margin-top: 6px; display: flex; gap: 5px; align-items: center; }
+  .fee-l { font-size: 14px; color: var(--cx-ink); font-weight: 500; }
+  .pbar { height: 8px; border-radius: 99px; background: var(--cx-line); margin: 8px 0 5px; overflow: hidden; }
+  .pbar i { display: block; height: 100%; width: 42.86%; background: var(--accent); border-radius: 99px; }
+  .pl { display: flex; justify-content: space-between; font-size: 13px; color: var(--cx-ink-2); }
+  .pl b { color: var(--cx-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .nxt { display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--cx-line); font-size: 13.5px; color: var(--cx-ink-2); }
+  .nxt b { font-size: 16px; font-weight: 600; color: var(--cx-ink); }
+  .cx-btn { min-height: 44px; font-size: 15.5px; margin-top: 8px; border-radius: 12px; }
+  .lnk { display: block; text-align: center; font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 6px; }
+  .k2 { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--cx-line); margin-bottom: 4px; }
+  .gb small { display: block; font-size: 11px; color: var(--cx-muted); font-weight: 400; line-height: 1.1; }
+  .gb .st { display: flex; flex-direction: column; line-height: 1.2; }
+  .team { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .tm2 { display: flex; align-items: center; gap: 8px; font-size: 13px; line-height: 1.25; }
+  .tm2 .av { width: 32px; height: 32px; font-size: 12px; background: var(--accent-soft); color: var(--accent); }
+  .tm2 b { font-weight: 600; display: block; } .tm2 span.r { color: var(--cx-muted); font-size: 12px; }
+  .pay-r { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--cx-ink-2); }
+  .pay-r .ok { color: var(--green); }
+  .pay-r a { margin-left: auto; color: var(--accent); font-weight: 600; }
+  .tm { display: flex; align-items: center; gap: 10px; font-size: 13.5px; padding: 3px 0; }
+  .tm .av { width: 32px; height: 32px; font-size: 12px; background: var(--accent-soft); color: var(--accent); }
+  .tm b { font-weight: 600; } .tm span { color: var(--cx-muted); }
+  .cx-foot { font-size: 11px; line-height: 1.4; padding: 0 4px 0; color: var(--cx-muted); }
+</style>
+</head>
+<body class="cx t-legal">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <header class="cx-top">
+    <p class="wm">Holloway &amp; Vane Law</p>
+    <p class="wm-s">Attorneys · Frisco, Texas</p>
+  </header>
+
+  <div class="cx-body">
+    <p class="hi">Hi Jordan</p>
+
+    <div class="cx-card">
+      <p class="k">Your next date</p>
+      <p class="big">Thu, Dec 10 · 9:00 AM</p>
+      <p class="ln">Court date · Collin County Courthouse, McKinney</p>
+      <p class="note"><svg class="i s4"><use href="#user"/></svg>Daniel will meet you outside the courtroom at 8:40&nbsp;AM.</p>
+      <div class="two"><span class="gb"><svg class="i s4"><use href="#calendar"/></svg>Add to calendar</span><span class="gb"><svg class="i s4"><use href="#arrow-top-right-on-square"/></svg>Directions</span></div>
+      <p class="sm-g"><svg class="i s35"><use href="#bell"/></svg>We'll text you a reminder on Dec 8.</p>
+    </div>
+
+    <div class="cx-card">
+      <p class="k">Your fee</p>
+      <p class="fee-l">Criminal defense · flat fee $3,500</p>
+      <div class="pbar"><i></i></div>
+      <div class="pl"><span>Paid <b>$1,500</b></span><span>Left <b>$2,000</b></span></div>
+      <div class="nxt"><span>Next payment · due Dec 15</span><b>$1,000</b></div>
+      <a class="cx-btn">Pay $1,000 now</a>
+      <a class="lnk">Pay the full $2,000</a>
+      <p class="k k2">Payments</p>
+      <p class="pay-r"><svg class="i s4 ok"><use href="#check-circle"/></svg>Nov 27 · $1,500 · Card ending 4417<a>Receipt</a></p>
+    </div>
+
+    <div class="cx-card">
+      <p class="k">Your team</p>
+      <div class="team">
+        <p class="tm2"><span class="av">DV</span><span><b>Daniel Vane</b><span class="r">Attorney</span></span></p>
+        <p class="tm2"><span class="av">PN</span><span><b>Priya Nair</b><span class="r">Paralegal</span></span></p>
+      </div>
+      <div class="two"><span class="gb" style="min-height:42px"><svg class="i s4"><use href="#phone"/></svg><span class="st">Call the office<small>(469) 555-0110</small></span></span><span class="gb" style="min-height:42px"><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text us</span></div>
+    </div>
+
+    <p class="cx-foot">Please don't text details about your case. Call us, or ask at your next meeting.<br>Secure page for Jordan Sealy · Holloway &amp; Vane Law</p>
+  </div>
+</div>
+</body>
+</html>

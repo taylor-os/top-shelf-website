@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RO 2052 · Turnbuckle Auto Repair</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  body { overflow: hidden; }
+  .nav { gap: 2px; }
+  .nav a { padding: 8px 12px; }
+  .nav .sec { padding: 10px 12px 3px; }
+  .side .brand { height: 68px; }
+  .side .brand small { display: block; font-size: 12px; font-weight: 400; color: var(--on-em-dim); margin-top: 2px; }
+  .band { align-items: center; padding: 10px 24px; min-height: 58px; }
+  .crumb { display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: var(--on-em-dim); }
+  .crumb b { color: var(--on-em); font-weight: 600; }
+  .search { display: flex; align-items: center; gap: 8px; width: 300px; height: 38px; padding: 0 12px; border-radius: 10px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: var(--on-em-dim); font-size: 14px; }
+  .page { padding: 14px 24px 0; }
+  .ro-grid { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+  .maincol { display: flex; flex-direction: column; gap: 10px; height: calc(100vh - 58px - 14px - 24px); }
+  .hcard { padding: 14px 18px; }
+  .hcard .r1 { display: flex; align-items: center; gap: 10px; }
+  .hcard .r1 h2 { font-size: 22px; line-height: 28px; font-weight: 600; }
+  .hcard .car { font-size: 17px; font-weight: 600; margin-top: 4px; }
+  .hcard .g { font-size: 13px; color: var(--muted); }
+  .cust { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+  .cust a { font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgb(var(--b-500) / .6); }
+  .cust .btn { min-height: 32px; padding: 4px 12px; font-size: 13px; }
+  .concern { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--well); border: 1px solid rgb(var(--b-500) / .12); }
+  .concern .lbl-up { font-size: 11px; }
+  .concern p { font-size: 14px; color: var(--ink); margin-top: 2px; }
+  .links { display: flex; align-items: center; margin-top: 8px; font-size: 13px; }
+  .links a { color: rgb(var(--b-600)); font-weight: 500; }
+  .links .cancel { margin-left: auto; color: var(--red); font-size: 12px; font-weight: 500; }
+  .notice { padding: 9px 14px; background: rgb(var(--b-500) / .09); border-color: rgb(var(--b-500) / .25); font-size: 13.5px; }
+  .jh { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+  .jh h3 { font-size: 16px; font-weight: 600; }
+  .jh .count-pill { margin-right: auto; }
+  .job { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 11px 16px; }
+  .job .t { font-size: 15px; font-weight: 600; }
+  .job .ln { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); }
+  .job .ln b { color: var(--ink-2); font-weight: 500; }
+  .job .rt { grid-row: 1 / span 4; grid-column: 2; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .job .p { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .job.decl .p { color: var(--muted-2); }
+  .job .fu { font-size: 11.5px; color: var(--muted-2); display: inline-flex; align-items: center; gap: 4px; }
+  .totals { margin-top: auto; display: flex; align-items: center; gap: 28px; padding: 12px 18px; border-radius: 12px 12px 0 0; background: var(--bar); color: var(--on-em); box-shadow: var(--shadow-sm); }
+  .totals span { font-size: 13px; color: var(--on-em-dim); }
+  .totals b { font-size: 18px; font-weight: 600; color: var(--on-em); margin-left: 6px; font-variant-numeric: tabular-nums; }
+  .totals .r { margin-left: auto; font-size: 12.5px; color: var(--on-em-dim); }
+  .side-col { display: flex; flex-direction: column; gap: 12px; }
+  .sc { padding: 12px 14px; }
+  .sc h3 { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .sc h3 .count-pill { font-size: 11px; }
+  .thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .thumbs figure { margin: 0; }
+  .thumbs img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; display: block; }
+  .thumbs figcaption { font-size: 12px; color: var(--ink-2); margin-top: 4px; line-height: 1.3; }
+  .note { padding: 8px 10px; border-radius: 8px; background: var(--panel-2); border: 1px solid var(--line); font-size: 13px; }
+  .note small { display: block; font-size: 11.5px; color: var(--muted-2); margin-top: 2px; }
+  .field { margin-top: 8px; height: 38px; border-radius: 8px; border: 1px solid var(--line); background: var(--well); padding: 0 10px; display: flex; align-items: center; font-size: 13px; color: var(--faint); }
+  .hint { font-size: 11.5px; color: var(--muted-2); margin-top: 5px; }
+  .timeline { gap: 9px; padding-left: 32px; }
+  .timeline::before { left: 9px; }
+  .tl .pin { left: -32px; width: 20px; height: 20px; }
+  .tl .pin svg { width: 10px; height: 10px; }
+  .tl .t { font-size: 13px; line-height: 1.3; }
+  .tl .w { font-size: 11.5px; }
+</style>
+</head>
+<body class="t-auto-repair">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">TA</span><span>Turnbuckle Auto Repair<small>Dana Weldon · Service advisor</small></span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Home</span></a>
+      <a class="on"><svg class="i"><use href="#wrench-screwdriver"/></svg><span class="lbl">Repairs</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Appointments</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span><span class="badge">2</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+      <p class="sec">Office</p>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Payments</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#question-mark-circle"/></svg><span class="lbl">Help</span></a>
+    </nav>
+    <div class="side-user"><span class="av">DW</span><div><b>Dana Weldon</b><small>Service advisor</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <p class="crumb">Home<svg class="i s4"><use href="#chevron-right"/></svg>Repairs<svg class="i s4"><use href="#chevron-right"/></svg><b>RO 2052</b></p>
+      <div class="right"><span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search customers...</span></div>
+    </header>
+
+    <div class="page">
+      <div class="ro-grid">
+        <div class="maincol">
+          <div class="card hcard">
+            <div class="r1"><h2>RO 2052</h2><span class="chip lg">Waiting</span><span class="btn outline sm sp"><svg class="i s4"><use href="#arrows-right-left"/></svg>Move</span></div>
+            <p class="car">2018 Toyota Camry</p>
+            <p class="g">Silver · VIN ...604417 · 61,280 mi in</p>
+            <div class="cust">
+              <span class="av sm">BO</span><a>Brenda Ormsby</a>
+              <span class="sp"></span>
+              <span class="btn outline"><svg class="i s4 t-brand"><use href="#phone"/></svg>Call</span>
+              <span class="btn outline"><svg class="i s4 t-brand"><use href="#chat-bubble-left"/></svg>Text</span>
+            </div>
+            <p class="g" style="margin-top:6px">Ready by <b class="fw6" style="color:var(--ink)">Today 5:00 PM</b> · Written by Dana Weldon · 2 h in Waiting</p>
+            <div class="concern">
+              <p class="lbl-up">Concern</p>
+              <p>Grinding from the front when braking. Brake light came on Sunday.</p>
+            </div>
+            <div class="links"><a>Edit concern and Ready by</a><a class="cancel">Cancel this repair order</a></div>
+          </div>
+
+          <div class="notice"><svg class="i"><use href="#check-circle"/></svg><span>Brenda answered Estimate 1 Tue 10:22 AM: <b class="fw6">2 approved, 1 declined.</b> Answered by Brenda Ormsby.</span></div>
+
+          <div class="jh"><h3>Jobs</h3><span class="count-pill gray">3</span><span class="btn outline sm"><svg class="i s4"><use href="#plus"/></svg>Add a job</span></div>
+
+          <div class="card job">
+            <p class="t">Replace front brake pads and rotors</p>
+            <p class="ln"><svg class="i s35"><use href="#user"/></svg><b>Wade</b> · Booked 1.8 h · Clocked 0 h</p>
+            <p class="ln">Labor $234 · Parts $186</p>
+            <p class="ln"><svg class="i s35"><use href="#cube"/></svg>Parts: Front brake pads × 1, Front rotor × 2</p>
+            <div class="rt"><span class="p">$420</span><span class="chip green"><svg class="i s3"><use href="#check"/></svg>Approved Tue 10:22 AM</span></div>
+          </div>
+          <div class="card job">
+            <p class="t">Replace rear brake pads</p>
+            <p class="ln"><svg class="i s35"><use href="#user"/></svg><b>Wade</b> · Booked 1.1 h · Clocked 0 h</p>
+            <p class="ln">Labor $143 · Parts $52</p>
+            <p class="ln"><svg class="i s35"><use href="#cube"/></svg>Parts: Rear brake pads × 1</p>
+            <div class="rt"><span class="p">$195</span><span class="chip green"><svg class="i s3"><use href="#check"/></svg>Approved Tue 10:22 AM</span></div>
+          </div>
+          <div class="card job decl">
+            <p class="t">Brake fluid flush</p>
+            <p class="ln">Booked 0.5 h · Clocked 0 h</p>
+            <p class="ln">Labor $65 · Parts $18</p>
+            <p class="ln"><span class="fu"><svg class="i s35"><use href="#bell"/></svg>Follow-up reminder Dec 22</span></p>
+            <div class="rt"><span class="p">$83</span><span class="chip">Declined Tue 10:22 AM</span></div>
+          </div>
+
+          <div class="totals">
+            <span>Approved<b>$615</b></span>
+            <span>Not answered<b>$0</b></span>
+            <span>Declined<b>$83</b></span>
+            <span class="r">Estimate 1 · rate $130/h</span>
+          </div>
+        </div>
+
+        <div class="side-col">
+          <div class="card sc">
+            <h3><svg class="i s4 t-brand"><use href="#camera"/></svg>Photos<span class="count-pill gray">2</span><span class="btn outline sm sp" style="min-height:30px"><svg class="i s4"><use href="#plus"/></svg>Add photo</span></h3>
+            <div class="thumbs">
+              <figure><img src="img/pads.svg" alt=""><figcaption>Front pads, 2 mm left</figcaption></figure>
+              <figure><img src="img/rotor.svg" alt=""><figcaption>Rotor scoring, driver side</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="card sc">
+            <h3><svg class="i s4 t-brand"><use href="#pencil-square"/></svg>Notes<span class="count-pill gray">1</span></h3>
+            <div class="note">Rear pads about 4 mm. Fluid is dark.<small>Wade Kendrick · 9:31 AM</small></div>
+            <div class="field">Add a note</div>
+            <p class="hint">No customer names or phone numbers. Technicians can see this.</p>
+            <span class="btn outline sm" style="margin-top:8px;min-height:30px">Add note</span>
+          </div>
+
+          <div class="card sc">
+            <h3><svg class="i s4 t-brand"><use href="#clock"/></svg>History</h3>
+            <div class="timeline">
+              <div class="tl"><span class="pin"><svg class="i"><use href="#check"/></svg></span><p class="t">Brenda answered Estimate 1</p><p class="w">Tue 10:22 AM</p></div>
+              <div class="tl"><span class="pin"><svg class="i"><use href="#paper-airplane"/></svg></span><p class="t">Estimate 1 sent by text</p><p class="w">Tue 9:48 AM · Dana Weldon</p></div>
+              <div class="tl"><span class="pin"><svg class="i"><use href="#plus"/></svg></span><p class="t">Job added: Brake fluid flush</p><p class="w">0.5 h · Rate $130 · Total $83</p></div>
+              <div class="tl"><span class="pin"><svg class="i"><use href="#camera"/></svg></span><p class="t">Photos added</p><p class="w">9:30 AM · Wade Kendrick</p></div>
+              <div class="tl"><span class="pin"><svg class="i"><use href="#document-text"/></svg></span><p class="t">Repair order opened</p><p class="w">8:40 AM · Dana Weldon</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg></span></aside>
+</div>
+</body>
+</html>

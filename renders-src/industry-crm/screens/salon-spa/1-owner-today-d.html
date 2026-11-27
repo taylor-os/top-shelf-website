@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Studio Marlowe Salon &amp; Spa</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .app { --sidebar: 240px; }
+  .nav { gap: 2px; }
+  .nav a { padding: 9px 12px; }
+  .nav .sec { padding: 12px 12px 3px; }
+  .band { align-items: center; }
+  .seg-t { display: flex; padding: 3px; border-radius: 12px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); }
+  .seg-t a { padding: 6px 14px; border-radius: 9px; font-size: 13px; font-weight: 600; color: var(--on-em); }
+  .seg-t a.on { background: var(--band-btn-bg); color: var(--band-btn-ink); }
+  .search { display: flex; align-items: center; gap: 8px; width: 240px; height: 38px; padding: 0 12px; border-radius: 12px; background: var(--panel); color: var(--muted-2); font-size: 13.5px; }
+  .page { padding-top: 16px; }
+
+  /* the day as strips, one per person */
+  .strip-card .card-h .legend { margin-left: auto; color: var(--on-em); font-size: 12px; font-weight: 500; gap: 14px; }
+  .legend i.sw { width: 18px; height: 10px; border-radius: 3px; border: 0; }
+  .grid-strips { padding: 4px 16px 0; }
+  .prow { display: grid; grid-template-columns: 186px 1fr 104px; align-items: center; gap: 12px; height: 35px; border-bottom: 1px solid var(--line); }
+  .prow.axis { height: 22px; border-bottom: 0; }
+  .who { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .pdot { width: 10px; height: 10px; border-radius: 999px; background: var(--c); flex-shrink: 0; }
+  .who b { display: block; font-size: 13px; line-height: 16px; font-weight: 600; }
+  .who small { display: block; font-size: 11px; line-height: 14px; color: var(--muted-2); white-space: nowrap; }
+  .cnt { font-size: 12px; color: var(--muted); text-align: right; white-space: nowrap; }
+  .cnt b { color: var(--ink); font-weight: 600; }
+  .track { position: relative; height: 25px;
+    background-image: linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 10% 100%; }
+  .ticks { position: relative; height: 16px; }
+  .ticks span { position: absolute; left: calc(var(--s) / 600 * 100%); transform: translateX(-50%); font-size: 11px; color: var(--muted-2); white-space: nowrap; }
+  .ticks span:first-child { transform: none; } .ticks span:last-child { transform: translateX(-100%); }
+  .bk { position: absolute; top: 0; bottom: 0; left: calc(var(--s) / 600 * 100% + 1px); width: calc((var(--e) - var(--s)) / 600 * 100% - 2px);
+    border-radius: 6px; background: color-mix(in srgb, var(--c) 30%, var(--panel)); border-left: 3px solid var(--c);
+    display: flex; align-items: center; padding: 0 5px; font-size: 10.5px; font-weight: 600; white-space: nowrap; overflow: hidden;
+    color: color-mix(in srgb, var(--c) 70%, var(--ink)); font-variant-numeric: tabular-nums; }
+  .bk.bkd { background: var(--panel); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--c) 60%, var(--panel)); color: color-mix(in srgb, var(--c) 70%, var(--ink)); }
+  .bk.proc { text-shadow: 0 0 3px var(--panel), 0 0 2px var(--panel); }
+  .bk.proc { border-left: 0; background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--c) 48%, var(--panel)) 0 4px, color-mix(in srgb, var(--c) 14%, var(--panel)) 4px 8px); font-size: 9.5px; z-index: 1; }
+  .bk.in { top: 5px; bottom: 5px; z-index: 2; box-shadow: 0 0 0 1.5px var(--panel); border-left-width: 2px; }
+  .bk.brk { border-left: 0; background: repeating-linear-gradient(135deg, var(--hatch) 0 4px, var(--line-strong) 4px 8px); color: var(--muted-2); font-weight: 500; }
+  .bk.open { border: 1.5px dashed var(--c); background: var(--panel); font-weight: 600; justify-content: center; }
+  .strip-foot { display: flex; align-items: center; gap: 6px; padding: 8px 16px 9px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: -1px; }
+  .strip-foot b { color: var(--ink); font-weight: 600; }
+  .strip-foot a { color: rgb(var(--b-600)); font-weight: 600; margin-right: 10px; }
+
+  /* row B */
+  .rowb { display: grid; grid-template-columns: 1.16fr 1fr 1.04fr; gap: 14px; margin-top: 14px; align-items: start; }
+  .card-h.sm { padding: 9px 16px; font-size: 14px; }
+  .card-h small { font-weight: 500; font-size: 12px; color: var(--on-em-dim); }
+  .wrow { display: flex; align-items: center; gap: 10px; padding: 7px 14px; }
+  .wrow + .wrow { border-top: 1px solid var(--line); }
+  .wrow .n { font-size: 13.5px; font-weight: 600; line-height: 18px; }
+  .wrow .r { font-size: 12px; color: var(--muted); line-height: 16px; }
+  .wrow .btn.sm { min-height: 30px; padding: 4px 10px; font-size: 12.5px; }
+  .gline { display: flex; align-items: center; gap: 8px; padding: 7px 14px 9px; font-size: 12px; color: var(--muted-2); border-top: 1px solid var(--line); background: var(--head); }
+  .gline a { margin-left: auto; font-weight: 600; color: rgb(var(--b-600)); }
+  .subhd { padding: 7px 14px; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-2); background: var(--head); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .big { font-size: 26px; line-height: 30px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .meth { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+  .meth b { float: right; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .dl { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); padding: 3px 0; }
+  .dl b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ok { display: inline-flex; align-items: center; gap: 4px; color: var(--green-ink); font-weight: 600; font-size: 12.5px; }
+  .hr1 { height: 1px; background: var(--line); margin: 8px 0; }
+  .mini { padding: 8px 12px; }
+  .mini .lbl-up { font-size: 10.5px; margin-bottom: 3px; }
+  .mini p { font-size: 12.5px; line-height: 17px; color: var(--ink-2); }
+</style>
+</head>
+<body class="t-salon-spa">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span>Studio Marlowe Salon &amp; Spa</span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <a><svg class="i"><use href="#credit-card"/></svg><span class="lbl">Checkout</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Clients</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">2</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+      <p class="sec">Grow</p>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reputation</span></a>
+      <a><svg class="i"><use href="#megaphone"/></svg><span class="lbl">Campaigns</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#bolt"/></svg><span class="lbl">Automations</span></a>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Pay</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">HM</span><div><b>Harper Marlowe</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Good morning, Harper</h1>
+        <p class="sub">Friday, Dec 4 · <b>40 appointments</b> · 4 open slots</p>
+      </div>
+      <div class="right">
+        <div class="seg-t"><a>Mine</a><a class="on">Whole team</a></div>
+        <div class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search clients...</div>
+      </div>
+    </header>
+
+    <div class="page">
+      <!-- Card A: the day, person by person -->
+      <section class="card clip strip-card">
+        <div class="card-h">Today's appointments <span class="count">40</span>
+          <div class="legend">
+            <span><i class="sw" style="background:color-mix(in srgb,#0d9488 30%,var(--panel));border-left:3px solid #0d9488"></i>Confirmed</span>
+            <span><i class="sw" style="background:transparent;box-shadow:inset 0 0 0 1.5px var(--on-em)"></i>Booked</span>
+            <span><i class="sw" style="background:repeating-linear-gradient(135deg,color-mix(in srgb,#0d9488 48%,var(--panel)) 0 3px,color-mix(in srgb,#0d9488 14%,var(--panel)) 3px 6px)"></i>Processing</span>
+            <span><i class="sw" style="background:repeating-linear-gradient(135deg,var(--hatch) 0 3px,var(--line-strong) 3px 6px)"></i>Break</span>
+            <span><i class="sw" style="background:transparent;border:1.5px dashed var(--on-em)"></i>Open</span>
+          </div>
+        </div>
+        <div class="grid-strips">
+          <div class="prow axis"><span></span>
+            <div class="ticks">
+              <span style="--s:0">9 AM</span><span style="--s:60">10</span><span style="--s:120">11</span><span style="--s:180">12 PM</span><span style="--s:240">1</span><span style="--s:300">2</span><span style="--s:360">3</span><span style="--s:420">4</span><span style="--s:480">5</span><span style="--s:540">6</span><span style="--s:600">7 PM</span>
+            </div><span></span></div>
+
+          <!-- Harper -->
+          <div class="prow" style="--c:#7c3aed">
+            <div class="who"><span class="pdot"></span><div><b>Harper Marlowe</b><small>Master stylist, colorist</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:0;--e:180">9:00-12:00</span>
+              <span class="bk proc" style="--s:60;--e:105"></span>
+              <span class="bk in" style="--s:60;--e:90">10:00</span>
+              <span class="bk brk" style="--s:180;--e:210">Break</span>
+              <span class="bk" style="--s:210;--e:330">12:30-2:30</span>
+              <span class="bk" style="--s:360;--e:435">3:00-4:15</span>
+              <span class="bk" style="--s:480;--e:525">5:00</span>
+            </div>
+            <span class="cnt"><b>5</b> appointments</span>
+          </div>
+          <!-- Lena -->
+          <div class="prow" style="--c:#0d9488">
+            <div class="who"><span class="pdot"></span><div><b>Lena Osborne</b><small>Master stylist</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:0;--e:45">9:00</span>
+              <span class="bk" style="--s:60;--e:165">10:00</span>
+              <span class="bk proc" style="--s:90;--e:135">Processing</span>
+              <span class="bk" style="--s:180;--e:240">12:00-1:00</span>
+              <span class="bk brk" style="--s:240;--e:270">Break</span>
+              <span class="bk bkd" style="--s:270;--e:390">1:30-3:30</span>
+              <span class="bk" style="--s:420;--e:465">4:00</span>
+              <span class="bk" style="--s:480;--e:540">5:00-6:00</span>
+            </div>
+            <span class="cnt"><b>6</b> appointments</span>
+          </div>
+          <!-- Jade -->
+          <div class="prow" style="--c:#db2777">
+            <div class="who"><span class="pdot"></span><div><b>Jade Mercer</b><small>Senior stylist</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:0;--e:75">9:00-10:15</span>
+              <span class="bk" style="--s:90;--e:195">10:30</span>
+              <span class="bk proc" style="--s:120;--e:160"></span>
+              <span class="bk in" style="--s:125;--e:155">11:05</span>
+              <span class="bk" style="--s:210;--e:255">12:30</span>
+              <span class="bk open" style="--s:270;--e:330">1 hr open</span>
+              <span class="bk" style="--s:330;--e:390">2:30-3:30</span>
+              <span class="bk bkd" style="--s:420;--e:525">4:00-5:45</span>
+            </div>
+            <span class="cnt"><b>6</b> appointments</span>
+          </div>
+          <!-- Tess -->
+          <div class="prow" style="--c:#d97706">
+            <div class="who"><span class="pdot"></span><div><b>Tess Navarro</b><small>Junior stylist</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:30;--e:75">9:30</span>
+              <span class="bk" style="--s:105;--e:150">10:45</span>
+              <span class="bk bkd" style="--s:165;--e:195">11:45</span>
+              <span class="bk open" style="--s:210;--e:270">1 hr open</span>
+              <span class="bk bkd" style="--s:300;--e:345">2:00</span>
+              <span class="bk" style="--s:420;--e:465">4:00</span>
+            </div>
+            <span class="cnt"><b>5</b> appointments</span>
+          </div>
+          <!-- Dani (booth renter): times only -->
+          <div class="prow" style="--c:#64748b">
+            <div class="who"><span class="pdot"></span><div><b>Dani Fairley</b><small>Booth renter</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:0;--e:60">Booked</span>
+              <span class="bk" style="--s:75;--e:165">Booked</span>
+              <span class="bk" style="--s:180;--e:225">Booked</span>
+              <span class="bk" style="--s:270;--e:360">Booked</span>
+              <span class="bk" style="--s:390;--e:450">Booked</span>
+            </div>
+            <span class="cnt"><b>5</b> appointments</span>
+          </div>
+          <!-- Camila -->
+          <div class="prow" style="--c:#f97316">
+            <div class="who"><span class="pdot"></span><div><b>Camila Rennick</b><small>Nail tech</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:0;--e:60">9:00</span>
+              <span class="bk" style="--s:60;--e:135">10:00</span>
+              <span class="bk" style="--s:150;--e:210">11:30</span>
+              <span class="bk bkd" style="--s:240;--e:300">1:00</span>
+              <span class="bk open" style="--s:300;--e:360">1 hr open</span>
+              <span class="bk" style="--s:360;--e:420">3:00</span>
+              <span class="bk" style="--s:450;--e:510">4:30</span>
+            </div>
+            <span class="cnt"><b>6</b> appointments</span>
+          </div>
+          <!-- Sofia -->
+          <div class="prow" style="--c:#0284c7">
+            <div class="who"><span class="pdot"></span><div><b>Sofia Lind</b><small>Esthetician</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:30;--e:60">9:30</span>
+              <span class="bk" style="--s:120;--e:180">11:00</span>
+              <span class="bk" style="--s:240;--e:300">1:00</span>
+              <span class="bk" style="--s:360;--e:390">3:00</span>
+            </div>
+            <span class="cnt"><b>4</b> appointments</span>
+          </div>
+          <!-- Rafael -->
+          <div class="prow" style="--c:#65a30d;border-bottom:0">
+            <div class="who"><span class="pdot"></span><div><b>Rafael Oldham</b><small>Massage therapist</small></div></div>
+            <div class="track">
+              <span class="bk" style="--s:60;--e:150">10:00-11:30</span>
+              <span class="bk" style="--s:240;--e:300">1:00</span>
+              <span class="bk open" style="--s:360;--e:420">1 hr open</span>
+              <span class="bk" style="--s:420;--e:510">4:00-5:30</span>
+            </div>
+            <span class="cnt"><b>3</b> appointments</span>
+          </div>
+        </div>
+        <div class="strip-foot">
+          <svg class="i s4" style="color:rgb(var(--b-600))"><use href="#clock"/></svg><b>Open today:</b>
+          Jade 1:30 <a>Book</a> · Tess 12:30 <a>Book</a> · Camila 2:00 <a>Book</a> · Rafael 3:00 <a>Book</a>
+        </div>
+      </section>
+
+      <!-- Row B -->
+      <div class="rowb">
+        <!-- Waiting on you -->
+        <section class="card clip">
+          <div class="card-h sm">Waiting on you <span class="count">4</span></div>
+          <div class="wrow">
+            <span class="ic-box sm amber"><svg class="i s35"><use href="#bell"/></svg></span>
+            <div class="grow"><p class="n">Not confirmed: Kayla Ross</p><p class="r">Tomorrow 9:30 AM · Sofia Lind</p></div>
+            <span class="btn outline sm">Call</span><span class="btn outline sm">Text</span>
+          </div>
+          <div class="wrow">
+            <span class="ic-box sm amber"><svg class="i s35"><use href="#bell"/></svg></span>
+            <div class="grow"><p class="n">Not confirmed: Denise Wadley</p><p class="r">Tomorrow 11:00 AM · Rafael Oldham</p></div>
+            <span class="btn outline sm">Call</span><span class="btn outline sm">Text</span>
+          </div>
+          <div class="wrow">
+            <span class="ic-box sm red"><svg class="i s35"><use href="#credit-card"/></svg></span>
+            <div class="grow"><p class="n">Unpaid: Carla Benson</p><p class="r">Owes $18.00</p></div>
+            <span class="btn outline sm">Open ticket</span>
+          </div>
+          <div class="wrow">
+            <span class="ic-box sm green"><svg class="i s35"><use href="#banknotes"/></svg></span>
+            <div class="grow"><p class="n">Payout ready: Dani Fairley</p><p class="r">Nov 15 to Nov 28 · net owed $1,486.40</p></div>
+            <span class="btn outline sm">Open Pay</span>
+          </div>
+          <div class="gline"><svg class="i s35"><use href="#arrow-path"/></svg><span class="grow">Couldn't book Ryan Feld's standing appointment on Fri 12/25</span><a style="white-space:nowrap">Got it</a></div>
+        </section>
+
+        <!-- Due back + Birthdays -->
+        <section class="card clip">
+          <div class="card-h sm">Due back <span class="count">3</span><small class="sp">Not booked and past their usual time</small></div>
+          <div class="wrow">
+            <div class="grow"><p class="n">Rachel Ames <span class="r">· Root touch-up</span></p><p class="r">last in Oct 9 with Lena (8 weeks)</p></div>
+            <span class="btn outline sm">Text</span>
+          </div>
+          <div class="wrow">
+            <div class="grow"><p class="n">Jordan Lee <span class="r">· Men's cut</span></p><p class="r">last in Oct 30 with Tess (5 weeks)</p></div>
+            <span class="btn outline sm">Text</span>
+          </div>
+          <div class="wrow">
+            <div class="grow"><p class="n">Tina Moss <span class="r">· Gel manicure</span></p><p class="r">last in Nov 6 with Camila (4 weeks)</p></div>
+            <span class="btn outline sm">Text</span>
+          </div>
+          <p class="subhd">Birthdays (2)</p>
+          <div class="wrow">
+            <span class="ic-box sm brand"><svg class="i s35"><use href="#cake"/></svg></span>
+            <div class="grow"><p class="n">Mei Chen <span class="r">· Sat 12/5</span></p></div>
+            <span class="btn outline sm">Text</span>
+          </div>
+          <div class="wrow">
+            <span class="ic-box sm brand"><svg class="i s35"><use href="#cake"/></svg></span>
+            <div class="grow"><p class="n">Tara Quaid <span class="r">· Tue 12/8</span></p></div>
+            <span class="btn outline sm">Text</span>
+          </div>
+        </section>
+
+        <!-- Day close, booth rent, reputation -->
+        <div class="stack" style="gap:12px">
+          <section class="card clip">
+            <div class="card-h sm">Day close · Thu 12/3<span class="r">Open day close &rarr;</span></div>
+            <div style="padding:10px 14px 12px">
+              <div class="flex" style="align-items:flex-end"><div><p class="xs muted-2">Takings</p><p class="big">$3,486.00</p></div>
+              <div class="sp" style="text-align:right"><p class="xs muted-2">Tips</p><p class="fw6 tnum" style="font-size:15px">$512.00</p></div></div>
+              <p class="xs muted-2">By method, after refunds, tips included</p>
+              <div class="meth">
+                <span>Card reader <b>$2,418.00</b></span><span>Card on file <b>$296.00</b></span>
+                <span>Cash <b>$412.00</b></span><span>Online <b>$360.00</b></span>
+              </div>
+              <div class="hr1"></div>
+              <div class="dl"><span>Expected in the drawer <b>$412.00</b> · Counted <b>$412.00</b></span></div>
+              <div class="dl"><span class="ok"><svg class="i s4"><use href="#check-circle"/></svg>Matches</span></div>
+              <div class="dl"><span>Dani Fairley (booth renter): cash $85.00, hers</span></div>
+            </div>
+          </section>
+          <div class="grid2">
+            <section class="card mini">
+              <p class="lbl-up">Booth rent</p>
+              <p><b>Dani Fairley</b> · $325.00 weekly</p>
+              <p class="ok" style="font-size:12px;margin-top:2px"><svg class="i s35"><use href="#check-circle"/></svg>Paid Mon 11/30</p>
+            </section>
+            <section class="card mini">
+              <p class="lbl-up">Reputation</p>
+              <p><b>4.9 ★</b> · 212 reviews</p>
+              <p style="font-size:12px;color:var(--muted)">3 new this week</p><p style="font-size:12px" class="t-amber fw6">1 to reply to</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

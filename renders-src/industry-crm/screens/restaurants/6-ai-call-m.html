@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox thread · Wrenfield Kitchen &amp; Bar (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .phone { padding-bottom: 0; }
+  .m-bar { gap: 8px; padding: 8px 12px; }
+  .m-bar .t { font-size: 16px; display: flex; flex-direction: column; }
+  .m-bar .t .chip { margin-left: 6px; font-size: 10px; padding: 1px 8px; vertical-align: 2px; background: rgba(255,255,255,.2); color: var(--on-em); }
+  .chat { gap: 4px; padding: 6px 12px 70px; }
+  .day-sep { margin: 2px 0 0; }
+  .call { align-self: stretch; background: var(--panel); border-radius: 14px; border: 1px solid var(--line); border-left: 4px solid rgb(var(--b-500)); box-shadow: var(--shadow); overflow: hidden; }
+  .call .hd { display: flex; align-items: center; gap: 6px; padding: 8px 12px 6px; font-size: 12.5px; font-weight: 600; color: rgb(var(--b-700)); flex-wrap: wrap; }
+  .call .hd small { font-weight: 500; color: var(--muted-2); font-size: 11.5px; }
+  .call .hd .chip { margin-left: auto; }
+  .call .rec { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 600; color: rgb(var(--b-600)); }
+  .tr { padding: 2px 12px 8px; display: flex; flex-direction: column; gap: 3px; }
+  .tr p { font-size: 12.5px; line-height: 1.28; color: var(--ink-2); display: flex; gap: 6px; }
+  .tr p b { flex-shrink: 0; width: 40px; font-size: 10.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted-2); padding-top: 2px; }
+  .tr p.ai b { color: rgb(var(--b-600)); }
+  .sys { align-self: stretch; display: flex; align-items: flex-start; gap: 8px; padding: 7px 10px; border-radius: 10px; background: var(--well); border: 1px solid rgb(var(--b-500) / .15); font-size: 12.5px; color: var(--ink-2); line-height: 1.4; margin: 2px 0; }
+  .sys svg { color: rgb(var(--b-600)); margin-top: 2px; }
+  .sys .chip { font-size: 10.5px; padding: 1px 8px; }
+  .msg { font-size: 13px; line-height: 1.36; padding: 6px 11px; max-width: 86%; }
+  .msg-t { padding: 2px 6px 0; }
+  .okchip { align-self: center; margin: 4px 0 0; }
+  .composer { position: fixed; left: 0; right: 0; bottom: 0; }
+</style>
+</head>
+<body class="t-restaurants">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#arrow-left"/></svg></a>
+    <span class="av sm" style="background:rgba(255,255,255,.18);color:var(--on-em)">NW</span>
+    <p class="t"><span>Nate Winfield<span class="chip">New guest</span></span><small>(214) 555-0148</small></p>
+    <a><svg class="i"><use href="#phone"/></svg></a>
+  </div>
+
+  <div class="chat">
+    <span class="day-sep">Thu, Dec 3</span>
+    <div class="call">
+      <div class="hd"><svg class="i s4"><use href="#sparkles"/></svg>AI receptionist answered<small>6:41 PM · 1m 52s</small></div>
+      <div class="tr">
+        <p><b>Caller</b><span>Hi, do you have a table for 6 at 7 tomorrow?</span></p>
+        <p class="ai"><b>AI</b><span>Thanks for calling Wrenfield Kitchen &amp; Bar. Tomorrow at 7:00 we're full for six, but I can do 6:45 or 7:30. Would either work?</span></p>
+        <p><b>Caller</b><span>7:30's fine. It's Nate, Winfield.</span></p>
+        <p class="ai"><b>AI</b><span>Got it, Nate. Any allergies or a special occasion we should know about?</span></p>
+        <p><b>Caller</b><span>My wife has a tree nut allergy. And we're celebrating a buddy's promotion.</span></p>
+        <p class="ai"><b>AI</b><span>I've noted the tree nut allergy and the celebration. You're set for 6 tomorrow, Friday, at 7:30. I'll text you a confirmation now.</span></p>
+        <div class="flex" style="margin-top:2px"><span class="rec"><svg class="i s35"><use href="#play-circle"/></svg>Play recording</span><span class="chip green sp">Reservation booked</span></div>
+      </div>
+    </div>
+
+    <div class="sys"><svg class="i s4"><use href="#calendar-days"/></svg><span>Reservation created · <b>Fri Dec 4 · 7:30 PM · Party of 6 · T16</b> <span class="chip red">Tree nut allergy (1)</span> · Guest added to your list</span></div>
+
+    <p class="msg-t r"><span class="tag">Sent automatically</span> · 6:43 PM</p>
+    <div class="msg auto">Wrenfield Kitchen &amp; Bar: You're booked, Nate. Party of 6, Fri Dec 4 at 7:30 PM. We've noted the tree nut allergy. Reply C to confirm or call (469) 555-0110 to change.</div>
+
+    <span class="day-sep">Fri, Dec 4</span>
+    <p class="msg-t r"><span class="tag">Reminder</span> · 10:00 AM</p>
+    <div class="msg auto">Wrenfield Kitchen &amp; Bar: See you tonight at 7:30, Nate. Running late or need to change the party size? Just reply here.</div>
+    <p class="msg-t l">10:14 AM</p>
+    <div class="msg in">C. Thanks, see you tonight!</div>
+
+    <span class="chip green lg okchip"><svg class="i s35"><use href="#check-circle"/></svg>Confirmed · handled by AI, nothing to do</span>
+  </div>
+
+  <div class="composer">
+    <span class="icon-btn sm" style="color:var(--muted)"><svg class="i s4"><use href="#paper-clip"/></svg></span>
+    <span class="in">Text Nate</span>
+    <span class="send"><svg class="i s4"><use href="#paper-airplane"/></svg></span>
+  </div>
+</div>
+</body>
+</html>

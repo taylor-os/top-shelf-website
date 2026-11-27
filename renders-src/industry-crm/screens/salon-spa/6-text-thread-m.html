@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texts · Ava Linden (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .phone { padding-bottom: 70px; }
+  .m-bar { min-height: 54px; padding: 6px 12px; }
+  .chipbar { background: var(--em); padding: 0 16px 10px; display: flex; gap: 6px; }
+  .chipbar .chip { background: rgba(255,255,255,.18); color: var(--on-em); font-size: 11.5px; padding: 3px 10px; }
+  .chat { gap: 3px; padding: 4px 12px 8px; }
+  .day-sep { margin: 2px 0 0; }
+  .msg { font-size: 13px; line-height: 1.36; padding: 6px 11px; max-width: 89%; }
+  .msg-t { padding: 1px 6px 0; font-size: 10.5px; }
+  .ai-card { margin: 2px 0 4px; }
+  .ai-card .hd { padding: 8px 12px; font-size: 12.5px; }
+  .ai-card .bd { gap: 4px; padding: 7px 12px 8px; font-size: 13px; line-height: 1.4; }
+  .ai-card .ft { padding: 0; margin-left: auto; gap: 14px; font-size: 12.5px; font-weight: 600; color: rgb(var(--b-600)); }
+  .ai-card .ft a { display: inline-flex; align-items: center; gap: 4px; }
+  .sys { align-self: center; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); background: var(--tint); border-radius: 999px; padding: 3px 10px; margin: 4px 0; }
+  .sys svg { color: var(--green); }
+  .msg.out a, .msg.auto a { text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+  .composer { padding: 7px 12px; }
+  .sys { margin: 2px 0; }
+  .msg.auto a { color: rgb(var(--b-700)); }
+</style>
+</head>
+<body class="t-salon-spa">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#arrow-left"/></svg></a>
+    <span class="av sm" style="background:rgba(255,255,255,.18);color:var(--on-em)">AL</span>
+    <p class="t">Ava Linden<small>(469) 555-0340</small></p>
+    <a><svg class="i"><use href="#phone"/></svg></a>
+  </div>
+  <div class="chipbar">
+    <span class="chip"><svg class="i s35"><use href="#calendar-days"/></svg>Next: Sat 12/5 · 10:00 AM · Lena</span>
+    <span class="chip"><svg class="i s35"><use href="#check-circle"/></svg>Deposit $30 paid</span>
+  </div>
+
+  <div class="chat">
+    <span class="day-sep">Tue 12/1</span>
+
+    <div class="ai-card">
+      <div class="hd"><svg class="i s4"><use href="#sparkles"/></svg>AI receptionist answered<small>7:42 PM · 2 min</small></div>
+      <div class="bd">Ava wanted her root touch-up with Lena. Booked Sat 12/5 at 10:00 AM: Root touch-up &amp; gloss, 1 hr 45 min, $120.00. Sent the deposit link.
+        <div class="flex" style="gap:10px"><span class="xs muted-2">Call from (469) 555-0340</span><div class="ft"><a><svg class="i s35"><use href="#play"/></svg>Play</a><a><svg class="i s35"><use href="#document-text"/></svg>Transcript</a></div></div></div>
+    </div>
+
+    <p class="msg-t r"><span class="tag">AI receptionist</span> · 7:44 PM</p>
+    <div class="msg auto">Studio Marlowe Salon &amp; Spa: your appointment on Sat 12/5 at 10:00 AM is held until 8:44 PM. To keep it, pay the $30.00 deposit here: <a>studio-marlowe.example/appt/7KQ2</a></div>
+    <span class="sys"><svg class="i s35"><use href="#check-circle"/></svg>Deposit paid $30.00 · 7:51 PM</span>
+
+    <span class="day-sep">Fri 12/4</span>
+    <p class="msg-t r"><span class="tag">Reminder</span> · 10:00 AM</p>
+    <div class="msg auto">Hi Ava, this is Studio Marlowe Salon &amp; Spa: your Root touch-up &amp; gloss with Lena Osborne is Sat 12/5 at 10:00&nbsp;AM. Reply C to confirm, or change it here: <a>studio-marlowe.example/m/7KQ2</a></div>
+    <p class="msg-t l">10:12 AM</p>
+    <div class="msg in">C! Could I add a brow wax too?</div>
+    <p class="msg-t r"><span class="tag">auto</span> · 10:12 AM</p>
+    <div class="msg auto">Thanks, Ava. You're confirmed for Sat 12/5 at 10:00&nbsp;AM.</div>
+    <p class="msg-t r"><span class="tag">Bree</span> · 10:20 AM</p>
+    <div class="msg out">Done! Brow wax with Sofia at 11:45 ($22), right after your color. See you tomorrow.</div>
+  </div>
+
+  <div class="composer" style="position:fixed;left:0;right:0;bottom:0">
+    <span class="icon-btn sm" style="color:var(--muted)"><svg class="i s4"><use href="#paper-clip"/></svg></span>
+    <span class="in">Text message</span>
+    <span class="send"><svg class="i s4"><use href="#paper-airplane"/></svg></span>
+  </div>
+</div>
+</body>
+</html>

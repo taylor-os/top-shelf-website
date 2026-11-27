@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make a payment · Bramlett Motor Co.</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .cx-top { padding: 16px 20px 14px; border-bottom: 1px solid var(--cx-line); }
+  .cx-name small { display: flex; align-items: center; gap: 12px; color: var(--cx-muted); }
+  .cx-name small span { display: inline-flex; align-items: center; gap: 4px; }
+  .cx-body { gap: 14px; }
+  .hi { font-size: 15px; color: var(--cx-ink-2); }
+  .due { border-radius: 14px; background: var(--accent-soft); border: 1px solid var(--cx-line); padding: 14px 16px; }
+  .due .lbl { font-size: 13px; font-weight: 600; color: var(--accent); }
+  .due .cx-pay { color: var(--cx-ink); margin-top: 2px; line-height: 1.1; }
+  .due small { font-size: 12.5px; color: var(--cx-ink-2); }
+  .cx-card { padding: 12px 14px; }
+  .cx-opt .t { font-size: 14.5px; }
+  .chev { margin-left: auto; color: var(--cx-muted); }
+  .co { border: 1px solid var(--cx-line); border-radius: 14px; padding: 14px; background: var(--cx-card); }
+  .co h3 { font-size: 15px; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .co h3 svg { color: var(--accent); }
+  .fld { height: 46px; border: 1px solid var(--cx-line); border-radius: 10px; padding: 0 12px; display: flex; align-items: center; font-size: 14.5px; color: var(--cx-muted); background: var(--cx-bg); }
+  .fr { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .sec { display: flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 12px; color: var(--cx-muted); }
+  .small { font-size: 13px; color: var(--cx-muted); text-align: center; line-height: 1.55; }
+</style>
+</head>
+<body class="cx t-car-lots">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <header class="cx-top">
+    <span class="cx-logo">BM</span>
+    <p class="cx-name">Bramlett Motor Co.<small><span><svg class="i s35"><use href="#phone"/></svg>(972) 555-0148</span><span><svg class="i s35"><use href="#map-pin"/></svg>Garland, TX</span></small></p>
+  </header>
+
+  <div class="cx-body">
+    <div>
+      <p class="hi">Hi Brianna,</p>
+      <h2>Make your car payment</h2>
+    </div>
+
+    <div class="due">
+      <p class="lbl">Due now</p>
+      <p class="cx-pay">$204.09</p>
+      <small>Includes a $15.00 late fee.</small>
+    </div>
+
+    <div class="stack" style="gap:8px">
+      <div class="cx-card sel cx-opt"><span class="cx-radio"></span><p class="t">Due now</p><span class="p">$204.09</span></div>
+      <div class="cx-card cx-opt"><span class="cx-radio"></span><p class="t">Another amount</p><svg class="i s4 chev"><use href="#chevron-down"/></svg></div>
+    </div>
+
+    <div class="co">
+      <h3><svg class="i s4"><use href="#credit-card"/></svg>Pay by card</h3>
+      <div class="fld">Card number</div>
+      <div class="fr"><div class="fld">MM / YY</div><div class="fld">CVC</div><div class="fld">ZIP</div></div>
+      <p class="sec"><svg class="i s35"><use href="#lock-closed"/></svg>Secure card checkout</p>
+    </div>
+
+    <a class="cx-btn">Pay $204.09</a>
+
+    <p class="small">You'll get a receipt by text.<br>Questions? Call or text (972) 555-0148.</p>
+  </div>
+</div>
+</body>
+</html>

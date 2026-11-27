@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule · Alderbrook Family Dental</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .page { padding-top: 12px; }
+  .band { padding-bottom: 14px; }
+  .seg-d { display: inline-flex; padding: 3px; border-radius: 12px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); }
+  .seg-d a { padding: 5px 14px; border-radius: 9px; font-size: 13px; font-weight: 600; color: var(--on-em); }
+  .seg-d a.on { background: var(--band-btn-bg); color: var(--band-btn-ink); }
+  .strip { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 13.5px; color: var(--ink-2); }
+  .strip b { font-weight: 600; color: var(--ink); }
+  .strip .chips { margin-left: auto; }
+  .strip .chip.lg { background: var(--panel); border: 1px solid var(--line); color: var(--ink-2); }
+  .strip .chip.lg.on { background: var(--bar); border-color: var(--bar); color: var(--on-em); }
+  .sched { display: grid; grid-template-columns: minmax(0, 1fr) 284px; gap: 16px; align-items: start; }
+  .cal { --slot: 19px; grid-template-columns: 46px repeat(3, minmax(0, 1fr)); grid-template-rows: 46px repeat(36, var(--slot)); }
+  .cal .lines { background-size: 100% calc(var(--slot) * 4); }
+  .cal .ch small { white-space: nowrap; }
+  .cal .hr { white-space: nowrap; padding: 0 5px 0 0; font-size: 10.5px; }
+  .ev { padding: 3px 7px; font-size: 11.5px; line-height: 14px; margin: 1px 4px; }
+  .ev b { font-size: 12px; line-height: 15px; }
+  .ev b i { font-style: normal; font-weight: 500; color: var(--muted-2); margin-right: 4px; }
+  .ev .cl { display: flex; gap: 4px; align-items: center; margin-top: 2px; overflow: hidden; }
+  .ev .cl .chip { padding: 0 6px; font-size: 9.5px; line-height: 14px; }
+  .ev.short { display: flex; flex-direction: column; justify-content: center; }
+  .ev.out { background: var(--head); border-color: var(--line-strong); }
+  .ev.out b, .ev.out span { color: var(--muted-2); }
+  .ev.inchair { background: rgb(var(--b-600)); border-color: rgb(var(--b-800)); color: var(--on-accent); }
+  .ev.inchair b, .ev.inchair b i, .ev.inchair span { color: var(--on-accent); }
+  .ev.inchair .chip { background: color-mix(in srgb, var(--on-accent) 22%, transparent); color: var(--on-accent); }
+  .ev.open { background: var(--panel); border: 1.5px dashed rgb(var(--b-500)); border-left-width: 1.5px; }
+  .ev.open b { color: rgb(var(--b-700)); }
+  .ev.open .btn { min-height: 22px; padding: 1px 7px; font-size: 10.5px; border-radius: 7px; flex-shrink: 0; }
+  .ev .badges { float: right; display: inline-flex; gap: 3px; margin-left: 4px; }
+  .ev .badges .chip { padding: 0 5px; font-size: 9.5px; line-height: 14px; }
+  .ev .ok { color: var(--green-ink); font-weight: 500; }
+  .ev.open .yes { color: var(--green-ink); font-weight: 600; }
+  .cal .now { z-index: 1; }
+  .nowlbl { grid-column: 1; align-self: start; justify-self: end; margin: -1px 3px 0 0; z-index: 4; font-size: 10px; font-weight: 600; line-height: 14px; color: var(--badge-ink); background: var(--red); border-radius: 4px; padding: 0 4px; }
+  .ev.open { padding-top: 2px; }
+  .fam { grid-column: 4; grid-row: 30 / 38; justify-self: end; width: 8px; margin: 6px 4px 6px 0; border: 2px solid var(--violet); border-left: 0; border-radius: 0 6px 6px 0; z-index: 3; position: relative; }
+  /* right rail */
+  .rail .card-h { padding: 10px 14px; font-size: 14px; }
+  .arow { display: flex; gap: 8px; align-items: flex-start; padding: 8px 14px; font-size: 12.5px; }
+  .arow + .arow { border-top: 1px solid var(--line); }
+  .arow .n { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 18px; }
+  .arow .s { color: var(--muted-2); font-size: 11.5px; line-height: 15px; }
+  .arow .r { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex-shrink: 0; }
+  .arow .fit { font-size: 11px; font-weight: 600; color: rgb(var(--b-700)); white-space: nowrap; }
+  .arow.nofit { opacity: .7; }
+  .preview { margin: 4px 14px 12px; padding: 9px 11px; border-radius: 12px 12px 4px 12px; background: rgb(var(--b-500) / .12); font-size: 12px; line-height: 16px; color: var(--ink-2); }
+  .preview-l { margin: 8px 14px 0; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-2); }
+  .fab-x { position: fixed; right: 84px; bottom: 38px; display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 20px 0 16px; border-radius: 16px; color: var(--on-accent); font-weight: 600; font-size: 14.5px; z-index: 9;
+    background-image: linear-gradient(135deg, var(--grad-1), var(--grad-2) 55%, var(--grad-3)); box-shadow: 0 8px 20px rgb(var(--b-700) / .35); }
+</style>
+</head>
+<body class="t-medical-dental">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">AF</span><span>Alderbrook Family Dental</span></div>
+    <nav class="nav">
+      <a><svg class="i"><use href="#computer-desktop"/></svg><span class="lbl">Front desk</span></a>
+      <a class="on"><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Schedule</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span><span class="badge">3</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Patients</span></a>
+      <a><svg class="i"><use href="#arrow-path"/></svg><span class="lbl">Recall</span></a>
+      <a><svg class="i"><use href="#document-text"/></svg><span class="lbl">Estimates</span></a>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Balances</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">LG</span><div><b>Lupe Garza</b><small>Front desk</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Schedule</h1>
+        <p class="sub"><b>Tue, Dec 1</b> · 3 chairs · 10:20 AM</p>
+      </div>
+      <div class="right">
+        <span class="seg-d"><a class="on">Day</a><a>Week</a></span>
+        <span class="btn sm"><svg class="i s4"><use href="#chevron-left"/></svg></span>
+        <span class="btn sm">Today</span>
+        <span class="btn sm"><svg class="i s4"><use href="#chevron-right"/></svg></span>
+        <span class="avatar-ring">LG</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="strip">
+        <span><b>24 patients</b> · 21 confirmed · <b class="t-amber">3 unconfirmed</b> · <b class="t-brand">2 open hours</b> · 2 new patients</span>
+        <span class="chips"><span class="chip lg on">All chairs</span><span class="chip lg">Op 1 Dr. Fairchild</span><span class="chip lg">Op 2 Kendra</span><span class="chip lg">Op 3 Bri</span></span>
+      </div>
+
+      <div class="sched">
+        <div class="cal">
+          <div class="corner"></div>
+          <div class="ch today" style="grid-column:2"><span class="av sm">NF</span><div><b>Op 1 · Dr. Fairchild + Theo</b><small>9 patients · 1 open hour</small></div></div>
+          <div class="ch" style="grid-column:3"><span class="av sm">KE</span><div><b>Op 2 · Hygiene · Kendra</b><small>7 patients · 1 open hour</small></div></div>
+          <div class="ch" style="grid-column:4"><span class="av sm">BN</span><div><b>Op 3 · Hygiene · Bri</b><small>8 patients</small></div></div>
+
+          <div class="lines"></div>
+          <div class="vl" style="grid-column:2"></div><div class="vl" style="grid-column:3"></div><div class="vl" style="grid-column:4"></div>
+          <span class="hr" style="grid-row:2">8 AM</span><span class="hr" style="grid-row:6">9 AM</span><span class="hr" style="grid-row:10">10 AM</span>
+          <span class="hr" style="grid-row:14">11 AM</span><span class="hr" style="grid-row:18">12 PM</span><span class="hr" style="grid-row:22">1 PM</span>
+          <span class="hr" style="grid-row:26">2 PM</span><span class="hr" style="grid-row:30">3 PM</span><span class="hr" style="grid-row:34">4 PM</span>
+
+          <!-- lunch across all chairs -->
+          <div class="ev block short" style="grid-column:2;grid-row:18 / span 4"><b>Lunch · 12:00 to 1:00</b><span>AI receptionist answers the phones</span></div>
+          <div class="ev block short" style="grid-column:3;grid-row:18 / span 4"><b>Lunch</b></div>
+          <div class="ev block short" style="grid-column:4;grid-row:18 / span 4"><b>Lunch</b></div>
+
+          <!-- Op 1 -->
+          <div class="ev out" style="grid-column:2;grid-row:2 / span 4"><b><i>8:00</i>Paul Hart</b><span>Crown visit</span><div class="cl"><span class="chip">Checked out</span></div></div>
+          <div class="ev out short" style="grid-column:2;grid-row:6 / span 2"><b><i>9:00</i>Ava Langford</b><span>Limited exam · Checked out</span></div>
+          <div class="ev inchair" style="grid-column:2;grid-row:8 / span 4"><b><i>9:30</i>Darnell Price</b><span>Restorative (60 min)</span><div class="cl"><span class="chip">In chair</span></div></div>
+          <div class="ev open" style="grid-column:2;grid-row:12 / span 4"><b><i>10:30</i>Open hour</b><span>Carmen Lassiter cancelled 9:58 AM</span><span>Texted 3 on ASAP list at 10:12</span><div class="cl" style="justify-content:space-between"><span class="yes">June Whitaker replied YES</span><span class="btn primary">Book June</span></div></div>
+          <div class="ev short" style="grid-column:2;grid-row:16 / span 2"><b><span class="badges"><span class="chip brand">NEW</span></span><i>11:30</i>Maria Santos</b><span>New-patient exam · <span class="ok" style="display:inline">✓ Confirmed</span></span></div>
+          <div class="ev" style="grid-column:2;grid-row:22 / span 4"><b><i>1:00</i>Owen Pettis</b><span>Restorative (60 min)</span><div class="cl"><span class="chip green">✓ Confirmed</span></div></div>
+          <div class="ev short" style="grid-column:2;grid-row:26 / span 2"><b><span class="badges"><span class="chip brand">NEW</span><span class="chip blue">AI</span></span><i>2:00</i>Sofia Rutledge</b><span>New-patient exam · <span class="ok" style="display:inline">✓ Confirmed</span></span></div>
+          <div class="ev amber" style="grid-column:2;grid-row:28 / span 4"><b><i>2:30</i>Helen Cruz</b><span>Crown visit</span><div class="cl"><span class="chip amber">Unconfirmed</span><span style="color:var(--amber-ink)">Texted twice</span></div></div>
+          <div class="ev short" style="grid-column:2;grid-row:32 / span 2"><b><i>3:30</i>Ivan Shah</b><span>Whitening consult · <span class="ok" style="display:inline">✓ Confirmed</span></span></div>
+          <div class="ev" style="grid-column:2;grid-row:34 / span 4"><b><i>4:00</i>Jenny Rowe</b><span>Restorative (60 min)</span><div class="cl"><span class="chip green">✓ Confirmed</span></div></div>
+
+          <!-- Op 2 -->
+          <div class="ev out" style="grid-column:3;grid-row:2 / span 4"><b><i>8:00</i>Lauren Pratt</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip">Checked out</span></div></div>
+          <div class="ev out" style="grid-column:3;grid-row:6 / span 4"><b><i>9:00</i>Tom Whitley</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip">Checked out</span></div></div>
+          <div class="ev inchair" style="grid-column:3;grid-row:10 / span 4"><b><i>10:00</i>Hector Radcliffe</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip">In chair</span></div></div>
+          <div class="ev" style="grid-column:3;grid-row:14 / span 4"><b><i>11:00</i>Nora Quinn</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip green">✓ Confirmed</span><span class="chip amber">$</span></div></div>
+          <div class="ev open" style="grid-column:3;grid-row:22 / span 4"><b><i>1:00</i>Open hour</b><span>Cancelled yesterday 4:50 PM</span><div class="cl"><span class="btn outline">Text ASAP list (2 fit)</span></div></div>
+          <div class="ev" style="grid-column:3;grid-row:26 / span 4"><b><i>2:00</i>Carl Fox</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip green">✓ Confirmed</span><span class="chip amber">$</span></div></div>
+          <div class="ev amber" style="grid-column:3;grid-row:30 / span 4"><b><i>3:00</i>Rosa Ivey</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip amber">Unconfirmed</span></div></div>
+          <div class="ev" style="grid-column:3;grid-row:34 / span 4"><b><i>4:00</i>Gabe Lund</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip green">✓ Confirmed</span></div></div>
+
+          <!-- Op 3 -->
+          <div class="ev out" style="grid-column:4;grid-row:2 / span 3"><b><i>8:00</i>Eli Colfax, 8</b><span>Child cleaning · Checked out</span></div>
+          <div class="ev out" style="grid-column:4;grid-row:6 / span 4"><b><i>9:00</i>Lisa Kerr</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip">Checked out</span></div></div>
+          <div class="ev inchair" style="grid-column:4;grid-row:10 / span 4"><b><i>10:00</i>Mason Pickett</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip">In chair</span></div></div>
+          <div class="ev" style="grid-column:4;grid-row:14 / span 4"><b><i>11:00</i>Kurt Bauer</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip green">✓ Confirmed</span></div></div>
+          <div class="ev" style="grid-column:4;grid-row:22 / span 4"><b><i>1:00</i>Fiona Marlow</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip green">✓ Confirmed</span></div></div>
+          <div class="ev amber" style="grid-column:4;grid-row:26 / span 4"><b><i>2:00</i>Dean Holt</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip amber">Unconfirmed</span></div></div>
+          <div class="ev" style="grid-column:4;grid-row:30 / span 3;margin-right:16px"><b><i>3:00</i>Noah Vo, 7</b><span>Child cleaning</span><div class="cl"><span class="chip green">Confirmed</span><span class="chip" style="background:var(--violet-soft);color:var(--violet)">Family</span></div></div>
+          <div class="ev" style="grid-column:4;grid-row:34 / span 4;margin-right:16px"><b><i>4:00</i>Erica Vo</b><span>Cleaning &amp; exam</span><div class="cl"><span class="chip green">✓ Confirmed</span><span class="chip" style="background:var(--violet-soft);color:var(--violet)">Family</span></div></div>
+          <div class="fam"></div>
+
+          <div class="now" style="grid-row:11; margin-top:6px"></div>
+          <span class="nowlbl" style="grid-row:11">10:20</span>
+        </div>
+
+        <div class="rail stack" style="gap:12px">
+          <div class="card clip">
+            <div class="card-h"><svg class="i s4"><use href="#bolt"/></svg>ASAP list<span class="count">6</span><span class="r">Edit</span></div>
+            <p class="xs muted" style="padding:8px 14px 2px">Patients who want an earlier time</p>
+            <div class="arow"><div class="grow"><p class="n">June Whitaker</p><p class="s">Restorative (60 min) · mornings</p></div><div class="r"><span class="chip green">Replied YES</span><span class="fit">fits Op 1 10:30</span></div></div>
+            <div class="arow"><div class="grow"><p class="n">Sam Ogilvie</p><p class="s">Crown visit · Tue/Thu</p></div><div class="r"><span class="fit">fits Op 1 10:30</span><span class="s">texted 10:12</span></div></div>
+            <div class="arow"><div class="grow"><p class="n">Lena Frost</p><p class="s">Limited exam · any time</p></div><div class="r"><span class="fit">fits Op 1 10:30</span><span class="s">texted 10:12</span></div></div>
+            <div class="arow"><div class="grow"><p class="n">Nell Archer</p><p class="s">Cleaning &amp; exam · afternoons</p></div><div class="r"><span class="fit">fits Op 2 1:00</span><span class="s">has Dec 15, wants sooner</span></div></div>
+            <div class="arow"><div class="grow"><p class="n">Ray Delgado</p><p class="s">Cleaning &amp; exam · any time</p></div><div class="r"><span class="fit">fits Op 2 1:00</span></div></div>
+            <div class="arow nofit"><div class="grow"><p class="n">Tasha Greer</p><p class="s">Cleaning &amp; exam · after 3 PM</p></div><div class="r"><span class="chip">No fit today</span></div></div>
+            <p class="preview-l">The ASAP text</p>
+            <p class="preview">Alderbrook Family Dental: an opening came up today at 10:30 AM. Reply YES to take it.</p>
+          </div>
+
+          <div class="card clip">
+            <div class="card-h"><svg class="i s4"><use href="#calendar"/></svg>Tomorrow · Wed, Dec 2</div>
+            <div class="card-b" style="padding:12px 14px 14px">
+              <p class="sm"><b class="fw6">22 booked</b> · 17 confirmed · <b class="fw6 t-amber">5 waiting</b></p>
+              <div style="height:6px;border-radius:999px;background:var(--amber-soft);margin:8px 0 12px;overflow:hidden"><i style="display:block;width:77%;height:100%;background:rgb(var(--b-500))"></i></div>
+              <span class="btn outline sm block"><svg class="i s4"><use href="#paper-airplane"/></svg>Text the 5 again</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg></span></aside>
+</div>
+<span class="fab-x"><svg class="i"><use href="#plus"/></svg>New appointment</span>
+</body>
+</html>

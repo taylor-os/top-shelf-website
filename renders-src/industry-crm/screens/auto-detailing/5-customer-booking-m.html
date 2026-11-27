@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book your detail · Kestrel Lane Detail Co.</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .cx .phone { padding-bottom: 0; }
+  .hdr { padding: 12px 18px 10px; border-bottom: 1px solid var(--cx-line); }
+  .hdr .co { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--accent); }
+  .hdr .co .cx-logo { width: 26px; height: 26px; border-radius: 7px; font-size: 10.5px; }
+  .hdr h1 { font-size: 23px; font-weight: 600; letter-spacing: -.015em; margin-top: 5px; line-height: 1.2; }
+  .hdr p { font-size: 13.5px; color: var(--cx-ink-2); margin-top: 1px; }
+  .body { padding: 10px 16px 250px; display: flex; flex-direction: column; gap: 8px; }
+  .dones { background: var(--cx-card); border: 1px solid var(--cx-line); border-radius: 12px; }
+  .dones .done-step { border: 0; border-radius: 0; padding: 8px 12px; }
+  .dones .done-step + .done-step { border-top: 1px solid var(--cx-line); }
+  .done-step { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--cx-line); border-radius: 12px; font-size: 14px; }
+  .done-step .ck { width: 22px; height: 22px; border-radius: 99px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; flex-shrink: 0; }
+  .done-step .ck svg { width: 13px; height: 13px; stroke-width: 2.5; }
+  .done-step .n { color: var(--cx-muted); }
+  .done-step b { font-weight: 600; }
+  .done-step a { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--accent); }
+  .open { background: var(--cx-card); border: 1px solid var(--cx-line); border-radius: 12px; padding: 9px 12px 10px; }
+  .open h3 { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .open h3 .num { width: 22px; height: 22px; border-radius: 99px; border: 2px solid var(--accent); color: var(--accent); display: grid; place-items: center; font-size: 11.5px; }
+  .chk { display: flex; align-items: center; gap: 10px; padding: 6px 2px; font-size: 14.5px; }
+  .chk + .chk { border-top: 1px solid var(--cx-line); }
+  .box { width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--cx-faint); flex-shrink: 0; display: grid; place-items: center; }
+  .box.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .box.on svg { width: 14px; height: 14px; stroke-width: 2.6; }
+  .chk .p { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .chk.sel { font-weight: 500; }
+  .days { grid-template-columns: repeat(4, 1fr); margin-top: 8px; }
+  .days a { padding: 4px 0; }
+  .days a b { font-size: 17px; }
+  .slots { grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 6px; }
+  .slots a { padding: 7px 0; font-size: 13px; }
+  .took { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12.5px; color: var(--cx-muted); }
+  .next-step { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border: 1px dashed var(--cx-faint); border-radius: 12px; font-size: 14px; color: var(--cx-muted); }
+  .next-step .num { width: 22px; height: 22px; border-radius: 99px; border: 2px solid var(--cx-faint); display: grid; place-items: center; font-size: 11.5px; font-weight: 600; }
+  .sticky { position: fixed; left: 0; right: 0; bottom: 0; background: var(--cx-card); border-top: 1px solid var(--cx-line); box-shadow: var(--shadow); padding: 10px 16px 6px; z-index: 5; }
+  .sticky .what { font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--cx-muted); }
+  .sticky .ln { display: flex; justify-content: space-between; font-size: 14px; color: var(--cx-ink-2); margin-top: 2px; }
+  .sticky .ln b { font-weight: 600; color: var(--cx-ink); font-variant-numeric: tabular-nums; }
+  .sticky .dep { display: flex; justify-content: space-between; margin-top: 4px; padding-top: 5px; border-top: 1px solid var(--cx-line); font-size: 16px; font-weight: 600; }
+  .sticky .fine { font-size: 12px; color: var(--cx-muted); margin-top: 2px; }
+  .sticky .cx-btn { margin-top: 8px; min-height: 46px; }
+  .sticky .cx-foot { padding: 5px 0 0; }
+</style>
+</head>
+<body class="cx t-auto-detailing">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <header class="hdr">
+    <p class="co"><span class="cx-logo">KL</span>Kestrel Lane Detail Co.</p>
+    <h1>Book your detail</h1>
+    <p>You'll see the price before you book.</p>
+  </header>
+
+  <div class="body">
+    <div class="dones">
+    <div class="done-step"><span class="ck"><svg class="i"><use href="#check"/></svg></span><span class="n">1 ·</span><span>Your vehicle: <b>SUV</b></span><a>Change</a></div>
+    <div class="done-step"><span class="ck"><svg class="i"><use href="#check"/></svg></span><span class="n">2 ·</span><span>Package: <b>Full detail · $220</b></span><a>Change</a></div>
+    </div>
+
+    <div class="open">
+      <h3><span class="num">3</span>Add-ons</h3>
+      <div class="chk sel" style="margin-top:4px"><span class="box on"><svg class="i"><use href="#check"/></svg></span>Pet hair removal<span class="p">+$40</span></div>
+      <div class="chk"><span class="box"></span>Headlight restore<span class="p">+$60</span></div>
+      <div class="chk"><span class="box"></span>Engine bay<span class="p">+$50</span></div>
+    </div>
+
+    <div class="open">
+      <h3><span class="num">4</span>Pick a day and time</h3>
+      <div class="days"><a>Thu<b>11</b></a><a>Fri<b>12</b></a><a class="on">Sat<b>13</b></a><a>Sun<b>14</b></a></div>
+      <p class="took"><svg class="i s35"><use href="#clock"/></svg>Takes about 3 h 30 min</p>
+      <div class="slots"><a>8:00 AM</a><a class="on">9:00 AM</a><a>10:30 AM</a><a>1:00 PM</a></div>
+    </div>
+
+    <div class="next-step"><span class="num">5</span><span><b style="color:var(--cx-ink-2);font-weight:600">Your details</b> · First name, phone, your car</span></div>
+  </div>
+
+  <div class="sticky">
+    <p class="what">What you booked</p>
+    <p class="ln"><span>Full detail, Pet hair removal<br>Sat, Dec 13 · 9:00 AM</span><b>Total $260.00</b></p>
+    <p class="dep"><span>Deposit due now</span><span>$65.00</span></p>
+    <p class="fine">Your $65.00 deposit holds this time and comes off your bill. The rest, $195.00, is due at pickup.</p>
+    <a class="cx-btn">Continue</a>
+    <p class="cx-foot">Kestrel Lane Detail Co. · Rowlett, TX · (972) 555-0172</p>
+  </div>
+</div>
+</body>
+</html>

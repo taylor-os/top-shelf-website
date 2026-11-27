@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Elena Marsh Real Estate</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .side .brand small { display:block; font-size:11.5px; font-weight:400; color:var(--on-em-faint); }
+  .nav { gap:2px; }
+  .nav a { padding:8px 12px; }
+  .nav .sec { padding:12px 12px 2px; }
+  .live { margin:0 12px 10px; padding:10px 12px; border-radius:12px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.14); font-size:12px; color:var(--on-em-dim); }
+  .live b { display:flex; align-items:center; gap:6px; color:var(--on-em); font-size:13px; font-weight:600; }
+  .live b i { width:8px; height:8px; border-radius:999px; background:var(--nav-on-ink); box-shadow:0 0 0 3px rgba(255,255,255,.14); }
+  .side-user { padding:12px 16px; }
+
+  .band { display:grid; grid-template-columns:1fr auto; align-items:center; gap:4px 16px; padding:12px 28px 12px; }
+  .band .sub { margin:0; }
+  .band .toprow { display:flex; align-items:center; gap:8px; }
+  .band .rt { margin-left:auto; display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+  .search { width:340px; height:38px; border-radius:10px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); display:flex; align-items:center; gap:8px; padding:0 12px; color:var(--on-em-faint); font-size:13.5px; }
+  .band .btn.sm { min-height:36px; }
+  .band h1 { font-size:26px; letter-spacing:-.02em; }
+  .pill-tog { display:flex; padding:3px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); }
+  .pill-tog a { padding:3px 12px; border-radius:999px; font-size:13px; font-weight:600; color:var(--on-em); }
+  .pill-tog a.on { background:var(--band-btn-bg); color:var(--band-btn-ink); }
+
+  .page { padding:10px 28px 0; }
+  .tiles { margin-bottom:10px; gap:10px; }
+  .tile { padding:6px 14px; display:flex; align-items:center; gap:12px; }
+  .tile .v { margin:0; font-size:26px; line-height:1; }
+  .tile .l { font-size:13px; font-weight:600; color:var(--ink); }
+  .tile .s { margin:1px 0 0; }
+  .grid { display:grid; grid-template-columns:minmax(0,1fr) 412px; gap:20px; align-items:start; }
+
+  h2.sec-h { font-size:14px; font-weight:600; display:flex; align-items:center; gap:8px; margin:0 0 8px; color:var(--ink); }
+  h2.sec-h.red { color:var(--red); }
+  h2.sec-h .count-pill { font-size:11.5px; }
+  .dl { background:var(--panel); border:1.5px solid color-mix(in srgb, var(--red) 55%, transparent); border-radius:12px; padding:8px 14px; display:flex; flex-wrap:wrap; align-items:center; gap:3px 14px; }
+  .dl .t { flex:1; }
+  .dl .s { flex:1; line-height:1.35; }
+  .dl + .dl { margin-top:8px; }
+  .dl .t { font-size:15px; font-weight:600; }
+  .dl .s { font-size:13px; color:var(--muted); }
+  .dl .when { text-align:right; color:var(--red); font-size:17px; font-weight:600; }
+  .dl .br { flex-basis:100%; height:0; }
+  .dl .acts { display:flex; gap:6px; justify-content:flex-end; }
+  .btn.xs { min-height:28px; padding:3px 11px; font-size:12.5px; border-radius:9px; gap:6px; }
+  .btn.red { background:var(--red); color:var(--badge-ink); }
+
+  .calls .row { padding:6px 14px; gap:12px; align-items:center; }
+  .calls .av { width:34px; height:34px; font-size:12px; }
+  .calls .name { font-size:15.5px; line-height:1.3; }
+  .calls .name span { font-weight:500; color:var(--ink-2); }
+  .calls .why { font-size:12.8px; color:var(--muted); line-height:1.3; margin-top:1px; }
+  .calls .end { flex-direction:column; align-items:flex-end; gap:5px; }
+  .calls .bt { display:flex; gap:5px; align-items:center; }
+  .chk { width:28px; height:28px; border-radius:8px; border:1.5px solid var(--line-strong); display:grid; place-items:center; color:var(--faint); }
+
+  .rc .card-h { padding:5px 12px; font-size:13.5px; }
+  .rc .card-b { padding:5px 12px 7px; }
+  .rc + .rc { margin-top:8px; }
+  .cal-it { display:flex; gap:8px; padding:4px 0; font-size:12.8px; line-height:1.3; }
+  .cal-it + .cal-it { border-top:1px solid var(--line); }
+  .cal-it b.tm { width:60px; flex-shrink:0; font-size:13px; font-weight:600; }
+  .cal-it .k { font-weight:600; color:var(--ink); }
+  .cal-it .a { color:var(--muted); }
+  .lead { padding:5px 0; font-size:12.8px; line-height:1.35; }
+  .lead + .lead { border-top:1px solid var(--line); }
+  .lead .q { color:var(--ink-2); margin:2px 0 3px; }
+  .lead .ft { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:12px; }
+  .cb { display:inline-flex; align-items:center; gap:4px; }
+  .cb i { width:13px; height:13px; border:1.5px solid var(--line-strong); border-radius:3px; display:inline-block; }
+  .tl10 { display:flex; flex-direction:column; gap:3px; }
+  .tl10 div { display:flex; gap:7px; align-items:baseline; font-size:12px; line-height:1.3; }
+  .tl10 .dot { width:8px; height:8px; transform:translateY(-1px); }
+  .tl10 b { font-weight:600; }
+  .past div.p { display:flex; align-items:center; gap:8px; font-size:12.6px; padding:3px 0; line-height:1.3; }
+  .past div.p + div.p { border-top:1px solid var(--line); }
+  .past .grow { color:var(--ink-2); }
+  .past .btn.xs { min-height:26px; padding:2px 10px; }
+</style>
+</head>
+<body class="t-real-estate">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">EM</span><span>Elena Marsh Real Estate<small>Realtor CRM</small></span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#home-modern"/></svg><span class="lbl">Listings</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Contacts</span></a>
+      <a><svg class="i"><use href="#funnel"/></svg><span class="lbl">Pipeline</span></a>
+      <a><svg class="i"><use href="#document-check"/></svg><span class="lbl">Deals</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <a><svg class="i"><use href="#globe-alt"/></svg><span class="lbl">Website leads</span><span class="badge">1</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+    </nav>
+    <div class="live"><b><i></i>Website is live</b>5 listings showing · published 7:42 AM</div>
+    <div class="side-foot"><a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a><span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span></div>
+    <div class="side-user"><span class="av">EM</span><div><b>Elena Marsh</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div class="flex" style="gap:16px"><h1>Good morning, Elena</h1><div class="pill-tog"><a class="on">Mine</a><a>Whole team</a></div></div>
+      <div class="toprow">
+        <span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Name, street or phone number</span>
+        <span class="btn sm"><svg class="i s4"><use href="#user-plus"/></svg>New contact</span>
+        <span class="btn primary sm"><svg class="i s4"><use href="#phone-arrow-up-right"/></svg>Log a call</span>
+      </div>
+      <p class="sub" style="grid-column:1 / -1">Tuesday, Oct 20 · <b>6 people to call</b> · 3 appointments · <b>2 contract deadlines in the next 48 hours</b></p>
+    </header>
+
+    <div class="page">
+      <section class="tiles" style="--n:4">
+        <div class="tile"><p class="v">1</p><div><p class="l">Offers out</p><p class="s">Diane Cho, answer by 6:00 PM</p></div></div>
+        <div class="tile"><p class="v">2</p><div><p class="l">Under contract</p><p class="s">Option ends tomorrow</p></div></div>
+        <div class="tile"><p class="v">6</p><div><p class="l">Active buyers</p><p class="s">2 showing this week</p></div></div>
+        <div class="tile"><p class="v amber">2</p><div><p class="l">Leads waiting</p><p class="s">longest 13 hrs</p></div></div>
+      </section>
+
+      <div class="grid">
+        <div>
+          <h2 class="sec-h red"><svg class="i s4"><use href="#exclamation-triangle"/></svg>Contract deadlines (next 48 hours)<span class="count-pill red">2</span></h2>
+          <div class="dl">
+            <p class="t">Option period ends: 1180 Prairie Clover Ln (sample)</p>
+            <p class="when">Tomorrow 5:00 PM</p><span class="br"></span>
+            <p class="s">Your sellers, Greg &amp; Tina Sorensen · Buyers asked for $3,200 in repairs</p>
+            <div class="acts">
+              <span class="btn primary xs"><svg class="i s35"><use href="#phone"/></svg>Call</span>
+              <span class="btn outline xs">Log call</span>
+              <span class="btn outline xs">Option passed, still under contract</span>
+            </div>
+          </div>
+          <div class="dl">
+            <p class="t">Buyer's financing approval: 2209 Fieldstone Bend (sample)</p>
+            <p class="when">Tomorrow</p><span class="br"></span>
+            <p class="s">Your buyers, Ade &amp; Funmi Oakes · Loan officer Nora Padgett, (972) 555-0145</p>
+            <div class="acts">
+              <span class="btn primary xs"><svg class="i s35"><use href="#phone"/></svg>Call</span>
+              <span class="btn outline xs">Log call</span>
+              <span class="btn outline xs">Done</span>
+            </div>
+          </div>
+
+          <h2 class="sec-h" style="margin-top:14px"><svg class="i s4" style="color:var(--green)"><use href="#phone"/></svg>Call today<span class="count-pill gray">6</span><span class="sp xs muted" style="font-weight:500">Call is first. Check it off when you're done.</span></h2>
+          <div class="card clip rows calls">
+            <div class="row">
+              <span class="av">DC</span>
+              <div class="main-col"><p class="name">Diane Cho · <span>(972) 555-0131</span></p><p class="why">Offer on 418 Lantana Ln (sample), $455,000. Seller's answer due 6:00 PM. Check with the listing agent at 3.</p></div>
+              <div class="end"><span class="chip red">Due 6:00 PM today</span><span class="bt"><span class="btn primary xs">Call</span><span class="btn outline xs">Text</span><span class="btn outline xs">Log call</span><span class="chk"><svg class="i s4"><use href="#check"/></svg></span></span></div>
+            </div>
+            <div class="row">
+              <span class="av">GS</span>
+              <div class="main-col"><p class="name">Greg &amp; Tina Sorensen · <span>(940) 555-0151</span></p><p class="why">Decide on the $3,200 repair request before the option period ends tomorrow at 5:00 PM.</p></div>
+              <div class="end"><span class="chip red">Deadline tomorrow</span><span class="bt"><span class="btn primary xs">Call</span><span class="btn outline xs">Text</span><span class="btn outline xs">Log call</span><span class="chk"><svg class="i s4"><use href="#check"/></svg></span></span></div>
+            </div>
+            <div class="row">
+              <span class="av">GL</span>
+              <div class="main-col"><p class="name">Grace Liu · <span>(469) 555-0187</span></p><p class="why">Website lead from last night. The chat answered her; she wants a call. Asked about 9032 Mesquite Hollow Dr (sample). Has an agent: not asked yet.</p></div>
+              <div class="end"><span class="chip blue">Website lead</span><span class="bt"><span class="btn primary xs">Call</span><span class="btn outline xs">Text</span><span class="btn outline xs">Log call</span><span class="chk"><svg class="i s4"><use href="#check"/></svg></span></span></div>
+            </div>
+            <div class="row">
+              <span class="av">WP</span>
+              <div class="main-col"><p class="name">Walter &amp; June Pruett · <span>(940) 555-0164</span></p><p class="why">Called during your showing yesterday. The AI receptionist booked a listing appointment Thu 10:00 AM. Call to introduce yourself.</p></div>
+              <div class="end"><span class="chip green">Booked by phone</span><span class="bt"><span class="btn primary xs">Call</span><span class="btn outline xs">Text</span><span class="btn outline xs">Log call</span><span class="chk"><svg class="i s4"><use href="#check"/></svg></span></span></div>
+            </div>
+            <div class="row">
+              <span class="av">CM</span>
+              <div class="main-col"><p class="name">Carol Mabry · <span>(940) 555-0128</span></p><p class="why">New price $535,000 is on your website. Weekly update ready: 4 showings this week, 2 feedback notes.</p></div>
+              <div class="end"><span class="chip brand">Seller update</span><span class="bt"><span class="btn primary xs">Call</span><span class="btn outline xs">Text</span><span class="btn outline xs">Log call</span><span class="chk"><svg class="i s4"><use href="#check"/></svg></span></span></div>
+            </div>
+            <div class="row">
+              <span class="av">ES</span>
+              <div class="main-col"><p class="name">Evelyn Shaw · <span>(940) 555-0119</span></p><p class="why">Wants to know what her home is worth. Walkthrough today 1:30 PM. Send the IABS first.</p></div>
+              <div class="end"><span class="chip amber">Seller lead</span><span class="bt"><span class="btn primary xs">Call</span><span class="btn outline xs">Text</span><span class="btn outline xs">Log call</span><span class="chk"><svg class="i s4"><use href="#check"/></svg></span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card clip rc">
+            <div class="card-h">Today's calendar<span class="count">3</span><span class="r">Calendar &rarr;</span></div>
+            <div class="card-b">
+              <div class="cal-it"><b class="tm">10:00 AM</b><div><p><span class="k">Showing</span> · Linda &amp; Ray Burkhart</p><p class="a">4217 Quail Haven Ct, Prosper (sample)</p></div></div>
+              <div class="cal-it"><b class="tm">1:30 PM</b><div><p><span class="k">Listing walkthrough</span> · Evelyn Shaw</p><p class="a">7804 Cottonwood Bend, Denton (sample)</p></div></div>
+              <div class="cal-it"><b class="tm">4:00 PM</b><div><p><span class="k">Showing</span> · the Burkharts <span class="chip">Other agent's listing</span></p><p class="a">115 Sycamore Run, Denton (sample)</p></div></div>
+            </div>
+          </div>
+
+          <div class="card clip rc">
+            <div class="card-h">New leads<span class="count">2</span><span class="r">All leads &rarr;</span></div>
+            <div class="card-b">
+              <div class="lead">
+                <div class="flex"><b>Grace Liu</b><span class="chip amber">13 hrs, not called yet</span></div>
+                <p class="q">Website chat answered her at 6:14 PM. She asked: "Is the flex room big enough for a home office? Can we see it this weekend?" She wants a call.</p>
+                <div class="ft"><span class="cb"><i></i>Has an agent</span><span class="cb"><i></i>IABS sent</span><span class="sp"></span><span class="btn primary xs">Call</span><span class="btn outline xs">Mark replied</span></div>
+              </div>
+              <div class="lead">
+                <div class="flex"><b>(214) 555-0172</b><span class="chip green">Missed call, texted back</span><span class="sp btn primary xs">Call</span></div>
+                <p class="q">7:58 PM last night. Text-back sent. They replied: "Is the Quail Haven house still available?"</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card clip rc">
+            <div class="card-h">Next 10 days</div>
+            <div class="card-b tl10">
+              <div><span class="dot red"></span><p><b>Wed 10/21, 5:00 PM</b> · Option period ends · Prairie Clover</p></div>
+              <div><span class="dot red"></span><p><b>Wed 10/21</b> · Financing approval · Fieldstone Bend</p></div>
+              <div><span class="dot amber"></span><p><b>Sat 10/24</b> · Survey delivered · Prairie Clover <span class="chip amber">Falls on Saturday: check whether it moves</span></p></div>
+              <div><span class="dot green"></span><p><b>Fri 10/30</b> · Closing and funding · Fieldstone Bend · Cedar Fork Title</p></div>
+            </div>
+          </div>
+
+          <div class="card clip rc past">
+            <div class="card-h">Past clients</div>
+            <div class="card-b">
+              <div class="p"><svg class="i s4 t-brand"><use href="#home"/></svg><span class="grow">Home anniversary: Marjorie Kline, 5 years at 2604 Pecan Creek Trl (sample)</span><span class="btn outline xs">Text</span><span class="btn outline xs">Call</span></div>
+              <div class="p"><svg class="i s4 t-brand"><use href="#cake"/></svg><span class="grow">Birthday: Gloria Vance</span><span class="btn outline xs">Text</span></div>
+              <div class="p"><svg class="i s4 t-brand"><use href="#star"/></svg><span class="grow">Review: Bill &amp; Joan Hartley left 5 stars on Google, Sun 10/18</span><span class="btn outline xs">Reply</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

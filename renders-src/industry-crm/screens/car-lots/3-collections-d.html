@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loans · Collections · Bramlett Motor Co.</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .nav { gap: 2px; padding: 4px 8px; }
+  .nav a { padding: 6px 12px; }
+  .nav .sec { padding: 10px 12px 2px; }
+  .side .brand { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; }
+  .side .brand small { font-size: 12px; font-weight: 400; color: var(--on-em-dim); }
+  .band { padding: 14px 32px; align-items: center; }
+  .srch { display: flex; align-items: center; gap: 8px; height: 38px; width: 320px; padding: 0 12px; border-radius: 10px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); color: var(--on-em-dim); font-size: 14px; }
+  .page { padding: 12px 32px 24px; }
+  .ptitle h2 { font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: -.02em; }
+  .ptitle p { font-size: 14px; color: var(--muted); }
+  .utabs { margin: 8px 0 10px; }
+  .lay { display: grid; grid-template-columns: minmax(0, 1fr) 312px; gap: 20px; align-items: start; }
+  .summary { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  .summary .tot { flex-basis: 100%; font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; margin-bottom: -2px; }
+  .bk { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); font-size: 13px; font-weight: 500; color: var(--ink-2); }
+  .bk b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .bk.red { border-color: var(--red); color: var(--red); background: var(--red-soft); }
+  .sec-h { display: flex; align-items: center; gap: 8px; margin: 4px 0 8px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .loan { padding: 14px 18px; margin-bottom: 12px; }
+  .loan.miss { border-left: 3px solid var(--red); }
+  .loan .top { display: flex; align-items: flex-start; gap: 12px; }
+  .loan .n { font-size: 16.5px; font-weight: 600; }
+  .loan .amt { margin-left: auto; text-align: right; }
+  .loan .amt b { display: block; font-size: 20px; line-height: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .loan .amt small { font-size: 12px; color: var(--muted-2); }
+  .loan .l1 { font-size: 13.5px; color: var(--ink-2); margin-top: 1px; }
+  .loan .l2 { font-size: 13.5px; color: var(--ink); margin-top: 3px; font-variant-numeric: tabular-nums; }
+  .loan .l2 .late { color: var(--red); font-weight: 500; }
+  .loan .l3 { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .loan .ft { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+  .loan .ft .chip { margin-right: auto; }
+  .rail .card { margin-bottom: 14px; }
+  .rail .hd { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .rail .sum-row { padding: 4px 0; font-size: 13.5px; }
+  .ri { padding: 9px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+  .ri:first-of-type { border-top: 0; }
+  .ri .t { font-weight: 600; }
+  .ri .s { color: var(--muted); font-size: 12.5px; display: flex; gap: 6px; }
+  .ri .s .go { margin-left: auto; color: rgb(var(--b-600)); font-weight: 500; white-space: nowrap; }
+  .nav .badge { background: var(--nav-on-bg); color: var(--nav-on-ink); }
+  .nav .od { margin-left: auto; font-size: 11.5px; color: var(--on-em-faint); font-weight: 400; }
+  .nav .od + .badge { margin-left: 6px; }
+</style>
+</head>
+<body class="canvas-glow t-car-lots">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span>Bramlett Motor Co.</span><small>Yolanda Pierce · Finance manager</small></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Home</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#truck"/></svg><span class="lbl">Inventory</span></a>
+      <a><svg class="i"><use href="#document-text"/></svg><span class="lbl">Deals</span></a>
+      <a class="on"><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Loans</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">4</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span><span class="badge">1</span></a>
+      <p class="sec">Office</p>
+      <a><svg class="i"><use href="#chart-bar"/></svg><span class="lbl">Sales</span></a>
+      <a><svg class="i"><use href="#view-columns"/></svg><span class="lbl">Pipeline</span></a>
+      <a><svg class="i"><use href="#document-check"/></svg><span class="lbl">Title work</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#question-mark-circle"/></svg><span class="lbl">Help</span></a>
+    </nav>
+    <div class="side-user"><span class="av">YP</span><div><b>Yolanda Pierce</b><small>Finance manager</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <h1>Loans</h1>
+      <div class="right"><span class="srch"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search customers…</span></div>
+    </header>
+
+    <div class="page">
+      <div class="ptitle"><h2>Loans</h2><p>Who's behind, who promised, and every in-house loan.</p></div>
+      <nav class="utabs"><a class="on">Collections</a><a>All loans <span class="count-pill gray">71</span></a><a>Credit reporting</a><a>Loans settings</a></nav>
+
+      <div class="lay">
+        <div>
+          <div class="summary">
+            <span class="tot">6 past due · $1,788.83 <span class="muted fw5" style="font-size:14px">of 71 loans</span></span>
+            <span class="bk red">Missed promises <b>1</b></span>
+            <span class="bk">Promises due today <b>2</b></span>
+            <span class="bk">Due today <b>9</b></span>
+            <span class="bk">1–15 days <b>2</b></span>
+            <span class="bk">16–30 days <b>1</b></span>
+          </div>
+
+          <p class="sec-h"><span class="dot red"></span>Missed promises <span class="count-pill red">1</span></p>
+          <div class="card loan miss">
+            <div class="top">
+              <div>
+                <p class="n">Rodney Pendleton</p>
+                <p class="l1">L-1187 · 2015 Ford F-150 XLT · weekly $142.00</p>
+              </div>
+              <p class="amt"><b>$471.00</b><small>to bring current</small></p>
+            </div>
+            <p class="l2"><span class="late">18 days late</span> · $426.00 past due + $45.00 late fees</p>
+            <p class="l3">Last paid: Oct 23, $142.00 · Last contact: Nov 12, call, said Saturday</p>
+            <div class="ft">
+              <span class="chip red lg">Missed promise: $250.00 on Sat, Nov 14</span>
+              <span class="btn primary sm"><svg class="i s4"><use href="#phone"/></svg>Call</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#link"/></svg>Text pay link</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#pencil-square"/></svg>Log contact</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#hand-raised"/></svg>Add promise</span>
+            </div>
+          </div>
+
+          <p class="sec-h" style="margin-top:6px"><span class="dot green"></span>Promises due today <span class="count-pill green">2</span></p>
+          <div class="card loan">
+            <div class="top">
+              <div>
+                <p class="n">Brianna Halverson</p>
+                <p class="l1">L-1162 · 2018 Hyundai Elantra SEL · every two weeks $189.09</p>
+              </div>
+              <p class="amt"><b>$204.09</b><small>to bring current</small></p>
+            </div>
+            <p class="l2"><span class="late">11 days late</span> · $189.09 past due + $15.00 late fee</p>
+            <p class="l3">Last paid: Oct 23, $189.09 · Last contact: Nov 16, text, pay link sent</p>
+            <div class="ft">
+              <span class="chip green lg">Promised $204.09 today</span>
+              <span class="btn primary sm"><svg class="i s4"><use href="#phone"/></svg>Call</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#banknotes"/></svg>Take payment</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#link"/></svg>Text pay link</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#pencil-square"/></svg>Log contact</span>
+            </div>
+          </div>
+
+          <div class="card loan">
+            <div class="top">
+              <div>
+                <p class="n">Rosa Inman</p>
+                <p class="l1">L-1171 · 2014 Nissan Altima S · weekly $94.40</p>
+              </div>
+              <p class="amt"><b>$109.40</b><small>to bring current</small></p>
+            </div>
+            <p class="l2"><span class="late">7 days late</span> · $94.40 past due + $15.00 late fee</p>
+            <p class="l3">Last paid: Nov 3, $94.40 · Last contact: Nov 13, call, will pay by link</p>
+            <div class="ft">
+              <span class="chip green lg">Promised $109.40 today</span>
+              <span class="btn primary sm"><svg class="i s4"><use href="#phone"/></svg>Call</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#banknotes"/></svg>Take payment</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#link"/></svg>Text pay link</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#pencil-square"/></svg>Log contact</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="rail">
+          <div class="card pad">
+            <p class="hd"><svg class="i s4 t-brand"><use href="#banknotes"/></svg>Counter payment</p>
+            <p class="xs muted">Customer pays at the desk: pick the loan, take cash, card or check, then print or text the receipt.</p>
+            <span class="btn primary block sm mt-12"><svg class="i s4"><use href="#plus"/></svg>Take a payment</span>
+            <div class="mt-12">
+              <div class="sum-row"><span>Loan payments in today</span><b>$2,786.00</b></div>
+              <div class="sum-row"><span>Payments due today</span><b>9</b></div>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <p class="hd"><svg class="i s4 t-brand"><use href="#document-check"/></svg>From sold deals</p>
+            <div class="ri">
+              <p class="t">Loan not written</p>
+              <p class="s">Kim-Linh Tabor · $9,480.00 to finance<span class="go">Write a loan</span></p>
+            </div>
+            <div class="ri">
+              <p class="t">Down payment not recorded</p>
+              <p class="s">Kim-Linh Tabor · $1,000.00 · sold 11/16<span class="go">Record</span></p>
+            </div>
+            <div class="ri">
+              <p class="t">Title work · <span class="t-amber">4 titles owed</span></p>
+              <p class="s">Oldest: Gary Lockridge, 3 days since sold<span class="go">Open</span></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

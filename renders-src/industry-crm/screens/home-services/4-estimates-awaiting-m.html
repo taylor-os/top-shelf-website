@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimates · Prairie Air &amp; Heat (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .ov { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: var(--panel); border-radius: var(--r-card); box-shadow: var(--shadow); font-size: 14px; color: var(--muted); }
+  .ov b { color: var(--ink); font-weight: 600; }
+  .ov svg { margin-left: auto; color: var(--muted-2); }
+  .stabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 14px; }
+  .stabs a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); font-size: 13.5px; font-weight: 500; color: var(--ink-2); }
+  .stabs a i { font-style: normal; font-size: 11.5px; font-weight: 600; padding: 0 7px; border-radius: 999px; background: var(--tint); color: var(--muted); line-height: 18px; }
+  .stabs a.on { background: rgb(var(--b-500) / .12); border-color: rgb(var(--b-500) / .6); box-shadow: 0 0 0 1px rgb(var(--b-500) / .6); color: rgb(var(--b-800)); font-weight: 600; }
+  .stabs a.on i { background: rgb(var(--b-500) / .2); color: rgb(var(--b-800)); }
+  .est { padding: 14px 14px 12px; }
+  .est .top { display: flex; align-items: center; gap: 8px; }
+  .est .nm { font-size: 15.5px; font-weight: 600; flex: 1; min-width: 0; }
+  .est .job { font-size: 13.5px; color: var(--ink-2); margin-top: 2px; }
+  .est .mid { display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
+  .est .no { font-size: 12.5px; color: var(--muted-2); }
+  .est .amt { font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .est .wait { margin-top: 4px; font-size: 12.5px; font-weight: 500; color: var(--amber-ink); }
+  .est .wait span { color: var(--muted-2); font-weight: 400; }
+  .acts { display: flex; gap: 8px; margin: 8px 0 14px; }
+  .acts .btn { flex: 0 0 auto; }
+</style>
+</head>
+<body class="canvas-glow t-home-services">
+<script src="../../kit/icons.js"></script>
+<div class="phone canvas-glow">
+  <div class="statusbar"><span>12:20</span><span class="icons"><svg class="i s4"><use href="#wifi"/></svg><svg class="i s6"><use href="#battery-100"/></svg></span></div>
+  <header class="band" style="padding-top:8px">
+    <div class="grow">
+      <div class="flex"><h1>Estimates</h1><span class="btn primary sm sp"><svg class="i s4"><use href="#plus"/></svg>New estimate</span></div>
+      <p class="sub">Quote your clients for upcoming work.</p>
+    </div>
+  </header>
+
+  <div class="page">
+    <div class="ov"><b>Overview</b><span class="tnum">$38,906.05 open · 5 awaiting</span><svg class="i s4"><use href="#chevron-down"/></svg></div>
+
+    <div class="stabs">
+      <a>All <i>14</i></a>
+      <a>Draft <i>2</i></a>
+      <a class="on">Awaiting <i>5</i></a>
+      <a>Approved <i>6</i></a>
+      <a>Archived <i>1</i></a>
+    </div>
+
+    <div class="card est">
+      <div class="top"><p class="nm">Priya Natarajan</p><span class="chip amber">Awaiting response</span></div>
+      <p class="job">New 3-ton heat pump, 16 SEER2</p>
+      <div class="mid"><span class="no">#EST-1187 · Nov 19, 2026</span><span class="amt">$11,482.60</span></div>
+      <p class="wait">Waiting 6 days <span>· Last contact Nov 21</span></p>
+    </div>
+    <div class="acts"><span class="btn outline sm"><svg class="i s4"><use href="#phone"/></svg>Call</span><span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text</span></div>
+
+    <div class="card est">
+      <div class="top"><p class="nm">Carol Strickland</p><span class="chip blue">Changes requested</span></div>
+      <p class="job">Attic duct replacement</p>
+      <div class="mid"><span class="no">#EST-1179 · Nov 17, 2026</span><span class="amt">$4,315.00</span></div>
+      <p class="wait">Waiting 8 days <span>· Last contact Nov 20</span></p>
+    </div>
+    <div class="acts"><span class="btn outline sm"><svg class="i s4"><use href="#phone"/></svg>Call</span><span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text</span></div>
+
+    <div class="card est">
+      <div class="top"><p class="nm">Tom Reyes</p><span class="chip amber">Awaiting response</span></div>
+      <p class="job">Furnace + coil replacement</p>
+      <div class="mid"><span class="no">#EST-1191 · Nov 22, 2026</span><span class="amt">$7,268.45</span></div>
+      <p class="wait">Waiting 3 days <span>· No contact yet</span></p>
+    </div>
+    <div class="acts"><span class="btn outline sm"><svg class="i s4"><use href="#phone"/></svg>Call</span><span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text</span></div>
+  </div>
+
+  <nav class="tabs">
+    <a><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Today</a>
+    <a><span class="ic"><svg class="i s6"><use href="#banknotes"/></svg></span>Invoices</a>
+    <a><span class="ic"><svg class="i s6"><use href="#phone"/></svg></span>Phone</a>
+    <a><span class="ic"><svg class="i s6"><use href="#chart-bar"/></svg></span>Reports</a>
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

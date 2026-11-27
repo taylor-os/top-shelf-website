@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer card · Larkhaven Goods (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .phone { padding-bottom: 140px; }
+  .srch { background: var(--em); padding: 8px 14px 9px; }
+  .srch .row1 { display: flex; align-items: center; gap: 8px; }
+  .srch .back { color: var(--on-em); display: grid; place-items: center; width: 32px; height: 36px; }
+  .srch .field { flex: 1; height: 38px; border-radius: 12px; background: var(--panel); display: flex; align-items: center; gap: 8px; padding: 0 12px; font-size: 15px; color: var(--ink); }
+  .srch .field svg { color: var(--muted-2); }
+  .srch .field .x { margin-left: auto; color: var(--faint); }
+  .srch .res { margin: 7px 0 0 40px; font-size: 12px; color: var(--on-em-dim); }
+  .srch .res b { color: var(--on-em); font-weight: 600; }
+  .pg { padding: 9px 14px 16px; display: flex; flex-direction: column; gap: 7px; }
+  .ban { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border-radius: 12px; background: rgb(var(--b-500) / .12); border: 1px solid rgb(var(--b-500) / .25); font-size: 12.5px; line-height: 1.4; color: rgb(var(--b-800)); }
+  .ban svg { color: rgb(var(--b-600)); margin-top: 1px; }
+  .ban b { font-weight: 600; }
+  .hc { display: flex; gap: 12px; align-items: center; padding: 9px 12px; }
+  .hc .n { font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .hc .s { font-size: 12.5px; color: var(--muted); }
+  .sec-t { font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted-2); margin: 2px 2px 0; display: flex; align-items: center; gap: 6px; }
+  .sec-t .chip { text-transform: none; letter-spacing: 0; }
+  .likes { display: flex; flex-wrap: wrap; gap: 6px; }
+  .likes .chip { font-size: 12px; font-weight: 500; padding: 3px 10px; background: var(--panel); color: var(--ink-2); border: 1px solid var(--line); }
+  .wl { display: flex; align-items: center; gap: 10px; padding: 7px 12px; }
+  .wl + .wl { border-top: 1px solid var(--line); }
+  .wl .thumb { width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0; }
+  .wl .t { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+  .wl .p { font-size: 12.5px; color: var(--muted); }
+  .wl .end { margin-left: auto; flex-shrink: 0; }
+  .oh { display: flex; align-items: center; gap: 10px; padding: 7px 12px; font-size: 13px; line-height: 1.35; }
+  .slot { display: inline-grid; place-items: center; width: 34px; height: 26px; border-radius: 7px; font-size: 12px; font-weight: 600; color: var(--ink-2); background: var(--well); border: 1px solid var(--line-strong); flex-shrink: 0; }
+  .bh { padding: 4px 12px; }
+  .bh p { display: flex; gap: 8px; font-size: 12.5px; color: var(--ink-2); padding: 3px 0; }
+  .bh p + p { border-top: 1px solid var(--line); }
+  .bh .d { width: 74px; flex-shrink: 0; color: var(--muted-2); }
+  .bh .a { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .actbar { position: fixed; left: 0; right: 0; bottom: 64px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 8px 12px; background: var(--canvas); border-top: 1px solid var(--line); z-index: 9; }
+  .actbar .btn { min-height: 44px; font-size: 14px; font-weight: 600; padding: 8px 6px; border-radius: 14px; }
+</style>
+</head>
+<body class="t-retail">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="srch">
+    <div class="row1">
+      <a class="back"><svg class="i s6"><use href="#arrow-left"/></svg></a>
+      <div class="field"><svg class="i s4"><use href="#magnifying-glass"/></svg>prescott<svg class="i s4 x"><use href="#x-mark"/></svg></div>
+    </div>
+    <p class="res">2 in household · <b>Ellie Prescott ★</b> · Mark Prescott</p>
+  </div>
+
+  <div class="pg">
+    <div class="ban"><svg class="i s4"><use href="#gift"/></svg><span><b>Mark is shopping for Ellie</b> · Anniversary Dec 14 · Ellie shared her wish list with Mark</span></div>
+
+    <div class="card hc">
+      <span class="av lg" style="width:48px;height:48px;font-size:16px">EP</span>
+      <div class="grow">
+        <p class="n">Ellie Prescott ★ <span class="chip brand">Regular</span></p>
+        <p class="s">(817) 555-0193 · Prefers texts</p>
+        <p class="s">Customer since 2022 · $1,240 this year</p>
+      </div>
+    </div>
+
+    <p class="sec-t">What she loves</p>
+    <div class="likes">
+      <span class="chip">Woodsy candles, no florals</span><span class="chip">Speckled pottery</span><span class="chip">Olive green</span><span class="chip">Gift wrap: kraft + twine</span>
+    </div>
+
+    <p class="sec-t">Wish list <span class="chip green"><svg class="i s3"><use href="#users"/></svg>Shared with Mark</span></p>
+    <div class="card clip">
+      <div class="wl">
+        <span class="thumb" style="background:radial-gradient(circle at 30% 35%, #6b6152 1.5px, transparent 2px) 0 0/8px 8px, radial-gradient(circle at 70% 70%, #8b8070 1.2px, transparent 2px) 0 0/10px 10px, linear-gradient(160deg,#efe9df,#d9cfc0)"></span>
+        <div class="grow"><p class="t">Speckled stoneware mugs, set of 2</p><p class="p">$48.00 · <span class="chip amber">Coming Dec 18 · after the 14th</span></p></div>
+      </div>
+      <div class="wl">
+        <span class="thumb" style="background:repeating-linear-gradient(90deg,#7c7f4a 0 3px,#6f7240 3px 5px)"></span>
+        <div class="grow"><p class="t">Olive linen table runner</p><p class="p">$38.00</p></div>
+        <span class="end chip">On the want list</span>
+      </div>
+      <div class="wl">
+        <span class="thumb" style="background:radial-gradient(ellipse 30% 42% at 35% 60%, #c9a24f 60%, transparent 62%), radial-gradient(ellipse 30% 42% at 68% 55%, #b48c3d 60%, transparent 62%), #f4efe6"></span>
+        <div class="grow"><p class="t">Brass bud vase, pair</p><p class="p">$54.00</p></div>
+        <span class="end btn primary sm" style="min-height:32px;padding:4px 12px">Hold for Mark</span>
+      </div>
+    </div>
+
+    <div class="card oh">
+      <span class="slot">A1</span>
+      <span class="grow"><span class="xs muted-2" style="display:block;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:10.5px">On hold for her</span><b class="fw6">Holiday card boxes ×4</b> <span class="muted">· Till 12/15</span></span>
+      <span class="chip green">Paid</span>
+    </div>
+
+    <p class="sec-t">Bought here lately</p>
+    <div class="card bh">
+      <p><span class="d">Dec 1</span>Candle trio, wrapped<span class="a">$96.00</span></p>
+      <p><span class="d">Nov 14</span>Olivewood bowl<span class="a">$64.00</span></p>
+      <p><span class="d">Last Dec 12</span>Mark: Fig &amp; cedar candle + mug<span class="a">$88.00</span></p>
+    </div>
+  </div>
+
+  <div class="actbar">
+    <span class="btn outline"><svg class="i s4"><use href="#archive-box"/></svg>Put on hold</span>
+    <span class="btn outline"><svg class="i s4"><use href="#shopping-bag"/></svg>Special order</span>
+    <span class="btn primary"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg>Text</span>
+  </div>
+
+  <nav class="tabs">
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#users"/></svg></span>Customers</a>
+    <a><span class="ic"><svg class="i s6"><use href="#archive-box"/></svg></span>Hold shelf</a>
+    <a><span class="ic"><svg class="i s6"><use href="#chat-bubble-left-right"/></svg><span class="badge">1</span></span>Messages</a>
+    <a><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal jacket · Bramlett Motor Co.</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .nav { gap: 2px; padding: 4px 8px; }
+  .nav a { padding: 6px 12px; }
+  .nav .sec { padding: 10px 12px 2px; }
+  .side .brand { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; }
+  .side .brand small { font-size: 12px; font-weight: 400; color: var(--on-em-dim); }
+  .band { padding: 14px 32px; align-items: center; }
+  .crumb { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--on-em-dim); font-weight: 500; }
+  .crumb b { color: var(--on-em); font-weight: 600; font-size: 18px; }
+  .srch { display: flex; align-items: center; gap: 8px; height: 38px; width: 300px; padding: 0 12px; border-radius: 10px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); color: var(--on-em-dim); font-size: 14px; }
+  .page { padding: 10px 32px 90px; }
+  .jhead { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: start; margin-bottom: 8px; }
+  .jhead h2 { font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -.02em; }
+  .help-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: rgb(var(--b-600)); }
+  .who { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 14px; color: var(--ink-2); }
+  .mini { padding: 10px 16px; }
+  .mini .kv { grid-template-columns: 92px 1fr; gap: 3px 10px; font-size: 13px; }
+  .strip { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13.5px; font-weight: 500;
+    background: var(--panel); border: 1px solid var(--line); color: var(--muted); }
+  .pill.done { background: rgb(var(--b-500) / .12); border-color: transparent; color: rgb(var(--b-700)); }
+  .pill.cur { border: 2px solid rgb(var(--b-500)); color: var(--ink); font-weight: 600; background: var(--panel); }
+  .pill .n { width: 20px; height: 20px; border-radius: 999px; display: grid; place-items: center; font-size: 11.5px; font-weight: 600; background: var(--tint); }
+  .pill.cur .n { background: rgb(var(--b-500)); color: var(--on-accent); }
+  .strip .sep { width: 18px; height: 2px; background: var(--line); border-radius: 2px; }
+  .strip .sep.on { background: rgb(var(--b-500) / .6); }
+  .jcols { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+  .ch { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; margin-bottom: 8px; min-height: 24px; }
+  .car { display: grid; grid-template-columns: 176px 1fr; gap: 16px; }
+  .photo { height: 116px; border-radius: 10px; position: relative; overflow: hidden;
+    background: linear-gradient(165deg, rgb(var(--b-200)), rgb(var(--b-400))); }
+  .photo .count { position: absolute; top: 8px; right: 8px; font-size: 11px; font-weight: 600; color: #fff; background: rgba(0,0,0,.45); border-radius: 999px; padding: 2px 8px; }
+  .car .t { font-size: 16px; font-weight: 600; }
+  .car .s { font-size: 13px; color: var(--muted); }
+  .car .ask { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .hold { margin-top: 6px; padding: 6px 10px; border-radius: 8px; background: var(--amber-soft); font-size: 12.5px; color: var(--ink-2); }
+  .field { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  .seg3 { display: flex; padding: 3px; border-radius: 10px; background: var(--well); border: 1px solid var(--line); margin: 6px 0 6px; }
+  .seg3 a { flex: 1; text-align: center; padding: 6px 4px; border-radius: 8px; font-size: 13.5px; font-weight: 500; color: var(--muted); }
+  .seg3 a.on { background: var(--panel); color: rgb(var(--b-700)); font-weight: 600; box-shadow: var(--shadow-sm); border: 1px solid rgb(var(--b-500) / .5); }
+  .pgrid { width: 100%; border-collapse: separate; border-spacing: 6px; margin: 4px -6px 0; font-variant-numeric: tabular-nums; }
+  .pgrid th { font-size: 12px; font-weight: 500; color: var(--muted-2); text-align: center; padding: 0; }
+  .pgrid th.r { text-align: left; }
+  .pgrid td { text-align: center; padding: 6px 0; border-radius: 8px; border: 1px solid var(--line); font-size: 14px; font-weight: 500; background: var(--panel); }
+  .pgrid td.sel { background: rgb(var(--b-500)); border-color: rgb(var(--b-500)); color: var(--on-accent); font-weight: 600; }
+  .fold { display: flex; align-items: center; gap: 8px; margin-top: 6px; padding: 9px 12px; border-radius: 10px; background: var(--well); font-size: 13.5px; font-weight: 500; }
+  .fold small { color: var(--muted-2); font-weight: 400; font-size: 12.5px; }
+  .tfields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+  .tf { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+  .tf small { display: block; font-size: 11.5px; color: var(--muted-2); line-height: 15px; }
+  .tf b { font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .sum-row { padding: 4px 0; }
+  .sum-row small { color: var(--muted-2); font-size: 12px; margin-left: 6px; }
+  .sum-row.total { padding-top: 10px; margin-top: 6px; }
+  .link { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 500; color: rgb(var(--b-600)); }
+  .stick { position: fixed; left: var(--sidebar); right: 0; bottom: 0; height: 64px; display: flex; align-items: center; gap: 10px; padding: 0 32px;
+    background: var(--panel); border-top: 1px solid var(--line); box-shadow: var(--shadow-sm); z-index: 5; }
+  .stick .p { font-size: 14px; color: var(--muted); }
+  .stick .p b { color: var(--ink); font-weight: 600; }
+  .nav .badge { background: var(--nav-on-bg); color: var(--nav-on-ink); }
+  .nav .od { margin-left: auto; font-size: 11.5px; color: var(--on-em-faint); font-weight: 400; }
+  .nav .od + .badge { margin-left: 6px; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+</head>
+<body class="canvas-glow t-car-lots">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span>Bramlett Motor Co.</span><small>Curtis Bramlett · Owner</small></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Home</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#truck"/></svg><span class="lbl">Inventory</span></a>
+      <a class="on"><svg class="i"><use href="#document-text"/></svg><span class="lbl">Deals</span></a>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Loans</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span><span class="od">store-wide overdue</span><span class="badge">3</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">4</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span><span class="badge">1</span></a>
+      <p class="sec">Office</p>
+      <a><svg class="i"><use href="#chart-bar"/></svg><span class="lbl">Sales</span></a>
+      <a><svg class="i"><use href="#view-columns"/></svg><span class="lbl">Pipeline</span></a>
+      <a><svg class="i"><use href="#document-check"/></svg><span class="lbl">Title work</span></a>
+      <a><svg class="i"><use href="#presentation-chart-line"/></svg><span class="lbl">Reports</span></a>
+      <a><svg class="i"><use href="#wrench"/></svg><span class="lbl">Repairs</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <a><svg class="i"><use href="#question-mark-circle"/></svg><span class="lbl">Help</span></a>
+    </nav>
+    <div class="side-user"><span class="av">CB</span><div><b>Curtis Bramlett</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <p class="crumb">Customers<svg class="i s4"><use href="#chevron-right"/></svg>Terrence Mayfield<svg class="i s4"><use href="#chevron-right"/></svg><b>Deal jacket</b></p>
+      <div class="right"><span class="srch"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search customers…</span></div>
+    </header>
+
+    <div class="page">
+      <div class="jhead">
+        <div>
+          <div class="flex" style="gap:12px">
+            <h2>Terrence Mayfield</h2>
+            <span class="btn outline sm"><svg class="i s4"><use href="#phone"/></svg>Call</span>
+            <span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg>Text</span>
+            <a class="help-link sp"><svg class="i s4"><use href="#question-mark-circle"/></svg>How this works</a>
+          </div>
+          <p class="who"><svg class="i s4" style="color:var(--faint)"><use href="#user"/></svg>Andre Warrick's customer <span class="chip brand lg">Working</span><span class="chip lg">No OK needed</span></p>
+          <p class="xs muted-2" style="margin-top:4px">Quote 1 sent by text · Mon, Nov 16, 6:40 pm</p>
+        </div>
+        <div class="card mini">
+          <dl class="kv">
+            <dt>Phone</dt><dd>(469) 555-0132</dd>
+            <dt>Came in</dt><dd>Walk-in · Sat, Nov 14</dd>
+            <dt>Next</dt><dd>Call Wed to confirm</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="strip">
+        <span class="pill done"><svg class="i s4"><use href="#check"/></svg>Car</span><i class="sep on"></i>
+        <span class="pill done"><svg class="i s4"><use href="#check"/></svg>Figures</span><i class="sep on"></i>
+        <span class="pill done"><svg class="i s4"><use href="#check"/></svg>How they pay</span><i class="sep on"></i>
+        <span class="pill cur"><span class="n">4</span>Sold</span><i class="sep"></i>
+        <span class="pill"><span class="n">5</span>Loan / Down payment</span><i class="sep"></i>
+        <span class="pill"><span class="n">6</span>Title</span>
+      </div>
+
+      <div class="jcols">
+        <div class="stack" style="gap:14px">
+          <div class="card pad">
+            <p class="ch"><svg class="i s4 t-brand"><use href="#truck"/></svg>Car<span class="sp xs muted fw5">Change car</span><span class="btn outline sm" style="min-height:28px;padding:3px 10px">Choose</span></p>
+            <div class="car">
+              <div class="photo"><img src="img/equinox.svg" alt="Silver 2016 Chevrolet Equinox LT on the lot"><span class="count">18 photos</span></div>
+              <div>
+                <div class="flex"><p class="t">2016 Chevrolet Equinox LT</p><span class="chip amber sp">On hold</span></div>
+                <p class="s">#26-0214 · 118,400 miles · Silver</p>
+                <p class="ask">Asking $11,995</p>
+                <p class="hold">On hold for Terrence Mayfield: bringing his down payment Wednesday after work, hold through Wednesday.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <p class="ch"><svg class="i s4 t-brand"><use href="#banknotes"/></svg>How they pay</p>
+            <p class="sm fw5">How are they paying?</p>
+            <div class="seg3"><a>Cash</a><a class="on">We finance it</a><a>Outside lender</a></div>
+            <p class="xs muted-2">The finance manager or owner writes the loan.</p>
+            <p class="flex" style="margin-top:8px"><span class="sm fw6">Payments (estimate)</span><a class="sp xs fw5 t-brand">Change rates and terms</a></p>
+            <table class="pgrid">
+              <tr><th class="r"></th><th>30 mo</th><th>36 mo</th><th>42 mo</th></tr>
+              <tr><th class="r">21.99%</th><td>$457.32</td><td>$400.26</td><td>$360.00</td></tr>
+              <tr><th class="r">23.99%</th><td>$467.98</td><td class="sel">$411.20</td><td>$371.20</td></tr>
+            </table>
+            <div class="fold"><svg class="i s4" style="color:var(--muted-2)"><use href="#chevron-right"/></svg>Outside lender tools <small>paperwork, funding, stips, back end</small></div>
+          </div>
+        </div>
+
+        <div class="stack" style="gap:14px">
+          <div class="card pad">
+            <p class="ch"><svg class="i s4 t-brand"><use href="#arrows-right-left"/></svg>Trade</p>
+            <p class="fw6">2009 Chevrolet Impala LT</p>
+            <p class="xs muted">188,000 miles · allowance $1,000.00</p>
+            <div class="tfields">
+              <div class="tf"><small>Trade allowance</small><b>$1,000</b></div>
+              <div class="tf"><small>Payoff owed</small><b>$0</b></div>
+              <div class="tf"><small>ACV (what the trade is worth to us)</small><b>$800</b></div>
+            </div>
+            <p class="sm t-green fw5" style="margin-top:10px">Trade worth $1,000 more than owed</p>
+          </div>
+
+          <div class="card pad">
+            <p class="ch"><svg class="i s4 t-brand"><use href="#receipt-percent"/></svg>Figures</p>
+            <div class="sum-row"><span>Selling price<small>At asking</small></span><b>$11,995.00</b></div>
+            <div class="sum-row"><span>Trade equity</span><b>&minus;$1,000.00</b></div>
+            <div class="sum-row"><span>Tax</span><b>$687.19</b></div>
+            <div class="sum-row"><span>Doc, title and registration</span><b>$300.00</b></div>
+            <div class="sum-row"><span>Down payment</span><b>&minus;$1,500.00</b></div>
+            <div class="sum-row total"><span class="fw6">Balance to finance (estimate)</span><b>$10,482.19</b></div>
+            <a class="link">Change fees and tax on this deal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stick">
+      <p class="p">Payment picked: <b>23.99% · 36 months · $411.20 a month</b></p>
+      <span class="btn outline sp"><svg class="i s4"><use href="#paper-airplane"/></svg>Send new quote</span>
+      <span class="btn primary"><svg class="i s4"><use href="#check"/></svg>Mark sold</span>
+    </div>
+  </main>
+</div>
+</body>
+</html>

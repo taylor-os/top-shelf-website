@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My jobs · Kestrel Lane Detail Co. (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .phone { padding-bottom: 64px; }
+  .m-bar { min-height: 48px; padding: 4px 10px; }
+  .m-bar .t { text-align: center; }
+  .pg { padding: 8px 12px 0; }
+  .tr { display: flex; align-items: baseline; }
+  .tr h1 { font-size: 21px; font-weight: 600; letter-spacing: -.01em; }
+  .tr a { margin-left: auto; font-size: 14px; font-weight: 600; color: rgb(var(--b-600)); }
+  .sumln { display: flex; align-items: center; gap: 4px; margin-top: 2px; font-size: 13px; color: var(--muted); }
+  .sec { margin: 8px 2px 5px; font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted-2); }
+  .carcard { background: var(--panel); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .carh { padding: 7px 12px; background: rgb(var(--b-50)); border-bottom: 1px solid rgb(var(--b-500) / .12); font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.35; }
+  .carh small { display: block; font-size: 11.5px; font-weight: 500; color: var(--muted); }
+  .job { padding: 7px 12px 9px; }
+  .job + .job { border-top: 1px solid var(--line); }
+  .job .n { display: flex; align-items: center; font-size: 16px; font-weight: 600; }
+  .job .n svg { color: var(--faint); }
+  .job .g { font-size: 12px; color: var(--muted-2); line-height: 1.4; }
+  .bbig { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border-radius: 12px; font-size: 16px; font-weight: 600; }
+  .stop { margin-top: 6px; min-height: 46px; border: 2px solid var(--red); color: var(--red); background: var(--red-soft); font-variant-numeric: tabular-nums; font-size: 18px; }
+  .stop .run { width: 9px; height: 9px; border-radius: 99px; background: var(--red); box-shadow: 0 0 0 4px var(--red-soft); }
+  .done { margin-top: 6px; min-height: 40px; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink-2); }
+  .half { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
+  .half span { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; border-radius: 11px; border: 1px solid var(--line); background: var(--panel-2); font-size: 14px; font-weight: 500; color: var(--ink-2); }
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+  .strip figure, .pair figure { margin: 0; min-width: 0; position: relative; border-radius: 7px; overflow: hidden; }
+  .strip img { width: 100%; height: 50px; object-fit: cover; border-radius: 7px; display: block; }
+  .strip figcaption, .pair figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 5px 3px; background: linear-gradient(transparent, rgba(0,0,0,.72)); font-size: 9.5px; line-height: 1.15; font-weight: 500; color: #fff; } /* caption on a darkened photo: always white */
+  .job.wait { opacity: .6; }
+  .start { min-height: 44px; background: var(--well); color: var(--faint); }
+  .why { margin-top: 4px; font-size: 12px; color: var(--muted); display: flex; gap: 5px; align-items: center; }
+  .fin { padding: 8px 12px 10px; display: grid; grid-template-columns: minmax(0,1fr) 150px; gap: 10px; align-items: center; }
+  .fin .ln { align-items: flex-start; } .fin .ln svg { margin-top: 2px; }
+  .fin .ln { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-2); padding: 2px 0; }
+  .fin .ln svg { color: var(--green); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .pair img { width: 100%; height: 72px; object-fit: cover; border-radius: 7px; display: block; }
+  .tabs a { font-size: 12px; }
+</style>
+</head>
+<body class="t-auto-detailing">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#bars-3"/></svg></a>
+    <p class="t">Work orders</p>
+    <a><svg class="i s6"><use href="#magnifying-glass"/></svg></a>
+  </div>
+
+  <div class="pg">
+    <div class="tr"><h1>My jobs</h1><a>My hours ›</a></div>
+    <p class="sumln">Today: 2 done · 2.5 h booked · 2.4 h clocked<svg class="i s4"><use href="#chevron-down"/></svg></p>
+
+    <p class="sec">Ready</p>
+    <div class="carcard">
+      <div class="carh">2022 Chevrolet Tahoe · Black<small>Customer car · Plate NHT-4182 · VIN …418823</small></div>
+
+      <div class="job">
+        <p class="n">Full detail<svg class="i s4"><use href="#chevron-right"/></svg></p>
+        <p class="g">WO 2047 · In progress · Booked 3 h · Clocked 0.2 h<br>Ready by Today 2:30 PM</p>
+        <span class="bbig stop"><span class="run"></span>Stop 0:11:32</span>
+        <span class="bbig done"><svg class="i s4"><use href="#check"/></svg>Done</span>
+        <div class="half">
+          <span><svg class="i s4"><use href="#camera"/></svg>Add photo</span>
+          <span><svg class="i s4"><use href="#pencil-square"/></svg>Notes (1)</span>
+        </div>
+        <div class="strip">
+          <figure><img src="img/cargo-hair.jpg" alt=""><figcaption>Check-in · cargo, dog hair</figcaption></figure>
+          <figure><img src="img/row3-seat-hair.jpg" alt=""><figcaption>Check-in · 3rd row</figcaption></figure>
+          <figure><img src="img/bumper-scuff.jpg" alt=""><figcaption>Check-in · rear bumper scuff, was there</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="job wait">
+        <p class="n">Pet hair removal<svg class="i s4"><use href="#chevron-right"/></svg></p>
+        <p class="g">WO 2047 · In progress · Booked 0.5 h · Clocked 0 h</p>
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:6px;margin-top:7px">
+          <span class="bbig start"><svg class="i s4"><use href="#lock-closed"/></svg>Start</span>
+          <span class="bbig done" style="margin:0;min-height:44px;color:var(--faint)">Done</span>
+        </div>
+        <p class="why"><svg class="i s35"><use href="#clock"/></svg>Waiting on the customer's OK. Don't start yet.</p>
+      </div>
+    </div>
+
+    <p class="sec">Finished today</p>
+    <div class="carcard">
+      <div class="carh">2017 Honda Civic · Red <span style="font-weight:500;color:var(--muted);font-size:11.5px">· Customer car · Plate LBK-1717</span></div>
+      <div class="fin">
+        <div><p class="ln"><svg class="i s35"><use href="#check-circle"/></svg><span><b class="fw6">Headlight restore</b><br><span class="muted">Booked 1 h · Clocked 0.9 h</span></span></p>
+        <p class="ln"><svg class="i s35"><use href="#check-circle"/></svg><span><b class="fw6">Exterior wash and wax</b><br><span class="muted">Booked 1.5 h · Clocked 1.5 h</span></span></p></div>
+        <div class="pair">
+          <figure><img src="img/headlight-before.jpg" alt=""><figcaption>Check-in · left headlight</figcaption></figure>
+          <figure><img src="img/headlight-after.jpg" alt=""><figcaption>Finished · left headlight</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Home</a>
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#clipboard-document-list"/></svg></span>Work orders</a>
+    <a><span class="ic"><svg class="i s6"><use href="#check-circle"/></svg></span>Tasks</a>
+    <a><span class="ic"><svg class="i s6"><use href="#user-circle"/></svg></span>Account</a>
+  </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My day · Bramlett Motor Co. (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .m-bar { min-height: 52px; padding: 8px 10px; }
+  .m-bar .t { text-align: center; }
+  .page { padding: 12px 14px 24px !important; }
+  .ttl { display: flex; align-items: baseline; margin-bottom: 10px; }
+  .ttl h2 { font-size: 20px; font-weight: 600; letter-spacing: -.01em; }
+  .ttl a { margin-left: auto; font-size: 12.5px; font-weight: 500; color: rgb(var(--b-600)); display: inline-flex; align-items: center; gap: 4px; }
+  .next { padding: 12px 14px; border-radius: var(--r-card); border: 1.5px solid rgb(var(--b-500) / .55);
+    background: linear-gradient(135deg, rgb(var(--b-500) / .12), var(--panel) 75%); box-shadow: var(--shadow); display: flex; align-items: center; gap: 12px; }
+  .next .kicker { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgb(var(--b-600)); }
+  .next .t { font-size: 14px; font-weight: 600; line-height: 1.35; margin-top: 2px; }
+  .next .btn { min-height: 38px; padding: 8px 14px; }
+  .sh { display: flex; align-items: center; gap: 6px; margin: 14px 0 8px; }
+  .sh h3 { font-size: 16px; font-weight: 600; margin-right: auto; }
+  .sh .btn { min-height: 32px; padding: 5px 10px; font-size: 12.5px; border-radius: 9px; gap: 4px; }
+  .ft { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .ft .tile { padding: 9px 10px; }
+  .ft .tile .v { font-size: 22px; line-height: 26px; margin: 0; }
+  .ft .tile .l { font-size: 11.5px; line-height: 14px; color: var(--ink-2); margin-top: 2px; }
+  .ft .tile .lk { font-size: 11px; font-weight: 600; color: rgb(var(--b-600)); margin-top: 3px; }
+  .ft .tile.hl { border: 1.5px solid var(--amber); }
+  .find { margin-top: 12px; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border-radius: 12px; background: var(--well); border: 1px solid var(--line);
+    color: var(--muted-2); font-size: 13.5px; box-shadow: var(--shadow-sm); }
+  .find-l { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-2); margin: 12px 0 0; }
+  .due .row { padding: 10px 12px; gap: 10px; }
+  .due .time { width: 52px; padding: 6px 0; }
+  .due .time b { font-size: 14px; }
+  .due .name { font-size: 14px; }
+  .due .line { font-size: 12px; }
+  .todo-ic { width: 52px; display: grid; place-items: center; color: rgb(var(--b-600)); }
+  .todo-ic span { width: 22px; height: 22px; border-radius: 7px; border: 2px solid rgb(var(--b-500) / .6); }
+  .ai { color: rgb(var(--b-600)); font-weight: 500; }
+  .tabs a .badge { background: var(--nav-on-bg); color: var(--nav-on-ink); }
+</style>
+</head>
+<body class="canvas-glow t-car-lots">
+<script src="../../kit/icons.js"></script>
+<div class="phone canvas-glow">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#bars-3"/></svg></a>
+    <p class="t">Home</p>
+    <a><svg class="i s6"><use href="#magnifying-glass"/></svg></a>
+  </div>
+
+  <div class="page">
+    <div class="ttl"><h2>Bramlett Motor Co.</h2><a><svg class="i s35"><use href="#question-mark-circle"/></svg>How your lot runs</a></div>
+
+    <div class="next">
+      <div class="grow">
+        <p class="kicker">Next step</p>
+        <p class="t">New lead nobody has taken: Trey Lusk, 2014 Toyota Camry SE</p>
+      </div>
+      <span class="btn primary">Take it</span>
+    </div>
+
+    <div class="sh">
+      <h3>My day</h3>
+      <span class="btn outline"><svg class="i s35"><use href="#user-plus"/></svg>Add customer</span>
+      <span class="btn primary"><svg class="i s35"><use href="#plus"/></svg>Start a deal</span>
+    </div>
+
+    <div class="ft">
+      <div class="tile"><p class="v">0</p><p class="l">My new leads not reached</p></div>
+      <div class="tile"><p class="v">0</p><p class="l">My to-dos overdue</p></div>
+      <div class="tile"><p class="v">4</p><p class="l">My to-dos due today</p></div>
+      <div class="tile"><p class="v">2</p><p class="l">My appointments today</p></div>
+      <div class="tile"><p class="v">6</p><p class="l">My customers in progress</p></div>
+      <div class="tile hl"><p class="v amber">2</p><p class="l">Store's leads nobody has taken</p><p class="lk">See them &rarr;</p></div>
+    </div>
+
+    <p class="find-l">Find a car</p>
+    <div class="find" style="margin-top:6px"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search stock #, last 6 of VIN, make, model…</div>
+
+    <div class="sh"><h3 style="margin-right:0">Due today</h3><span class="count-pill gray">6</span><span class="xs muted sp">2 appointments · 4 to-dos</span></div>
+    <div class="list-card due">
+      <div class="row">
+        <span class="time hot"><b>11:30</b><small>am</small></span>
+        <div class="main-col"><p class="name">Test drive: Jasmine Okoro</p><p class="line">2019 Kia Soul LX · #26-0207</p></div>
+        <span class="icon-btns"><span class="icon-btn sm"><svg class="i s4"><use href="#phone"/></svg></span><span class="icon-btn sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg></span></span>
+      </div>
+      <div class="row">
+        <span class="time"><b>5:30</b><small>pm</small></span>
+        <div class="main-col"><p class="name">Test drive: Marisol Vaughn</p><p class="line">2017 Nissan Rogue SV</p><p class="line ai"><svg class="i s35" style="color:rgb(var(--b-500))"><use href="#sparkles"/></svg>booked by the AI receptionist</p></div>
+        <span class="icon-btns"><span class="icon-btn sm"><svg class="i s4"><use href="#phone"/></svg></span><span class="icon-btn sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg></span></span>
+      </div>
+      <div class="row">
+        <span class="todo-ic"><span></span></span>
+        <div class="main-col"><p class="name">Call Terrence Mayfield</p><p class="line">Confirm Wednesday down payment</p></div>
+        <span class="icon-btn sm"><svg class="i s4"><use href="#phone"/></svg></span>
+      </div>
+      <div class="row">
+        <span class="todo-ic"><span></span></span>
+        <div class="main-col"><p class="name">Text Gary Lockridge</p><p class="line">His plates are in</p></div>
+        <span class="icon-btn sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg></span>
+      </div>
+      <div class="row">
+        <span class="todo-ic"><span></span></span>
+        <div class="main-col"><p class="name">Call Jasmine Okoro</p><p class="line">Confirm 11:30 test drive</p></div>
+        <span class="icon-btn sm"><svg class="i s4"><use href="#phone"/></svg></span>
+      </div>
+      <div class="row">
+        <span class="todo-ic"><span></span></span>
+        <div class="main-col"><p class="name">Add trade photos</p><p class="line">Terrence Mayfield's 2009 Chevrolet Impala</p></div>
+        <span class="icon-btn sm"><svg class="i s4"><use href="#camera"/></svg></span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Home</a>
+    <a><span class="ic"><svg class="i s6"><use href="#users"/></svg></span>Customers</a>
+    <a><span class="ic"><svg class="i s6"><use href="#chat-bubble-left-right"/></svg><span class="badge">1</span></span>Texts</a>
+    <a><span class="ic"><svg class="i s6"><use href="#phone"/></svg></span>Phone</a>
+    <a><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimate · Prairie Air &amp; Heat</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .cx { background: var(--cx-bg); }
+  .cx .phone, .phone.cx { background: var(--cx-bg); padding-bottom: 0; }
+  .statusbar.navy { background: var(--accent); color: var(--accent-ink); }
+  .rail { background: var(--accent); color: var(--accent-ink); padding: 0 20px 18px; text-align: center; }
+  .rail .co { display: flex; align-items: center; gap: 10px; justify-content: flex-start; }
+  .rail .co .cx-logo { width: 34px; height: 34px; border-radius: 9px; font-size: 15px; background: var(--accent-ink); color: var(--accent); }
+  .rail .co b { font-size: 16px; font-weight: 600; }
+  .rail .doc { margin-top: 4px; font-size: 25px; line-height: 1.25; font-weight: 600; letter-spacing: .22em; padding-left: .22em; }
+  .rail .valid { display: inline-block; margin-top: 4px; padding: 2px 10px; border-radius: 999px; background: var(--accent-ink); color: var(--accent); font-size: 11.5px; font-weight: 600; }
+  .rail .from { margin-top: 8px; font-size: 11px; font-weight: 600; letter-spacing: .14em; color: var(--accent-ink); opacity: .75; }
+  .rail .amt { font-size: 30px; font-weight: 600; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .rail .sent { font-size: 13px; color: var(--accent-ink); opacity: .85; margin-top: 2px; }
+  .docw { background: var(--cx-card); border-radius: 22px 22px 0 0; margin-top: -12px; position: relative; padding: 16px 16px 0; }
+  .cap { font-size: 11px; font-weight: 600; letter-spacing: .12em; color: var(--cx-muted); }
+  .pf b { display: block; font-size: 17px; font-weight: 600; margin-top: 1px; }
+  .pf p { font-size: 13.5px; color: var(--cx-ink-2); line-height: 1.4; }
+  .ask { font-size: 14px; color: var(--cx-ink-2); margin: 8px 0 10px; line-height: 1.4; }
+  .opt { border: 1px solid var(--cx-line); border-radius: 16px; padding: 12px 14px; margin-bottom: 10px; background: var(--cx-card); }
+  .opt.sel { border: 2px solid var(--accent); background: var(--accent-soft); padding: 11px 13px; }
+  .opt .h { display: flex; align-items: center; gap: 10px; }
+  .opt .h .t { flex: 1; font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .opt .h .p { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .opt.sel .cx-radio { border-color: var(--accent); box-shadow: inset 0 0 0 4px var(--cx-card); background: var(--accent); }
+  .opt .g { margin-top: 6px; font-size: 10.5px; font-weight: 600; letter-spacing: .1em; color: var(--cx-muted); }
+  .opt .ln { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; line-height: 1.35; color: var(--cx-ink-2); margin-top: 1px; }
+  .opt .ln span:first-child { min-width: 0; }
+  .opt .ln small { color: var(--cx-muted); font-size: 12px; white-space: nowrap; }
+  .opt .ln span:last-child { font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .opt .st { display: flex; justify-content: space-between; border-top: 1px solid var(--cx-line); margin-top: 6px; padding-top: 6px; font-size: 13.5px; color: var(--cx-ink-2); }
+  .opt .st b { color: var(--cx-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body class="cx t-home-services">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="statusbar navy"><span>8:47</span><span class="icons"><svg class="i s4"><use href="#wifi"/></svg><svg class="i s6"><use href="#battery-100"/></svg></span></div>
+  <header class="rail">
+    <div class="co"><span class="cx-logo">P</span><b>Prairie Air &amp; Heat</b></div>
+    <p class="doc">ESTIMATE</p>
+    <span class="valid">Valid 30 days</span>
+    <p class="from">ESTIMATE FROM</p>
+    <p class="amt">$289.26</p>
+    <p class="sent">Sent Nov 24, 2026</p>
+  </header>
+
+  <main class="docw">
+    <div class="pf">
+      <p class="cap">PREPARED FOR</p>
+      <b>Hannah Cole</b>
+      <p>5527 Brookhollow Dr, Frisco, TX 75034</p>
+      <p>(972) 555-0147</p>
+    </div>
+    <p class="ask">Choose the option that works best for you, then sign to approve.</p>
+
+    <div class="opt">
+      <div class="h"><span class="cx-radio"></span><p class="t">Repair: new capacitor</p><span class="p">$289.26</span></div>
+      <p class="g">SERVICES</p>
+      <div class="ln"><span>Diagnostic &amp; service call <small>· 1 × $89.00</small></span><span>$89.00</span></div>
+      <p class="g">MATERIALS</p>
+      <div class="ln"><span>Dual run capacitor (45/5 MFD) <small>· 1 × $185.00</small></span><span>$185.00</span></div>
+      <div class="st"><span>Subtotal + tax</span><b>$289.26</b></div>
+    </div>
+
+    <div class="opt sel">
+      <div class="h"><span class="cx-radio"></span><p class="t">New heat pump, 15.2 SEER2</p><span class="p">$10,405.85</span></div>
+      <p class="g">SERVICES</p>
+      <div class="ln"><span>Heat pump system install <small>· 1 × $2,850.00</small></span><span>$2,850.00</span></div>
+      <p class="g">MATERIALS</p>
+      <div class="ln"><span>3-ton heat pump + air handler <small>· 1 × $6,980.00</small></span><span>$6,980.00</span></div>
+      <div class="st"><span>Subtotal + tax</span><b>$10,405.85</b></div>
+    </div>
+
+    <div class="opt">
+      <div class="h"><span class="cx-radio"></span><p class="t">New variable-speed heat pump, 17 SEER2</p><span class="p">$12,827.55</span></div>
+      <p class="g">SERVICES</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>

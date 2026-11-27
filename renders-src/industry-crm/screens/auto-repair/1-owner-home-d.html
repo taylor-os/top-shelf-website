@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · Turnbuckle Auto Repair</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .nav { gap: 2px; }
+  .nav a { padding: 8px 12px; }
+  .nav .sec { padding: 10px 12px 3px; }
+  .side .brand { height: 68px; }
+  .side .brand small { display: block; font-size: 12px; font-weight: 400; color: var(--on-em-dim); margin-top: 2px; }
+  .band { align-items: center; padding: 10px 24px; }
+  .search { display: flex; align-items: center; gap: 8px; width: 300px; height: 38px; padding: 0 12px; border-radius: 10px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: var(--on-em-dim); font-size: 14px; }
+  .page { padding: 10px 24px 0; }
+  .title-row { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+  .title-row h2 { font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: -.02em; }
+  .title-row .sub { font-size: 13.5px; color: var(--muted); }
+  .help { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 500; color: rgb(var(--b-600)); }
+  .next { display: flex; align-items: center; gap: 14px; padding: 6px 10px 6px 16px; border-radius: var(--r-card); border: 1.5px solid rgb(var(--b-500) / .45); background: linear-gradient(135deg, rgb(var(--b-500) / .12), var(--panel)); margin-bottom: 10px; }
+  .next .k { font-size: 11px; font-weight: 600; letter-spacing: .1em; color: rgb(var(--b-600)); }
+  .next .t { font-size: 15.5px; font-weight: 600; }
+  .cols { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+  .lbl-sec { font-size: 12px; font-weight: 600; letter-spacing: .1em; color: rgb(var(--b-700)); margin: 0 0 6px 2px; display:flex; align-items:center; gap:6px; }
+  .c-h { display: flex; align-items: center; gap: 8px; padding: 7px 14px; border-bottom: 1px solid var(--line); }
+  .c-h b { font-size: 14px; font-weight: 600; }
+  .c-h .go { margin-left: auto; font-size: 12.5px; font-weight: 600; color: rgb(var(--b-600)); display: inline-flex; align-items: center; gap: 4px; }
+  .c-h .go .m { color: var(--muted); font-weight: 500; }
+  .r { display: flex; align-items: center; gap: 10px; padding: 6px 14px; line-height: 1.35; }
+  .r + .r { border-top: 1px solid var(--line-soft); }
+  .r .who { font-size: 14px; font-weight: 600; }
+  .r .who span { font-weight: 400; color: var(--muted); }
+  .r .ln { font-size: 12.5px; color: var(--muted); margin-top: 1px; }
+  .r .ln b { font-weight: 600; }
+  .r .acts { margin-left: auto; display: flex; gap: 6px; flex-shrink: 0; }
+  .mini { display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); font-size: 12.5px; font-weight: 500; color: var(--ink-2); }
+  .mini svg { color: rgb(var(--b-600)); }
+  .mini.go-btn { border-color: transparent; color: var(--on-accent); background-image: linear-gradient(135deg, var(--grad-1), var(--grad-2) 55%, var(--grad-3)); }
+  .mini.go-btn svg { color: var(--on-accent); }
+  .lstack { display: flex; flex-direction: column; gap: 8px; }
+  .rstack { display: flex; flex-direction: column; gap: 8px; }
+  .st { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .st .tile { grid-column: span 2; padding: 6px 12px; display:flex; align-items:baseline; gap:8px; }
+  .st .tile:nth-child(n+4) { grid-column: span 3; }
+  .st .tile .v { margin-top: 0; font-size: 22px; line-height: 30px; }
+  .st .tile .l { font-size: 12px; }
+  .box { padding: 7px 12px; }
+  .box h3 { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+  .box h3 .go { margin-left: auto; font-size: 12px; color: rgb(var(--b-600)); }
+  .money { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .money .l { font-size: 11.5px; color: var(--muted); }
+  .money .v { font-size: 17px; line-height: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .li { display: flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 1px 0; }
+  .li .tm { width: 62px; flex-shrink: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .li .mu { color: var(--muted); }
+  .chip.rush { background: var(--badge); color: var(--badge-ink); }
+</style>
+</head>
+<body class="t-auto-repair">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">TA</span><span>Turnbuckle Auto Repair<small>Ray Dunmore · Owner</small></span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Home</span></a>
+      <a><svg class="i"><use href="#wrench-screwdriver"/></svg><span class="lbl">Repairs</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Appointments</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span><span class="badge">2</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+      <p class="sec">Office</p>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Payments</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+      <a><svg class="i"><use href="#chart-bar"/></svg><span class="lbl">Reports</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#user-group"/></svg><span class="lbl">Team</span></a>
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <a><svg class="i"><use href="#question-mark-circle"/></svg><span class="lbl">Help</span></a>
+    </nav>
+    <div class="side-user"><span class="av">RD</span><div><b>Ray Dunmore</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div><h1>Home</h1></div>
+      <div class="right"><span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search customers...</span></div>
+    </header>
+
+    <div class="page">
+      <div class="title-row">
+        <h2>Turnbuckle Auto Repair</h2>
+        <span class="sub">Tue, Nov 24 · 12 cars in the shop · 1 rush</span>
+        <a class="help"><svg class="i s4"><use href="#question-mark-circle"/></svg>How your shop runs</a>
+      </div>
+
+      <div class="next">
+        <div class="grow">
+          <p class="k">NEXT STEP</p>
+          <p class="t">Brenda Ormsby approved 2 of 3 jobs on the 2018 Toyota Camry ($615)</p>
+        </div>
+        <span class="btn primary sm">Open the RO<svg class="i s4"><use href="#arrow-right"/></svg></span>
+      </div>
+
+      <div class="cols">
+        <div>
+          <p class="lbl-sec">SERVICE TODAY</p>
+          <div class="lstack">
+            <div class="card clip">
+              <div class="c-h"><b>Ready for pickup</b><span class="count-pill green">2</span><span class="go">Shop board<svg class="i s35"><use href="#arrow-right"/></svg></span></div>
+              <div class="r"><div class="grow"><p class="who">Priya Royce <span>· 2020 Honda CR-V</span></p><p class="ln">RO 2041 · <b class="t-amber">Balance $89.94</b> · Done 40 m ago · ready text not sent</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#phone"/></svg>Call</span><span class="mini go-btn"><svg class="i s35"><use href="#paper-airplane"/></svg>Send ready text</span></div></div>
+              <div class="r"><div class="grow"><p class="who">Rhonda Faulk <span>· 2017 Chevrolet Malibu</span></p><p class="ln">RO 2044 · <b class="t-green">Paid</b> · Ready text sent 9:58 AM</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#phone"/></svg>Call</span><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+            </div>
+
+            <div class="card clip">
+              <div class="c-h"><b>Money owed</b><span class="count-pill amber">2</span><span class="go"><span class="m">$302.34 owed · $1,504.95 in today</span><svg class="i s35"><use href="#arrow-right"/></svg></span></div>
+              <div class="r"><div class="grow"><p class="who">Priya Royce <span>· 2020 Honda CR-V</span></p><p class="ln">RO 2041 · <b class="t-amber">Balance $89.94</b> · Not picked up · done 40 m ago</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#phone"/></svg>Call</span><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+              <div class="r"><div class="grow"><p class="who">Ed Saldana <span>· 2010 Toyota Corolla</span></p><p class="ln">RO 2031 · <b class="t-amber">Balance $212.40</b> · Picked up 6 d ago</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#phone"/></svg>Call</span><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+            </div>
+
+            <div class="card clip">
+              <div class="c-h"><b>Waiting on the customer's OK</b><span class="count-pill" style="background:var(--blue-soft);color:var(--blue-ink)">2</span><span class="go">Shop board<svg class="i s35"><use href="#arrow-right"/></svg></span></div>
+              <div class="r"><div class="grow"><p class="who">Walt Hendricks <span>· 2012 Chevrolet Tahoe</span></p><p class="ln">RO 2053 · Estimate <b>$130</b> · sent 8:55 AM</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#phone"/></svg>Call</span><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+              <div class="r"><div class="grow"><p class="who">Alicia Nash <span>· 2021 Kia Sorento</span></p><p class="ln">RO 2055 · Estimate <b>$512</b> · sent 10:05 AM</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#phone"/></svg>Call</span><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+            </div>
+
+            <div class="card clip">
+              <div class="c-h"><b>Declined work to follow up</b><span class="count-pill gray">3</span><span class="go">All follow-ups<svg class="i s35"><use href="#arrow-right"/></svg></span></div>
+              <div class="r"><div class="grow"><p class="who">Gary Lowell <span>· 2019 Jeep Wrangler</span></p><p class="ln">Replace front struts <b>$860</b> · declined Oct 21 · <b class="t-amber">due today</b> · in the shop now, RO 2047</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+              <div class="r"><div class="grow"><p class="who">Shawna Riggs <span>· 2016 Mazda CX-5</span></p><p class="ln">Replace rear brake pads <b>$210</b> · declined Nov 4 · due Dec 4</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+              <div class="r"><div class="grow"><p class="who">Brenda Ormsby <span>· 2018 Toyota Camry</span></p><p class="ln">Brake fluid flush <b>$83</b> · declined today · due Dec 22</p></div><div class="acts"><span class="mini"><svg class="i s35"><use href="#chat-bubble-left"/></svg>Text</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rstack">
+          <div class="st">
+            <div class="tile"><p class="v">4</p><p class="l">Waiting</p></div>
+            <div class="tile"><p class="v">3</p><p class="l">In progress</p></div>
+            <div class="tile"><p class="v amber">2</p><p class="l">Waiting on parts</p></div>
+            <div class="tile"><p class="v">1</p><p class="l">Quality check</p></div>
+            <div class="tile"><p class="v green">3</p><p class="l">Done today</p></div>
+          </div>
+
+          <div class="card box">
+            <h3><svg class="i s4 t-red"><use href="#bolt"/></svg>Rush</h3>
+            <div class="flex" style="gap:8px"><b class="sm">RO 2049 · 2016 Honda Odyssey · Maria Esquivel</b><span class="chip rush sp">RUSH</span></div>
+            <p class="xs muted" style="margin-top:2px"><span class="t-red fw6">needed by 12:00 PM</span> · 1 of 2 done · Wade</p>
+          </div>
+
+          <div class="card box">
+            <h3><svg class="i s4 t-brand"><use href="#banknotes"/></svg>Today's money</h3>
+            <div class="money">
+              <div><p class="l">Approved today</p><p class="v">$615.00</p></div>
+              <div><p class="l">In today</p><p class="v t-green">$1,504.95</p></div>
+              <div><p class="l">Owed</p><p class="v t-amber">$302.34</p></div>
+            </div>
+            <p class="xs muted" style="margin-top:3px">Approved: Brenda Ormsby, RO 2052 · 2 estimates still out</p>
+            <p class="xs muted">Average RO this week $418</p>
+          </div>
+
+          <div class="card box">
+            <h3><svg class="i s4 t-brand"><use href="#sparkles"/></svg>Calls today</h3>
+            <p class="sm">AI receptionist answered <b>7</b> · booked <b>3</b> · missed-call texts <b>1</b></p>
+            <p class="xs muted" style="margin-top:2px">10:31 AM Keisha Merriman · 2017 Nissan Altima · booked drop-off 1:00 PM</p>
+          </div>
+
+          <div class="card box">
+            <h3><svg class="i s4 t-brand"><use href="#calendar-days"/></svg>Coming in today<span class="go">Appointments</span></h3>
+            <div class="li"><span class="tm">1:00 PM</span><span class="trunc"><b class="fw6">Keisha Merriman</b> <span class="mu">· 2017 Nissan Altima · tow-in, won't start</span></span></div>
+            <div class="li"><span class="tm">2:30 PM</span><span class="trunc"><b class="fw6">Ben Osgood</b> <span class="mu">· 2019 Toyota Corolla · oil change</span></span></div>
+            <div class="li"><span class="tm">4:15 PM</span><span class="trunc"><b class="fw6">Lupe Galloway</b> <span class="mu">· 2015 Honda Pilot · A/C check</span></span></div>
+          </div>
+
+          <div class="card box">
+            <h3><svg class="i s4 t-brand"><use href="#user-group"/></svg>Team</h3>
+            <div class="li"><span class="av sm">WK</span><span class="trunc"><b class="fw6">Wade Kendrick</b> <span class="mu">· 3 open repair orders · 6 jobs · 2.9 h today</span></span></div>
+            <div class="li"><span class="av sm">TH</span><span class="trunc"><b class="fw6">Tony Huynh</b> <span class="mu">· 3 open repair orders · 3 jobs · 2.4 h today</span></span></div>
+            <div class="li"><span class="av sm">CO</span><span class="trunc"><b class="fw6">Caleb Oxley</b> <span class="mu">· 3 open repair orders · 4 jobs · 1.6 h today</span></span></div>
+          </div>
+
+          <div class="card box flex" style="gap:8px"><svg class="i s4 t-amber"><use href="#star"/></svg><span class="sm" style="white-space:nowrap;font-size:13px">Reviews: 11 requests sent this week · 5 new · <b>1 to reply to</b></span><svg class="i s35 sp t-brand"><use href="#arrow-right"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg></span></aside>
+</div>
+</body>
+</html>

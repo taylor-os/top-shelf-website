@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Larkhaven Goods</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .page { padding-top: 14px; }
+  .tiles { margin-bottom: 14px; }
+  .tile { padding: 12px 16px; }
+  .round-ph { width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; background: rgba(255,255,255,.2); box-shadow: 0 0 0 4px rgba(255,255,255,.1); color: var(--on-em); margin-top: 4px; }
+  .dash-grid { gap: 20px; grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); }
+  .bar { margin-bottom: 10px; }
+  /* going-home rows */
+  .gh { display: grid; grid-template-columns: 96px minmax(0,1fr) 40px 88px 124px; align-items: center; gap: 12px; padding: 9px 16px; }
+  .gh + .gh { border-top: 1px solid var(--line); }
+  .gh .when { font-size: 13px; font-weight: 600; color: var(--ink-2); }
+  .gh .who { font-size: 14.5px; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 6px; min-width: 0; }
+  .gh .item { font-size: 12.5px; color: var(--muted); }
+  .gh .item em { font-style: normal; color: rgb(var(--b-600)); font-weight: 500; }
+  .gh .btn { justify-self: end; }
+  .gh.warn { background: color-mix(in srgb, var(--amber) 6%, var(--panel)); border-top: 0 !important; }
+  .nudge { padding: 5px 16px; font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--amber-ink); background: color-mix(in srgb, var(--amber) 10%, var(--panel)); border-top: 1px solid color-mix(in srgb, var(--amber) 30%, var(--panel)); }
+  .slot { display: inline-grid; place-items: center; width: 40px; height: 30px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--ink-2); background: var(--well); border: 1px solid var(--line-strong); }
+  .mchip { justify-self: start; }
+  .small-h { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--ink); }
+  .small-h .r { margin-left: auto; font-size: 12px; font-weight: 500; color: rgb(var(--b-600)); }
+  .small-h .ic-box { width: 28px; height: 28px; border-radius: 9px; }
+  .eve { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+  .eve b { font-weight: 600; color: var(--ink); }
+  .eve.m { color: var(--muted-2); }
+  .eve .t { width: 88px; white-space: nowrap; flex-shrink: 0; font-weight: 600; color: var(--ink-2); }
+  .eve.m .t { color: var(--muted-2); font-weight: 500; }
+  /* right column */
+  .rc { padding: 12px 16px; }
+  .sub-l { font-size: 12px; color: var(--muted-2); margin-top: 2px; }
+  .ln { display: flex; gap: 10px; padding: 9px 0; align-items: flex-start; }
+  .ln + .ln { border-top: 1px solid var(--line); }
+  .ln .nm { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+  .ln .nm small { font-weight: 500; color: var(--muted-2); font-size: 12px; }
+  .ln .q { font-size: 12.5px; color: var(--muted); line-height: 1.35; margin-top: 1px; }
+  .ln .ok { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; color: var(--green-ink); font-weight: 500; margin-left: 4px; white-space: nowrap; }
+  .ln.need { background: color-mix(in srgb, var(--red) 5%, var(--panel)); margin: 0 -16px; padding: 10px 16px 9px; border-radius: 0; }
+  .ln.need + .ln { border-top: 0; }
+  .avs { display: flex; }
+  .avs .av { width: 28px; height: 28px; font-size: 10.5px; border: 2px solid var(--panel); margin-left: -6px; }
+  .avs .av:first-child { margin-left: 0; }
+  .ro { font-size: 12.5px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+  .stars { color: var(--amber); font-size: 13px; letter-spacing: 1px; }
+  .quote { font-size: 12.5px; color: var(--ink-2); line-height: 1.45; margin-top: 6px; }
+</style>
+</head>
+<body class="t-retail">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">LG</span><span>Larkhaven Goods</span></div>
+    <nav class="nav">
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#archive-box"/></svg><span class="lbl">Hold shelf</span></a>
+      <a><svg class="i"><use href="#shopping-bag"/></svg><span class="lbl">Special orders</span></a>
+      <a><svg class="i"><use href="#heart"/></svg><span class="lbl">Want list</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Messages</span><span class="badge">1</span></a>
+      <a><svg class="i"><use href="#map-pin"/></svg><span class="lbl">Pickups &amp; delivery</span></a>
+      <a><svg class="i"><use href="#building-office-2"/></svg><span class="lbl">House accounts</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">CD</span><div><b>Claire Donovan</b><small>Owner</small></div></div>
+    <div class="side-co"><span class="av">L</span><div><b>Larkhaven Goods</b><small>Main Street, Grapevine</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Good morning, Claire</h1>
+        <p class="sub">Tue, Dec 8 · Doors open at 10 · <b>5 pickups today</b> · 1 delivery after close</p>
+      </div>
+      <div class="right"><span class="round-ph"><svg class="i"><use href="#phone"/></svg></span></div>
+    </header>
+
+    <div class="page">
+      <section class="tiles" style="--n:4">
+        <div class="tile"><p class="l">On the hold shelf</p><p class="v">14 <small>of 20</small></p><p class="s">5 going home today · 1 leaves tomorrow</p></div>
+        <div class="tile"><p class="l">It's in, not told yet</p><p class="v">1 <small>item</small></p><p class="s">4 people asked for it</p></div>
+        <div class="tile"><p class="l">Paid by text yesterday</p><p class="v green">$486.50</p><p class="s">3 deposits, 4 pay links</p></div>
+        <div class="tile"><p class="l">House accounts open</p><p class="v">$1,318.00</p><p class="s">2 accounts · statements Dec 15</p></div>
+      </section>
+
+      <div class="dash-grid">
+        <div>
+          <div class="bar tall"><h2>Going home today</h2><span class="count">5</span><span class="note">3 paid · 2 owe at pickup</span><span class="r">Hold shelf &rarr;</span></div>
+          <div class="card clip">
+            <div class="gh">
+              <span class="when">After lunch</span>
+              <div class="grow"><p class="who">Priya Rigsby <span class="chip brand">Special order</span></p><p class="item trunc">Speckled stoneware dinner set, 4 settings</p></div>
+              <span class="slot">A2</span>
+              <span class="chip amber mchip">$142.00 due</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#link"/></svg>Send pay link</span>
+            </div>
+            <div class="gh">
+              <span class="when">By 3</span>
+              <div class="grow"><p class="who">Tom Wexford</p><p class="item trunc">Oat wool throw</p></div>
+              <span class="slot">B3</span>
+              <span class="chip green mchip">Paid</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg>Text</span>
+            </div>
+            <div class="gh">
+              <span class="when">Before 6</span>
+              <div class="grow"><p class="who">Jenna Morales</p><p class="item trunc">Painted ornaments ×4 · <em>With Cole</em></p></div>
+              <span class="slot">D1</span>
+              <span class="chip amber mchip">$38.00 due</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg>Text</span>
+            </div>
+            <div class="gh">
+              <span class="when">Anytime</span>
+              <div class="grow"><p class="who">Ruth Akers <span class="chip blue"><svg class="i s3"><use href="#phone"/></svg>Calls only</span></p><p class="item trunc">Hand-dipped tapers, set of 6</p></div>
+              <span class="slot">C1</span>
+              <span class="chip green mchip">Paid</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#phone"/></svg>Call</span>
+            </div>
+            <div class="gh">
+              <span class="when">After school</span>
+              <div class="grow"><p class="who">Wes Calder</p><p class="item trunc">Kids' puzzle and book set</p></div>
+              <span class="slot">D2</span>
+              <span class="chip green mchip">Paid</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left-right"/></svg>Text</span>
+            </div>
+            <p class="nudge">Needs a nudge</p>
+            <div class="gh warn">
+              <span><span class="chip amber">Leaves tomorrow</span></span>
+              <div class="grow"><p class="who">Gloria Benavides <span class="xs t-amber fw5">2 texts, no reply</span></p><p class="item trunc">Linen tea towels + brass bud vase</p></div>
+              <span class="slot">B1</span>
+              <span class="chip amber mchip">$58.00 due</span>
+              <span class="btn outline sm"><svg class="i s4"><use href="#phone"/></svg>Call</span>
+            </div>
+          </div>
+
+          <div class="grid2 mt-16" style="gap:16px">
+            <div class="card rc">
+              <p class="small-h"><span class="ic-box brand"><svg class="i s4"><use href="#map-pin"/></svg></span>After close<span class="r">Pickups &amp; delivery</span></p>
+              <div class="eve"><span class="t">Tonight 7 PM</span><span><b>Nora Whitfield</b> · Birthday gift basket · Southlake · Cole · <span class="t-green">Paid</span></span></div>
+              <div class="eve m"><span class="t">Thu 6:30 PM</span><span>Bramble &amp; Stone Realty · 12 holiday gift boxes · House account</span></div>
+            </div>
+            <div class="card rc">
+              <p class="small-h"><span class="ic-box amber"><svg class="i s4"><use href="#star"/></svg></span>Reviews<span class="r">4.9 ★ · 186 on Google</span></p>
+              <p class="sub-l">9 review requests sent this week</p>
+              <div class="flex" style="margin-top:6px"><b class="sm fw6">Derek Hollis</b><span class="stars">★★★★★</span><span class="chip green">New</span><span class="btn ghost sm sp" style="min-height:26px;padding:0 6px">Reply</span></div>
+              <p class="quote">"Walked in needing a last-minute gift for my mom and walked out with it wrapped. Claire knew exactly what she'd like."</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="bar"><h2>Last night</h2><span class="count">8</span><span class="note">AI 5 calls · Web chat 3</span><span class="r">Messages &rarr;</span></div>
+          <div class="stack" style="gap:10px">
+            <div class="card rc" style="padding-top:0;padding-bottom:2px;overflow:hidden">
+                            <div class="ln need">
+                <span class="ic-box sm red"><svg class="i s35"><use href="#phone"/></svg></span>
+                <div class="grow"><p class="nm">Lena Park <small>· New · 8:42 PM call</small></p><p class="q">Asked for the cedar &amp; sage 3-wick, wrapped, held till Sat</p></div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="chip red">Needs you</span><span class="btn outline sm" style="min-height:26px;padding:0 10px">Open</span></div>
+              </div>
+              <div class="ln">
+                <span class="ic-box sm"><svg class="i s35"><use href="#phone"/></svg></span>
+                <div class="grow"><p class="nm">Annie Cutler <small>· 7:15 PM call</small></p><p class="q">"Open late Thursdays?" <span class="ok"><svg class="i s35"><use href="#check-circle"/></svg>Answered: till 8 in December</span></p></div>
+              </div>
+              <div class="ln">
+                <span class="ic-box sm"><svg class="i s35"><use href="#globe-alt"/></svg></span>
+                <div class="grow"><p class="nm">Website chat <small>· 11:02 PM</small></p><p class="q">"Do you deliver to Southlake?" <span class="ok"><svg class="i s35"><use href="#check-circle"/></svg>Answered: yes, $10</span></p></div>
+              </div>
+              <div class="ln">
+                <span class="ic-box sm"><svg class="i s35"><use href="#phone"/></svg></span>
+                <div class="grow"><p class="nm">Marcus Beckett <small>· 6:20 PM call</small></p><p class="q">"Cutting board ready Friday?" <span class="ok"><svg class="i s35"><use href="#check-circle"/></svg>Answered: yes</span></p></div>
+              </div>
+              <p class="xs muted-2" style="border-top:1px solid var(--line);padding:7px 0 6px">4 more, all answered · <span class="t-brand fw6">See all</span></p>
+            </div>
+
+            <div class="card rc">
+              <p class="small-h"><span class="ic-box green"><svg class="i s4"><use href="#gift"/></svg></span>It's in, tell them</p>
+              <p class="ro" style="margin-top:6px"><b style="color:var(--ink)">Cedar &amp; sage candle, 3-wick</b> · arrived Mon · 4 asked</p>
+              <div class="flex" style="margin-top:8px">
+                <span class="avs"><span class="av">RA</span><span class="av">AC</span><span class="av">DH</span><span class="av">LP</span></span>
+                <span class="btn primary sm sp">Tell the 4 who asked</span>
+              </div>
+            </div>
+
+            <div class="card rc">
+              <p class="small-h"><span class="ic-box brand"><svg class="i s4"><use href="#heart"/></svg></span>Reach out this week</p>
+              <div class="ln" style="padding-top:8px">
+                <div class="grow"><p class="nm flex">Mark Prescott<span class="btn outline sm sp" style="min-height:28px;padding:0 10px">Text Mark</span></p><p class="ro">Bought Ellie's anniversary gift here Dec 12 last year. Anniversary is Dec 14. Ellie's wish list has 3 things.</p></div>
+              </div>
+              <div class="ln">
+                <div class="grow"><p class="nm flex">Sofia Ralston ★<span class="btn outline sm sp" style="min-height:28px;padding:0 10px">Text Sofia</span></p><p class="ro">Not in since Sept 19. Loves olivewood.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

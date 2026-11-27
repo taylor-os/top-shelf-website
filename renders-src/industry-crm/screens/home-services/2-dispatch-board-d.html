@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule · Prairie Air &amp; Heat</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  /* Month / Week / Day switch on the band */
+  .vseg { display: flex; padding: 3px; border-radius: 12px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); }
+  .vseg a { padding: 6px 14px; border-radius: 9px; font-size: 13px; font-weight: 600; color: var(--on-em); }
+  .vseg a.on { background: var(--band-btn-bg); color: var(--band-btn-ink); }
+  .band .sub { max-width: 640px; }
+  .dateline { font-size: 15px; font-weight: 600; color: rgb(var(--b-700)); margin-bottom: 10px; }
+
+  /* unassigned tray */
+  .tray { border: 2px dashed color-mix(in srgb, var(--red) 45%, transparent); background: color-mix(in srgb, var(--red) 3%, transparent); border-radius: var(--r-card); padding: 10px 14px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 18px; }
+  .tray .hd { display: contents; }
+  .tray .hd b { color: var(--red); font-size: 14px; font-weight: 600; }
+  .tray .hd b { order: 0; padding-top: 2px; } .tray .ucard { order: 1; } .tray .hd .r { order: 2; margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted-2); }
+  .ucard { width: 240px; background: var(--panel); border-radius: 10px; border: 1px solid var(--line); border-left: 3px solid rgb(var(--b-500)); box-shadow: var(--shadow-sm); padding: 8px 12px; line-height: 1.4; }
+  .ucard .w { font-size: 11.5px; color: var(--muted-2); }
+  .ucard .n { font-size: 14px; font-weight: 600; }
+  .ucard .j { font-size: 12.5px; color: var(--ink-2); }
+  .ucard .a { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .ucard .a svg { color: var(--faint); }
+  .sel { margin-top: 6px; display: flex; align-items: center; justify-content: space-between; height: 28px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; color: var(--muted); }
+
+  /* day board: one row per tech, hours across */
+  .board { background: var(--panel); border-radius: var(--r-card); box-shadow: var(--shadow); overflow: hidden; }
+  .bh, .brow { display: grid; grid-template-columns: 144px 1fr; }
+  .bh { height: 34px; border-bottom: 1px solid var(--line); background: var(--head); }
+  .hours { position: relative; }
+  .hours span { position: absolute; top: 9px; font-size: 11.5px; color: var(--muted-2); transform: translateX(-50%); white-space: nowrap; }
+  .hours span:first-child { transform: none; padding-left: 6px; }
+  .brow + .brow { border-top: 1px solid var(--line); }
+  .who { padding: 14px 14px; border-right: 1px solid var(--line); }
+  .who b { display: block; font-size: 14px; font-weight: 600; }
+  .who small { font-size: 12px; color: var(--muted-2); }
+  .lane { position: relative; height: 106px;
+    background-image: linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 10% 100%; }
+  /* 7 AM .. 5 PM = 10 hours; left = (start - 7) * 10% */
+  .vb { position: absolute; top: 6px; bottom: 6px; background: color-mix(in srgb, rgb(var(--b-500)) 9%, var(--panel)); border: 1px solid rgb(var(--b-500) / .22);
+    border-left: 3px solid rgb(var(--b-500)); border-radius: 8px; padding: 5px 8px; overflow: hidden; margin: 0 2px; }
+  .vb .tp { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 11px; line-height: 15px; color: var(--muted-2); white-space: nowrap; }
+  .vb .tp .tw { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .vb .tp .chip { margin-left: auto; font-size: 10px; line-height: 15px; padding: 0 7px; }
+  .vb b, .vb span.j, .vb span.ad { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vb b { font-size: 13px; line-height: 17px; font-weight: 600; margin-top: 1px; }
+  .vb span.j { font-size: 12px; line-height: 16px; color: var(--ink-2); }
+  .vb span.ad { font-size: 11.5px; line-height: 15px; color: var(--muted-2); }
+  .vb.done { border-left-color: var(--green); }
+  .vb.done .tp .tw, .vb.done span.j, .vb.done span.ad { opacity: .6; }
+  .vb.done b { color: var(--ink-2); }
+  .vb .tp.one { flex-wrap: nowrap; }
+  .free { position: absolute; top: 0; bottom: 0; display: grid; place-items: center; font-size: 12px; font-weight: 600; color: var(--green); }
+
+  /* toast + floating button */
+  .toast { position: fixed; left: calc(256px + (100vw - 256px - 52px) / 2); transform: translateX(-50%); bottom: 22px; z-index: 20;
+    display: flex; align-items: center; gap: 14px; background: var(--panel); border-radius: 14px; padding: 10px 10px 10px 16px;
+    box-shadow: 0 0 0 2px rgb(var(--b-500) / .45), var(--shadow); font-size: 14px; color: var(--ink); white-space: nowrap; }
+  .toast .btn.ghost { color: var(--muted); min-height: 36px; }
+  .newjob { position: fixed; right: 76px; bottom: 26px; z-index: 19; display: inline-flex; align-items: center; gap: 6px; padding: 12px 18px; border-radius: 999px; color: var(--on-accent); font-weight: 600; font-size: 14px;
+    background-image: linear-gradient(135deg, var(--grad-1), var(--grad-2) 55%, var(--grad-3)); box-shadow: 0 8px 20px rgb(var(--b-700) / .35); }
+</style>
+</head>
+<body class="t-home-services">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span>Prairie Air &amp; Heat</span></div>
+    <nav class="nav">
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#wrench-screwdriver"/></svg><span class="lbl">Jobs</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Clients</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span><span class="badge">1</span></a>
+      <a class="on"><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Schedule</span></a>
+      <p class="sec">Money</p>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Invoices</span></a>
+      <a><svg class="i"><use href="#document-text"/></svg><span class="lbl">Estimates</span></a>
+      <p class="sec">More</p>
+      <a><svg class="i"><use href="#chart-bar"/></svg><span class="lbl">Reports</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">BK</span><div><b>Brandi Kessler</b><small>Dispatcher</small></div></div>
+    <div class="side-co"><span class="av">P</span><div><b>Prairie Air &amp; Heat</b><small>Active company</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Schedule</h1>
+        <p class="sub">Drag a visit to another day to move it. In Day view, drag it along a tech's row to change the time or onto another row to reassign it, or click it to edit.</p>
+      </div>
+      <div class="right">
+        <span class="vseg"><a>Month</a><a>Week</a><a class="on">Day</a></span>
+        <span class="btn sm"><svg class="i s4"><use href="#chevron-left"/></svg></span>
+        <span class="btn sm">Today</span>
+        <span class="btn sm"><svg class="i s4"><use href="#chevron-right"/></svg></span>
+      </div>
+    </header>
+
+    <div class="page">
+      <p class="dateline">Wednesday, Nov 25, 2026 · Today</p>
+
+      <div class="tray">
+        <div class="hd"><b>Unassigned (1)</b><span class="r">Drag onto a tech's row, or pick one on the card<svg class="i s4"><use href="#chevron-down"/></svg></span></div>
+        <div class="ucard">
+          <p class="w">3:30 PM – 5:00 PM</p>
+          <p class="n">Lorraine Pike</p>
+          <p class="j">Thermostat blank, no heat</p>
+          <p class="a"><svg class="i s35"><use href="#map-pin"/></svg>6104 Locke Ln, Plano</p>
+          <div class="sel">Unassigned<svg class="i s4"><use href="#chevron-down"/></svg></div>
+        </div>
+      </div>
+
+      <div class="board">
+        <div class="bh">
+          <div style="border-right:1px solid var(--line)"></div>
+          <div class="hours">
+            <span style="left:0">7 AM</span><span style="left:10%">8 AM</span><span style="left:20%">9 AM</span><span style="left:30%">10 AM</span><span style="left:40%">11 AM</span>
+            <span style="left:50%">12 PM</span><span style="left:60%">1 PM</span><span style="left:70%">2 PM</span><span style="left:80%">3 PM</span><span style="left:90%">4 PM</span><span style="left:calc(100% - 22px)">5 PM</span>
+          </div>
+        </div>
+
+        <!-- Kyle -->
+        <div class="brow">
+          <div class="who"><b>Kyle Danner</b><small>3 visits</small></div>
+          <div class="lane">
+            <div class="vb done" style="left:0;width:10%"><p class="tp one"><span class="tw">7:00–8:00 AM</span><span class="chip green">Done</span></p><b>Dale Pruitt</b><span class="j">No heat, furnace won't light</span><span class="ad">1409 Ashwood Ct, Allen</span></div>
+            <div class="vb done" style="left:10%;width:20%"><p class="tp"><span class="tw">8:00–10:00 AM</span><span class="chip green">Done</span></p><b>Carla Mendez</b><span class="j">Heat runs but blows cool air</span><span class="ad">3017 Cedar Elm Dr, Wylie</span></div>
+            <div class="free" style="left:30%;width:30%">3h free</div>
+            <div class="vb" style="left:60%;width:20%"><p class="tp"><span class="tw">1:00–3:00 PM</span></p><b>Gloria Banks</b><span class="j">No heat, upstairs and down</span><span class="ad">2208 Hollyberry Ln, McKinney</span></div>
+          </div>
+        </div>
+
+        <!-- Marcus -->
+        <div class="brow">
+          <div class="who"><b>Marcus Reed</b><small>3 visits</small></div>
+          <div class="lane">
+            <div class="vb done" style="left:10%;width:15%"><p class="tp"><span class="tw">8:00–9:30 AM</span><span class="chip green">Done</span></p><b>Raymond Ochoa</b><span class="j">Upstairs bedroom won't warm up</span><span class="ad">815 Kingsbridge Dr, McKinney</span></div>
+            <div class="vb" style="left:30%;width:15%"><p class="tp"><span class="tw">10:00–11:30 AM</span><span class="chip amber">Working</span></p><b>Rita Castellano</b><span class="j">Furnace tune-up &amp; filter change</span><span class="ad">2650 Pecan Hollow Dr, Allen</span></div>
+            <div class="free" style="left:45%;width:25%">2h 30m free</div>
+            <div class="vb" style="left:70%;width:15%"><p class="tp"><span class="tw">2:00–3:30 PM</span></p><b>Victor Ramsey</b><span class="j">Thermostat follow-up</span><span class="ad">3390 Lakeshore Trl, McKinney</span></div>
+          </div>
+        </div>
+
+        <!-- Luis -->
+        <div class="brow">
+          <div class="who"><b>Luis Ortega</b><small>1 visit</small></div>
+          <div class="lane">
+            <div class="vb" style="left:10%;width:80%"><p class="tp"><span class="tw">8:00 AM–4:00 PM</span><span class="chip amber">Working</span></p><b>Dennis Okafor</b><span class="j">System replacement, 4-ton heat pump</span><span class="ad">912 Willow Bend Dr, Allen</span></div>
+          </div>
+        </div>
+
+        <!-- Jake -->
+        <div class="brow">
+          <div class="who"><b>Jake Whitt</b><small>3 visits</small></div>
+          <div class="lane">
+            <div class="vb done" style="left:15%;width:15%"><p class="tp"><span class="tw">8:30–10:00 AM</span><span class="chip green">Done</span></p><b>Bev Halloran</b><span class="j">Fall tune-up, two systems</span><span class="ad">418 Brookview Ln, Murphy</span></div>
+            <div class="vb" style="left:35%;width:15%"><p class="tp"><span class="tw">10:30 AM–12:00 PM</span><span class="chip amber">On my way</span></p><b>Marisol Vega</b><span class="j">Weak airflow, back bedrooms</span><span class="ad">1127 Cypress Point Dr, Fairview</span></div>
+            <div class="free" style="left:50%;width:25%">2h 30m free</div>
+            <div class="vb" style="left:75%;width:15%"><p class="tp"><span class="tw">2:30–4:00 PM</span></p><b>Curtis Lyle</b><span class="j">AC won't shut off</span><span class="ad">77 Ranch Gate Rd, Lucas</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg><span class="badge">1</span></span></aside>
+</div>
+
+<div class="toast">
+  <span>Moved <b class="fw6">Curtis Lyle</b> to Wed, Nov 25, 2:30 PM – 4:00 PM. Tell the customer the new time?</span>
+  <span class="btn ghost sm">Not now</span>
+  <span class="btn primary sm"><svg class="i s4"><use href="#chat-bubble-left-ellipsis"/></svg>Tell the customer</span>
+</div>
+<span class="newjob"><svg class="i s4"><use href="#plus"/></svg>New job</span>
+</body>
+</html>

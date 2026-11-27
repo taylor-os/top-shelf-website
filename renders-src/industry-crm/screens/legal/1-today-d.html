@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Holloway &amp; Vane Law</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .page { padding-top: 14px; }
+  .tiles { margin-bottom: 12px; }
+  .tile { padding: 13px 16px; }
+  .week { display: flex; align-items: center; gap: 0; background: var(--panel); border-radius: var(--r-card); box-shadow: var(--shadow); padding: 10px 12px; margin-bottom: 14px; font-size: 12px; white-space: nowrap; color: var(--ink-2); }
+  .week .lbl-up { font-size: 11px; font-weight: 600; color: rgb(var(--b-700)); margin-right: 10px; letter-spacing: .08em; white-space: nowrap; }
+  .week .wk { display: inline-flex; align-items: center; gap: 4px; padding: 0 9px; border-left: 1px solid var(--line); white-space: nowrap; }
+  .week .wk b { font-weight: 600; color: var(--ink); }
+  .week .wk svg { color: rgb(var(--b-600)); }
+  .cols3 { display: grid; grid-template-columns: minmax(0, 1.22fr) minmax(0, 1.1fr) minmax(0, .82fr); gap: 18px; align-items: start; }
+  .bar { margin-bottom: 10px; }
+  /* today rows */
+  .trow { display: flex; gap: 12px; padding: 9px 14px; align-items: flex-start; }
+  .trow + .trow { border-top: 1px solid var(--line); }
+  .trow .time { width: 56px; padding: 6px 0; }
+  .trow .time b { font-size: 14px; }
+  .trow .nm { display: flex; align-items: center; gap: 6px; }
+  .trow .nm b { font-size: 14px; font-weight: 600; flex: 1; min-width: 0; }
+  .trow .what { font-size: 12.5px; font-weight: 500; color: rgb(var(--b-600)); margin-top: 1px; }
+  .trow .ln { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); margin-top: 2px; white-space: nowrap; }
+  .trow .ln svg { color: var(--faint); }
+  .trow .ln .dotsep { color: var(--faint); padding: 0 3px; }
+  /* new since friday */
+  .nrow { padding: 8px 14px; }
+  .nrow + .nrow { border-top: 1px solid var(--line); }
+  .nrow .l1 { display: flex; align-items: baseline; gap: 6px; }
+  .nrow .l1 b { font-size: 13.5px; font-weight: 600; }
+  .nrow .l1 .pa { font-size: 12px; color: var(--muted); }
+  .nrow .l1 .w { margin-left: auto; font-size: 11.5px; color: var(--muted-2); white-space: nowrap; }
+  .nrow .l2 { display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 12px; color: var(--muted); }
+  .nrow .l2 svg { color: rgb(var(--b-600)); }
+  .nrow .l2 .chip { margin-left: auto; }
+  .nrow .btn.sm { min-height: 26px; padding: 2px 10px; font-size: 12px; border-radius: 8px; }
+  /* needs you */
+  .attn { padding: 13px 14px; gap: 6px; }
+  .attn .hd .t { font-size: 13.5px; line-height: 1.3; }
+  .attn .ln2 { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+  .attn .ln2 a { color: rgb(var(--b-600)); font-weight: 600; white-space: nowrap; }
+  .stars { color: var(--amber); font-size: 13px; letter-spacing: 1px; }
+  .stack.tight { gap: 10px; }
+</style>
+</head>
+<body class="t-legal">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span>Holloway &amp; Vane Law</span></div>
+    <nav class="nav">
+      <a class="on"><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#inbox-arrow-down"/></svg><span class="lbl">Intake</span><span class="badge">2</span></a>
+      <a><svg class="i"><use href="#briefcase"/></svg><span class="lbl">Matters</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Clients</span></a>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Messages</span><span class="badge">1</span></a>
+      <a><svg class="i"><use href="#arrow-path"/></svg><span class="lbl">Follow-ups</span></a>
+      <p class="sec">Money</p>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Billing</span></a>
+      <p class="sec">More</p>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+      <a><svg class="i"><use href="#chart-bar"/></svg><span class="lbl">Reports</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">GH</span><div><b>Grace Holloway</b><small>Managing attorney</small></div></div>
+    <div class="side-co"><span class="av">H</span><div><b>Holloway &amp; Vane Law</b><small>Active company</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Good morning, Grace</h1>
+        <p class="sub">Mon, Nov 30 · <b>Court at 9:00</b> · 3 consults today · 7 new inquiries since Friday</p>
+      </div>
+      <div class="right"><span class="avatar-ring">GH</span></div>
+    </header>
+
+    <div class="page">
+      <section class="tiles" style="--n:5">
+        <div class="tile"><p class="l">New since Fri 6 PM</p><p class="v">7</p><p class="s">all answered, 5 by AI after hours</p></div>
+        <div class="tile"><p class="l">Consults this week</p><p class="v">5</p><p class="s">3 today</p></div>
+        <div class="tile"><p class="l">Retained in November</p><p class="v">6</p><p class="s">of 14 consults (43%)</p></div>
+        <div class="tile"><p class="l">Collected in November</p><p class="v green">$21,450</p><p class="s">retainers, flat fees, installments</p></div>
+        <div class="tile"><p class="l">Retainers waiting</p><p class="v">$14,050</p><p class="s">4 retainers, 1 installment · sent this month</p></div>
+      </section>
+
+      <div class="week">
+        <span class="lbl-up">This week</span>
+        <span class="wk"><svg class="i s4"><use href="#banknotes"/></svg><b>Tue Dec 1</b> · Installment due · Dana Pembrook $750</span>
+        <span class="wk"><svg class="i s4"><use href="#building-library"/></svg><b>Thu Dec 3</b> · 10:00 AM · Hearing · Celia Ward · Probate</span>
+        <span class="wk"><svg class="i s4"><use href="#flag"/></svg><b>Fri Dec 4</b> · Deadline · Pembrook discovery responses</span>
+      </div>
+
+      <div class="cols3">
+        <!-- TODAY -->
+        <div>
+          <div class="bar tall"><h2>Today</h2><span class="count">6</span><span class="note">3 consults · 1 court setting</span><span class="r">Calendar &rarr;</span></div>
+          <div class="card clip">
+            <div class="trow">
+              <span class="time hot"><b>8:30</b><small>AM</small></span>
+              <div class="grow">
+                <p class="nm"><b class="trunc">Renee Odell</b><span class="chip amber">Conflict check pending</span></p>
+                <p class="what">Phone consult · Criminal defense</p>
+                <p class="ln"><svg class="i s35"><use href="#phone"/></svg>Phone<span class="dotsep">·</span><svg class="i s35"><use href="#user"/></svg>Daniel Vane</p>
+              </div>
+            </div>
+            <div class="trow">
+              <span class="time"><b>9:00</b><small>AM</small></span>
+              <div class="grow">
+                <p class="nm"><b class="trunc">Elliot Maddox</b><span class="chip">Confirmed</span></p>
+                <p class="what">Court setting · Criminal defense</p>
+                <p class="ln"><svg class="i s35"><use href="#building-library"/></svg>Collin County Courthouse<span class="dotsep">·</span><svg class="i s35"><use href="#user"/></svg>Grace Holloway</p>
+              </div>
+            </div>
+            <div class="trow">
+              <span class="time"><b>11:30</b><small>AM</small></span>
+              <div class="grow">
+                <p class="nm"><b class="trunc">Marcus Wheatley</b><span class="chip green">Cleared</span></p>
+                <p class="what">Consult · Estate planning: Will &amp; trust</p>
+                <p class="ln"><svg class="i s35"><use href="#building-office"/></svg>Office, Room B<span class="dotsep">·</span><svg class="i s35"><use href="#user"/></svg>Grace Holloway</p>
+              </div>
+            </div>
+            <div class="trow">
+              <span class="time"><b>1:00</b><small>PM</small></span>
+              <div class="grow">
+                <p class="nm"><b class="trunc">Dana Pembrook</b><span class="chip">Confirmed</span></p>
+                <p class="what">Mediation prep call · Family law: Divorce</p>
+                <p class="ln"><svg class="i s35"><use href="#phone"/></svg>Phone<span class="dotsep">·</span><svg class="i s35"><use href="#user"/></svg>Grace Holloway</p>
+              </div>
+            </div>
+            <div class="trow">
+              <span class="time"><b>2:00</b><small>PM</small></span>
+              <div class="grow">
+                <p class="nm"><b class="trunc">Celia Ward</b><span class="chip">Confirmed</span></p>
+                <p class="what">Client meeting · Estate planning: Probate</p>
+                <p class="ln"><svg class="i s35"><use href="#building-office"/></svg>Office, Room A<span class="dotsep">·</span><svg class="i s35"><use href="#user"/></svg>Daniel Vane</p>
+              </div>
+            </div>
+            <div class="trow">
+              <span class="time"><b>3:00</b><small>PM</small></span>
+              <div class="grow">
+                <p class="nm"><b class="trunc">Kayla Moreno</b><span class="chip amber">Conflict check pending</span></p>
+                <p class="what">Consult · Family law: Custody modification</p>
+                <p class="ln"><svg class="i s35"><use href="#video-camera"/></svg>Video<span class="dotsep">·</span><svg class="i s35"><use href="#user"/></svg>Grace Holloway</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW SINCE FRIDAY -->
+        <div>
+          <div class="bar tall"><h2>New since Friday</h2><span class="count">7</span><span class="r">Intake &rarr;</span></div>
+          <div class="card clip">
+            <div class="nrow">
+              <p class="l1"><b>(469) 555-0144</b><span class="pa">Unknown</span><span class="w">Fri 7:40 PM</span><span class="btn outline sm">Call back</span></p>
+              <p class="l2"><svg class="i s35"><use href="#phone-arrow-down-left"/></svg>Missed-call text-back<span class="chip amber">Replied: will call Monday</span></p>
+            </div>
+            <div class="nrow">
+              <p class="l1"><b>Hollis Grant</b><span class="pa">Family law</span><span class="w">Sat 2:15 PM</span></p>
+              <p class="l2"><svg class="i s35"><use href="#sparkles"/></svg>AI call<span class="chip green">Consult Wed 2:00 PM</span></p>
+            </div>
+            <div class="nrow">
+              <p class="l1"><b>Renee Odell</b><span class="pa">Criminal defense</span><span class="w">Sat 11:14 PM</span></p>
+              <p class="l2"><svg class="i s35"><use href="#sparkles"/></svg>AI call<span class="chip green">Phone consult Mon 8:30 AM</span></p>
+            </div>
+            <div class="nrow">
+              <p class="l1"><b>Kayla Moreno</b><span class="pa">Family law</span><span class="w">Sun 9:02 AM</span></p>
+              <p class="l2"><svg class="i s35"><use href="#chat-bubble-oval-left-ellipsis"/></svg>Website chat<span class="chip green">Consult Mon 3:00 PM</span></p>
+            </div>
+            <div class="nrow">
+              <p class="l1"><b>Terrence Vail</b><span class="pa">Criminal defense</span><span class="w">Sun 1:12 PM</span></p>
+              <p class="l2"><svg class="i s35"><use href="#sparkles"/></svg>AI call<span class="chip green">Consult Tue 4:00 PM</span></p>
+            </div>
+            <div class="nrow">
+              <p class="l1"><b>Gina Lockhart</b><span class="pa">Immigration</span><span class="w">Sun 6:48 PM</span></p>
+              <p class="l2"><svg class="i s35"><use href="#sparkles"/></svg>AI call<span class="chip muted">Not our practice area · referral list sent</span></p>
+            </div>
+            <div class="nrow">
+              <p class="l1"><b>Paul Dimas</b><span class="pa">Estate planning</span><span class="w">Sun 8:10 PM</span></p>
+              <p class="l2"><svg class="i s35"><use href="#globe-alt"/></svg>Website form<span class="chip amber">Tessa to call 9:00 AM</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEEDS YOU -->
+        <div>
+          <div class="bar tall"><h2>Needs you</h2><span class="count">4</span></div>
+          <div class="stack tight">
+            <div class="card attn">
+              <div class="hd"><span class="ic-box amber"><svg class="i s4"><use href="#shield-check"/></svg></span><span class="t">Clear conflict checks</span><span class="count-pill amber">2</span></div>
+              <p class="ln2">Renee Odell, Kayla Moreno · consults today · <a>Review</a></p>
+            </div>
+            <div class="card attn">
+              <div class="hd"><span class="ic-box amber"><svg class="i s4"><use href="#arrow-path"/></svg></span><span class="t">Prospects who haven't retained</span><span class="count-pill amber">3</span></div>
+              <p class="ln2">Brenda Coyle, Tomas Ibarra, Owen Pace · follow-ups today · <a>Open follow-ups</a></p>
+            </div>
+            <div class="card attn">
+              <div class="hd"><span class="ic-box green"><svg class="i s4"><use href="#star"/></svg></span><span class="t">New review</span><span class="stars">★★★★★</span></div>
+              <p class="ln2">Alicia Brandt · <a>Reply</a></p>
+            </div>
+            <div class="card attn">
+              <div class="hd"><span class="ic-box brand"><svg class="i s4"><use href="#phone-arrow-up-right"/></svg></span><span class="t">Call to return</span><span class="count-pill gray">1</span></div>
+              <p class="ln2">(469) 555-0144 · texted back Fri · <a>Call back</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg><span class="badge">1</span></span></aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout · Studio Marlowe Salon &amp; Spa</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .app { --sidebar: 240px; }
+  .nav { gap: 2px; }
+  .nav a { padding: 9px 12px; }
+  .nav .sec { padding: 12px 12px 3px; }
+  .crumb { margin-top: 2px; font-size: 14px; color: var(--on-em-dim); }
+  .crumb b { color: var(--on-em); font-weight: 500; }
+  .page { padding-top: 16px; }
+  .cols { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 16px; align-items: start; }
+  .tk-top { padding: 16px 20px 12px; border-bottom: 1px solid var(--line); }
+  .tk-top h2 { font-size: 18px; line-height: 24px; font-weight: 600; }
+  .tbl th { padding: 10px 20px; font-size: 11.5px; }
+  .tbl td { padding: 11px 20px; }
+  .tbl td .addon { font-size: 12px; color: var(--muted-2); }
+  .links { display: flex; gap: 18px; padding: 10px 20px; border-top: 1px solid var(--line); font-size: 13px; font-weight: 600; color: rgb(var(--b-600)); }
+  .links a { display: inline-flex; align-items: center; gap: 4px; }
+  .lower { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+  .lower > div { padding: 12px 20px 14px; }
+  .lower > div + div { border-left: 1px solid var(--line); }
+  .sect { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 4px; }
+  .sum-row { padding: 4px 0; font-size: 13.5px; }
+  .sum-row.total { font-size: 15px; margin-top: 4px; padding-top: 8px; }
+  .left-pay { display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px; padding: 10px 12px; border-radius: 10px; background: rgb(var(--b-500) / .09); }
+  .left-pay span { font-size: 14px; font-weight: 600; } .left-pay b { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tipchips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 6px; }
+  .tipchips a { border: 1px solid var(--line); border-radius: 10px; padding: 7px 0; text-align: center; font-size: 12px; color: var(--muted); background: var(--panel); }
+  .tipchips a b { display: block; font-size: 13.5px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .tipchips a.on { border-color: rgb(var(--b-500)); background: rgb(var(--b-500) / .1); box-shadow: 0 0 0 1px rgb(var(--b-500)); color: rgb(var(--b-700)); }
+  .tipchips a.on b { color: rgb(var(--b-700)); }
+  .split { display: flex; align-items: center; gap: 8px; padding: 5px 0; font-size: 13.5px; }
+  .split .pdot { width: 8px; height: 8px; border-radius: 999px; }
+  .split b { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .pay-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pay-opts a { border: 1px solid var(--line); border-radius: 12px; padding: 6px 12px; background: var(--panel); display: flex; gap: 10px; align-items: flex-start; }
+  .pay-opts a svg { color: var(--muted-2); margin-top: 1px; }
+  .pay-opts a b { display: block; font-size: 13.5px; font-weight: 600; }
+  .pay-opts a small { display: block; font-size: 11.5px; color: var(--muted-2); line-height: 15px; }
+  .pay-opts a.on { border-color: rgb(var(--b-500)); box-shadow: 0 0 0 1px rgb(var(--b-500)); background: rgb(var(--b-500) / .07); }
+  .pay-opts a.on svg { color: rgb(var(--b-600)); }
+  .amts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+  .btn.big { min-height: 50px; }
+  .fld { border: 1px solid var(--line); border-radius: 10px; padding: 6px 12px; background: var(--panel); }
+  .fld small { display: block; font-size: 11px; color: var(--muted-2); }
+  .fld b { font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .slotchips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+  .slotchips a { border: 1px solid var(--line); border-radius: 10px; padding: 6px 0; text-align: center; font-size: 13px; font-weight: 600; background: var(--panel); color: var(--ink-2); }
+  .slotchips a small { display: block; font-size: 11.5px; font-weight: 500; color: var(--muted-2); }
+  .card-h.sm { padding: 10px 16px; font-size: 14px; }
+  .btn[disabled] { opacity: .45; }
+  .arr { display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 14px; align-items: center; padding: 12px 18px; }
+  .arr .a { display: flex; gap: 10px; align-items: center; min-width: 0; }
+  .arr .time { width: 54px; padding: 6px 0; }
+  .arr .chip { margin-top: 3px; }
+  .ckd { width: 7px; height: 7px; border-radius: 999px; background: var(--amber); display: inline-block; }
+
+  .toast { position: fixed; right: 20px; bottom: 20px; width: 410px; z-index: 20; background: var(--panel); border-radius: 14px; border: 1px solid rgb(var(--b-500) / .3);
+    box-shadow: var(--shadow), 0 0 0 4px rgb(var(--b-500) / .08); padding: 12px 16px; display: flex; gap: 12px; align-items: flex-start; }
+  .ring { width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; background: rgb(var(--b-500) / .15); color: rgb(var(--b-700)); box-shadow: 0 0 0 5px rgb(var(--b-500) / .08); flex-shrink: 0; }
+</style>
+</head>
+<body class="t-salon-spa">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span>Studio Marlowe Salon &amp; Spa</span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <a class="on"><svg class="i"><use href="#credit-card"/></svg><span class="lbl">Checkout</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Clients</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">2</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span><span class="badge">1</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Pay</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">BC</span><div><b>Bree Castell</b><small>Front desk</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div>
+        <h1>Checkout</h1>
+        <p class="crumb">Checkout › <b>Olivia Grant · Fri 12/4</b></p>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="cols">
+        <!-- Ticket -->
+        <div>
+        <section class="card clip">
+          <div class="card-h">Ticket</div>
+          <div class="tk-top">
+            <div class="flex"><h2>Olivia Grant · (469) 555-0182</h2><span class="chip lg amber">Open</span></div>
+            <p class="sm muted" style="margin-top:2px">Appointment 9:00 AM to 12:15 PM with Harper Marlowe and Tess Navarro</p>
+          </div>
+          <table class="tbl">
+            <tr><th>What</th><th>Team</th><th class="num">Price</th></tr>
+            <tr><td>Balayage</td><td>Harper Marlowe</td><td class="num">$185.00</td></tr>
+            <tr><td>Toner</td><td>Harper Marlowe</td><td class="num">$35.00</td></tr>
+            <tr><td>Bond treatment <span class="addon">(add-on)</span></td><td>Harper Marlowe</td><td class="num">$30.00</td></tr>
+            <tr><td>Blowout finish</td><td>Tess Navarro</td><td class="num">$40.00</td></tr>
+          </table>
+          <div class="links"><a><svg class="i s4"><use href="#plus"/></svg>Add something else</a><a><svg class="i s4"><use href="#receipt-percent"/></svg>Discount</a></div>
+          <div class="lower">
+            <div>
+              <p class="sect">Totals</p>
+              <div class="sum-row"><span>Subtotal</span><b>$290.00</b></div>
+              <div class="sum-row"><span>Tax</span><b>$0.00</b></div>
+              <div class="sum-row total"><span>Total</span><b>$290.00</b></div>
+              <p class="sect" style="margin-top:12px">Payments</p>
+              <div class="sum-row"><span>Deposit · Online · Tue 11/24</span><b class="t-green">-$55.00</b></div>
+              <div class="left-pay"><span>Left to pay</span><b>$235.00</b></div>
+            </div>
+            <div>
+              <p class="sect">Tips</p>
+              <div class="tipchips">
+                <a>18%<b>$52.20</b></a><a class="on">20%<b>$58.00</b></a><a>25%<b>$72.50</b></a><a>Other<b>&nbsp;</b></a>
+              </div>
+              <p class="xs muted-2" style="margin-top:6px">Tips aren't part of the total.</p>
+              <p class="sect flex" style="margin-top:14px">Tip split<a class="sp t-brand" style="letter-spacing:0;text-transform:none;font-size:12.5px">Edit</a></p>
+              <div class="split"><span class="pdot" style="background:#7c3aed"></span>Harper Marlowe<b>$50.00</b></div>
+              <div class="split"><span class="pdot" style="background:#d97706"></span>Tess Navarro<b>$8.00</b></div>
+              <p class="xs muted-2" style="margin-top:4px">Split by each person's share of the services.</p>
+            </div>
+          </div>
+        </section>
+        <section class="card clip" style="margin-top:14px">
+          <div class="arr">
+            <p class="sect" style="margin:0;white-space:nowrap">Up next</p>
+            <div class="a"><span class="time hot"><b>12:30</b><small>PM</small></span><div><p class="fw6 sm">Natalie Salter</p><p class="xs muted">Bridal trial · Harper</p><span class="chip amber"><i class="ckd"></i>Checked in</span></div></div>
+            <div class="a"><span class="time"><b>12:30</b><small>PM</small></span><div><p class="fw6 sm">Kim Abbott</p><p class="xs muted">Blowout · Jade</p><span class="chip green">Confirmed</span></div></div>
+            <div class="a"><span class="time"><b>1:00</b><small>PM</small></span><div><p class="fw6 sm">Joy Hale</p><p class="xs muted">Gel fill · Camila</p><span class="chip" style="background: var(--panel);box-shadow:inset 0 0 0 1px var(--line-strong)">Booked</span></div></div>
+          </div>
+        </section>
+        </div>
+
+        <!-- Right column -->
+        <div class="stack" style="gap:14px">
+          <section class="card clip">
+            <div class="card-h sm">Take a payment</div>
+            <div class="card-b" style="padding:14px 16px">
+              <p class="sect">How they paid</p>
+              <div class="pay-opts">
+                <a><svg class="i s4"><use href="#device-tablet"/></svg><div><b>Card reader</b><small>Front desk reader · Ready</small></div></a>
+                <a class="on"><svg class="i s4"><use href="#credit-card"/></svg><div><b>Card on file</b><small>Visa •• 4417, saved 11/24</small></div></a>
+                <a><svg class="i s4"><use href="#banknotes"/></svg><div><b>Cash</b><small>Into the drawer</small></div></a>
+                <a><svg class="i s4"><use href="#ellipsis-horizontal-circle"/></svg><div><b>Other</b><small>Check or app</small></div></a>
+              </div>
+              <div class="amts">
+                <div class="fld"><small>Amount</small><b>$235.00</b></div>
+                <div class="fld"><small>Tip</small><b>$58.00</b></div>
+              </div>
+              <span class="btn primary big block">Take $293.00</span>
+            </div>
+          </section>
+
+          <section class="card clip">
+            <div class="card-h sm">Book next visit</div>
+            <div class="card-b" style="padding:10px 16px 12px">
+              <p class="sm"><b class="fw6">Balayage &amp; toner with Harper</b> <span class="muted">· usually every 10 weeks</span></p>
+              <div class="slotchips">
+                <a><small>Tue 2/9</small>9:00 AM</a><a><small>Fri 2/12</small>9:00 AM</a><a><small>Sat 2/13</small>10:00 AM</a>
+              </div>
+              <p class="xs fw6 t-brand" style="margin-top:8px">Pick another time</p>
+            </div>
+          </section>
+
+          <section class="card pad" style="padding:12px 16px">
+            <div class="flex"><p class="fw6 sm">Send receipt</p>
+              <span class="sp xs muted-2">After it's paid</span>
+              <span class="btn outline sm" disabled><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text</span>
+              <span class="btn outline sm" disabled><svg class="i s4"><use href="#envelope"/></svg>Email</span>
+            </div>
+            <p class="xs muted-2" style="margin-top:6px">A review request goes to Olivia by text after it's paid.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="toast">
+  <span class="ring"><svg class="i"><use href="#phone-arrow-down-left"/></svg></span>
+  <div class="grow">
+    <p class="xs fw6 t-brand">Incoming</p>
+    <p class="fw6" style="font-size:15px">Kim Abbott · (214) 555-0147</p>
+    <p class="xs muted">Next: Blowout today 12:30 PM with Jade</p>
+    <div class="flex mt-8"><span class="btn primary sm"><svg class="i s4"><use href="#phone"/></svg>Answer</span><span class="btn outline sm"><svg class="i s4"><use href="#sparkles"/></svg>Let the AI answer</span></div>
+  </div>
+</div>
+</body>
+</html>

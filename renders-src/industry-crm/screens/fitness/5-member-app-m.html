@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Larkspur Strength Club member app (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  /* Member app: the gym's own page in the fitness theme (same palette as the gym's CRM), not the staff app. */
+  body.cx { background: var(--cx-bg); color: var(--cx-ink); }
+  .cx .phone, .phone.cx, body.cx .phone { background: var(--cx-bg); padding-bottom: 84px; }
+  .top { display: flex; align-items: center; gap: 10px; padding: 14px 18px 6px; }
+  .top .cx-logo { width: 36px; height: 36px; border-radius: 10px; font-size: 13px; }
+  .top .gym { font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+  .top .gym svg { color: var(--cx-muted); }
+  .top .bell { margin-left: auto; width: 38px; height: 38px; border-radius: 999px; background: var(--cx-card); display: grid; place-items: center; color: var(--cx-ink-2); }
+  .body { padding: 6px 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: .14em; color: var(--accent); }
+  h1.hi { font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: -.02em; color: var(--cx-ink); margin-top: 2px; }
+  .dk { background: var(--cx-card); border: 1px solid var(--cx-line); border-radius: 18px; }
+  .next { padding: 16px; }
+  .next .hd { display: flex; align-items: center; }
+  .next .dt { font-size: 12px; font-weight: 600; letter-spacing: .1em; color: var(--cx-muted); }
+  .pill { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: var(--accent-soft); color: rgb(var(--b-700)); }
+  .next .bd { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+  .next .big { font-size: 34px; line-height: 38px; font-weight: 600; letter-spacing: -.02em; color: var(--cx-ink); font-variant-numeric: tabular-nums; }
+  .next .ty { font-size: 15px; font-weight: 500; color: var(--cx-ink-2); margin-top: 4px; }
+  .next .co { font-size: 14px; color: var(--cx-muted); margin-top: 2px; display: flex; align-items: center; gap: 6px; }
+  .next .chev { margin-left: auto; color: var(--cx-faint); }
+  .next .ft { display: flex; align-items: center; gap: 10px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--cx-line); font-size: 13px; color: var(--cx-muted); }
+  .next .ft svg { color: var(--cx-muted); }
+  .next .cancel { margin-left: auto; font-weight: 600; color: rgb(var(--b-700)); white-space: nowrap; }
+  .code { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+  .code .ib { width: 42px; height: 42px; border-radius: 12px; background: var(--accent-soft); display: grid; place-items: center; color: rgb(var(--b-700)); }
+  .code b { display: block; font-size: 15px; font-weight: 600; color: var(--cx-ink); }
+  .code small { font-size: 13px; color: var(--cx-muted); }
+  .code .chev { margin-left: auto; color: var(--cx-faint); }
+  .ct { padding: 4px 0; }
+  .ct .h { display: flex; align-items: center; padding: 12px 16px 6px; }
+  .ct .h b { font-size: 15px; font-weight: 600; color: var(--cx-ink); }
+  .ct .h span { margin-left: auto; font-size: 13px; font-weight: 600; color: rgb(var(--b-700)); }
+  .cr { display: flex; align-items: center; gap: 10px; padding: 8px 14px; }
+  .cr + .cr { border-top: 1px solid var(--cx-line); }
+  .cr .tm { width: 50px; font-size: 14px; font-weight: 600; color: var(--cx-ink); font-variant-numeric: tabular-nums; }
+  .cr .tm small { display: block; font-size: 11px; font-weight: 500; color: var(--cx-muted); }
+  .cr .nm { flex: 1; min-width: 0; font-size: 14.5px; font-weight: 500; color: var(--cx-ink); line-height: 19px; }
+  .cr .nm small { display: block; font-size: 12.5px; color: var(--cx-muted); font-weight: 400; }
+  .cr .sp-l { font-size: 12px; color: var(--cx-muted); text-align: right; line-height: 16px; margin-right: 2px; white-space: nowrap; }
+  .cr .sp-l.low { color: var(--amber); }
+  .book { height: 34px; padding: 0 12px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 13.5px; font-weight: 600; display: grid; place-items: center; }
+  .memb { display: flex; align-items: center; gap: 8px; justify-content: center; font-size: 12.5px; color: var(--cx-muted); padding: 2px 0; }
+  .memb .dot { background: var(--green); }
+  .mtabs { position: fixed; left: 0; right: 0; bottom: 0; height: 68px; display: flex; align-items: center; background: var(--cx-card); border-top: 1px solid var(--cx-line); z-index: 10; }
+  .mtabs a { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; font-weight: 500; color: var(--cx-muted); }
+  .mtabs a.on { color: var(--accent); }
+  .mtabs .start { width: 52px; height: 52px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; margin-top: -22px; box-shadow: 0 6px 18px rgb(var(--b-500) / .45), 0 0 0 5px var(--cx-bg); }
+</style>
+</head>
+<body class="cx t-fitness">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <header class="top">
+    <span class="cx-logo">LS</span>
+    <p class="gym">Larkspur Strength Club<svg class="i s4"><use href="#chevron-down"/></svg></p>
+    <span class="bell"><svg class="i"><use href="#bell"/></svg></span>
+  </header>
+
+  <div class="body">
+    <div>
+      <p class="eyebrow">TODAY</p>
+      <h1 class="hi">Good morning, Deja</h1>
+    </div>
+
+    <div class="dk next">
+      <div class="hd"><span class="dt">YOUR NEXT CLASS · TUE 1 DEC</span><span class="pill"><svg class="i s35"><use href="#check"/></svg>Booked</span></div>
+      <div class="bd">
+        <div>
+          <p class="big">5:30 PM</p>
+          <p class="ty">Strength &amp; Conditioning · 60 min</p>
+          <p class="co"><svg class="i s4"><use href="#user"/></svg>Coach Dez</p>
+        </div>
+        <svg class="i chev"><use href="#chevron-right"/></svg>
+      </div>
+      <div class="ft"><svg class="i s4"><use href="#chat-bubble-left"/></svg><span>We'll text you a reminder at 3:30&nbsp;PM.</span><span class="cancel">Cancel booking</span></div>
+    </div>
+
+    <div class="dk code">
+      <span class="ib"><svg class="i s6"><use href="#qr-code"/></svg></span>
+      <div><b>Check-in code</b><small>Show this at the front desk</small></div>
+      <svg class="i chev"><use href="#chevron-right"/></svg>
+    </div>
+
+    <div class="dk ct">
+      <div class="h"><b>Classes today</b><span>See the week</span></div>
+      <div class="cr"><p class="tm">9:00<small>AM</small></p><p class="nm">Mobility<small>Coach Erin</small></p><p class="sp-l">13 spots left</p><span class="book">Book</span></div>
+      <div class="cr"><p class="tm">12:00<small>PM</small></p><p class="nm">HIIT 45<small>Coach Erin</small></p><p class="sp-l">5 spots left</p><span class="book">Book</span></div>
+      <div class="cr"><p class="tm">4:30<small>PM</small></p><p class="nm">Barbell Club<small>Coach Malik</small></p><p class="sp-l low">3 spots left</p><span class="book">Book</span></div>
+      <div class="cr"><p class="tm">6:30<small>PM</small></p><p class="nm">HIIT 45<small>Coach Dez</small></p><p class="sp-l">4 spots left</p><span class="book">Book</span></div>
+    </div>
+
+    <p class="memb"><span class="dot"></span>Unlimited classes · Paid through Dec 14</p>
+  </div>
+
+  <nav class="mtabs">
+    <a class="on"><svg class="i s6"><use href="#home"/></svg>Today</a>
+    <a><svg class="i s6"><use href="#chart-bar"/></svg>Train</a>
+    <a><span class="start"><svg class="i s6"><use href="#plus"/></svg></span>Start</a>
+    <a><svg class="i s6"><use href="#calendar-days"/></svg>Classes</a>
+    <a><svg class="i s6"><use href="#user-circle"/></svg>You</a>
+  </nav>
+</div>
+</body>
+</html>

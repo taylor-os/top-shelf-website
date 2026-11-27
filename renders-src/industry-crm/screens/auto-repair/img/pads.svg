@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="bench" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a6e73"/><stop offset="1" stop-color="#383b3f"/></linearGradient>
+<linearGradient id="plate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5e62"/><stop offset=".45" stop-color="#3a3d41"/><stop offset="1" stop-color="#232528"/></linearGradient>
+<linearGradient id="fric" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a423b"/><stop offset="1" stop-color="#2a2521"/></linearGradient>
+<linearGradient id="face" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b625a"/><stop offset="1" stop-color="#554d46"/></linearGradient>
+<linearGradient id="rule" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9dcdf"/><stop offset="1" stop-color="#a9adb1"/></linearGradient>
+<radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+<filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="2"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0"/></filter>
+<filter id="grit"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="8"/><feColorMatrix values="0 0 0 0 .1  0 0 0 0 .08  0 0 0 0 .06  0 0 0 1.6 -.5"/></filter>
+<filter id="sh" x="-20%" y="-100%" width="140%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+<clipPath id="fw"><path d="M60 158 L180 158 L186 166 L54 166 Z"/></clipPath>
+<clipPath id="fn"><path d="M236 124 L372 124 L382 166 L226 166 Z"/></clipPath>
+</defs>
+<rect width="400" height="300" fill="url(#bench)"/>
+<g stroke="#2b2e31" stroke-width="2" opacity=".45"><path d="M0 52 H400"/><path d="M0 278 H400"/></g>
+<!-- shadows -->
+<ellipse cx="120" cy="184" rx="96" ry="8" fill="#000" opacity=".5" filter="url(#sh)"/>
+<ellipse cx="302" cy="184" rx="98" ry="8" fill="#000" opacity=".5" filter="url(#sh)"/>
+
+<!-- WORN pad (left): steel backing plate with ears, very thin friction -->
+<path d="M28 168 h14 v-2 h156 v2 h14 v8 h-14 v4 h-156 v-4 h-14 z" fill="url(#plate)"/>
+<circle cx="35" cy="172" r="2.6" fill="#141516"/><circle cx="205" cy="172" r="2.6" fill="#141516"/>
+<path d="M42 166 h156" stroke="#7c8186" stroke-width="1"/>
+<path d="M60 158 L180 158 L186 166 L54 166 Z" fill="url(#fric)"/>
+<g clip-path="url(#fw)"><rect width="400" height="300" filter="url(#grit)" opacity=".8"/></g>
+<path d="M66 150 L174 150 L180 158 L60 158 Z" fill="url(#face)" opacity=".9"/>
+<path d="M118 150 L122 150 L123 158 L117 158 Z" fill="#2a2521"/>
+
+<!-- NEW pad (right): same plate, thick friction -->
+<path d="M210 168 h14 v-2 h156 v2 h14 v8 h-14 v4 h-156 v-4 h-14 z" fill="url(#plate)"/>
+<circle cx="217" cy="172" r="2.6" fill="#141516"/><circle cx="387" cy="172" r="2.6" fill="#141516"/>
+<path d="M224 166 h156" stroke="#7c8186" stroke-width="1"/>
+<path d="M236 124 L372 124 L382 166 L226 166 Z" fill="url(#fric)"/>
+<g clip-path="url(#fn)"><rect width="400" height="300" filter="url(#grit)" opacity=".8"/></g>
+<path d="M242 114 L366 114 L372 124 L236 124 Z" fill="url(#face)"/>
+<path d="M302 114 L306 114 L307 166 L301 166 Z" fill="#221e1b" opacity=".85"/>
+
+<!-- millimetre steel rule -->
+<g transform="rotate(-2 200 228)">
+<rect x="34" y="214" width="332" height="26" rx="2" fill="url(#rule)"/>
+<g stroke="#1a1a1a" stroke-width=".9">
+<path d="M44 214v5M48 214v5M52 214v5M56 214v5M60 214v9M64 214v5M68 214v5M72 214v5M76 214v5M80 214v12M84 214v5M88 214v5M92 214v5M96 214v5M100 214v9M104 214v5M108 214v5M112 214v5M116 214v5M120 214v12M124 214v5M128 214v5M132 214v5M136 214v5M140 214v9M144 214v5M148 214v5M152 214v5M156 214v5M160 214v12M164 214v5M168 214v5M172 214v5M176 214v5M180 214v9M184 214v5M188 214v5M192 214v5M196 214v5M200 214v12M204 214v5M208 214v5M212 214v5M216 214v5M220 214v9M224 214v5M228 214v5M232 214v5M236 214v5M240 214v12M244 214v5M248 214v5M252 214v5M256 214v5M260 214v9M264 214v5M268 214v5M272 214v5M276 214v5M280 214v12M284 214v5M288 214v5M292 214v5M296 214v5M300 214v9M304 214v5M308 214v5M312 214v5M316 214v5M320 214v12M324 214v5M328 214v5M332 214v5M336 214v5M340 214v9M344 214v5M348 214v5M352 214v5"/></g>
+<g font-family="Arial" font-size="8" font-weight="700" fill="#1a1a1a"><text x="76" y="236">10</text><text x="116" y="236">20</text><text x="156" y="236">30</text><text x="196" y="236">40</text><text x="236" y="236">50</text><text x="276" y="236">60</text><text x="316" y="236">70</text><text x="352" y="236">mm</text></g>
+</g>
+<rect width="400" height="300" filter="url(#n)" opacity=".18"/>
+<rect width="400" height="300" fill="url(#vig)"/>
+</svg>

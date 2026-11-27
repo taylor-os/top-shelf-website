@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listings · Elena Marsh Real Estate</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .side .brand small { display:block; font-size:11.5px; font-weight:400; color:var(--on-em-faint); }
+  .nav { gap:2px; }
+  .nav a { padding:8px 12px; }
+  .nav .sec { padding:12px 12px 2px; }
+  .live { margin:0 12px 10px; padding:10px 12px; border-radius:12px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.14); font-size:12px; color:var(--on-em-dim); }
+  .live b { display:flex; align-items:center; gap:6px; color:var(--on-em); font-size:13px; font-weight:600; }
+  .live b i { width:8px; height:8px; border-radius:999px; background:var(--nav-on-ink); box-shadow:0 0 0 3px rgba(255,255,255,.14); }
+  .side-user { padding:12px 16px; }
+
+  .band { align-items:center; padding:12px 28px; }
+  .search { width:380px; height:38px; border-radius:10px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); display:flex; align-items:center; gap:8px; padding:0 12px; color:var(--on-em-faint); font-size:13.5px; }
+  .band .btn.sm { min-height:36px; }
+
+  .page { padding:14px 28px 0; }
+  .title-row { display:flex; align-items:flex-start; gap:16px; }
+  .title-row h1 { font-size:28px; font-weight:600; letter-spacing:-.02em; line-height:1.15; color:var(--ink); }
+  .title-row .s1 { margin-top:4px; font-size:15px; color:var(--muted); }
+  .title-row .s2 { margin-top:2px; font-size:14px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; }
+  .title-row .s2 a { text-decoration:underline; text-underline-offset:3px; color:rgb(var(--b-700)); display:inline-flex; align-items:center; gap:4px; }
+  .title-row .acts { margin-left:auto; display:flex; gap:8px; }
+  .btn.mid { min-height:38px; padding:8px 14px; }
+
+  .ok { margin-top:12px; display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:12px; background:var(--green-soft); border:1px solid color-mix(in srgb, var(--green) 35%, transparent); color:var(--green-ink); font-size:14px; }
+  .ok > svg { color:var(--green); }
+  .ok .grow b { font-weight:600; }
+  .ok .btn { min-height:34px; padding:6px 12px; font-size:13px; }
+
+  .tiles { margin:12px 0; gap:12px; }
+  .tile { padding:10px 16px; display:flex; align-items:center; gap:14px; }
+  .tile .v { margin:0; font-size:26px; line-height:1; min-width:52px; }
+  .tile .l { font-size:13px; font-weight:600; color:var(--ink); }
+  .tile .s { margin-top:1px; }
+
+  .ptabs { display:flex; gap:6px; margin-bottom:10px; }
+  .ptabs a { padding:5px 13px; border-radius:999px; font-size:13px; font-weight:500; color:var(--ink-2); background:var(--panel); border:1px solid var(--line); }
+  .ptabs a.on { background:var(--grad-2); border-color:var(--grad-2); color:var(--on-accent); font-weight:600; }
+
+  .tbl { font-size:13px; }
+  .tbl th { padding:9px 10px; font-size:11px; line-height:1.25; }
+  .tbl td { padding:11px 10px; vertical-align:middle; line-height:1.3; }
+  .tbl th:first-child, .tbl td:first-child { padding-left:14px; }
+  .tbl tr.hl td { background:rgb(var(--b-500) / .07); }
+  .lst { display:flex; gap:10px; align-items:center; }
+  .lst img, .lst .noph { width:64px; height:48px; border-radius:8px; object-fit:cover; flex-shrink:0; }
+  .lst .noph { background:linear-gradient(160deg,rgb(var(--b-100)),rgb(var(--b-200))); display:grid; place-items:center; color:var(--muted-2); }
+  .lst b { font-weight:600; font-size:13.5px; display:block; }
+  .tbl .sub { font-size:12px; color:var(--muted-2); }
+  .pr { font-weight:600; font-size:14px; }
+  .was { display:block; font-size:11.5px; color:var(--green-ink); font-weight:500; }
+  .web { display:inline-flex; align-items:baseline; gap:5px; font-weight:600; font-size:12.5px; }
+  .web i { width:7px; height:7px; border-radius:999px; display:inline-block; }
+  .chip.dark { background:var(--ink); color:var(--panel); }
+  .slim { margin-top:10px; display:flex; align-items:center; gap:10px; padding:9px 14px; font-size:13.5px; color:var(--ink-2); }
+  .slim svg { color:rgb(var(--b-600)); }
+</style>
+</head>
+<body class="t-real-estate">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">EM</span><span>Elena Marsh Real Estate<small>Realtor CRM</small></span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a class="on"><svg class="i"><use href="#home-modern"/></svg><span class="lbl">Listings</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Contacts</span></a>
+      <a><svg class="i"><use href="#funnel"/></svg><span class="lbl">Pipeline</span></a>
+      <a><svg class="i"><use href="#document-check"/></svg><span class="lbl">Deals</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <a><svg class="i"><use href="#globe-alt"/></svg><span class="lbl">Website leads</span><span class="badge">1</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+    </nav>
+    <div class="live"><b><i></i>Website is live</b>5 listings showing · published 7:42 AM</div>
+    <div class="side-foot"><a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a><span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span></div>
+    <div class="side-user"><span class="av">EM</span><div><b>Elena Marsh</b><small>Owner</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Name, street or phone number</span>
+      <div class="right">
+        <span class="btn sm"><svg class="i s4"><use href="#user-plus"/></svg>New contact</span>
+        <span class="btn primary sm"><svg class="i s4"><use href="#phone-arrow-up-right"/></svg>Log a call</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="title-row">
+        <div>
+          <h1>Listings</h1>
+          <p class="s1">Statuses match MLS. Each one shows a plain label on your website. Drafts stay private until you publish.</p>
+          <p class="s2"><span class="dot green" style="width:8px;height:8px"></span>Website is live: 5 listings on your website · <a>last published Tue Oct 20 at 7:42 AM<svg class="i s35"><use href="#arrow-top-right-on-square"/></svg></a></p>
+        </div>
+        <div class="acts">
+          <span class="btn outline mid"><svg class="i s4"><use href="#arrow-down-tray"/></svg>Import from MLS</span>
+          <span class="btn primary mid"><svg class="i s4"><use href="#plus"/></svg>Add listing</span>
+        </div>
+      </div>
+
+      <div class="ok">
+        <svg class="i s6"><use href="#check-circle"/></svg>
+        <p class="grow"><b>Saved and published.</b> 9032 Mesquite Hollow Dr (sample) now shows $535,000 on your website. "Update MLS: price change" is on your Today list.</p>
+        <span class="btn outline"><svg class="i s4"><use href="#arrow-top-right-on-square"/></svg>View on your website</span>
+        <span class="btn primary"><svg class="i s4"><use href="#paper-airplane"/></svg>Send Carol this week's update</span>
+      </div>
+
+      <section class="tiles" style="--n:3">
+        <div class="tile"><p class="v">642</p><div><p class="l">Website views, 7 days</p><p class="s">Most views: 9032 Mesquite Hollow Dr</p></div></div>
+        <div class="tile"><p class="v">12</p><div><p class="l">Average days on market</p><p class="s">Across your last 6 listings</p></div></div>
+        <div class="tile"><p class="v">9</p><div><p class="l">Questions from your website, this week</p><p class="s" style="font-weight:600;color:var(--amber-ink)">1 waiting for a reply</p></div></div>
+      </section>
+
+      <nav class="ptabs"><a class="on">All (5)</a><a>Coming soon (1)</a><a>Active (2)</a><a>Under contract (1)</a><a>Sold (1)</a><a>Off market (0)</a><a>Drafts (0)</a></nav>
+
+      <div class="card clip">
+        <table class="tbl" style="table-layout:fixed">
+          <colgroup><col style="width:316px"><col style="width:122px"><col style="width:146px"><col style="width:100px"><col style="width:132px"><col style="width:158px"><col style="width:104px"><col style="width:40px"></colgroup>
+          <thead><tr><th>Listing</th><th>Price</th><th>MLS status</th><th>Bd · Ba<br>Sq ft</th><th>Days on market</th><th>On your website</th><th class="num">Questions ·<br>Showings <span style="text-transform:none;letter-spacing:0">(30 days)</span></th><th></th></tr></thead>
+          <tbody>
+            <tr class="hl">
+              <td><div class="lst"><img src="img/home3.jpg" alt=""><div><b>9032 Mesquite Hollow Dr (sample)</b><span class="sub">Cedar Ridge · Seller: Carol Mabry</span><span class="sub">Elena Marsh</span></div></div></td>
+              <td><span class="pr">$535,000</span><span class="was">was $549,000 · changed today</span></td>
+              <td><span class="chip green">Active</span></td>
+              <td>3 · 2 · 2,212</td>
+              <td>16 days<span class="sub">Listing agreement ends Mar 31, 2027</span></td>
+              <td><span class="web t-green"><i style="background:var(--green)"></i>For sale</span><span class="sub">Updated today 7:42 AM</span></td>
+              <td class="num">5 / 6</td><td class="act">Edit</td>
+            </tr>
+            <tr>
+              <td><div class="lst"><img src="img/home1.jpg" alt=""><div><b>4217 Quail Haven Ct (sample)</b><span class="sub">Prosper · Sellers: Dan &amp; Judy Ostrowski</span><span class="sub">Elena Marsh</span></div></div></td>
+              <td><span class="pr">$639,900</span></td>
+              <td><span class="chip green">Active</span></td>
+              <td>3 · 2.5 · 2,846</td>
+              <td>9 days<span class="sub">Ends Apr 2, 2027</span></td>
+              <td><span class="web t-green"><i style="background:var(--green)"></i>For sale</span><span class="sub">Updated Oct 16</span></td>
+              <td class="num">3 / 4</td><td class="act">Edit</td>
+            </tr>
+            <tr>
+              <td><div class="lst"><img src="img/home2.jpg" alt=""><div><b>1180 Prairie Clover Ln (sample)</b><span class="sub">Aubrey · Sellers: Greg &amp; Tina Sorensen</span><span class="sub">Elena Marsh</span></div></div></td>
+              <td><span class="pr">$612,500</span></td>
+              <td><span class="chip amber">Active Option Contract</span><span class="sub" style="font-weight:600;color:var(--red)">Option ends Wed 10/21, 5:00 PM</span></td>
+              <td>3 · 3 · 2,540</td>
+              <td>11 days<span class="sub">Ends Feb 15, 2027</span></td>
+              <td><span class="web t-amber"><i style="background:var(--amber)"></i>Under contract, accepting backups</span><span class="sub">Updated Oct 14</span></td>
+              <td class="num">7 / 9</td><td class="act">Edit</td>
+            </tr>
+            <tr>
+              <td><div class="lst"><img src="img/living.jpg" alt=""><div><b>2318 Bluestem Trl (sample)</b><span class="sub">Denton · Sellers: Harold &amp; Bev Lindqvist</span><span class="sub">Marcus Bell</span></div></div></td>
+              <td><span class="pr">$389,000</span></td>
+              <td><span class="chip blue">Coming Soon</span></td>
+              <td>3 · 2 · 1,764</td>
+              <td>Not on market yet<span class="sub">Ends May 8, 2027</span></td>
+              <td><span class="web" style="color:var(--blue-ink)"><i style="background:var(--blue)"></i>Coming soon</span><span class="sub">Updated Oct 19</span></td>
+              <td class="num">2 / 0</td><td class="act">Edit</td>
+            </tr>
+            <tr>
+              <td><div class="lst"><img src="img/kitchen.jpg" alt=""><div><b>1412 Quarry Bend (sample)</b><span class="sub">Denton · Sellers: Bill &amp; Joan Hartley</span><span class="sub">Elena Marsh</span></div></div></td>
+              <td><span class="pr">$402,000</span><span class="sub">sold Oct 16, 2026</span></td>
+              <td><span class="chip dark">Sold</span></td>
+              <td>4 · 2 · 2,105</td>
+              <td>21 days</td>
+              <td><span class="web" style="color:var(--ink-2)"><i style="background:var(--ink)"></i>Sold</span><span class="sub">Price not shown</span></td>
+              <td class="num">4 / 11</td><td class="act">Edit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card slim"><svg class="i s4"><use href="#calendar-days"/></svg><p><b>Coming up:</b> Price review Friday with Dan &amp; Judy Ostrowski (4217 Quail Haven). After any price change, Save &amp; publish updates your website; MLS you update yourself.</p></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

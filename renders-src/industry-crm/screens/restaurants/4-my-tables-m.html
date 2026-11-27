@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My tables · Wrenfield Kitchen &amp; Bar (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .m-bar { min-height: 60px; }
+  .m-bar .av { background: rgba(255,255,255,.18); color: var(--on-em); }
+  .sumline { display: flex; align-items: center; gap: 8px; padding: 10px 16px; font-size: 13px; color: var(--ink-2); background: var(--panel); border-bottom: 1px solid var(--line); }
+  .sumline b { font-weight: 600; }
+  .list { padding: 10px 12px 0; display: flex; flex-direction: column; gap: 8px; }
+  .tc { background: var(--panel); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; border: 1px solid var(--line); }
+  .tc .hd { display: flex; align-items: center; gap: 8px; padding: 10px 14px 0; }
+  .tc .tn { font-size: 17px; font-weight: 600; color: var(--ink); }
+  .tc .tn small { font-size: 13px; font-weight: 500; color: var(--muted-2); }
+  .tc .who { padding: 2px 14px 0; font-size: 15.5px; font-weight: 600; color: var(--ink); display: flex; align-items: baseline; gap: 4px; }
+  .tc .who .an { margin-left: auto; font-size: 12.5px; color: rgb(var(--b-600)); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; align-self: center; }
+  .tc .who small { font-weight: 500; color: var(--muted); font-size: 14px; }
+  .tc .chips { justify-content: flex-start; padding: 6px 14px 0; gap: 5px; }
+  .tc .chip { font-size: 11.5px; padding: 3px 10px; }
+  .tc { padding-bottom: 11px; }
+  .tc .nt { margin: 7px 14px 0; font-size: 13.5px; line-height: 1.4; color: var(--ink-2); }
+  .tc .ft { display: flex; align-items: center; padding: 6px 14px 10px; font-size: 12.5px; }
+  .tc .ft a { margin-left: auto; color: rgb(var(--b-600)); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+  .tc.res { border-left: 4px solid var(--amber); }
+  .tc.seat { border-left: 4px solid var(--green); }
+  .tc.open { border: 1px dashed var(--muted-2); box-shadow: none; background: var(--panel); }
+  .allergy { display: flex; align-items: center; gap: 8px; background: var(--badge); color: var(--badge-ink); padding: 9px 14px; font-size: 14.5px; font-weight: 600; letter-spacing: .01em; }
+  .tc.compact .hd { padding-bottom: 0; }
+  .later { margin: 2px 4px 0; font-size: 12.5px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+</style>
+</head>
+<body class="t-restaurants">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <p class="t">My tables<small>Section 3 · Fri Dec 4 · 6:50 PM</small></p>
+    <span class="av sm">JP</span>
+  </div>
+  <div class="sumline"><svg class="i s4" style="color:rgb(var(--b-600))"><use href="#squares-2x2"/></svg><span><b>5 tables</b> · 22 covers booked in your section tonight</span></div>
+
+  <div class="list">
+    <div class="tc res">
+      <div class="hd"><span class="tn">T12 <small>· Booth</small></span><span class="chip amber sp">Reserved 7:00</span></div>
+      <p class="who">Tessa &amp; Mark Weller <small>· 2</small><a class="an"><svg class="i s35"><use href="#pencil-square"/></svg>Add note</a></p>
+      <div class="chips"><span class="chip amber"><svg class="i s3"><use href="#heart"/></svg>Anniversary</span><span class="chip green">Regular · 14 visits</span></div>
+      <p class="nt">11th anniversary. Booth 12 every time. Mark: no cilantro. Tessa: sparkling water, lime. Dessert with a candle on the house (Marisol).</p>
+    </div>
+
+    <div class="tc res">
+      <div class="allergy"><svg class="i s4"><use href="#exclamation-triangle"/></svg>ALLERGY: tree nut (1 guest)</div>
+      <div class="hd"><span class="tn">T16 <small>· Round</small></span><span class="chip amber sp">Reserved 7:30</span></div>
+      <p class="who">Nate Winfield <small>· 6</small><a class="an"><svg class="i s35"><use href="#pencil-square"/></svg>Add note</a></p>
+      <div class="chips"><span class="chip blue">New guest</span></div>
+      <p class="nt">Celebrating a friend's promotion. Booked by phone.</p>
+    </div>
+
+    <div class="tc seat">
+      <div class="hd"><span class="tn">T13 <small>· Booth</small></span><span class="chip green sp">Seated 6:34</span></div>
+      <p class="who">Sofia Dalby <small>· 4</small><a class="an"><svg class="i s35"><use href="#pencil-square"/></svg>Add note</a></p>
+      <div class="chips"><span class="chip brand">First visit</span><span class="nt" style="margin:0 0 0 4px;font-size:13px">Found us on Google.</span></div>
+    </div>
+
+    <div class="tc seat">
+      <div class="hd"><span class="tn">T14 <small>· Booth</small></span><span class="chip green sp">Seated 5:32</span></div>
+      <p class="who">Walk-in <small>· 4</small><a class="an"><svg class="i s35"><use href="#pencil-square"/></svg>Add note</a></p>
+      <p class="nt muted-2" style="color:var(--muted-2)">No notes</p>
+    </div>
+
+    <div class="tc open">
+      <div class="hd"><span class="tn">T15</span><span class="chip">Open</span><span class="xs muted-2 sp">Next: 8:15 · Ben &amp; Ava Torres · 2</span></div>
+    </div>
+
+    <p class="later"><svg class="i s35"><use href="#clock"/></svg>Later: 8:30 T14 (4) · 8:45 T13 (4)</p>
+  </div>
+
+  <nav class="tabs">
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#squares-2x2"/></svg></span>My tables</a>
+    <a><span class="ic"><svg class="i s6"><use href="#moon"/></svg></span>Tonight</a>
+    <a><span class="ic"><svg class="i s6"><use href="#users"/></svg></span>Guests</a>
+    <a><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

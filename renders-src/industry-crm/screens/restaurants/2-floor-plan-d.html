@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floor plan · Wrenfield Kitchen &amp; Bar</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .band { align-items: center; padding: 14px 24px; }
+  .counts { display: flex; align-items: center; gap: 0; font-size: 14px; color: var(--on-em-dim); }
+  .counts > span { padding: 0 16px; border-left: 1px solid var(--em-line); line-height: 1.25; }
+  .counts > span:first-child { padding-left: 0; border-left: 0; }
+  .counts b { display: block; color: var(--on-em); font-size: 17px; font-weight: 600; }
+  .counts small { display: block; font-size: 12px; }
+  .page { padding: 14px 20px; display: flex; gap: 16px; align-items: flex-start; }
+
+  /* floor plan */
+  .fp { width: 724px; flex-shrink: 0; padding: 12px; }
+  .fp .legend { margin: 0 2px 8px; }
+  .legend i { border-radius: 4px; }
+  .plan { position: relative; width: 700px; height: 728px; border-radius: 10px;
+    background-image: radial-gradient(var(--line) 1px, transparent 1px); background-size: 18px 18px; }
+  .zn { position: absolute; border-radius: 12px; background: var(--panel-2); border: 1px solid var(--line); }
+  .zn > p { position: absolute; left: 12px; top: 7px; font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted-2); }
+  .zn > p b { color: var(--ink-2); font-weight: 600; }
+  .t { position: absolute; border: 2px solid; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; font-size: 11.5px; line-height: 1.25; color: var(--muted); padding: 4px; }
+  .t b { font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.1; }
+  .t i { position: absolute; top: 4px; right: 7px; font-style: normal; font-size: 10px; font-weight: 600; color: var(--muted-2); }
+  .t .nm { font-weight: 600; color: var(--ink-2); }
+  .t.rd { border-radius: 999px; }
+  .t.open { background: var(--panel); border-color: var(--muted-2); border-style: dashed; }
+  .t.open .st { color: var(--ink); font-weight: 600; }
+  .t.res { background: var(--panel); border-color: var(--amber); }
+  .t.res .st { color: var(--amber-ink); font-weight: 600; }
+  .t.seat { background: var(--green-soft); border-color: var(--green); }
+  .t.seat .st { color: var(--green-ink); }
+  .t.clr { background: var(--hatch); border-color: var(--line-strong); }
+  .t.sel { box-shadow: 0 0 0 4px rgb(var(--b-500) / .45); border-width: 3px; border-color: rgb(var(--b-600)); }
+  .ad { display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: var(--badge); margin-left: 3px; vertical-align: 1px; box-shadow: 0 0 0 2px var(--red-soft); }
+  .t svg { vertical-align: -2px; }
+  .counter { position: absolute; border-radius: 10px; background: var(--hatch); border: 1px solid var(--line-strong); display: grid; place-items: center;
+    font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+  .stools { position: absolute; display: flex; gap: 5px; }
+  .stools span { width: 16px; height: 16px; border-radius: 999px; background: var(--green); }
+  .stools span.o { background: var(--panel); border: 2px dashed var(--muted-2); }
+  .entry { position: absolute; font-size: 11px; color: var(--muted-2); display: flex; align-items: center; gap: 6px; border: 1px dashed var(--line-strong); border-radius: 10px; padding: 8px 10px; background: var(--panel); }
+  .larder { background: rgb(var(--b-500) / .07); border: 2px solid rgb(var(--b-500)); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; text-align: center; }
+  .larder .lab { position: absolute; left: 12px; bottom: 9px; font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgb(var(--b-700)); }
+  .larder .who { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .larder .sm2 { font-size: 12.5px; color: var(--muted); }
+  .prog { width: 160px; height: 8px; border-radius: 999px; background: rgb(var(--b-500) / .15); overflow: hidden; margin-top: 4px; }
+  .prog span { display: block; height: 100%; width: 27%; background: rgb(var(--b-500)); }
+
+  /* popover */
+  .pop { position: absolute; left: 462px; top: 284px; width: 236px; background: var(--well); border-radius: 14px; padding: 12px 13px;
+    box-shadow: var(--shadow), 0 0 0 1px var(--line-strong); z-index: 5; }
+  .pop::before { content: ""; position: absolute; top: -7px; left: 172px; width: 14px; height: 14px; background: var(--well); transform: rotate(45deg);
+    box-shadow: -1px -1px 0 var(--line-strong); }
+  .pop h4 { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+  .pop .s { font-size: 11.5px; color: var(--muted-2); margin-top: 1px; }
+  .pop .chips { justify-content: flex-start; gap: 4px; margin: 7px 0; }
+  .pop .nt { font-size: 12px; color: var(--ink-2); line-height: 1.38; background: var(--amber-soft); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; }
+  .pop .cf { font-size: 11.5px; color: var(--green-ink); margin: 6px 0 7px; display: flex; align-items: center; gap: 4px; }
+  .pop .bt { display: flex; gap: 6px; }
+  .pop .bt .btn { flex: 1; min-height: 32px; padding: 4px 8px; font-size: 12.5px; border-radius: 9px; }
+
+  /* right rail */
+  .rail { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .card-h { padding: 0 16px; height: 40px; font-size: 14px; }
+  .ar { display: flex; align-items: center; gap: 10px; padding: 6px 14px; min-height: 42px; }
+  .ar + .ar { border-top: 1px solid var(--line); }
+  .ar.grp { border-top: 1px solid var(--line-strong) !important; }
+  .ar .tm { width: 36px; flex-shrink: 0; font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .ar .tm.e { color: transparent; }
+  .ar .nm { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+  .ar .sb { font-size: 12px; color: var(--muted); }
+  .ar .chips { gap: 4px; flex-wrap: nowrap; }
+  .sug { display: flex; align-items: center; gap: 8px; margin: 10px 12px 4px; padding: 8px 10px; border-radius: 10px; background: rgb(var(--b-500) / .12);
+    border: 1px solid rgb(var(--b-500) / .3); font-size: 13px; font-weight: 500; color: rgb(var(--b-800)); }
+  .sug .btn { min-height: 30px; padding: 3px 10px; font-size: 12.5px; border-radius: 8px; }
+  .wl { display: flex; align-items: center; gap: 10px; padding: 8px 14px; }
+  .wl + .wl { border-top: 1px solid var(--line); }
+  .wl .n { width: 22px; height: 22px; border-radius: 999px; background: var(--tint); display: grid; place-items: center; font-size: 11px; font-weight: 600; color: var(--muted); flex-shrink: 0; }
+  .wl .nm { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+  .wl .sb { font-size: 12px; color: var(--muted); }
+  .wl .sb b { font-weight: 600; color: var(--ink-2); }
+  .wl .sb .late { color: var(--amber-ink); }
+  .wl .btn { min-height: 30px; padding: 3px 10px; font-size: 12px; border-radius: 8px; }
+</style>
+</head>
+<body class="t-restaurants">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span>Wrenfield Kitchen &amp; Bar</span></div>
+    <nav class="nav">
+      <a class="on"><svg class="i"><use href="#squares-2x2"/></svg><span class="lbl">Floor plan</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Reservations</span></a>
+      <a><svg class="i"><use href="#queue-list"/></svg><span class="lbl">Waitlist</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Guests</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span></a>
+    </nav>
+    <div class="side-foot">
+      <a><svg class="i"><use href="#cog-6-tooth"/></svg><span class="lbl">Settings</span></a>
+      <span class="toggle"><svg class="i"><use href="#chevron-double-left"/></svg></span>
+    </div>
+    <div class="side-user"><span class="av">TB</span><div><b>Talia Brooks</b><small>Host</small></div></div>
+    <div class="side-co"><span class="av">W</span><div><b>Wrenfield Kitchen &amp; Bar</b><small>Downtown McKinney</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <div class="counts">
+        <span><b>Fri, Dec 4 · Dinner</b><small>6:52 PM</small></span>
+        <span><b>96 <small style="display:inline;font-size:13px;color:var(--on-em-dim)">of 164</small></b><small>Covers seated</small></span>
+        <span><b>3 tables</b><small>Open now</small></span>
+        <span><b>4 · 18 min</b><small>Waitlist · longest wait</small></span>
+        <span><b>5 parties · 32 covers</b><small>Arriving next 30 min</small></span>
+      </div>
+      <div class="right"><span class="btn primary sm"><svg class="i s4"><use href="#plus"/></svg>Walk-in</span><span class="btn sm"><svg class="i s4"><use href="#plus"/></svg>Reservation</span></div>
+    </header>
+
+    <div class="page">
+      <div class="card fp">
+        <div class="legend">
+          <span><i style="border-color:var(--muted-2);border-style:dashed;background:var(--panel)"></i>Open</span>
+          <span><i style="border-color:var(--amber);background:var(--panel)"></i>Reserved</span>
+          <span><i style="border-color:var(--green);background:var(--green-soft)"></i>Seated</span>
+          <span><i style="border-color:var(--line-strong);background:var(--hatch)"></i>Clearing</span>
+          <span><span class="ad" style="margin:0"></span>Allergy on the reservation</span>
+        </div>
+        <div class="plan">
+          <!-- Section 1 -->
+          <div class="zn" style="left:0;top:0;width:452px;height:214px"><p>Section 1 · <b>Mia</b></p></div>
+          <div class="t seat" style="left:12px;top:32px;width:88px;height:82px"><i>2</i><b>1</b><span class="nm">Nguyen</span><span class="st">1h 05m</span></div>
+          <div class="t seat" style="left:110px;top:32px;width:88px;height:82px"><i>2</i><b>2</b><span class="nm">Walk-in</span><span class="st">22m</span></div>
+          <div class="t open" style="left:208px;top:32px;width:88px;height:82px"><i>2</i><b>3</b><span class="st">Open</span></div>
+          <div class="t seat" style="left:12px;top:124px;width:110px;height:82px"><i>4</i><b>4</b><span class="nm">Ortega</span><span class="st">51m</span></div>
+          <div class="t res" style="left:132px;top:124px;width:110px;height:82px"><i>4</i><b>5</b><span class="st">7:15 · Kim<span class="ad"></span></span></div>
+          <div class="entry" style="left:316px;top:136px"><svg class="i s4"><use href="#arrow-right-end-on-rectangle"/></svg>Entry · host stand</div>
+
+          <!-- Section 2 -->
+          <div class="zn" style="left:0;top:224px;width:452px;height:250px"><p>Section 2 · <b>Andre</b></p></div>
+          <div class="t seat" style="left:12px;top:256px;width:104px;height:82px"><i>4</i><b>7</b><span class="nm">Hale</span><span class="st">1h 12m</span></div>
+          <div class="t seat" style="left:126px;top:256px;width:104px;height:82px"><i>4</i><b>8</b><span class="nm">Walk-in (3)</span><span class="st">35m</span></div>
+          <div class="t open" style="left:240px;top:256px;width:88px;height:82px"><i>2</i><b>9</b><span class="st">Open</span></div>
+          <div class="t res" style="left:338px;top:256px;width:100px;height:82px"><i>2</i><b>10</b><span class="st">7:00 · Penrose</span></div>
+          <div class="t clr rd" style="left:12px;top:350px;width:112px;height:112px"><i style="right:22px;top:10px">6</i><b>6</b><span>Clearing</span><span class="nm" style="font-size:11px">next 7:30 Raman (6)<span class="ad"></span></span></div>
+          <div class="t seat" style="left:138px;top:362px;width:300px;height:88px"><i>8</i><b>11 <svg class="i s4" style="color:var(--amber)"><use href="#cake"/></svg></b><span class="nm">Bishop · party of 8</span><span class="st">40m</span></div>
+
+          <!-- Bar -->
+          <div class="zn" style="left:0;top:484px;width:452px;height:244px"><p>Bar · <b>Reese</b></p></div>
+          <div class="counter" style="left:16px;top:540px;width:300px;height:44px">Bar · 11 of 14</div>
+          <div class="stools" style="left:22px;top:596px"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="o"></span><span class="o"></span><span class="o"></span></div>
+          <div class="t seat" style="left:338px;top:520px;width:100px;height:84px"><i>4</i><b>H1</b><span class="st">Seated 28m</span></div>
+          <div class="t clr" style="left:338px;top:618px;width:100px;height:84px"><i>4</i><b>H2</b><span>Clearing</span></div>
+
+          <!-- Section 3 -->
+          <div class="zn" style="left:462px;top:0;width:238px;height:506px"><p>Section 3 · <b>Jonah</b></p></div>
+          <div class="t open" style="left:474px;top:32px;width:88px;height:78px"><i>2</i><b>15</b><span class="st">Open</span></div>
+          <div class="t res rd" style="left:470px;top:120px;width:104px;height:104px"><i style="right:18px;top:10px">6</i><b>16</b><span class="st">7:30 · Winfield<span class="ad"></span></span></div>
+          <div class="t seat" style="left:592px;top:32px;width:98px;height:76px;border-radius:12px 4px 4px 12px"><i>4</i><b>14</b><span class="nm">Walk-in</span><span class="st">1h 20m</span></div>
+          <div class="t seat" style="left:592px;top:116px;width:98px;height:76px;border-radius:12px 4px 4px 12px"><i>4</i><b>13</b><span class="nm">Dalby</span><span class="st">18m</span></div>
+          <div class="t res sel" style="left:592px;top:200px;width:98px;height:76px;border-radius:12px 4px 4px 12px"><i>4</i><b>12 <svg class="i s4" style="color:var(--rose)"><use href="#heart"/></svg></b><span class="st">7:00 · Weller</span></div>
+
+          <div class="pop">
+            <h4>Tessa &amp; Mark Weller</h4>
+            <p class="s">Regular · 14 visits since 2023</p>
+            <div class="chips"><span class="chip amber">Anniversary (11th)</span><span class="chip green">Booth 12</span></div>
+            <p class="nt">Mark: no cilantro. Tessa: sparkling water, lime. Dessert with a candle on the house, OK'd by Marisol.</p>
+            <p class="cf"><svg class="i s35"><use href="#check-circle"/></svg>Confirmed by text 10:12 AM</p>
+            <div class="bt"><span class="btn primary">Seat now</span><span class="btn outline">Text guest</span></div>
+          </div>
+
+          <!-- The Larder -->
+          <div class="zn larder" style="left:462px;top:516px;width:238px;height:212px;padding-top:8px;padding-bottom:22px">
+            <span class="who">Lyndale Media</span>
+            <span class="sm2">Holiday party · 22 guests · 7:00</span>
+            <div class="prog"><span></span></div>
+            <span class="sm2"><b style="color:var(--ink)">6 of 22</b> here · arriving</span>
+            <span class="lab">The Larder · seats 32</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rail">
+        <div class="card clip">
+          <div class="card-h"><svg class="i s4"><use href="#clock"/></svg>Arriving next<span class="r">Through 7:30 · 7 parties · 44 covers</span></div>
+          <div class="ar"><span class="tm">7:00</span><div class="grow"><p class="nm">Tessa &amp; Mark Weller</p><p class="sb">2 · T12</p></div><span class="chips"><span class="chip green">Confirmed</span></span></div>
+          <div class="ar"><span class="tm e">7:00</span><div class="grow"><p class="nm">Owen Penrose</p><p class="sb">2 · T10</p></div><span class="chips"><span class="chip green">Confirmed</span></span></div>
+          <div class="ar"><span class="tm e">7:00</span><div class="grow"><p class="nm">Lyndale Media</p><p class="sb">22 · The Larder</p></div><span class="chips"><span class="chip brand">6 here</span></span></div>
+          <div class="ar grp"><span class="tm">7:15</span><div class="grow"><p class="nm">Hannah Kim</p><p class="sb">4 · T5</p></div><span class="chips"><span class="chip red">Shellfish</span><span class="chip green">Confirmed</span></span></div>
+          <div class="ar"><span class="tm e">7:15</span><div class="grow"><p class="nm">Carla Ramsdell</p><p class="sb">2 · no table yet</p></div><span class="chips"><span class="chip amber">Not confirmed</span><span class="btn outline sm" style="min-height:26px;padding:2px 10px;font-size:12px;border-radius:8px">Text</span></span></div>
+          <div class="ar grp"><span class="tm">7:30</span><div class="grow"><p class="nm">Priya Raman</p><p class="sb">6 · T6 · Birthday</p></div><span class="chips"><span class="chip red">Gluten free</span><span class="chip green">Confirmed</span></span></div>
+          <div class="ar"><span class="tm e">7:30</span><div class="grow"><p class="nm">Nate Winfield</p><p class="sb">6 · T16</p></div><span class="chips"><span class="chip red">Tree nut</span><span class="chip green">Confirmed</span></span></div>
+        </div>
+
+        <div class="card clip">
+          <div class="card-h"><svg class="i s4"><use href="#queue-list"/></svg>Waitlist<span class="count">4</span><span class="r">Longest 18 min</span></div>
+          <div class="sug"><svg class="i s4"><use href="#sparkles"/></svg><span class="grow">T9 (2) is open. Seat Ruben Salas?</span><span class="btn outline">Text Ruben</span><span class="btn primary">Seat</span></div>
+          <div class="wl"><span class="n">1</span><div class="grow"><p class="nm">Ruben Salas · 2</p><p class="sb">Waiting <b class="late">18m</b> / quoted 20m · walk-in · "Bar is OK"</p></div><span class="btn outline">Text: table ready</span></div>
+          <div class="wl"><span class="n">2</span><div class="grow"><p class="nm">Amara Jones · 4</p><p class="sb">Waiting <b>12m</b> / quoted 30m · walk-in</p></div><span class="btn outline">Text: table ready</span></div>
+          <div class="wl"><span class="n">3</span><div class="grow"><p class="nm">Kyle Babcock · 2</p><p class="sb">Waiting <b>6m</b> / quoted 25m · added by phone</p></div><span class="btn outline">Text: table ready</span></div>
+          <div class="wl"><span class="n">4</span><div class="grow"><p class="nm">Grace Hadley · 5</p><p class="sb">Waiting <b>2m</b> / quoted 40m · walk-in</p></div><span class="btn outline">Text: table ready</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

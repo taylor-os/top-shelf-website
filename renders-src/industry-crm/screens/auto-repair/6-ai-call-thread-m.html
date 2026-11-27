@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texts · Turnbuckle Auto Repair (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .m-bar { min-height: 50px; padding: 4px 12px; }
+  .th { display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px; background: var(--panel); }
+  .th .who { flex: 1; min-width: 0; }
+  .th .who b { display: block; font-size: 16px; font-weight: 600; }
+  .th .who small { display: block; font-size: 12px; color: var(--muted-2); }
+  .th .btn { min-height: 36px; padding: 6px 12px; font-size: 13.5px; }
+  .th .back { color: var(--ink-2); display: grid; place-items: center; width: 28px; }
+  .chiprow { display: flex; gap: 5px; padding: 0 12px 8px 12px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  .chiprow .chip { font-size: 10.5px; padding: 2px 8px; }
+  .chat { padding: 10px 12px 140px; gap: 4px; }
+  .msg { max-width: 88%; font-size: 13.5px; line-height: 1.38; padding: 7px 12px; }
+  .ai-card { margin: 4px 0 6px; }
+  .ai-card .hd { padding: 7px 12px; font-size: 12.5px; }
+  .ai-card .hd { flex-wrap: wrap; row-gap: 0; }
+  .ai-card .hd small { flex-basis: 100%; margin-left: 24px; white-space: nowrap; font-size: 11.5px; }
+  .ai-card .bd { padding: 8px 12px 6px; gap: 3px; font-size: 13px; line-height: 1.4; }
+  .ai-card .bd p { display: flex; gap: 7px; }
+  .ai-card .bd p::before { content: ""; width: 5px; height: 5px; border-radius: 99px; background: rgb(var(--b-500)); flex-shrink: 0; margin-top: 7px; }
+  .ai-card .ft { padding: 0 12px 8px; }
+  .play { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: rgb(var(--b-600)); }
+  .composer { position: fixed; left: 0; right: 0; bottom: 64px; padding: 6px 12px; z-index: 9; }
+  .composer .in { height: 40px; }
+  .composer .send { width: 40px; height: 40px; }
+  .msg-t { padding: 2px 6px 2px; }
+</style>
+</head>
+<body class="t-auto-repair">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#bars-3"/></svg></a>
+    <p class="t">Texts</p>
+    <a><svg class="i"><use href="#magnifying-glass"/></svg></a>
+  </div>
+
+  <div class="th">
+    <span class="back"><svg class="i"><use href="#arrow-left"/></svg></span>
+    <div class="who"><b>Keisha Merriman</b><small>Texting from the shop line, (972) 555-0148</small></div>
+    <span class="btn outline"><svg class="i s4 t-brand"><use href="#phone"/></svg>Call</span>
+  </div>
+  <div class="chiprow">
+    <span class="chip user"><svg class="i s3"><use href="#user"/></svg>Dana Weldon</span>
+    <span class="chip brand">Appointment Today 1:00 PM</span>
+    <span class="chip blue">New customer</span>
+  </div>
+
+  <div class="chat">
+    <span class="day-sep" style="margin:2px 0 2px">Today</span>
+    <div class="ai-card">
+      <div class="hd"><svg class="i s4"><use href="#phone-arrow-down-left"/></svg><span>Call answered by the AI receptionist</span><small>10:31 AM · 2 min 40 s</small></div>
+      <div class="bd">
+        <p>2017 Nissan Altima died on I-635 near Jupiter Rd. Cranks but won't start.</p>
+        <p>A wrecker is bringing it in.</p>
+        <p><span>Booked: <b>drop-off today 1:00 PM.</b></span></p>
+        <p>Wants a call with the estimate before any work.</p>
+      </div>
+      <div class="ft"><span class="play"><svg class="i s4"><use href="#play-circle"/></svg>Play recording</span></div>
+    </div>
+
+    <p class="msg-t r"><span class="tag">Sent automatically</span> · 10:34 AM</p>
+    <div class="msg out">Hi Keisha, this is Turnbuckle Auto Repair. You're booked today at 1:00 PM for your 2017 Nissan Altima. Have the wrecker drop it at 1450 Turnbuckle Dr, Garland. If we're with a customer, keys go in the drop box by the office door. We'll text you the estimate before we do any work.</div>
+
+    <p class="msg-t l">10:36 AM</p>
+    <div class="msg in">ok thank you. tow truck says about 12:30</div>
+
+    <p class="msg-t r">Dana · 10:38 AM</p>
+    <div class="msg out">Got it, Keisha. We'll watch for it and call you once Wade has a look.</div>
+  </div>
+
+  <div class="composer">
+    <span class="icon-btn sm" style="color:var(--muted)"><svg class="i s4"><use href="#paper-clip"/></svg></span>
+    <span class="in">Text message</span>
+    <span class="send"><svg class="i s4"><use href="#paper-airplane"/></svg></span>
+  </div>
+
+  <nav class="tabs">
+    <a><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Home</a>
+    <a><span class="ic"><svg class="i s6"><use href="#wrench-screwdriver"/></svg></span>Repairs</a>
+    <a><span class="ic"><svg class="i s6"><use href="#users"/></svg></span>Customers</a>
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#chat-bubble-left-right"/></svg></span>Texts</a>
+    <a><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal · 1180 Prairie Clover Ln · Elena Marsh Real Estate</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .side .brand small { display:block; font-size:11.5px; font-weight:400; color:var(--on-em-faint); }
+  .nav { gap:2px; }
+  .nav a { padding:8px 12px; }
+  .nav .sec { padding:12px 12px 2px; }
+  .side-user { padding:12px 16px; }
+
+  .band { align-items:center; padding:12px 28px; }
+  .search { width:380px; height:38px; border-radius:10px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); display:flex; align-items:center; gap:8px; padding:0 12px; color:var(--on-em-faint); font-size:13.5px; }
+  .band .btn.sm { min-height:36px; }
+
+  .page { padding:12px 28px 0; }
+  .team { display:grid; grid-template-columns:118px repeat(3, minmax(0,1fr)); align-items:center; gap:8px; padding:8px 10px 8px 14px; }
+  .team > b { font-size:13.5px; font-weight:600; line-height:1.25; }
+  .tchip { display:block; padding:5px 12px; border-radius:10px; font-size:13px; line-height:1.3; color:var(--ink); border:1px solid; white-space:nowrap; }
+  .tchip .who { display:block; font-weight:500; }
+  .tchip .d { display:block; }
+  .tchip.red { background:color-mix(in srgb, var(--red) 7%, var(--panel)); border-color:color-mix(in srgb, var(--red) 35%, transparent); }
+  .tchip.amber { background:color-mix(in srgb, var(--amber) 9%, var(--panel)); border-color:color-mix(in srgb, var(--amber) 40%, transparent); }
+  .tchip .who { font-size:14px; font-weight:600; color:var(--ink); }
+  .tchip .d { font-weight:600; }
+  .tchip.red .d { color:var(--red); } .tchip.amber .d { color:var(--amber-ink); }
+
+  .cols { display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:20px; align-items:start; margin-top:10px; }
+  .crumb { font-size:13px; color:var(--muted-2); }
+  .crumb a { color:rgb(var(--b-700)); font-weight:500; }
+  .dh { display:flex; align-items:center; gap:12px; }
+  .dt-h { font-size:22px; line-height:30px; font-weight:600; letter-spacing:-.015em; }
+  .dh .acts { margin-left:auto; display:flex; gap:6px; }
+  .btn.xs { min-height:30px; padding:4px 11px; font-size:12.5px; border-radius:9px; gap:6px; }
+  .btn.red { background:var(--red); color:var(--badge-ink); }
+
+  .alert { margin-top:10px; display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:12px; background:color-mix(in srgb, var(--red) 8%, var(--panel)); border:1px solid color-mix(in srgb, var(--red) 40%, transparent); color:var(--ink); font-size:14px; }
+  .alert > svg { color:var(--red); }
+  .alert b { font-weight:600; color:var(--red); }
+
+  .tlc { margin-top:10px; }
+  .tlc .hd { padding:8px 16px 6px; border-bottom:1px solid var(--line); }
+  .tlc .hd h2 { font-size:15px; font-weight:600; }
+  .tlc .hd p { font-size:12.5px; color:var(--muted); }
+  .st { display:grid; grid-template-columns:20px 128px minmax(0,1fr) 22px; gap:10px; align-items:center; padding:4px 16px; font-size:13px; line-height:1.25; }
+  .st + .st { border-top:1px solid var(--line-soft); }
+  .st .dt { font-weight:600; font-variant-numeric:tabular-nums; }
+  .st .nm { font-weight:600; color:var(--ink); }
+  .st .nt { color:var(--muted); font-size:12.5px; }
+  .st .dt small { display:block; font-size:12px; font-weight:500; color:var(--muted-2); }
+  .mk { width:18px; height:18px; border-radius:999px; display:grid; place-items:center; }
+  .mk.ok { background:var(--green); color:var(--panel); }
+  .mk.ok svg { width:12px; height:12px; stroke-width:2.5; }
+  .mk.red { border:2px solid var(--red); background:var(--red-soft); }
+  .mk.amber { border:2px solid var(--amber); background:var(--amber-soft); }
+  .mk.hollow { border:2px dashed var(--line-strong); }
+  .mk.dot::after { content:""; width:10px; height:10px; border-radius:999px; background:rgb(var(--b-600)); }
+  .st.done .nm, .st.done .dt { color:var(--muted); font-weight:500; }
+  .st.hot { background:color-mix(in srgb, var(--red) 5%, transparent); padding-top:6px; padding-bottom:6px; }
+  .st.hot .dt, .st.hot .nm { color:var(--red); }
+  .st.warn { background:color-mix(in srgb, var(--amber) 6%, transparent); }
+  .st .acts3 { grid-column:3 / -1; display:flex; gap:6px; margin-top:2px; }
+  .st.exp .nm, .st.exp .dt { color:var(--muted); font-weight:500; }
+  .cbx { width:18px; height:18px; border:1.5px solid var(--line-strong); border-radius:4px; }
+
+  .rc .card-h { padding:5px 14px; font-size:13.5px; }
+  .rc .card-h .r { font-weight:600; }
+  .rc .card-b { padding:7px 14px 8px; }
+  .rc + .rc { margin-top:8px; }
+  .terms { display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; }
+  .terms div { font-size:13px; line-height:1.25; }
+  .terms span { display:block; font-size:11.5px; color:var(--muted-2); }
+  .terms b { font-weight:600; }
+  .pp { display:flex; align-items:center; gap:10px; padding:3px 0; font-size:13px; line-height:1.3; }
+  .pp .k2 { width:74px; flex-shrink:0; font-size:12px; color:var(--muted-2); }
+  .pp .ph { display:flex; align-items:center; gap:4px; color:var(--ink-2); font-variant-numeric:tabular-nums; }
+  .pp + .pp { border-top:1px solid var(--line-soft); }
+  .pp .k { font-size:11.5px; color:var(--muted-2); display:block; }
+  .pp b { font-weight:600; }
+  .pp .icon-btn.sm { width:30px; height:30px; margin-left:auto; }
+  .doc { display:flex; align-items:center; gap:8px; padding:2px 0; font-size:13px; }
+  .doc svg { color:rgb(var(--b-600)); }
+  .doc .w { margin-left:auto; color:var(--muted-2); font-size:12px; }
+  .note { font-size:12.6px; line-height:1.3; color:var(--ink-2); padding:3px 0; }
+  .note b { font-weight:600; color:var(--ink); }
+</style>
+</head>
+<body class="t-real-estate">
+<script src="../../kit/icons.js"></script>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">EM</span><span>Elena Marsh Real Estate<small>Realtor CRM</small></span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Today</span></a>
+      <a><svg class="i"><use href="#home-modern"/></svg><span class="lbl">Listings</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Contacts</span></a>
+      <a class="on"><svg class="i"><use href="#document-check"/></svg><span class="lbl">Deals</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendar</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+    </nav>
+    <div class="side-foot"><span class="toggle" style="margin-left:auto"><svg class="i"><use href="#chevron-double-left"/></svg></span></div>
+    <div class="side-user"><span class="av">DW</span><div><b>Dana Whitlock</b><small>Assistant</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Name, street or phone number</span>
+      <div class="right"><span class="btn primary sm"><svg class="i s4"><use href="#phone-arrow-up-right"/></svg>Log a call</span></div>
+    </header>
+
+    <div class="page">
+      <div class="card team">
+        <b>Team deadlines, next 48 hours:</b>
+        <span class="tchip red"><span class="d">Option ends Wed 5:00 PM</span><span class="who">1180 Prairie Clover · Elena Marsh</span></span>
+        <span class="tchip red"><span class="d">Financing approval Wed</span><span class="who">2209 Fieldstone Bend (sample) · Elena Marsh</span></span>
+        <span class="tchip amber"><span class="d">Earnest money and option fee Thu</span><span class="who">5527 Kingfisher Ln (sample) · Marcus Bell</span></span>
+      </div>
+
+      <div class="cols">
+        <div>
+          <p class="crumb"><a>Deals</a> / 1180 Prairie Clover Ln (sample)</p>
+          <h1 class="dt-h">1180 Prairie Clover Ln (sample), Aubrey</h1>
+          <div class="dh">
+            <div class="chips" style="justify-content:flex-start"><span class="chip lg brand">Seller side</span><span class="chip lg amber">Under contract</span><span class="chip lg user"><svg class="i s3"><use href="#user"/></svg>Agent: Elena Marsh</span></div>
+            <div class="acts"><span class="btn outline xs">Amendment signed</span><span class="btn outline xs">Terminated</span><span class="btn outline xs">Closed and funded</span></div>
+          </div>
+
+          <div class="alert">
+            <svg class="i s6"><use href="#exclamation-triangle"/></svg>
+            <p class="grow"><b>Option period ends tomorrow, Wed Oct 21 at 5:00 PM.</b> Buyers asked for $3,200 in repairs. Sellers have not answered.</p>
+            <span class="btn red xs"><svg class="i s35"><use href="#phone"/></svg>Call Greg &amp; Tina</span>
+            <span class="btn outline xs">Log call</span>
+          </div>
+
+          <div class="card clip tlc">
+            <div class="hd">
+              <h2>Contract timeline</h2>
+              <p>TREC One to Four Family Resale Contract · Effective Wed Oct 14, 2026 · Dates confirmed by Elena Marsh, Oct 14</p>
+            </div>
+            <div class="st done"><span class="mk ok"><svg class="i"><use href="#check"/></svg></span><span class="dt">Fri 10/16<small>Dana</small></span><div><p class="nm">Earnest money and option fee received by title</p><p class="nt">Due Mon 10/19 (day 3 fell on Saturday, so it moved) · Done Fri 10/16</p></div><span></span></div>
+            <div class="st done"><span class="mk ok"><svg class="i"><use href="#check"/></svg></span><span class="dt">Fri 10/16<small>Dana</small></span><div><p class="nm">HOA information delivered</p><p class="nt">Done Fri 10/16</p></div><span></span></div>
+            <div class="st done"><span class="mk ok"><svg class="i"><use href="#check"/></svg></span><span class="dt">Mon 10/19<small>Elena</small></span><div><p class="nm">Buyer's HOA review ends</p><p class="nt">3 days from delivery · Passed</p></div><span></span></div>
+            <div class="st hot"><span class="mk red"></span><span class="dt">Wed 10/21, 5:00 PM<small>Elena</small></span><div class="flex" style="gap:8px"><p class="nm">Option period ends</p><span class="chip red">Tomorrow</span></div><span></span>
+              <div class="acts3"><span class="btn outline xs">Option passed, still under contract</span><span class="btn outline xs">Buyer terminated</span><span class="btn outline xs">Amendment signed</span></div></div>
+            <div class="st warn"><span class="mk amber"></span><span class="dt">Sat 10/24<small>Dana</small></span><div><p class="nm">Survey delivered</p><p class="nt">Existing survey + T-47, seller provides <span class="chip amber">Falls on Saturday: check whether it moves</span></p></div><span class="cbx"></span></div>
+            <div class="st exp"><span class="mk hollow"></span><span class="dt">Tue 11/3<small>Cedar Fork Title</small></span><div><p class="nm">Title commitment</p><p class="nt">Expected, not a contract deadline</p></div><span></span></div>
+            <div class="st exp"><span class="mk hollow"></span><span class="dt">No date yet</span><div><p class="nm">Title objections due</p><p class="nt">Its date shows once the title commitment and survey are checked off.</p></div><span></span></div>
+            <div class="st"><span class="mk dot"></span><span class="dt">Wed 11/4<small>Elena</small></span><div><p class="nm">Buyer's financing approval</p><p class="nt">21 days · Conventional</p></div><span class="cbx"></span></div>
+            <div class="st exp"><span class="mk hollow"></span><span class="dt">No date</span><div><p class="nm">Appraisal</p><p class="nt">No appraisal days entered, so not a contract deadline.</p></div><span></span></div>
+            <div class="st exp"><span class="mk hollow"></span><span class="dt">Thu 11/12</span><div><p class="nm">Final walkthrough</p><p class="nt">Expected, not a contract deadline</p></div><span></span></div>
+            <div class="st"><span class="mk dot"></span><span class="dt">Fri 11/13<small>Elena</small></span><div><p class="nm">Closing and funding</p><p class="nt">Cedar Fork Title</p></div><span class="cbx"></span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card clip rc">
+            <div class="card-h">Terms<span class="r">Edit terms</span></div>
+            <div class="card-b terms">
+              <div><span>Sales price</span><b>$600,000</b></div>
+              <div><span>Earnest money</span><b>$6,000</b></div>
+              <div><span>Option fee</span><b>$300 for 7 days</b></div>
+              <div><span>Financing</span><b>Conventional</b></div>
+              <div><span>Seller contribution</span><b>$4,000</b></div>
+              <div><span>Survey</span><b>Existing survey + T-47, seller provides</b></div>
+              <div><span>Possession</span><b>At closing and funding</b></div>
+              <div><span>Closing</span><b>Fri Nov 13</b></div>
+            </div>
+          </div>
+
+          <div class="card clip rc">
+            <div class="card-h">People</div>
+            <div class="card-b" style="padding-top:4px;padding-bottom:6px">
+              <div class="pp"><span class="k2">Sellers</span><div><b>Greg &amp; Tina Sorensen</b><span class="ph"><svg class="i s35 t-brand"><use href="#phone"/></svg> (940) 555-0151</span></div></div>
+              <div class="pp"><span class="k2">Buyers</span><div><b>Nathan &amp; Keisha Doyle</b> · through their agent</div></div>
+              <div class="pp"><span class="k2">Buyer's agent</span><div><b>Jason Kirby</b>, Prairie Line Realty (sample)<span class="ph"><svg class="i s35 t-brand"><use href="#phone"/></svg> (214) 555-0177</span></div></div>
+              <div class="pp"><span class="k2">Title</span><div><b>Cedar Fork Title (sample)</b><span class="ph"><svg class="i s35 t-brand"><use href="#phone"/></svg> Renee Albright · (940) 555-0190</span></div></div>
+              <div class="pp"><span class="k2">Lender</span><div><b>Ridgeline Home Loans (sample)</b><span class="ph"><svg class="i s35 t-brand"><use href="#phone"/></svg> Marco Ruiz · (972) 555-0149</span></div></div>
+            </div>
+          </div>
+
+          <div class="card clip rc">
+            <div class="card-h">Documents<span class="count">4</span><span class="r">+ Upload</span></div>
+            <div class="card-b" style="padding-top:5px;padding-bottom:6px">
+              <div class="doc"><svg class="i s4"><use href="#document-text"/></svg>Signed contract<span class="w">Oct 14</span></div>
+              <div class="doc"><svg class="i s4"><use href="#document-text"/></svg>Seller's disclosure<span class="w">Oct 9</span></div>
+              <div class="doc"><svg class="i s4"><use href="#document-text"/></svg>HOA resale certificate<span class="w">Oct 16</span></div>
+              <div class="doc"><svg class="i s4"><use href="#document-text"/></svg>Other: Repair request from buyer's agent<span class="w">Oct 19</span></div>
+            </div>
+          </div>
+
+          <div class="card clip rc">
+            <div class="card-h">Notes</div>
+            <div class="card-b" style="padding-top:5px;padding-bottom:6px">
+              <p class="note"><b>Elena · Mon 4:10 PM:</b> Sorensens leaning toward a $2,000 credit instead of repairs.</p>
+              <p class="note"><b>Dana · Fri 11:02 AM:</b> Cedar Fork confirmed earnest money and option fee received.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

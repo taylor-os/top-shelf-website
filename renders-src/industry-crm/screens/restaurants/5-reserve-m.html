@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve a table · Wrenfield Kitchen &amp; Bar</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+  .cx .phone { background: var(--cx-bg); padding-bottom: 0; }
+  .serif { font-family: "Cormorant Garamond", Georgia, serif; }
+  .wm { text-align: center; padding: 16px 20px 12px; border-bottom: 1px solid var(--accent); position: relative; }
+  .wm::after { content: ""; position: absolute; left: 50%; bottom: -4px; width: 7px; height: 7px; background: var(--cx-bg); border: 1px solid var(--accent); transform: translateX(-50%) rotate(45deg); }
+  .wm .nm { font-size: 27px; font-weight: 600; letter-spacing: .02em; color: var(--cx-ink); line-height: 1.05; }
+  .wm .nm em { font-style: normal; font-size: 15px; letter-spacing: .22em; text-transform: uppercase; display: block; color: var(--accent); margin-top: 3px; }
+  .wm .loc { font-size: 12px; color: var(--cx-muted); margin-top: 5px; }
+  .body { padding: 14px 20px 0; display: flex; flex-direction: column; gap: 12px; }
+  .body h2 { font-size: 26px; font-weight: 600; color: var(--cx-ink); line-height: 1; }
+  .lab { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--cx-muted); margin-bottom: 6px; }
+  .party { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; }
+  .party a { height: 38px; border-radius: 999px; border: 1px solid var(--cx-line); background: var(--cx-card); display: grid; place-items: center; font-size: 15px; font-weight: 500; color: var(--cx-ink); }
+  .party a.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+  .lnk { font-size: 12.5px; color: var(--accent); font-weight: 600; margin-top: 7px; display: block; }
+  .date { display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--cx-line); border-radius: 12px; background: var(--cx-card); padding: 0 6px; height: 42px; }
+  .date b { font-size: 15px; font-weight: 600; color: var(--cx-ink); }
+  .date span { width: 32px; height: 32px; display: grid; place-items: center; color: var(--accent); }
+  .times { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .times a { height: 36px; border-radius: 10px; border: 1px solid var(--cx-line); background: var(--cx-card); display: grid; place-items: center; font-size: 14px; font-weight: 500; color: var(--cx-ink); font-variant-numeric: tabular-nums; }
+  .times a.off { color: var(--cx-faint); text-decoration: line-through; background: var(--cx-bg); }
+  .times a.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+  .full { font-size: 12.5px; color: var(--cx-ink-2); margin-top: 7px; }
+  .full a { color: var(--accent); font-weight: 600; }
+  .f2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fld { border: 1px solid var(--cx-line); border-radius: 10px; background: var(--cx-card); padding: 5px 11px 6px; }
+  .fld small { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--cx-muted); }
+  .fld p { font-size: 14.5px; color: var(--cx-ink); line-height: 1.35; }
+  .fld.sel { display: flex; align-items: center; }
+  .fld.sel svg { margin-left: auto; color: var(--cx-muted); }
+  .chk { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--cx-ink-2); }
+  .chk i { width: 20px; height: 20px; border-radius: 6px; background: var(--accent); display: grid; place-items: center; color: var(--accent-ink); flex-shrink: 0; }
+  .go { display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 12px; background: var(--accent); color: var(--accent-ink); font-size: 15.5px; font-weight: 600; box-shadow: var(--shadow-sm); }
+  .fine { font-size: 12px; color: var(--cx-muted); line-height: 1.4; padding-right: 150px; }
+  .bubble { position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 8px; padding: 9px 14px 9px 9px; border-radius: 999px;
+    background: var(--cx-card); border: 1px solid var(--cx-line); color: var(--cx-ink); font-size: 13px; font-weight: 600; box-shadow: var(--shadow); }
+  .bubble span { width: 28px; height: 28px; border-radius: 999px; background: var(--cx-logo); color: var(--cx-logo-ink); display: grid; place-items: center; }
+</style>
+</head>
+<body class="cx t-restaurants">
+<script src="../../kit/icons.js"></script>
+<div class="phone" style="min-height:100vh">
+  <header class="wm">
+    <p class="nm serif">Wrenfield<em>Kitchen &amp; Bar</em></p>
+    <p class="loc">Downtown McKinney · Dinner Tue to Sun, 5 to 10</p>
+  </header>
+
+  <div class="body">
+    <h2 class="serif">Reserve a table</h2>
+
+    <div>
+      <p class="lab">Party size</p>
+      <div class="party"><a>1</a><a>2</a><a>3</a><a class="on">4</a><a>5</a><a>6</a><a>7</a><a>8</a></div>
+      <a class="lnk">9 or more, or private dining? Plan an event &rarr;</a>
+    </div>
+
+    <div class="date"><span><svg class="i s4"><use href="#chevron-left"/></svg></span><b>Sat, Dec 12</b><span><svg class="i s4"><use href="#chevron-right"/></svg></span></div>
+
+    <div>
+      <div class="times">
+        <a>5:30</a><a>5:45</a><a>6:00</a><a class="off">6:15</a><a class="off">6:30</a>
+        <a>6:45</a><a class="on">7:00</a><a>7:15</a><a>8:30</a><a>8:45</a>
+      </div>
+      <p class="full">7:30 to 8:15 are full. <a>Join the waitlist for 7:30 &rarr;</a></p>
+    </div>
+
+    <div class="f2">
+      <div class="fld"><small>Name</small><p>Lauren Crandall</p></div>
+      <div class="fld"><small>Mobile</small><p>(469) 555-0157</p></div>
+    </div>
+    <div class="fld sel"><div><small>Occasion</small><p>Birthday</p></div><svg class="i s4"><use href="#chevron-down"/></svg></div>
+    <div class="fld"><small>Allergies or requests</small><p>One guest has a shellfish allergy. A booth if you have one.</p></div>
+    <p class="chk"><i><svg class="i s35" style="stroke-width:2.5"><use href="#check"/></svg></i>Text me a reminder before my reservation</p>
+
+    <a class="go">Reserve · 4 guests · Sat Dec 12 · 7:00 PM</a>
+    <p class="fine">Need to change it? Reply to your text or call (469) 555-0110.</p>
+  </div>
+
+  <a class="bubble"><span><svg class="i s4"><use href="#chat-bubble-oval-left-ellipsis"/></svg></span>Questions? Ask us</a>
+</div>
+</body>
+</html>

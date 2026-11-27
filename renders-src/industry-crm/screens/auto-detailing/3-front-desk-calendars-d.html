@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendars · Kestrel Lane Detail Co.</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .nav { gap: 2px; padding: 6px 8px; }
+  .nav a { padding: 7px 12px; }
+  .nav .sec { padding: 9px 12px 2px; font-size: 10.5px; }
+  .side .brand { height: auto; padding: 14px 14px 12px; border-bottom: 1px solid var(--em-line); }
+  .side .brand small { display: block; font-size: 12px; font-weight: 400; color: var(--on-em-dim); }
+  .side .brand .chev { margin-left: auto; color: var(--on-em-dim); }
+  .side-user { padding: 12px 16px; }
+  .band { padding: 13px 28px; align-items: center; }
+  .crumb { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--on-em-dim); }
+  .crumb b { color: var(--on-em); font-weight: 600; }
+  .page { padding: 16px 28px 0; }
+  .ttl h2 { font-size: 22px; line-height: 30px; font-weight: 600; letter-spacing: -.015em; }
+  .ttl p { font-size: 14px; color: var(--muted-2); }
+  .cols { display: grid; grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); gap: 18px; align-items: start; margin-top: 14px; }
+  .cols .card + .card, .needs + .card { margin-top: 12px; }
+  .hd { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14.5px; font-weight: 600; }
+  .hd .r { margin-left: auto; font-size: 12.5px; font-weight: 500; color: rgb(var(--b-600)); }
+  .needs { border: 1.5px solid color-mix(in srgb, var(--amber) 55%, transparent); background: linear-gradient(var(--amber-soft), var(--amber-soft)), var(--panel); border-radius: var(--r-card); box-shadow: var(--shadow); }
+  .needs .hd { border-bottom-color: color-mix(in srgb, var(--amber) 25%, transparent); color: var(--amber-ink); }
+  .bk { display: flex; align-items: center; gap: 14px; padding: 12px 16px; }
+  .bk + .bk { border-top: 1px solid var(--line); }
+  .bk .nm { font-size: 15px; font-weight: 600; }
+  .bk .g { font-size: 12.5px; color: var(--muted-2); }
+  .bk .pk { font-size: 13.5px; font-weight: 500; color: var(--ink-2); margin-top: 2px; }
+  .bk .acts { margin-left: auto; display: flex; gap: 6px; flex-shrink: 0; }
+  .confirm { margin: 0 16px 14px; padding: 12px 14px; border-radius: 10px; background: var(--panel-2); border: 1px solid var(--line); display: flex; align-items: center; gap: 12px; }
+  .confirm p { font-size: 14px; font-weight: 500; color: var(--ink); }
+  .confirm .acts { margin-left: auto; display: flex; gap: 6px; }
+  .btn.red { background: var(--badge); color: var(--badge-ink); }
+  .btn.sel { box-shadow: 0 0 0 2px color-mix(in srgb, var(--amber) 55%, transparent); border-color: var(--amber); }
+  .pg { padding: 12px 16px 14px; }
+  .pg .row1 { display: flex; align-items: center; gap: 10px; }
+  .pg .g { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+  .pg .link { display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 8px 10px; border-radius: 8px; background: var(--well); font-size: 13px; }
+  .pg .link span { color: var(--muted-2); }
+  .pg .link b { margin-left: auto; font-weight: 600; color: rgb(var(--b-600)); }
+  .rp { padding: 11px 16px; }
+  .rp + .rp { border-top: 1px solid var(--line); }
+  .rp .nm { font-size: 14px; font-weight: 600; }
+  .rp .g { font-size: 12.5px; color: var(--muted); }
+  .rp .acts { display: flex; gap: 6px; margin-top: 8px; }
+  .ph-it { display: flex; align-items: flex-start; gap: 10px; padding: 9px 16px; font-size: 13px; color: var(--ink-2); }
+  .ph-it + .ph-it { border-top: 1px solid var(--line); }
+  .ph-it .ic-box { width: 26px; height: 26px; border-radius: 8px; }
+  .ph-it a { margin-left: auto; font-weight: 600; color: rgb(var(--b-600)); white-space: nowrap; }
+</style>
+</head>
+<body class="t-auto-detailing">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">KL</span><span>Kestrel Lane Detail Co.<small>Paloma Rowley · Front desk</small></span><svg class="i s4 chev"><use href="#chevron-up-down"/></svg></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Home</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#check-circle"/></svg><span class="lbl">Tasks</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span><span class="badge">3</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span><span class="badge">1</span></a>
+      <a><svg class="i"><use href="#inbox"/></svg><span class="lbl">Inbox</span></a>
+      <p class="sec">Office</p>
+      <a><svg class="i"><use href="#clipboard-document-list"/></svg><span class="lbl">Work orders</span></a>
+      <a class="on"><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Calendars</span></a>
+      <p class="sec">Grow</p>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reputation</span></a>
+      <p class="sec">Money</p>
+      <a><svg class="i"><use href="#credit-card"/></svg><span class="lbl">Payments</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#question-mark-circle"/></svg><span class="lbl">Help</span></a>
+    </nav>
+    <div class="side-user"><span class="av">PR</span><div><b>Paloma Rowley</b><small>Front desk</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <p class="crumb">Home<svg class="i s4"><use href="#chevron-right"/></svg><b>Calendars</b></p>
+    </header>
+
+    <div class="page">
+      <div class="ttl">
+        <h2>Calendars</h2>
+        <p>Saturday, Dec 6 · Booking pages your customers use to book with you.</p>
+      </div>
+
+      <div class="cols">
+        <div>
+          <div class="needs">
+            <div class="hd"><svg class="i s4"><use href="#exclamation-triangle"/></svg>Needs you<span class="count-pill amber" style="margin-left:2px">1</span></div>
+            <div class="bk">
+              <span class="av" style="background:var(--amber-soft);color:var(--amber-ink)">GS</span>
+              <div class="grow">
+                <p class="nm">Gabriel Soto · 2016 Ram 1500</p>
+                <p class="g">Did they come? Fri, Dec 5 at 2:00 PM. Deposit $62.50 paid.</p>
+              </div>
+              <div class="acts">
+                <span class="btn outline sm">Check in</span>
+                <span class="btn outline sm sel">No-show</span>
+                <span class="btn outline sm">Cancel</span>
+              </div>
+            </div>
+            <div class="confirm">
+              <svg class="i s4" style="color:var(--amber)"><use href="#question-mark-circle"/></svg>
+              <p>Mark as a no-show? The $62.50 deposit is kept.</p>
+              <div class="acts"><span class="btn red sm">Yes, no-show</span><span class="btn outline sm">Never mind</span></div>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="hd">Bookings<span class="count-pill gray">2</span><span class="r">Detail bookings</span></div>
+            <div class="bk">
+              <span class="time hot"><b>11:00</b><small>AM</small></span>
+              <div class="grow">
+                <p class="nm">Keisha Mulligan · 2021 Honda Odyssey</p>
+                <p class="g">Today · 11:00 AM</p>
+                <p class="pk">Full detail · $250.00</p>
+                <p class="g">Deposit $62.50 paid</p>
+              </div>
+              <div class="acts">
+                <span class="btn primary sm"><svg class="i s4"><use href="#key"/></svg>Check in</span>
+                <span class="btn outline sm">No-show</span>
+                <span class="btn outline sm">Cancel</span>
+              </div>
+            </div>
+            <div class="bk">
+              <span class="time"><small style="margin:0 0 3px">Sat, Dec</small><b>13</b></span>
+              <div class="grow">
+                <p class="nm">Erin Matsuda · 2021 Subaru Forester</p>
+                <p class="g">Sat, Dec 13 · 9:00 AM · Waiting on the deposit</p>
+                <p class="pk">Full detail, Pet hair removal · $260.00</p>
+                <p class="g">Deposit $65.00 due</p>
+              </div>
+              <div class="acts">
+                <span class="btn outline sm">Cancel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="hd">Checked in today<span class="count-pill gray">2</span><span class="r">Work orders &rarr;</span></div>
+            <div class="bk" style="padding:9px 16px">
+              <span class="time" style="opacity:.8"><b>8:00</b><small>AM</small></span>
+              <div class="grow"><p class="nm" style="font-size:14px">Whitney Carrow · 2022 Chevrolet Tahoe</p><p class="g">Full detail · WO 2047 · Ready by 2:30 PM</p></div>
+              <span class="chip blue">In progress</span>
+            </div>
+            <div class="bk" style="padding:9px 16px">
+              <span class="time" style="opacity:.8"><b>10:30</b><small>AM</small></span>
+              <div class="grow"><p class="nm" style="font-size:14px">Raymond Overton · 2019 Toyota 4Runner</p><p class="g">Full detail, Pet hair removal · WO 2049 · Ready by 4:00 PM</p></div>
+              <span class="chip">Waiting</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card clip">
+            <div class="hd">Booking pages</div>
+            <div class="pg">
+              <div class="row1"><span class="ic-box brand"><svg class="i s4"><use href="#calendar-days"/></svg></span><b class="fw6">Detail bookings</b><span class="chip green sp">Active</span></div>
+              <p class="g">2 cars at a time · Open daily 8:00 AM to 5:00 PM · 25% deposit</p>
+              <div class="link"><svg class="i s4 t-brand"><use href="#link"/></svg><span>kestrellanedetail.com/book</span><b>Copy booking link</b></div>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="hd">Ready for pickup<span class="count-pill green">2</span></div>
+            <div class="rp">
+              <p class="nm">Jordan Platt · 2020 Ford F-150</p>
+              <p class="g">WO 2043 · <b class="fw6" style="color:var(--amber-ink)">Balance $250.00</b></p>
+              <div class="acts"><span class="btn outline sm"><svg class="i s4"><use href="#chat-bubble-left"/></svg>Text it's ready</span><span class="btn primary sm"><svg class="i s4"><use href="#credit-card"/></svg>Take payment</span></div>
+            </div>
+            <div class="rp">
+              <p class="nm">Sam Winslow · 2024 Tesla Model Y</p>
+              <p class="g">WO 2046 · <span class="chip green">Paid</span></p>
+              <div class="acts"><span class="btn outline sm"><svg class="i s4"><use href="#check"/></svg>Picked up</span></div>
+            </div>
+          </div>
+
+          <div class="card clip">
+            <div class="hd">Phone</div>
+            <div class="ph-it"><span class="ic-box brand"><svg class="i s35"><use href="#sparkles"/></svg></span><span>AI receptionist booked Raymond Overton for 10:30 AM (checked in)</span></div>
+            <div class="ph-it"><span class="ic-box red"><svg class="i s35"><use href="#phone-x-mark"/></svg></span><span>Missed call 7:12 AM, (469) 555-0130, texted back</span></div>
+            <div class="ph-it"><span class="ic-box"><svg class="i s35"><use href="#chat-bubble-left-right"/></svg></span><span>3 unread texts</span><a>Open Texts</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg><span class="badge">1</span></span></aside>
+</div>
+</body>
+</html>

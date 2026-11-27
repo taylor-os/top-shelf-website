@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop board · Turnbuckle Auto Repair</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  body { overflow: hidden; }
+  .nav { gap: 2px; }
+  .nav a { padding: 8px 12px; }
+  .nav .sec { padding: 10px 12px 3px; }
+  .side .brand { height: 68px; }
+  .side .brand small { display: block; font-size: 12px; font-weight: 400; color: var(--on-em-dim); margin-top: 2px; }
+  .band { align-items: center; padding: 10px 24px; min-height: 58px; }
+  .crumb { display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: var(--on-em-dim); }
+  .crumb b { color: var(--on-em); font-weight: 600; }
+  .search { display: flex; align-items: center; gap: 8px; width: 300px; height: 38px; padding: 0 12px; border-radius: 10px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: var(--on-em-dim); font-size: 14px; }
+  .page { padding: 12px 20px 0; }
+  .title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .title-row h2 { font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: -.02em; }
+  .title-row .sub { font-size: 13.5px; color: var(--muted); margin-left: 6px; }
+  .title-row .first { margin-left: auto; }
+  .btn.on { border-color: rgb(var(--b-500) / .5); background: rgb(var(--b-500) / .08); color: rgb(var(--b-700)); }
+  .board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; height: calc(100vh - 58px - 12px - 56px); overflow: hidden; }
+  .col { gap: 8px; padding: 8px 8px 0; overflow: hidden; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .col-h { padding: 4px 6px 2px; }
+  .col-h .count-pill { margin-left: auto; }
+  .sub-h { display: flex; align-items: center; gap: 6px; padding: 4px 6px 0; font-size: 12px; font-weight: 600; color: var(--muted); }
+  .sub-h .count-pill { margin-left: auto; font-size: 11px; }
+  .kc { background: var(--panel); border-radius: 10px; border: 1px solid var(--line-soft); box-shadow: var(--shadow-sm); padding: 10px 11px; display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
+  .kc.rush { border-left: 3px solid var(--badge); }
+  .kc .ro { display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; }
+  .kc .ro .chip { margin-left: auto; }
+  .chip.rush { background: var(--badge); color: var(--badge-ink); }
+  .kc .nb { font-size: 12px; font-weight: 600; color: var(--red); margin-top: -2px; }
+  .kc .car { font-size: 14px; font-weight: 600; line-height: 1.25; }
+  .kc .g { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+  .kc .g b { color: var(--ink-2); font-weight: 500; }
+  .kc .tech { white-space: nowrap; display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 500; color: var(--ink-2); }
+  .kc .tech .chip { margin-left: auto; }
+  .av.xs { width: 20px; height: 20px; font-size: 9px; }
+  .kc .wo { font-size: 12px; color: var(--amber-ink); background: var(--amber-soft); border-radius: 6px; padding: 3px 7px; line-height: 1.35; }
+  .kc .age { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted-2); }
+  .kc .clk { display: flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 600; color: var(--red); }
+  .kc .btn { min-height: 30px; padding: 4px 10px; font-size: 12.5px; margin-top: 2px; }
+  .kc .bal { font-size: 12px; font-weight: 600; line-height: 1.4; }
+  .appr { align-self: flex-start; }
+</style>
+</head>
+<body class="t-auto-repair">
+<script src="../../kit/icons.js"></script>
+<div class="app has-dock">
+
+  <aside class="side">
+    <div class="brand"><span class="mark">TA</span><span>Turnbuckle Auto Repair<small>Dana Weldon · Service advisor</small></span></div>
+    <nav class="nav">
+      <p class="sec">Every day</p>
+      <a><svg class="i"><use href="#home"/></svg><span class="lbl">Home</span></a>
+      <a class="on"><svg class="i"><use href="#wrench-screwdriver"/></svg><span class="lbl">Repairs</span></a>
+      <a><svg class="i"><use href="#calendar-days"/></svg><span class="lbl">Appointments</span></a>
+      <a><svg class="i"><use href="#users"/></svg><span class="lbl">Customers</span></a>
+      <a><svg class="i"><use href="#clipboard-document-check"/></svg><span class="lbl">Tasks</span><span class="badge">2</span></a>
+      <p class="sec">Talk</p>
+      <a><svg class="i"><use href="#chat-bubble-left-right"/></svg><span class="lbl">Texts</span></a>
+      <a><svg class="i"><use href="#phone"/></svg><span class="lbl">Phone</span></a>
+      <p class="sec">Office</p>
+      <a><svg class="i"><use href="#banknotes"/></svg><span class="lbl">Payments</span></a>
+      <a><svg class="i"><use href="#star"/></svg><span class="lbl">Reviews</span></a>
+      <p class="sec">Setup</p>
+      <a><svg class="i"><use href="#question-mark-circle"/></svg><span class="lbl">Help</span></a>
+    </nav>
+    <div class="side-user"><span class="av">DW</span><div><b>Dana Weldon</b><small>Service advisor</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="band">
+      <p class="crumb">Home<svg class="i s4"><use href="#chevron-right"/></svg><b>Repairs</b></p>
+      <div class="right"><span class="search"><svg class="i s4"><use href="#magnifying-glass"/></svg>Search customers...</span></div>
+    </header>
+
+    <div class="page">
+      <div class="title-row">
+        <h2>Shop board</h2>
+        <span class="sub">12 cars in the shop · 1 rush</span>
+        <span class="btn outline sm on first"><svg class="i s4"><use href="#bars-arrow-down"/></svg>Rush first</span>
+        <span class="btn outline sm"><svg class="i s4"><use href="#list-bullet"/></svg>List</span>
+        <span class="btn outline sm"><svg class="i s4"><use href="#user"/></svg>My jobs</span>
+        <span class="btn primary sm"><svg class="i s4"><use href="#plus"/></svg>Open repair order</span>
+      </div>
+
+      <div class="board">
+        <!-- WAITING -->
+        <section class="col">
+          <div class="col-h"><b>Waiting</b><span class="count-pill">4</span></div>
+          <div class="kc">
+            <p class="ro">RO 2054</p>
+            <p class="car">2011 Ford Ranger</p>
+            <p class="g">Red · Tom Burleson</p>
+            <p class="g">Ready by <b>Today 4:00 PM</b></p>
+            <div class="tech"><span class="av xs">CO</span>Caleb<span class="chip">0 of 1 done</span></div>
+            <span class="chip green appr">1 of 1 approved</span>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>1 h</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2052</p>
+            <p class="car">2018 Toyota Camry</p>
+            <p class="g">Silver · Brenda Ormsby</p>
+            <p class="g">Ready by <b>Today 5:00 PM</b></p>
+            <div class="tech"><span class="av xs">WK</span>Wade<span class="chip">0 of 2 done</span></div>
+            <span class="chip green appr">2 of 3 approved</span>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>2 h</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2053</p>
+            <p class="car">2012 Chevrolet Tahoe</p>
+            <p class="g">Black · Walt Hendricks</p>
+            <p class="g">Ready by <b>Wed 12:00 PM</b></p>
+            <div class="tech"><span class="av xs">TH</span>Tony<span class="chip">0 of 1 done</span></div>
+            <span class="chip blue appr">Waiting on Walt's OK</span>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>1 h 45 m</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2055</p>
+            <p class="car">2021 Kia Sorento</p>
+            <p class="g">Gray · Alicia Nash</p>
+            <p class="g">Ready by <b>Wed 5:00 PM</b></p>
+            <div class="tech" style="color:var(--amber-ink)"><svg class="i s4"><use href="#user-plus"/></svg>No tech yet<span class="chip">0 of 2 done</span></div>
+            <span class="chip blue appr">Waiting on Alicia's OK</span>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>35 m</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+        </section>
+
+        <!-- IN PROGRESS -->
+        <section class="col">
+          <div class="col-h"><b>In progress</b><span class="count-pill">3</span></div>
+          <div class="kc rush">
+            <p class="ro">RO 2049<span class="chip rush">RUSH</span></p>
+            <p class="nb">needed by Today 12:00 PM</p>
+            <p class="car">2016 Honda Odyssey</p>
+            <p class="g">White · Maria Esquivel</p>
+            <p class="g">Ready by <b>Today 12:00 PM</b></p>
+            <div class="tech"><span class="av xs">WK</span>Wade<span class="chip">1 of 2 done</span></div>
+            <span class="chip green appr">2 of 2 approved</span>
+            <p class="clk"><svg class="i s4"><use href="#wrench"/></svg>Clock running 0:41</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2050</p>
+            <p class="car">2020 Hyundai Tucson</p>
+            <p class="g">Blue · Nolan Wilder</p>
+            <p class="g">Ready by <b>Today 2:00 PM</b></p>
+            <div class="tech"><span class="av xs">CO</span>Caleb<span class="chip">0 of 1 done</span></div>
+            <span class="chip green appr">1 of 1 approved</span>
+            <p class="clk"><svg class="i s4"><use href="#wrench"/></svg>Clock running 0:18</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2047</p>
+            <p class="car">2019 Jeep Wrangler</p>
+            <p class="g">Green · Gary Lowell</p>
+            <p class="g">Ready by <b>Today 3:00 PM</b></p>
+            <div class="tech"><span class="av xs">TH</span>Tony<span class="chip">0 of 1 done</span></div>
+            <span class="chip green appr">1 of 1 approved</span>
+            <p class="clk"><svg class="i s4"><use href="#wrench"/></svg>Clock running 0:22</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+        </section>
+
+        <!-- WAITING ON PARTS -->
+        <section class="col">
+          <div class="col-h"><b>Waiting on parts</b><span class="count-pill">2</span></div>
+          <div class="kc">
+            <p class="ro">RO 2045</p>
+            <p class="car">2017 Subaru Outback</p>
+            <p class="g">Silver · Hannah Purcell</p>
+            <p class="g">Ready by <b>Wed 3:00 PM</b></p>
+            <div class="tech"><span class="av xs">CO</span>Caleb<span class="chip">1 of 2 done</span></div>
+            <span class="chip green appr">2 of 2 approved</span>
+            <p class="wo">Waiting on: Rear wheel bearing, ETA Wed AM</p>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>1 d</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2043</p>
+            <p class="car">2015 Ford F-150</p>
+            <p class="g">Blue · Darnell Price</p>
+            <p class="g">Ready by <b>Thu 5:00 PM</b></p>
+            <div class="tech"><span class="av xs">TH</span>Tony<span class="chip">0 of 1 done</span></div>
+            <span class="chip green appr">1 of 1 approved</span>
+            <p class="wo">Waiting on: A/C compressor, ETA Thu</p>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>2 d</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+        </section>
+
+        <!-- QUALITY CHECK -->
+        <section class="col">
+          <div class="col-h"><b>Quality check</b><span class="count-pill">1</span></div>
+          <div class="kc">
+            <p class="ro">RO 2046</p>
+            <p class="car">2014 Toyota Tacoma</p>
+            <p class="g">White · Luis Carrasco</p>
+            <p class="g">Ready by <b>Today 11:00 AM</b></p>
+            <div class="tech"><span class="av xs">WK</span>Wade<span class="chip green">2 of 2 done</span></div>
+            <span class="chip green appr">2 of 2 approved</span>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>1 d</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+        </section>
+
+        <!-- DONE -->
+        <section class="col">
+          <div class="col-h"><b>Done</b><span class="count-pill green">3</span></div>
+          <p class="sub-h"><svg class="i s35"><use href="#key"/></svg>Ready for pickup<span class="count-pill gray">2</span></p>
+          <div class="kc">
+            <p class="ro">RO 2041</p>
+            <p class="car">2020 Honda CR-V</p>
+            <p class="g">Gray · Priya Royce</p>
+            <div class="tech"><span class="av xs">CO</span>Caleb<span class="chip green">1 of 1 done</span></div>
+            <p class="bal"><span class="t-amber">Balance $89.94</span><span class="muted fw5" style="display:block">Not picked up</span></p>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>40 m</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <div class="kc">
+            <p class="ro">RO 2044</p>
+            <p class="car">2017 Chevrolet Malibu</p>
+            <p class="g">Black · Rhonda Faulk</p>
+            <div class="tech"><span class="av xs">TH</span>Tony<span class="chip green">2 of 2 done</span></div>
+            <p class="bal"><span class="t-green">Paid</span><span class="muted fw5" style="display:block">Not picked up</span></p>
+            <p class="age"><svg class="i s35"><use href="#clock"/></svg>1 h</p>
+            <span class="btn outline block">Move to...</span>
+          </div>
+          <p class="sub-h"><svg class="i s35"><use href="#check-circle"/></svg>Picked up today<span class="count-pill gray">1</span></p>
+          <div class="kc" style="opacity:.8">
+            <p class="ro">RO 2042</p>
+            <p class="car">2018 GMC Sierra 1500</p>
+            <p class="g">Gray · Javier Montoya</p>
+            <div class="tech"><span class="av xs">WK</span>Wade<span class="chip green">3 of 3 done</span></div>
+            <p class="bal"><span class="t-green">Paid $1,148.20</span><span class="muted fw5" style="display:block">Picked up 9:05 AM</span></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock"><span class="ph"><svg class="i"><use href="#phone"/></svg></span></aside>
+</div>
+</body>
+</html>

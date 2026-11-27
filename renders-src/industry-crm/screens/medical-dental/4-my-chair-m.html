@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My chair · Alderbrook Family Dental (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .m-bar { min-height: 60px; }
+  .m-bar .chip { background: rgba(255,255,255,.2); color: var(--on-em); font-size: 11px; }
+  .phone .page { padding: 12px 14px 20px; }
+  .now { background: var(--panel); border-radius: 14px; box-shadow: var(--shadow); border-left: 4px solid rgb(var(--b-500)); padding: 10px 14px 12px; }
+  .now .k { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgb(var(--b-600)); }
+  .now .k .chip { margin-left: auto; letter-spacing: 0; }
+  .now .nm { margin-top: 2px; font-size: 19px; font-weight: 600; line-height: 26px; }
+  .now .ty { font-size: 13.5px; font-weight: 400; color: var(--muted); }
+  .ck-h { margin: 6px 0 0; font-size: 12px; font-weight: 600; color: var(--ink-2); }
+  .ck { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+  .ck .bx { width: 22px; height: 22px; border-radius: 7px; flex-shrink: 0; display: grid; place-items: center; margin-top: 1px; }
+  .ck .bx.on { background: rgb(var(--b-600)); color: var(--on-accent); }
+  .ck .bx.off { border: 2px solid var(--line-strong); background: var(--panel); }
+  .ck .t { font-size: 14px; font-weight: 600; line-height: 19px; }
+  .ck .s { font-size: 12.5px; color: var(--muted); line-height: 17px; }
+  .ck .toast { display: inline-flex; align-items: center; gap: 4px; margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: var(--green-soft); color: var(--green-ink); font-size: 11px; font-weight: 600; vertical-align: 1px; }
+  .ck .btn { min-height: 34px; padding: 6px 10px; flex-shrink: 0; }
+  .go { margin-top: 8px; }
+  .go .btn.big { min-height: 50px; }
+  .go small { display: block; text-align: center; margin-top: 5px; font-size: 12px; color: var(--muted-2); }
+  .nx { display: flex; align-items: center; gap: 12px; background: var(--panel); border-radius: 14px; box-shadow: var(--shadow); padding: 8px 12px; margin-top: 10px; }
+  .nx .time { padding: 6px 0; width: 56px; }
+  .nx .kk { font-size: 10.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-2); }
+  .nx .nm { font-size: 15px; font-weight: 600; line-height: 19px; }
+  .nx .s { font-size: 12.5px; color: var(--muted); }
+  .sec-l { display: flex; align-items: center; margin: 12px 2px 6px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-2); }
+  .rl .row { padding: 5px 12px; gap: 10px; }
+  .rl .tm { width: 54px; flex-shrink: 0; font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .rl .tm small { font-size: 10px; color: var(--muted-2); margin-left: 2px; }
+  .rl .time { width: 52px; padding: 5px 0; }
+  .rl .time b { font-size: 14px; }
+  .rl .row .name { font-size: 14px; }
+  .rl .row .line { font-size: 12px; margin-top: 0; }
+  .rl .row.collapsed { padding: 8px 12px; justify-content: space-between; color: var(--muted); font-size: 13px; background: var(--head); }
+  .rl .row.openslot { background: repeating-linear-gradient(135deg, var(--panel) 0 8px, rgb(var(--b-500) / .05) 8px 16px); box-shadow: inset 3px 0 0 rgb(var(--b-500)); }
+  .rl .row.openslot .name { color: rgb(var(--b-700)); }
+</style>
+</head>
+<body class="canvas-glow t-medical-dental">
+<script src="../../kit/icons.js"></script>
+<div class="phone canvas-glow">
+  <div class="m-bar">
+    <span class="av sm" style="background:rgba(255,255,255,.18);color:var(--on-em)">KE</span>
+    <p class="t">My chair<small>Kendra Ellis · Op 2 · Tue, Dec 1</small></p>
+    <span class="chip">7 patients · 1 open</span>
+  </div>
+
+  <div class="page">
+    <div class="now">
+      <p class="k"><svg class="i s35"><use href="#user"/></svg>In chair now<span class="chip brand">10:00 to 11:00</span></p>
+      <p class="nm">Hector Radcliffe <span class="ty">· Cleaning &amp; exam</span></p>
+
+      <p class="ck-h">Before he leaves</p>
+      <div class="ck">
+        <span class="bx on"><svg class="i s35" style="stroke-width:2.5"><use href="#check"/></svg></span>
+        <div class="grow"><p class="t">Next cleaning <span class="toast"><svg class="i s3" style="stroke-width:2.5"><use href="#check"/></svg>Booked</span></p><p class="s">Tue, Jun 1 · 10:00 AM · with Kendra</p></div>
+      </div>
+      <div class="ck">
+        <span class="bx off"></span>
+        <div class="grow"><p class="t">Alma Radcliffe</p><p class="s">Family · due in December</p></div>
+        <span class="btn outline sm">Book next to Hector</span>
+      </div>
+      <div class="ck">
+        <span class="bx" style="color:var(--muted-2)"><svg class="i s4"><use href="#clock"/></svg></span>
+        <div class="grow"><p class="t" style="font-weight:500;color:var(--ink-2)">Review request</p><p class="s">Sends automatically at 1:00 PM</p></div>
+      </div>
+
+      <div class="go">
+        <span class="btn primary big block"><svg class="i"><use href="#arrow-right-circle"/></svg>Ready for checkout</span>
+        <small>Lupe will see him at the counter</small>
+      </div>
+    </div>
+
+    <div class="nx">
+      <span class="time hot"><b>11:00</b><small>AM</small></span>
+      <div class="grow"><p class="kk">Next up</p><p class="nm">Nora Quinn</p><p class="s">Cleaning &amp; exam</p></div>
+      <span class="chip blue">Checked in 10:51</span>
+    </div>
+
+    <p class="sec-l">Rest of today</p>
+    <div class="list-card rows rl">
+      <div class="row collapsed"><span><svg class="i s4" style="vertical-align:-3px;color:var(--green)"><use href="#check-circle"/></svg> 2 done this morning</span><svg class="i s4"><use href="#chevron-down"/></svg></div>
+      <div class="row openslot"><span class="tm">1:00<small>PM</small></span><div class="main-col"><p class="name">Open hour</p><p class="line">ASAP list texted by Lupe</p></div></div>
+      <div class="row"><span class="tm">2:00<small>PM</small></span><div class="main-col"><p class="name">Carl Fox</p><p class="line">Cleaning &amp; exam</p></div><span class="chip green">✓ Confirmed</span></div>
+      <div class="row"><span class="tm">3:00<small>PM</small></span><div class="main-col"><p class="name">Rosa Ivey</p><p class="line">Front desk is on it</p></div><span class="chip amber">Unconfirmed</span></div>
+      <div class="row"><span class="tm">4:00<small>PM</small></span><div class="main-col"><p class="name">Gabe Lund</p><p class="line">Cleaning &amp; exam</p></div><span class="chip green">✓ Confirmed</span></div>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#user"/></svg></span>My chair</a>
+    <a><span class="ic"><svg class="i s6"><use href="#calendar-days"/></svg></span>Schedule</a>
+    <a><span class="ic"><svg class="i s6"><use href="#users"/></svg></span>Patients</a>
+    <a><span class="ic"><svg class="i s6"><use href="#inbox"/></svg></span>Inbox</a>
+  </nav>
+</div>
+</body>
+</html>

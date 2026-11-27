@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimate 1 · Turnbuckle Auto Repair</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .cx-top { padding: 10px 16px 8px; align-items: center; }
+  .cx-logo { width: 38px; height: 38px; }
+  .cx-name { font-size: 16px; }
+  .cx-name small { font-size: 12px; margin-top: 1px; }
+  .cx-name small { line-height: 1.35; }
+  .cx-name .tel2 { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); font-weight: 600; }
+  .cx-name .tel { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); font-weight: 600; margin-top: 2px; }
+  .cx-body { padding: 10px 16px; gap: 8px; }
+  .cx h2 { font-size: 19px; }
+  .date { font-size: 13px; color: var(--cx-muted); margin-top: 1px; }
+  .carc { padding: 8px 12px; }
+  .carc .ic { width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; flex-shrink: 0; }
+  .carc b { display: block; font-size: 14.5px; font-weight: 600; }
+  .carc span { font-size: 12px; color: var(--cx-muted); white-space: nowrap; }
+  .hd { font-size: 15px; font-weight: 600; }
+  .jobc { padding: 9px 12px; }
+  .jobc .top { display: flex; align-items: baseline; gap: 10px; }
+  .jobc .top b { font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .jobc .top .p { margin-left: auto; font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .jobc .lp { font-size: 12.5px; color: var(--cx-muted); margin-top: 1px; }
+  .pics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .pics figure { margin: 0; }
+  .pics img { width: 100%; height: 68px; object-fit: cover; border-radius: 8px; display: block; }
+  .pics figcaption { font-size: 11.5px; color: var(--cx-ink-2); margin-top: 3px; }
+  .ad { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .ad a { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; border-radius: 10px; border: 1px solid var(--cx-line); font-size: 14px; font-weight: 600; color: var(--cx-ink-2); }
+  .ad a.yes { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .ad a.no { background: var(--cx-ink-2); border-color: var(--cx-ink-2); color: var(--cx-bg); }
+  .jobc.decl { background: var(--cx-bg); }
+  .jobc.decl .top .p { color: var(--cx-muted); }
+  .tot { display: flex; align-items: center; padding: 8px 14px; border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); background: var(--accent-soft); }
+  .tot b { font-size: 15px; font-weight: 600; }
+  .tot .cx-pay { margin-left: auto; font-size: 24px; }
+  .tax { font-size: 12px; color: var(--cx-muted); margin-top: -4px; }
+  .fl { font-size: 13px; font-weight: 600; color: var(--cx-ink-2); margin-bottom: 4px; }
+  .inp { height: 44px; border: 1px solid var(--cx-line); background: var(--cx-card); color: var(--cx-ink); border-radius: 10px; padding: 0 12px; display: flex; align-items: center; font-size: 15px; }
+  .auth { display: flex; gap: 10px; font-size: 13px; color: var(--cx-ink-2); line-height: 1.4; }
+  .box { width: 20px; height: 20px; border-radius: 5px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
+</style>
+</head>
+<body class="cx t-auto-repair">
+<script src="../../kit/icons.js"></script>
+<div class="phone">
+  <header class="cx-top">
+    <span class="cx-logo">TA</span>
+    <p class="cx-name">Turnbuckle Auto Repair<small>1450 Turnbuckle Dr, Garland, TX 75041</small><small class="tel2"><svg class="i s35"><use href="#phone"/></svg>(972) 555-0148</small></p>
+  </header>
+
+  <div class="cx-body">
+    <div>
+      <h2>Estimate 1 for Brenda, from Dana</h2>
+      <p class="date">November 24, 2026</p>
+    </div>
+
+    <div class="cx-card carc">
+      <div><b>2018 Toyota Camry</b><span>Silver · VIN ends 604417 · RO 2052 · 61,280 miles in</span></div>
+    </div>
+
+    <p class="hd">Approve or decline each job</p>
+
+    <div class="cx-card jobc">
+      <div class="top"><b>Replace front brake pads and rotors</b><span class="p">$420</span></div>
+      <p class="lp">Labor $234 · Parts $186</p>
+      <div class="pics">
+        <figure><img src="img/pads.svg" alt=""><figcaption>Front pads, 2 mm left</figcaption></figure>
+        <figure><img src="img/rotor.svg" alt=""><figcaption>Rotor scoring, driver side</figcaption></figure>
+      </div>
+      <div class="ad"><a class="yes"><svg class="i s4"><use href="#check"/></svg>Approve</a><a>Decline</a></div>
+    </div>
+
+    <div class="cx-card jobc">
+      <div class="top"><b>Replace rear brake pads</b><span class="p">$195</span></div>
+      <p class="lp">Labor $143 · Parts $52</p>
+      <div class="ad"><a class="yes"><svg class="i s4"><use href="#check"/></svg>Approve</a><a>Decline</a></div>
+    </div>
+
+    <div class="cx-card jobc decl">
+      <div class="top"><b>Brake fluid flush</b><span class="p">$83</span></div>
+      <p class="lp">Labor $65 · Parts $18</p>
+      <div class="ad"><a>Approve</a><a class="no"><svg class="i s4"><use href="#x-mark"/></svg>Decline</a></div>
+    </div>
+
+    <div class="cx-card tot"><b>You are approving</b><span class="cx-pay">$615.00</span></div>
+    <p class="tax">Prices are before any tax or fees on your final bill.</p>
+
+    <div>
+      <p class="fl">Your full name</p>
+      <div class="inp">Brenda Ormsby</div>
+    </div>
+    <div class="auth"><span class="box"><svg class="i s35" style="stroke-width:2.5"><use href="#check"/></svg></span><span>I authorize Turnbuckle Auto Repair to do the work I approved above, for the prices shown. Turnbuckle Auto Repair will ask me again before doing other work or charging more.</span></div>
+    <a class="cx-btn">Send my answers</a>
+    <a class="cx-btn ghost"><svg class="i s4"><use href="#phone"/></svg>Call Turnbuckle Auto Repair</a>
+  </div>
+</div>
+</body>
+</html>
