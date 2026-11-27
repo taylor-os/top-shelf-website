@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox thread · Wellspring Animal Hospital (phone)</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  .phone { padding-bottom: 130px; }
+  .m-bar { gap: 8px; padding: 6px 12px; min-height: 52px; }
+  .m-bar .chip { background: rgba(255,255,255,.2); color: var(--on-em); font-size: 11.5px; gap: 4px; flex-shrink: 0; }
+  .chat { gap: 3px; padding: 6px 12px; }
+  .day-sep { margin: 2px 0 1px; }
+  .ai-card { margin: 4px 0 6px; border-color: color-mix(in srgb, var(--amber) 35%, var(--panel)); }
+  .ai-card .hd { flex-wrap: wrap; row-gap: 2px; background: var(--amber-soft); color: var(--amber-ink); padding: 8px 12px; align-items: center; }
+  .ai-card .hd .chip { margin-left: auto; }
+  .ai-card .hd .meta { flex-basis: 100%; font-size: 11.5px; font-weight: 500; color: var(--ink-2); }
+  .ai-card .bd { gap: 6px; padding: 8px 12px 7px; font-size: 12.5px; line-height: 17px; }
+  .bul li { font-size: 12.3px; }
+  .qt { display: flex; gap: 8px; align-items: flex-start; }
+  .qt p { font-style: italic; font-size: 12px; line-height: 16.5px; color: var(--ink-2); padding-left: 8px; border-left: 2px solid var(--line-strong); }
+  .ai-card .ft { align-items: center; }
+  .ft .lis { flex-shrink: 0; min-height: 30px; padding: 4px 10px; font-size: 12px; border-radius: 9px; }
+  .bul { display: flex; flex-direction: column; gap: 3px; margin: 0; padding: 0; }
+  .bul li { list-style: none; display: flex; gap: 7px; color: var(--ink-2); }
+  .bul li::before { content: ""; width: 5px; height: 5px; border-radius: 999px; background: rgb(var(--b-500)); margin-top: 6px; flex-shrink: 0; }
+  .bul b { font-weight: 600; color: var(--ink); }
+  .rule { font-size: 11px; line-height: 15px; color: var(--muted-2); padding-top: 6px; border-top: 1px solid var(--line); }
+  .ai-card .ft { gap: 6px; padding: 0 12px 10px; }
+  .msg { font-size: 13px; line-height: 18px; padding: 6px 11px; max-width: 86%; }
+  .msg-t { padding: 0 4px 1px; }
+  .sys { align-self: center; display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--blue-ink); background: var(--blue-soft); padding: 3px 11px; border-radius: 999px; margin: 3px 0; }
+  .composer { position: fixed; left: 0; right: 0; bottom: 64px; z-index: 9; padding: 7px 12px; }
+  .composer .in, .composer .send { height: 40px; }
+  .composer .send { width: 40px; }
+</style>
+</head>
+<body class="t-vet">
+<script src="../../kit/icons.js"></script>
+<script src="species.js"></script>
+<div class="phone">
+  <div class="m-bar">
+    <a><svg class="i s6"><use href="#arrow-left"/></svg></a>
+    <p class="t">Lacey Arbuckle<small>(940) 555-0174</small></p>
+    <span class="chip"><svg class="i s35"><use href="#dog"/></svg>Pepper (dog, 2)</span>
+    <a><svg class="i"><use href="#phone"/></svg></a>
+  </div>
+
+  <div class="chat">
+    <div class="ai-card">
+      <div class="hd"><svg class="i s4"><use href="#sparkles"/></svg>AI receptionist<span class="chip amber">Urgent</span>
+        <span class="meta">Wed, Dec 2 · 10:22 AM · 1:06 · Transferred to Callie at 0:41</span></div>
+      <div class="bd">
+        <div class="qt"><p>AI: "I'm not able to give medical advice, but I'm getting someone from our team on the line right now. Please stay with me."</p></div>
+        <ul class="bul">
+          <li><span>Caller says Pepper got into chocolate about 20 minutes ago</span></li>
+          <li><span>No advice given; flagged urgent</span></li>
+          <li><span>Warm transfer to Callie Dunaway, picked up in 9 sec</span></li>
+          <li><span>Callie booked: <b>Sick visit (same day) · today 10:45 AM · Dr. Cho · Exam 1</b> (held slot)</span></li>
+        </ul>
+        <p class="rule">If no one picks up in 30 sec, the AI gives Cedar Hollow Animal ER, (972) 555-0199, and texts the number.</p>
+      </div>
+      <div class="ft"><span class="btn outline lis"><svg class="i s35"><use href="#play"/></svg>Listen</span><span class="chip green">✓ Added to schedule</span><span class="chip brand">Dr. Cho notified</span></div>
+    </div>
+
+    <p class="msg-t r"><span class="tag">Wellspring</span> · 10:26 AM</p>
+    <div class="msg out">Hi Lacey, this is Wellspring Animal Hospital. We're expecting you and Pepper at 10:45 at 24 Cedar Hollow Road. Pull into a curbside spot and text us when you're here.</div>
+    <p class="msg-t l">Lacey · 10:27 AM</p>
+    <div class="msg in">On our way, about 15 minutes.</div>
+    <p class="msg-t l">Lacey · 10:44 AM</p>
+    <div class="msg in">Here, white SUV by the door.</div>
+    <p class="msg-t r"><span class="tag">Priya</span> · 10:44 AM</p>
+    <div class="msg out">Coming out to get you both now.</div>
+    <span class="sys"><svg class="i s35" style="stroke-width:2.2"><use href="#check-circle"/></svg>Checked in 10:45 AM · Exam 1</span>
+  </div>
+
+  <div class="composer">
+    <span class="icon-btn sm" style="color:var(--muted)"><svg class="i s4"><use href="#paper-clip"/></svg></span>
+    <span class="in">Text message</span>
+    <span class="send"><svg class="i s4"><use href="#paper-airplane"/></svg></span>
+  </div>
+
+  <nav class="tabs">
+    <a><span class="ic"><svg class="i s6"><use href="#home"/></svg></span>Today</a>
+    <a><span class="ic"><svg class="i s6"><use href="#calendar-days"/></svg></span>Schedule</a>
+    <a class="on"><span class="ic"><svg class="i s6"><use href="#inbox"/></svg><span class="badge" style="position:absolute;top:-4px;right:-10px">2</span></span>Inbox</a>
+    <a><span class="ic"><svg class="i s6"><use href="#ellipsis-horizontal"/></svg></span>More</a>
+  </nav>
+</div>
+</body>
+</html>

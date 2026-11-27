@@ -6,21 +6,21 @@
 <link rel="stylesheet" href="../../kit/kit.css">
 <link rel="stylesheet" href="../../kit/themes.css">
 <style>
-  .m-bar { min-height: 58px; }
+  .m-bar { min-height: 54px; padding-top: 7px; padding-bottom: 7px; }
   .m-bar .chip { background: rgba(255,255,255,.2); color: var(--on-em); font-size: 11px; }
-  .phone .page { padding: 10px 12px 16px; }
-  .dc { background: var(--panel); border-radius: 14px; box-shadow: var(--shadow); padding: 10px 12px; }
-  .dc + .dc { margin-top: 8px; }
+  .phone .page { padding: 8px 12px 12px; }
+  .dc { position: relative; background: var(--panel); border-radius: 14px; box-shadow: var(--shadow); padding: 10px 12px; }
+  .dc + .dc { margin-top: 6px; }
   .dc.open { border-left: 4px solid rgb(var(--b-500)); padding: 10px 12px 12px; }
   .dc .hd { display: flex; align-items: center; gap: 9px; }
-  .dc .pic { width: 36px; height: 36px; border-radius: 999px; display: grid; place-items: center; background: rgb(var(--b-500) / .12); color: rgb(var(--b-700)); flex-shrink: 0; }
+  .dc .pic { width: 32px; height: 32px; border-radius: 999px; display: grid; place-items: center; background: rgb(var(--b-500) / .12); color: rgb(var(--b-700)); flex-shrink: 0; }
   .dc .nm { font-size: 17px; font-weight: 600; line-height: 21px; }
   .dc .nm small { font-size: 13px; font-weight: 500; color: var(--muted-2); }
   .dc .s { font-size: 12.5px; color: var(--muted); line-height: 17px; }
-  .dc .when { font-size: 12.5px; color: var(--ink-2); margin-top: 6px; }
+  .dc .when { font-size: 12.5px; color: var(--ink-2); margin-top: 4px; }
   .dc .when b { font-weight: 600; color: var(--ink); }
   /* steps */
-  .stp { display: grid; grid-template-columns: repeat(4, 1fr); margin: 9px 0 4px; }
+  .stp { display: grid; grid-template-columns: repeat(4, 1fr); margin: 7px 0 2px; }
   .stp .st { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 11px; line-height: 13px; color: var(--muted); padding: 0 2px; }
   .stp .st i { width: 22px; height: 22px; border-radius: 999px; display: grid; place-items: center; border: 2px solid var(--line-strong); background: var(--panel); margin-bottom: 4px; z-index: 1; font-style: normal; }
   .stp .st::before { content: ""; position: absolute; top: 10px; right: 50%; width: 100%; height: 2px; background: var(--line-strong); }
@@ -31,23 +31,27 @@
   .stp .st.cur { color: rgb(var(--b-700)); font-weight: 600; }
   .stp .st.cur i { box-shadow: 0 0 0 4px rgb(var(--b-500) / .18); }
   .stp .st small { display: block; font-size: 10px; font-weight: 500; color: var(--green-ink); margin-top: 1px; }
-  .money { display: flex; align-items: center; gap: 8px; margin-top: 7px; padding: 7px 10px; border-radius: 10px; background: var(--well); font-size: 12px; line-height: 16px; color: var(--muted); }
+  .money { display: flex; align-items: center; gap: 8px; margin-top: 6px; padding: 5px 10px; border-radius: 10px; background: var(--well); font-size: 12px; line-height: 16px; color: var(--muted); }
   .money b { font-weight: 600; color: var(--ink-2); }
   .money .due { margin-left: auto; text-align: right; white-space: nowrap; }
   .money .due b { display: block; font-size: 16px; line-height: 20px; color: var(--ink); }
-  .thr { display: flex; flex-direction: column; gap: 3px; margin-top: 8px; }
-  .thr .msg { font-size: 12.5px; line-height: 16.5px; padding: 6px 10px; max-width: 86%; }
+  .thr { display: flex; flex-direction: column; gap: 2px; margin-top: 5px; }
+  .thr .msg { font-size: 12px; line-height: 15.5px; padding: 5px 10px; max-width: 92%; }
   .thr .msg-t { font-size: 10.5px; padding: 0 4px 0; }
-  .paylink { display: inline-flex; align-items: center; gap: 5px; margin-top: 5px; padding: 3px 10px; border-radius: 999px; background: var(--panel); color: rgb(var(--b-700)); font-weight: 600; font-size: 12px; }
-  .sent { align-self: flex-end; font-size: 10.5px; color: var(--green-ink); font-weight: 600; padding-right: 4px; }
-  .acts { display: flex; gap: 8px; margin-top: 9px; }
-  .acts .btn { min-height: 46px; font-size: 15px; }
+  .paylink { display: inline-flex; align-items: center; gap: 5px; margin-left: 4px; padding: 1px 9px; border-radius: 999px; background: var(--panel); color: rgb(var(--b-700)); font-weight: 600; font-size: 12px; }
+  .sent { align-self: flex-end; margin-top: -1px; font-size: 10.5px; color: var(--green-ink); font-weight: 600; padding-right: 4px; }
+  .acts { display: flex; gap: 8px; margin-top: 7px; }
+  .acts .btn { min-height: 44px; font-size: 15px; }
   .acts .btn.primary { flex: 1; }
-  .row2 { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
-  .row2 .btn { min-height: 42px; flex: 1; font-size: 14px; }
+  .row2 { display: flex; align-items: center; gap: 8px; margin-top: 7px; }
+  .row2 .btn { min-height: 38px; margin-left: auto; font-size: 13.5px; padding: 6px 12px; }
+  .dc .hd .dep { position: absolute; top: 12px; right: 12px; font-size: 11.5px; color: var(--green-ink); font-weight: 600; white-space: nowrap; }
+  .dc .hd .pk { position: absolute; top: 12px; right: 12px; text-align: right; font-size: 11px; color: var(--muted-2); line-height: 13px; }
+  .dc .hd .pk b { display: block; font-size: 15px; line-height: 19px; color: var(--ink); font-weight: 600; }
+  .dc .nm.c { font-size: 16px; line-height: 19px; }
   .row2 .dep { font-size: 11.5px; color: var(--green-ink); font-weight: 600; white-space: nowrap; }
   .dc .hd .chip { margin-left: auto; align-self: flex-start; }
-  .tv { display: flex; align-items: center; gap: 10px; margin-top: 8px; padding: 11px 14px; border-radius: 14px; background: var(--head); box-shadow: var(--shadow-sm); font-size: 13.5px; color: var(--muted); }
+  .tv { display: flex; align-items: center; gap: 10px; margin-top: 6px; padding: 9px 14px; border-radius: 14px; background: var(--head); box-shadow: var(--shadow-sm); font-size: 13.5px; color: var(--muted); }
   .tv svg.l { color: var(--green); }
   .tv svg.r { margin-left: auto; }
 </style>
@@ -67,12 +71,11 @@
       <div class="hd">
         <span class="pic"><svg class="i"><use href="#dog"/></svg></span>
         <div class="grow"><p class="nm">Bandit, <small>1</small></p><p class="s">Teo Villarreal · Neuter · Dr. Reed</p></div>
-        <span class="chip green">Ready</span>
+        <span class="pk">Pickup<b>3:30 PM</b></span>
       </div>
-      <p class="when">Dropped off <b>7:36 AM</b> · Pickup <b>3:30 PM</b></p>
 
       <div class="stp">
-        <div class="st done"><i><svg class="i s3" style="stroke-width:2.5"><use href="#check"/></svg></i>Dropped off</div>
+        <div class="st done"><i><svg class="i s3" style="stroke-width:2.5"><use href="#check"/></svg></i>Dropped off<small style="color:var(--muted-2)">7:36 AM</small></div>
         <div class="st done"><i><svg class="i s3" style="stroke-width:2.5"><use href="#check"/></svg></i>With the team</div>
         <div class="st done cur"><i><svg class="i s3" style="stroke-width:2.5"><use href="#check"/></svg></i>Ready for pickup<small>texted 2:58 PM</small></div>
         <div class="st"><i></i>Picked up</div>
@@ -89,7 +92,7 @@
         <p class="msg-t l">Teo · 3:02 PM</p>
         <div class="msg in">Great, be there at 3:45. Can I pay before I get there?</div>
         <p class="msg-t r"><span class="tag">Wellspring</span> · 3:04 PM</p>
-        <div class="msg auto">Sure, here's your link:<br><span class="paylink"><svg class="i s35"><use href="#credit-card"/></svg>Pay $198.40</span></div>
+        <div class="msg auto">Sure, here's your link: <span class="paylink"><svg class="i s35"><use href="#credit-card"/></svg>Pay $198.40</span></div>
         <span class="sent">Sent ✓</span>
       </div>
 
@@ -102,19 +105,19 @@
     <div class="dc">
       <div class="hd">
         <span class="pic"><svg class="i"><use href="#cat"/></svg></span>
-        <div class="grow"><p class="nm">Waffles, <small>6</small></p><p class="s">Grant Eckhart · Dental cleaning · Dr. Reed</p></div>
+        <div class="grow"><p class="nm c">Waffles, <small>6</small></p><p class="s">Grant Eckhart · Dental cleaning · Dr. Reed</p></div>
+        <span class="dep">Deposit $150 ✓</span>
       </div>
-      <div class="row2"><span class="chip brand">With the team</span><span class="s">Pickup <b style="color:var(--ink);font-weight:600">4:00 PM</b></span><span class="dep" style="margin-left:auto">Deposit $150 ✓</span></div>
-      <div class="row2"><span class="btn outline"><svg class="i s4"><use href="#paper-airplane"/></svg>Text: ready for pickup</span></div>
+      <div class="row2"><span class="chip brand">With the team</span><span class="s">Pickup <b style="color:var(--ink);font-weight:600">4:00 PM</b></span><span class="btn outline"><svg class="i s4"><use href="#paper-airplane"/></svg>Text: ready for pickup</span></div>
     </div>
 
     <div class="dc">
       <div class="hd">
         <span class="pic"><svg class="i"><use href="#dog"/></svg></span>
-        <div class="grow"><p class="nm">Mabel, <small>7 mo</small></p><p class="s">Sheila Driscoll · Spay · Dr. Reed</p></div>
+        <div class="grow"><p class="nm c">Mabel, <small>7 mo</small></p><p class="s">Sheila Driscoll · Spay · Dr. Reed</p></div>
+        <span class="dep">Deposit $150 ✓</span>
       </div>
-      <div class="row2"><span class="chip brand">With the team</span><span class="s">Pickup <b style="color:var(--ink);font-weight:600">4:30 PM</b></span><span class="dep" style="margin-left:auto">Deposit $150 ✓</span></div>
-      <div class="row2"><span class="btn outline"><svg class="i s4"><use href="#paper-airplane"/></svg>Text: ready for pickup</span></div>
+      <div class="row2"><span class="chip brand">With the team</span><span class="s">Pickup <b style="color:var(--ink);font-weight:600">4:30 PM</b></span><span class="btn outline"><svg class="i s4"><use href="#paper-airplane"/></svg>Text: ready for pickup</span></div>
     </div>
 
     <div class="tv"><svg class="i s4 l"><use href="#check-circle"/></svg>Tech visits · 6 done today<svg class="i s4 r"><use href="#chevron-down"/></svg></div>

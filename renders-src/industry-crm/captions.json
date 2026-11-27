@@ -460,5 +460,47 @@
     "caption": "The AI receptionist took an after-hours call and never claims stock; the owner texts back in the morning."
    }
   ]
+ },
+ "vet": {
+  "label": "Vet Clinics",
+  "built_around": "Built around the day by exam room, same-day sick slots, drop-offs from check-in to pickup, and wellness reminders. No medical records or advice anywhere.",
+  "screens": [
+   {
+    "file": "1-today-d.webp",
+    "device": "desktop",
+    "role": "Doctor · Today",
+    "caption": "The day by doctor, held same-day sick slots, drop-offs, and what came in overnight."
+   },
+   {
+    "file": "2-schedule-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Rooms",
+    "caption": "The day by exam room, cat room and surgery suite, with today's drop-offs and the open sick slots."
+   },
+   {
+    "file": "3-front-desk-d.webp",
+    "device": "desktop",
+    "role": "Front desk · Counter",
+    "caption": "A ringing line, curbside check-ins, new clients, and this month's reminders."
+   },
+   {
+    "file": "4-drop-offs-m.webp",
+    "device": "phone",
+    "role": "Vet tech · Drop-offs",
+    "caption": "Each drop-off from check-in to ready, then a text to the owner with the pay link."
+   },
+   {
+    "file": "5-client-page-m.webp",
+    "device": "phone",
+    "role": "Pet owner · Clinic page",
+    "caption": "The clinic's own page: book the overdue visit, see the drop-off and the deposit paid."
+   },
+   {
+    "file": "6-ai-receptionist-m.webp",
+    "device": "phone",
+    "role": "Inbox · Urgent call",
+    "caption": "The AI receptionist gives no advice and hands an urgent call to a person right away."
+   }
+  ]
  }
 }

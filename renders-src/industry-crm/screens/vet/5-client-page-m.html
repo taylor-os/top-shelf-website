@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your pets · Wellspring Animal Hospital</title>
+<link rel="stylesheet" href="../../kit/kit.css">
+<link rel="stylesheet" href="../../kit/themes.css">
+<style>
+  /* Wellspring's own look: cream ground, forest green, coral accent, sage-mist cards, Quicksand + Nunito Sans */
+  .cx .phone, .phone.cx, body.cx { background: var(--canvas); }
+  body.cx { --mist: rgb(var(--b-50)); --coral: var(--band-edge); }
+  .cx-top { padding: 10px 18px 6px; gap: 9px; border-bottom: 0; }
+  .cx-top img { width: 34px; height: 34px; }
+  .wm { font-family: var(--font-head); font-weight: 600; font-size: 19px; line-height: 20px; color: var(--accent); letter-spacing: -.01em; }
+  .wm small { display: block; font-family: var(--font); font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--cx-muted); margin-top: 1px; }
+  .sec { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; font-size: 11.5px; font-weight: 600; color: var(--accent); background: var(--mist); padding: 4px 10px; border-radius: 999px; }
+  .cx-body { gap: 9px; padding: 2px 16px 10px; }
+  .hi { display: flex; align-items: center; gap: 10px; }
+  .hi h2 { font-size: 23px; line-height: 28px; font-weight: 600; }
+  .pets { display: flex; gap: 6px; margin-left: auto; }
+  .pet { display: flex; align-items: center; gap: 6px; padding: 3px 10px 3px 3px; border-radius: 999px; background: var(--cx-card); box-shadow: 0 2px 10px rgb(var(--b-900) / .06); font-size: 11px; line-height: 13px; color: var(--cx-muted); }
+  .pet span.t { display: block; }
+  .pet b { display: block; font-family: var(--font-head); font-weight: 600; font-size: 13.5px; line-height: 16px; color: var(--cx-ink); }
+  .pet .ph { width: 32px; height: 32px; border-radius: 999px; display: grid; place-items: center; background: var(--mist); color: var(--accent); }
+  .card { background: var(--cx-card); border-radius: 22px; padding: 12px 15px; box-shadow: 0 2px 12px rgb(var(--b-900) / .05), 0 12px 30px rgb(var(--b-900) / .05); }
+  .card.due { border-left: 5px solid var(--coral); }
+  .card.mist { background: var(--mist); box-shadow: none; }
+  .k { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 6px; }
+  .k::before { content: ""; width: 18px; height: 2px; border-radius: 2px; background: var(--coral); }
+  .ttl { font-family: var(--font-head); font-size: 17px; line-height: 21px; font-weight: 600; color: var(--cx-ink); margin-top: 3px; }
+  .sub { font-size: 13px; line-height: 18px; color: var(--cx-muted); }
+  .tog { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--mist); margin-top: 8px; }
+  .tog a { padding: 4px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 600; color: var(--cx-ink-2); }
+  .tog a.on { background: var(--accent); color: var(--accent-ink); }
+  .times { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 6px; margin-top: 8px; }
+  .times a { border-radius: 14px; padding: 6px 8px; border: 1.5px solid var(--cx-line); background: var(--cx-card); font-size: 12.5px; line-height: 16px; color: var(--cx-ink); font-weight: 600; }
+  .times a small { display: block; font-weight: 400; color: var(--cx-muted); font-size: 11.5px; }
+  .times a.on { border-color: var(--accent); background: var(--mist); box-shadow: inset 0 0 0 1px var(--accent); }
+  .tag { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--accent); }
+  .note { font-size: 12px; color: var(--cx-muted); margin-top: 3px; display: flex; align-items: center; gap: 5px; }
+  .cx-btn { min-height: 46px; margin-top: 9px; border-radius: 999px; font-family: var(--font-head); font-weight: 600; font-size: 15px; width: 100%; }
+  .rw { display: flex; align-items: center; gap: 6px; }
+  .ok { display: inline-flex; align-items: center; gap: 3px; padding: 2px 9px; border-radius: 999px; background: var(--green-soft); color: var(--green-ink); font-size: 11.5px; font-weight: 700; margin-left: auto; white-space: nowrap; }
+  .est { margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--cx-line); font-size: 12.5px; line-height: 17px; color: var(--cx-ink-2); }
+  .est b { font-weight: 700; color: var(--cx-ink); }
+  .links { display: flex; gap: 14px; margin-top: 6px; font-size: 12.5px; font-weight: 700; color: var(--accent); }
+  .links span { display: inline-flex; align-items: center; gap: 4px; }
+  .pay { display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px; line-height: 17px; color: var(--cx-ink-2); padding: 0 4px; }
+  .pay svg { color: var(--accent); margin-top: 1px; }
+  .pay b { font-weight: 700; color: var(--cx-ink); }
+  .vis .r { display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px; line-height: 17px; color: var(--cx-ink-2); padding: 2px 0; }
+  .vis .r svg { color: var(--accent); margin-top: 1px; }
+  .vis .r b { font-weight: 700; color: var(--cx-ink); }
+  .urg { margin-top: 6px; padding: 7px 10px; border-radius: 14px; background: color-mix(in srgb, var(--coral) 24%, var(--cx-card)); font-size: 12.5px; line-height: 17px; color: var(--cx-ink); display: flex; gap: 7px; }
+  .urg b { font-weight: 700; }
+  .cx-foot { margin: 0; padding: 0; text-align: center; font-size: 11px; line-height: 14px; color: var(--cx-muted); }
+</style>
+</head>
+<body class="cx t-vet">
+<script src="../../kit/icons.js"></script>
+<script src="species.js"></script>
+<div class="phone">
+  <header class="cx-top">
+    <img src="../../../../websites/wellspring-animal-hospital/assets/logo-mark.svg" alt="">
+    <p class="wm">Wellspring<small>Animal Hospital</small></p>
+    <span class="sec"><svg class="i s35"><use href="#lock-closed"/></svg>Secure page</span>
+  </header>
+
+  <div class="cx-body">
+    <div class="hi">
+      <h2>Hi Joanna</h2>
+      <div class="pets">
+        <div class="pet"><span class="ph"><svg class="i"><use href="#dog"/></svg></span><span class="t"><b>Hazel</b>dog, 9</span></div>
+        <div class="pet"><span class="ph"><svg class="i"><use href="#cat"/></svg></span><span class="t"><b>Tofu</b>cat, 3</span></div>
+      </div>
+    </div>
+
+    <div class="card due">
+      <p class="k">Due now</p>
+      <p class="ttl">Tofu · Annual wellness &amp; vaccines</p>
+      <p class="sub">Due in December</p>
+      <div class="tog"><a>Any doctor</a><a class="on">Dr. Cho</a></div>
+      <div class="times">
+        <a class="on">Thu, Dec 10<small>8:30 AM</small></a>
+        <a>Sat, Dec 12<small>9:30 AM</small></a>
+        <a>Tue, Dec 15<small>4:45 PM</small></a>
+      </div>
+      <p class="tag"><svg class="i s35"><use href="#sparkles"/></svg>Same morning as Hazel's drop-off</p>
+      <p class="note"><svg class="i s35"><use href="#cat"/></svg>Cats wait in our separate cat area.</p>
+      <a class="cx-btn">Book Tofu · Thu, Dec 10 at 8:30 AM</a>
+    </div>
+
+    <div class="card">
+      <div class="rw"><p class="k">Coming up</p><span class="ok">Confirmed ✓</span></div>
+      <p class="ttl">Hazel · Dental cleaning (drop-off)</p>
+      <p class="sub"><b style="color:var(--cx-ink);font-weight:700">Thu, Dec 10</b> · Drop off 7:30 to 8:00 AM<br>Pickup after 3:30 PM, we'll text you</p>
+      <p class="est">Estimate approved Nov 24 · <b>$540 to $710</b><br>Deposit <b>$150.00 paid ✓</b> · <span style="color:var(--accent);font-weight:700">View estimate</span></p>
+      <div class="links"><span><svg class="i s35"><use href="#calendar"/></svg>Add to calendar</span><span><svg class="i s35"><use href="#arrow-path"/></svg>Reschedule</span></div>
+    </div>
+
+    <p class="pay"><svg class="i s4"><use href="#credit-card"/></svg><span><b>How payment works:</b> payment is due at the time of service. At pickup we'll text you a link, or pay at the desk.</span></p>
+
+    <div class="card mist vis">
+      <div class="r"><svg class="i s4"><use href="#map-pin"/></svg><span><b>24 Cedar Hollow Road</b> · Free parking, easy curbside drop-off</span></div>
+      <div class="r"><svg class="i s4"><use href="#phone"/></svg><span>(972) 555-0153</span></div>
+      <div class="r"><svg class="i s4"><use href="#clock"/></svg><span>Mon-Fri 8-6 · Sat 8-2 · closed Sun</span></div>
+      <div class="urg"><svg class="i s4" style="flex-shrink:0;margin-top:1px"><use href="#heart"/></svg><span><b>Is it urgent?</b> Call us now. After hours, we'll give you the nearest emergency hospital.</span></div>
+    </div>
+
+    <p class="cx-foot">Wellspring Animal Hospital · Secure page</p>
+  </div>
+</div>
+</body>
+</html>
