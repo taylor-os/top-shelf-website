@@ -4,7 +4,7 @@
 
 Edit the PALETTES below, not themes.css. Each palette names a handful of key colors; everything
 else (brand scale, lines, tints, semantic colors, customer-page tokens) is derived here so the
-11 themes stay consistent. Chrome (sidebar / band / bars / tab bar) is always dark with light text.
+12 themes stay consistent. Chrome (sidebar / band / bars / tab bar) is always dark with light text.
 """
 import sys
 from pathlib import Path
@@ -48,19 +48,25 @@ DARK_SEM = dict(green="#34d399", green_ink="#6ee7b7", amber="#fbbf24", amber_ink
 
 # mode, canvas, panel, chrome (sidebar) [, band], accent (brand 500), text ramp, button gradient (light, mid, deep) + its text,
 # nav highlight on chrome, optional hairline on band/sidebar, section-bar color, customer-page accent (+ ink).
+# Optional: deep = how far b-600..b-950 darken toward black in a light theme (default DEEP); a bright accent
+# (amber, teal) needs more so its text shades stay AA. fonts = (heading, body) Google Fonts families for the
+# customer pages (body.cx) only, copied from the paired website in pairs.json; staff pages keep Figtree.
+# Every palette except car-lots, auto-detailing and fitness is taken from its paired website's styles.css
+# (those three sites are being built to these palettes).
 PALETTES = {
-    "home-services": dict(mode="light", canvas="#f7faf8", panel="#ffffff", side="#1f6e4a", accent="#2e9e6a",
-        ink="#111827", ink2="#374151", muted="#4b5563", muted2="#6b7280", faint="#9ca3af",
-        grad=("#38a06c", "#23825a", "#1a6a47"), on_accent="#ffffff", nav_ink="#ffffff",
-        cx_accent="#1f6e4a", cx_ink="#ffffff", keep_scale=True),
+    "home-services": dict(mode="light", canvas="#f6f3ee", panel="#ffffff", side="#0b1b2b", band="#0e2740", accent="#f6a623",
+        ink="#0b1b2b", ink2="#2f3d4a", muted="#3c4a57", muted2="#5a6976", faint="#a3aeb8",
+        grad=("#fac969", "#f6a623", "#e08e12"), on_accent="#0b1b2b", nav_ink="#fac969", edge="rgb(246 166 35 / .55)",
+        deep=(.40, .50, .60, .70, .80), cx_accent="#0e2740", cx_ink="#ffffff", cx_logo=("#f6a623", "#0b1b2b"),
+        fonts=("Sora", "Inter")),
     "car-lots": dict(mode="dark", canvas="#111113", panel="#1a1a1d", side="#09090a", accent="#c9a34e",
         ink="#f4efe4", ink2="#ddd6c8", muted="#aca596", muted2="#938c7f", faint="#6b665d",
         grad=("#e3c378", "#c9a34e", "#a9873b"), on_accent="#17130a", edge="rgb(201 163 78 / .35)",
         cx_accent="#c9a34e", cx_ink="#17130a"),
-    "auto-repair": dict(mode="dark", canvas="#1b2026", panel="#242a31", side="#13171b", accent="#f26b1d",
-        ink="#eef1f4", ink2="#cfd5dc", muted="#a5aeb9", muted2="#8d97a3", faint="#66707c",
-        grad=("#ff8f45", "#f26b1d", "#d9580f"), on_accent="#1a0d04", edge="rgb(242 107 29 / .45)", bar="#333c46",
-        cx_accent="#f26b1d", cx_ink="#1a0d04"),
+    "auto-repair": dict(mode="dark", canvas="#15171b", panel="#1d2026", side="#0e0f12", accent="#e23b2e",
+        ink="#f5f7f9", ink2="#d5dbe2", muted="#aeb6bf", muted2="#8a929b", faint="#5f6670",
+        grad=("#e23b2e", "#c42e22", "#a62518"), on_accent="#ffffff", edge="rgb(226 59 46 / .45)", bar="#2c313a",
+        cx_accent="#f0604f", cx_ink="#0e0f12", fonts=("Space Grotesk", "Inter")),
     "auto-detailing": dict(mode="dark", canvas="#07090d", panel="#0f131a", side="#030406", accent="#3b8eff",
         ink="#eaf0f7", ink2="#cbd5e1", muted="#9aa7b8", muted2="#8290a3", faint="#55637a",
         grad=("#3f87f2", "#2563eb", "#1d4ed8"), on_accent="#ffffff", edge="rgb(59 142 255 / .35)",
@@ -69,32 +75,50 @@ PALETTES = {
         ink="#f2f2f0", ink2="#d6d6d2", muted="#a9a9a4", muted2="#91918c", faint="#666662",
         grad=("#f08a45", "#e0702e", "#c95e1f"), on_accent="#180a03", edge="rgb(224 112 46 / .4)",
         cx_accent="#e0702e", cx_ink="#180a03"),
-    "restaurants": dict(mode="dark", canvas="#17110f", panel="#221a17", side="#100b0a", accent="#c49a5a",
-        ink="#f4ebe3", ink2="#dccfc3", muted="#b5a79a", muted2="#9b8c80", faint="#6e6158",
-        grad=("#a8434a", "#8a2b31", "#6e1f25"), on_accent="#fbf1ea", edge="rgb(196 154 90 / .35)",
-        bar="#5e1f25", bubble=("#6e242a", "#fbf1ea"), cx_accent="#c49a5a", cx_ink="#1a110c",
-        cx_logo=("#8a2b31", "#f3d9a8")),
-    "real-estate": dict(mode="light", canvas="#f8f5ee", panel="#fffefa", side="#24493b", band="#2e5c4a", accent="#3f7a63",
-        ink="#1d2722", ink2="#38443e", muted="#525e57", muted2="#66716a", faint="#a3aaa3",
-        grad=("#47826a", "#2e5c4a", "#244a3b"), on_accent="#ffffff", nav_ink="#ecd8ae", edge="rgb(176 138 78 / .85)",
-        cx_accent="#2e5c4a", cx_ink="#ffffff"),
-    "salon-spa": dict(mode="light", canvas="#fbf5f3", panel="#fffdfc", side="#4b2843", accent="#9b5a86",
-        ink="#2a1f27", ink2="#44363f", muted="#5e5059", muted2="#74656e", faint="#b0a3ab",
-        grad=("#a8679a", "#8a4c78", "#6f3c61"), on_accent="#ffffff", nav_ink="#f7dcec",
-        cx_accent="#8a4c78", cx_ink="#ffffff"),
-    "medical-dental": dict(mode="light", canvas="#f3f7f9", panel="#ffffff", side="#1e3a55", accent="#14928f",
-        ink="#12202c", ink2="#2f3e4c", muted="#4a5866", muted2="#5f6d7b", faint="#a0abb6",
-        grad=("#1b9d99", "#11797a", "#0d6264"), on_accent="#ffffff", nav_ink="#c9f1ee",
-        cx_accent="#11797a", cx_ink="#ffffff"),
-    "legal": dict(mode="light", canvas="#f6f2e9", panel="#fffdf8", side="#1b2741", accent="#3b5687",
-        ink="#1c2230", ink2="#363d4c", muted="#51586a", muted2="#666c7b", faint="#a9a9a6",
-        grad=("#3c5888", "#2a4170", "#1e3157"), on_accent="#ffffff", nav_ink="#ead9b0", edge="rgb(168 138 78 / .85)",
-        cx_accent="#1e2b4a", cx_ink="#ffffff"),
-    "retail": dict(mode="light", canvas="#fbf6ef", panel="#fffdf9", side="#7a3a25", accent="#c0643e",
-        ink="#2b1e18", ink2="#47362e", muted="#5f5048", muted2="#75655c", faint="#b3a59b",
-        grad=("#c86a43", "#a84d2a", "#8c3f22"), on_accent="#ffffff", nav_ink="#ffe1cf",
-        cx_accent="#a84d2a", cx_ink="#ffffff"),
+    "restaurants": dict(mode="dark", canvas="#141110", panel="#221c18", side="#0e0c0b", accent="#e8722a",
+        ink="#f4ece2", ink2="#dcd3c6", muted="#c4bbae", muted2="#a0978b", faint="#6e655c",
+        grad=("#f29a5b", "#e8722a", "#cf5f1f"), on_accent="#1a0f08", edge="rgb(228 180 88 / .4)",
+        cx_accent="#e8722a", cx_ink="#1a0f08", fonts=("Fraunces", "Inter")),
+    "real-estate": dict(mode="light", canvas="#f7f5f0", panel="#ffffff", side="#22493a", band="#2e5c4a", accent="#2e5c4a",
+        ink="#211f1b", ink2="#413d36", muted="#575249", muted2="#6b665c", faint="#a8a397",
+        grad=("#3a6e59", "#2e5c4a", "#22493a"), on_accent="#ffffff", nav_ink="#f0d496", edge="rgb(232 178 74 / .7)",
+        cx_accent="#2e5c4a", cx_ink="#ffffff", fonts=("Cormorant Garamond", "Manrope")),
+    "salon-spa": dict(mode="light", canvas="#f4ede3", panel="#fbf7f1", side="#4a2f4d", band="#5b3b5e", accent="#5b3b5e",
+        ink="#2a2129", ink2="#45373f", muted="#5a4c54", muted2="#66585f", faint="#ad9fa6",
+        grad=("#6e4c71", "#5b3b5e", "#4a2f4d"), on_accent="#fbf7f1", nav_ink="#e4c88a", edge="rgb(193 151 78 / .6)",
+        cx_accent="#5b3b5e", cx_ink="#fbf7f1", fonts=("Cormorant Garamond", "Jost")),
+    "medical-dental": dict(mode="light", canvas="#f5fbfb", panel="#ffffff", side="#0a555c", band="#0c6e77", accent="#17b0b8",
+        ink="#123138", ink2="#2c464d", muted="#41585f", muted2="#526a6f", faint="#9fb4b7",
+        grad=("#0e8a93", "#0c7c85", "#0a6168"), on_accent="#ffffff", nav_ink="#dcf1f2",
+        deep=(.32, .42, .54, .65, .76), cx_accent="#0c6e77", cx_ink="#ffffff", fonts=("Manrope", "Inter")),
+    "legal": dict(mode="light", canvas="#f5f1e8", panel="#fffdf8", side="#16231d", band="#1c2e26", accent="#a6813f",
+        ink="#16231d", ink2="#2f3b35", muted="#48524c", muted2="#5a645d", faint="#aaa89e",
+        grad=("#a6813f", "#8a6a2e", "#735823"), on_accent="#ffffff", nav_ink="#c7a65c", edge="rgb(166 129 63 / .85)",
+        deep=(.20, .32, .44, .56, .70), cx_accent="#8a6a2e", cx_ink="#ffffff", fonts=("Playfair Display", "Inter")),
+    "retail": dict(mode="light", canvas="#f4efe6", panel="#faf6ee", side="#5a3a2a", accent="#c0694a",
+        ink="#2b211b", ink2="#44382f", muted="#544b42", muted2="#635a50", faint="#b3a698",
+        grad=("#c0694a", "#a2543a", "#8c4530"), on_accent="#faf6ee", nav_ink="#f2dfd3",
+        cx_accent="#a2543a", cx_ink="#faf6ee", fonts=("Bricolage Grotesque", "Inter")),
+    "vet": dict(mode="light", canvas="#fbf8f3", panel="#ffffff", side="#175540", band="#1e6b54", accent="#1e6b54",
+        ink="#16302a", ink2="#33443c", muted="#4c5a52", muted2="#58635b", faint="#a2aca5",
+        grad=("#2a7d64", "#1e6b54", "#175540"), on_accent="#fbf8f3", nav_ink="#fee0d5", edge="rgb(238 114 86 / .6)",
+        cx_accent="#1e6b54", cx_ink="#fbf8f3", fonts=("Quicksand", "Nunito Sans")),
 }
+
+DEEP = (.14, .28, .42, .55, .70)
+SERIF = {"Cormorant Garamond", "Fraunces", "Playfair Display"}
+SANS_STACK = 'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif'
+SERIF_STACK = 'Georgia, "Times New Roman", serif'
+
+
+def font_stack(family):
+    return f'"{family}", {SERIF_STACK if family in SERIF else SANS_STACK}'
+
+
+def fonts_import():
+    fams = sorted({f for p in PALETTES.values() for f in p.get("fonts", ())})
+    q = "&".join(f"family={f.replace(' ', '+')}:wght@400;500;600" for f in fams)
+    return f'@import url("https://fonts.googleapis.com/css2?{q}&display=swap");\n'
 
 
 def scale(p):
@@ -103,7 +127,7 @@ def scale(p):
         lo = [(50, .10), (100, .20), (200, .35), (300, .52), (400, .75)]
         out = {k: mix(a, "#ffffff", t) for k, t in lo}
         out[500] = a
-        out.update({k: mix("#000000", a, t) for k, t in [(600, .14), (700, .28), (800, .42), (900, .55), (950, .70)]})
+        out.update({k: mix("#000000", a, t) for k, t in zip((600, 700, 800, 900, 950), p.get("deep", DEEP))})
     else:  # dark: 50-400 are tints toward the panel, 600-950 lighten so they read as text on dark
         out = {k: mix(a, p["panel"], t) for k, t in [(50, .10), (100, .18), (200, .30), (300, .45), (400, .70)]}
         out[500] = a
@@ -122,10 +146,9 @@ def build(name, p):
     side, band = p["side"], p.get("band", p["side"])
     panel, canvas, ink = p["panel"], p["canvas"], p["ink"]
     t = {}  # token -> value
-    if not p.get("keep_scale"):
-        for k, v in sc.items():
-            t[f"b-{k}"] = trip(v)
-        t["glow"] = trip(p["accent"])
+    for k, v in sc.items():
+        t[f"b-{k}"] = trip(v)
+    t["glow"] = trip(p["accent"])
     t.update({"grad-1": p["grad"][0], "grad-2": p["grad"][1], "grad-3": p["grad"][2], "on-accent": p["on_accent"],
               "focus": p["accent"] if dark else p["grad"][1]})
     soft = .16 if dark else .14
@@ -173,6 +196,8 @@ def build(name, p):
         cx["cx-logo"], cx["cx-logo-ink"] = p["cx_logo"]
     if dark:
         cx["cx-line"] = mix("#ffffff", panel, .14)
+    if "fonts" in p:  # customer pages only: --font reaches body text and buttons, --font-head the headings
+        cx["font-head"], cx["font"] = (font_stack(f) for f in p["fonts"])
     return t, cx, sc
 
 
@@ -190,8 +215,8 @@ def checks(name, p, t, cx, sc):
         ("active nav", t["nav-on-ink"], nav_bg_c, 4.5),
         ("button text / grad-2", t["on-accent"], t["grad-2"], 4.5), ("button text / grad-1 (edge)", t["on-accent"], t["grad-1"], 3.0),
         ("band button", t["band-btn-ink"], t["band-btn-bg"], 4.5), ("out bubble", t["bubble-out-ink"], t["bubble-out"], 4.5),
-        ("b-600 text / panel", sc[600] if not p.get("keep_scale") else "#28885b", panel, 4.5 if not p.get("keep_scale") else 4.0),
-        ("b-700 on brand chip", sc[700] if not p.get("keep_scale") else "#21724c", mix(p["accent"], panel, .15), 4.5),
+        ("b-600 text / panel", sc[600], panel, 4.5),
+        ("b-700 on brand chip", sc[700], mix(p["accent"], panel, .15), 4.5),
         ("green chip", t["green-ink"], mix(t["green"], panel, soft), 4.5), ("amber chip", t["amber-ink"], mix(t["amber"], panel, soft), 4.5),
         ("red chip", t["red"], mix(t["red"], panel, soft), 4.5), ("blue chip", t["blue-ink"], mix(t["blue"], panel, soft), 4.5),
         ("badge", t["badge-ink"], t["badge"], 4.5),
@@ -216,9 +241,13 @@ def css_block(sel, tokens, scheme=None):
 
 
 def main():
+    dark = ", ".join(n for n, p in PALETTES.items() if p["mode"] == "dark")
     css = ["/* Industry themes for the Top Shelf CRM kit. GENERATED by make_themes.py: edit the palettes there, then rerun.\n"
            "   Load after kit.css. Staff pages: <body class=\"t-<industry>\">. Customer pages: <body class=\"cx t-<industry>\">.\n"
-           "   Dark themes: car-lots, auto-repair, auto-detailing, fitness, restaurants. Light: the rest. */\n"]
+           f"   Dark themes: {dark}. Light: the rest.\n"
+           "   Customer pages use the paired website's fonts where a theme sets them; staff pages keep Figtree. */\n",
+           fonts_import(),
+           "body.cx :is(h1, h2, h3, .cx-name) { font-family: var(--font-head, var(--font)); }\n"]
     fails = 0
     for name, p in PALETTES.items():
         t, cx, sc = build(name, p)

@@ -12,7 +12,7 @@ This kit is plain HTML and CSS that reproduces the emerald FieldPro look from th
 4. Icons: `<svg class="i"><use href="#wrench-screwdriver"/></svg>`. The name is any Heroicon outline name. Sizes: default 20, `s3` 12, `s35` 14, `s4` 16, `s6` 24, `s8` 32.
 
 ## Industry themes
-Each industry has its own palette in `themes.css`. Some are light and some are dark, and every theme keeps the same layout and components. The customer pages for an industry use that industry's CRM palette.
+Each industry has its own palette in `themes.css`. Some are light and some are dark, and every theme keeps the same layout and components. Each palette is taken from that industry's paired sample website (`../pairs.json` names it), so the CRM and the site read as the same business. The customer pages for an industry use that industry's CRM palette and, where the theme sets them, the website's fonts.
 
 **Opt in.** Load the stylesheet after kit.css, then add the theme class to `<body>`:
 ```html
@@ -21,7 +21,7 @@ Each industry has its own palette in `themes.css`. Some are light and some are d
 <body class="t-restaurants">              <!-- staff screen -->
 <body class="cx t-restaurants">           <!-- customer page: booking, hub, pay link -->
 ```
-The themes are `t-home-services`, `t-real-estate`, `t-salon-spa`, `t-medical-dental`, `t-legal` and `t-retail` (light), plus `t-car-lots`, `t-auto-repair`, `t-auto-detailing`, `t-fitness` and `t-restaurants` (dark). A page with no theme class renders the original emerald look. To see every palette at once, open `examples/themes-preview/contact-sheet.jpg`.
+The themes are `t-home-services`, `t-real-estate`, `t-salon-spa`, `t-medical-dental`, `t-legal`, `t-retail` and `t-vet` (light), plus `t-car-lots`, `t-auto-repair`, `t-auto-detailing`, `t-fitness` and `t-restaurants` (dark). A page with no theme class renders the original emerald look. To see every palette at once, open `examples/themes-preview/contact-sheet.jpg`.
 
 **Rule: page styles never hard-code a color.** That includes `<style>` blocks and `style=""` attributes: no `#fff`, no `#1c1917`, no `rgb(245 158 11 / .1)`. Use the tokens below so the theme reaches your page:
 - Surfaces:
@@ -46,7 +46,7 @@ The themes are `t-home-services`, `t-real-estate`, `t-salon-spa`, `t-medical-den
   - `rgb(var(--b-50))`: a tinted background
 - Buttons and solid accent fills:
   - `--grad-1`, `--grad-2`, `--grad-3`: the primary button gradient
-  - `--on-accent`: text on those fills. It is dark in the gold, orange and blue themes, so never put `#fff` on `--b-500` or `--grad-*`
+  - `--on-accent`: text on those fills. It is dark in the amber, gold and orange themes (home-services, car-lots, fitness, restaurants) and cream in others, so never put `#fff` on `--b-500` or `--grad-*`
   - `--focus`: focus ring
 - Chrome (sidebar, band, bars, tab bar):
   - `--side`, `--band`, `--bar`, `--tabbar`: chrome backgrounds
@@ -66,8 +66,9 @@ The themes are `t-home-services`, `t-real-estate`, `t-salon-spa`, `t-medical-den
 - Shadows: `--shadow`, `--shadow-sm`
 - Customer pages (`.cx`):
   - `--cx-bg`, `--cx-card`, `--cx-ink`, `--cx-ink-2`, `--cx-muted`, `--cx-faint`, `--cx-line`: page, cards, text and lines
-  - `--accent`, `--accent-ink`, `--accent-soft`: the business color, the text on it, and its tint
+  - `--accent`, `--accent-ink`, `--accent-soft`: the business color, the text on it, and its tint. It is also used as text, so it can differ from the staff accent (home-services uses the website's navy, not its amber)
   - `--cx-logo`, `--cx-logo-ink`: optional logo-tile colors; they fall back to `--accent` and `--accent-ink`
+  - `--font`, `--font-head`: the website's body and heading fonts, set on `body.cx` only when the theme has them. `--font` reaches body text and buttons; `h1`, `h2`, `h3` and `.cx-name` use `--font-head`. Write `font-family: var(--font)` or `var(--font-head)`, never a font name. Staff pages keep Figtree so every industry reads as the same product
 
 **Converting an existing page:**
 - **Inline accents on customer pages.** Delete any `--accent` / `--accent-soft` / `--accent-ink` written in `style=""` on `<body class="cx">`. An inline style beats the theme, so the page would keep its old color.
@@ -78,7 +79,7 @@ The themes are `t-home-services`, `t-real-estate`, `t-salon-spa`, `t-medical-den
 - **Placeholder photos.** A gradient you drew for a photo placeholder should use `rgb(var(--b-200))` through `rgb(var(--b-600))`.
 - **Check both modes.** Render the page in a dark theme and confirm nothing is still white.
 
-**Changing a palette:** edit `PALETTES` in `make_themes.py`, then run `python make_themes.py`. It rewrites `themes.css` and re-checks WCAG AA contrast for text, chips, buttons, the active nav, chat bubbles and customer pages. It exits with an error if any check fails. Never hand-edit `themes.css`.
+**Changing a palette:** edit `PALETTES` in `make_themes.py`, then run `python make_themes.py`. Two optional keys: `fonts=("Heading", "Body")` gives the customer pages that theme's Google Fonts (copy them from the website's entry in `pairs.json`; `themes.css` loads every family named in one `@import`), and `deep=(...)` darkens `b-600`..`b-950` further in a light theme whose accent is bright (amber, teal), so accent text stays AA. It rewrites `themes.css` and re-checks WCAG AA contrast for text, chips, buttons, the active nav, chat bubbles and customer pages. It exits with an error if any check fails. Never hand-edit `themes.css`.
 
 ## Render
 ```
