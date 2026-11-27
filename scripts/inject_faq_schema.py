@@ -14,7 +14,7 @@ Run from the repo root. A page with no FAQ markup is skipped (reported).
 import sys, re, json, glob, html
 
 MARKER = "<!-- FAQPage schema (auto-generated from on-page FAQ; see scripts/inject_faq_schema.py) -->"
-BLOCK_RE = re.compile(re.escape(MARKER) + r".*?</script>", re.DOTALL)
+BLOCK_RE = re.compile(r"\n?" + re.escape(MARKER) + r".*?</script>", re.DOTALL)  # \n? keeps reruns from adding blank lines
 PAT_QA = re.compile(r'<p class="qa-q">(?P<q>.*?)</p>\s*<p class="qa-a">(?P<a>.*?)</p>', re.DOTALL)
 PAT_DETAILS = re.compile(r'<details[^>]*>\s*<summary>(?P<q>.*?)</summary>(?P<a>.*?)</details>', re.DOTALL)
 
@@ -23,7 +23,8 @@ def clean(fragment: str) -> str:
     """Strip inline tags, decode entities, collapse whitespace -> plain text."""
     text = re.sub(r'<[^>]+>', ' ', fragment)   # drop br/span/a/strong/etc.
     text = html.unescape(text)                 # &mdash; -> —, &rsquo; -> ’
-    return re.sub(r'\s+', ' ', text).strip()
+    text = re.sub(r'\s+', ' ', text).strip()
+    return re.sub(r' ([.,;:!?])', r'\1', text)  # "<a>link</a> ." -> "link."
 
 
 def extract(source: str):

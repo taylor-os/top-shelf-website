@@ -34,6 +34,30 @@
 
 <!-- FAQPage schema (auto-generated from on-page FAQ; see scripts/inject_faq_schema.py) -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My guys are under cars all day. Who is actually answering the phone?","acceptedAnswer":{"@type":"Answer","text":"The AI receptionist answers every call in your shop’s name and books the job, after hours too. When a car dies on the shoulder and the driver calls, he gets an answer instead of voicemail, so he doesn’t drive to the next shop on Google."}},{"@type":"Question","name":"Customers don’t trust a repair they only hear about on the phone. What helps?","acceptedAnswer":{"@type":"Answer","text":"Put it in writing. Estimates go out by text from the CRM, with your notes on what you found and what it costs. The customer can read it, think it over and come back to it, and you have a record of what you told them."}},{"@type":"Question","name":"How do I get paid faster on the big jobs?","acceptedAnswer":{"@type":"Answer","text":"Send the invoice by text. The customer pays by card from the link, from the waiting room or from home, so you aren’t waiting on a check or chasing a balance."}},{"@type":"Question","name":"The dealership down the road has 900 reviews and I have a dozen. How do I compete?","acceptedAnswer":{"@type":"Answer","text":"After every job the CRM texts the customer a review request, right when they are most likely to leave one. Review replies help you answer the reviews you already have. In auto repair reviews are the number one trust factor, so a fuller, fresher profile starts to reflect the work you actually do."}},{"@type":"Question","name":"This sounds like several tools. What does it cost, and do I keep everything if I leave?","acceptedAnswer":{"@type":"Answer","text":"It is one app and one bill. The Signature plan is $99 a month for 1 to 10 users and $199 a month for 11 to 25 users, with no setup fee, month to month. Each phone line is $50 a month and covers normal use. A new website is $499 one time if you want one. Your website, domain, phone number and customer list stay yours if you ever leave."}}]}</script>
+<style id="crm-strip-css">
+.crm-strip{display:flex;gap:clamp(1rem,2.5vw,2rem);align-items:flex-end;justify-content:center}
+.crm-strip .cbi-lap{flex:1 1 0;min-width:0;max-width:760px}
+.crm-strip .cbi-phone{flex:0 0 auto;width:clamp(120px,13vw,165px);height:auto}
+.crm-strip.crm-multi .cbi-lap{max-width:none}
+.crm-strip figure{margin:0;min-width:0}
+.crm-strip figcaption{margin-top:.9rem;font-size:.82rem;color:var(--ink-3);text-align:center}
+.crm-strip figure.cbi-lapfig{flex:1 1 0}
+.crm-strip img{display:block;width:100%;height:auto}
+.cbi-win{margin:0 6%;padding:6px 6px 9px;background:#060606;border-radius:12px 12px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+.cbi-win img{border-radius:3px}
+.cbi-lap-base{position:relative;height:8px;margin-top:2px;background:linear-gradient(#2c2721,#120f0c 60%,#080706);border-top:1px solid rgba(201,168,106,.65);border-radius:1px 1px 12px 12px/1px 1px 8px 8px}
+.cbi-lap-base::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15%;height:3px;border-radius:0 0 7px 7px;background:#050505}
+.cbi-phone{padding:4px;border-radius:20px;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75),0 36px 70px -28px rgba(0,0,0,.85)}
+.cbi-phone img{border-radius:16px}
+.crm-strip-foot{display:flex;flex-wrap:wrap;gap:.8rem 1.6rem;align-items:center;justify-content:center;margin-top:clamp(1.8rem,3.5vw,2.6rem)}
+.crm-strip-way{margin:clamp(1.6rem,3vw,2.2rem) auto 0;max-width:60ch;text-align:center;color:var(--ink-2)}
+.crm-strip-tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:.3rem .65rem;border:1px solid var(--hairline-strong);border-radius:999px}
+@media (max-width:760px){
+  .crm-strip{flex-wrap:wrap}
+  .crm-strip .cbi-lap,.crm-strip figure.cbi-lapfig{flex:1 1 100%}
+  .crm-strip .cbi-phone{width:calc(50% - .6rem);max-width:200px}
+}
+</style>
 </head>
 <body>
 <div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
@@ -46,6 +70,7 @@
       <div class="nav-item">
         <a href="#" class="nav-link">Industries <span class="nav-arrow">&#9662;</span></a>
         <div class="nav-dropdown">
+          <a href="crm-by-industry.html">CRM by Industry</a>
           <a href="industry-home-services.html">Home Services</a>
           <a href="industry-restaurants.html">Restaurants &amp; Bars</a>
           <a href="industry-medical-dental.html">Medical &amp; Dental</a>
@@ -434,6 +459,19 @@
 </section>
 
 <!-- crm-screens-slot -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:64ch;margin-inline:auto">
+      <span class="eyebrow reveal" style="justify-content:center">See It for Your Business</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What the CRM Looks Like <em>for Auto Businesses</em></h2>
+      <p class="reveal" style="margin-inline:auto">Car lots, repair shops and detailers each get their own setup. Here is the owner&rsquo;s home screen for three made-up businesses.</p>
+    </div>
+    <div class="crm-strip crm-multi reveal"><figure class="cbi-lapfig"><div class="cbi-lap"><div class="cbi-win"><img src="assets/img/crm/industries/car-lots/1-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Owner · Home: The lot&#x27;s day: loan and down payments in, what&#x27;s past due, cars by stage, sold deals still needing paperwork. Sample screen for Bramlett Motor Co., a made-up business."></div><div class="cbi-lap-base" aria-hidden="true"></div></div><figcaption>Car Lots &middot; <a class="tlink" href="crm-by-industry.html#car-lots">See all the screens <span class="arr">&rarr;</span></a></figcaption></figure><figure class="cbi-lapfig"><div class="cbi-lap"><div class="cbi-win"><img src="assets/img/crm/industries/auto-repair/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Owner · Service today: Who to call: ready for pickup, money owed, waiting on an OK, and declined work to follow up. Sample screen for Turnbuckle Auto Repair, a made-up business."></div><div class="cbi-lap-base" aria-hidden="true"></div></div><figcaption>Auto Repair &middot; <a class="tlink" href="crm-by-industry.html#auto-repair">See all the screens <span class="arr">&rarr;</span></a></figcaption></figure><figure class="cbi-lapfig"><div class="cbi-lap"><div class="cbi-win"><img src="assets/img/crm/industries/auto-detailing/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Owner · Home: Deposits held, money in, cars ready for pickup, add-ons waiting on the customer, detailer load. Sample screen for Kestrel Lane Detail Co., a made-up business."></div><div class="cbi-lap-base" aria-hidden="true"></div></div><figcaption>Auto Detailing &middot; <a class="tlink" href="crm-by-industry.html#auto-detailing">See all the screens <span class="arr">&rarr;</span></a></figcaption></figure></div>
+    <p class="crm-strip-way reveal">Want it laid out your way? We can change the screens, or build one around your business. Same $99 a month for up to 10 users.</p>
+    <div class="crm-strip-foot reveal"><span class="crm-strip-tag">Sample screens</span></div>
+  </div>
+</section>
+<!-- /crm-screens-slot -->
 
 <section class="section rule-top">
   <div class="container">
@@ -821,6 +859,7 @@
       <div>
         <p class="footer-col-title">Industries</p>
         <div class="footer-links">
+          <a href="crm-by-industry.html">CRM by Industry</a>
           <a href="industry-home-services.html">Home Services</a>
           <a href="industry-restaurants.html">Restaurants &amp; Bars</a>
           <a href="industry-medical-dental.html">Medical &amp; Dental</a>
@@ -865,8 +904,8 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/site.js?v=20261008c"></script>
-<script src="assets/gap-quiz.js?v=20261126a"></script>
+<script src="assets/site.js?v=20261126a"></script>
+<script src="assets/gap-quiz.js?v=20261126b"></script>
 <script src="assets/events.js?v=1" defer></script>
 </body>
 </html>

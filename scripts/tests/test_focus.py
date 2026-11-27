@@ -3,6 +3,7 @@
 Fails while any page or page source still sells a removed plan or price, links to
 a removed page, carries the old nav, or leaves a removed URL without a 301.
 """
+import glob
 import html
 import json
 import os
@@ -251,3 +252,35 @@ def test_form_fields():
     # the users choice has no field of its own: it rides inside need ("Users: 11-25")
     script = src[m.end():]
     assert re.search(r"need:\s*'Users: '\s*\+\s*users", script), "users must be folded into need"
+
+
+def test_crm_by_industry():
+    page = os.path.join(cat.ROOT, "crm-by-industry.html")
+    assert os.path.exists(page)
+    src = read(page)
+    refs = set(re.findall(r'assets/img/crm/industries/[\w-]+/[\w-]+\.webp', src))
+    assert len(refs) == 66, len(refs)
+    missing = [r for r in refs if not os.path.exists(os.path.join(cat.ROOT, r))]
+    assert not missing, missing
+    assert "Sample screens" in src
+    no_link = [os.path.basename(p) for p in sorted(glob.glob(os.path.join(cat.ROOT, "industry-*.html")))
+               if not p.endswith("industry-custom.html") and 'href="crm-by-industry.html#' not in read(p)]
+    assert not no_link, no_link
+
+
+JS_COMMENT_RE = re.compile(r"/\*.*?\*/|(?<!:)//[^\n]*", re.S)  # (?<!:) keeps https:// in strings
+JS_BANNED_RE = re.compile(r"SEO report|Local SEO|Map Pack|Google Business Profile|deep-dive|\baudit\b|—|&mdash;", re.I)
+
+
+def test_site_scripts_sell_nothing_removed():
+    """assets/*.js (gap quiz, chat assistant) must not sell SEO/audits or use em dashes.
+
+    Comments are stripped first: only strings a visitor can see count.
+    """
+    bad = []
+    for path in sorted(glob.glob(os.path.join(cat.ROOT, "assets", "*.js"))):
+        code = JS_COMMENT_RE.sub("", read(path))
+        for line in code.splitlines():
+            for m in JS_BANNED_RE.finditer(line):
+                bad.append("%s: %r in %s" % (rel(path), m.group(0), line.strip()[:120]))
+    assert not bad, "%d hits:\n%s" % (len(bad), "\n".join(bad[:40]))

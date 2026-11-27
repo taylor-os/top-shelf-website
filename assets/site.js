@@ -302,10 +302,6 @@
   var form = panel.querySelector('.tsc-foot');
   var input = form.querySelector('input');
 
-  var VAULT = { services: [], sections: [] };
-  fetch('assets/services-vault.json').then(function (r) { return r.json(); })
-    .then(function (d) { VAULT = d; }).catch(function () {});
-
   var STOP = ' the a an and or for of to your you with we our is are on in do does can ';
   function score(text, keywords) {
     var t = ' ' + text.toLowerCase() + ' ', s = 0;
@@ -313,24 +309,20 @@
     return s;
   }
 
-  // Site-level intents (checked before the vault)
+  // Site-level intents
   var INTENTS = [
-    { k: ['hello','hi','hey','help','start'], a: function () { return "Hi! I'm the Top Shelf AI assistant. I can walk you through what we do — websites, marketing, CRM, AI phone answering, payments and a lot more — and help you get a free audit. What kind of business do you run?"; } },
-    { k: ['price','pricing','cost','how much','quote','rate','fee','afford','budget'], a: function () { return "Every business is different, so we don't do one-size-fits-all pricing — we run a quick <strong>free audit</strong> of your business and build you a custom plan that fits. Want me to set that up? I'll just grab your details."; } },
-    { k: ['who are you','what is top shelf','about','why you','why top shelf','trust'], a: function () { return "Top Shelf Business Solutions is your all-in-one growth partner — we handle the tech and marketing that get you more customers, so you can run your business. We tailor everything to your trade and you keep what we build for you."; } },
-    { k: ['how does it work','how it works','process','get started','start','next step'], a: function () { return "Simple: we do a free audit of where you're losing customers, show you exactly what we'd fix, and build a custom plan — no guesswork. Want me to get you on the list for an audit?"; } },
-    { k: ['contact','talk','human','call','phone','reach','speak','email'], a: function () { return "Happy to connect you with a real person. Drop your info and we'll reach out fast — what's your name?"; } },
-    { k: ['services','what do you offer','what do you do','offerings','list','everything'], a: function () { return "We cover a lot — grouped into: " + (VAULT.sections.join(', ') || 'web presence, marketing, CRM, phone & communications, payments, and more') + ". Which area is on your mind? Or tell me your biggest headache and I'll point you to the fix."; } },
+    { k: ['hello','hi','hey','help','start'], a: function () { return "Hi! I'm the Top Shelf AI assistant. I can walk you through the Top Shelf CRM and our $499 professional websites. What kind of business do you run?"; } },
+    { k: ['price','pricing','cost','how much','quote','rate','fee','afford','budget'], a: function () { return "The Signature plan is <strong>$99/mo for 1 to 10 users</strong> and $199/mo for 11 to 25. For 26 or more, call us for pricing. Phone lines are $50/mo each. A professional website is $499 one time. Want us to call you and set up a demo? I'll just grab your details."; } },
+    { k: ['who are you','what is top shelf','about','why you','why top shelf','trust'], a: function () { return "Top Shelf Business Solutions makes the Top Shelf CRM: one app that answers your calls, books jobs, sends invoices by text and asks for reviews. We also build professional websites for $499 one time."; } },
+    { k: ['how does it work','how it works','process','get started','start','next step'], a: function () { return "Simple: you send a short request, we call you, then we send you a demo of the CRM working on the kind of jobs you do. Want me to grab your details?"; } },
+    { k: ['contact','talk','human','call','phone','reach','speak','email'], a: function () { return "Happy to connect you with a real person. Drop your info and we'll reach out fast. What's your name?"; } },
+    { k: ['services','what do you offer','what do you do','offerings','list','everything'], a: function () { return "Two things: the Top Shelf CRM and a $499 professional website. The CRM includes an AI receptionist that answers and books, missed-call text-back, online booking, a dispatch board, a customer hub, invoices by text, review requests and replies, on-my-way texts, estimates, card payments, and an AI chatbot for your current website. Want a demo? I'll grab your details."; } },
   ];
 
   function findAnswer(text) {
     var best = null, bs = 0;
-    INTENTS.forEach(function (it) { var s = score(text, it.k); if (s > bs) { bs = s; best = { a: it.a(), cta: /audit|reach out|on the list|your name|your details/i.test(it.a()) }; } });
-    VAULT.services.forEach(function (sv) {
-      var s = score(text, sv.keywords) + score(text, [sv.name.toLowerCase()]) * 1.5;
-      if (s > bs) { bs = s; best = { a: '<strong>' + sv.name + '.</strong> ' + sv.blurb + (sv.great_for ? ' <em>Great for ' + sv.great_for + '.</em>' : '') + ' Want a free audit to see what this looks like for your business?', cta: true }; }
-    });
-    if (!best) return { a: "Great question — the fastest way to a solid answer is a quick free audit tailored to your business. Want me to grab your info so a Top Shelf specialist can follow up?", cta: true };
+    INTENTS.forEach(function (it) { var s = score(text, it.k); if (s > bs) { bs = s; best = { a: it.a(), cta: /reach out|on the list|your name|your details/i.test(it.a()) }; } });
+    if (!best) return { a: "Great question. The fastest way to a solid answer is a quick call. Want me to grab your details so we can call you and send you a demo of the CRM?", cta: true };
     return best;
   }
 
@@ -388,7 +380,7 @@
   function start(need) {
     lead = { active: true, step: 1, name: '', business: '', contact: '', need: need || '' };
     window.__tsChatSetQuick([]);
-    ask("Love it — let's get you a free audit. First, what's your name?");
+    ask("Love it. Let's get you a demo of the CRM. First, what's your name?");
   }
   window.__tsChatStartCapture = start;
 
@@ -405,11 +397,11 @@
       .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
       .then(function () {
         if (window.tsTrack) window.tsTrack('generate_lead'); // confirmed chat lead
-        ask("You're all set, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! ✅ A Top Shelf specialist will reach out shortly about your free audit. Prefer email? <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a>.", 500);
+        ask("You're all set, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! ✅ We'll call you shortly to set up your demo. Prefer email? <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a>.", 500);
         lead.active = false;
       })
       .catch(function () {
-        ask("Sorry — something went wrong sending that, and I don't want your request to vanish. Call or text <a href='tel:+14698333033'>(469) 833-3033</a>, or email <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a> and we'll pick it straight up.", 500);
+        ask("Sorry, something went wrong sending that, and I don't want your request to vanish. Call or text <a href='tel:+14698333033'>(469) 833-3033</a>, or email <a href='mailto:contact@topshelfsolutions.io'>contact@topshelfsolutions.io</a> and we'll pick it straight up.", 500);
         lead.active = false;
       });
   }
@@ -418,20 +410,20 @@
     if (lead.step === 1) { lead.name = text.trim(); lead.step = 2; ask("Thanks, " + window.__tsChatEscape(lead.name.split(' ')[0]) + "! What's your business or trade?"); return; }
     if (lead.step === 2) { lead.business = text.trim(); lead.step = 3; ask("Got it. What's the best email or phone to reach you?"); return; }
     if (lead.step === 3) {
-      if (!EMAIL_RE.test(text) && !PHONE_RE.test(text)) { ask("Hmm, that doesn't look like an email or a full phone number — mind sending one so we can reach you?"); return; }
+      if (!EMAIL_RE.test(text) && !PHONE_RE.test(text)) { ask("Hmm, that doesn't look like an email or a full phone number. Mind sending one so we can reach you?"); return; }
       lead.contact = text.trim(); lead.step = 4;
-      ask("Perfect. Anything specific you're hoping to fix or grow? (Optional — you can say 'not sure'.)"); return;
+      ask("Perfect. Anything specific you're hoping to fix or grow? (Optional, you can say 'not sure'.)"); return;
     }
     if (lead.step === 4) { if (!lead.need) lead.need = text.trim(); lead.step = 0; submit(); return; }
   }
 
-  var wantsCapture = /(call me|reach out|contact me|leave|my (name|number|info)|get (an )?audit|book|sign me up|yes|get started|interested)/i;
+  var wantsCapture = /(call me|reach out|contact me|leave|my (name|number|info)|get (an? )?demo|book|sign me up|yes|get started|interested)/i;
 
   // The scripted flow: keyword answers + step-by-step capture. It is the fallback
   // for when the AI assistant below can't be reached.
   function scripted(text) {
     var res = window.__tsChatRespond(text); // renders the answer
-    if (res && (res.cta || wantsCapture.test(text))) { setTimeout(function () { if (!lead.active) start(text); }, 1500); }
+    if (res && wantsCapture.test(text)) { setTimeout(function () { if (!lead.active) start(text); }, 1500); }
   }
 
   /* AI assistant: the CRM answers each turn from the whole conversation and saves

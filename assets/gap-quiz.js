@@ -1,5 +1,5 @@
 /* ============================================================
-   TOP SHELF — GAP FINDER (Quiz A)  ·  site widget
+   TOP SHELF: GAP FINDER (Quiz A)  ·  site widget
    Self-injecting pop-up lead tool. Loaded site-wide via
    <script src="assets/gap-quiz.js"></script> before </body>.
    Rebrandable: edit the CONFIG object below. Source template:
@@ -27,32 +27,32 @@ var CONFIG = {
   intro: {
     eyebrow:"60-second business check",
     headline:"Where is your business <em>losing money?</em>",
-    sub:"No forms, no typing — just tap what sounds familiar. We'll show you where you're likely losing customers and what it's costing.",
+    sub:"No forms, no typing. Just tap what sounds familiar. We'll show you where you're likely losing customers and what it's costing.",
     cta:"Find my gap"
   },
   areas: [
-    { eyebrow:"Getting found", icon:"map-pin", solution:"Websites & Local SEO", solutionUrl:"solution-websites-seo.html",
-      question:"When someone needs what you do, how easily do they find you?", transition:"",
-      symptoms:[{label:"Not on page 1 of Google for &lsquo;near me&rsquo;",monthly:1400},{label:"My website is dated, slow, or missing",monthly:900},{label:"Not showing in the Google Map Pack",monthly:1200}]},
+    { eyebrow:"Your website", icon:"map-pin", solution:"Professional Websites", solutionUrl:"solution-websites-seo.html",
+      question:"When someone checks out your website, does it help them reach you?", transition:"",
+      symptoms:[{label:"Website looks dated or is hard to use on a phone",monthly:1400},{label:"My website is slow, or I don&rsquo;t have one",monthly:900},{label:"Website form doesn&rsquo;t reach anyone",monthly:1200}]},
     { eyebrow:"Your reputation", icon:"star", solution:"Reviews & Reputation", solutionUrl:"solution-reviews.html",
       question:"How does your reputation look when they compare you?", transition:"",
       transitionIf:{area:0,symptom:1,text:"With no website steering people to review you, this usually suffers too."},
       symptoms:[{label:"Fewer reviews than my competitors",monthly:1100},{label:"My reviews are old and stale",monthly:600},{label:"No system asking customers for reviews",monthly:900}]},
     { eyebrow:"The phone", icon:"phone", solution:"AI Phone & Receptionist", solutionUrl:"solution-ai-phone.html",
-      question:"When they call and you&rsquo;re busy or closed, what happens?", transition:"They found you and trust the reviews — they still have to reach you.",
+      question:"When they call and you&rsquo;re busy or closed, what happens?", transition:"They found you and trust the reviews. They still have to reach you.",
       symptoms:[{label:"Calls go to voicemail when we&rsquo;re busy",monthly:1800},{label:"Nobody answers after hours",monthly:1500},{label:"Not sure how many calls I miss",monthly:800}]},
     { eyebrow:"Follow-up", icon:"route", solution:"Lead Capture & CRM", solutionUrl:"solution-crm.html",
       question:"Who chases the leads and quotes that don&rsquo;t close on the spot?", transition:"And the ones who don&rsquo;t get through, or ask for a quote?",
-      symptoms:[{label:"Quotes go cold — no follow-up",monthly:1700},{label:"Leads slip through the cracks",monthly:1400},{label:"No CRM — it&rsquo;s all in my head",monthly:900}]},
-    { eyebrow:"Repeat &amp; time", icon:"refresh", solution:"Memberships & Automation", solutionUrl:"solution-memberships.html",
-      question:"Once you win a customer, does anything bring them back?", transition:"Last one — winning them the first time is the expensive part.",
-      symptoms:[{label:"Customers buy once and vanish",monthly:1200},{label:"No memberships or loyalty",monthly:800},{label:"I&rsquo;m buried in admin all day",monthly:1000}]}
+      symptoms:[{label:"Quotes go cold with no follow-up",monthly:1700},{label:"Leads slip through the cracks",monthly:1400},{label:"No CRM, it&rsquo;s all in my head",monthly:900}]},
+    { eyebrow:"Repeat &amp; time", icon:"refresh", solution:"Follow-Up & Automation", solutionUrl:"solution-automation.html",
+      question:"Once you win a customer, does anything bring them back?", transition:"Last one. Winning them the first time is the expensive part.",
+      symptoms:[{label:"Customers buy once and vanish",monthly:1200},{label:"No reminders that bring them back",monthly:800},{label:"I&rsquo;m buried in admin all day",monthly:1000}]}
   ],
   industries:["Home services","Restaurant / bar","Medical / dental","Law firm","Retail / local","Auto","Salon / spa / fitness","Other"],
   thankYou:{
-    title:"Well done — you&rsquo;ve taken the first step.",
-    body:"Most owners never stop to look at where they&rsquo;re quietly losing customers. You just did &mdash; and that&rsquo;s exactly how the businesses that pull ahead begin. A Top Shelf specialist will personally reach out within one business day to walk you through your gaps and deliver your <strong style=\"color:#F4F0E8\">free, tailored deep-dive SEO report</strong> of your Google Business Profile and website &mdash; so you&rsquo;ll see precisely where you stand and what to fix first.",
-    note:"No obligation &mdash; just a clear, professional look at how to make your business more successful."
+    title:"Well done, you&rsquo;ve taken the first step.",
+    body:"Most owners never stop to look at where they&rsquo;re quietly losing customers. You just did, and that&rsquo;s how the businesses that pull ahead begin. We&rsquo;ll <strong style=\"color:#F4F0E8\">call you</strong> to talk through your answers, then <strong style=\"color:#F4F0E8\">send you a demo of the Top Shelf CRM</strong> so you can see it working on the kind of jobs you do.",
+    note:"No obligation. Just a clear look at how the CRM could work for your business."
   }
 };
 
@@ -101,7 +101,7 @@ function build(){
   var logo=B.logoUrl?'<img src="'+B.logoUrl+'" alt="'+B.name+'" style="height:22px">':'<span style="font-weight:500;letter-spacing:1.5px;color:'+C.ink+';font-size:14px">'+B.logoText+'</span>';
   root.innerHTML='<div class="tsl-card">'+
     '<div style="position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:14px"><div style="display:flex;align-items:center;gap:10px"><img src="'+B.logoUrl+'" alt="" style="width:30px;height:30px;flex:none;display:block"><span style="font-family:'+B.fontDisplay+';font-weight:600;font-size:16px;color:'+C.ink+';letter-spacing:.01em">'+B.kicker+'</span></div><button id="tsl-close" aria-label="Close" style="position:absolute;right:0;top:50%;transform:translateY(-50%);background:none;border:0;color:'+C.ink4+';cursor:pointer;line-height:0">'+svg("x",18)+'</button></div>'+
-    (BE.showDollars?'<div id="tsl-meter" style="background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:13px;padding:14px 16px;margin-bottom:18px;display:none"><div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Gap / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div><div id="tsl-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:40px;color:'+C.goldBright+';line-height:1.1">'+BE.currency+'0</div><div style="height:5px;background:rgba(201,168,106,.14);border-radius:4px;margin-top:8px;overflow:hidden"><div id="tsl-bar" style="height:100%;width:0;background:'+C.gold+';transition:width .5s"></div></div><div style="color:'+C.ink4+';font-size:10.5px;margin-top:6px">Rough industry estimate — not a guarantee.</div></div>':'')+
+    (BE.showDollars?'<div id="tsl-meter" style="background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:13px;padding:14px 16px;margin-bottom:18px;display:none"><div style="display:flex;align-items:baseline;justify-content:space-between"><span class="tsl-eb">Gap / month</span><span id="tsl-yr" style="color:'+C.ink4+';font-size:12px">~'+BE.currency+'0 / yr</span></div><div id="tsl-money" style="font-family:'+B.fontDisplay+';font-weight:600;font-size:40px;color:'+C.goldBright+';line-height:1.1">'+BE.currency+'0</div><div style="height:5px;background:rgba(201,168,106,.14);border-radius:4px;margin-top:8px;overflow:hidden"><div id="tsl-bar" style="height:100%;width:0;background:'+C.gold+';transition:width .5s"></div></div><div style="color:'+C.ink4+';font-size:10.5px;margin-top:6px">Rough industry estimate, not a guarantee.</div></div>':'')+
     '<div id="tsl-stage"></div>'+
     '<div style="margin-top:20px"><div id="tsl-prog" style="height:4px;background:rgba(201,168,106,.15);border-radius:4px;overflow:hidden;margin-bottom:14px"><div id="tsl-progfill" style="height:100%;width:10%;background:linear-gradient(90deg,'+C.gold+','+C.goldBright+');border-radius:4px;transition:width .55s cubic-bezier(.22,1,.36,1)"></div></div><div style="display:flex;align-items:center;justify-content:space-between"><span id="tsl-dots" style="color:'+C.ink4+';font-size:11.5px;letter-spacing:.04em"></span><div id="tsl-nav" style="display:flex;gap:10px"></div></div></div>'+
   '</div>';
@@ -136,22 +136,22 @@ function step(){var a=CONFIG.areas[cur];dots(cur,CONFIG.areas.length);var t=tr(c
   if(t)h+='<p style="color:'+C.gold+';font-size:13.5px;font-style:italic;margin:9px 0 0">&ldquo;'+t+'&rdquo;</p>';
   h+='<div style="display:flex;flex-direction:column;gap:9px;margin-top:16px">';
   a.symptoms.forEach(function(s,i){var on=sel[cur]&&sel[cur].indexOf(i)>-1;h+='<button class="tsl-tile'+(on?' on':'')+'" data-i="'+i+'"><span class="tsl-k">'+(on?svg("check",14):'')+'</span><span class="tsl-icn">'+svg(a.icon,20)+'</span><span style="flex:1">'+s.label+'</span></button>';});
-  h+='</div><p style="color:'+C.ink4+';font-size:11.5px;margin:12px 0 0">Tap any that sound familiar — leave blank if it&rsquo;s handled.</p>';
+  h+='</div><p style="color:'+C.ink4+';font-size:11.5px;margin:12px 0 0">Tap any that sound familiar. Leave blank if it&rsquo;s handled.</p>';
   stage.innerHTML=h;
   stage.querySelectorAll('.tsl-tile').forEach(function(b){b.onclick=function(){var i=+b.getAttribute('data-i');sel[cur]=sel[cur]||[];var p=sel[cur].indexOf(i);if(p>-1)sel[cur].splice(p,1);else sel[cur].push(i);step();meter();};});
-  navEl.innerHTML=(cur>0?'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>':'')+'<button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my gap report')+' →</button>';
+  navEl.innerHTML=(cur>0?'<button class="tsl-btn tsl-line" id="tsl-bk">Back</button>':'')+'<button class="tsl-btn tsl-gold" id="tsl-nx">'+(cur<CONFIG.areas.length-1?'Continue':'See my results')+' →</button>';
   root.querySelector('#tsl-nx').onclick=function(){if(cur<CONFIG.areas.length-1){cur++;step();}else report();};
   var bk=root.querySelector('#tsl-bk');if(bk)bk.onclick=function(){if(cur>0){cur--;step();}};
 }
 function report(){dots(CONFIG.areas.length,CONFIG.areas.length);var t=total();var areas=[];
   for(var k in sel){if(sel[k].length){var sub=0;sel[k].forEach(function(i){sub+=CONFIG.areas[k].symptoms[i].monthly;});areas.push([CONFIG.areas[k].eyebrow.replace('&amp;','&'),sub,CONFIG.areas[k].solution]);}}
   areas.sort(function(a,b){return b[1]-a[1];});
-  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your gap report</div><h3 class="tsl-h" style="font-size:24px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year — a rough estimate from your answers.</p>';
+  var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your results</div><h3 class="tsl-h" style="font-size:24px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year, a rough estimate from your answers.</p>';
   if(areas.length){h+='<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">';areas.forEach(function(a){h+='<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:10px 13px"><span style="color:'+C.ink+';font-size:13.5px">'+a[0]+' <span style="color:'+C.ink4+'">→ '+a[2]+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:18px">'+fmt(a[1])+'</span></div>';});h+='</div>';}
-  else h+='<p style="color:'+C.ink3+'">Nothing selected yet — most owners have at least a couple. Tap Back and take a look.</p>';
-  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">Get your free, no-obligation gap audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We&rsquo;ll turn this into your real numbers — whether you work with us or not.</p><div style="display:flex;gap:10px;align-items:flex-start;background:'+C.surface+';border:1px solid rgba(201,168,106,.18);border-radius:11px;padding:11px 13px;margin:0 0 10px"><span class="tsl-icn" style="margin-top:1px">'+svg("report",18)+'</span><p style="color:'+C.ink2+';font-size:12.5px;margin:0;line-height:1.5">Every audit includes a <strong style="color:'+C.ink+'">free, tailored deep-dive SEO report</strong> of your Google Business Profile &amp; website. <a href="sample-report.html" target="_blank" rel="noopener" style="color:'+C.gold+';border-bottom:1px solid rgba(201,168,106,.45);white-space:nowrap">See a sample &rarr;</a></p></div><input class="tsl-in" id="tsl-name" placeholder="Your name"><input class="tsl-in" id="tsl-biz" placeholder="Business name"><select class="tsl-in" id="tsl-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tsl-in" id="tsl-contact" placeholder="Phone or email"><p style="color:'+C.ink4+';font-size:11px;line-height:1.5;margin:8px 0 0">By submitting, you agree to receive SMS from Top Shelf Business Solutions at the number you provide. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="privacy.html" target="_blank" rel="noopener" style="color:'+C.gold+'">Privacy Policy</a>.</p></div>';
+  else h+='<p style="color:'+C.ink3+'">Nothing selected yet. Most owners have at least a couple. Tap Back and take a look.</p>';
+  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">See how the Top Shelf CRM handles this</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 10px">Leave your details. We&rsquo;ll call you, then send you a demo of the CRM.</p><input class="tsl-in" id="tsl-name" placeholder="Your name"><input class="tsl-in" id="tsl-biz" placeholder="Business name"><select class="tsl-in" id="tsl-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tsl-in" id="tsl-contact" placeholder="Phone or email"><p style="color:'+C.ink4+';font-size:11px;line-height:1.5;margin:8px 0 0">By submitting, you agree to receive SMS from Top Shelf Business Solutions at the number you provide. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="privacy.html" target="_blank" rel="noopener" style="color:'+C.gold+'">Privacy Policy</a>.</p></div>';
   stage.innerHTML=h;
-  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-submit">Send my gap report →</button>';
+  navEl.innerHTML='<button class="tsl-btn tsl-line" id="tsl-bk">Back</button><button class="tsl-btn tsl-gold" id="tsl-submit">Send my answers →</button>';
   root.querySelector('#tsl-bk').onclick=function(){cur=CONFIG.areas.length-1;step();};
   root.querySelector('#tsl-submit').onclick=submit;
 }

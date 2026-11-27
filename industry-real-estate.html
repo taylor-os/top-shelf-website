@@ -34,6 +34,30 @@
 
 <!-- FAQPage schema (auto-generated from on-page FAQ; see scripts/inject_faq_schema.py) -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can the AI receptionist really answer while I'm in a showing or at a closing?","acceptedAnswer":{"@type":"Answer","text":"Yes. It answers every call in your name, day, night and mid-showing, and books the appointment. A seller calling to ask about listing their home gets a real answer instead of your voicemail."}},{"@type":"Question","name":"What happens to an online lead that comes in at 9pm when I'm off?","acceptedAnswer":{"@type":"Answer","text":"If they’re on your website, the AI chatbot answers their questions right away. The lead lands in the CRM with a follow-up reminder, so you call back first thing instead of letting it sit."}},{"@type":"Question","name":"Do I own my website, my number, and my contacts, or do you?","acceptedAnswer":{"@type":"Answer","text":"You do. Your website, domain, phone number and contacts are yours, and you keep all of it if you ever leave. The CRM software is what you subscribe to."}},{"@type":"Question","name":"What does it cost, and can I cancel?","acceptedAnswer":{"@type":"Answer","text":"The Signature plan is $99 a month for 1 to 10 users and $199 a month for 11 to 25 users. There is no setup fee, and it is month to month, so you can cancel anytime. Each phone line is $50 a month and covers normal use. A professional website is $499 one time."}},{"@type":"Question","name":"How do we get started?","acceptedAnswer":{"@type":"Answer","text":"Tap Try the CRM and fill out a short form. We call you, then send you a demo. You can also call or text (469) 833-3033."}}]}</script>
+<style id="crm-strip-css">
+.crm-strip{display:flex;gap:clamp(1rem,2.5vw,2rem);align-items:flex-end;justify-content:center}
+.crm-strip .cbi-lap{flex:1 1 0;min-width:0;max-width:760px}
+.crm-strip .cbi-phone{flex:0 0 auto;width:clamp(120px,13vw,165px);height:auto}
+.crm-strip.crm-multi .cbi-lap{max-width:none}
+.crm-strip figure{margin:0;min-width:0}
+.crm-strip figcaption{margin-top:.9rem;font-size:.82rem;color:var(--ink-3);text-align:center}
+.crm-strip figure.cbi-lapfig{flex:1 1 0}
+.crm-strip img{display:block;width:100%;height:auto}
+.cbi-win{margin:0 6%;padding:6px 6px 9px;background:#060606;border-radius:12px 12px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+.cbi-win img{border-radius:3px}
+.cbi-lap-base{position:relative;height:8px;margin-top:2px;background:linear-gradient(#2c2721,#120f0c 60%,#080706);border-top:1px solid rgba(201,168,106,.65);border-radius:1px 1px 12px 12px/1px 1px 8px 8px}
+.cbi-lap-base::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15%;height:3px;border-radius:0 0 7px 7px;background:#050505}
+.cbi-phone{padding:4px;border-radius:20px;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75),0 36px 70px -28px rgba(0,0,0,.85)}
+.cbi-phone img{border-radius:16px}
+.crm-strip-foot{display:flex;flex-wrap:wrap;gap:.8rem 1.6rem;align-items:center;justify-content:center;margin-top:clamp(1.8rem,3.5vw,2.6rem)}
+.crm-strip-way{margin:clamp(1.6rem,3vw,2.2rem) auto 0;max-width:60ch;text-align:center;color:var(--ink-2)}
+.crm-strip-tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:.3rem .65rem;border:1px solid var(--hairline-strong);border-radius:999px}
+@media (max-width:760px){
+  .crm-strip{flex-wrap:wrap}
+  .crm-strip .cbi-lap,.crm-strip figure.cbi-lapfig{flex:1 1 100%}
+  .crm-strip .cbi-phone{width:calc(50% - .6rem);max-width:200px}
+}
+</style>
 </head>
 <body>
 <div id="bg-layer" aria-hidden="true"><canvas id="gold-dust-canvas"></canvas></div>
@@ -46,6 +70,7 @@
       <div class="nav-item">
         <a href="#" class="nav-link">Industries <span class="nav-arrow">&#9662;</span></a>
         <div class="nav-dropdown">
+          <a href="crm-by-industry.html">CRM by Industry</a>
           <a href="industry-home-services.html">Home Services</a>
           <a href="industry-restaurants.html">Restaurants &amp; Bars</a>
           <a href="industry-medical-dental.html">Medical &amp; Dental</a>
@@ -379,6 +404,19 @@
 </section>
 
 <!-- crm-screens-slot -->
+<section class="section rule-top">
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:64ch;margin-inline:auto">
+      <span class="eyebrow reveal" style="justify-content:center">See It for Your Business</span>
+      <h2 class="display display-lg reveal" style="margin-top:1.6rem">What the CRM Looks Like <em>for Real Estate</em></h2>
+      <p class="reveal" style="margin-inline:auto">Sample screens for Elena Marsh, a made-up agent. Her day with contract deadlines first, a buyer&rsquo;s profile on her phone, and the listing page on her own website.</p>
+    </div>
+    <div class="crm-strip reveal"><div class="cbi-lap"><div class="cbi-win"><img src="assets/img/crm/industries/real-estate/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Agent · Today: Contract deadlines in the next 48 hours first, then who to call and why, then today&#x27;s calendar. Sample screen for Elena Marsh Real Estate, a made-up business."></div><div class="cbi-lap-base" aria-hidden="true"></div></div><div class="cbi-phone"><img src="assets/img/crm/industries/real-estate/4-buyer-m.webp" width="585" height="1266" loading="lazy" decoding="async" alt="Agent · Buyer on the go: The buyer&#x27;s pre-approval, wish list, matching homes, and today&#x27;s showings. Sample screen for Elena Marsh Real Estate, a made-up business."></div><div class="cbi-phone"><img src="assets/img/crm/industries/real-estate/5-listing-page-m.webp" width="585" height="1266" loading="lazy" decoding="async" alt="Buyer · Her website: The listing page on Elena&#x27;s own website, with Book a showing. Sample screen for Elena Marsh Real Estate, a made-up business."></div></div>
+    <p class="crm-strip-way reveal">Want it laid out your way? We can change the screens, or build one around your business. Same $99 a month for up to 10 users.</p>
+    <div class="crm-strip-foot reveal"><span class="crm-strip-tag">Sample screens</span><a class="tlink" href="crm-by-industry.html#real-estate">See all the screens <span class="arr">&rarr;</span></a></div>
+  </div>
+</section>
+<!-- /crm-screens-slot -->
 
 <section class="section rule-top">
   <div class="container">
@@ -759,6 +797,7 @@
       <div>
         <p class="footer-col-title">Industries</p>
         <div class="footer-links">
+          <a href="crm-by-industry.html">CRM by Industry</a>
           <a href="industry-home-services.html">Home Services</a>
           <a href="industry-restaurants.html">Restaurants &amp; Bars</a>
           <a href="industry-medical-dental.html">Medical &amp; Dental</a>
@@ -803,8 +842,8 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/site.js?v=20261008c"></script>
-<script src="assets/gap-quiz.js?v=20261126a"></script>
+<script src="assets/site.js?v=20261126a"></script>
+<script src="assets/gap-quiz.js?v=20261126b"></script>
 <script src="assets/events.js?v=1" defer></script>
 </body>
 </html>

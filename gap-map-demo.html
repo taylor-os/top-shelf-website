@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gap Map — Top Shelf (template)</title>
+<title>Gap Map | Top Shelf (template)</title>
 <link rel="canonical" href="https://www.topshelfsolutions.io/gap-map-demo.html">
 <meta name="robots" content="noindex,follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Top Shelf Business Solutions">
-<meta property="og:title" content="Gap Map — Top Shelf (template)">
+<meta property="og:title" content="Gap Map | Top Shelf (template)">
 <meta property="og:description" content="One-stop digital modernization for local businesses.">
 <meta property="og:url" content="https://www.topshelfsolutions.io/gap-map-demo.html">
 <meta property="og:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gap Map — Top Shelf (template)">
+<meta name="twitter:title" content="Gap Map | Top Shelf (template)">
 <meta name="twitter:description" content="One-stop digital modernization for local businesses.">
 <meta name="twitter:image" content="https://www.topshelfsolutions.io/assets/logo-full.png">
 <style>
@@ -59,31 +59,31 @@ var CONFIG = {
   behavior:{ triggerSeconds:6, scrollPercent:40, exitIntent:true, oncePerSession:true, dismissDays:7,
     showDollars:true, currency:"$", leadEndpoint:"", reopen:true, reopenLabel:"Find your gap" },
   intro:{ eyebrow:"Tap what's true for you", headline:"See how your gaps <em>feed each other</em>",
-    sub:"Tap the problems you recognize. Watch them light up and connect — and watch what they're costing add up." },
+    sub:"Tap the problems you recognize. Watch them light up and connect, and watch what they're costing add up." },
   /* Each AREA = one node. Node value = the sum of its symptoms' monthly gap. */
   areas:[
-    { eyebrow:"Getting found", icon:"map-pin", solution:"Websites & Local SEO", solutionUrl:"solution-websites-seo.html",
-      symptoms:[{label:"Not on page 1 for 'near me'",monthly:1400},{label:"Website dated or missing",monthly:900},{label:"Not in the Map Pack",monthly:1200}]},
+    { eyebrow:"Weak website", icon:"map-pin", solution:"Professional Websites", solutionUrl:"solution-websites-seo.html",
+      symptoms:[{label:"Website dated or hard to use on a phone",monthly:1400},{label:"Slow website, or none at all",monthly:900},{label:"Website form reaches no one",monthly:1200}]},
     { eyebrow:"Thin reviews", icon:"star", solution:"Reviews & Reputation", solutionUrl:"solution-reviews.html",
       symptoms:[{label:"Fewer reviews than competitors",monthly:1100},{label:"Reviews old & stale",monthly:600}]},
     { eyebrow:"Missed calls", icon:"phone", solution:"AI Phone & Receptionist", solutionUrl:"solution-ai-phone.html",
       symptoms:[{label:"Calls go to voicemail",monthly:1800},{label:"Nobody answers after hours",monthly:1500}]},
     { eyebrow:"Lost leads", icon:"route", solution:"Lead Capture & CRM", solutionUrl:"solution-crm.html",
       symptoms:[{label:"Quotes go cold",monthly:1700},{label:"Leads slip through the cracks",monthly:1400}]},
-    { eyebrow:"One-time customers", icon:"refresh", solution:"Memberships & Loyalty", solutionUrl:"solution-memberships.html",
-      symptoms:[{label:"Customers buy once & vanish",monthly:1200},{label:"No memberships or loyalty",monthly:800}]},
+    { eyebrow:"One-time customers", icon:"refresh", solution:"Follow-Up & Rebooking", solutionUrl:"solution-automation.html",
+      symptoms:[{label:"Customers buy once & vanish",monthly:1200},{label:"No reminders that bring them back",monthly:800}]},
     { eyebrow:"Buried in admin", icon:"clock", solution:"AI & Automation", solutionUrl:"solution-automation.html",
       symptoms:[{label:"Doing the job of five people",monthly:900}]}
   ],
   web:{ edges:[[0,1],[1,2],[2,3],[3,4],[0,3],[5,2],[5,3]],
-    pairText:{ "2-3":"Missed calls feed lost leads — two gaps compounding.", "0-1":"No visibility starves your reviews.",
-      "3-4":"Lost leads mean no repeat customers.", "0-3":"If they can't find you, the leads never even start.",
+    pairText:{ "2-3":"Missed calls feed lost leads. Two gaps compounding.", "0-1":"A weak website starves your reviews.",
+      "3-4":"Lost leads mean no repeat customers.", "0-3":"If your website can't reach you, the leads never even start.",
       "1-2":"Weak reviews mean fewer found-you callers actually dial.", "5-2":"No time to answer = missed calls.",
       "5-3":"No time to follow up = leads die." } },
   industries:["Home services","Restaurant / bar","Medical / dental","Law firm","Retail / local","Auto","Salon / spa / fitness","Other"],
-  thankYou:{ title:"Thank you — this is exactly what we needed.",
-    body:"We've mapped your gaps. A Top Shelf specialist will reach out within one business day to walk you through what each one is costing you — and how we'd plug it. No pressure, just your numbers.",
-    note:"Keep an eye on your phone. Your gap report is on the way." }
+  thankYou:{ title:"Thank you, this is exactly what we needed.",
+    body:"We'll call you to talk through your answers, then send you a demo of the Top Shelf CRM so you can see it working on the kind of jobs you do.",
+    note:"Keep an eye on your phone. No obligation." }
 };
 /* ===================== END CONFIG ===================== */
 
@@ -156,10 +156,10 @@ function renderMap(){phase="map";
   var edges='';CONFIG.web.edges.forEach(function(e){edges+='<line data-k="'+e[0]+'-'+e[1]+'" x1="'+pos[e[0]][0]+'" y1="'+pos[e[0]][1]+'" x2="'+pos[e[1]][0]+'" y2="'+pos[e[1]][1]+'" stroke="'+C.gold+'" stroke-width="1" stroke-opacity=".12" style="transition:all .35s"/>';});
   var nodes='';CONFIG.areas.forEach(function(a,i){nodes+='<div class="tslm-node'+(on[i]?' on':'')+'" data-i="'+i+'" style="left:'+(pos[i][0]/W*100)+'%;top:'+(pos[i][1]/H*100)+'%"><div class="tslm-disc">'+svg(a.icon,22)+'</div><div class="tslm-lb">'+a.eyebrow+'</div></div>';});
   bodyEl.innerHTML='<div style="position:relative;width:100%;height:'+H+'px;margin:6px 0 2px"><svg id="tslm-svg" width="100%" height="'+H+'" viewBox="0 0 '+W+' '+H+'" style="position:absolute;inset:0">'+edges+'</svg>'+nodes+'</div>'+
-    '<p id="tslm-narr" style="text-align:center;color:'+C.gold+';font-size:13px;font-style:italic;min-height:20px;margin:0">Tap the problems you recognize — watch them connect.</p>';
+    '<p id="tslm-narr" style="text-align:center;color:'+C.gold+';font-size:13px;font-style:italic;min-height:20px;margin:0">Tap the problems you recognize and watch them connect.</p>';
   moneyEl=root.querySelector('#tslm-money');svgEl=root.querySelector('#tslm-svg');
   bodyEl.querySelectorAll('.tslm-node').forEach(function(n){n.onclick=function(){var i=+n.getAttribute('data-i');on[i]=!on[i];n.classList.toggle('on');refresh();};});
-  root.querySelector('#tslm-nav').innerHTML='<button class="tslm-btn tslm-gold" id="tslm-go">See my gap report →</button>';
+  root.querySelector('#tslm-nav').innerHTML='<button class="tslm-btn tslm-gold" id="tslm-go">See my results →</button>';
   root.querySelector('#tslm-go').onclick=report;
   refresh();
 }
@@ -167,16 +167,16 @@ function refresh(){tween(total());
   var live=[];svgEl&&svgEl.querySelectorAll('line').forEach(function(l){var k=l.getAttribute('data-k').split('-');if(on[k[0]]&&on[k[1]]){l.setAttribute('stroke-opacity',reduce?'.85':'.85');l.setAttribute('stroke-width','2');live.push(l.getAttribute('data-k'));}else{l.setAttribute('stroke-opacity','.12');l.setAttribute('stroke-width','1');}});
   var narr=root.querySelector('#tslm-narr');if(!narr)return;
   var pt=CONFIG.web.pairText;var msg=null;for(var j=live.length-1;j>=0;j--){if(pt[live[j]]){msg=pt[live[j]];break;}}
-  if(msg)narr.textContent='"'+msg+'"';else{var c=0;for(var i in on)if(on[i])c++;narr.textContent=c?c+' gap'+(c>1?'s':'')+' selected — tap more, or get your report.':'Tap the problems you recognize — watch them connect.';}
+  if(msg)narr.textContent='"'+msg+'"';else{var c=0;for(var i in on)if(on[i])c++;narr.textContent=c?c+' gap'+(c>1?'s':'')+' selected. Tap more, or see your results.':'Tap the problems you recognize and watch them connect.';}
 }
 function report(){phase="report";var t=total(),act=[];for(var i in on)if(on[i])act.push(i);act.sort(function(a,b){return nodeVal(CONFIG.areas[b])-nodeVal(CONFIG.areas[a]);});
-  var h='<div class="tslm-eb">'+svg("report",14)+' Your gap report</div><h3 class="tslm-h" style="font-size:23px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:12.5px;margin:6px 0 12px">≈ '+fmt(t*12)+' a year — a rough estimate from what you tapped.</p>';
+  var h='<div class="tslm-eb">'+svg("report",14)+' Your results</div><h3 class="tslm-h" style="font-size:23px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:12.5px;margin:6px 0 12px">≈ '+fmt(t*12)+' a year, a rough estimate from what you tapped.</p>';
   if(act.length){h+='<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px">';act.forEach(function(i){var a=CONFIG.areas[i];h+='<div style="display:flex;justify-content:space-between;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:9px 12px"><span style="color:'+C.ink+';font-size:13px">'+a.eyebrow+' <span style="color:'+C.ink4+'">→ '+a.solution+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:17px">'+fmt(nodeVal(a))+'</span></div>';});h+='</div>';}
-  else h+='<p style="color:'+C.ink3+'">Nothing tapped yet — most owners light up at least a couple. Go back and take a look.</p>';
-  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:14px"><p style="color:'+C.ink+';font-size:14px;font-weight:500;margin:0 0 2px">Get your free gap audit</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">We turn this map into your real numbers — no obligation.</p>'+
+  else h+='<p style="color:'+C.ink3+'">Nothing tapped yet. Most owners light up at least a couple. Go back and take a look.</p>';
+  h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:14px"><p style="color:'+C.ink+';font-size:14px;font-weight:500;margin:0 0 2px">See how the Top Shelf CRM handles this</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">Leave your details. We&rsquo;ll call you, then send you a demo of the CRM.</p>'+
     '<input class="tslm-in" id="tslm-name" placeholder="Your name"><input class="tslm-in" id="tslm-biz" placeholder="Business name"><select class="tslm-in" id="tslm-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tslm-in" id="tslm-contact" placeholder="Phone or email"></div>';
   head.innerHTML='';root.querySelector('#tslm-body').innerHTML=h;
-  root.querySelector('#tslm-nav').innerHTML='<div style="display:flex;gap:10px;justify-content:center"><button class="tslm-btn tslm-line" id="tslm-bk">Back</button><button class="tslm-btn tslm-gold" id="tslm-submit">Send my gap report →</button></div>';
+  root.querySelector('#tslm-nav').innerHTML='<div style="display:flex;gap:10px;justify-content:center"><button class="tslm-btn tslm-line" id="tslm-bk">Back</button><button class="tslm-btn tslm-gold" id="tslm-submit">Send my answers →</button></div>';
   root.querySelector('#tslm-bk').onclick=renderMap;root.querySelector('#tslm-submit').onclick=submit;
 }
 function val(id){var e=root.querySelector('#'+id);return e?e.value:'';}
