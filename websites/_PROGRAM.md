@@ -18,6 +18,8 @@ and featured on each matching `industry-*.html` page.
 | 7 | Salon, Spa & Fitness | Lumen Wellness | `lumen-wellness` | Sand/blush + plum + gold · serene | ✅ **LIVE** · Judge PASS (after 1 REVISE: image usage + featured-card contrast) |
 | 8 | Your Business (Vet) | Wellspring Animal Hospital | `wellspring-animal-hospital` | Forest green + coral · caring | ✅ **LIVE** · Judge PASS (after 1 REVISE: contact-chip AA) |
 | 9 | Auto (mobile service) | Linewright Mobile Dent Co. | `linewright-mobile-dent` | Ink + line-lime · reflected light lines | ✅ **LIVE** · Judge PASS (after 1 REVISE: header contrast over light heroes). 6 pages, built from `scripts/build_linewright.py`; no address/hours by design |
+| 10 | Salon, Spa & Fitness (gym) | Larkspur Strength Club | `larkspur-strength-club` | Charcoal + energetic orange · plates and bars | 🟡 **BUILT, not live** · pairs with the fitness CRM screens (same business, same palette); SVG/CSS art only, no photography; sample prices from the CRM screens, labelled sample. Judge PASS (1st) |
+| 11 | Auto (detailing) | Kestrel Lane Detail Co. | `kestrel-lane-detail` | Gloss black + ceramic blue · paint panel, water beads, light streak | 🟡 **BUILT, not live** · pairs with the auto-detailing CRM screens (same business, town, team, palette); SVG/CSS art only, gallery before/afters are labelled illustrations; prices = the CRM's sample menu by size, labelled sample; book.html mirrors the CRM booking page (25% deposit). Judge PASS (after 1 REVISE: booking form submitted with every time slot disabled; UTC earliest date) |
 
 ## Per-site pipeline (each ends at a Judge PASS before ship)
 1. **Brief** — identity, background/story, services, page IA, copy points, asset manifest → `<slug>/BRIEF.md`
