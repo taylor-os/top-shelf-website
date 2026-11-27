@@ -104,7 +104,7 @@ def shot(R, slug, file, alt, label, cls=""):
     return zoom(R, slug, file, frame(R, crm_rel(slug, file), kind, alt, label, cls))
 
 
-def quotes(keys, h="From owners on the Signature plan", eyebrow="In their words"):
+def quotes(keys, h="What owners say", eyebrow="In their words"):
     if not keys:
         return ""
     figs = "".join(f'<figure class="quote"><blockquote>{e(QUOTES[k][0])}</blockquote><figcaption><strong>{e(QUOTES[k][1])}</strong>{e(QUOTES[k][2])}</figcaption></figure>'
@@ -118,7 +118,7 @@ def data_line():
 
 # ---------------------------------------------------------------- shell overrides
 def nav(P, R, active):
-    bar = (f'<div class="localbar"><div class="wrap localbar-in"><span class="based">{e(B["based_in"])} Real people answer.</span>'
+    bar = (f'<div class="localbar"><div class="wrap localbar-in"><span class="based">{e(B["based_in"])}</span>'
            f'<span><a href="{B["phone_href"]}">Call {e(B["phone"])}</a><span class="sep">·</span><a href="{SMS}">Text us</a></span></div></div>')
     return bar + _a_nav(P, R, active)
 
@@ -135,7 +135,7 @@ def faq(items, h, body=""):
     qs = "".join(f'<div class="answer"><h3>{e(q["q"])}</h3><p>{e(q["a"])}</p></div>' for q in answered)
     box = ""
     if on_call:
-        box = (f'<div class="on-call"><h3>Ask us these on the call</h3><p>They depend on your business, so we give you the real numbers '
+        box = (f'<div class="on-call"><h3>Ask us these on the call</h3><p>They depend on your business, so we go over them '
                f'on the call, before you sign up. Call or text {e(B["phone"])}.</p><ul>{"".join(f"<li>{e(x)}</li>" for x in on_call)}</ul></div>')
     return f'<section class="sec faq-sec" id="faq"><div class="wrap">{head("", h, body)}<div class="answers">{qs}</div>{box}</div></section>'
 
@@ -143,7 +143,7 @@ def faq(items, h, body=""):
 def steps(items, h="How it works"):
     li = "".join(f'<li><span class="num" aria-hidden="true">{e(s["step"])}</span><h3>{e(s["title"])}</h3><p>{e(s["body"])}</p></li>' for s in items)
     return (f'<section class="sec steps-sec"><div class="wrap">{head("", h)}<ol class="steps">{li}</ol>'
-            f'<p class="note">Rather text? Text {e(B["phone"])} and a person writes back.</p></div></section>')
+            f'<p class="note">Rather text? Text {e(B["phone"])}.</p></div></section>')
 
 
 def pricing(R, extra_left=""):
@@ -207,9 +207,9 @@ def home_body(P, R):
 </div></section>
 
 <section class="sec" id="story"><div class="wrap">
-  {head("One job, start to finish", "From the 2 AM call to the paid invoice", "Everline Home Services is a sample HVAC and plumbing company. Every screen is from its CRM, and each one opens full size.")}
+  {head("One job, start to finish", "From the 2 AM call to the paid invoice", "Everline Home Services is a sample home services company. Every screen is from its CRM, and each one opens full size.")}
   <div class="story">{"".join(steps_html)}</div>
-  <p class="note">Pick another business above and its pages walk the same kind of day.</p>
+  <p class="note">Pick another business above to see its own screens.</p>
 </div></section>
 
 {steps(C["crm"]["how_it_works"])}
@@ -262,7 +262,7 @@ def industry_crm(p):
             is_phone = lead["device"] != "desktop"
             lead_html = (f'<div class="lead-shot{" is-phone" if is_phone else ""}">'
                          f'{shot(R, p["slug"], lead["file"], p["business"] + " sample CRM: " + lead["role"], "Sample")}'
-                         f'<div class="lead-copy"><p class="role">{e(lead["role"])}</p><h2>The screen owners asked to see first</h2><p>{e(lead["caption"])}</p></div></div>')
+                         f'<div class="lead-copy"><p class="role">{e(lead["role"])}</p><h2>Start with this screen</h2><p>{e(lead["caption"])}</p></div></div>')
         gallery = lead_html + "".join(desk) + (f'<div class="phones n{len(phones)}">{"".join(phones)}</div>' if phones else "")
         built = f'<p class="built">{e(cap["built_around"])}</p>' if cap.get("built_around") else ""
 
@@ -271,7 +271,7 @@ def industry_crm(p):
             boxes.append(f'<div class="note-box"><p class="eyebrow">HIPAA and BAA</p><h2>{e(HIPAA[0])}</h2><p>{e(HIPAA[1])}</p></div>')
         if p["slug"] in WORKS_WITH:
             boxes.append(f'<div class="note-box"><p class="eyebrow">Switching or keeping your software</p><h2>Using {e(WORKS_WITH[p["slug"]])}?</h2>'
-                         f'<p>Tell us what you use today. On the call we tell you straight how Top Shelf fits next to it, and what moves over if you switch.</p></div>')
+                         f'<p>Tell us what you use today, and on the call we tell you straight how Top Shelf fits with it.</p></div>')
         box_html = (f'<section class="sec tight"><div class="wrap note-row n{len(boxes)}">{"".join(boxes)}</div></section>') if boxes else ""
 
         return f'''<section class="hero hero-plain"><div class="wrap ind-head">

@@ -6,7 +6,7 @@ Look: warm white, deep teal, Figtree, with the Top Shelf mark on its ink tile.
 
 | Change | Asked for by | Taken from |
 |---|---|---|
-| The DFW number in a bar on every page, "Real people answer", Call and Text links | auto, dental, HVAC, salon, restaurant | C |
+| The DFW number in a bar on every page, with Call and Text links | auto, dental, HVAC, salon, restaurant | C |
 | A Call / Text / Try the CRM bar fixed to the bottom of the phone screen, with nothing floating over it | HVAC (the current pop-up tab covers its Call button) | Current site |
 | The industry picker moves up to right under the hero, so a restaurant or salon visitor picks their business before seeing an HVAC dashboard | restaurant, dental, HVAC | Current site's "See your business" idea |
 | One job start to finish (2 AM call, board, estimate, paid, owner's morning), each screen big and tap to open full size | HVAC, auto | B |
@@ -19,7 +19,7 @@ Look: warm white, deep teal, Figtree, with the Top Shelf mark on its ink tile.
 | "Using Toast or OpenTable?" / Dentrix / Shopmonkey / Housecall Pro / Vagaro box on those industry pages | restaurant, dental, auto, HVAC, salon | New. It names the software as a question only and makes no claim about how it connects |
 | The price on every industry CRM and website page | salon, auto (C had none on those pages) | A |
 | "Websites $499, one time", never "from $499" | salon | Pricing page |
-| "Rather text? Text (469) 833-3033 and a person writes back" under How it works | salon | |
+| "Rather text? Text (469) 833-3033" under How it works | salon | |
 
 ## What D could not do without Taylor
 
