@@ -78,7 +78,7 @@
   .ev.block b { color: var(--muted-2); font-weight: 500; }
   .ev.quiet { background: transparent; border: 1px dashed var(--line-strong); color: var(--muted-2); display: flex; align-items: center; justify-content: center; text-align: center; }
   .ev.quiet span { white-space: normal; color: var(--muted-2); }
-  .cal .now { z-index: 5; }
+  .cal .now { z-index: 1; }
   .nowlbl { grid-column: 1; align-self: start; justify-self: end; margin: 5px 2px 0 0; z-index: 6; font-size: 9.5px; font-weight: 600; line-height: 13px; color: var(--badge-ink); background: var(--red); border-radius: 4px; padding: 0 3px; }
   /* right rail */
   .rail .card-h { padding: 8px 12px; font-size: 13.5px; }
@@ -176,7 +176,7 @@
           <div class="ev out" style="grid-column:2;grid-row:6 / span 2"><b><i>9:00</i>Nala <svg class="i s3"><use href="#dog"/></svg><em>Hutchins</em><span class="ini">EC</span></b><span>Puppy visit · Checked out</span></div>
           <div class="ev out" style="grid-column:2;grid-row:8 / span 3"><b><i>9:30</i>Duke, 13 <svg class="i s3"><use href="#dog"/></svg><em>Quarles</em><span class="ini">EC</span></b><span>Senior wellness exam</span><div class="cl"><span class="chip">Checked out</span></div></div>
           <div class="ev inroom" style="grid-column:2;grid-row:11 / span 2"><b><i>10:15</i>Biscotti <svg class="i s3"><use href="#dog"/></svg><em>Dowell</em><span class="ini">EC</span></b><div class="cl"><span>Wellness exam</span><span class="chip">In room</span></div></div>
-          <div class="ev sd" style="grid-column:2;grid-row:13 / span 2;z-index:6"><b><i>10:45</i>Pepper <svg class="i s3"><use href="#dog"/></svg><em>Arbuckle</em><span class="ini">EC</span></b><div class="cl"><span>Sick visit (same day)</span><span class="chip amber">Same-day</span></div></div>
+          <div class="ev sd" style="grid-column:2;grid-row:13 / span 2;z-index:6"><b><i>10:45</i>Pepper <svg class="i s3"><use href="#dog"/></svg><em>Arbuckle</em><span class="ini">EC</span></b><div class="cl"><span>Sick visit</span><span class="chip amber">Same-day</span></div></div>
           <div class="evnote" style="grid-column:2;grid-row:15 / span 2"><span class="chip teal"><svg class="i"><use href="#car"/></svg>On the way, ETA 10:44</span><span><svg class="i s3" style="vertical-align:-2px"><use href="#phone-arrow-down-left"/></svg> AI transfer 10:22 · booked by Callie</span></div>
           <div class="ev" style="grid-column:2;grid-row:18 / span 2"><b><i>12:00</i>Maple <svg class="i s3"><use href="#dog"/></svg><em>Abernathy</em><span class="ini">EC</span></b><div class="cl"><span>Sick visit</span><span class="chip amber">Same-day</span><span class="chip green">✓ Confirmed</span></div></div>
           <div class="ev unc" style="grid-column:2;grid-row:27 / span 3"><b><i>2:15</i>Rufus <svg class="i s3"><use href="#dog"/></svg><em>Dempsey</em><span class="ini">EC</span></b><span>Senior wellness exam</span><div class="cl"><span class="chip amber">Unconfirmed</span><span class="chip amber">$</span></div></div>
@@ -195,7 +195,7 @@
           <div class="ev mr" style="grid-column:3;grid-row:24 / span 2"><b><i>1:30</i>Tank <svg class="i s3"><use href="#dog"/></svg><em>Hightower</em><span class="ini">MR</span></b><div class="cl"><span>Surgery consult</span><span class="chip green">✓ Confirmed</span><span class="chip blue">AI</span></div></div>
           <div class="ev mr" style="grid-column:3;grid-row:26 / span 2"><b><i>2:00</i>Lola <svg class="i s3"><use href="#dog"/></svg><em>Cantu</em><span class="ini">MR</span></b><div class="cl"><span>Recheck</span><span class="chip green">✓ Confirmed</span><span class="chip amber">$</span></div></div>
           <div class="ev mr" style="grid-column:3;grid-row:28 / span 2"><b><i>2:30</i>Finn <svg class="i s3"><use href="#dog"/></svg><em>Spurlock</em><span class="ini">MR</span></b><div class="cl"><span>Wellness exam</span><span class="chip green">✓ Confirmed</span></div></div>
-          <div class="ev held" style="grid-column:3;grid-row:30 / span 2"><b>3:00 · Held · same-day sick · Dr. Reed</b><span>Opens to online booking at 2:00 PM</span></div>
+          <div class="ev held" style="grid-column:3;grid-row:30 / span 2"><b>3:00 · Held · same-day sick · Dr. Reed</b><span>Held until 2:00 PM, then open for any visit</span></div>
           <div class="ev pick" style="grid-column:3;grid-row:32"><b><svg class="i s3"><use href="#arrow-right-start-on-rectangle"/></svg>3:30 Pickup · Bandit</b></div>
           <div class="ev pick" style="grid-column:3;grid-row:34"><b><svg class="i s3"><use href="#arrow-right-start-on-rectangle"/></svg>4:00 Pickup · Waffles</b></div>
           <div class="ev pick" style="grid-column:3;grid-row:36"><b><svg class="i s3"><use href="#arrow-right-start-on-rectangle"/></svg>4:30 Pickup · Mabel</b></div>
@@ -230,7 +230,7 @@
             <div class="card-h"><svg class="i s4"><use href="#clock"/></svg>Same-day sick slots<span class="r">2 of 3 filled</span></div>
             <div class="sr"><span class="tm">10:45</span><div><p class="n">Dr. Cho · Pepper <svg class="i s3 muted" style="vertical-align:-1px"><use href="#dog"/></svg></p><p class="s">Filled 10:23 by Callie</p></div></div>
             <div class="sr"><span class="tm">12:00</span><div><p class="n">Dr. Cho · Maple <svg class="i s3 muted" style="vertical-align:-1px"><use href="#dog"/></svg></p><p class="s">Filled 8:05</p></div></div>
-            <div class="sr left"><span class="tm">3:00</span><div><p class="n">Dr. Reed · open</p><span class="chip amber" style="margin-top:3px;white-space:normal;line-height:14px;padding:2px 8px">Held until 2:00 PM, then opens to online booking</span></div></div>
+            <div class="sr left"><span class="tm">3:00</span><div><p class="n">Dr. Reed · open</p><span class="chip amber" style="margin-top:3px;white-space:normal;line-height:14px;padding:2px 8px">Held until 2:00 PM, then open for any visit</span></div></div>
           </div>
 
           <div class="card clip">
