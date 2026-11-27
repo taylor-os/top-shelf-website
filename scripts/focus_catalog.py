@@ -86,6 +86,7 @@ REMOVED = {
     "solution-pos.html": "solution-crm.html",
     "solution-memberships.html": "solution-crm.html",
     "answers-marketing.html": "answers-crm.html",
+    "preview.html": "index.html",
 }
 
 # Old Top Shelf prices. $3,390 / $452 / $678 stay legal: they are the

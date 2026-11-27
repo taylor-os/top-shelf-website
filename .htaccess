@@ -62,8 +62,8 @@ RedirectMatch 404 ^/demo/_archive(/|$)
 # Two one-time job pages were retired a day after launch (owner, 2026-10-01): a website
 # job is always a full replacement, and we do not sell photography. This host never
 # deletes files on deploy, so send them to the hub.
-Redirect 301 /website-tune-up.html /custom-5-page-website.html
-Redirect 301 /business-photo-refresh.html /one-time-services.html
+Redirect 301 /website-tune-up.html /pricing.html#website
+Redirect 301 /business-photo-refresh.html /pricing.html
 
 # BEGIN crm-website-focus
 # 2026-11-21: the site now sells only the Signature plan and the website.
@@ -86,4 +86,5 @@ Redirect 301 /solution-marketing.html /solution-crm.html
 Redirect 301 /solution-pos.html /solution-crm.html
 Redirect 301 /solution-memberships.html /solution-crm.html
 Redirect 301 /answers-marketing.html /answers-crm.html
+Redirect 301 /preview.html /
 # END crm-website-focus

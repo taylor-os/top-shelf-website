@@ -13,7 +13,7 @@ import os, glob, datetime
 SITE = "https://www.topshelfsolutions.io"
 # Top-level pages that must never appear in the sitemap.
 EXCLUDE = {
-    "gap-finder-demo.html", "gap-map-demo.html", "preview.html", "thank-you.html",
+    "gap-finder-demo.html", "gap-map-demo.html", "thank-you.html",
     "home-centered-review.html", "googled4807f62c9c00ace.html",
 }
 
