@@ -284,3 +284,17 @@ def test_site_scripts_sell_nothing_removed():
             for m in JS_BANNED_RE.finditer(line):
                 bad.append("%s: %r in %s" % (rel(path), m.group(0), line.strip()[:120]))
     assert not bad, "%d hits:\n%s" % (len(bad), "\n".join(bad[:40]))
+
+
+def test_gap_quiz_shows_no_dollars_and_sends_contact():
+    """Owner 2026-11-26: no dollar estimates in the Gap Finder; and the lead must carry email/phone the CRM accepts."""
+    js = read(os.path.join(cat.ROOT, "assets", "gap-quiz.js"))
+    assert "showDollars: false" in js
+    assert "monthly:" not in js, "per-symptom dollar figures came back"
+    assert "/mo<" not in js and "a year, a rough estimate" not in js
+    assert "email:isEmail?contact:''" in js and "phone:isEmail?'':contact" in js, "quiz lead must send email/phone, not 'contact'"
+    for demo in ("gap-finder-demo.html", "gap-map-demo.html"):
+        s = read(os.path.join(cat.ROOT, demo))
+        assert "showDollars: false" in s or "showDollars:false" in s, demo
+        assert "Your likely gap is" not in s and "a year, a rough estimate" not in s, demo
+        assert "\x01" not in s, demo

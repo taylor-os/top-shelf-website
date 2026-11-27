@@ -57,9 +57,9 @@ var CONFIG = {
     fontDisplay:"'DM Serif Display',Georgia,serif", fontBody:"'DM Sans',system-ui,sans-serif"
   },
   behavior:{ triggerSeconds:6, scrollPercent:40, exitIntent:true, oncePerSession:true, dismissDays:7,
-    showDollars:true, currency:"$", leadEndpoint:"", reopen:true, reopenLabel:"Find your gap" },
+    showDollars: false, currency:"$", leadEndpoint:"", reopen:true, reopenLabel:"Find your gap" },
   intro:{ eyebrow:"Tap what's true for you", headline:"See how your gaps <em>feed each other</em>",
-    sub:"Tap the problems you recognize. Watch them light up and connect, and watch what they're costing add up." },
+    sub:"Tap the problems you recognize. Watch them light up and connect, and see what fixes them." },
   /* Each AREA = one node. Node value = the sum of its symptoms' monthly gap. */
   areas:[
     { eyebrow:"Weak website", icon:"map-pin", solution:"Professional Websites", solutionUrl:"solution-websites-seo.html",
@@ -169,9 +169,9 @@ function refresh(){tween(total());
   var pt=CONFIG.web.pairText;var msg=null;for(var j=live.length-1;j>=0;j--){if(pt[live[j]]){msg=pt[live[j]];break;}}
   if(msg)narr.textContent='"'+msg+'"';else{var c=0;for(var i in on)if(on[i])c++;narr.textContent=c?c+' gap'+(c>1?'s':'')+' selected. Tap more, or see your results.':'Tap the problems you recognize and watch them connect.';}
 }
-function report(){phase="report";var t=total(),act=[];for(var i in on)if(on[i])act.push(i);act.sort(function(a,b){return nodeVal(CONFIG.areas[b])-nodeVal(CONFIG.areas[a]);});
-  var h='<div class="tslm-eb">'+svg("report",14)+' Your results</div><h3 class="tslm-h" style="font-size:23px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3><p style="color:'+C.ink3+';font-size:12.5px;margin:6px 0 12px">≈ '+fmt(t*12)+' a year, a rough estimate from what you tapped.</p>';
-  if(act.length){h+='<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px">';act.forEach(function(i){var a=CONFIG.areas[i];h+='<div style="display:flex;justify-content:space-between;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:9px 12px"><span style="color:'+C.ink+';font-size:13px">'+a.eyebrow+' <span style="color:'+C.ink4+'">→ '+a.solution+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:17px">'+fmt(nodeVal(a))+'</span></div>';});h+='</div>';}
+function report(){phase="report";var t=total(),act=[];for(var i in on)if(on[i])act.push(i);
+  var h='<div class="tslm-eb">'+svg("report",14)+' Your results</div><h3 class="tslm-h" style="font-size:23px">Here&rsquo;s where you&rsquo;re likely losing customers</h3><p style="color:'+C.ink3+';font-size:12.5px;margin:6px 0 12px">From what you tapped, and what fixes each one.</p>';
+  if(act.length){h+='<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px">';act.forEach(function(i){var a=CONFIG.areas[i];h+='<div style="display:flex;justify-content:space-between;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:9px 12px"><span style="color:'+C.ink+';font-size:13px">'+a.eyebrow+' <span style="color:'+C.ink4+'">→ '+a.solution+'</span></span></div>';});h+='</div>';}
   else h+='<p style="color:'+C.ink3+'">Nothing tapped yet. Most owners light up at least a couple. Go back and take a look.</p>';
   h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:14px"><p style="color:'+C.ink+';font-size:14px;font-weight:500;margin:0 0 2px">See how the Top Shelf CRM handles this</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">Leave your details. We&rsquo;ll call you, then send you a demo of the CRM.</p>'+
     '<input class="tslm-in" id="tslm-name" placeholder="Your name"><input class="tslm-in" id="tslm-biz" placeholder="Business name"><select class="tslm-in" id="tslm-ind"><option value="">Your industry…</option>'+CONFIG.industries.map(function(x){return '<option>'+x+'</option>';}).join('')+'</select><input class="tslm-in" id="tslm-contact" placeholder="Phone or email"></div>';

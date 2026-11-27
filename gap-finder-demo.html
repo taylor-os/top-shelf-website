@@ -73,7 +73,7 @@ var CONFIG = {
     exitIntent: true,       /* ...or when the cursor leaves toward the top */
     oncePerSession: true,   /* don't auto-open twice in one visit */
     dismissDays: 7,         /* after a close, don't auto-open for N days */
-    showDollars: true,      /* the rising money meter (rough estimate) */
+    showDollars: false,      /* the rising money meter (rough estimate) */
     currency: "$",
     leadEndpoint: "",       /* POST url for the lead. Empty = demo mode (logs to console) */
     reopen: true,           /* show a small re-open tab after dismiss */
@@ -81,8 +81,8 @@ var CONFIG = {
   },
   intro: {
     eyebrow: "60-second business check",
-    headline: "Where is your business <em>losing money?</em>",
-    sub: "No forms, no typing. Just tap what sounds familiar. We'll show you where you're likely losing customers and what it's costing.",
+    headline: "Where is your business <em>losing customers?</em>",
+    sub: "No forms, no typing. Just tap what sounds familiar. We'll show you where you're likely losing customers and what fixes it.",
     cta: "Find my gap"
   },
   /* Each AREA = one step. Each symptom carries a rough monthly $ gap + which solution fixes it. */
@@ -239,12 +239,12 @@ function step(){var a=CONFIG.areas[cur];dots(cur,CONFIG.areas.length);var tr=tra
   root.querySelector('#tsl-bk').onclick=function(){if(cur>0){cur--;step();}else intro();};
 }
 function report(){dots(CONFIG.areas.length,CONFIG.areas.length+1);var t=total();var areas=[];
-  for(var k in sel){if(sel[k].length){var sub=0;sel[k].forEach(function(i){sub+=CONFIG.areas[k].symptoms[i].monthly;});areas.push([CONFIG.areas[k].eyebrow.replace('&amp;','&'),sub,CONFIG.areas[k].solution,CONFIG.areas[k].solutionUrl]);}}
+  for(var k in sel){if(sel[k].length){var sub=sel[k].length;areas.push([CONFIG.areas[k].eyebrow.replace('&amp;','&'),sub,CONFIG.areas[k].solution,CONFIG.areas[k].solutionUrl]);}}
   areas.sort(function(a,b){return b[1]-a[1];});
   var h='<div class="tsl-eb"><span style="vertical-align:-2px">'+svg("report",14)+'</span> Your results</div>';
-  h+='<h3 class="tsl-h" style="font-size:24px">Your likely gap is <span style="color:'+C.goldBright+'">'+fmt(t)+'/mo</span></h3>';
-  h+='<p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">≈ '+fmt(t*12)+' a year, a rough estimate from your answers.</p>';
-  if(areas.length){h+='<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">';areas.forEach(function(a){h+='<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:10px 13px"><span style="color:'+C.ink+';font-size:13.5px">'+a[0]+' <span style="color:'+C.ink4+'">→ '+a[2]+'</span></span><span style="color:'+C.goldBright+';font-family:'+B.fontDisplay+';font-size:18px">'+fmt(a[1])+'</span></div>';});h+='</div>';}
+  h+='<h3 class="tsl-h" style="font-size:24px">Here&rsquo;s where you&rsquo;re likely losing customers</h3>';
+  h+='<p style="color:'+C.ink3+';font-size:13px;margin:6px 0 14px">From your answers, and what fixes each one.</p>';
+  if(areas.length){h+='<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">';areas.forEach(function(a){h+='<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(201,168,106,.15);border-radius:10px;padding:10px 13px"><span style="color:'+C.ink+';font-size:13.5px">'+a[0]+' <span style="color:'+C.ink4+'">→ '+a[2]+'</span></span><span style="color:'+C.goldBright+';font-size:12.5px;white-space:nowrap">'+a[1]+(a[1]===1?' sign':' signs')+'</span></div>';});h+='</div>';}
   else h+='<p style="color:'+C.ink3+'">Nothing selected yet. Most owners have at least a couple. Tap Back and take a look.</p>';
   h+='<div style="border-top:1px solid rgba(201,168,106,.15);padding-top:15px"><p style="color:'+C.ink+';font-size:14px;margin:0 0 2px;font-weight:500">See how the Top Shelf CRM handles this</p><p style="color:'+C.ink3+';font-size:12.5px;margin:0 0 6px">Leave your details. We&rsquo;ll call you, then send you a demo of the CRM.</p>'+
    '<input class="tsl-in" id="tsl-name" placeholder="Your name"><input class="tsl-in" id="tsl-biz" placeholder="Business name">'+
