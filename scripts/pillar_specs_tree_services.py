@@ -30,7 +30,7 @@ PILLAR = {
         ("What happens when a storm sends a rush of calls at once?",
          "The AI receptionist answers every one on the first ring at the same moment, so a surge that would overwhelm one person is simply handled. Each caller is triaged, the emergencies are flagged to your phone, and the routine estimates are booked, all on the flat Signature plan with nothing climbing as the calls pile up. It never prices the removal or promises a tree is safe, you decide that on site."),
         ("Is a flat plan cheaper than a live service that bills per call?",
-         "For a tree service it usually is, and it is far more predictable, because a metered service charges you hardest during the storm week when the calls flood in. The Signature plan stays $899 a month no matter how busy the weather gets, and the bigger saving is the emergency removal it books instead of losing to voicemail."),
+         "For a tree service it usually is, and it is far more predictable, because a metered service charges you hardest during the storm week when the calls flood in. The Signature plan stays $99 a month for up to 10 users no matter how busy the weather gets, and the bigger saving is the emergency removal it books instead of losing to voicemail."),
     ],
     "service_schema_name": "Business software and marketing for tree services",
     "cta_h2": "See which storm calls your crew is <em>letting slip away</em>",

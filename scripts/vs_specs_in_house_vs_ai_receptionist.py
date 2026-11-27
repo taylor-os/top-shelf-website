@@ -1,7 +1,7 @@
 """Comparison page: hiring an in-house receptionist vs an AI receptionist. CATEGORY page
 (model comparison, no named company), so no competitor disclaimer. Honest and fair: what a human
 receptionist gives you, what an AI gives you, who each fits. No invented salary figures (speak to
-the model, not a made-up number). Only real Top Shelf prices ($299/$899/$2,500/$1,500). No em/en
+the model, not a made-up number). Only real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website). No em/en
 dashes, no "leak" metaphor. File name underscores; slug hyphenated.
 """
 
@@ -20,7 +20,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits your business</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If your calls lean sensitive or complex and you can staff the phones through your busy hours, a receptionist\'s human touch may be worth the wage. If your problem is calls slipping to voicemail after hours or during a rush, and you want every one answered and booked at a predictable flat cost, an AI receptionist usually captures more work for less. Plenty of businesses run both, letting the AI cover overflow and after-hours while a person handles the front desk during the day. The honest way to choose is to look at how many calls you are missing now, which a free audit will show you.</p>'}],
     "bridge_h2": "Answer every call without adding a shift",
-    "bridge_text": "Top Shelf's AI receptionist answers and books every call 24/7 as part of the Signature plan at $99 a month for up to 10 users, flat, and hands the genuinely complex calls to you. There is no setup fee, and your number and leads stay yours.",
+    "bridge_text": "Top Shelf's AI receptionist answers and books every call 24/7 as part of the Signature plan at $99 a month for up to 10 users, and hands the genuinely complex calls to you. There is no setup fee, and your number and leads stay yours.",
     "bridge_slug": "solution-ai-phone",
     "bridge_label": "See how the AI receptionist works",
     "faqs": [

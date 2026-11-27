@@ -33,7 +33,7 @@ TOPICS = [
     "h1": "How Much Does a Pressure Washing Website Cost?",
     "title": "How Much Does a Pressure Washing Website Cost? | Top Shelf Business Solutions",
     "meta_desc": "A pressure washing website runs from cheap templates to a few thousand for a custom build. What counts is a before-and-after gallery that sells and captures the quote. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "A pressure washing website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more than the price is whether it shows your before-and-after work, ranks for pressure washing near me, and captures the quote request. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "answer": "A pressure washing website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more than the price is whether it shows your before-and-after work, ranks for pressure washing near me, and captures the quote request. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What a pressure washing site actually <em>has to do</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A pressure washing website has one job, and it is not to look pretty. It is to take a homeowner who just looked at a black driveway or a streaked roof and turn them into a quote request on your phone. Before you think about price, know what you are actually paying for, because a site that cannot do these things is not cheap, it is wasted money no matter what it cost.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>A before-and-after gallery front and center. Pressure washing sells itself when a homeowner sees a driveway or roof like theirs go from filthy to clean, so real reveal photos do most of the convincing.</li><li>An instant quote request that takes one tap. Most of these searches happen on a phone, so a visitor should be able to snap a photo of the surface, enter the address, and ask for a price in under a minute.</li><li>A clear service list. House wash, driveway and concrete, deck and fence, roof soft wash, and commercial or HOA work, so a caller knows at a glance that you do their specific job.</li><li>Pages built to rank for pressure washing near me and the towns you cover, so the homeowner searching in a hurry finds you instead of a national directory.</li></ul>'},
@@ -47,7 +47,7 @@ TOPICS = [
         ("Is a cheap template site good enough to start with?",
          "It can get you online, but a template you fill in yourself rarely ranks, and it usually buries the before-and-after photos and the quote button that actually book pressure washing jobs. If a site is not getting found or turning visitors into quote requests, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site stays yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site stays yours if you stop the plan.")],
     "trade_slug": "pressure_washing", "trade_plural": "pressure washing companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -69,7 +69,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for pressure washing",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and far more predictable. A live service that bills per call or per minute climbs exactly during the spring rush when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the estimate it books instead of losing to voicemail while your crew is heads-down on a job."),
+         "Usually, and far more predictable. A live service that bills per call or per minute climbs exactly during the spring rush when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the estimate it books instead of losing to voicemail while your crew is heads-down on a job."),
         ("Does it cost extra for nights, weekends, or the busy season?",
          "No. It answers 24/7 as part of the plan, including the first warm Saturday of spring when every homeowner searches at once, with no after-hours surcharge and no overage for a heavy month. A flat plan is what makes the busy season profitable instead of expensive.")],
     "trade_slug": "pressure_washing", "trade_plural": "pressure washing companies",

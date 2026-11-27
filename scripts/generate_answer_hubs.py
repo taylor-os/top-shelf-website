@@ -120,7 +120,7 @@ def page(slug, title, h1, meta, intro, body, crumb_name, itemlist_rows):
     <h1 class="display display-lg reveal">{h1}</h1>
     <p class="page-hero-sub reveal">{esc(intro)}</p>
     <div class="page-hero-actions reveal">
-      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="tel:+14698333033" class="btn btn-line">Call (469) 833-3033</a>
     </div>
   </div>

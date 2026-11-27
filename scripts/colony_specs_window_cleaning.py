@@ -39,7 +39,7 @@ TOPICS = [
     "h1": "How Much Does a Window Cleaning Website Cost?",
     "title": "How Much Does a Window Cleaning Website Cost? | Top Shelf Business Solutions",
     "meta_desc": "A window cleaning website ranges from a cheap template to a custom build. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "A window cleaning website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more is whether it makes booking a recurring plan easy, shows residential and commercial work, and ranks for window cleaning near me. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "answer": "A window cleaning website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more is whether it makes booking a recurring plan easy, shows residential and commercial work, and ranks for window cleaning near me. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What a window cleaning site actually <em>has to do</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A window cleaning website has one job, and it is not to win a design award. It is to take a homeowner tired of spotted glass, or a shop manager tired of fingerprints on the front door, and make it easy for them to ask you for a price and, ideally, put themselves on a regular schedule. Before you think about what to spend, know what you are actually paying for, because a site that cannot do these things is not cheap, it is wasted money no matter the price tag.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Dead-simple booking and quote requests. Most of these searches happen on a phone, so a visitor should be able to say whether it is a house or a storefront, how many windows and how often they want it, and ask for a price in under a minute.</li><li>Both sides of the business, shown clearly. Inside-and-out home cleans, recurring residential plans, and storefront or office routes, plus add-ons like screens, tracks, and gutters, so a caller sees at a glance that you do their specific job and that you offer regular service.</li><li>Reviews and a clear service area up front. Clean glass barely reads in a photo, so window cleaning does not sell on a dramatic before-and-after the way some trades do. It sells on trust: recent reviews, the towns you cover, and looking like the reliable local name someone wants on a standing schedule.</li><li>Pages built to rank for window cleaning near me and the neighborhoods you serve, so the person searching in a hurry finds you instead of a national directory.</li></ul>'},
@@ -53,7 +53,7 @@ TOPICS = [
         ("Is a cheap template site good enough to start with?",
          "It can get you online, but a template you fill in yourself rarely ranks, and it usually buries the easy booking and the reviews that actually turn a window cleaning visitor into a recurring account. If a site is not getting found or turning visitors into booked plans, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site stays yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site stays yours if you stop the plan.")],
     "trade_slug": "window_cleaning", "trade_plural": "window cleaning companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -75,7 +75,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for window cleaning",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the recurring account it books instead of losing to voicemail while your crew is up a ladder."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the recurring account it books instead of losing to voicemail while your crew is up a ladder."),
         ("Does it cost extra for nights, weekends, or the busy season?",
          "No. It answers 24/7 as part of the plan, including the spring rush and the pre-holiday weeks when every homeowner notices their glass at once, with no after-hours surcharge and no overage for a heavy month.")],
     "trade_slug": "window_cleaning", "trade_plural": "window cleaning companies",

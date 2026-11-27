@@ -9,7 +9,7 @@ The SPEC (scripts/vs_specs_<slug>.py, a single PAGE dict) owns the unique, hones
 The generator owns shell, schema, keyword placement, the bridge to pricing/solution, and (for a
 brand page) an auto-appended HONESTY disclaimer: comparisons reflect public info as of publication,
 and Top Shelf is not affiliated with or endorsed by the named company. Same honesty rules as every
-other spec: only real Top Shelf prices ($299/$899/$2,500/$1,500), no fabricated competitor prices
+other spec: only real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website), no fabricated competitor prices
 or features (state a competitor spec only if publicly verifiable and hedged), no disparagement,
 no em/en dashes, no "leak" metaphor.
 
@@ -32,7 +32,7 @@ def hero(p):
     <h1 class="display display-lg reveal">{esc(p["h1"])}</h1>
     <p class="page-hero-sub reveal">{p["answer"]}</p>
     <div class="page-hero-actions reveal">
-      <a href="contact.html" class="btn btn-gold">Get a Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="pricing.html" class="btn btn-line">See What Top Shelf Includes</a>
     </div>
   </div>
@@ -98,7 +98,7 @@ def final_cta(p):
     <h2 class="display display-lg reveal">{h2}</h2>
     <p class="reveal" style="color:var(--ink-3);max-width:54ch;margin:1rem auto 1.8rem">{esc(sub)}</p>
     <div class="reveal" style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
-      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="pricing.html" class="btn btn-line">See Pricing</a>
     </div>
   </div>
@@ -202,7 +202,7 @@ def build_hub(specs, shell):
     <h1 class="display display-lg reveal">Top Shelf Alternatives &amp; <em>Comparisons</em></h1>
     <p class="page-hero-sub reveal">Thinking about a specific tool, or the old way of doing things? Here are honest, side by side looks at how an all-in-one, done-for-you platform compares. We say what each option is good at, then where Top Shelf fits.</p>
     <div class="page-hero-actions reveal">
-      <a href="contact.html" class="btn btn-gold">Get a Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="pricing.html" class="btn btn-line">See What Top Shelf Includes</a>
     </div>
   </div>
@@ -268,7 +268,7 @@ def _check(page, p):
     if words < 450: probs.append(f"body {words}w (<450)")
     # real Top Shelf prices only: any $NNN that is not one of the sanctioned must be flagged for review
     prices = set(re.findall(r"\$[\d,]*\d", txt))  # end on a digit so a trailing comma/period isn't captured
-    ok = {"$299", "$899", "$2,500", "$1,500"}
+    ok = {"$99", "$199", "$50", "$499"}
     stray = prices - ok
     return probs, words, stray
 

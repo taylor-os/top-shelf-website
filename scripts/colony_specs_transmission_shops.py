@@ -15,7 +15,7 @@ not do transmissions are part of the trade. Ethics: the AI does scheduling and i
 never diagnoses or quotes the repair, and nothing promises a repair outcome.
 
 Same honesty rules as the money specs: no invented stats, percentages, or client names; hedge
-instead of overpromise; only the real Top Shelf prices ($299/$899 plans, $1,500 one-time site)
+instead of overpromise; only the real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website)
 ever appear and no repair price is ever invented; no em/en dashes anywhere; "find the gap" and
 "go cold", never "leak" as a money metaphor (a literal transmission-fluid leak would be fine).
 
@@ -34,7 +34,7 @@ TOPICS = [
     "slug": "transmission-shop-website-cost",
     "h1": "How Much Does a Transmission Shop Website Cost?",
     "title": "How Much Does a Transmission Shop Website Cost? | Top Shelf Business Solutions",
-    "meta_desc": "A transmission shop website can cost a little or a lot; what matters is whether it earns trust for a big repair. Top Shelf builds yours for $1,500, and you own it.",
+    "meta_desc": "A transmission shop website can cost a little or a lot; what matters is whether it earns trust for a big repair. Top Shelf builds yours for $499, and you own it.",
     "answer": "A transmission shop website can run from a couple hundred dollars for a template to several thousand for a custom build. What matters more than price is whether it earns a nervous driver enough trust to request your free check for a big repair. Top Shelf builds a professional website for $499 one time, and you own it.",
     "sections": [
         {"h2_html": "What a transmission shop site actually has to <em>do</em>",
@@ -71,7 +71,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for transmission shops",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the one big job it books instead of losing to voicemail while your tech is on a road test."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the one big job it books instead of losing to voicemail while your tech is on a road test."),
         ("Does it decide what is wrong with the transmission or quote the repair?",
          "No, and it should not. It answers, calms the caller, offers and books your free check, and gathers the symptoms and the vehicle, then hands the actual diagnosis and the price to your techs. It does the scheduling and intake so your people do the work only a real transmission tech can.")],
     "trade_slug": "transmission_shops", "trade_plural": "transmission shops",

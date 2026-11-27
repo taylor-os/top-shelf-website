@@ -47,7 +47,7 @@ TOPICS = [
         ("Is a cheap template site good enough for an estate planning firm?",
          "It can get you online, but a template you fill in yourself is rarely built to rank or to make a careful, often older client feel they have reached an established firm, and you do the work of maintaining it. For a practice built on trust, a site that does not get found or does not reassure is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. The website is $499 one time, and it is yours to keep. A monthly plan is optional and keeps the site working. It is month to month, with no contract.")],
+         "Yes. The website is $499 one time, and it is yours to keep. The Signature plan is optional. It is month to month, with no contract.")],
     "trade_slug": "estate_planning_attorneys", "trade_plural": "estate planning attorneys",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
 },
@@ -69,7 +69,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for estate planning attorneys",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when interest picks up, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the long-postponed will or the probate matter it books instead of losing to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when interest picks up, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the long-postponed will or the probate matter it books instead of losing to voicemail."),
         ("Does it cost extra for nights, weekends, or holidays?",
          "No. It answers around the clock as part of the plan, including the evening call from an adult child worried about an aging parent, with no after-hours surcharge or overage. Setup is included too, with no separate onboarding fee.")],
     "trade_slug": "estate_planning_attorneys", "trade_plural": "estate planning attorneys",

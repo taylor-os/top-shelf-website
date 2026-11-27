@@ -28,7 +28,7 @@ TOPICS = [
     "h1": "How Much Does a Plumber Website Cost?",
     "title": "How Much Does a Plumber Website Cost? | Top Shelf Business Solutions",
     "meta_desc": "A plumber website ranges from cheap templates to several thousand for a custom build. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "A plumber website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more than the price is whether it ranks and captures calls. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "answer": "A plumber website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more than the price is whether it ranks and captures calls. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What actually drives the <em>price</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The number you see quoted for a plumber website swings wildly because you are not all buying the same thing. A cheap template you fill in yourself and a custom site built to rank in your service area are different products with the same name. Before you compare quotes, it helps to know what you are actually paying for.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>A do-it-yourself website builder is cheap monthly, but you do the work, and it is rarely built to rank or to convert a homeowner searching in a hurry.</li><li>A one-time custom build costs more up front and is yours to keep, but a site alone does little if nobody is doing the ongoing SEO to get it found.</li><li>An agency retainer bundles the build with ongoing SEO and updates, which is where most of the long-term value lives, and also where the monthly cost lives.</li><li>Hidden costs to ask about before you sign: who owns the site, what a change costs, and whether you keep it if you leave.</li></ul>'},
@@ -42,7 +42,7 @@ TOPICS = [
         ("Is a cheap template site good enough to start with?",
          "It can get you online, but a template you fill in yourself is rarely built to rank or to convert a homeowner in a hurry, and you do the work of maintaining it. If a site is not getting found or turning visitors into calls, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site stays yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site stays yours if you stop the plan.")],
     "trade_slug": "plumbers", "trade_plural": "plumbers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -64,7 +64,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for plumbers",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the after-hours emergency it books instead of losing to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the after-hours emergency it books instead of losing to voicemail."),
         ("Does it cost extra for nights, weekends, or holidays?",
          "No. It answers 24/7 as part of the plan, including the 2am burst pipe and the holiday sewage backup that are often your best-paying jobs, with no after-hours surcharge or overage.")],
     "trade_slug": "plumbers", "trade_plural": "plumbers",

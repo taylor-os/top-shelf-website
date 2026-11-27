@@ -66,7 +66,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for personal injury lawyers",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when the accident calls come in, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the after-hours case it runs intake on instead of losing to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when the accident calls come in, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the after-hours case it runs intake on instead of losing to voicemail."),
         ("Does it cost extra for nights, weekends, or holidays?",
          "No. It answers 24/7 as part of the plan, including the late-night call after a wreck and the holiday accident that other firms send straight to voicemail, with no after-hours surcharge or overage.")],
     "trade_slug": "personal_injury_lawyers", "trade_plural": "personal injury lawyers",

@@ -13,8 +13,7 @@ and business clients. Do NOT converge with the residential-realtor colony, the m
 the home-services plumber template.
 
 Same honesty rules as the money specs: no invented stats, percentages, deal values, or commissions;
-only Top Shelf's real published prices ever appear ($299 plans, $899 Signature with CRM + AI,
-$1,500 one-time site); hedge instead of overpromise; no em/en dashes anywhere; never "leak" as a
+only Top Shelf's real published prices ever appear ($99/$199 Signature plan with CRM + AI, $50 per phone line, $499 website); hedge instead of overpromise; no em/en dashes anywhere; never "leak" as a
 metaphor. Ethics: the AI does intake and scheduling only, and never promises a deal or a return.
 
 Six questions, mixed cost / problem / how-to, spread across four money pages:
@@ -32,13 +31,13 @@ TOPICS = [
     "slug": "commercial-real-estate-website-cost",
     "h1": "How Much Does a Commercial Real Estate Website Cost?",
     "title": "How Much Does a Commercial Real Estate Website Cost? | Top Shelf Business Solutions",
-    "meta_desc": "A commercial real estate website runs from a cheap template to several thousand for a custom build. Top Shelf builds yours for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
-    "answer": "A commercial real estate website runs from a few hundred dollars for a template to several thousand for a custom build. What matters more than the price is whether it looks credible to business and institutional clients and ranks for your market. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "meta_desc": "A commercial real estate website runs from a cheap template to several thousand for a custom build. Top Shelf builds yours for $499 one time, and you own it. The Signature plan is optional.",
+    "answer": "A commercial real estate website runs from a few hundred dollars for a template to several thousand for a custom build. What matters more than the price is whether it looks credible to business and institutional clients and ranks for your market. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What a commercial real estate site actually has to <em>do</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A commercial real estate website is not a lead funnel chasing walk-in traffic. It is a credibility check. A tenant rep, a landlord, or an institutional investor deciding who to trust with a mandate looks you up before the first call, and the site has to make a serious firm look serious. So the right way to judge the cost is to start with what the site has to accomplish, not with a menu of build options.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>A listings and portfolio section that shows the space and the deals you handle, so a prospect sees at a glance that you work their asset class, whether that is office, retail, industrial, or multifamily.</li><li>A professional bio and track record that tells a business client you can be trusted with a large, complex transaction, because in commercial real estate your credibility is what wins the mandate.</li><li>A clear path to request a consult or a call, since a commercial inquiry is the start of a long conversation, not a checkout button.</li><li>Ranking for the searches that actually matter, like commercial real estate broker in your city, or your submarket paired with your specialty, so a business looking for representation finds you first.</li></ul>'},
         {"h2_html": "What it costs, and what to <em>watch for</em>",
-         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Once you know what the site has to do, the price makes more sense. A do-it-yourself template is cheap each month, but you build it yourself and it is rarely made to rank or to look credible to a business client. A custom build costs more up front and is yours to keep. Before you compare quotes, ask who owns the site and the domain, what a change costs, and whether the ongoing SEO that actually gets you found is included or billed on the side. A handsome site that never ranks and never gets vetted is the most expensive kind, because you paid for it and it brings you nothing.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf keeps it simple. A professional website on its own is $499 one time, yours to keep, with no plan and no commitment. The Signature plan, from $99 a month, is optional. It keeps the site working, and the ongoing SEO that gets it ranking is handled for you. There is no setup fee either way. What no honest company can promise is a specific ranking by a specific date, because no one controls Google, but a free audit can show you exactly where your current site stands first.</p>'}],
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Once you know what the site has to do, the price makes more sense. A do-it-yourself template is cheap each month, but you build it yourself and it is rarely made to rank or to look credible to a business client. A custom build costs more up front and is yours to keep. Before you compare quotes, ask who owns the site and the domain, what a change costs, and whether the ongoing SEO that actually gets you found is included or billed on the side. A handsome site that never ranks and never gets vetted is the most expensive kind, because you paid for it and it brings you nothing.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf keeps it simple. A professional website on its own is $499 one time, yours to keep, with no plan and no commitment. The Signature plan, from $99 a month, is optional. It adds the AI receptionist and CRM that answer and follow up on the leads the site brings in. There is no setup fee either way. What no honest company can promise is a specific ranking by a specific date, because no one controls Google, but a free audit can show you exactly where your current site stands first.</p>'}],
     "bridge_h2": "A site that earns a business client's trust",
     "bridge_text": "A commercial real estate site is judged before the first call. Ours is built to look credible to a business or institutional client, show your listings and track record, and rank for the market and asset class you work.",
     "bridge_slug": "websites-seo-for-commercial-real-estate",
@@ -47,7 +46,7 @@ TOPICS = [
         ("Is a brokerage template site enough for a commercial broker?",
          "It gets you online, but a brokerage template looks like every other agent at the firm, rarely ranks for your specific submarket, and does not show your own track record. For a business client vetting who to trust with a deal, a site that establishes your credibility and gets found is worth far more than a free look-alike."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site is still yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site is still yours if you stop the plan.")],
     "trade_slug": "commercial_real_estate", "trade_plural": "commercial real estate brokers",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
 },
@@ -69,7 +68,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for commercial real estate",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when your pipeline is busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the qualified inquiry it books instead of losing to voicemail while you are on a tour."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when your pipeline is busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the qualified inquiry it books instead of losing to voicemail while you are on a tour."),
         ("Does it cost extra for nights, weekends, or holidays?",
          "No. It answers around the clock as part of the plan, including the out-of-market investor calling on their own schedule from another time zone, with no after-hours surcharge or overage.")],
     "trade_slug": "commercial_real_estate", "trade_plural": "commercial real estate brokers",

@@ -69,7 +69,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for tire shops",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service for a tire shop?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when your price-and-availability calls spike, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the set of four it books instead of losing to voicemail while the bays were full."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when your price-and-availability calls spike, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the set of four it books instead of losing to voicemail while the bays were full."),
         ("Can it really quote a price and tell a caller what is in stock?",
          "It gives the prices and out-the-door ranges you set for your common sizes and services, and tells the caller whether a size is one you normally stock or would order in. For anything that needs your eyes first, it takes the size and the vehicle, books the appointment, and texts you the details so you confirm the number. It never invents a price you did not give it.")],
     "trade_slug": "tire_shops", "trade_plural": "tire shops",

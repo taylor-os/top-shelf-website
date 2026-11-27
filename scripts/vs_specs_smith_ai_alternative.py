@@ -7,7 +7,7 @@ Shelf is an all-in-one, done-for-you platform where the AI receptionist that ans
 is ONE part, alongside the website, local SEO, marketing, and CRM follow-up, on one flat bill.
 Rules honored: NO Smith.ai price or dollar figure anywhere; Smith.ai features stated only as its
 own public positioning and hedged; strengths acknowledged, no disparagement; only real Top Shelf
-prices ($299/$899/$2,500/$1,500) and no setup fee; no fabricated Top Shelf stats; no ranking
+prices ($99/$199 Signature plan, $50 per phone line, $499 website) and no setup fee; no fabricated Top Shelf stats; no ranking
 promise; for a law firm the AI does intake and booking only, never legal advice. No em/en dashes,
 no "leak" metaphor. File name uses underscores; slug is hyphenated.
 """
@@ -27,7 +27,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits your business</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If you already have a website you are happy with, marketing that fills your pipeline, and a CRM your team lives in, and the one thing you need is strong call answering and intake, a dedicated service like Smith.ai is a sound choice, and its human-backed option is worth a look for firms whose calls are often sensitive or complex. If instead you are a local business owner wearing every hat, and you would rather one company build the site, bring in the calls, answer them, and follow up than stitch together a receptionist service, a web designer, a marketer, and a CRM yourself, the all-in-one model is built for exactly that. The honest way to choose is to count how many of those pieces you already have handled. You can see what a full setup costs on our <a href="pricing.html">pricing page</a>, with no setup fee.</p>'}],
     "bridge_h2": "One flat platform that goes beyond call answering",
-    "bridge_text": "Top Shelf's AI receptionist answers and books every call as part of the Signature plan at $99 a month for up to 10 users, flat, and it plugs into the same CRM that follows up on every lead it captures. If you want the calls and the marketing that create them handled too, the fully done-for-you plan is $2,500 a month, an entry plan with website upkeep and local SEO is $299 a month on Essentials, and a one-time custom five-page site is $1,500. There is no setup fee, and your number, your leads, and your data stay yours.",
+    "bridge_text": "Top Shelf's AI receptionist answers and books every call as part of the Signature plan at $99 a month for up to 10 users, and it plugs into the same CRM that follows up on every lead it captures. If you need a new website too, it is $499 one time. There is no setup fee, and your number, your leads, and your data stay yours.",
     "bridge_slug": "solution-ai-phone",
     "bridge_label": "See how the AI receptionist works",
     "faqs": [

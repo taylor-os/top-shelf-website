@@ -48,7 +48,7 @@ TOPICS = [
         ("Is a cheap template site good enough for a fence company to start with?",
          "It can get you online, but a template you fill in yourself rarely ranks for fence installation near me, rarely shows your styles well, and rarely turns a visitor into an estimate request, and you do the upkeep. If a site is not getting found or booking measures, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. The website is $499 one time, and it is yours to keep. A monthly plan is optional and keeps the site working. It is month to month, with no contract.")],
+         "Yes. The website is $499 one time, and it is yours to keep. The Signature plan is optional. It is month to month, with no contract.")],
     "trade_slug": "fence_companies", "trade_plural": "fence companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -70,7 +70,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for fence companies",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly in spring when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the estimate it books instead of losing to voicemail while your crew is setting posts."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly in spring when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the estimate it books instead of losing to voicemail while your crew is setting posts."),
         ("Does it set the fence price or promise a quote?",
          "No. It handles scheduling and intake only. It gathers what the homeowner wants, the material, and roughly how much yard, then books the measure or hands you the lead. You still walk the yard, set the scope, and give the price. It never binds an estimate on your behalf.")],
     "trade_slug": "fence_companies", "trade_plural": "fence companies",

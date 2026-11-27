@@ -6,8 +6,7 @@ front door, an anxious driver after dealer sticker shock shopping the big number
 follows up wins, warranty and referral partners), never a template.
 
 Same honesty rules as the money/colony specs: no invented stats, prices, or clients; no repair price
-is ever invented; hedge instead of overpromise; only the real Top Shelf prices ($299/$899/$2,500
-monthly plans, $1,500 one-time site) ever appear; no em/en dashes anywhere; "goes cold" / "find the
+is ever invented; hedge instead of overpromise; only the real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website) ever appear; no em/en dashes anywhere; "goes cold" / "find the
 gap", never "leak" as a money metaphor (a literal transmission-fluid leak would be fine). The AI does
 scheduling and intake only, it never diagnoses or quotes the repair.
 """

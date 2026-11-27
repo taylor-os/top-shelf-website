@@ -6,8 +6,7 @@ authority into the ONE money page the question implies. Lighter than a money pag
 
 Each dict here owns UNIQUE, hand-written, hair-salon-specific substance (the generator owns shell,
 schema, events, keyword placement). Same honesty rules as the money specs: no invented stats,
-prices, or clients; hedge instead of overpromise; only the real prices ($99/$199 Signature plan, $499 website) ever appear, and CRM + AI receptionist both live in the $899 Signature
-plan; a salon's own service pricing stays generic; no em/en dashes anywhere; never "leak" as a
+prices, or clients; hedge instead of overpromise; only the real prices ($99/$199 Signature plan, $499 website) ever appear, and CRM + AI receptionist both live in the Signature plan; a salon's own service pricing stays generic; no em/en dashes anywhere; never "leak" as a
 metaphor.
 
 The hair-salon slant that keeps this DISTINCT from the barbershop colony and every other trade:
@@ -46,7 +45,7 @@ TOPICS = [
         ("Is a cheap template site good enough for a salon to start with?",
          "It can get you online, but a template you fill in yourself is rarely built to book by stylist and service, to rank for hair salon near me, or to show your work the way color and cut deserve. If a site is not bringing in new clients, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. The website is $499 one time, and it is yours to keep. A monthly plan is optional and keeps the site working. It is month to month, with no contract.")],
+         "Yes. The website is $499 one time, and it is yours to keep. The Signature plan is optional. It is month to month, with no contract.")],
     "trade_slug": "hair_salons", "trade_plural": "hair salons",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
 },
@@ -68,7 +67,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for hair salons",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the after-hours new client it books instead of losing to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the after-hours new client it books instead of losing to voicemail."),
         ("Does it cost extra for nights, weekends, or holidays?",
          "No. It answers 24/7 as part of the plan, including the late-night Instagram message and the Sunday call that are often how new clients first reach you, with no after-hours surcharge or overage.")],
     "trade_slug": "hair_salons", "trade_plural": "hair salons",

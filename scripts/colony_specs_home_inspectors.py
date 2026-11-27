@@ -48,7 +48,7 @@ TOPICS = [
         ("Is a cheap template site good enough for a home inspector?",
          "It can get you online, but a template you fill in yourself is rarely built to rank for home inspector near me or to let a buyer book around a closing date, and you do the upkeep yourself. If it does not get found or turn visitors into booked inspections, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. The website is $499 one time, and it is yours to keep. A monthly plan is optional and keeps the site working. It is month to month, with no contract.")],
+         "Yes. The website is $499 one time, and it is yours to keep. The Signature plan is optional. It is month to month, with no contract.")],
     "trade_slug": "home_inspectors", "trade_plural": "home inspectors",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
 },
@@ -57,7 +57,7 @@ TOPICS = [
     "slug": "home-inspection-answering-service-cost",
     "h1": "What Does a Home Inspection Answering Service Cost?",
     "title": "What Does a Home Inspection Answering Service Cost? | Top Shelf Business Solutions",
-    "meta_desc": "Answering services for home inspectors often bill per call or minute. Top Shelf includes an AI receptionist that answers 24/7 in the Signature plan, $899 a month.",
+    "meta_desc": "Answering services for home inspectors often bill per call or minute. Top Shelf includes an AI receptionist that answers 24/7 in the Signature plan, $99 a month for up to 10 users.",
     "answer": "Traditional answering services for home inspectors usually bill per call, per minute, or on a monthly retainer, so a busy month gets expensive fast. Top Shelf takes a different approach: an AI receptionist that answers every buyer and agent call and books the inspection comes in the Signature plan at $99 a month for up to 10 users.",
     "sections": [
         {"h2_html": "How answering services usually <em>charge</em>",
@@ -70,7 +70,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for home inspectors",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the inspection it books instead of losing to the next inspector on the agent's list."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the inspection it books instead of losing to the next inspector on the agent's list."),
         ("Does it cost extra for evenings or weekends?",
          "No. It answers around the clock as part of the plan, including the after-hours call from a buyer and the weekend agent trying to lock in a time before an option period closes, with no surcharge or overage.")],
     "trade_slug": "home_inspectors", "trade_plural": "home inspectors",

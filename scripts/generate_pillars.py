@@ -101,7 +101,7 @@ def hero(p, d):
     <h1 class="display display-lg reveal">{esc(p["h1"])}</h1>
     <p class="page-hero-sub reveal">{p["answer"]}</p>
     <div class="page-hero-actions reveal">
-      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="tel:+14698333033" class="btn btn-line">Call (469) 833-3033</a>
     </div>
   </div>
@@ -171,7 +171,7 @@ def final_cta(p, d):
     <h2 class="display display-lg reveal">{h2}</h2>
     <p class="reveal" style="color:var(--ink-3);max-width:54ch;margin:1rem auto 1.8rem">{esc(sub)}</p>
     <div class="reveal" style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
-      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="tel:+14698333033" class="btn btn-line">Call (469) 833-3033</a>
     </div>
   </div>

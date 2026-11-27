@@ -13,7 +13,7 @@ the honesty bar is strict:
   - Fair, not disparaging: ServiceTitan is a genuinely powerful platform that does its job well for
     the size of business it is built for. The angle is fit, not fault, right-sized done-for-you for
     a small local business vs a comprehensive platform an established operation runs in-house.
-  - Only real Top Shelf prices ($299/$899/$2,500/$1,500), no setup fee, customer owns number/leads/
+  - Only real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website), no setup fee, customer owns number/leads/
     data. No fabricated Top Shelf stats. Never promise a ranking.
   - No em/en dashes, no "leak" metaphor. File name uses underscores; slug is hyphenated.
   - bridge routes to pricing; sections weave links to solution-ai-phone.html and pricing.html.
@@ -34,7 +34,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits your business</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">If you run an established or larger operation with the crews, the call volume, and the office staff to run a full operations platform, ServiceTitan is built for exactly that, and it does that job well. The honest question is whether your business is at that size and stage yet. If you are a small local business whose real problem is a phone that goes unanswered, a website that does not bring in work, and leads that never get a second touch, a comprehensive platform you have to run yourself is usually more tool than you need. Top Shelf is right-sized for that business: the essentials handled for you, on a flat bill, with no heavy software to staff. You can <a href="pricing.html">see exactly what each plan includes</a> and decide from there.</p>'}],
     "bridge_h2": "One flat bill, handled for you, sized for a local business",
-    "bridge_text": "Top Shelf starts at $299 a month for Essentials, which covers website upkeep, local SEO, reviews, and marketing, handled for you. Signature is $899 a month and adds the AI phone receptionist and the CRM that follows up on every lead. If you want everything run at the highest level, the fully done-for-you plan is $2,500 a month, and a one-time custom five-page website is $1,500. There is no setup fee, and your number, your leads, and your data stay yours.",
+    "bridge_text": "The Signature plan is $99 a month for up to 10 users and includes the AI phone receptionist and the CRM that follows up on every lead. A professional website is $499 one time. There is no setup fee, and your number, your leads, and your data stay yours.",
     "bridge_slug": "pricing",
     "bridge_label": "See what each plan includes",
     "faqs": [

@@ -4,7 +4,7 @@ genuinely powerful, flexible all-in-one you operate yourself (marketed largely t
 marketers, who often rebrand and resell it), then position Top Shelf as the done-for-you version of
 the same all-in-one idea for a local owner. Compare on MODEL (do-it-yourself vs done-for-you), NEVER
 on price: no GoHighLevel price or dollar figure appears anywhere. Stated features are public and
-hedged. Only real Top Shelf prices ($299/$899/$2,500/$1,500) appear; no setup fee; no promised
+hedged. Only real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website) appear; no setup fee; no promised
 ranking; no fabricated stats. No em/en dashes; no "leak" metaphor. File name uses underscores; slug
 is hyphenated. Weaves links to solution-crm.html and pricing.html.
 """
@@ -24,7 +24,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits you</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The honest way to choose is to be honest about who you are. If you enjoy being in the software, you have the time to learn it, or you are an agency that wants to rebrand and resell a platform, a self-operated system like GoHighLevel can be a strong fit, and the control it gives you is worth the hours it takes to master. There is nothing wrong with wanting the keys.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">If you would rather run your business and have the marketing handled, the done-for-you model usually fits better. You trade some hands-on control for having people set everything up, run it, and keep it working, on one predictable bill. Top Shelf\'s <a href="pricing.html">plans</a> are built around that trade, from a managed website and local SEO on up to a fully done-for-you setup. Some owners love operating the platform themselves, and some would rather that be someone else\'s job. A free audit is the fastest way to see which one you actually are, with no obligation either way.</p>'}],
     "bridge_h2": "The same all-in-one, set up and run for you",
-    "bridge_text": "Top Shelf's plans start at $299 a month for website upkeep and local SEO with the Essentials plan, step up to $899 a month for the Signature plan that adds the AI phone receptionist and the CRM with automated follow-up, and reach $2,500 a month for the fully done-for-you setup where we run the marketing end to end. If you would rather do a one-time project, a custom five-page website is $1,500. There is no setup fee on any of it, and your number, your leads, and your data stay yours.",
+    "bridge_text": "The Top Shelf Signature plan is $99 a month for up to 10 users and includes the AI phone receptionist and the CRM with automated follow-up. If you would rather do a one-time project, a professional website is $499. There is no setup fee on any of it, and your number, your leads, and your data stay yours.",
     "bridge_slug": "pricing",
     "bridge_label": "See Top Shelf's plans and pricing",
     "faqs": [

@@ -4,7 +4,7 @@ Honest and fair: Jobber is strong field-service management software the owner ru
 comparison is on MODEL (self-serve tools you operate vs an all-in-one, done-for-you platform), never
 on price. NO Jobber dollar figure appears anywhere. Any Jobber feature named is genuinely public and
 hedged ("as of publication; check their site"). The only prices on the page are Top Shelf's real
-plans ($299/$899/$2,500/$1,500). No fabricated Top Shelf stats or results, and no promise of any
+plans ($99/$199 Signature plan, $50 per phone line, $499 website). No fabricated Top Shelf stats or results, and no promise of any
 Google ranking. No em/en dashes; no "leak" metaphor. File name uses underscores; slug is hyphenated.
 """
 
@@ -32,7 +32,7 @@ PAGE = {
         ("Can Top Shelf answer my calls and follow up on my leads?",
          "Yes. The Signature plan includes an AI receptionist that answers around the clock and books the job, plus a CRM that follows up on every lead automatically. Answering inbound calls is a front-office job rather than what field-service management software is built to do, so check any tool's site for its current features."),
         ("What does Top Shelf cost, and is there a setup fee?",
-         " Signature is $899 a month and adds the AI receptionist and the CRM. Fully done-for-you is $2,500 a month, or you can get a one-time custom five-page site for $1,500. There is no setup fee, and you always own your number, your leads, and your data."),
+         "The Signature plan is $99 a month for up to 10 users and includes the AI receptionist and the CRM. A professional website is $499 one time. There is no setup fee, and you always own your number, your leads, and your data."),
     ],
     "cta_h2": "See where jobs are slipping <em>before they book</em>",
     "cta_sub": "Get a free audit of where calls and leads are going cold in your business, whether you work with us or not. No credit card, no obligation.",

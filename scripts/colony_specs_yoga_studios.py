@@ -16,7 +16,7 @@ win-back. This is NOT a gym facility membership (equipment, 24/7 access) and NOT
 trainer's per-session coaching; do not write it as either.
 
 Same honesty rules as the money specs: no invented stats, prices, or clients; hedge instead of
-overpromise; only the real Top Shelf prices ($299/$899 plans, $1,500 one-time site) ever appear,
+overpromise; only the real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website) ever appear,
 and the studio's OWN intro, class-pack, and membership pricing stays generic with no numbers so it
 is never confused with Top Shelf pricing; no em or en dashes anywhere; never "leak" as a metaphor;
 illustrative scenarios only, no named clients or competitors. ETHICS: the AI receptionist does
@@ -39,7 +39,7 @@ TOPICS = [
     "h1": "How Much Does a Yoga Studio Website Cost?",
     "title": "How Much Does a Yoga Studio Website Cost? | Top Shelf Business Solutions",
     "meta_desc": "A yoga studio website ranges from a cheap template to several thousand for a custom build. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "A yoga studio website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more is whether it shows your class schedule and intro offer and books a first class in one tap. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "answer": "A yoga studio website can run from a couple hundred dollars for a DIY template to several thousand for a custom build. What matters more is whether it shows your class schedule and intro offer and books a first class in one tap. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What a yoga studio website actually has to <em>do</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">For a yoga studio the website has one real job, and it is not to look pretty. A newcomer who has finally worked up the nerve to try a class lands on your site from a search or your profile, and within seconds she is deciding whether this looks like a place for someone like her and whether there is a class that fits both her schedule and her level. So the class schedule is the product. It has to be the first thing she sees, not buried three taps deep the way a class-booking app tends to bury it. The intro offer, a free first class or an intro month, belongs right next to it with one clear button to claim it, because every extra step between the impulse and the booking is one more chance to close the tab.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The site also has to be found in the first place, ranking for what she actually types, yoga near me, yoga classes, beginner yoga, or a style you teach, and it has to load fast on the phone she is holding late at night. Judge a quote by whether the site does those things: shows the schedule, makes the intro offer obvious, books a first class in a tap, and ranks for the searches that bring new students. A studio with a genuinely good practice and a slow, schedule-hiding website loses newcomers it never even hears about.</p>'},
@@ -53,7 +53,7 @@ TOPICS = [
         ("Is a cheap template site good enough for a yoga studio to start with?",
          "It can get you online, but a template you fill in yourself rarely ranks for the searches new students make or reads as welcoming to a nervous first-timer, and you do the upkeep. If the site hides your schedule or makes booking a first class hard, its low price is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site stays yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site stays yours if you stop the plan.")],
     "trade_slug": "yoga_studios", "trade_plural": "yoga studios",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
 },
@@ -62,7 +62,7 @@ TOPICS = [
     "slug": "yoga-studio-answering-service-cost",
     "h1": "What Does a Yoga Studio Answering Service Cost?",
     "title": "What Does a Yoga Studio Answering Service Cost? | Top Shelf Business Solutions",
-    "meta_desc": "Answering services for yoga studios often bill per call or minute, which adds up. Top Shelf includes an AI receptionist that answers 24/7 in the $899 Signature plan.",
+    "meta_desc": "Answering services for yoga studios often bill per call or minute, which adds up. Top Shelf includes an AI receptionist that answers 24/7 in the Signature plan, from $99 a month.",
     "answer": "Traditional answering services for yoga studios usually bill per call, per minute, or a monthly retainer, so a busy month gets expensive fast. Top Shelf takes a different approach: an AI receptionist that answers every call and DM and books the intro offer comes in the Signature plan at $99 a month for up to 10 users.",
     "sections": [
         {"h2_html": "How answering services usually <em>charge</em>",
@@ -75,7 +75,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for yoga studios",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the new student it books instead of losing to voicemail while your teachers are on the mat."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the new student it books instead of losing to voicemail while your teachers are on the mat."),
         ("Does it cost extra to answer texts and DMs after hours?",
          "No. It answers calls, texts, and social messages around the clock as part of the plan, including the Sunday-night message from someone deciding to finally try a class, with no after-hours surcharge or overage.")],
     "trade_slug": "yoga_studios", "trade_plural": "yoga studios",
@@ -86,7 +86,7 @@ TOPICS = [
     "slug": "is-a-crm-worth-it-for-a-yoga-studio",
     "h1": "Is a CRM Worth It for a Yoga Studio?",
     "title": "Is a CRM Worth It for a Yoga Studio? | Top Shelf Business Solutions",
-    "meta_desc": "For most yoga studios a CRM pays for itself by converting one intro offer or winning back a drifted student. It comes in Top Shelf's $899 Signature plan.",
+    "meta_desc": "For most yoga studios a CRM pays for itself by converting one intro offer or winning back a drifted student. It comes in the Top Shelf Signature plan, from $99 a month.",
     "answer": "For most yoga studios, yes. A CRM pays for itself the first time it converts an intro offer that would have quietly expired, or brings back a student who drifted away. It only stops being worth it if you never follow up anyway. Top Shelf includes it in the Signature plan, $99 a month for up to 10 users.",
     "sections": [
         {"h2_html": "When a CRM is worth it, and when it is <em>not</em>",

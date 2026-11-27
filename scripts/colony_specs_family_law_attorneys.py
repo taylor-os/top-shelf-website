@@ -64,7 +64,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for family law attorneys",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the after-hours consultation it books, with a caller who might otherwise have hung up, instead of losing it to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the after-hours consultation it books, with a caller who might otherwise have hung up, instead of losing it to voicemail."),
         ("Does it cost extra for nights, weekends, or holidays?",
          "No. It answers 24/7 as part of the plan, including the late call from a parent who can only talk once the house is asleep and the weekend call from someone who has finally decided, with no after-hours surcharge or overage.")],
     "trade_slug": "family_law_attorneys", "trade_plural": "family law attorneys",

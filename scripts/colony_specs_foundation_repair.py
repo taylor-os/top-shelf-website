@@ -18,7 +18,7 @@ repair price. The AI answers and books the free inspection only, it never diagno
 repair, and nothing here guarantees a structural outcome or a ranking.
 
 No invented stats, percentages, prices, or clients; hedge instead of overpromise; only the real prices
-(the $1,500 one-time site and the $299/$899/$2,500 monthly plans, CRM+AI in the $899 Signature) ever
+(the $499 website and the $99/$199 Signature plan with CRM+AI, $50 per phone line) ever
 appear; no invented foundation repair prices; no em/en dashes anywhere; "go cold"/"slip through",
 never "leak" as a money metaphor (a literal foundation water leak would be fine).
 
@@ -74,7 +74,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for foundation repair",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the inspection it books instead of losing an anxious caller to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the inspection it books instead of losing an anxious caller to voicemail."),
         ("Does it diagnose the problem or quote the repair over the phone?",
          "No, and it should not. It handles the call and the calendar only. It calms the homeowner, gathers what they are seeing, and books the free inspection. Diagnosing a foundation and pricing an engineered repair stays with your estimator on site, where it belongs.")],
     "trade_slug": "foundation_repair", "trade_plural": "foundation repair companies",

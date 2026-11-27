@@ -12,8 +12,7 @@ comparing three or four quotes at once), relentless follow-up over the weeks a p
 trust and education for a cautious researcher, and owning expensive leads instead of renting them.
 
 Same honesty rules as the money specs: no invented stats, no invented solar prices, no named
-clients or competitors; only the real Top Shelf prices ($299/$899/$2,500 plans, $1,500 one-time
-site, CRM + AI = the $899 Signature plan) ever appear; no em/en dashes anywhere; never "leak" as a
+clients or competitors; only the real Top Shelf prices ($99/$199 Signature plan with CRM + AI, $50 per phone line, $499 website) ever appear; no em/en dashes anywhere; never "leak" as a
 metaphor. ETHICS (solar is regulated): the AI does scheduling and intake ONLY, and NOTHING here
 promises a saving, payback, ROI, bill elimination, or a tax-credit amount; financing, incentives,
 and net metering are referred to only as questions a homeowner researches, never as a number.
@@ -34,7 +33,7 @@ TOPICS = [
     "h1": "How Much Does a Solar Company Website Cost?",
     "title": "How Much Does a Solar Company Website Cost? | Top Shelf Business Solutions",
     "meta_desc": "A solar company website ranges from a cheap template to a custom build. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "A solar company website can run from a couple hundred dollars for a template to several thousand for a custom build. What matters more is whether it earns a cautious homeowner's trust and turns a research visit into a booked consultation. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "answer": "A solar company website can run from a couple hundred dollars for a template to several thousand for a custom build. What matters more is whether it earns a cautious homeowner's trust and turns a research visit into a booked consultation. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What a solar site actually has to <em>do</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A solar company website is not a brochure you put up and forget. A homeowner about to spend a large sum on a considered purchase reads it carefully, often late at night after the kids are asleep, comparing you against the other companies they are looking at, before they ever pick up the phone. So the real question is not how cheap you can get a site, it is whether the site does the job of turning a cautious researcher into a booked consultation.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">A solar site earns its money when it does a handful of specific things well:</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>Puts a clear consultation or quote request within reach on every page, so a homeowner ready to talk can raise their hand in a tap instead of hunting for your number.</li><li>Shows the proof a wary buyer looks for: photos of real local installs, honest reviews, and your license and insurance stated plainly, so you read as an established company rather than a fly-by-night one.</li><li>Answers the questions a researcher actually carries, how the process works, how financing generally works, whether solar makes sense in their area, honestly and without ever promising a number.</li><li>Ranks for what people type while researching solar, solar installers near me and solar company in their city, so they find you instead of a national lead-seller.</li></ul><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">A beautiful site that ranks for nothing and buries the quote request three clicks deep is the most expensive kind of all, because you paid for it and it books nothing.</p>'},
@@ -48,7 +47,7 @@ TOPICS = [
         ("Is a cheap template site good enough for a solar company?",
          "It can get you online, but a template you fill in yourself is rarely built to rank or to earn the trust of a homeowner spending this much, and you do the work of maintaining it. For a considered purchase like solar, a site that does not get found or does not look credible is not really the bargain its price suggests."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site stays yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site stays yours if you stop the plan.")],
     "trade_slug": "solar_installers", "trade_plural": "solar installers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -70,7 +69,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for solar installers",
     "faqs": [
         ("Is an AI receptionist cheaper than a live solar answering service?",
-         "Usually, and far more predictable. A live service that bills per call or per minute climbs exactly when your leads are flowing, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the consultation it books instead of losing to the company that answered first."),
+         "Usually, and far more predictable. A live service that bills per call or per minute climbs exactly when your leads are flowing, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the consultation it books instead of losing to the company that answered first."),
         ("Does it cost extra for nights and weekends?",
          "No. It answers 24/7 as part of the plan, including the late nights and weekends when homeowners actually sit down to research solar and request quotes, with no after-hours surcharge or overage.")],
     "trade_slug": "solar_installers", "trade_plural": "solar installers",

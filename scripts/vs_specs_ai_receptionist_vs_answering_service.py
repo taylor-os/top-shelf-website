@@ -1,7 +1,7 @@
 """Comparison page: AI receptionist vs a traditional (live) answering service. CATEGORY page
 (model comparison, no single named company), so no competitor disclaimer. Honest and fair: state
 what a live answering service does well, then how an AI receptionist differs, then who each fits.
-Only real Top Shelf prices ($299/$899/$2,500/$1,500). No fabricated numbers; the "per call / per
+Only real Top Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website). No fabricated numbers; the "per call / per
 minute" billing model is the well-known industry norm, stated without inventing a figure. No em/en
 dashes, no "leak" metaphor. File name uses underscores; slug is hyphenated.
 """

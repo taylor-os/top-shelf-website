@@ -6,8 +6,7 @@ page's authority into the ONE money page the question implies. Lighter than a mo
 
 Each dict here owns UNIQUE, hand-written, pool-service-specific substance (the generator owns
 shell, schema, events, keyword placement). Same honesty rules as the money specs: no invented
-stats, prices, or clients; hedge instead of overpromise; only the real prices ($299/$899 plans,
-$1,500 one-time site) ever appear and no pool prices are invented; no em/en dashes anywhere;
+stats, prices, or clients; hedge instead of overpromise; only the real prices ($99/$199 Signature plan, $50 per phone line, $499 website) ever appear and no pool prices are invented; no em/en dashes anywhere;
 never "leak" as a money metaphor (a literal pool or equipment water leak is fine). The AI
 receptionist does scheduling and intake only, it never diagnoses the pool.
 
@@ -33,12 +32,12 @@ TOPICS = [
     "h1": "How Much Does a Pool Service Website Cost?",
     "title": "How Much Does a Pool Service Website Cost? | Top Shelf Business Solutions",
     "meta_desc": "A pool service website runs from a cheap template to a few thousand for a custom build. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "A pool service website can run from a couple hundred dollars for a do-it-yourself template to several thousand for a custom build. What matters more than the price is whether it ranks for pool service near me and turns a homeowner into a recurring account. Top Shelf builds a professional website for $499 one time, and you own it. A monthly plan is optional and keeps it working.",
+    "answer": "A pool service website can run from a couple hundred dollars for a do-it-yourself template to several thousand for a custom build. What matters more than the price is whether it ranks for pool service near me and turns a homeowner into a recurring account. Top Shelf builds a professional website for $499 one time, and you own it. The Signature plan is optional.",
     "sections": [
         {"h2_html": "What a pool service site actually has to <em>do</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">A pool service website is not a brochure, it is the front door to your route. The prize is not a single repair, it is a recurring account that pays every month, so the site has to be built to sign one up. When a homeowner lands on it, they should be able to start weekly service in a couple of taps, see the neighborhoods you cover, and get a sense of your plans, all before they scroll. A site that only lists a phone number and a photo gallery leaves your most valuable customer, the weekly-route one, to work it out for themselves.</p><ul style="color:var(--ink-2);line-height:2;max-width:64ch;margin-top:.8rem"><li>It has to rank for what people actually type when they want their pool handled: pool service near me, weekly pool cleaning, and green pool cleanup in your city.</li><li>It has to make signing up for recurring service the obvious next step, not buried behind a generic contact form.</li><li>It has to show your service area and your plans, so a homeowner knows you cover them and roughly what to expect.</li><li>It has to put your reviews and a tap-to-call button in front of a visitor fast, because trust and speed are what win the call.</li></ul>'},
         {"h2_html": "What drives the <em>price</em>, and what to pay for",
-         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Prices swing because a cheap template you fill in yourself and a custom site built to rank and capture recurring signups are different products with the same name. A do-it-yourself builder is cheap monthly, but you do the work and it rarely ranks. A one-time custom build is yours to keep, but it does little without ongoing SEO behind it. An agency plan bundles the build with the SEO that actually gets it found, which is where most of the long-term value lives. Before you sign anything, ask who owns the site, what a change costs, and whether you keep it if you leave.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf keeps it simple. A professional website on its own is $499 one time, yours to keep, with no plan and no commitment. Or add a monthly plan starting at $299 to keep it working, where the ongoing SEO that gets it ranking for your towns is handled for you. There is no setup fee either way. What no honest company can promise is a specific ranking by a specific date, because no one controls Google, but a free audit can show you exactly where your current site stands first.</p>'}],
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Prices swing because a cheap template you fill in yourself and a custom site built to rank and capture recurring signups are different products with the same name. A do-it-yourself builder is cheap monthly, but you do the work and it rarely ranks. A one-time custom build is yours to keep, but it does little without ongoing SEO behind it. An agency plan bundles the build with the SEO that actually gets it found, which is where most of the long-term value lives. Before you sign anything, ask who owns the site, what a change costs, and whether you keep it if you leave.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf keeps it simple. A professional website on its own is $499 one time, yours to keep, with no plan and no commitment. Or add the Signature plan, from $99 a month, to answer and follow up on the calls it brings in. There is no setup fee either way. What no honest company can promise is a specific ranking by a specific date, because no one controls Google, but a free audit can show you exactly where your current site stands first.</p>'}],
     "bridge_h2": "Get a site that signs up recurring customers",
     "bridge_text": "A pool service website is only worth the recurring accounts it brings in. Ours is built to rank for the towns you cover and turn a pool service near me search into a signed-up route customer, then wired to follow up on every one.",
     "bridge_slug": "websites-seo-for-pool-service",
@@ -47,7 +46,7 @@ TOPICS = [
         ("Do I need a website if most of my work is on a route?",
          "Yes. New route customers still find you by searching, and a site is where a homeowner signs up for recurring service, sees your plans and service area, and reads your reviews before they trust you with their pool. Word of mouth fills some of the route, but the search traffic is where the growth is."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. If you buy the $499 website, it is yours to keep. A monthly plan is optional and keeps the site working. The site stays yours if you stop the plan.")],
+         "Yes. If you buy the $499 website, it is yours to keep. The Signature plan is optional. The site stays yours if you stop the plan.")],
     "trade_slug": "pool_service", "trade_plural": "pool service companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -69,7 +68,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for pool service companies",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs right when open season and heat waves flood your phone, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the recurring account it books instead of losing to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs right when open season and heat waves flood your phone, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the recurring account it books instead of losing to voicemail."),
         ("Does it cost extra for nights, weekends, or the busy season?",
          "No. It answers 24/7 as part of the plan, including the weekend green-pool call and the first warm week when everyone wants their pool opened at once, with no after-hours or overage surcharge.")],
     "trade_slug": "pool_service", "trade_plural": "pool service companies",
@@ -80,7 +79,7 @@ TOPICS = [
     "slug": "is-a-crm-worth-it-for-a-pool-service",
     "h1": "Is a CRM Worth It for a Pool Service Company?",
     "title": "Is a CRM Worth It for a Pool Service Company? | Top Shelf Business Solutions",
-    "meta_desc": "For most pool companies a CRM pays for itself by holding a route customer, closing a repair quote, or reviving a seasonal one. Included in Top Shelf Signature at $899/mo.",
+    "meta_desc": "For most pool companies a CRM pays for itself by holding a route customer, closing a repair quote, or reviving a seasonal one. Included in Top Shelf Signature, from $99/mo.",
     "answer": "For most pool service companies, yes. A CRM pays for itself the first time it holds a route customer who would have drifted off, closes an equipment quote a homeowner was sitting on, or brings a seasonal customer back for a spring open. It only stops being worth it if you never follow up anyway. Top Shelf includes it in the Signature plan, $99 a month for up to 10 users.",
     "sections": [
         {"h2_html": "When a CRM is worth it, and when it is <em>not</em>",

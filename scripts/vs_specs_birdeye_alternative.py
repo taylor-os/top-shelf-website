@@ -9,8 +9,7 @@ operate the dashboard. Top Shelf is a different shape, not a better tool at the 
 generation is one part of an all-in-one, done-for-you platform for a single local business that
 also builds the site, answers the phone, and follows up, on one bill, with the owner keeping their
 number, leads, and reviews. Compare on MODEL, never on price. No Birdeye price or dollar figure of
-any kind (we do not have or need one). Only real Top Shelf prices appear ($899 Signature is the
-plan that carries review generation). No fabricated competitor facts; every Birdeye capability
+any kind (we do not have or need one). Only real Top Shelf prices appear (the $99/$199 Signature plan carries review generation). No fabricated competitor facts; every Birdeye capability
 named is public and hedged ("built for", "on its own site", "positions itself as"). No
 disparagement. No em/en dashes. No "leak" metaphor (Top Shelf says "find the gap"). File name uses
 underscores; slug is hyphenated.

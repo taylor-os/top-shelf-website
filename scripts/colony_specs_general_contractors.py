@@ -47,7 +47,7 @@ TOPICS = [
         ("Is a cheap template site good enough for a general contractor?",
          "It can get you online, but a template you fill in yourself rarely shows your finished projects well or ranks for the searches homeowners use, and you do the upkeep. For a purchase as large as a remodel, a site that does not build trust or get found is not really a bargain."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. The website is $499 one time, and it is yours to keep. A monthly plan is optional and keeps the site working. It is month to month, with no contract.")],
+         "Yes. The website is $499 one time, and it is yours to keep. The Signature plan is optional. It is month to month, with no contract.")],
     "trade_slug": "general_contractors", "trade_plural": "general contractors",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
 },
@@ -69,7 +69,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for general contractors",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the one project call it captures instead of losing to voicemail, which for a contractor can be worth more than the plan costs for months."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the one project call it captures instead of losing to voicemail, which for a contractor can be worth more than the plan costs for months."),
         ("Can it price a job or commit me to a bid?",
          "No, and that is on purpose. It captures what a consult needs, what they want built, roughly when, and whether they have plans or a budget, then books the appointment or hands you the lead. You still walk the project and set the scope and the price yourself, so nothing is quoted or promised in your name.")],
     "trade_slug": "general_contractors", "trade_plural": "general contractors",

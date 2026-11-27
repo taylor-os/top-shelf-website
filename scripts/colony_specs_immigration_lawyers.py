@@ -47,7 +47,7 @@ TOPICS = [
         ("Does the website need to work in Spanish too?",
          "For most immigration firms, yes. A large share of the people searching for help are more comfortable in Spanish or another language, and a site that speaks to them in the language they searched in earns more consultations. We can build it to serve more than one language so no visitor bounces because they could not read it."),
         ("Do I keep the website if I stop working with you?",
-         "Yes. The website is $499 one time, and it is yours to keep. A monthly plan is optional and keeps the site working. It is month to month, with no contract.")],
+         "Yes. The website is $499 one time, and it is yours to keep. The Signature plan is optional. It is month to month, with no contract.")],
     "trade_slug": "immigration_lawyers", "trade_plural": "immigration lawyers",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
 },
@@ -69,7 +69,7 @@ TOPICS = [
     "bridge_label": "AI receptionist for immigration lawyers",
     "faqs": [
         ("Is an AI receptionist cheaper than a live answering service?",
-         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is a flat part of your plan with no meter. The bigger saving is the after-hours consultation it books, in the caller's language, instead of losing it to voicemail."),
+         "Usually, and more predictable. A live service that bills per call or per minute climbs exactly when you are busiest, while the AI receptionist is part of the Signature plan. Each phone line is $50 a month and covers normal use. The bigger saving is the after-hours consultation it books, in the caller's language, instead of losing it to voicemail."),
         ("Does it really take intake in Spanish?",
          "Yes, and for immigration work that is a real edge. It can greet the caller and run the whole intake in the language they are comfortable in, so a Spanish-first caller is helped and understood instead of hanging up on a voicemail they cannot follow. It captures the facts and books the consultation; it never gives legal advice or promises a result.")],
     "trade_slug": "immigration_lawyers", "trade_plural": "immigration lawyers",

@@ -6,8 +6,7 @@ problem/symptom, how-to, and cost, spread across all seven electrician money pag
 
 Voice matches corpus_specs.py / specs_electricians.py: direct, plain, peer-to-owner, honest
 (hedged, no invented stats/prices/clients), no em or en dashes, and it uses "the gap" or
-"slipping/going cold", never "leak". Prices are limited to Top Shelf's real ladder; only the
-Essentials entry ($299/mo, which includes the website) is cited, and only where it is true.
+"slipping/going cold", never "leak". Prices are limited to Top Shelf's real ones ($99/$199 Signature plan, $499 website), cited only where true.
 """
 
 TOPICS = [
@@ -91,19 +90,19 @@ TOPICS = [
     "title": "How Much Does An Electrician Website Cost? | Top Shelf Business Solutions",
     "h1": "How Much Does An Electrician Website Cost?",
     "meta_desc": "An electrician website ranges from a cheap DIY template to a custom build, and a site that never ranks is the costly one. Top Shelf builds yours for $499 one time, and you own it.",
-    "answer": "It depends on what you need. A basic template you build yourself is cheap but rarely ranks or captures calls, while a custom, done-for-you site that ranks locally and turns visitors into booked jobs costs more. Top Shelf builds a custom five-page site for $1,500 one-time, and you own it.",
+    "answer": "It depends on what you need. A basic template you build yourself is cheap but rarely ranks or captures calls, while a custom, done-for-you site that ranks locally and turns visitors into booked jobs costs more. Top Shelf builds a professional website for $499 one time, and you own it.",
     "sections": [
         {"h2_html": "What actually drives the <em>price</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">An electrician website can cost almost nothing or quite a lot, and the number comes down to a few real things: whether you build a template yourself or have it built for you, whether it is just an online business card or is engineered to rank in local search and capture calls, and whether it is a one-time build or comes with the ongoing SEO that keeps it showing up. A cheap template and a site built to bring you jobs are not the same product, even though both get called "a website".</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">That is why a flat quote with no context does not tell you much. The useful question is not "what does a website cost", it is "what does a website that actually brings me calls cost", because a site nobody finds is the most expensive option of all. You paid for it, and it earns you nothing while a competitor whose site does rank quietly takes the jobs.</p>'},
         {"h2_html": "The cheap site nobody finds is the <em>expensive one</em>",
-         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The real trap is spending a little on a site that looks fine and does nothing. It does not rank, it does not turn visitors into calls, and it quietly costs you every job that went to an electrician whose site did the work. Whatever you spend, the site has to do three things: show up when a homeowner searches, make calling or requesting a quote effortless, and feed those leads somewhere they get followed up instead of forgotten.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf keeps the two things separate. The website is a one-time $1,500 build that you own. A monthly plan is optional, starting at $299 a month, and adds the tools that answer the calls it brings in and follow up on the quotes it captures. That way the site is part of a system that earns, rather than a one-time cost that sits there looking nice and doing very little.</p>'}],
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The real trap is spending a little on a site that looks fine and does nothing. It does not rank, it does not turn visitors into calls, and it quietly costs you every job that went to an electrician whose site did the work. Whatever you spend, the site has to do three things: show up when a homeowner searches, make calling or requesting a quote effortless, and feed those leads somewhere they get followed up instead of forgotten.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">Top Shelf keeps the two things separate. The website is $499 one time, and you own it. The Signature plan is optional, starting at $99 a month, and adds the tools that answer the calls it brings in and follow up on the quotes it captures. That way the site is part of a system that earns, rather than a one-time cost that sits there looking nice and doing very little.</p>'}],
     "bridge_h2": "Get a site built to rank and capture calls",
-    "bridge_text": 'Websites and SEO for electricians builds a site that ranks for electrician near me in your city, puts click-to-call and a quote request on every page, and feeds every lead into your CRM. It is a one-time $1,500 build you own, and a plan from $299 a month keeps it working, so the site earns its keep.',
+    "bridge_text": 'Websites and SEO for electricians builds a site that ranks for electrician near me in your city, puts click-to-call and a quote request on every page, and feeds every lead into your CRM. It is $499 one time and you own it, and the Signature plan, from $99 a month, answers and follows up on every lead it sends you.',
     "bridge_slug": "websites-seo-for-electricians",
     "bridge_label": "See websites and SEO for electricians",
     "faqs": [
         ("Do I need a monthly plan to get a website?",
-         'No. The site is a one-time $1,500 build you own. But a site that ranks needs ongoing SEO to stay visible, which a build-and-leave rarely includes. A monthly plan is optional and adds that upkeep and the tools that capture its leads, so the site keeps working instead of aging out.'),
+         'No. The website is $499 one time, and you own it. The Signature plan is optional and adds the tools that answer and follow up on the leads it brings in.'),
         ("Do I really need to pay for SEO, or just a website?",
          'A website with no SEO is a business card nobody looks up. SEO is what makes it show up when a homeowner searches for an electrician near them, which is the entire point of having one. Paying for a site without it usually means paying for something that never actually gets found.')],
 },

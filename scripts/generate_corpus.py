@@ -65,7 +65,7 @@ def hero(spec):
     <h1 class="display display-lg reveal">{spec["h1_html"]}</h1>
     <p class="page-hero-sub reveal">{spec["answer_block"]}</p>
     <div class="page-hero-actions reveal">
-      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="tel:+14698333033" class="btn btn-line">Call (469) 833-3033</a>
     </div>
   </div>
@@ -140,9 +140,9 @@ def build_aside(spec, toc):
 {toc_links}
   </div>
   <div class="aside-card aside-cta reveal">
-    <h3>Free business audit</h3>
+    <h3>Try the CRM</h3>
     <p>See what your current setup is missing, whether you work with us or not.</p>
-    <a href="contact.html" class="btn btn-gold btn-sm">Get Your Free Audit <span class="arr">&rarr;</span></a>
+    <a href="contact.html" class="btn btn-gold btn-sm">Try the CRM <span class="arr">&rarr;</span></a>
     <a href="tel:+14698333033" class="btn btn-line btn-sm">Call (469) 833-3033</a>
     <a href="booking.html" class="btn btn-line btn-sm">Book a 15-minute call</a>
   </div>
@@ -165,7 +165,7 @@ def final_cta(spec):
     <h2 class="display display-lg reveal">{spec["cta_h2_html"]}</h2>
     <p class="reveal" style="color:var(--ink-3);max-width:52ch;margin:1rem auto 1.8rem">{esc(spec["cta_sub"])}</p>
     <div class="reveal" style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
-      <a href="contact.html" class="btn btn-gold">Get Your Free Audit <span class="arr">&rarr;</span></a>
+      <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="tel:+14698333033" class="btn btn-line">Call (469) 833-3033</a>
     </div>
   </div>

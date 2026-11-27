@@ -9,7 +9,7 @@ marketing, on one bill, with the number and leads staying the owner's. We differ
 never on price, and never claim a Top Shelf-only feature Mindbody lacks (Mindbody publicly lists
 websites, marketing, and AI missed-call tools too), so the split is self-run software + marketplace
 vs done-for-you managed service. Marketplace is conceded as a real Mindbody strength. Only real Top
-Shelf prices ($299 / $899 / $2,500 / $1,500). No fabricated numbers, no Mindbody price, no ranking
+Shelf prices ($99/$199 Signature plan, $50 per phone line, $499 website). No fabricated numbers, no Mindbody price, no ranking
 promise, no health/fitness/outcome claims, no em/en dashes, no "leak" metaphor. File name uses
 underscores; slug is hyphenated.
 """
@@ -29,7 +29,7 @@ PAGE = {
         {"h2_html": "Which one <em>fits your business</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">The honest split comes down to who does the work and what you want to be great at. If your priority is the deepest scheduling and membership management, plus marketplace exposure inside the Mindbody app, and you have someone to run the software day to day, Mindbody is a strong fit. If your priority is having one company build your site, help customers find you locally, answer and book the phone, and follow up on every lead without you managing any of it, Top Shelf is built for that. Some businesses even do both, keeping dedicated booking software while a done-for-you partner runs the website, the phone, and the marketing around it. The way to decide is to look at where calls, bookings, and leads are actually slipping today, which is exactly what a free audit shows you, whether you work with us or not.</p>'}],
     "bridge_h2": "Booking, the phone, and the follow-up, all done for you",
-    "bridge_text": "Top Shelf sets up your online booking and puts an AI receptionist on your phone that answers and books the call, then hands every lead to a CRM that follows up automatically. The AI receptionist and CRM come together in the Signature plan at $99 a month for up to 10 users; the Essentials plan is $299 a month for website upkeep, local SEO, reviews, and marketing; a fully done-for-you plan is $2,500 a month; and a one-time custom five-page website is $1,500. There is no setup fee, and your number, leads, and data stay yours.",
+    "bridge_text": "Top Shelf sets up your online booking and puts an AI receptionist on your phone that answers and books the call, then hands every lead to a CRM that follows up automatically. The AI receptionist and CRM come together in the Signature plan at $99 a month for up to 10 users, and a professional website is $499 one time. There is no setup fee, and your number, leads, and data stay yours.",
     "bridge_slug": "solution-booking",
     "bridge_label": "See how booking works",
     "faqs": [
@@ -38,7 +38,7 @@ PAGE = {
         ("Does Top Shelf have a class and appointment marketplace like Mindbody?",
          "No, and that is worth being straight about. Mindbody runs a large consumer app where people discover and book classes and appointments, which is one of its real strengths. Top Shelf takes a different approach and focuses on your own website and Google presence so customers find and call you directly, with the leads staying yours rather than living inside a marketplace."),
         ("How does Top Shelf's pricing work?",
-         " Signature is $899 a month and adds the AI receptionist, CRM, and automated follow-up. A fully done-for-you plan is $2,500 a month, or you can get a one-time custom five-page website for $1,500. There is no setup fee."),
+         "The Signature plan is $99 a month for up to 10 users and includes the AI receptionist, CRM, and automated follow-up. A professional website is $499 one time. There is no setup fee."),
     ],
     "cta_h2": "See what done-for-you looks like next to <em>software you run yourself</em>",
     "cta_sub": "Get a free audit of where calls, bookings, and leads are slipping today, whether you work with us or not. No credit card, and never a call center.",
