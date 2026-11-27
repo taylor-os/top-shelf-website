@@ -31,7 +31,7 @@ C, B, PAIRS, CAPS, BY_SLUG, e = A.C, A.B, A.PAIRS, A.CAPS, A.BY_SLUG, A.e
 frame, crm_rel, web_rel, checks, head, ctas = A.frame, A.crm_rel, A.web_rel, A.checks, A.head, A.ctas
 
 # ---------------------------------------------------------------- approved copy carried from the live site
-# Owner quotes: solution-crm.html "Straight From the Owners" (live), verbatim.
+# Owner quotes: the live site's owner quotes, verbatim, as on index.html ("What owners tell us") and solution-crm.html ("Straight From the Owners").
 QUOTES = {
     "gdr": ("We're a small crew, so when everyone's out on a repair the phone used to just ring out. Now every call gets answered "
             "and the job's booked before I'm back in the truck. We're on the Signature Plan and it fits us perfectly at our size. "
@@ -153,7 +153,9 @@ def faq(items, h, body=""):
 
 
 def steps(items, h="How it works"):
-    items = [dict(s, title="Send your first text") if s["step"] == "3" else s for s in items]
+    items = [dict(s, title="Send your first text",
+                  body="Pick the plan for your team size and your phone line, then send your first text from the app.")
+             if s["step"] == "3" else s for s in items]
     li = "".join(f'<li><span class="num" aria-hidden="true">{e(s["step"])}</span><h3>{e(s["title"])}</h3><p>{e(s["body"])}</p></li>' for s in items)
     return (f'<section class="sec steps-sec"><div class="wrap">{head("", h)}<ol class="steps">{li}</ol>'
             f'<p class="note">Rather text? Text {e(B["phone"])}.</p></div></section>')

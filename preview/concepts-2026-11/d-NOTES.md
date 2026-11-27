@@ -20,7 +20,7 @@ Look: warm white, deep teal, Figtree, with the Top Shelf mark on its ink tile.
 | The price on every industry CRM and website page | salon, auto (C had none on those pages) | A |
 | "Websites $499, one time", never "from $499" | salon | Pricing page |
 | "Rather text? Text (469) 833-3033" under How it works | salon | |
-| How it works step 3 is "Send your first text", not "Send your first invoice" (a dental office or restaurant doesn't invoice) | restaurant, dental, salon | Same body as content.json |
+| How it works step 3 is "Send your first text", not "Send your first invoice", and its body ends "then send your first text from the app" instead of "text your first estimate or invoice" (a dental office or restaurant doesn't invoice, and the salon reviewer said "I don't send invoices") | restaurant, dental, salon | content.json, with the invoice wording swapped for the text wording |
 | Salon "What owners get" says in words what the screens show: deposit and 48-hour rule on the booking page, deposit off the ticket and the tip split at checkout, booking the next visit at checkout, the last formula and photos. Wording comes from the salon screen captions only | salon (top ask) | captions.json |
 | On every industry page, the HIPAA box and the "Using X?" box sit right under the intro, before the screens, so a phone visitor sees them on the second screen | dental, restaurant | |
 | "HIPAA setup, BAA included" also shows on the Medical & Dental panel of the home-page picker | dental | Same approved HIPAA wording |
@@ -40,6 +40,11 @@ Look: warm white, deep teal, Figtree, with the Top Shelf mark on its ink tile.
 | A restaurant-sized cost example ($199 + $50 for 14 logins) | Depends on who counts as a user, which isn't answered yet |
 | Restaurant website answers: who updates the menu, events form into the board, hosting after the $499 | Not in the facts file |
 | What the AI receptionist will and won't say, and Spanish (auto) | Not in the facts file. Spanish stays in "Ask us these on the call" |
+| A "first 30 days" timeline (dental) | Setup time and who does it are unanswered owner questions, so there is nothing true to put on the timeline yet |
+| A yes / not yet feature checklist: parts ordering, labor guide, VIN decode (auto) | None of these are in the facts file |
+| Making the sample a general repair shop instead of a European/BMW shop (auto) | The sample business and its screens are shared by every version, so changing it is a separate render job |
+| Renaming "Try the CRM" (restaurant, salon) | It's the owner-set button name in the facts file |
+| Saying whether booking confirmations go out automatically or by hand (dental) | A "What only Taylor can answer" question. The dental lead screen shows the confirmation text as "Sent automatically", which is allowed because it's a confirmation, not a review request, but D can't say more until Taylor confirms how confirmations go out |
 
 ## What D could not do without Taylor
 
