@@ -9,3 +9,7 @@ Allow: /
 Disallow: /demo/
 
 Sitemap: https://www.topshelfsolutions.io/sitemap.xml
+
+# Design concepts (2026-11): previews for the owner, not for search
+User-agent: *
+Disallow: /preview/concepts-2026-11/

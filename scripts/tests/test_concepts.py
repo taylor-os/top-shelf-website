@@ -50,7 +50,7 @@ def test_concept_pages_follow_rules(cid):
         if OLD_PRICES.search(t):
             bad.append(f"{rel}: old price")
         for href in re.findall(r'(?:href|src)="([^"#?]+)', s):
-            if href.startswith(("http", "mailto:", "tel:", "data:", "//")):
+            if href.startswith(("http", "mailto:", "tel:", "sms:", "data:", "//")):
                 continue
             target = os.path.normpath(os.path.join(os.path.dirname(f), href))
             if not os.path.exists(target):
