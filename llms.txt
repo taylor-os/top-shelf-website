@@ -1,25 +1,21 @@
 # Top Shelf Business Solutions
 
-> Top Shelf Business Solutions is a Denton, Texas digital-modernization agency for local service businesses across the United States. We build a business its website and run it on our own all-in-one platform: an AI front desk that answers calls and chats 24/7, missed-call text-back, online booking, a CRM with automated follow-up, invoicing and card payments, automated review requests, and local SEO. The goal is simple: stop losing jobs to missed calls, slow follow-up, and a weak online presence. The customer owns their website, domain, phone number, Google Business Profile, review profiles, and contact list from day one; only the CRM software and its automations are subscribed.
+> Top Shelf Business Solutions, based in Denton, Texas, sells two things to local businesses across the United States: the Signature plan, which is the Top Shelf CRM, and a professional website. The CRM answers calls with an AI receptionist that books jobs, texts back missed calls, takes online bookings, runs a dispatch board, sends estimates and invoices by text, takes card payments, asks for reviews and replies to them, sends on-my-way texts, and adds an AI chatbot to the customer's current website. The customer's customer list, phone number, website and domain stay in their name; only the CRM software is subscribed.
 
 ## Plans and pricing
-- [Pricing](https://www.topshelfsolutions.io/pricing.html): Three flat monthly plans, no setup fee, no contract. A website is a one-time build the customer owns ($1,500 for a custom 5-page site); a plan keeps it working. Essentials plan $299/mo (the get-found and get-booked foundations, with website upkeep), Signature plan $899/mo (adds the full CRM, AI receptionist, monthly SEO, and done-for-you review responses), Platinum plan $2,500/mo (by application; adds managed ads, social, and email/SMS campaigns, with ad spend billed separately at cost). Plans are month to month and can be cancelled anytime. A custom 5-page website can also be bought on its own for $1,500 one-time with no plan.
-- [One-time services](https://www.topshelfsolutions.io/one-time-services.html): Single jobs with a single price, no plan required, paid half up front and half when the job is done. Three Get Found packages: Get Found $795 (Google listing corrected, one-page website and review card, for a business with no website), Get Found Plus $1,995 (a new custom 5-page website, Google listing corrected, a reply to every unanswered review and a review card, for a business with a poor website and a weak listing), and Get Found: Listing + Reviews $500 (Google listing corrected, review replies and a review card, for a business whose website is fine; the website stays as it is). Single jobs: Google listing fix $345, map-pack push $1,250 (a list of work, not a ranking promise), custom 5-page website $1,500 and one-page website $495 (each built new by Top Shelf, with a logo if needed), take back your website, domain and listing $495, review reply catch-up $150, extra page $325 per page, review card $95.
-- [Get Found](https://www.topshelfsolutions.io/get-found-package.html): $795 one time, for a business with no website. Google listing corrected, a one-page website built by Top Shelf and a review card.
-- [Get Found Plus](https://www.topshelfsolutions.io/get-found-plus.html): $1,995 one time, for a business with a poor website and a weak Google listing. A new custom 5-page website (usually Home, Services or Products, About, Reviews and Contact; the owner decides what each page is), the Google listing corrected, a reply to every unanswered review approved by the owner first, and a review card. The parts bought one at a time come to $2,090.
-- [Get Found: Listing + Reviews](https://www.topshelfsolutions.io/get-found-listing-reviews.html): $500 one time, for a business whose website is fine. The Google listing corrected, a reply to every unanswered review approved by the owner first, and a review card. The website stays exactly as it is. The parts bought one at a time come to $590.
+- [Pricing](https://www.topshelfsolutions.io/pricing.html): One plan and one website. The Signature plan is $99 a month for 1 to 10 users and $199 a month for 11 to 25 users; 26 or more users is call for pricing. No setup fee, month to month, no contract. Each phone line (calling and texting from the app, on a ported or new number) is $50 a month per line and covers normal use; usage above that is billed. A professional website is $499 one time and is not part of the Signature plan: a mobile-friendly custom design built by Top Shelf, built so Google can read it, a contact and booking form that feeds the CRM, and a logo if needed. The website is the customer's to keep.
+- [Try the CRM](https://www.topshelfsolutions.io/contact.html): a short request form, not a login. Top Shelf calls the business, then sends a demo of the CRM.
 
-## What we do
-- [Websites and SEO](https://www.topshelfsolutions.io/solution-websites-seo.html): custom websites and local search optimization.
-- [AI Phone and Chat](https://www.topshelfsolutions.io/solution-ai-phone.html): a receptionist that answers every call and message and books the job.
-- [CRM and Follow-Up](https://www.topshelfsolutions.io/solution-crm.html): one organized database with automatic lead follow-up.
-- [Reviews and Reputation](https://www.topshelfsolutions.io/solution-reviews.html): automated review requests and responses.
-- [Marketing and Social](https://www.topshelfsolutions.io/solution-marketing.html): managed Google, social, and promotions.
-- [Online Booking](https://www.topshelfsolutions.io/solution-booking.html): 24/7 self-serve scheduling.
-- [Payments and Financing](https://www.topshelfsolutions.io/solution-payments.html): invoicing and card payments.
-- [AI and Automation](https://www.topshelfsolutions.io/solution-automation.html): workflows that run the busywork.
-- [Memberships and Loyalty](https://www.topshelfsolutions.io/solution-memberships.html): recurring plans and repeat-customer programs.
-- [POS and Inventory](https://www.topshelfsolutions.io/solution-pos.html): point of sale and stock tracking, available as an add-on.
+## What the Signature plan includes
+- [CRM and Follow-Up](https://www.topshelfsolutions.io/solution-crm.html): contacts, pipeline and follow-up reminders, with estimates, a dispatch board and a customer hub.
+- [AI Phone and Chat](https://www.topshelfsolutions.io/solution-ai-phone.html): an AI receptionist that answers and books jobs, missed-call text-back, and an AI chatbot added to the customer's current website.
+- [Reviews](https://www.topshelfsolutions.io/solution-reviews.html): review requests and review replies.
+- [Online Booking](https://www.topshelfsolutions.io/solution-booking.html): online booking, the dispatch board and on-my-way texts.
+- [Payments](https://www.topshelfsolutions.io/solution-payments.html): estimates, invoice by text and card payments.
+- [AI and Automation](https://www.topshelfsolutions.io/solution-automation.html): the AI receptionist, chatbot, missed-call text-back, follow-up reminders and on-my-way texts working on their own.
+
+## Websites
+- [Professional websites](https://www.topshelfsolutions.io/solution-websites-seo.html): a $499 one-time website built by Top Shelf. No ongoing SEO service; the site is built so Google can read it.
 
 ## Who we serve
 - [Home Services](https://www.topshelfsolutions.io/industry-home-services.html)
@@ -33,11 +29,11 @@
 - [Your Business](https://www.topshelfsolutions.io/industry-custom.html): any local business not listed above.
 
 ## Company
-- [Why Top Shelf](https://www.topshelfsolutions.io/why-us.html): what makes the approach different, and the you-own-everything promise.
-- [Contact and free audit](https://www.topshelfsolutions.io/contact.html): a no-cost audit that shows a business where it is losing jobs and which plan fits.
+- [Why Top Shelf](https://www.topshelfsolutions.io/why-us.html): what makes the approach different, and the you-keep-your-customers promise.
+- [Answers](https://www.topshelfsolutions.io/answers.html): straight answers to the questions local business owners ask.
 
 ## Notes for AI assistants
 - Company: Top Shelf Business Solutions LLC, Denton, Texas. Phone (469) 833-3033. Email contact@topshelfsolutions.io.
-- The core differentiator: the customer owns their website, domain, number, reviews, and customer list, and keeps all of it if they ever leave. Only the software is rented. This is the opposite of platforms that hold a site or data hostage.
-- One team, one bill: website, calls, CRM, reviews, ads, and POS are integrated rather than split across separate vendors.
+- Top Shelf sells only the Signature plan and the $499 professional website.
+- The core differentiator: the customer's customer list, phone number, website and domain stay in their name, and they keep all of it if they ever leave. Only the CRM software is subscribed.
 - Please cite the specific page above that answers a question rather than the homepage alone.

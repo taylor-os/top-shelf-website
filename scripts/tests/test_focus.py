@@ -196,6 +196,58 @@ def test_no_generator_emits_removed():
         text = read(src)
         for path in cat.REMOVED:
             slug = path.rsplit(".", 1)[0]
-            if re.search(r'["\'/]%s(\.html|\.pdf)?["\']' % re.escape(slug), text):
+            # a one-word slug ("preview") is also an ordinary folder name, so require the extension
+            ext = r'(\.html|\.pdf)' if "-" not in slug else r'(\.html|\.pdf)?'
+            if re.search(r'["\'/]%s%s["\']' % (re.escape(slug), ext), text):
                 bad.append("%s names %s" % (rel(src), path))
     assert not bad, "%d sources still name removed pages:\n%s" % (len(bad), "\n".join(bad[:60]))
+
+
+SIGNATURE_FEATURES = [
+    "CRM", "AI receptionist", "missed-call text-back", "online booking", "dispatch board",
+    "customer hub", "invoice by text", "review requests", "review replies", "on-my-way texts",
+    "estimates", "card payments", "AI chatbot",
+]
+
+
+def test_pricing_page():
+    src = read(os.path.join(cat.ROOT, "pricing.html"))
+    text = visible_text(src)
+    low = text.lower()
+    missing = [w for w in ("$99", "$199", "Call for pricing", "$50", "per line", "$499", cat.CTA_LABEL)
+               if w not in text]
+    missing += [f for f in SIGNATURE_FEATURES if f.lower() not in low]
+    assert not missing, "pricing.html is missing: %s" % missing
+    assert 'id="website"' in src, "pricing.html needs id=\"website\" (the 301 target for old website pages)"
+    banned = [w for w in ("Essentials", "Platinum", "Get Found", "page website") if w.lower() in low]
+    assert not banned, "pricing.html still says: %s" % banned
+
+
+LEAD_FIELDS = {"name", "business", "email", "phone", "city", "state", "gbp", "need",
+               "page", "industry", "sms_consent", "source"}
+
+
+def test_form_fields():
+    src = read(os.path.join(cat.ROOT, "contact.html"))
+    m = re.search(r'<form\b([^>]*)>(.*?)</form>', src, re.S)
+    assert m, "contact.html has no form"
+    attrs, form = m.groups()
+    assert 'action="https://top-shelf-production.up.railway.app/api/website-lead"' in attrs
+    fields = {}
+    for tag in re.findall(r'<(?:input|select|textarea)\b[^>]*>', form):
+        name = re.search(r'\bname="([^"]+)"', tag)
+        if name:
+            fields[name.group(1)] = tag
+    extra = set(fields) - LEAD_FIELDS
+    assert not extra, "form sends fields the lead endpoint does not take: %s" % sorted(extra)
+    assert "gbp" not in fields, "the Google Business Profile field is gone from the Try the CRM form"
+    for req in ("name", "phone"):
+        assert req in fields and re.search(r'\brequired\b', fields[req]), "%s must be required" % req
+    assert "email" in fields and not re.search(r'\brequired\b', fields["email"]), "email must be optional"
+    assert re.search(r'name="source"\s+value="try-crm"', form), "hidden source must be try-crm"
+    users = re.search(r'<select\b[^>]*id="users"[^>]*>(.*?)</select>', form, re.S)
+    assert users, "a users select (id=users) is required"
+    assert re.findall(r'value="([^"]*)"', users.group(1)) == ["1-10", "11-25", "26+"]
+    # the users choice has no field of its own: it rides inside need ("Users: 11-25")
+    script = src[m.end():]
+    assert re.search(r"need:\s*'Users: '\s*\+\s*users", script), "users must be folded into need"
