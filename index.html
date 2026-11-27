@@ -172,13 +172,6 @@
 #cc .c-phone-grid{grid-template-columns:1fr}
 #cc .c-phone-grid .c-phone{order:2}
 }
-#cc .c-pills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
-#cc .c-pills a{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 20px 0 22px;border-radius:999px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);font-size:1.0625rem;font-weight:500;transition:border-color 200ms ease,color 200ms ease,transform 200ms var(--ease)}
-#cc .c-pills a span{color:var(--blue);transition:transform 200ms var(--ease)}
-@media (hover:hover){
-#cc .c-pills a:hover{border-color:var(--blue);color:var(--blue)}
-#cc .c-pills a:hover span{transform:translateX(3px)}
-}
 #cc .c-ind-sub{margin-top:24px;color:var(--muted)}
 #cc .c-web{position:relative;border:1.5px solid var(--blue);border-radius:22px;padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,80px);align-items:center;background:radial-gradient(90% 120% at 100% 0%,rgba(var(--wash),.14),transparent 55%),var(--card);box-shadow:var(--shadow)}
 #cc .c-web::before{content:"";position:absolute;inset:6px;border:1px solid rgba(var(--acc),.16);border-radius:16px;pointer-events:none}
@@ -316,6 +309,27 @@ body.drawer-open{overflow:hidden}
 #cc .c-stage .c-phone{left:-3.5%}
 @media (max-width:900px){#cc .c-stage .c-phone{left:-1%}}
 
+/* PAIR-CARDS:start (scripts/build_site_update.py) */
+#cc .c-pairs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+#cc .c-pair{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--shadow);overflow:hidden;transition:border-color 200ms ease}
+#cc .c-pair-shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px 12px 0}
+#cc .c-pair-shots figure{margin:0;min-width:0}
+#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line-2);background:var(--bg-2);color:var(--muted);font-size:.75rem}
+#cc .c-pair-shots figcaption{margin-top:7px;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+#cc .c-pair-body{display:flex;flex-direction:column;gap:2px;flex:1;padding:14px 18px 18px}
+#cc .c-pair-ind{font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+#cc .c-pair h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em}
+#cc .c-pair-note{font-size:.875rem;color:var(--muted)}
+#cc .c-pair-links{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:auto;padding-top:14px}
+#cc .c-pair-links a{display:inline-flex;align-items:center;gap:6px;min-height:32px;color:var(--ink);font-size:.9375rem;font-weight:500;text-decoration:none;border-bottom:1px solid transparent;transition:color 200ms ease,border-color 200ms ease}
+#cc .c-pair-links a span{color:var(--blue)}
+@media (hover:hover){
+#cc .c-pair:hover{border-color:rgba(201,168,106,.4)}
+#cc .c-pair-links a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+}
+#cc .c-pair-links a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+@media (max-width:760px){#cc .c-pairs{grid-template-columns:1fr}}
+/* PAIR-CARDS:end */
 </style>
 </head>
 <body>
@@ -488,18 +502,157 @@ body.drawer-open{overflow:hidden}
 
   <section class="c-sec" id="industries" aria-labelledby="ind-h">
     <div class="c-wrap">
-      <div class="c-sec-head c-rv"><h2 id="ind-h">Built for <span class="c-hl">local businesses</span></h2></div>
-      <ul class="c-pills c-rv">
-        <li><a href="industry-home-services.html">Home services <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-auto.html">Auto <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-medical-dental.html">Medical &amp; dental <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-legal.html">Law firms <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-salon-spa-fitness.html">Salons, spas &amp; fitness <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-real-estate.html">Real estate <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-restaurants.html">Restaurants <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a href="industry-retail.html">Retail <span aria-hidden="true">&rarr;</span></a></li>
+      <div class="c-sec-head c-rv">
+        <h2 id="ind-h">A website and a CRM <span class="c-hl">that go together</span></h2>
+        <p class="c-lede">Each industry below is one sample business. Its website and its CRM share a name and a look, so you can follow a customer from the booking form to the job.</p>
+      </div>
+      <ul class="c-pairs">
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/everline-home-services-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Everline Home Services sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/home-services/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Everline Home Services sample CRM, Owner · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Home Services</p>
+            <h3>Everline Home Services</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-home-services.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/everline-home-services/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/bramlett-motor-co-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Bramlett Motor Co. sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/car-lots/1-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Bramlett Motor Co. sample CRM, Owner · Home screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Car Lots</p>
+            <h3>Bramlett Motor Co.</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-auto.html#car-lots">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/bramlett-motor-co/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/apex-auto-werks-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Apex Auto Werks sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/auto-repair/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Apex Auto Werks sample CRM, Owner · Service today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Auto Repair</p>
+            <h3>Apex Auto Werks</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-auto.html#auto-repair">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/apex-auto-werks/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/kestrel-lane-detail-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Kestrel Lane Detail Co. sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/auto-detailing/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Kestrel Lane Detail Co. sample CRM, Owner · Home screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Auto Detailing</p>
+            <h3>Kestrel Lane Detail Co.</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-auto.html#auto-detailing">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/kestrel-lane-detail/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/elena-marsh-realty-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Elena Marsh Real Estate sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/real-estate/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Elena Marsh Real Estate sample CRM, Agent · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Real Estate</p>
+            <h3>Elena Marsh Real Estate</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-real-estate.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/elena-marsh-realty/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/larkspur-strength-club-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Larkspur Strength Club sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/fitness/1-dashboard-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Larkspur Strength Club sample CRM, Owner · Dashboard screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Gyms &amp; Fitness</p>
+            <h3>Larkspur Strength Club</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-salon-spa-fitness.html#fitness">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/larkspur-strength-club/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/lumen-wellness-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Lumen Wellness sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/salon-spa/1-owner-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Lumen Wellness sample CRM, Owner · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Salon &amp; Spa</p>
+            <h3>Lumen Wellness</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-salon-spa-fitness.html#salon-spa">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/lumen-wellness/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/ember-and-oak-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Ember &amp; Oak sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/restaurants/1-tonight-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Ember &amp; Oak sample CRM, Owner · Tonight screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Restaurants &amp; Bars</p>
+            <h3>Ember &amp; Oak</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-restaurants.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/ember-and-oak/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/brightwater-dental-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Brightwater Dental sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/medical-dental/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Brightwater Dental sample CRM, Dentist · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Medical &amp; Dental</p>
+            <h3>Brightwater Dental</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-medical-dental.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/brightwater-dental/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/halcourt-vale-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Halcourt &amp; Vale sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/legal/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Halcourt &amp; Vale sample CRM, Attorney · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Law Firms</p>
+            <h3>Halcourt &amp; Vale</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-legal.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/halcourt-vale/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/field-and-fawn-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Field &amp; Fawn sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/retail/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Field &amp; Fawn sample CRM, Owner · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Retail &amp; Local Shops</p>
+            <h3>Field &amp; Fawn</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-retail.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/field-and-fawn/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
+        <li class="c-pair c-rv">
+          <div class="c-pair-shots">
+            <figure><img src="assets/img/websites/wellspring-animal-hospital-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Wellspring Animal Hospital sample website"><figcaption>Sample website</figcaption></figure>
+            <figure><img src="assets/img/crm/industries/vet/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Wellspring Animal Hospital sample CRM, Doctor · Today screen"><figcaption>Sample CRM</figcaption></figure>
+          </div>
+          <div class="c-pair-body">
+            <p class="c-pair-ind">Vet Clinics</p>
+            <h3>Wellspring Animal Hospital</h3>
+            <p class="c-pair-note">Sample website &middot; Sample CRM</p>
+            <p class="c-pair-links"><a href="industry-custom.html">See this industry <span aria-hidden="true">&rarr;</span></a><a href="websites/wellspring-animal-hospital/index.html" target="_blank" rel="noopener">Visit the sample website <span aria-hidden="true">&nearr;</span></a></p>
+          </div>
+        </li>
       </ul>
-      <p class="c-ind-sub c-rv">Auto includes dealers, repair shops and detailers. Based in DFW, Texas.</p>
+      <p class="c-ind-sub c-rv">Don't see your business? We'll build it around you. <a class="c-link" href="industry-custom.html">Tell us what you do <span aria-hidden="true">&rarr;</span></a></p>
     </div>
   </section>
 
@@ -700,7 +853,7 @@ body.drawer-open{overflow:hidden}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/site.js?v=20261126a"></script>
-<script src="assets/gap-quiz.js?v=20261126c"></script>
+<script src="assets/see-your-business.js?v=20261127a"></script>
 <script>
 (function(){
   var cc=document.getElementById('cc'); cc.classList.add('c-js');

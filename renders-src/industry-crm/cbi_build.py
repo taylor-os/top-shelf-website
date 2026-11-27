@@ -1,12 +1,15 @@
 """Build crm-by-industry.html + the industry-page strips in the website worktree. Re-runnable."""
 import html, pathlib, re, json
 
-S = pathlib.Path(__file__).parent
+S = pathlib.Path(__file__).parent  # renders-src/industry-crm
 W = pathlib.Path(r"C:\Users\taylo\top-shelf-website-focus")
 IMG = W / "assets/img/crm/industries"
-# mk_board2 copies files on import, so parse the IND literal instead of running it
-src = (S / "mk_board2.py").read_text(encoding="utf-8")
-IND = eval(src[src.index("IND = [") + 6: src.index("\n]\n", src.index("IND = [")) + 2])
+# Industry rows come from the pairs registry + captions (one business per industry: website + CRM)
+PAIRS = json.load(open(S / "pairs.json", encoding="utf-8"))
+CAPS = json.load(open(S / "captions.json", encoding="utf-8"))
+IND = [(p["slug"], CAPS[p["slug"]]["label"], p["business"] + (" · " + p["locale"] if p["locale"] else ""),
+        CAPS[p["slug"]]["built_around"], [(x["role"], x["caption"]) for x in CAPS[p["slug"]]["screens"]])
+       for p in PAIRS if p["slug"] in CAPS]
 
 e = lambda s: html.escape(s, quote=True)
 SITE = "https://www.topshelfsolutions.io"
@@ -15,12 +18,12 @@ PAGE = {"home-services": "industry-home-services.html", "car-lots": "industry-au
         "real-estate": "industry-real-estate.html", "fitness": "industry-salon-spa-fitness.html",
         "salon-spa": "industry-salon-spa-fitness.html", "restaurants": "industry-restaurants.html",
         "medical-dental": "industry-medical-dental.html", "legal": "industry-legal.html",
-        "retail": "industry-retail.html"}
+        "retail": "industry-retail.html", "vet": "industry-custom.html"}
 MORE = {"home-services": "home services", "car-lots": "auto businesses", "auto-repair": "auto businesses",
         "auto-detailing": "auto businesses", "real-estate": "real estate agents",
         "fitness": "salons, spas and gyms", "salon-spa": "salons, spas and gyms",
         "restaurants": "restaurants and bars", "medical-dental": "medical and dental offices",
-        "legal": "law firms", "retail": "retail and local shops"}
+        "legal": "law firms", "retail": "retail and local shops", "vet": "vet clinics and other businesses"}
 
 
 def files(slug):
@@ -161,7 +164,7 @@ document.querySelectorAll('[data-viewer]').forEach(function (v) {
 </script>"""
 
 TITLE = "The Top Shelf CRM, Built for Your Industry | Top Shelf"
-DESC = ("Sample screens of the Top Shelf CRM set up for 11 kinds of business, including home services, "
+DESC = ("Sample screens of the Top Shelf CRM set up for 12 kinds of business, including home services, "
         "car lots, salons, dental offices and law firms.")
 URL = f"{SITE}/crm-by-industry.html"
 
@@ -192,7 +195,7 @@ def build_page():
   <div class="container page-hero-inner">
     <span class="eyebrow reveal">CRM by Industry</span>
     <h1 class="display display-lg reveal">One CRM, Set Up <em>for Your Kind of Business</em></h1>
-    <p class="page-hero-sub reveal">A dental office checks different things first than a car lot or a salon does. We set up the Top Shelf CRM around how your business runs: the owner&rsquo;s first screen of the day, the screens your staff work from, and the pages your customers open on their phones. Below are sample screens for 11 industries.</p>
+    <p class="page-hero-sub reveal">A dental office checks different things first than a car lot or a salon does. We set up the Top Shelf CRM around how your business runs: the owner&rsquo;s first screen of the day, the screens your staff work from, and the pages your customers open on their phones. Below are sample screens for 12 industries.</p>
     <p class="cbi-note reveal"><b>Sample screens</b> The businesses, people and numbers on this page are made up.</p>
     <p class="cbi-note-sub reveal">Your own CRM can look different. See below.</p>
     <div class="page-hero-actions reveal">
@@ -273,12 +276,13 @@ BIZ = {r[0]: [x.strip() for x in r[2].split("·")][0] for r in IND}
 NAME = {r[0]: r[1] for r in IND}
 
 INTRO = {
-    "home-services": ("for Home Services", "Sample screens from Prairie Air &amp; Heat, a made-up heating and air company. The owner&rsquo;s morning on a laptop, a tech getting paid at the front door, and the estimate the homeowner picks from."),
-    "real-estate": ("for Real Estate", "Sample screens for Elena Marsh, a made-up agent. Her day with contract deadlines first, a buyer&rsquo;s profile on her phone, and the listing page on her own website."),
-    "restaurants": ("for Restaurants", "Sample screens from Wrenfield Kitchen &amp; Bar, a made-up restaurant. Tonight&rsquo;s covers and guest notes, a server&rsquo;s own tables, and the reservation page guests use."),
-    "medical-dental": ("for Dental Offices", "Sample screens from Alderbrook Family Dental, a made-up practice. The dentist&rsquo;s day, the hygienist booking the next cleaning, and the family&rsquo;s own page. No health details show anywhere."),
-    "legal": ("for Law Firms", "Sample screens from Holloway &amp; Vane Law, a made-up firm. What came in since Friday, what happened while the attorney was in court, and the client&rsquo;s own page. No case facts show anywhere."),
-    "retail": ("for Local Shops", "Sample screens from Larkhaven Goods, a made-up shop. The owner&rsquo;s day, the customer card at the counter, and the page that tells a customer her order is in."),
+    "home-services": ("for Home Services", "Sample screens from Everline Home Services, the same made-up company as our sample website. The owner&rsquo;s morning on a laptop, a tech getting paid at the front door, and the estimate the homeowner picks from."),
+    "real-estate": ("for Real Estate", "Sample screens for Elena Marsh Real Estate, the same made-up agent as our sample website. Her day with contract deadlines first, a buyer&rsquo;s profile on her phone, and the listing page on her own website."),
+    "restaurants": ("for Restaurants", "Sample screens from Ember &amp; Oak, the same made-up restaurant as our sample website. Tonight&rsquo;s covers and guest notes, a server&rsquo;s own tables, and the reservation page guests use."),
+    "medical-dental": ("for Dental Offices", "Sample screens from Brightwater Dental, the same made-up practice as our sample website. The dentist&rsquo;s day, the hygienist booking the next cleaning, and the family&rsquo;s own page. No health details show anywhere."),
+    "legal": ("for Law Firms", "Sample screens from Halcourt &amp; Vale, the same made-up firm as our sample website. What came in since Friday, what happened while the attorney was in court, and the client&rsquo;s own page. No case facts show anywhere."),
+    "retail": ("for Local Shops", "Sample screens from Field &amp; Fawn, the same made-up shop as our sample website. The owner&rsquo;s day, the customer card at the counter, and the page that tells a customer her order is in."),
+    "vet": ("for Vet Clinics", "Sample screens from Wellspring Animal Hospital, the same made-up clinic as our sample website. The day by exam room, a vet tech&rsquo;s drop-offs, and the pet owner&rsquo;s own page. No medical records show anywhere."),
 }
 STRIP_PICK = lambda slug: [f for f in files(slug) if f.endswith("-d.webp")][:1] + \
     [f for f in files(slug) if f.endswith("-m.webp")][:1] + [f for f in files(slug) if f.startswith("5-")]
@@ -334,7 +338,7 @@ CUSTOM = '''<section class="section rule-top">
     </div>
     <div class="reveal" style="display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center;justify-content:center">
       <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
-      <a class="tlink" href="crm-by-industry.html">See sample screens for 11 industries <span class="arr">&rarr;</span></a>
+      <a class="tlink" href="crm-by-industry.html">See sample screens for 12 industries <span class="arr">&rarr;</span></a>
     </div>
   </div>
 </section>'''
@@ -345,7 +349,7 @@ STRIPS = {
         "Car lots, repair shops and detailers each get their own setup. Here is the owner&rsquo;s home screen for three made-up businesses."),
     "industry-salon-spa-fitness.html": strip_multi(["salon-spa", "fitness"], "for Salons and Gyms",
         "A salon and a gym each get their own setup. Here is the owner&rsquo;s first screen for a made-up salon and a made-up gym."),
-    "industry-custom.html": CUSTOM,
+    "industry-custom.html": CUSTOM + chr(10) + strip_single("vet"),
 }
 SLOT_RE = re.compile(r"<!-- crm-screens-slot -->(?:\n.*?<!-- /crm-screens-slot -->)?", re.S)
 

@@ -298,3 +298,79 @@ def test_gap_quiz_shows_no_dollars_and_sends_contact():
         assert "showDollars: false" in s or "showDollars:false" in s, demo
         assert "Your likely gap is" not in s and "a year, a rough estimate" not in s, demo
         assert "\x01" not in s, demo
+
+
+# ---- 2026-11-27 site update: industry pair cards, "See your business" pop-up, CRM page ----
+PAIRS = json.load(open(os.path.join(cat.ROOT, "renders-src", "industry-crm", "pairs.json"), encoding="utf-8"))
+CONTENT = json.load(open(os.path.join(cat.ROOT, "renders-src", "site-content", "content.json"), encoding="utf-8"))
+
+# Images other tasks are still making (2026-11-27). The cards point at them already;
+# delete each line once its file lands. Nothing else may be missing.
+PENDING_IMAGES = {
+    "assets/img/websites/bramlett-motor-co-home-d.webp",
+    "assets/img/websites/larkspur-strength-club-home-d.webp",
+    "assets/img/websites/kestrel-lane-detail-home-d.webp",
+    "assets/img/crm/industries/vet/1-today-d.webp",  # vet has no captions.json entry yet
+}
+
+
+def test_cards_link_pairs():
+    src = read(os.path.join(cat.ROOT, "index.html"))
+    sec = re.search(r'<section class="c-sec" id="industries".*?</section>', src, re.S).group(0)
+    cards = re.findall(r'<li class="c-pair\b.*?</li>', sec, re.S)
+    assert len(cards) == 12, len(cards)
+    bad = []
+    for card, p in zip(cards, PAIRS):
+        if html.escape(p["business"], quote=False) not in card:
+            bad.append("card out of order or missing %s" % p["business"])
+        if "Sample website &middot; Sample CRM" not in card:
+            bad.append("%s: no sample label" % p["business"])
+        web = "assets/img/websites/%s-home-d.webp" % os.path.basename(p["website_dir"])
+        if 'src="%s"' % web not in card:
+            bad.append("%s: no website shot" % p["business"])
+        if 'src="assets/img/crm/industries/%s/' % p["slug"] not in card:
+            bad.append("%s: no CRM screen" % p["business"])
+        want = p["industry_page"] + ("#" + p["industry_anchor"] if p["industry_anchor"] else "")
+        if 'href="%s"' % want not in card or 'href="%s/index.html"' % p["website_dir"] not in card:
+            bad.append("%s: industry or website link missing" % p["business"])
+        for url in re.findall(r'(?:href|src)="([^"]+)"', card):
+            path = html.unescape(url).split("#")[0]
+            if path not in PENDING_IMAGES and not os.path.exists(os.path.join(cat.ROOT, path)):
+                bad.append("%s -> %s missing" % (p["business"], url))
+    assert not bad, "\n".join(bad)
+
+
+def test_popup_replaced():
+    loaders, old = [], []
+    for path in glob.glob(os.path.join(cat.ROOT, "**", "*.html"), recursive=True):
+        if rel(path).split("/")[0] in ("demo", "websites", "preview", "node_modules"):
+            continue
+        s = read(path)
+        if "gap-quiz.js" in s:
+            old.append(rel(path))
+        if "assets/see-your-business.js?v=20261127a" in s:
+            loaders.append(rel(path))
+    assert not old, "%d pages still load gap-quiz.js: %s" % (len(old), old[:10])
+    assert len(loaders) >= 684, len(loaders)
+    for page in ("index.html", "solution-crm.html", "solution-websites-seo.html", "pricing.html"):
+        assert page in loaders, page
+    js = read(os.path.join(cat.ROOT, "assets", "see-your-business.js"))
+    assert "See your business" in js and 'role="dialog"' in js and "Escape" in js
+    assert os.path.exists(os.path.join(cat.ROOT, "assets", "gap-quiz.js")), "keep gap-quiz.js in the repo"
+    for p in PAIRS:
+        assert json.dumps(p["business"], ensure_ascii=False) in js, "pop-up is missing %s" % p["business"]
+
+
+def test_crm_page_answers():
+    text = visible_text(read(os.path.join(cat.ROOT, "solution-crm.html")))
+    questions = [qa["q"] for qa in CONTENT["crm"]["faq"]]
+    missing = [q for q in questions if q not in text]
+    assert not missing, "FAQ questions missing: %s" % missing
+    # The FAQ asks "Does it connect to QuickBooks?" and "Is it available in Spanish?" and
+    # answers without claiming either, so the questions themselves are taken out first.
+    rest = text
+    for q in questions:
+        rest = rest.replace(q, " ")
+    claims = [w for w in ("Apple Pay", "tap to pay", "QuickBooks", "Spanish", "automatic review")
+              if w.lower() in rest.lower()]
+    assert not claims, "solution-crm.html claims: %s" % claims
