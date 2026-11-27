@@ -75,8 +75,20 @@ LEAD = {
 ON_CALL = {
     "How long does setup take?", "Can I bring my customer list over?", "What do card payments cost?",
     "When do I get paid after a customer pays by card?", "Do my techs only see their own jobs?",
-    "Does it connect to QuickBooks?", "Is it available in Spanish?",
+    "Does it connect to QuickBooks?", "Is it available in Spanish?", "Who sets it up?",
 }
+# Salon "What owners get", said in words from the salon-spa screen captions (captions.json), booth rent left out.
+SALON_GET = [
+    "Your own booking page shows the deposit and the 48-hour rule",
+    "Checkout takes the deposit off the ticket and splits the tip by who did what",
+    "Book the next visit right at checkout",
+    "The stylist sees the client in the chair with her last formula and photos",
+]
+C["industries"]["per_industry"]["salon-spa"]["what_owners_get"] = SALON_GET  # in memory, D only
+# Footer: the disclaimer covers the samples only; the quote line shows on pages that carry quotes.
+SAMPLE_NOTE = ("The sample screens and sample websites show made-up businesses, people and numbers. "
+               "They show the kind of setup we build for each industry.")
+QUOTE_NOTE = "The owner quotes are real, from businesses that use Top Shelf."
 # One job, start to finish (B's story), told with Everline's screens.
 STORY = [("6-ai-call-texts-m.webp", "The call you would have missed"), ("2-dispatch-board-d.webp", "On the board before morning"),
          ("5-customer-estimate-m.webp", "The estimate, approved by text"), ("3-tech-get-paid-m.webp", "Paid before the truck leaves"),
@@ -126,7 +138,7 @@ def nav(P, R, active):
 def footer(P, R):
     cb = (f'<nav class="callbar" aria-label="Call, text or try the CRM"><a href="{B["phone_href"]}">Call</a><a href="{SMS}">Text</a>'
           f'<a class="go" href="{R}{B["cta_primary_href"]}">{e(B["cta_primary"])}</a></nav>')
-    return _a_footer(P, R) + cb
+    return _a_footer(P, R).replace(e(C["sample_note"]), e(SAMPLE_NOTE), 1) + cb
 
 
 def faq(items, h, body=""):
@@ -135,12 +147,13 @@ def faq(items, h, body=""):
     qs = "".join(f'<div class="answer"><h3>{e(q["q"])}</h3><p>{e(q["a"])}</p></div>' for q in answered)
     box = ""
     if on_call:
-        box = (f'<div class="on-call"><h3>Ask us these on the call</h3><p>They depend on your business, so we go over them '
-               f'on the call, before you sign up. Call or text {e(B["phone"])}.</p><ul>{"".join(f"<li>{e(x)}</li>" for x in on_call)}</ul></div>')
+        box = (f'<div class="on-call"><h3>Ask us these on the call</h3><p>We answer these on the call, before you sign up. '
+               f'Call or text {e(B["phone"])}.</p><ul>{"".join(f"<li>{e(x)}</li>" for x in on_call)}</ul></div>')
     return f'<section class="sec faq-sec" id="faq"><div class="wrap">{head("", h, body)}<div class="answers">{qs}</div>{box}</div></section>'
 
 
 def steps(items, h="How it works"):
+    items = [dict(s, title="Send your first text") if s["step"] == "3" else s for s in items]
     li = "".join(f'<li><span class="num" aria-hidden="true">{e(s["step"])}</span><h3>{e(s["title"])}</h3><p>{e(s["body"])}</p></li>' for s in items)
     return (f'<section class="sec steps-sec"><div class="wrap">{head("", h)}<ol class="steps">{li}</ol>'
             f'<p class="note">Rather text? Text {e(B["phone"])}.</p></div></section>')
@@ -158,8 +171,17 @@ def page(path, title, desc, body, active=""):
     html = html.replace(
         "family=Plus+Jakarta+Sans:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500",
         "family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500")
+    if 'class="quote"' in html:
+        html = html.replace(f"<p>{e(SAMPLE_NOTE)}</p>", f"<p>{e(SAMPLE_NOTE)} {e(QUOTE_NOTE)}</p>", 1)
     with open(dest, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
+
+
+def pair_panel(P, R, p, i):
+    html = _a_pair_panel(P, R, p, i)
+    if p["slug"] == "medical-dental":  # the dental reviewer's deal-breaker, said in the picker too
+        html = html.replace('<div class="panel-links">', f'<p class="hipaa-line">{e(HIPAA[0])}</p><div class="panel-links">', 1)
+    return html
 
 
 # ---------------------------------------------------------------- home
@@ -282,8 +304,8 @@ def industry_crm(p):
   {A.switch_tabs(p, "crm")}</div>
   <div class="owner-get"><h2 class="minor">What owners get</h2>{checks(ind["what_owners_get"])}{ctas(R)}</div>
 </div></section>
-<section class="sec tight"><div class="wrap gallery">{gallery}</div></section>
 {box_html}
+<section class="sec tight"><div class="wrap gallery">{gallery}</div></section>
 {quotes(QUOTES_FOR.get(p["slug"], []), "From an owner in the same line of work")}
 <section class="sec wash"><div class="wrap cross">
   {frame(R, web_rel(p), "website", p["business"] + " sample website", "Sample website")}
@@ -311,8 +333,8 @@ def industry_web(p):
 
 # ---------------------------------------------------------------- wire the overrides into A's module
 _a_nav, _a_footer, _a_pricing, _a_page = A.nav, A.footer, A.pricing, A.page
-_a_crm_body, _a_industry_web = A.crm_body, A.industry_web
-A.nav, A.footer, A.faq, A.steps, A.pricing, A.page = nav, footer, faq, steps, pricing, page
+_a_crm_body, _a_industry_web, _a_pair_panel = A.crm_body, A.industry_web, A.pair_panel
+A.nav, A.footer, A.faq, A.steps, A.pricing, A.page, A.pair_panel = nav, footer, faq, steps, pricing, page, pair_panel
 
 
 def main():

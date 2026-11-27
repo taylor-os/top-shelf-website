@@ -20,6 +20,26 @@ Look: warm white, deep teal, Figtree, with the Top Shelf mark on its ink tile.
 | The price on every industry CRM and website page | salon, auto (C had none on those pages) | A |
 | "Websites $499, one time", never "from $499" | salon | Pricing page |
 | "Rather text? Text (469) 833-3033" under How it works | salon | |
+| How it works step 3 is "Send your first text", not "Send your first invoice" (a dental office or restaurant doesn't invoice) | restaurant, dental, salon | Same body as content.json |
+| Salon "What owners get" says in words what the screens show: deposit and 48-hour rule on the booking page, deposit off the ticket and the tip split at checkout, booking the next visit at checkout, the last formula and photos. Wording comes from the salon screen captions only | salon (top ask) | captions.json |
+| On every industry page, the HIPAA box and the "Using X?" box sit right under the intro, before the screens, so a phone visitor sees them on the second screen | dental, restaurant | |
+| "HIPAA setup, BAA included" also shows on the Medical & Dental panel of the home-page picker | dental | Same approved HIPAA wording |
+| On a phone the industry picker fades at the right edge and its label says "Swipe for more", so the tabs past the first few aren't missed | Judge review | |
+| The footer says only the sample screens and sample websites are made up, and on pages with owner quotes adds that the quotes are real, from businesses that use Top Shelf | Judge review | |
+| "Who sets it up?" moves into "Ask us these on the call", whose intro now reads "We answer these on the call, before you sign up." | all five | |
+
+## What D left out on purpose
+
+| Recommendation | Why D skips it |
+|---|---|
+| Industry-specific story beats from the current site (each industry told as its own start-to-finish job) | Only home services is told start to finish. The current industry pages' stories mix several made-up companies per page and carry trades quotes, which the findings flag for a cleanup. Writing new per-industry stories would be new copy beyond the captions. Each industry page instead leads with the screen its buyer picked, with the captions underneath |
+| Booth rent, card on file and who counts as a user (salon) | Booth rent shows in the owner's screen but D doesn't say it in words until "who counts as a user" is answered (booth renters, front desk). "Card on file" isn't in the salon captions |
+| A named person who calls back, support hours, call-back time | Not in the facts file. Listed under "What only Taylor can answer" |
+| A written price lock next to the $99 (HVAC) | Not in the facts file |
+| Maintenance agreements (HVAC) | Not in the facts file, content.json or captions.json |
+| A restaurant-sized cost example ($199 + $50 for 14 logins) | Depends on who counts as a user, which isn't answered yet |
+| Restaurant website answers: who updates the menu, events form into the board, hosting after the $499 | Not in the facts file |
+| What the AI receptionist will and won't say, and Spanish (auto) | Not in the facts file. Spanish stays in "Ask us these on the call" |
 
 ## What D could not do without Taylor
 

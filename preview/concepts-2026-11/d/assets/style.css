@@ -356,6 +356,9 @@ figure { margin: 0; }
   .rail { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
   .rail::-webkit-scrollbar { display: none; }
   .rail [role="tab"] { scroll-snap-align: start; }
+  /* swipe hint: the rail fades at the right edge, and the label says so */
+  .rail { padding-right: 44px; -webkit-mask-image: linear-gradient(to right, #000 78%, transparent); mask-image: linear-gradient(to right, #000 78%, transparent); }
+  .rail-label::after { content: " · Swipe for more"; font-weight: 500; color: var(--ink-2); }
   .stage { padding-bottom: 28px; }
   .web-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .web-thumb:nth-child(even) { transform: none; }
@@ -434,6 +437,7 @@ a.zoom { display: block; text-decoration: none; color: inherit; cursor: zoom-in;
 .on-call h3 { font-size: 1.125rem; }
 .on-call p { color: var(--ink-2); margin-top: 6px; }
 .on-call ul { margin: 14px 0 0; padding-left: 20px; columns: 2 260px; column-gap: 32px; }
+.hipaa-line { margin-top: 14px; font-weight: 600; color: var(--ink); padding-left: 12px; border-left: 3px solid var(--cobalt); }
 .on-call li { margin: 0 0 6px; break-inside: avoid; }
 
 /* "works with what you use" + HIPAA boxes */
