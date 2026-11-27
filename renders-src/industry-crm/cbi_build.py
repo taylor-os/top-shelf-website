@@ -50,7 +50,7 @@ def device(slug, fn, alt, link=False):
 def section(slug, name, biz, why, caps):
     fns = files(slug)
     assert len(fns) == 6, slug
-    biz_name, city = [x.strip() for x in biz.split("·")]
+    biz_name, city = ([x.strip() for x in biz.split("·", 1)] + [""])[:2]
     figs, btns = [], []
     for i, (fn, (role, cap)) in enumerate(zip(fns, caps)):
         fid = f"{slug}-s{i + 1}"
@@ -316,7 +316,7 @@ def strip_single(slug):
 
 def strip_multi(slugs, em, p):
     figs = "".join(
-        f'<figure class="cbi-lapfig">{device(s, files(s)[0], alt_for(s, files(s)[0]))}'
+        f'<figure class="cbi-lapfig" id="{s}" style="scroll-margin-top:120px">{device(s, files(s)[0], alt_for(s, files(s)[0]))}'
         f'<figcaption>{e(NAME[s])} &middot; <a class="tlink" href="crm-by-industry.html#{s}">See all the screens <span class="arr">&rarr;</span></a></figcaption></figure>'
         for s in slugs)
     return f'''<section class="section rule-top">

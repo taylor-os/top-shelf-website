@@ -259,7 +259,7 @@ def test_crm_by_industry():
     assert os.path.exists(page)
     src = read(page)
     refs = set(re.findall(r'assets/img/crm/industries/[\w-]+/[\w-]+\.webp', src))
-    assert len(refs) == 66, len(refs)
+    assert len(refs) == 72, len(refs)  # 12 industries x 6 screens (vet added 2026-11-27)
     missing = [r for r in refs if not os.path.exists(os.path.join(cat.ROOT, r))]
     assert not missing, missing
     assert "Sample screens" in src
