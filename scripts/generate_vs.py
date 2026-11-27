@@ -92,7 +92,7 @@ def disclaimer(p):
 
 def final_cta(p):
     h2 = p.get("cta_h2", "See what an all-in-one, done-for-you setup looks like")
-    sub = p.get("cta_sub", "Get a free audit of where calls, leads, and jobs are slipping away, whether you work with us or not. No credit card, never a call center.")
+    sub = p.get("cta_sub", "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.")
     return f'''<section class="section rule-top">
   <div class="container" style="text-align:center">
     <h2 class="display display-lg reveal">{h2}</h2>

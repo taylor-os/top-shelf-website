@@ -57,7 +57,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          "It answers naturally and is upfront instead of pretending to be a person. A driver stuck with a car that will not start mostly needs to know a real mechanic is coming, and a steady voice that captures the address and the problem beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your triage questions, your service area, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your triage questions, your service area, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for mobile mechanics"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -65,7 +65,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending stranded drivers to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and mobile jobs your current phone setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Mobile Mechanics =========================
 {
@@ -103,7 +103,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          "A phone full of contacts does not follow up, does not know whose car is due, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat and deferred work actually shows up instead of depending on you to remember between jobs."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for mobile mechanics"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -111,21 +111,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Mobile Mechanics =======================
-# ==================== Websites & SEO for Mobile Mechanics ====================
+# ==================== Websites for Mobile Mechanics ====================
 {
     "slug": "websites-seo-for-mobile-mechanics",
     "trade_slug": "mobile_mechanics", "trade_plural": "mobile mechanics",
     "hub_name": "Auto", "hub_slug": "industry-auto.html",
-    "breadcrumb_leaf": "Websites & SEO for Mobile Mechanics",
-    "title": "Websites & SEO for Mobile Mechanics | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Mobile Mechanics",
+    "breadcrumb_leaf": "Websites for Mobile Mechanics",
+    "title": "Websites for Mobile Mechanics | Top Shelf Business Solutions",
+    "og_title": "Websites for Mobile Mechanics",
     "meta_desc": "A mobile mechanic website built for SEO ranks for mobile mechanic near me, shows the service area you cover, and captures the call instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Mobile Mechanics",
+    "service_schema_name": "Websites for Mobile Mechanics",
     "eyebrow": "For Mobile Mechanics",
-    "h1_html": "Websites &amp; SEO <em>for Mobile Mechanics</em>",
+    "h1_html": "Websites <em>for Mobile Mechanics</em>",
     "answer_block": "A mobile mechanic website built for SEO ranks for what a driver searches when the car will not start, mobile mechanic near me, mechanic that comes to you, shows the service area you cover and a way to request a quote, so the job comes to you instead of a directory renting your own calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -150,13 +150,13 @@ SPECS = [
         ("Most of my calls are people stuck right now. Does a website even help?",
          "Especially then. A no-start search happens on a phone in the moment, and the mobile mechanic who shows up in the results with a clear service area, a tap-to-call button, and real reviews gets the call. A site built for that moment is exactly what captures it, and the quote request catches the ones who would rather type than talk."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for mobile mechanics"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

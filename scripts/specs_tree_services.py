@@ -46,7 +46,7 @@ SPECS = [
         ("Is it going to sound like a robot to a panicked homeowner?",
          'It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone staring at a tree on their roof mostly needs to know a real crew is handling it, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for tree services"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing storm calls to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Tree Services ================================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of contacts does not follow up, does not remember which yard is due for a trim, and does not tell you which estimate is going cold. The CRM does all of that on a schedule, so the repeat work actually shows up instead of depending on you to remember.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for tree services"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,21 +100,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting estimates and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your estimates and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= Marketing for Tree Services =============================
-# ========================= Websites & SEO for Tree Services =========================
+# ========================= Websites for Tree Services =========================
 {
     "slug": "websites-seo-for-tree-services",
     "trade_slug": "tree_services", "trade_plural": "tree services",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Tree Services",
-    "title": "Websites & SEO for Tree Services | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Tree Services",
+    "breadcrumb_leaf": "Websites for Tree Services",
+    "title": "Websites for Tree Services | Top Shelf Business Solutions",
+    "og_title": "Websites for Tree Services",
     "meta_desc": "A tree service website built for SEO ranks for tree removal near me and your city, and captures the caller directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Tree Services",
+    "service_schema_name": "Websites for Tree Services",
     "eyebrow": "For Tree Services",
-    "h1_html": "Websites &amp; SEO <em>for Tree Services</em>",
+    "h1_html": "Websites <em>for Tree Services</em>",
     "answer_block": "A tree service website built for SEO ranks for the searches a homeowner makes when a tree has to come down, tree removal near me, emergency tree service, stump grinding in your city, and captures the caller the moment they land, so the job is yours instead of a lead-seller renting your calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -135,17 +135,17 @@ SPECS = [
         ("How is this different from paying for leads?",
          'A pay-per-lead service rents you a call that it also sells to your competitors, and it stops the day you stop paying. A website you own captures calls that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every job.'),
         ("Do I need to rank for every town I serve?",
-         'You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent searches, then expand, rather than spreading thin across a whole metro at once.'),
+         'You rank for the ones that matter most first.'),
         ("Most of my calls come from storms. Does a website even help?",
          'Especially then. A storm search happens on a phone the moment a tree comes down, and the crew that shows up in the map pack with a tap-to-call button and real photos of clean work gets the call. A site built for that moment is exactly what captures it.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks, broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for tree services"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

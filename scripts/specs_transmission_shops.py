@@ -55,7 +55,7 @@ SPECS = [
         ("Is it going to sound like a robot to a worried customer?",
          "It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone staring down a repair that can cost as much as a used car mostly needs to know a real shop will look at it for free, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your triage questions, your free-check booking, and your financing and warranty answers for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your triage questions, your free-check booking, and your financing and warranty answers for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for transmission shops"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -63,7 +63,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing big jobs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many big-repair calls and free-check leads your current phone setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Transmission Shops =========================
 {
@@ -101,7 +101,7 @@ SPECS = [
         ("Can it help me stay in front of the shops and lots that refer transmission work to me?",
          "Yes. You can keep the general repair shops, dealers, and used-car lots that farm out transmission work in one place and reach them on a schedule, instead of hoping they remember you the next time a customer's transmission goes. Those referral sources are some of the most valuable relationships a specialist has, and they are worth working like any other lead."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up sequences, and connect it to your calls and your free-check bookings, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up sequences, and connect it to your calls and your free-check bookings, so it is working in days.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for transmission shops"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -109,21 +109,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting free checks and quotes <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your free diagnostics and open quotes are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Transmission Shops ======================
-# =================== Websites & SEO for Transmission Shops ===================
+# =================== Websites for Transmission Shops ===================
 {
     "slug": "websites-seo-for-transmission-shops",
     "trade_slug": "transmission_shops", "trade_plural": "transmission shops",
     "hub_name": "Auto", "hub_slug": "industry-auto.html",
-    "breadcrumb_leaf": "Websites & SEO for Transmission Shops",
-    "title": "Websites & SEO for Transmission Shops | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Transmission Shops",
+    "breadcrumb_leaf": "Websites for Transmission Shops",
+    "title": "Websites for Transmission Shops | Top Shelf Business Solutions",
+    "og_title": "Websites for Transmission Shops",
     "meta_desc": "A transmission shop website built for SEO ranks for transmission repair near me, puts your free check up front, and captures the call, not a lead-seller.",
-    "service_schema_name": "Websites & SEO for Transmission Shops",
+    "service_schema_name": "Websites for Transmission Shops",
     "eyebrow": "For Transmission Shops",
-    "h1_html": "Websites &amp; SEO <em>for Transmission Shops</em>",
+    "h1_html": "Websites <em>for Transmission Shops</em>",
     "answer_block": "A transmission shop website built for SEO ranks for what a driver searches when the transmission starts slipping, transmission repair near me, transmission rebuild cost, free transmission check, and puts your free diagnostic, warranty, and real reviews up front, so the big job comes to you instead of a directory renting your own calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -148,13 +148,13 @@ SPECS = [
         ("Do people really contact a shop about a big repair online?",
          "For a repair this size most drivers still want to talk, and a fast site with a tap-to-call button gets them to you in one tap. But plenty will request the free check or send the symptoms first when the site makes it easy, and that gives you a scared, high-intent lead you can call back and win."),
         ("How long until it starts ranking?",
-         "The tight local and transmission-specific searches can start moving within weeks, while the broadest terms build over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "The tight local and transmission-specific searches can start moving within weeks, while the broadest terms build over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for transmission shops"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

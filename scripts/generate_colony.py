@@ -73,7 +73,7 @@ def final_cta(t):
     return f'''<section class="section rule-top">
   <div class="container" style="text-align:center">
     <h2 class="display display-lg reveal">Get a free audit of your business</h2>
-    <p class="reveal" style="color:var(--ink-3);max-width:52ch;margin:1rem auto 1.8rem">We will show you exactly where calls, leads, and jobs are slipping away, whether you work with us or not. No credit card, never a call center.</p>
+    <p class="reveal" style="color:var(--ink-3);max-width:52ch;margin:1rem auto 1.8rem">Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.</p>
     <div class="reveal" style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
       <a href="contact.html" class="btn btn-gold">Try the CRM <span class="arr">&rarr;</span></a>
       <a href="tel:+14698333033" class="btn btn-line">Call (469) 833-3033</a>

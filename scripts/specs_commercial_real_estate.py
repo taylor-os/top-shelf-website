@@ -49,7 +49,7 @@ SPECS = [
         ("Will it sound like a robot to a principal or another broker?",
          'It answers naturally and professionally, and it is upfront rather than pretending to be a person. A serious caller mostly needs to know their inquiry reached a real firm and that someone will follow up, and a capable voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your routing rules for you, so it is answering in days, not weeks. Start with a free audit and we will find the gap in what your current setup is letting slip.')],
+         'Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your routing rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for commercial real estate"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -57,7 +57,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting inquiries slip to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in how many listing, lease, and investment inquiries your current setup is letting slip, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== CRM for Commercial Real Estate ========================
 {
@@ -95,7 +95,7 @@ SPECS = [
         ("How is this different from a spreadsheet or my contacts app?",
          'A spreadsheet does not remind you that a lease is coming due, does not follow up on its own, and does not show you which deals are stalling. The CRM does all of that on the long clock this business runs on, so the repeat and referral work actually shows up instead of depending on your memory.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your contacts and deals, build your follow-up and key-date reminders, and connect it to your calls and marketing, so it is working in days. Start with a free audit and we will find the gap where relationships are going cold today.')],
+         'Setup is included with no separate onboarding fee. We bring in your contacts and deals, build your follow-up and key-date reminders, and connect it to your calls and marketing, so it is working in days.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for commercial real estate"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -103,21 +103,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting relationships <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap where your contacts and long-cycle opportunities are slipping through today, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Commercial Real Estate ======================
-# ==================== Websites & SEO for Commercial Real Estate ====================
+# ==================== Websites for Commercial Real Estate ====================
 {
     "slug": "websites-seo-for-commercial-real-estate",
     "trade_slug": "commercial_real_estate", "trade_plural": "commercial real estate brokers",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
-    "breadcrumb_leaf": "Websites & SEO for Commercial Real Estate",
-    "title": "Websites & SEO for Commercial Real Estate | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Commercial Real Estate",
+    "breadcrumb_leaf": "Websites for Commercial Real Estate",
+    "title": "Websites for Commercial Real Estate | Top Shelf Business Solutions",
+    "og_title": "Websites for Commercial Real Estate",
     "meta_desc": "A commercial real estate website built for SEO showcases your listings and closed deals and ranks for local commercial searches, so principals find you first.",
-    "service_schema_name": "Websites & SEO for Commercial Real Estate",
+    "service_schema_name": "Websites for Commercial Real Estate",
     "eyebrow": "For Commercial Real Estate",
-    "h1_html": "Websites &amp; SEO <em>for Commercial Real Estate</em>",
+    "h1_html": "Websites <em>for Commercial Real Estate</em>",
     "answer_block": "A commercial real estate website built for SEO showcases your current listings and closed deals and ranks for the searches investors and tenant reps actually run, office space for lease, commercial broker in your city, so a serious prospect finds you, sees your track record, and calls you first.",
     "sections": [
         {"h2_html": "A principal checks your website <em>before they call you</em>",
@@ -140,15 +140,15 @@ SPECS = [
         ("Can it really show my track record and current listings?",
          'Yes. You supply your availabilities and the deals you have represented and closed, and the site presents them so a prospect sees proof before the first call. We never invent transactions or figures; the credibility on the site is your real record, presented well.'),
         ("Do I need to rank in every submarket I cover?",
-         'No. We build pages for your core property types and the submarkets that matter most first, then expand, so you own the highest-intent searches rather than spreading thin across a whole metro at once.'),
+         'No.'),
         ("How long until it starts ranking?",
-         'Specific, local commercial searches can start moving within weeks, and broader terms compound over months. It is a one-time build you own, not a subscription that disappears when you stop paying, and a free audit will find the gap between where your site stands today and what the market is searching for.')],
+         'Specific, local commercial searches can start moving within weeks, and broader terms compound over months. It is a one-time build you own, not a subscription that disappears when you stop paying.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for commercial real estate"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results in <em>your own market</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and local commercial search presence and what your prospects are actually searching for, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

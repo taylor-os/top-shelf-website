@@ -48,7 +48,7 @@ SPECS = [
         ("Will it quote rates or promise an approval?",
          'No, and that is by design. It captures the lead, qualifies it, and books the meeting, but it never quotes a rate, states terms, or suggests anyone is approved. Anything that needs a licensed conversation waits for you.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your rules for what needs you right away, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your rules for what needs you right away, so it is answering in days, not weeks.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for mortgage brokers"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -56,7 +56,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing loans to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours leads your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= CRM for Mortgage Brokers =============================
 {
@@ -94,7 +94,7 @@ SPECS = [
         ("Can it help me manage my referral agents?",
          'Yes. You can keep your real estate partners in their own track, with reminders to check in between deals and updates as their clients\' loans move toward closing, so the relationships that drive your pipeline stay warm.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your contacts, build your follow-up tracks for leads, past clients, and referral partners, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where business is slipping away today.')],
+         'Setup is included with no separate onboarding fee. We bring in your contacts, build your follow-up tracks for leads, past clients, and referral partners, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for mortgage brokers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -102,21 +102,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting past clients and referral agents <em>go cold</em>",
-    "cta_sub": "Get a free audit of how much repeat and referral business is going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================== Marketing for Mortgage Brokers ==========================
-# ======================== Websites & SEO for Mortgage Brokers ========================
+# ======================== Websites for Mortgage Brokers ========================
 {
     "slug": "websites-seo-for-mortgage-brokers",
     "trade_slug": "mortgage_brokers", "trade_plural": "mortgage brokers",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
-    "breadcrumb_leaf": "Websites & SEO for Mortgage Brokers",
-    "title": "Websites & SEO for Mortgage Brokers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Mortgage Brokers",
+    "breadcrumb_leaf": "Websites for Mortgage Brokers",
+    "title": "Websites for Mortgage Brokers | Top Shelf Business Solutions",
+    "og_title": "Websites for Mortgage Brokers",
     "meta_desc": "A mortgage broker website built for SEO ranks for a broker in your city, refinance, and first-time buyer help and captures the lead instead of lead-sellers.",
-    "service_schema_name": "Websites & SEO for Mortgage Brokers",
+    "service_schema_name": "Websites for Mortgage Brokers",
     "eyebrow": "For Mortgage Brokers",
-    "h1_html": "Websites &amp; SEO <em>for Mortgage Brokers</em>",
+    "h1_html": "Websites <em>for Mortgage Brokers</em>",
     "answer_block": "A mortgage broker website built for SEO ranks for the searches borrowers actually make, a mortgage broker in your city, first-time buyer and refinance help, and captures the lead directly instead of the national lenders and lead-sellers renting your own borrowers back to you. It loads fast and earns the trust a financial decision needs.",
     "sections": [
         {"h2_html": "The lead-sellers are renting you back your own <em>borrowers</em>",
@@ -141,13 +141,13 @@ SPECS = [
         ("Most of my business is referrals. Does a website even help?",
          'Yes, maybe more than you would think. A referred borrower almost always looks you up before they call, and a fast, credible site with real reviews is what closes the gap between the introduction and the booked appointment. A weak site can lose a referral an agent already handed you.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for mortgage brokers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results, don't <em>rent your leads back</em>",
-    "cta_sub": "Get a free audit of how your website and local search compare to the lenders and lead-sellers taking your borrowers, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

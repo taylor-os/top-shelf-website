@@ -53,7 +53,7 @@ SPECS = [
         ("Will it actually book the evaluation, or just take a message?",
          "It books. The evaluation lands on your real schedule, and the patient gets a confirmation and reminder so the first visit shows. You get the details right away, and it flags anything unusual for your team to handle."),
         ("How fast can it be answering?",
-         "Setup is included with no separate onboarding fee. We configure your intake questions, your schedule, and your insurance answers for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many new-patient and referral calls your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your intake questions, your schedule, and your insurance answers for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for physical therapists"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -61,7 +61,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing referrals to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in your new-patient and referral calls: how many roll to voicemail and book elsewhere while your team is treating patients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ CRM for Physical Therapists ============================
 {
@@ -99,7 +99,7 @@ SPECS = [
         ("Can it track insurance authorizations and visits remaining?",
          "It keeps each patient's plan and authorized visits in view so your front desk can see when someone is running low and re-authorize before their care gets interrupted mid-plan. You set the reminders, and the CRM surfaces who is due."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your patients, build your follow-up and reactivation sequences, and connect it to your calls and schedule, so it is working in days. Start with a free audit and we will show you where visits are slipping away today.")],
+         "Setup is included with no separate onboarding fee. We bring in your patients, build your follow-up and reactivation sequences, and connect it to your calls and schedule, so it is working in days.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for physical therapists"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -107,21 +107,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting plans of care and referrals <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap in your follow-up and reactivation: how many patients dropped out of their plan and how many discharged patients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Marketing for Physical Therapists =========================
-# ======================= Websites & SEO for Physical Therapists =======================
+# ======================= Websites for Physical Therapists =======================
 {
     "slug": "websites-seo-for-physical-therapists",
     "trade_slug": "physical_therapists", "trade_plural": "physical therapists",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Physical Therapists",
-    "title": "Websites & SEO for Physical Therapists | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Physical Therapists",
+    "breadcrumb_leaf": "Websites for Physical Therapists",
+    "title": "Websites for Physical Therapists | Top Shelf Business Solutions",
+    "og_title": "Websites for Physical Therapists",
     "meta_desc": "A physical therapy website built for SEO ranks for physical therapy near me and your city, and books the evaluation instead of a directory.",
-    "service_schema_name": "Websites & SEO for Physical Therapists",
+    "service_schema_name": "Websites for Physical Therapists",
     "eyebrow": "For Physical Therapists",
-    "h1_html": "Websites &amp; SEO <em>for Physical Therapists</em>",
+    "h1_html": "Websites <em>for Physical Therapists</em>",
     "answer_block": "A physical therapy website built for SEO ranks for what a patient searches after an injury or surgery, physical therapy near me, post-op rehab, knee and back pain, your city, and lets them book an evaluation in one tap, so the patient is yours instead of a directory renting your own referrals back to you.",
     "sections": [
         {"h2_html": "A patient trusting you with their recovery judges your clinic by your <em>website in seconds</em>",
@@ -146,13 +146,13 @@ SPECS = [
         ("Do I need a page for every condition I treat?",
          "You start with the ones that matter most, the surgeries and injuries you want more of, then expand. A focused set of strong condition and location pages ranks better than one thin page trying to cover everything at once."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for physical therapists"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the directories taking your new-patient searches, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

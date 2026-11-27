@@ -54,7 +54,7 @@ SPECS = [
         ("Is it going to give the caller legal advice or promise a result?",
          'No, and this matters. It answers, reassures, and captures the facts; it never advises on a case, never gives an opinion on someone\'s odds, and never promises an approval, a visa, or a green card. Every legal question and every decision about taking a matter stays with your attorneys. A nervous caller mostly needs to know a real firm is handling it, and a calm voice that gets the details beats a voicemail box.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We build your intake questions, the languages it answers in, your booking, and your urgent-case rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.')],
+         'Setup is included with no separate onboarding fee. We build your intake questions, the languages it answers in, your booking, and your urgent-case rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for immigration lawyers"),
         ("solution-ai-phone.html", "How the AI phone and intake system works"),
@@ -62,7 +62,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing consultations to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours consultations your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Immigration Lawyers =========================
 {
@@ -108,21 +108,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting consultations and clients <em>drift away</em>",
-    "cta_sub": "Get a free audit of how many of your consultations and open cases are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Immigration Lawyers ======================
-# =================== Websites & SEO for Immigration Lawyers ===================
+# =================== Websites for Immigration Lawyers ===================
 {
     "slug": "websites-seo-for-immigration-lawyers",
     "trade_slug": "immigration_lawyers", "trade_plural": "immigration lawyers",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
-    "breadcrumb_leaf": "Websites & SEO for Immigration Lawyers",
-    "title": "Websites & SEO for Immigration Lawyers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Immigration Lawyers",
+    "breadcrumb_leaf": "Websites for Immigration Lawyers",
+    "title": "Websites for Immigration Lawyers | Top Shelf Business Solutions",
+    "og_title": "Websites for Immigration Lawyers",
     "meta_desc": "An immigration lawyer website built for SEO ranks for green card and citizenship searches in your city and captures the consultation, in your clients' language.",
-    "service_schema_name": "Websites & SEO for Immigration Lawyers",
+    "service_schema_name": "Websites for Immigration Lawyers",
     "eyebrow": "For Immigration Lawyers",
-    "h1_html": "Websites &amp; SEO <em>for Immigration Lawyers</em>",
+    "h1_html": "Websites <em>for Immigration Lawyers</em>",
     "answer_block": "An immigration lawyer website built for SEO ranks for the exact help someone is searching for, a green card lawyer, a citizenship attorney, help with a family petition, in your city and in the language your clients read, and turns a careful, wary researcher into a booked consultation that belongs to your firm, not a directory.",
     "sections": [
         {"h2_html": "In this field, your site is the first proof you are <em>real and licensed</em>",
@@ -147,13 +147,13 @@ SPECS = [
         ("My clients are careful and wary of scams. Can a website really build that trust?",
          'Yes, and it is one of the main jobs of the site. A clean, honest page that explains the process plainly, shows real people and real reviews, and makes no claims about outcomes tells a cautious person you are legitimate and safe to contact. That is often what decides whether they reach out at all.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; the broader, more competitive terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; the broader, more competitive terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for immigration lawyers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the searches for <em>your own community</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your consultations, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

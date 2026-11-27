@@ -59,7 +59,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          'It answers naturally and is upfront instead of pretending to be a person. Someone staring at a fridge full of spoiling food mostly wants to know a real repair company is handling it, and a steady voice that takes the details beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your intake questions, your schedule, and your fee and warranty rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your intake questions, your schedule, and your fee and warranty rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for appliance repair companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -67,7 +67,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing same-day repairs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many same-day calls and repairs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== CRM for Appliance Repair ========================
 {
@@ -105,7 +105,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of contacts does not follow up, does not remember which home has a part on order, and does not tell you which estimate is going cold. The CRM does all of that on a schedule, so the repeat work and the quotes you already gave actually turn into booked repairs.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers and repair history, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gaps where repairs are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers and repair history, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for appliance repair companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -113,22 +113,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting estimates and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your estimates, parts-on-order jobs, and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== Marketing for Appliance Repair ========================
-# ==================== Websites & SEO for Appliance Repair ====================
+# ==================== Websites for Appliance Repair ====================
 {
     "slug": "websites-seo-for-appliance-repair",
     "trade_slug": "appliance_repair", "trade_plural": "appliance repair companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Appliance Repair",
-    "title": "Websites & SEO for Appliance Repair | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Appliance Repair",
+    "breadcrumb_leaf": "Websites for Appliance Repair",
+    "title": "Websites for Appliance Repair | Top Shelf Business Solutions",
+    "og_title": "Websites for Appliance Repair",
     "meta_desc": "An appliance repair website built for SEO ranks for refrigerator repair and appliance repair near me, names the brands you fix, and books the same-day visit.",
-    "service_schema_name": "Websites & SEO for Appliance Repair",
+    "service_schema_name": "Websites for Appliance Repair",
     "eyebrow": "For Appliance Repair",
-    "h1_html": "Websites &amp; SEO <em>for Appliance Repair</em>",
-    "answer_block": "An appliance repair website built for SEO ranks for the searches a homeowner makes when something breaks, refrigerator repair, washer repair, appliance repair near me, shows up in the map pack for the towns you cover, lists the brands you service, and captures the same-day call before they bounce, so the repair is yours instead of a lead-seller's.",
+    "h1_html": "Websites <em>for Appliance Repair</em>",
+    "answer_block": "An appliance repair website built for SEO ranks for the searches a homeowner makes when something breaks, refrigerator repair, washer repair, appliance repair near me, lists the brands you service, and captures the same-day call before they bounce, so the repair is yours instead of a lead-seller's.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for appliance repair in your town and the top of the page is often a directory, a national booking middleman, or a pay-per-lead service, not the local shop. Those sites publish thousands of pages and carry years of authority, so when a homeowner searches, they land there first, fill out a form, and that lead gets sold, sometimes to three repair companies at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason a same-day call you should have had for free gets sold to you, or handed to two competitors in the same breath.</p>'},
@@ -152,13 +152,13 @@ SPECS = [
         ("Is the site built to get people to call, not just look nice?",
          'Yes. It loads fast, puts tap-to-call and your same-day availability in front of a visitor immediately, and names your brands and service area, because a homeowner with a warm fridge calls the company that is easiest to reach, not the prettiest page.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, and broader terms compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks, and broader terms compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for appliance repair companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>appliance repair near you</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

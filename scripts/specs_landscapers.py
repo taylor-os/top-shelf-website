@@ -55,7 +55,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing spring signups to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many quote calls and new maintenance customers your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Landscapers ================================
 {
@@ -93,7 +93,7 @@ SPECS = [
         ("Can it help me re-sign customers who cancelled over the winter?",
          'Yes, and that is where a lot of a landscaper\'s spring goes. It can flag every customer who paused or dropped off in the off-season and send a well-timed re-up nudge before the route fills, so you rebuild the season with the customers you already earned instead of starting from scratch.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gap where jobs are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for landscapers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -101,7 +101,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================== Online Booking for Landscapers ==========================
 {
@@ -139,7 +139,7 @@ SPECS = [
         ("Will it cut down on no-shows for free estimates?",
          'It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A homeowner who booked themselves and got a reminder is far more likely to be there than a loosely agreed callback.'),
         ("How fast can it be live?",
-         'Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site and profile, so it is taking bookings in days. Start with a free audit and we will find the gap where estimates are slipping through today.')],
+         'Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site and profile, so it is taking bookings in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for landscapers"),
         ("solution-booking.html", "How the online booking system works"),
@@ -147,7 +147,7 @@ SPECS = [
         ("crm-for-landscapers.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let customers book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many estimates your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Review Software for Landscapers =========================
 {
@@ -193,20 +193,20 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished yards into <em>your next call</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the landscapers you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ========================= Websites & SEO for Landscapers =========================
+# ========================= Websites for Landscapers =========================
 {
     "slug": "websites-seo-for-landscapers",
     "trade_slug": "landscapers", "trade_plural": "landscapers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Landscapers",
-    "title": "Websites & SEO for Landscapers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Landscapers",
+    "breadcrumb_leaf": "Websites for Landscapers",
+    "title": "Websites for Landscapers | Top Shelf Business Solutions",
+    "og_title": "Websites for Landscapers",
     "meta_desc": "A landscaper website built for SEO ranks for landscaper near me, lawn care, and landscape design, catches the spring search spike, and puts a gallery of finished yards in front of every visitor.",
-    "service_schema_name": "Websites & SEO for Landscapers",
+    "service_schema_name": "Websites for Landscapers",
     "eyebrow": "For Landscapers",
-    "h1_html": "Websites &amp; SEO <em>for Landscapers</em>",
+    "h1_html": "Websites <em>for Landscapers</em>",
     "answer_block": "A landscaper website built for SEO turns the spring search rush into booked estimates, ranking for the terms homeowners type when they want a yard done, landscaper near me, lawn care, landscape design, and backing it with a gallery of finished work and a page for every town you mow, so the customer belongs to you, not to a lead broker.",
     "sections": [
         {"h2_html": "Landscaping is a <em>seasonal search</em>, and spring rewards whoever ranks first",
@@ -216,7 +216,7 @@ SPECS = [
         {"h2_html": "A page for <em>every town on your route</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">You do not work a whole metro, you work the towns and neighborhoods your crews can reach without blowing up the route. One home page cannot rank for all of them, so the site gets its own page for each area you cover, written about that town and the work you do there, so someone searching for lawn care in their particular suburb finds a page that is genuinely about their suburb. That also keeps new customers clustered where you already drive, which protects the route density your margins live on. You begin with the towns that matter most and add more as you grow.</p>'},
         {"h2_html": "Rank for the <em>whole menu, and keep the asset</em>",
-         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Homeowners do not only look for mowing. They search for landscape design, a paver patio, sod installation, sprinkler repair, and fall leaf cleanup, and each one is a separate high-intent search you can own with a page built around it. The larger point is that the site, the gallery, and the town pages all belong to you. They keep ranking through the slow months and cost nothing per call, unlike a pay-per-lead service that vanishes the moment you stop paying and was selling that same homeowner to two or three of your competitors anyway. An audit will lay out every search your area is running that your site does not turn up for yet.</p>'}],
+         "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Homeowners do not only look for mowing. They search for landscape design, a paver patio, sod installation, sprinkler repair, and fall leaf cleanup, and each one is a separate high-intent search you can own with a page built around it. The larger point is that the site, the gallery, and the town pages all belong to you. They keep ranking through the slow months and cost nothing per call, unlike a pay-per-lead service that vanishes the moment you stop paying and was selling that same homeowner to two or three of your competitors anyway.</p>'}],
     "example": {
         "eyebrow": "How it plays out",
         "h2_html": "A spring search in <em>one suburb</em>, booked before the season fills",
@@ -231,14 +231,14 @@ SPECS = [
         ("My work slows down in winter. Does the website still earn its keep off-season?",
          'Yes, and that is one edge it has over paid leads. The site keeps ranking and gathering inquiries through the quiet months, so homeowners planning spring projects reach you early, instead of your visibility going dark the moment you stop paying for leads.'),
         ("How long before I start showing up?",
-         'Local and service-specific searches can begin moving within weeks, while broader terms build over months, so the smart play is to be ranking before the spring spike rather than scrambling during it. Setup is included, and a free audit finds the gap between the searches in your area and what your site ranks for today.')],
+         'Local and service-specific searches can begin moving within weeks, while broader terms build over months, so the smart play is to be ranking before the spring spike rather than scrambling during it. Setup is included.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for landscapers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-landscapers.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =========================== Marketing for Landscapers ===========================
 # =========================== Automation for Landscapers ===========================
@@ -277,7 +277,7 @@ SPECS = [
         ("Will it send seasonal and follow-up reminders on its own?",
          'Yes. After a job it can schedule a review request and a seasonal reminder, aeration, mulch, or a fertilization round, for the right month, and it can nudge cold quotes and customers who lapsed over the winter, all logged against the customer in your CRM.'),
         ("How long does setup take?",
-         'Setup is included with no separate fee. We build the reminder, rain-delay, and follow-up sequences around how you already run your route, so it is working within days. Start with a free audit and we will find the gap where jobs are slipping between your crews, your calendar, and your follow-ups today.')],
+         'Setup is included with no separate fee. We build the reminder, rain-delay, and follow-up sequences around how you already run your route, so it is working within days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for landscapers"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -285,6 +285,6 @@ SPECS = [
         ("online-booking-for-landscapers.html", "How the visits these remind about get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a customer <em>wonder if you are coming</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your route, your crews, and your follow-ups, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

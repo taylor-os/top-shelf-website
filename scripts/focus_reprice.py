@@ -6,6 +6,7 @@ replacement deletes the sentence and the space before it.
 """
 import re
 
+import focus_agency
 import focus_catalog as cat
 
 SIG = "$99 a month for up to 10 users"
@@ -375,6 +376,7 @@ SENTENCES = [
     ("for up to 10 users, flat, ", "for up to 10 users, "),
     ("The pricing page lays out every plan line by line", "The pricing page lays out the plan line by line"),    ("Top Shelf makes sure the calls it brings in get answered, from $99 a month.", "Top Shelf answers the calls your marketing brings in, from $99 a month."),
 ]
+SENTENCES += focus_agency.ROWS  # pass 5: the done-for-you agency copy
 
 APOS = r"(?:'|&#x27;|&#39;|&rsquo;|’|\\')"
 

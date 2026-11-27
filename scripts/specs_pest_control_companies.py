@@ -58,7 +58,7 @@ SPECS = [
         ("Is it going to sound like a robot to an anxious customer?",
          "It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone who just found bed bugs mostly needs to know a real exterminator is handling it, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pest control companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -66,7 +66,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing panic calls to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== CRM for Pest Control Companies ====================
 {
@@ -104,7 +104,7 @@ SPECS = [
         ("Can it track termite warranty renewals?",
          "Yes. It keeps the renewal or bond date on record for every termite job and reaches out before it expires, so a warranty does not quietly drop and the renewal revenue stays yours."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and plans, build your follow-up and rebooking sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gaps where revenue is slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and plans, build your follow-up and rebooking sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pest control companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -112,7 +112,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting plans and accounts <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many recurring plans and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================ Online Booking for Pest Control Companies ================
 {
@@ -150,7 +150,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          "It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A customer who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback."),
         ("How fast can it be live?",
-         "Setup is included, no separate fee. We connect your calendar, set up your job types, service areas, and rules, and put the link on your site and profile, so it is taking bookings in days. Start with a free audit and we will show you where you are losing routine jobs today.")],
+         "Setup is included, no separate fee. We connect your calendar, set up your job types, service areas, and rules, and put the link on your site and profile, so it is taking bookings in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pest control companies"),
         ("solution-booking.html", "How the online booking system works"),
@@ -158,7 +158,7 @@ SPECS = [
         ("crm-for-pest-control-companies.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let customers book you <em>while you run your routes</em>",
-    "cta_sub": "Get a free audit of how many routine jobs your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================ Review Software for Pest Control Companies ================
 {
@@ -196,7 +196,7 @@ SPECS = [
         ("Is automating the requests within Google's rules?",
          "Yes. Asking everyone you served for an honest review is exactly what Google wants. The lines you cannot cross are gating, quietly skipping the customers who might complain, and buying reviews outright, and the software does neither. It invites every real customer and makes leaving feedback effortless."),
         ("How fast is it working, and which sites does it cover?",
-         "It centers on Google, where an anxious searcher looks first and where your local ranking is decided, and it can point past customers to your other profiles too. Setup is handled for you at no extra cost, so it is sending within days, and a free audit will first show you how your reputation reads next to the exterminators nearby.")],
+         "It centers on Google, where an anxious searcher looks first and where your local ranking is decided, and it can point past customers to your other profiles too. Setup is handled for you at no extra cost, so it is sending within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pest control companies"),
         ("solution-reviews.html", "How the review system works"),
@@ -204,20 +204,20 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Make a job well done into <em>your next booking</em>",
-    "cta_sub": "See a free audit of how your reputation reads next to the pest control companies nearby, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ================ Websites & SEO for Pest Control Companies ================
+# ================ Websites for Pest Control Companies ================
 {
     "slug": "websites-seo-for-pest-control-companies",
     "trade_slug": "pest-control-companies", "trade_plural": "pest control companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Pest Control Companies",
-    "title": "Websites & SEO for Pest Control Companies | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Pest Control Companies",
+    "breadcrumb_leaf": "Websites for Pest Control Companies",
+    "title": "Websites for Pest Control Companies | Top Shelf Business Solutions",
+    "og_title": "Websites for Pest Control Companies",
     "meta_desc": "A pest control company website built for SEO ranks for exterminator near me, bed bug treatment, and termite inspection, and turns the panic search into a call you own.",
-    "service_schema_name": "Websites & SEO for Pest Control Companies",
+    "service_schema_name": "Websites for Pest Control Companies",
     "eyebrow": "For Pest Control Companies",
-    "h1_html": "Websites &amp; SEO <em>for Pest Control Companies</em>",
+    "h1_html": "Websites <em>for Pest Control Companies</em>",
     "answer_block": "A pest control company website built for SEO puts you in front of the homeowner who just found bed bugs, wasps, or a rat and is searching for help right now, ranks you in the local map results for the towns you cover, and turns that anxious visitor into a phone call, so the job is yours and not a directory's to resell.",
     "sections": [
         {"h2_html": "When someone finds a pest, they search and <em>call within minutes</em>",
@@ -242,14 +242,14 @@ SPECS = [
         ("Someone with a wasp nest just wants to call. Does a website even matter?",
          "That is exactly when it matters most. Fear sends people straight to their phone, and they tap the first credible local result they see, the one with a visible number, real reviews, and a page that says you handle wasps. A fast site that leads with your phone number is what converts that moment of panic into a booked visit."),
         ("How soon will it rank, and do I own it?",
-         "Specific local searches often start climbing within a few weeks and compound from there, while the broadest terms take longer. The site, the domain, and every lead it captures are registered to you, never rented, and a free audit will first show you where your current presence stands to someone searching nearby right now.")],
+         "Specific local searches often start climbing within a few weeks and compound from there, while the broadest terms take longer. The site, the domain, and every lead it captures are registered to you, never rented.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pest control companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-pest-control-companies.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the searches for every pest in <em>your area</em>",
-    "cta_sub": "See a free audit of where your website and map-pack presence stand against the directories that intercept your calls today, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Marketing for Pest Control Companies ====================
 # ==================== Automation for Pest Control Companies ====================
@@ -288,7 +288,7 @@ SPECS = [
         ("Will it handle warranties, lapsed members, and cold quotes?",
          "Yes. It can send a renewal reminder before a termite warranty expires, a seasonal nudge to a member who drifted off, and a check-in on an open quote, all on a schedule you set and all logged against the customer in your CRM."),
         ("How long does setup take?",
-         "Setup is included with no separate fee. We build the rebooking, prep, on-my-way, and follow-up sequences around how you already run your routes, so it is working within days. Start with a free audit and we will show you what is currently slipping between your calls, your trucks, and your plans.")],
+         "Setup is included with no separate fee. We build the rebooking, prep, on-my-way, and follow-up sequences around how you already run your routes, so it is working within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pest control companies"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -296,6 +296,6 @@ SPECS = [
         ("online-booking-for-pest-control-companies.html", "How the visits these reminders drive get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a plan visit or a quote <em>go quiet</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your routes, your plans, and your follow-ups, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

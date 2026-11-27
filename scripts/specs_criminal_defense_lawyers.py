@@ -53,7 +53,7 @@ SPECS = [
         ("Is it going to give the caller legal advice?",
          'No, and this matters. It answers, reassures, and captures the facts; it never advises on the charge, the odds, or what to do, and it never promises anything about the outcome. Every legal question and every decision about taking a case stays with your attorneys. A frightened family mostly needs to know a real firm is handling it, and a steady voice that gets the details beats a voicemail box.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your emergency rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.')],
+         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your emergency rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for criminal defense lawyers"),
         ("solution-ai-phone.html", "How the AI phone and intake system works"),
@@ -61,7 +61,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing cases to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours intakes your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Criminal Defense Lawyers =========================
 {
@@ -107,21 +107,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Catch the callers before their <em>court date</em>",
-    "cta_sub": "Get a free audit of how many callers, clients, and referral sources your firm is letting slip right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Criminal Defense Lawyers ======================
-# =================== Websites & SEO for Criminal Defense Lawyers ===================
+# =================== Websites for Criminal Defense Lawyers ===================
 {
     "slug": "websites-seo-for-criminal-defense-lawyers",
     "trade_slug": "criminal_defense_lawyers", "trade_plural": "criminal defense lawyers",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
-    "breadcrumb_leaf": "Websites & SEO for Criminal Defense Lawyers",
-    "title": "Websites & SEO for Criminal Defense Lawyers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Criminal Defense Lawyers",
+    "breadcrumb_leaf": "Websites for Criminal Defense Lawyers",
+    "title": "Websites for Criminal Defense Lawyers | Top Shelf Business Solutions",
+    "og_title": "Websites for Criminal Defense Lawyers",
     "meta_desc": "A criminal defense lawyer website built for SEO ranks for DUI, drug, and criminal-defense-near-me searches and turns a frightened visitor into a call.",
-    "service_schema_name": "Websites & SEO for Criminal Defense Lawyers",
+    "service_schema_name": "Websites for Criminal Defense Lawyers",
     "eyebrow": "For Criminal Defense Lawyers",
-    "h1_html": "Websites &amp; SEO <em>for Criminal Defense Lawyers</em>",
+    "h1_html": "Websites <em>for Criminal Defense Lawyers</em>",
     "answer_block": "A criminal defense lawyer website built for SEO ranks for the charge and the county someone types in a panic, DUI lawyer, drug charge attorney, criminal defense near me, and greets them with a site that looks discreet, credible, and ready to respond tonight. The call comes to your firm directly, not a directory selling it on.",
     "sections": [
         {"h2_html": "In a crisis, your site is the first read on whether you are <em>safe to trust</em>",
@@ -153,6 +153,6 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the calls your <em>own city</em> is already making",
-    "cta_sub": "Get a free audit of how much of your local criminal-defense traffic is going to directories and lead-sellers instead of you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

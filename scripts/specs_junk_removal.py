@@ -46,7 +46,7 @@ SPECS = [
         ("Will it actually book the job on my calendar?",
          'Yes. It puts the haul straight on your calendar based on the windows you are running that day, and texts you the details right away, so the crew knows what is coming and shows up with the right truck and enough space.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We load your pricing, your questions, and your calendar for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We load your pricing, your questions, and your calendar for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for junk removal"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing hauls to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and quote requests your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= CRM for Junk Removal =============================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of old texts does not follow up, does not remember who you cleared out last year, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat work actually shows up instead of depending on you to remember.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where hauls are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for junk removal"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,22 +100,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================== Marketing for Junk Removal ==========================
-# ====================== Websites & SEO for Junk Removal ======================
+# ====================== Websites for Junk Removal ======================
 {
     "slug": "websites-seo-for-junk-removal",
     "trade_slug": "junk_removal", "trade_plural": "junk removal companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Junk Removal",
-    "title": "Websites & SEO for Junk Removal | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Junk Removal",
+    "breadcrumb_leaf": "Websites for Junk Removal",
+    "title": "Websites for Junk Removal | Top Shelf Business Solutions",
+    "og_title": "Websites for Junk Removal",
     "meta_desc": "A junk removal website built for SEO ranks for junk removal near me and your city, and captures the caller, or a photo of the pile, instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Junk Removal",
+    "service_schema_name": "Websites for Junk Removal",
     "eyebrow": "For Junk Removal",
-    "h1_html": "Websites &amp; SEO <em>for Junk Removal</em>",
-    "answer_block": "A junk removal website built for SEO ranks for the searches someone makes the moment they want a pile gone, junk removal near me, furniture pickup, garage cleanout, shows up in the map pack for the towns you cover, and lets them call or send a photo, so the job is yours instead of a lead-seller.",
+    "h1_html": "Websites <em>for Junk Removal</em>",
+    "answer_block": "A junk removal website built for SEO ranks for the searches someone makes the moment they want a pile gone, junk removal near me, furniture pickup, garage cleanout, and lets them call or send a photo, so the job is yours instead of a lead-seller.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for junk removal in your town and the top of the page is often a national booking brand, a directory, or a pay-per-lead service, not the local crew. Those sites publish thousands of pages and have years of authority behind them, so when someone searches, they land there first, fill out a form, and that lead gets sold, sometimes to three companies at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason a job you should have gotten for free gets sold to you, or handed to whoever is on rotation that week.</p>'},
@@ -139,13 +139,13 @@ SPECS = [
         ("Most of my calls are same-day. Does a website even help?",
          'Especially then. A same-day search happens on a phone the moment someone wants a pile gone, and the crew that shows up in the map pack with a tap-to-call button and real reviews gets the job. A site built for that moment is exactly what captures it.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for junk removal"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

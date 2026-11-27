@@ -46,7 +46,7 @@ SPECS = [
         ("Is it going to sound like a robot to a panicked customer?",
          'It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone standing in a flooding kitchen mostly needs to know that a real plumber is handling it, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for plumbers"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing emergencies to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Plumbers ================================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of contacts does not follow up, does not remember who is due for maintenance, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat work actually shows up instead of depending on you to remember.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for plumbers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,7 +100,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================== Online Booking for Plumbers ==========================
 {
@@ -138,7 +138,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          'It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A customer who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback.'),
         ("How fast can it be live?",
-         'Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site and profile, so it is taking bookings in days. Start with a free audit and we will show you where you are losing routine jobs today.')],
+         'Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site and profile, so it is taking bookings in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for plumbers"),
         ("solution-booking.html", "How the online booking system works"),
@@ -146,7 +146,7 @@ SPECS = [
         ("crm-for-plumbers.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let customers book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many routine jobs your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Review Software for Plumbers =========================
 {
@@ -184,7 +184,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          'You find out immediately instead of weeks later, and the software helps you post a calm, professional reply. One measured response to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a spotless record would.'),
         ("How long until it is running?",
-         'Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the plumbers you compete with.')],
+         'Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for plumbers"),
         ("solution-reviews.html", "How the review system works"),
@@ -192,21 +192,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished jobs into <em>your next call</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the plumbers you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ========================= Websites & SEO for Plumbers =========================
+# ========================= Websites for Plumbers =========================
 {
     "slug": "websites-seo-for-plumbers",
     "trade_slug": "plumbers", "trade_plural": "plumbers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Plumbers",
-    "title": "Websites & SEO for Plumbers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Plumbers",
+    "breadcrumb_leaf": "Websites for Plumbers",
+    "title": "Websites for Plumbers | Top Shelf Business Solutions",
+    "og_title": "Websites for Plumbers",
     "meta_desc": "A plumber website built for SEO ranks for emergency plumber near me and your city, and captures the caller directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Plumbers",
+    "service_schema_name": "Websites for Plumbers",
     "eyebrow": "For Plumbers",
-    "h1_html": "Websites &amp; SEO <em>for Plumbers</em>",
-    "answer_block": "A plumber website built for SEO ranks for the searches a homeowner types in a hurry, emergency plumber near me, water heater repair, 24 hour plumber, shows up in the map pack for the towns you cover, and captures the caller the moment they land, so the job belongs to you instead of a directory or a lead-seller renting your own calls back to you.",
+    "h1_html": "Websites <em>for Plumbers</em>",
+    "answer_block": "A plumber website built for SEO ranks for the searches a homeowner types in a hurry, emergency plumber near me, water heater repair, 24 hour plumber, and captures the caller the moment they land, so the job belongs to you instead of a directory or a lead-seller renting your own calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a plumber in your town and the top of the page is often a directory, a national booking middleman, or a pay-per-lead service, not the local shop. Those sites publish thousands of pages and have years of authority behind them, so when a homeowner searches, they land there first, fill out a form, and that lead gets sold, sometimes to three plumbers at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason a call you should have gotten for free gets sold to you, or handed to whoever is on rotation that week.</p>'},
@@ -226,18 +226,18 @@ SPECS = [
         ("How is this different from paying for leads?",
          'A pay-per-lead service rents you a call that it also sells to your competitors, and it stops the day you stop paying. A website you own captures calls that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every job.'),
         ("Do I need to rank for every town I serve?",
-         'You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent searches, then expand, rather than spreading thin across a whole metro at once.'),
+         'You rank for the ones that matter most first.'),
         ("Most of my calls are emergencies. Does a website even help?",
          'Especially then. An emergency search happens on a phone in the moment something breaks, and the plumber who shows up in the map pack with a tap-to-call button and real reviews gets the call. A site built for that moment is exactly what captures it.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for plumbers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-plumbers.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =========================== Marketing for Plumbers ===========================
 # =========================== Automation for Plumbers ===========================
@@ -276,7 +276,7 @@ SPECS = [
         ("Will it send maintenance and follow-up reminders on its own?",
          'Yes. After a job it can schedule a check that everything is holding and a maintenance reminder for the right number of months out, and it can nudge cold quotes and lapsed customers on a schedule you set, all logged against the customer in your CRM.'),
         ("How long does setup take?",
-         'Setup is included with no separate fee. We build the reminder, on-my-way, and follow-up sequences around how you already run your day, so it is working within days. Start with a free audit and we will show you what is currently slipping between your calls, your trucks, and your calendar.')],
+         'Setup is included with no separate fee. We build the reminder, on-my-way, and follow-up sequences around how you already run your day, so it is working within days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for plumbers"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -284,6 +284,6 @@ SPECS = [
         ("online-booking-for-plumbers.html", "How the visits these remind about get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a customer <em>wonder if you are coming</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your calls, your trucks, and your follow-ups, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

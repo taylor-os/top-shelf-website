@@ -56,7 +56,7 @@ SPECS = [
         ("Is it going to give the caller legal advice or promise how their case will go?",
          'No, and this matters. It listens, reassures, and captures the facts; it never advises on the matter, never guesses at custody or support, and never promises an outcome. What to do, whether to take the matter, and every legal judgment stay with your attorneys. A frightened caller mostly needs to feel heard and to know a real firm is handling it, and a calm voice that gets the details beats a voicemail box.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your urgent-case rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.')],
+         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your urgent-case rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for family law attorneys"),
         ("solution-ai-phone.html", "How the AI phone and intake system works"),
@@ -64,7 +64,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending your hardest callers to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours consultations your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Family Law Attorneys =========================
 {
@@ -102,7 +102,7 @@ SPECS = [
         ("How is this different from my family law case-management software?",
          'It sits alongside it. That software runs the legal file, the pleadings, and the filing deadlines. This runs everything around it: the consultations you have not signed, the clients who need reassurance through a long case, and the past clients and professionals who refer you. The two do different jobs.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We import your contacts, set up your follow-up and check-in sequences, and tie it into your calls and booking, so it is running within days. Start with a free audit and we will show you where consultations and clients are slipping today.')],
+         'Setup is included with no separate onboarding fee. We import your contacts, set up your follow-up and check-in sequences, and tie it into your calls and booking, so it is running within days.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for family law attorneys"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -110,21 +110,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting unsure consultations <em>slip away</em>",
-    "cta_sub": "Get a free audit of how many of your consultations, no-shows, and past clients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Family Law Attorneys ======================
-# =================== Websites & SEO for Family Law Attorneys ===================
+# =================== Websites for Family Law Attorneys ===================
 {
     "slug": "websites-seo-for-family-law-attorneys",
     "trade_slug": "family_law_attorneys", "trade_plural": "family law attorneys",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
-    "breadcrumb_leaf": "Websites & SEO for Family Law Attorneys",
-    "title": "Websites & SEO for Family Law Attorneys | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Family Law Attorneys",
+    "breadcrumb_leaf": "Websites for Family Law Attorneys",
+    "title": "Websites for Family Law Attorneys | Top Shelf Business Solutions",
+    "og_title": "Websites for Family Law Attorneys",
     "meta_desc": "A family law attorney website built for SEO ranks for divorce and custody lawyer searches in your city and turns a private researcher into a consultation.",
-    "service_schema_name": "Websites & SEO for Family Law Attorneys",
+    "service_schema_name": "Websites for Family Law Attorneys",
     "eyebrow": "For Family Law Attorneys",
-    "h1_html": "Websites &amp; SEO <em>for Family Law Attorneys</em>",
+    "h1_html": "Websites <em>for Family Law Attorneys</em>",
     "answer_block": "A family law attorney website built for SEO ranks for what a person quietly types at night, a divorce lawyer near me, a child custody attorney, help changing a support order, and meets them with a calm, private, trustworthy page that turns a careful researcher into a consultation that belongs to your firm.",
     "sections": [
         {"h2_html": "Your site is the first proof you will handle a family <em>with care</em>",
@@ -149,13 +149,13 @@ SPECS = [
         ("My clients are private and cautious. Can a website really build that trust?",
          'Yes, and it is one of the site\'s central jobs. A clean, calm page that explains the process gently, shows real people and real reviews, and makes no claims about outcomes tells a hurting person you are safe to contact. That is frequently what tips someone from lurking to reaching out.'),
         ("How long until it starts ranking?",
-         'The narrow, local searches can begin to move within weeks; the broader and more competitive ones take longer and build over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'The narrow, local searches can begin to move within weeks; the broader and more competitive ones take longer and build over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for family law attorneys"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the family law searches in <em>your own city</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your divorce and custody consultations, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

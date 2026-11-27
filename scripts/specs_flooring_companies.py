@@ -57,7 +57,7 @@ SPECS = [
         ("Is it going to sound like a robot to a homeowner?",
          "It answers naturally and is upfront instead of pretending to be a person. Someone about to pick out floors and let a crew into their home mostly wants to know a real, organized company is handling it, and a steady voice that takes down the rooms and the material beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for flooring companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -65,7 +65,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing floors to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many measure requests and showroom calls your current setup is letting slip through the gap, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Flooring Companies =========================
 {
@@ -103,7 +103,7 @@ SPECS = [
         ("How is this different from just keeping notes in my phone?",
          "A phone full of contacts does not follow up, does not remind you which quote is going cold, and does not tell you who has gone quiet. The CRM does all of that on a schedule, so the quotes you already measured and the rooms you have not done yet actually turn into jobs."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reactivation sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gap where jobs are going cold today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reactivation sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for flooring companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -111,21 +111,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your measures and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Flooring Companies =======================
-# ==================== Websites & SEO for Flooring Companies ====================
+# ==================== Websites for Flooring Companies ====================
 {
     "slug": "websites-seo-for-flooring-companies",
     "trade_slug": "flooring_companies", "trade_plural": "flooring companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Flooring Companies",
-    "title": "Websites & SEO for Flooring Companies | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Flooring Companies",
+    "breadcrumb_leaf": "Websites for Flooring Companies",
+    "title": "Websites for Flooring Companies | Top Shelf Business Solutions",
+    "og_title": "Websites for Flooring Companies",
     "meta_desc": "A flooring company website built for SEO ranks for flooring near me and your city, shows the galleries that sell floors, and books the in-home measure.",
-    "service_schema_name": "Websites & SEO for Flooring Companies",
+    "service_schema_name": "Websites for Flooring Companies",
     "eyebrow": "For Flooring Companies",
-    "h1_html": "Websites &amp; SEO <em>for Flooring Companies</em>",
+    "h1_html": "Websites <em>for Flooring Companies</em>",
     "answer_block": "A flooring company website built for SEO ranks for the searches a homeowner makes when picking new floors, flooring near me, hardwood floor installation, luxury vinyl plank, carpet and tile in your city, and shows the galleries, materials, and reviews that turn a browse into a booked measure, so the lead comes straight to you instead of a directory.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own leads</em>",
@@ -148,15 +148,15 @@ SPECS = [
         ("Do I really need a gallery on the site?",
          "For a flooring company, yes. Homeowners buy floors with their eyes, so photos of your finished work, organized by material and room and paired with reviews, are often what turn a browsing visitor into a booked measure. The gallery is doing the same job your showroom does."),
         ("Do I need to rank for every town I serve?",
-         "You rank for the ones that matter most first. We build pages for your core service areas and the highest-value material and installation searches, then expand, rather than spreading thin across a whole metro at once."),
+         "You rank for the ones that matter most first."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, and broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, and broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for flooring companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your inquiries, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

@@ -45,7 +45,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          "It answers naturally and is upfront instead of pretending to be a person. For most callers with a small job, what matters is that a real person is going to show up and handle their list, and a friendly voice that takes down the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your job types, your calendar, and how you like work grouped and booked, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your job types, your calendar, and how you like work grouped and booked, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for handyman businesses"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -53,7 +53,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing small jobs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and small jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== CRM for Handyman Services ==============================
 {
@@ -91,7 +91,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          "A phone full of contacts does not follow up, does not remember who has a list waiting, and does not tell you who has not called in a year. The CRM does all of that on a schedule, so the repeat work actually shows up instead of depending on you to remember hundreds of homes."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for handyman businesses"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -99,7 +99,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting past customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your past customers and unfinished lists are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Online Booking for Handyman Services =========================
 {
@@ -137,7 +137,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          "It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A customer who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback."),
         ("How fast can it be live?",
-         "Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site and profile, so it is taking bookings in days. Start with a free audit and we will show you where you are losing easy jobs today.")],
+         "Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site and profile, so it is taking bookings in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for handyman businesses"),
         ("solution-booking.html", "How the online booking system works"),
@@ -145,7 +145,7 @@ SPECS = [
         ("crm-for-handyman-services.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let customers book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many easy jobs your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Review Software for Handyman Services =========================
 {
@@ -183,7 +183,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          "You find out immediately instead of weeks later, and the software helps you post a calm, professional reply. One measured response to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a spotless record would."),
         ("How long until it is running?",
-         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the handymen you compete with.")],
+         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for handyman businesses"),
         ("solution-reviews.html", "How the review system works"),
@@ -191,21 +191,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished lists into <em>your next call</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the handymen you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ========================= Websites & SEO for Handyman Services =========================
+# ========================= Websites for Handyman Services =========================
 {
     "slug": "websites-seo-for-handyman-services",
     "trade_slug": "handyman-services", "trade_plural": "handyman businesses",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Handyman Services",
-    "title": "Websites & SEO for Handyman Services | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Handyman Services",
+    "breadcrumb_leaf": "Websites for Handyman Services",
+    "title": "Websites for Handyman Services | Top Shelf Business Solutions",
+    "og_title": "Websites for Handyman Services",
     "meta_desc": "A handyman website built for SEO ranks for handyman near me and the specific jobs people search, and captures the caller directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Handyman Services",
+    "service_schema_name": "Websites for Handyman Services",
     "eyebrow": "For Handyman Services",
-    "h1_html": "Websites &amp; SEO <em>for Handyman Services</em>",
-    "answer_block": "A handyman website built for SEO ranks for what people search, handyman near me, TV mounting, furniture assembly, drywall repair in your city, shows up in the map pack for the towns you cover, and captures the caller the moment they land, so the job belongs to you instead of a directory renting your calls back to you.",
+    "h1_html": "Websites <em>for Handyman Services</em>",
+    "answer_block": "A handyman website built for SEO ranks for what people search, handyman near me, TV mounting, furniture assembly, drywall repair in your city, and captures the caller the moment they land, so the job belongs to you instead of a directory renting your calls back to you.",
     "sections": [
         {"h2_html": "The directories are not competing with you, they are <em>renting you back your own calls</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a handyman in your town and the top of the page is often Thumbtack, Angi, TaskRabbit, or Nextdoor, not the local person who actually does the work. Those sites publish endlessly and have years of authority behind them, so a homeowner lands there first, fills out one form, and that lead gets sold or shared, sometimes to several handymen at once, sometimes back to you for a fee out of the price of a job that was already small. Your site not ranking is not a vanity problem. It is the reason a call you should have gotten for free gets sold to you, or handed to whoever paid for the slot that week.</p>'},
@@ -229,14 +229,14 @@ SPECS = [
         ("Most of my jobs are small. Is a website even worth it?",
          "Especially then. Small jobs come in volume and by search, and the handyman who shows up for handyman near me with a clear list of work and a tap-to-call button gets the call. A site built for that moment is exactly what turns a small search into a booked visit, often with more added on."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for handyman businesses"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-handyman-services.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ Marketing for Handyman Services ============================
 # ============================ Automation for Handyman Services ============================
@@ -275,7 +275,7 @@ SPECS = [
         ("Will it follow up on leftover list items and old quotes?",
          "Yes. After a job it can offer to book the things you did not get to, and it can nudge cold quotes and lapsed customers on a schedule you set, all logged against the customer in your CRM so nothing gets double-sent or forgotten."),
         ("How long does setup take?",
-         "Setup is included with no separate fee. We build the reminder, on-my-way, and follow-up sequences around how you already run your day, so it is working within days. Start with a free audit and we will show you what is currently slipping between your calls, your trips, and your calendar.")],
+         "Setup is included with no separate fee. We build the reminder, on-my-way, and follow-up sequences around how you already run your day, so it is working within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for handyman businesses"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -283,6 +283,6 @@ SPECS = [
         ("online-booking-for-handyman-services.html", "How the visits these remind about get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a customer <em>wonder if you are coming</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your calls, your trips, and your follow-ups, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

@@ -59,7 +59,7 @@ SPECS = [
         ("Is it going to sound like a robot?",
          "It answers naturally and is upfront rather than pretending to be a person. A homeowner or a shop manager who just wants their glass cleaned mostly needs to know a real company is handling it and someone will come give a price, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your questions, and your calendar for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your questions, and your calendar for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for window cleaning companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -67,7 +67,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing recurring accounts to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many estimate calls and standing accounts your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Window Cleaning =========================
 {
@@ -105,7 +105,7 @@ SPECS = [
         ("Can it handle my commercial and storefront routes?",
          "Yes. Recurring accounts, which day each route runs, and what is due all live in the CRM, and you can see them by area to keep routes dense, so a weekly storefront or a monthly office stays on schedule and gets invoiced instead of slipping because you lost track of when you were last there."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for window cleaning companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -113,21 +113,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and accounts <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Window Cleaning =======================
-# ===================== Websites & SEO for Window Cleaning =====================
+# ===================== Websites for Window Cleaning =====================
 {
     "slug": "websites-seo-for-window-cleaning",
     "trade_slug": "window_cleaning", "trade_plural": "window cleaning companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Window Cleaning",
-    "title": "Websites & SEO for Window Cleaning | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Window Cleaning",
+    "breadcrumb_leaf": "Websites for Window Cleaning",
+    "title": "Websites for Window Cleaning | Top Shelf Business Solutions",
+    "og_title": "Websites for Window Cleaning",
     "meta_desc": "A window cleaning website built for SEO ranks for window cleaning near me and captures the quote or recurring-plan signup directly, not a lead-seller.",
-    "service_schema_name": "Websites & SEO for Window Cleaning",
+    "service_schema_name": "Websites for Window Cleaning",
     "eyebrow": "For Window Cleaning",
-    "h1_html": "Websites &amp; SEO <em>for Window Cleaning</em>",
+    "h1_html": "Websites <em>for Window Cleaning</em>",
     "answer_block": "A window cleaning website built for SEO ranks for the searches people make when the glass looks spotted, window cleaning near me, residential and commercial window washing in your city, and captures the quote or the recurring-plan signup directly, so the account is yours instead of a lead-seller renting it back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -152,13 +152,13 @@ SPECS = [
         ("I do a lot of commercial and storefront work. Does a website help with that?",
          "Yes. Business owners and property managers search too, and they read your site to decide whether you look reliable enough to put on a standing contract. Pages built around commercial and storefront window cleaning, with real reviews and an easy way to ask about a route, are what win that recurring work."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for window cleaning companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

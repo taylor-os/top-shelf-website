@@ -56,7 +56,7 @@ SPECS = [
         ("Will it handle both new consults and patients already in treatment?",
          "Yes. It books the free consult for someone new, and for a patient already in braces it can schedule an adjustment, handle a comfort issue, or hand anything unusual to a person, so nobody has to leave the chair to answer the phone."),
         ("How fast can it be answering?",
-         "Setup is included with no separate onboarding fee. We configure your questions, your consult and financing answers, and your scheduling rules for you, so it is picking up in days, not weeks. Start with a free audit and we will show you how many consult calls your front desk is missing while it is chairside.")],
+         "Setup is included with no separate onboarding fee. We configure your questions, your consult and financing answers, and your scheduling rules for you, so it is picking up in days, not weeks.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for orthodontists"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -64,7 +64,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending consults to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in your consult calls: how many roll to voicemail and book elsewhere while your front desk is chairside, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Orthodontists ================================
 {
@@ -102,7 +102,7 @@ SPECS = [
         ("Can it bring back stalled and retainer patients?",
          "Yes. It can nudge a family whose paperwork stalled, remind finished patients about retainer checks, and reach past families when a younger sibling is coming of age, all from the same record and on a cadence you set."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your patients and referral sources, build your consult-nurture and reactivation sequences, and connect it to your phones and calendar, so it is working in days. Start with a free audit and we will show you where cases are slipping today.")],
+         "Setup is included with no separate onboarding fee. We bring in your patients and referral sources, build your consult-nurture and reactivation sequences, and connect it to your phones and calendar, so it is working in days.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for orthodontists"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -110,21 +110,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting consults and referrals <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap in your follow-up: how many consults that did not start, referring dentists, and stalled patients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== Marketing for Orthodontists ==============================
-# ========================= Websites & SEO for Orthodontists =========================
+# ========================= Websites for Orthodontists =========================
 {
     "slug": "websites-seo-for-orthodontists",
     "trade_slug": "orthodontists", "trade_plural": "orthodontists",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Orthodontists",
-    "title": "Websites & SEO for Orthodontists | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Orthodontists",
+    "breadcrumb_leaf": "Websites for Orthodontists",
+    "title": "Websites for Orthodontists | Top Shelf Business Solutions",
+    "og_title": "Websites for Orthodontists",
     "meta_desc": "An orthodontist website built for SEO ranks for braces and Invisalign near me, shows your financing and finished smiles, and books the free consult.",
-    "service_schema_name": "Websites & SEO for Orthodontists",
+    "service_schema_name": "Websites for Orthodontists",
     "eyebrow": "For Orthodontists",
-    "h1_html": "Websites &amp; SEO <em>for Orthodontists</em>",
+    "h1_html": "Websites <em>for Orthodontists</em>",
     "answer_block": "An orthodontist website built for SEO ranks for what a family searches, braces near me, Invisalign, orthodontist near me, and your city, shows your financing and finished smiles, and books the free consult the moment they land, so the case is yours instead of a directory renting your own families back to you.",
     "sections": [
         {"h2_html": "A family trusting you with a smile judges your practice by your <em>website in seconds</em>",
@@ -149,13 +149,13 @@ SPECS = [
         ("Do I need a page for every treatment?",
          "You start with the ones that matter most, the braces, Invisalign, kids, and adult searches you want to grow, then expand. A focused set of strong treatment and location pages ranks better than one thin page trying to cover everything at once."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for orthodontists"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the directories and aligner brands taking your consult searches, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

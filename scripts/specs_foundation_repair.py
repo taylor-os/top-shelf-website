@@ -56,7 +56,7 @@ SPECS = [
         ("Is it going to sound like a robot to a frightened homeowner?",
          "It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone worried their house is failing mostly needs to know a real, steady company is going to come look, and a calm voice that takes down the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for foundation repair companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -64,7 +64,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing foundation jobs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many anxious calls and free inspections your current setup is letting slip through the gap, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Foundation Repair =========================
 {
@@ -102,7 +102,7 @@ SPECS = [
         ("How is this different from just keeping notes in a spreadsheet?",
          "A spreadsheet does not follow up, does not remind you which estimate is going cold, and does not tell you who has gone quiet. The CRM does all of that on a schedule, so the estimates you already delivered and the inspections you already ran actually turn into jobs."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your leads, build your follow-up and revival sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gap where jobs are going cold today.")],
+         "Setup is included with no separate onboarding fee. We bring in your leads, build your follow-up and revival sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for foundation repair companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -110,21 +110,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting estimates and homeowners <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your estimates and past inspections are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Foundation Repair =======================
-# ==================== Websites & SEO for Foundation Repair ====================
+# ==================== Websites for Foundation Repair ====================
 {
     "slug": "websites-seo-for-foundation-repair",
     "trade_slug": "foundation_repair", "trade_plural": "foundation repair companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Foundation Repair",
-    "title": "Websites & SEO for Foundation Repair | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Foundation Repair",
+    "breadcrumb_leaf": "Websites for Foundation Repair",
+    "title": "Websites for Foundation Repair | Top Shelf Business Solutions",
+    "og_title": "Websites for Foundation Repair",
     "meta_desc": "A foundation repair website built for SEO ranks for foundation repair near me and your city, and reassures a frightened homeowner enough to book the inspection.",
-    "service_schema_name": "Websites & SEO for Foundation Repair",
+    "service_schema_name": "Websites for Foundation Repair",
     "eyebrow": "For Foundation Repair",
-    "h1_html": "Websites &amp; SEO <em>for Foundation Repair</em>",
+    "h1_html": "Websites <em>for Foundation Repair</em>",
     "answer_block": "A foundation repair website built for SEO ranks for the searches a worried homeowner makes, foundation repair near me, foundation inspection, cracks in the brick, in your city, and earns the trust that turns a big, frightening repair into a booked inspection, so the lead comes straight to you instead of a lead-seller.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -147,15 +147,15 @@ SPECS = [
         ("Why does the site itself matter so much for foundation repair?",
          "Because a frightened homeowner is about to spend a large sum on their home. Before they call, they read your site to see whether you look established, credentialed, and honest, or like someone trying to scare them. A calm site with before-and-after proof, a clear process, your warranty, and straight answers is often what decides between you and the next company on the list."),
         ("Do I need to rank for every town I serve?",
-         "You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent foundation searches, then expand, rather than spreading thin across a whole metro at once."),
+         "You rank for the ones that matter most first."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, and broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, and broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for foundation repair companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your inquiries, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

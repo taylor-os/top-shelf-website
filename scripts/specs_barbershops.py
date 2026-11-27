@@ -57,7 +57,7 @@ SPECS = [
         ("Will it sound like a robot to someone calling to book?",
          "It answers naturally and plainly, and it is upfront rather than pretending to be a person. A caller mostly wants to know he can get in, what the wait is, and that a real shop has him down, and a straight answer beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your barbers, your walk-in and appointment rules, your hours, and your services for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many calls your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your barbers, your walk-in and appointment rules, your hours, and your services for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for barbershops"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -65,7 +65,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing walk-ins to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, walk-in questions, and after-hours texts your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Barbershops ================================
 {
@@ -103,7 +103,7 @@ SPECS = [
         ("Can it handle standing appointments, punch cards, no-shows, and cancellations?",
          "Yes. Standing slots are held and confirmed automatically, loyalty punch cards and packages are tracked against the right client, reminders cut no-shows, and when someone cancels it can text a waitlist to fill the chair before it sits empty."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back reminders around each barber's book, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where regulars are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back reminders around each barber's book, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for barbershops"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -111,21 +111,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting regulars <em>fall off your rotation</em>",
-    "cta_sub": "Get a free audit of how many of your regulars are overdue for a cut or have quietly stopped coming in, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= Marketing for Barbershops =============================
-# ========================= Websites & SEO for Barbershops =========================
+# ========================= Websites for Barbershops =========================
 {
     "slug": "websites-seo-for-barbershops",
     "trade_slug": "barbershops", "trade_plural": "barbershops",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Barbershops",
-    "title": "Websites & SEO for Barbershops | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Barbershops",
+    "breadcrumb_leaf": "Websites for Barbershops",
+    "title": "Websites for Barbershops | Top Shelf Business Solutions",
+    "og_title": "Websites for Barbershops",
     "meta_desc": "A barbershop website built for SEO ranks for barber and fade near me, shows the walk-in wait and each barber's booking link, and books the chair in one tap.",
-    "service_schema_name": "Websites & SEO for Barbershops",
+    "service_schema_name": "Websites for Barbershops",
     "eyebrow": "For Barbershops",
-    "h1_html": "Websites &amp; SEO <em>for Barbershops</em>",
+    "h1_html": "Websites <em>for Barbershops</em>",
     "answer_block": "A barbershop website built for SEO ranks for what a man types when he needs a cut, barbershop near me, fade near me, beard trim, shows whether you are open and the walk-in wait, and lets him book a specific barber in one tap, so the client is yours instead of a booking app's cut.",
     "sections": [
         {"h2_html": "A man decides fast, on his <em>phone</em>",
@@ -150,13 +150,13 @@ SPECS = [
         ("How is this different from just listing on a booking app?",
          "A booking app takes a cut of a chair that could have come to you directly, keeps the client in its own system, and stops the day you stop paying. A website you own captures the booking and the client for nothing extra and keeps working long after it is built, so it becomes an asset instead of a fee on every cut."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for barbershops"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search for <em>a barber in your town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and booking apps taking your chairs, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

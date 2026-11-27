@@ -55,7 +55,7 @@ SPECS = [
         ("Will it sound like a robot to my customers?",
          "It answers naturally and professionally, and it is upfront rather than pretending to be a person. Most callers care about one thing, that someone picked up and is handling it, which beats a voicemail box on a 100-degree day every time. You can hear how it handles a live call before you decide."),
         ("How fast can it be answering our calls?",
-         "Setup is included with no separate onboarding fee. We configure the triage questions, your dispatch calendar, and the repair and replacement flows for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure the triage questions, your dispatch calendar, and the repair and replacement flows for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -63,7 +63,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing peak-season jobs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and jobs your current setup is missing on your busiest days, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== CRM for HVAC Companies ========================
 {
@@ -101,7 +101,7 @@ SPECS = [
         ("Can it really tell me whose equipment is getting old?",
          "Yes, because it keeps the install date and the system on record for every customer you have serviced. You can reach the homeowners whose units are near the end of their life about a planned replacement, before it fails on the hottest or coldest day and they call whoever answers first."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and equipment history, build the renewal and quote follow-ups, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gaps where revenue is slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and equipment history, build the renewal and quote follow-ups, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -109,7 +109,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting renewals and quotes <em>go quiet</em>",
-    "cta_sub": "Get a free audit of how many maintenance renewals and open quotes are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Online Booking for HVAC Companies ====================
 {
@@ -147,7 +147,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          "It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A homeowner who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback."),
         ("How fast can it be live?",
-         "Setup is included with no separate fee. We connect your calendar, set up your visit types, service area, and rules, and put the link on your site and Google listing, so it is taking bookings in days. Start with a free audit and we will show you where you are losing appointments today.")],
+         "Setup is included with no separate fee. We connect your calendar, set up your visit types, service area, and rules, and put the link on your site and Google listing, so it is taking bookings in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-booking.html", "How the online booking system works"),
@@ -155,7 +155,7 @@ SPECS = [
         ("crm-for-hvac-companies.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let homeowners book you <em>while your office is closed</em>",
-    "cta_sub": "Get a free audit of how many service calls your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Review Software for HVAC Companies ====================
 {
@@ -193,27 +193,27 @@ SPECS = [
         ("What happens if we get a bad review?",
          "You find out immediately instead of weeks later, and the software helps you post a calm, professional response. On a big purchase like a new system, one thoughtful reply to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a perfect record would."),
         ("How long until it is running?",
-         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the HVAC companies you compete with.")],
+         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-reviews.html", "How the review system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished jobs into <em>your next install</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the HVAC companies you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ==================== Websites & SEO for HVAC Companies ====================
+# ==================== Websites for HVAC Companies ====================
 {
     "slug": "websites-seo-for-hvac-companies",
     "trade_slug": "hvac-companies", "trade_plural": "HVAC companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for HVAC Companies",
-    "title": "Websites & SEO for HVAC Companies | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for HVAC Companies",
+    "breadcrumb_leaf": "Websites for HVAC Companies",
+    "title": "Websites for HVAC Companies | Top Shelf Business Solutions",
+    "og_title": "Websites for HVAC Companies",
     "meta_desc": "An HVAC company website built for SEO ranks for AC repair near me and captures the no-cooling call, instead of losing it to a shared-lead directory.",
-    "service_schema_name": "Websites & SEO for HVAC Companies",
+    "service_schema_name": "Websites for HVAC Companies",
     "eyebrow": "For HVAC Companies",
-    "h1_html": "Websites &amp; SEO <em>for HVAC Companies</em>",
+    "h1_html": "Websites <em>for HVAC Companies</em>",
     "answer_block": "An HVAC company website built for SEO gets you found when a homeowner in a hot house searches AC repair near me, puts your business in the local map results ahead of the shared-lead directories, and turns that visit into a call before they bounce, so the no-cooling and no-heat jobs in your area are yours instead of a lead sold to three contractors at once.",
     "sections": [
         {"h2_html": "When the AC dies, homeowners search and call the <em>top of the map</em>",
@@ -238,14 +238,14 @@ SPECS = [
         ("Is the site built to get people to call, not just look nice?",
          "Yes. It loads fast, puts click-to-call and a booking button in front of a visitor immediately, and makes your service area and emergency availability obvious, because a homeowner with no cooling calls the company that is easiest to reach, not the prettiest page."),
         ("Do I own the website, or am I renting it?",
-         "You own it. The site and domain are registered to you, the content is yours, and every lead it captures lands in your own CRM. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "You own it. The site and domain are registered to you, the content is yours, and every lead it captures lands in your own CRM. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-hvac-companies.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>AC repair near you</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the companies and lead sites taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== Marketing for HVAC Companies ========================
 # ======================== Automation for HVAC Companies ========================
@@ -284,7 +284,7 @@ SPECS = [
         ("What happens to replacement quotes and leads that go quiet?",
          "They get a scheduled follow-up instead of being forgotten. A maybe-next-year quote resurfaces on a cadence you set, and a customer whose system is near the end of its life gets a planned-replacement nudge before it fails, so old opportunities keep coming back around."),
         ("How long does setup take?",
-         "Setup is included with no separate fee. We build the reminder and follow-up sequences around how your company already works and the seasons you run on, so it is running within days. Start with a free audit and we will find the gaps where visits, quotes, and renewals are falling through today.")],
+         "Setup is included with no separate fee. We build the reminder and follow-up sequences around how your company already works and the seasons you run on, so it is running within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -292,6 +292,6 @@ SPECS = [
         ("online-booking-for-hvac-companies.html", "How the visits these reminders drive get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a visit or a quote <em>go quiet</em>",
-    "cta_sub": "Get a free audit of what is currently falling through the cracks between your bookings, your quotes, and your maintenance renewals, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

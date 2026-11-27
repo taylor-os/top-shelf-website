@@ -56,7 +56,7 @@ SPECS = [
         ("Will it sound like a robot to someone booking a relaxing day?",
          "It answers warmly and calmly, the way a spa should sound, and it is upfront rather than pretending to be a person. Someone booking an escape mostly wants to feel that a real, welcoming spa has them scheduled, and a warm reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your packages, your rooms, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many calls and messages your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your packages, your rooms, your hours, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for day spas"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -64,7 +64,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending gift card and package calls to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and after-hours messages your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================= CRM for Day Spas =================================
 {
@@ -102,7 +102,7 @@ SPECS = [
         ("Can it win back a gift card visitor or a guest who stopped coming?",
          "Yes, and both are among the cheapest business a day spa can win. It can invite a guest a gift card brought in to come back on their own, and reach a lapsed regular with a warm, well-timed message, both sent for you, so a one-time visit or a name you had given up on turns back into a booking."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your guests, build your rebooking and win-back reminders, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where visits are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your guests, build your rebooking and win-back reminders, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for day spas"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -110,21 +110,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting guests and gift cards <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your guests are overdue to rebook and how many gift cards and packages are going unused right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =============================== Marketing for Day Spas ===============================
-# ============================= Websites & SEO for Day Spas =============================
+# ============================= Websites for Day Spas =============================
 {
     "slug": "websites-seo-for-day-spas",
     "trade_slug": "day_spas", "trade_plural": "day spas",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Day Spas",
-    "title": "Websites & SEO for Day Spas | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Day Spas",
+    "breadcrumb_leaf": "Websites for Day Spas",
+    "title": "Websites for Day Spas | Top Shelf Business Solutions",
+    "og_title": "Websites for Day Spas",
     "meta_desc": "A day spa website built for SEO ranks for spa near me and spa packages, feels as serene as the visit, and lets a guest book a room or buy a gift card in a tap.",
-    "service_schema_name": "Websites & SEO for Day Spas",
+    "service_schema_name": "Websites for Day Spas",
     "eyebrow": "For Day Spas",
-    "h1_html": "Websites &amp; SEO <em>for Day Spas</em>",
+    "h1_html": "Websites <em>for Day Spas</em>",
     "answer_block": "A day spa website built for SEO ranks for what a guest types, spa near me, spa packages, couples massage, or a spa gift card, feels as serene as the visit, and lets someone book a room or buy a gift card in a tap, so the guest and sale stay yours.",
     "sections": [
         {"h2_html": "Your website has to feel like the <em>escape you sell</em>",
@@ -149,13 +149,13 @@ SPECS = [
         ("Most of my guests come from word of mouth and gift cards. Does a website even help?",
          "Yes, because a referred guest and a gift card recipient both look you up before they book, and a gift buyer often wants to purchase online in the moment. A fast, serene, easy-to-book site with online gift card purchase is what turns all of that interest into a booking or a sale instead of losing it to a spa that made it easier."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for day spas"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search for <em>a day spa in your town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and booking apps taking your guests, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

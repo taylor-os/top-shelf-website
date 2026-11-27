@@ -49,7 +49,7 @@ SPECS = [
         ("Is it going to sound like a robot to a homeowner?",
          'It answers naturally and is upfront instead of pretending to be a person. Someone about to trust a crew with a major remodel mostly wants to know a real, organized company is handling it, and a steady voice that takes down the project beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for general contractors"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -57,7 +57,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing remodels to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many project inquiries your current setup is letting slip through the gap, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for General Contractors =========================
 {
@@ -95,7 +95,7 @@ SPECS = [
         ("How is this different from just keeping notes in my phone?",
          'A phone full of contacts does not follow up, does not remind you which bid is going cold, and does not tell you who has gone quiet. The CRM does all of that on a schedule, so the repeat work and the bids you already sent actually turn into signed projects.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your clients, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where projects are slipping through the gap today.')],
+         'Setup is included with no separate onboarding fee. We bring in your clients, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for general contractors"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -103,21 +103,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting bids and clients <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your bids and past clients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for General Contractors =======================
-# ==================== Websites & SEO for General Contractors ====================
+# ==================== Websites for General Contractors ====================
 {
     "slug": "websites-seo-for-general-contractors",
     "trade_slug": "general_contractors", "trade_plural": "general contractors",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for General Contractors",
-    "title": "Websites & SEO for General Contractors | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for General Contractors",
+    "breadcrumb_leaf": "Websites for General Contractors",
+    "title": "Websites for General Contractors | Top Shelf Business Solutions",
+    "og_title": "Websites for General Contractors",
     "meta_desc": "A general contractor website built for SEO ranks for home remodeling and contractor near me, and shows the portfolio and reviews that win a big project.",
-    "service_schema_name": "Websites & SEO for General Contractors",
+    "service_schema_name": "Websites for General Contractors",
     "eyebrow": "For General Contractors",
-    "h1_html": "Websites &amp; SEO <em>for General Contractors</em>",
+    "h1_html": "Websites <em>for General Contractors</em>",
     "answer_block": "A general contractor website built for SEO ranks for the searches a homeowner makes when planning a project, general contractor near me, home remodeling, room addition, kitchen remodel in your city, and shows the portfolio, reviews, and proof that turn a big, scary purchase into a booked consult, so the lead comes straight to you instead of a directory.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own leads</em>",
@@ -140,15 +140,15 @@ SPECS = [
         ("Do I really need a portfolio on the site?",
          'For a general contractor, yes. A homeowner spending big on their home is buying trust as much as construction, and photos of your finished work, paired with reviews and clear proof you are licensed and insured, are often what turn a visitor into a booked consult.'),
         ("Do I need to rank for every town I serve?",
-         'You rank for the ones that matter most first. We build pages for your core service areas and the highest-value project searches, then expand, rather than spreading thin across a whole metro at once.'),
+         'You rank for the ones that matter most first.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for general contractors"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your projects, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

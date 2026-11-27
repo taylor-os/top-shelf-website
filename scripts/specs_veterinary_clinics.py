@@ -49,7 +49,7 @@ SPECS = [
         ("Will it actually book the appointment on my calendar?",
          'Yes. Routine visits, vaccines, wellness exams, and rechecks land straight on your calendar based on your availability, and your team gets the details right away. For an urgent case it flags your staff at once so a person decides how fast the pet needs to be seen.'),
         ("How fast can it be answering?",
-         'Setup is included with no separate onboarding fee. We configure your questions, emergency rules, and scheduling for you, so it is picking up in days. Start with a free audit and we will show you how many calls your front desk is missing now.')],
+         'Setup is included with no separate onboarding fee. We configure your questions, emergency rules, and scheduling for you, so it is picking up in days.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -57,7 +57,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing sick-pet calls to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in your appointment and sick-pet calls: how many roll to voicemail and book elsewhere while your front desk is rooming patients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Veterinary Clinics =========================
 {
@@ -95,7 +95,7 @@ SPECS = [
         ("Does it keep each pet in a household straight?",
          'Yes. It organizes around the client and every animal they own, so the reminders, history, and notes for the dog and both cats sit together, and one call about one pet is a natural chance to catch the others up on what they are due for.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your clients and pets, build your recall and reactivation reminders, and connect it to your phones and calendar, so it is working in days. Start with a free audit and we will show you where visits are slipping today.')],
+         'Setup is included with no separate onboarding fee. We bring in your clients and pets, build your recall and reactivation reminders, and connect it to your phones and calendar, so it is working in days.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -103,21 +103,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting overdue pets <em>slip away</em>",
-    "cta_sub": "Get a free audit that finds the gap in your recall and reactivation: how many pets are overdue for vaccines, dentals, and heartworm and going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Veterinary Clinics ======================
-# ==================== Websites & SEO for Veterinary Clinics ====================
+# ==================== Websites for Veterinary Clinics ====================
 {
     "slug": "websites-seo-for-veterinary-clinics",
     "trade_slug": "veterinary_clinics", "trade_plural": "veterinary clinics",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Veterinary Clinics",
-    "title": "Websites & SEO for Veterinary Clinics | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Veterinary Clinics",
+    "breadcrumb_leaf": "Websites for Veterinary Clinics",
+    "title": "Websites for Veterinary Clinics | Top Shelf Business Solutions",
+    "og_title": "Websites for Veterinary Clinics",
     "meta_desc": "A veterinary clinic website built for SEO ranks for vet near me and the services you offer, and turns a worried pet owner into a booking, not a directory lead.",
-    "service_schema_name": "Websites & SEO for Veterinary Clinics",
+    "service_schema_name": "Websites for Veterinary Clinics",
     "eyebrow": "For Veterinary Clinics",
-    "h1_html": "Websites &amp; SEO <em>for Veterinary Clinics</em>",
+    "h1_html": "Websites <em>for Veterinary Clinics</em>",
     "answer_block": "A veterinary clinic website built for SEO ranks for what a pet owner types when they need care, vet near me, emergency vet, and the services you offer, shows up on the map for the towns you cover, and captures the client the moment they land, so the booking is yours, not a directory's.",
     "sections": [
         {"h2_html": "An owner sizes up your clinic by your <em>website in seconds</em>",
@@ -142,13 +142,13 @@ SPECS = [
         ("Do I need a page for every service I offer?",
          'You start with the ones that matter most, the emergencies and the services you want to grow, then expand. A focused set of strong service and location pages ranks better than one thin page trying to cover everything at once.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for veterinary clinics"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the vet searches in <em>your own town</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the directories taking your new-client searches, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

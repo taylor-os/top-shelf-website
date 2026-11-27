@@ -51,7 +51,7 @@ SPECS = [
         ("Will it actually book showings on my calendar?",
          "Yes. Showings and routine appointments land straight on your calendar based on the availability you set, and you get a text with the details right away. For an urgent maintenance call it can alert you at once so you decide how fast to respond."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your rules for leasing, maintenance, and owner calls, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your rules for leasing, maintenance, and owner calls, so it is answering in days, not weeks.")],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for property management companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -59,7 +59,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing owners and vacancies to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many leasing, maintenance, and owner calls your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== CRM for Property Management ====================
 {
@@ -97,7 +97,7 @@ SPECS = [
         ("How is this different from a spreadsheet or my inbox?",
          "A spreadsheet does not follow up, does not remember which owner is due for a check-in, and does not tell you which lead is going cold. The CRM does all of that on a schedule, so the owner accounts and filled units actually show up instead of depending on you to remember between fires."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your owners, tenants, and properties, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where leads are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your owners, tenants, and properties, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for property management companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -105,22 +105,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting owner leads and prospects <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your owner leads and prospective tenants are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Marketing for Property Management ====================
-# ==================== Websites & SEO for Property Management ====================
+# ==================== Websites for Property Management ====================
 {
     "slug": "websites-seo-for-property-management",
     "trade_slug": "property_management", "trade_plural": "property management companies",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
-    "breadcrumb_leaf": "Websites & SEO for Property Management",
-    "title": "Websites & SEO for Property Management | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Property Management",
+    "breadcrumb_leaf": "Websites for Property Management",
+    "title": "Websites for Property Management | Top Shelf Business Solutions",
+    "og_title": "Websites for Property Management",
     "meta_desc": "A property management website built for SEO ranks when an owner searches in your city, and captures that lead directly instead of a listing portal.",
-    "service_schema_name": "Websites & SEO for Property Management",
+    "service_schema_name": "Websites for Property Management",
     "eyebrow": "For Property Management",
-    "h1_html": "Websites &amp; SEO <em>for Property Management</em>",
-    "answer_block": "A property management website built for SEO ranks for what an owner types when they need a manager, property management company near me and your city's name, shows up in the map pack for the areas you cover, and captures that owner lead the moment they land, so a years-long account belongs to you, not a listing portal.",
+    "h1_html": "Websites <em>for Property Management</em>",
+    "answer_block": "A property management website built for SEO ranks for what an owner types when they need a manager, property management company near me and your city's name, and captures that owner lead the moment they land, so a years-long account belongs to you, not a listing portal.",
     "sections": [
         {"h2_html": "The listing portals are <em>renting owners back to you</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a property manager in your city and the top of the page is often a national listing portal or a directory, not the local company that actually knows the market. Those sites publish thousands of pages and have years of authority behind them, so when an owner searches for a manager, they land there first, fill out a form, and that lead gets sold, sometimes to several companies at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason a serious owner account, the kind worth years of management fees, gets handed to whoever pays the portal the most that month or happens to be next on the rotation.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">The portals are not really competing with you on service. They are renting you back the owners who were already searching in your own city, and every dollar you send them buys a lead you never truly own, often shared with two or three of your direct competitors the moment it comes in.</p>'},
@@ -140,17 +140,17 @@ SPECS = [
         ("How is this different from paying a portal for leads?",
          "A pay-per-lead portal rents you a lead it also sells to your competitors, and it stops the day you stop paying. A website you own captures owner and tenant leads that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every account."),
         ("Do I need to rank for every city I manage in?",
-         "You rank for the ones that matter most first. We build pages for your core markets and the highest-intent owner searches, then expand, rather than spreading thin across a whole metro at once."),
+         "You rank for the ones that matter most first."),
         ("Owners research carefully. Does a website really matter that much?",
          "Especially then. An owner about to trust you with a property researches harder than any tenant, and your site is where that research lands. A clear, professional site that answers their questions and shows real reviews is often what turns a cautious searcher into a call."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for property management companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results in <em>your own market</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the portals taking your owner leads, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

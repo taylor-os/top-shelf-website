@@ -44,7 +44,7 @@ SPECS = [
         ("Do I keep my data if I change brokerages?",
          'Yes. Your contacts and notes are in your name and exportable any time, so if you switch offices your book goes with you. You are not renting access to your own database.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your contacts, set up the follow-up sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where leads are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your contacts, set up the follow-up sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for real estate agents"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -52,7 +52,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting good leads <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your leads and past clients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Online Booking for Real Estate Agents =======================
 {
@@ -90,7 +90,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          'It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. Someone who booked themselves and got a reminder is far more likely to show than a loosely agreed callback.'),
         ("How fast can it be live?",
-         'Setup is included, no separate fee. We connect your calendar, set up your appointment types and rules, and put the link on your site and listings, so it is taking bookings in days. Start with a free audit and we will show you where you are losing appointments today.')],
+         'Setup is included, no separate fee. We connect your calendar, set up your appointment types and rules, and put the link on your site and listings, so it is taking bookings in days.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for real estate agents"),
         ("solution-booking.html", "How the online booking system works"),
@@ -98,7 +98,7 @@ SPECS = [
         ("crm-for-real-estate-agents.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let clients book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many appointments your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Review Software for Real Estate Agents ====================
 {
@@ -136,7 +136,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          'You find out immediately instead of weeks later, and the software helps you post a calm, professional response. One thoughtful reply to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a perfect record would.'),
         ("How long until it is running?",
-         'Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your closings, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the agents you compete with.')],
+         'Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your closings, so requests start going out in days.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for real estate agents"),
         ("solution-reviews.html", "How the review system works"),
@@ -144,20 +144,20 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn happy closings into <em>your next listing</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the agents you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ==================== Websites & SEO for Real Estate Agents ====================
+# ==================== Websites for Real Estate Agents ====================
 {
     "slug": "websites-seo-for-real-estate-agents",
     "trade_slug": "real-estate-agents", "trade_plural": "real estate agents",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
-    "breadcrumb_leaf": "Websites & SEO for Real Estate Agents",
-    "title": "Websites & SEO for Real Estate Agents | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Real Estate Agents",
+    "breadcrumb_leaf": "Websites for Real Estate Agents",
+    "title": "Websites for Real Estate Agents | Top Shelf Business Solutions",
+    "og_title": "Websites for Real Estate Agents",
     "meta_desc": "A real estate agent website built for SEO ranks for your city and captures buyer and seller leads directly, instead of losing them to Zillow or Realtor.com.",
-    "service_schema_name": "Websites & SEO for Real Estate Agents",
+    "service_schema_name": "Websites for Real Estate Agents",
     "eyebrow": "For Real Estate Agents",
-    "h1_html": "Websites &amp; SEO <em>for Real Estate Agents</em>",
+    "h1_html": "Websites <em>for Real Estate Agents</em>",
     "answer_block": "A real estate agent website built for SEO ranks for your name and your city, shows up before the portals in local search, and captures a buyer or seller\'s contact information the moment they land, so the traffic and the leads belong to you instead of Zillow or Realtor.com.",
     "sections": [
         {"h2_html": "The portals are not competing with you, they are <em>renting you back your own buyers</em>",
@@ -182,14 +182,14 @@ SPECS = [
         ("My brokerage already gave me a website. Why do I need another?",
          'A brokerage template usually looks like every other agent at the firm and is not built or optimized for your specific market. This one is built to rank for the neighborhoods you work and to capture leads into your own CRM, not a shared brokerage system you do not control.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for real estate agents"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-real-estate-agents.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own name</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the portals sending your buyers and sellers somewhere else, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== Marketing for Real Estate Agents ========================
 # ======================== Automation for Real Estate Agents ========================
@@ -228,7 +228,7 @@ SPECS = [
         ("What happens to leads that have gone quiet?",
          'They get a scheduled check-in instead of being forgotten. You set how long a lead should go untouched before it resurfaces, so old leads keep getting a reason to come back instead of sitting in a list.'),
         ("How long does setup take?",
-         'Setup is included with no separate fee. We build the milestone sequences and feedback requests around how you already work, so it is running within days. Start with a free audit and we will show you what is currently falling through during your transactions.')],
+         'Setup is included with no separate fee. We build the milestone sequences and feedback requests around how you already work, so it is running within days.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for real estate agents"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -236,6 +236,6 @@ SPECS = [
         ("online-booking-for-real-estate-agents.html", "How the showings this collects feedback on get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a <em>transaction go quiet</em>",
-    "cta_sub": "Get a free audit of what is currently falling through the cracks between your showings, your closings, and your calendar, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

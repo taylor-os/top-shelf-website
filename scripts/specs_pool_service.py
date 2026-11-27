@@ -46,7 +46,7 @@ SPECS = [
         ("Will it sound like a robot to someone whose pool just turned green?",
          "It answers naturally and calmly, and it is upfront rather than pretending to be a person. A homeowner staring at a green pool mainly needs to know a real pool company is on it, and a steady voice that books the visit beats a voicemail box. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your same-day rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your same-day rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pool service companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new customers to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many new-customer calls and after-hours jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =============================== CRM for Pool Service ===============================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from the answering service?",
          "The answering service is the front door, it catches new calls the moment they ring. The CRM works the customers you already have: your recurring routes, the quotes you already sent, and the people who lapsed. One captures new demand, the other makes sure nothing you already earned slips away."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and routes, build your quote-follow-up and reactivation sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where revenue is slipping today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and routes, build your quote-follow-up and reactivation sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pool service companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,21 +100,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go quiet</em>",
-    "cta_sub": "Get a free audit of how many of your quotes, renewals, and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= Marketing for Pool Service =============================
-# =========================== Websites & SEO for Pool Service ===========================
+# =========================== Websites for Pool Service ===========================
 {
     "slug": "websites-seo-for-pool-service",
     "trade_slug": "pool_service", "trade_plural": "pool service companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Pool Service",
-    "title": "Websites & SEO for Pool Service | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Pool Service",
+    "breadcrumb_leaf": "Websites for Pool Service",
+    "title": "Websites for Pool Service | Top Shelf Business Solutions",
+    "og_title": "Websites for Pool Service",
     "meta_desc": "A pool service website built for SEO ranks for pool service near me and weekly cleaning in your city, then captures the request instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Pool Service",
+    "service_schema_name": "Websites for Pool Service",
     "eyebrow": "For Pool Service",
-    "h1_html": "Websites &amp; SEO <em>for Pool Service</em>",
+    "h1_html": "Websites <em>for Pool Service</em>",
     "answer_block": "A pool service website built for SEO ranks for what a homeowner types when they want their pool handled, pool service near me, weekly pool cleaning, green pool cleanup, and takes the service request the moment they land, so the customer is yours instead of a lead-seller renting your own calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -135,17 +135,17 @@ SPECS = [
         ("How is this different from buying leads?",
          "A pay-per-lead app rents you a contact it also sells to your competitors, and it stops the day you stop paying. A website you own captures requests that are yours alone and keeps working long after it is built, with no per-lead fee skimming your margin, and in pool service that captured customer can stay on your route for years."),
         ("Do I need to rank for every town I service?",
-         "You rank for the ones that matter most first. We build pages for your core route areas and the highest-intent searches, then expand, rather than spreading thin across a whole metro at once and pulling in calls too far out to service weekly."),
+         "You rank for the ones that matter most first."),
         ("Can the site take service requests, not just show my number?",
          "Yes. It can take a weekly-service signup or a repair request and drop it straight into your CRM to be followed up on, and it pairs with the answering service for the homeowner who would rather call. Either way the request is captured the moment they are ready, not lost to a callback they forget."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today and where you are losing customers to lead-sellers.")],
+         "Local, specific searches can start moving within weeks, broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pool service companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

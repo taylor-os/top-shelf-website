@@ -46,7 +46,7 @@ SPECS = [
         ("Will it sound like a robot to a new client?",
          "It answers naturally and warmly, and it is upfront rather than pretending to be a person. A new client mostly wants to know they can get in and that a real salon has them booked, and a friendly reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your stylists, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many calls and messages your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your stylists, your hours, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for hair salons"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new clients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and after-hours messages your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Hair Salons ================================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("Can it help with no-shows and last-minute cancellations?",
          "Yes. Automatic confirmations and reminders before each appointment are the biggest lever on no-shows, and when a client cancels, it can reach the people who wanted an earlier time and fill the opening before that chair time is lost."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where visits are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for hair salons"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,21 +100,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting clients <em>drift away</em>",
-    "cta_sub": "Get a free audit of how many of your clients are overdue to rebook or have quietly stopped coming in, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= Marketing for Hair Salons =============================
-# ========================= Websites & SEO for Hair Salons =========================
+# ========================= Websites for Hair Salons =========================
 {
     "slug": "websites-seo-for-hair-salons",
     "trade_slug": "hair_salons", "trade_plural": "hair salons",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Hair Salons",
-    "title": "Websites & SEO for Hair Salons | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Hair Salons",
+    "breadcrumb_leaf": "Websites for Hair Salons",
+    "title": "Websites for Hair Salons | Top Shelf Business Solutions",
+    "og_title": "Websites for Hair Salons",
     "meta_desc": "A hair salon website built for SEO ranks for salon and balayage searches near you, shows your work up front, and lets a new client book in one tap.",
-    "service_schema_name": "Websites & SEO for Hair Salons",
+    "service_schema_name": "Websites for Hair Salons",
     "eyebrow": "For Hair Salons",
-    "h1_html": "Websites &amp; SEO <em>for Hair Salons</em>",
+    "h1_html": "Websites <em>for Hair Salons</em>",
     "answer_block": "A hair salon website built for SEO ranks for the searches a new client makes, hair salon near me, balayage near me, color and extensions in your area, shows your work up front, and lets her book in one tap, so the client belongs to you instead of a directory or booking app taking a cut of your own bookings.",
     "sections": [
         {"h2_html": "A new client trusts your website before she <em>trusts you</em>",
@@ -135,17 +135,17 @@ SPECS = [
         ("How is this different from paying a booking marketplace?",
          "A marketplace shows a new client ten salons at once and takes a cut of a booking that could have been yours directly, and it stops the day you stop paying. A website you own captures bookings that are yours alone, with no cut taken, and keeps working long after it is built."),
         ("Do I need a page for every service and neighborhood?",
-         "You start with the ones that matter most: your top money services and your core areas. We build those pages first, around what people actually search and what you most want to book, then expand, rather than spreading thin across everything at once."),
+         "You start with the ones that matter most: your top money services and your core areas."),
         ("Most of my new clients come from Instagram. Does a website even help?",
          "Yes, because they still tap through to decide. Instagram catches the eye, but a new client checks your site and reviews before she trusts you with her hair, and that is where a fast, photo-forward page with easy booking turns a curious scroll into a booked chair."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for hair salons"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own neighborhood</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and booking apps taking your clients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

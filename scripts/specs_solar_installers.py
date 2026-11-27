@@ -51,7 +51,7 @@ SPECS = [
         ("Can it screen out renters and tire-kickers?",
          "Yes, on the rules you set. It can confirm the caller owns the home and is the decision-maker before it books time on a closer\'s calendar, so your reps spend their consults on homeowners who can actually move forward instead of appointments that were never going anywhere."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your lead rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your lead rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for solar installers"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -59,7 +59,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing systems to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many quote calls and web leads your current setup is letting slip through the gap, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Solar Installers =========================
 {
@@ -97,7 +97,7 @@ SPECS = [
         ("How is this different from just keeping notes in a spreadsheet?",
          "A spreadsheet does not follow up, does not remind you which proposal is going cold, and does not tell you who has gone quiet. The CRM does all of that on a schedule, so the proposals you already sent and the leads you already earned actually turn into installs."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your leads, build your follow-up and revival sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where deals are slipping through the gap today.")],
+         "Setup is included with no separate onboarding fee. We bring in your leads, build your follow-up and revival sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for solar installers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -105,21 +105,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting proposals and leads <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your proposals and past leads are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Solar Installers =======================
-# ==================== Websites & SEO for Solar Installers ====================
+# ==================== Websites for Solar Installers ====================
 {
     "slug": "websites-seo-for-solar-installers",
     "trade_slug": "solar_installers", "trade_plural": "solar installers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Solar Installers",
-    "title": "Websites & SEO for Solar Installers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Solar Installers",
+    "breadcrumb_leaf": "Websites for Solar Installers",
+    "title": "Websites for Solar Installers | Top Shelf Business Solutions",
+    "og_title": "Websites for Solar Installers",
     "meta_desc": "A solar company website built for SEO ranks for solar installers near me and your city, and earns the trust of a homeowner researching a considered purchase.",
-    "service_schema_name": "Websites & SEO for Solar Installers",
+    "service_schema_name": "Websites for Solar Installers",
     "eyebrow": "For Solar Installers",
-    "h1_html": "Websites &amp; SEO <em>for Solar Installers</em>",
+    "h1_html": "Websites <em>for Solar Installers</em>",
     "answer_block": "A solar company website built for SEO ranks for the searches a homeowner makes while researching solar, solar installers near me, solar company in your city, and earns the trust and answers the questions that turn a big, considered purchase into a booked consult, so the lead comes straight to you instead of a lead-seller.",
     "sections": [
         {"h2_html": "Solar leads get sold back to you, and it is <em>the most expensive rent in the trade</em>",
@@ -142,15 +142,15 @@ SPECS = [
         ("Why does the site itself matter so much for solar?",
          "Because a homeowner is about to spend a large sum and let a crew work on their roof. Before they call, they read your site to see whether you look established, licensed, and honest. A clear site with real information, reviews, and an easy quote request is often what decides between you and the next company on the list."),
         ("Do I need to rank for every town I serve?",
-         "You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent solar searches, then expand, rather than spreading thin across a whole region at once."),
+         "You rank for the ones that matter most first."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for solar installers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your inquiries, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

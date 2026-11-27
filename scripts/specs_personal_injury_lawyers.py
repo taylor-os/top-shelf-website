@@ -46,7 +46,7 @@ SPECS = [
         ("Is it going to give the caller legal advice?",
          'No. It answers, reassures, and captures the facts; it does not advise on the case or promise anything about it. Every legal question and every decision about taking a case stays with your attorneys. Someone shaken after a wreck mostly needs to know a real firm is handling it, and a steady voice that gets the details beats a voicemail box.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your emergency rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.')],
+         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your emergency rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for personal injury lawyers"),
         ("solution-ai-phone.html", "How the AI phone and intake system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing cases to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours intakes your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Personal Injury Lawyers =========================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from the case-management software I already use?",
          'It sits alongside it. Case management runs the legal file; this runs the relationship, the follow-up on leads you have not signed, the check-ins with clients, and the touchpoints with referral sources, which is exactly the part that tends to fall through when everyone is busy.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your contacts, build your follow-up and check-in sequences, and connect it to your calls and booking, so it is working in days. Start with a free audit and we will show you where leads and clients are slipping today.')],
+         'Setup is included with no separate onboarding fee. We bring in your contacts, build your follow-up and check-in sequences, and connect it to your calls and booking, so it is working in days.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for personal injury lawyers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,21 +100,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting leads and clients <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your intakes and past clients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Personal Injury Lawyers ======================
-# =================== Websites & SEO for Personal Injury Lawyers ===================
+# =================== Websites for Personal Injury Lawyers ===================
 {
     "slug": "websites-seo-for-personal-injury-lawyers",
     "trade_slug": "personal_injury_lawyers", "trade_plural": "personal injury lawyers",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
-    "breadcrumb_leaf": "Websites & SEO for Personal Injury Lawyers",
-    "title": "Websites & SEO for Personal Injury Lawyers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Personal Injury Lawyers",
+    "breadcrumb_leaf": "Websites for Personal Injury Lawyers",
+    "title": "Websites for Personal Injury Lawyers | Top Shelf Business Solutions",
+    "og_title": "Websites for Personal Injury Lawyers",
     "meta_desc": "A personal injury lawyer website built for SEO ranks for car accident lawyer near me and your city, and captures the caller directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Personal Injury Lawyers",
+    "service_schema_name": "Websites for Personal Injury Lawyers",
     "eyebrow": "For Personal Injury Lawyers",
-    "h1_html": "Websites &amp; SEO <em>for Personal Injury Lawyers</em>",
+    "h1_html": "Websites <em>for Personal Injury Lawyers</em>",
     "answer_block": "A personal injury lawyer website built for SEO ranks for what an injured person types after a wreck, car accident lawyer near me, your city plus attorney, and captures the caller the moment they land, so the case belongs to your firm instead of a directory or a lead-seller renting your own calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -139,13 +139,13 @@ SPECS = [
         ("Most of my best cases come from referrals. Does a website even matter?",
          'It still does. Referred clients look you up before they call, and an injured person with no referral turns to Google in the moment. A site that ranks and looks credible turns both of those into calls instead of sending them to a directory.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; the broader, more competitive terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; the broader, more competitive terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for personal injury lawyers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own city</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

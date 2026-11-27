@@ -56,7 +56,7 @@ SPECS = [
         ("Is it going to sound like a robot to my clients?",
          "It answers naturally and professionally, and it is upfront instead of pretending to be a person. Someone deciding who to let into their home mostly wants to know a real company is handling it and a time is set, which beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your quote questions, your calendar, and your service area for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many calls your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your quote questions, your calendar, and your service area for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for house cleaning companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -64,7 +64,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new clients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many quote calls and recurring clients your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for House Cleaning Companies =========================
 {
@@ -102,7 +102,7 @@ SPECS = [
         ("How is this different from a spreadsheet of clients?",
          "A spreadsheet does not follow up, does not remember who is due, and does not tell you which recurring client is about to churn. The CRM does all of that on a schedule, so the recurring revenue actually holds instead of depending on you to remember every home."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your clients, build your follow-up and win-back sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gaps where clients and quotes are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your clients, build your follow-up and win-back sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for house cleaning companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -110,7 +110,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting clients and quotes <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your one-time cleans and recurring clients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Online Booking for House Cleaning Companies ====================
 {
@@ -148,7 +148,7 @@ SPECS = [
         ("Will it cut down on last-minute cancellations?",
          "It helps. Automatic confirmations and reminders by text and email are the single biggest lever on cancellations and no-shows, and every booking includes them. A client who booked themselves and got a reminder is far more likely to be home and ready than a loosely agreed callback, so your crew is not left with an idle slot."),
         ("How fast can it be live?",
-         "Setup is included, no separate fee. We connect your calendar, set up your visit types, add-ons, and service-area rules, and put the link on your site and Google profile, so it is taking bookings in days. Start with a free audit and we will show you where you are losing bookings today.")],
+         "Setup is included, no separate fee. We connect your calendar, set up your visit types, add-ons, and service-area rules, and put the link on your site and Google profile, so it is taking bookings in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for house cleaning companies"),
         ("solution-booking.html", "How the online booking system works"),
@@ -156,7 +156,7 @@ SPECS = [
         ("crm-for-house-cleaning-companies.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let clients book you <em>while you clean</em>",
-    "cta_sub": "Get a free audit of how many bookings your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Review Software for House Cleaning Companies ====================
 {
@@ -194,7 +194,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          "You find out immediately instead of weeks later, and the software helps you post a calm, professional reply. One measured response to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a spotless record would."),
         ("How long until it is running?",
-         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed cleans, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the cleaners you compete with.")],
+         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed cleans, so requests start going out in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for house cleaning companies"),
         ("solution-reviews.html", "How the review system works"),
@@ -202,21 +202,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished cleans into <em>your next client</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the cleaners you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ==================== Websites & SEO for House Cleaning Companies ====================
+# ==================== Websites for House Cleaning Companies ====================
 {
     "slug": "websites-seo-for-house-cleaning-companies",
     "trade_slug": "house-cleaning-companies", "trade_plural": "house cleaning companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for House Cleaning Companies",
-    "title": "Websites & SEO for House Cleaning Companies | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for House Cleaning Companies",
+    "breadcrumb_leaf": "Websites for House Cleaning Companies",
+    "title": "Websites for House Cleaning Companies | Top Shelf Business Solutions",
+    "og_title": "Websites for House Cleaning Companies",
     "meta_desc": "A house cleaning company website built for SEO ranks for house cleaning near me and move out cleaning in your city, and captures the client directly, not a lead-seller.",
-    "service_schema_name": "Websites & SEO for House Cleaning Companies",
+    "service_schema_name": "Websites for House Cleaning Companies",
     "eyebrow": "For House Cleaning Companies",
-    "h1_html": "Websites &amp; SEO <em>for House Cleaning Companies</em>",
-    "answer_block": "A house cleaning company website built for SEO ranks for the searches homeowners actually make, house cleaning near me, maid service in your city, move out cleaning, shows up in the map pack for the areas you cover, and captures the client the moment they land, so the booking belongs to you instead of a directory renting your own leads back to you.",
+    "h1_html": "Websites <em>for House Cleaning Companies</em>",
+    "answer_block": "A house cleaning company website built for SEO ranks for the searches homeowners actually make, house cleaning near me, maid service in your city, move out cleaning, and captures the client the moment they land, so the booking belongs to you instead of a directory renting your own leads back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own leads</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a cleaner in your town and the top of the page is often a directory or a pay-per-lead app, not a local company. Those sites publish thousands of pages and have years of authority behind them, so a homeowner searching for a cleaner lands there first, fills out a form, and that lead gets sold, sometimes to three cleaning companies at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason a client who should have found you for free gets sold to you, or handed to whoever pays the most that week.</p>'},
@@ -236,18 +236,18 @@ SPECS = [
         ("How is this different from paying for leads on an app?",
          "A pay-per-lead app rents you a lead that it also sells to your competitors, and it stops the day you stop paying. A website you own captures clients who are yours alone and keeps working long after it is built, without a per-lead fee coming out of every job."),
         ("Do I need to rank for every town I serve?",
-         "You rank for the ones that matter most first, ideally the areas where your routes are densest so new clients sit near the ones you already clean. We build pages for your core service areas and highest-intent searches, then expand, rather than spreading thin across a whole metro at once."),
+         "You rank for the ones that matter most first, ideally the areas where your routes are densest so new clients sit near the ones you already clean."),
         ("My current site never brings me bookings. Why would this?",
          "Usually because the current site does not rank for local searches and hides both the phone number and what makes you trustworthy. This one is built to rank for the areas you serve and to turn a visitor into a call or a booked clean, with your reviews and insured, background-checked crews front and center."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for house cleaning companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-house-cleaning-companies.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your clients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for House Cleaning Companies =======================
 # ======================= Automation for House Cleaning Companies =======================
@@ -286,7 +286,7 @@ SPECS = [
         ("Will it help turn one-time cleans into recurring clients?",
          "Yes. After a one-time clean it can automatically ask the client to go weekly or biweekly while the house still feels spotless, and it can nudge cold quotes and paused clients back on a schedule you set, all logged against the client in your CRM."),
         ("How long does setup take?",
-         "Setup is included with no separate fee. We build the reminder, on-the-way, and follow-up sequences around how you already run your day, so it is working within days. Start with a free audit and we will show you what is currently slipping between your quotes, your crews, and your calendar.")],
+         "Setup is included with no separate fee. We build the reminder, on-the-way, and follow-up sequences around how you already run your day, so it is working within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for house cleaning companies"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -294,6 +294,6 @@ SPECS = [
         ("online-booking-for-house-cleaning-companies.html", "How the cleans these remind about get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a crew <em>arrive to a locked door</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your quotes, your crews, and your follow-ups, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

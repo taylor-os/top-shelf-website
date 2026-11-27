@@ -58,7 +58,7 @@ SPECS = [
         ("Is it going to give the caller legal advice or tell them what documents they need?",
          'No, and this matters. It listens, reassures, and captures the facts; it never advises on a matter, never tells a caller whether they need a will or a trust, and never predicts how an estate will be handled or taxed. Every legal question and every decision about taking a matter stays with your attorneys. A caller mostly needs to feel that a real, steady firm is handling it, and a patient voice that gets the details beats a voicemail box.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your time-sensitive rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.')],
+         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your time-sensitive rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for estate planning attorneys"),
         ("solution-ai-phone.html", "How the AI phone and intake system works"),
@@ -66,7 +66,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting a long-put-off decision go to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours consultations your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Estate Planning Attorneys =========================
 {
@@ -112,21 +112,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting good plans and good referrers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your unfinished plans, past clients, and referral relationships are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Estate Planning Attorneys ======================
-# =================== Websites & SEO for Estate Planning Attorneys ===================
+# =================== Websites for Estate Planning Attorneys ===================
 {
     "slug": "websites-seo-for-estate-planning-attorneys",
     "trade_slug": "estate_planning_attorneys", "trade_plural": "estate planning attorneys",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
-    "breadcrumb_leaf": "Websites & SEO for Estate Planning Attorneys",
-    "title": "Websites & SEO for Estate Planning Attorneys | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Estate Planning Attorneys",
+    "breadcrumb_leaf": "Websites for Estate Planning Attorneys",
+    "title": "Websites for Estate Planning Attorneys | Top Shelf Business Solutions",
+    "og_title": "Websites for Estate Planning Attorneys",
     "meta_desc": "An estate planning attorney website built for SEO ranks for living trust and will searches in your city and turns a cautious researcher into a consultation.",
-    "service_schema_name": "Websites & SEO for Estate Planning Attorneys",
+    "service_schema_name": "Websites for Estate Planning Attorneys",
     "eyebrow": "For Estate Planning Attorneys",
-    "h1_html": "Websites &amp; SEO <em>for Estate Planning Attorneys</em>",
+    "h1_html": "Websites <em>for Estate Planning Attorneys</em>",
     "answer_block": "An estate planning attorney website built for SEO ranks for what a planning-minded person actually searches, a living trust in your city, an estate planning attorney near me, what happens without a will, and answers those questions so clearly that a cautious researcher who has been putting it off finally books the consultation, with your firm and no one else.",
     "sections": [
         {"h2_html": "Your site has to make an intimidating subject feel <em>simple and safe</em>",
@@ -151,13 +151,13 @@ SPECS = [
         ("My clients skew older. Can a website really reach them?",
          'Yes, and it is worth building with them in mind. Older clients research online more than firms assume, so a site that is easy to read, simple to navigate, and clear about how to reach you turns them into consultations, while a cramped, clever layout sends them away. Meeting them where they are is exactly the point.'),
         ("How long until it starts ranking?",
-         'The narrow, local, and question-based searches can begin to move within weeks; the broader and more competitive terms take longer and build over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'The narrow, local, and question-based searches can begin to move within weeks; the broader and more competitive terms take longer and build over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for estate planning attorneys"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the estate planning searches in <em>your own city</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your consultations, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

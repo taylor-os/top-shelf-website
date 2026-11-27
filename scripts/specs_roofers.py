@@ -53,7 +53,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing storm leads to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and leads your current setup misses when the phones surge, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ CRM for Roofers ============================
 {
@@ -91,7 +91,7 @@ SPECS = [
         ("What happens to the flood of leads after a storm?",
          'They all land in one place and get worked on a schedule instead of piling up in someone\'s memory. The ones ready now get booked, and the ones waiting get nurtured, so a busy storm week does not turn into a pile of forgotten bids a month later.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your leads and bids, build the follow-up sequences around how you sell, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gap where bids are going cold today.')],
+         'Setup is included with no separate onboarding fee. We bring in your leads and bids, build the follow-up sequences around how you sell, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for roofers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -99,7 +99,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting good bids <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your open estimates and storm leads are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Online Booking for Roofers =======================
 {
@@ -137,7 +137,7 @@ SPECS = [
         ("Will it cut down on no-shows for free inspections?",
          'It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A homeowner who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback.'),
         ("How fast can it be live?",
-         'Setup is included, no separate fee. We connect your calendars, set up your inspection types and rules, and put the link on your site, ads, and Google profile, so it is taking bookings in days. Start with a free audit and we will find the gap where inspections are slipping through today.')],
+         'Setup is included, no separate fee. We connect your calendars, set up your inspection types and rules, and put the link on your site, ads, and Google profile, so it is taking bookings in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for roofers"),
         ("solution-booking.html", "How the online booking system works"),
@@ -145,7 +145,7 @@ SPECS = [
         ("crm-for-roofers.html", "The CRM every inspection is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let homeowners book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many inspections your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Review Software for Roofers ====================
 {
@@ -183,7 +183,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          'You find out immediately instead of weeks later, and the software helps you post a calm, professional response. One thoughtful reply to a critical review, sitting under a wall of genuine positive ones, often reassures a wary homeowner more than a perfect record would.'),
         ("How long until it is running?",
-         'Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the roofers you compete with.')],
+         'Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for roofers"),
         ("solution-reviews.html", "How the review system works"),
@@ -191,20 +191,20 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished roofs into <em>your next job</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the roofers you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ==================== Websites & SEO for Roofers ====================
+# ==================== Websites for Roofers ====================
 {
     "slug": "websites-seo-for-roofers",
     "trade_slug": "roofers", "trade_plural": "roofers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Roofers",
-    "title": "Websites & SEO for Roofers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Roofers",
+    "breadcrumb_leaf": "Websites for Roofers",
+    "title": "Websites for Roofers | Top Shelf Business Solutions",
+    "og_title": "Websites for Roofers",
     "meta_desc": "A roofing company website built for SEO ranks for roof repair near me and storm-season searches, and captures leads directly instead of the lead sellers.",
-    "service_schema_name": "Websites & SEO for Roofers",
+    "service_schema_name": "Websites for Roofers",
     "eyebrow": "For Roofers",
-    "h1_html": "Websites &amp; SEO <em>for Roofers</em>",
+    "h1_html": "Websites <em>for Roofers</em>",
     "answer_block": "A roofing company website built for SEO ranks for the searches homeowners actually type, like roof repair near me and storm damage roof inspection, shows up in local results before the lead-selling directories, and captures a homeowner's details the moment they land, so the traffic and the leads belong to you instead of a service that sells the same lead to several roofers.",
     "sections": [
         {"h2_html": "The lead sellers are not competing with you, they are <em>selling you your own homeowners</em>",
@@ -229,14 +229,14 @@ SPECS = [
         ("I already have a website. Why do I need another?",
          'A lot of roofer sites are online brochures that never rank and never capture a lead. This one is built to rank for the towns and roof types you actually work and to turn visitors into booked inspections in your own CRM, not just to exist.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, and broader terms compound over months. Setup is included with no separate fee, and a free audit will find the gap between where your current site ranks and where the searches actually are.')],
+         'Local, specific searches can start moving within weeks, and broader terms compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for roofers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-roofers.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>roofing in your town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories selling your homeowners to everyone, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== Marketing for Roofers ========================
 # ======================== Automation for Roofers ========================
@@ -275,7 +275,7 @@ SPECS = [
         ("Can it stop double-texting a homeowner?",
          'Yes. It runs against the same CRM database, so it knows where each homeowner is in the process and does not send an estimate follow-up to someone who already booked or a review ask to someone whose job is not done.'),
         ("How long does setup take?",
-         'Setup is included with no separate fee. We build the follow-up, reminder, and review sequences around how you already work, so it is running within days. Start with a free audit and we will find the gap where jobs are slipping between inspection and signature today.')],
+         'Setup is included with no separate fee. We build the follow-up, reminder, and review sequences around how you already work, so it is running within days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for roofers"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -283,6 +283,6 @@ SPECS = [
         ("online-booking-for-roofers.html", "How the inspections these remind about get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a <em>bid go quiet</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your inspections, your bids, and your finished jobs, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

@@ -53,7 +53,7 @@ SPECS = [
         ("Will it sound like a robot to someone booking something this personal?",
          "It answers naturally and calmly, and it is upfront rather than pretending to be a person. Someone booking bodywork mostly wants to know they can get in and that a real practice has them scheduled, and a warm reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your session lengths, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many calls and messages your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your session lengths, your hours, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for massage therapists"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -61,7 +61,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending new clients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and after-hours messages your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ CRM for Massage Therapists ============================
 {
@@ -99,7 +99,7 @@ SPECS = [
         ("Can it track packages, memberships, and gift certificates?",
          "Yes. Prepaid packages, memberships, and gift certificates are tracked against the right client, so you can see who has sessions left to use and gently remind them, and the money people paid ahead actually turns into booked time instead of being forgotten."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back reminders, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where visits are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back reminders, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for massage therapists"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -107,21 +107,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting regulars <em>drift away</em>",
-    "cta_sub": "Get a free audit of how many of your clients are overdue to rebook or have quietly stopped coming in, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Marketing for Massage Therapists =========================
-# ======================= Websites & SEO for Massage Therapists =======================
+# ======================= Websites for Massage Therapists =======================
 {
     "slug": "websites-seo-for-massage-therapists",
     "trade_slug": "massage_therapists", "trade_plural": "massage therapists",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Massage Therapists",
-    "title": "Websites & SEO for Massage Therapists | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Massage Therapists",
+    "breadcrumb_leaf": "Websites for Massage Therapists",
+    "title": "Websites for Massage Therapists | Top Shelf Business Solutions",
+    "og_title": "Websites for Massage Therapists",
     "meta_desc": "A massage therapy website built for SEO ranks for deep tissue and massage-near-me searches, shows your modalities, and lets a client book in one tap.",
-    "service_schema_name": "Websites & SEO for Massage Therapists",
+    "service_schema_name": "Websites for Massage Therapists",
     "eyebrow": "For Massage Therapists",
-    "h1_html": "Websites &amp; SEO <em>for Massage Therapists</em>",
+    "h1_html": "Websites <em>for Massage Therapists</em>",
     "answer_block": "A massage therapy website built for SEO shows up for what a client actually types, massage near me, deep tissue, prenatal or sports massage in your area, leads with your modalities and calm space, and takes the booking in a single tap, so the client is yours rather than a booking app's cut of your own sessions.",
     "sections": [
         {"h2_html": "A new client trusts your website before they trust <em>your hands</em>",
@@ -142,17 +142,17 @@ SPECS = [
         ("How is this different from paying a booking marketplace?",
          "A marketplace shows a new client ten practices at once and takes a cut of a booking that could have been yours directly, and it stops the day you stop paying. A website you own captures bookings that are yours alone, with no cut taken, and keeps working long after it is built."),
         ("Do I need a page for every modality and neighborhood?",
-         "You start with the ones that matter most: your top sessions and your core areas. We build those pages first, around what people actually search and what you most want to book, then expand, rather than spreading thin across everything at once."),
+         "You start with the ones that matter most: your top sessions and your core areas."),
         ("Most of my clients come from word of mouth. Does a website even help?",
          "Yes, because even a referred client looks you up before they book. Word of mouth gets your name in front of them, but they check your site, your modalities, and your reviews before they trust you with something this personal, and that is where a fast, calm, easy-to-book page turns a referral into a scheduled session."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for massage therapists"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search for <em>massage in your town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and booking apps taking your clients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

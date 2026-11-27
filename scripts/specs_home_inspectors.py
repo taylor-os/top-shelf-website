@@ -47,7 +47,7 @@ SPECS = [
         ("Is it going to sound like a robot to an agent I want to keep?",
          "It answers naturally and professionally, and it is upfront instead of pretending to be a person. An agent mostly needs to know the booking is handled and the timeline works, and a steady voice that gets the inspection scheduled beats a voicemail every time. You can hear it handle a live call before you decide."),
         ("How fast can it be answering?",
-         "Setup is included with no separate onboarding fee. We configure your scheduling questions, your calendar, and your agent rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your scheduling questions, your calendar, and your agent rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for home inspectors"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -55,7 +55,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing inspections to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in your inbound calls: how many buyer and agent bookings roll to voicemail while you are inside a house, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ CRM for Home Inspectors ============================
 {
@@ -93,7 +93,7 @@ SPECS = [
         ("How is this different from just keeping agents in my phone?",
          "A phone full of contacts does not follow up, does not tell you which agent has gone cold, and does not remember which buyer is due for a warranty inspection. The CRM does all of that on a schedule, so the referral work actually shows up instead of depending on you to remember it between inspections."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your agents and clients, build your follow-up sequences, and connect it to your calls and scheduling, so it is working in days. Start with a free audit and we will show you where referrals and quotes are slipping today.")],
+         "Setup is included with no separate onboarding fee. We bring in your agents and clients, build your follow-up sequences, and connect it to your calls and scheduling, so it is working in days.")],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for home inspectors"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -101,21 +101,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting agent relationships <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap in your follow-up: how many agents and past clients are drifting away unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Marketing for Home Inspectors =========================
-# ======================= Websites & SEO for Home Inspectors =======================
+# ======================= Websites for Home Inspectors =======================
 {
     "slug": "websites-seo-for-home-inspectors",
     "trade_slug": "home_inspectors", "trade_plural": "home inspectors",
     "hub_name": "Real Estate", "hub_slug": "industry-real-estate.html",
-    "breadcrumb_leaf": "Websites & SEO for Home Inspectors",
-    "title": "Websites & SEO for Home Inspectors | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Home Inspectors",
+    "breadcrumb_leaf": "Websites for Home Inspectors",
+    "title": "Websites for Home Inspectors | Top Shelf Business Solutions",
+    "og_title": "Websites for Home Inspectors",
     "meta_desc": "A home inspector website built for SEO ranks for home inspector near me and your city, and captures the buyer or agent directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Home Inspectors",
+    "service_schema_name": "Websites for Home Inspectors",
     "eyebrow": "For Home Inspectors",
-    "h1_html": "Websites &amp; SEO <em>for Home Inspectors</em>",
+    "h1_html": "Websites <em>for Home Inspectors</em>",
     "answer_block": "A home inspector website built for SEO ranks for what a buyer and an agent type when they need an inspection, home inspector near me, radon or mold or sewer scope, your city plus inspector, and captures the caller the moment they land, so the booking is yours instead of a directory's.",
     "sections": [
         {"h2_html": "A buyer or agent judges your inspection business by your <em>website in seconds</em>",
@@ -140,13 +140,13 @@ SPECS = [
         ("Do I need a page for every type of inspection I offer?",
          "You start with the ones that matter most, your core inspection and the specialties buyers search for like radon, mold, or a sewer scope, then expand. A focused set of strong service and location pages ranks better than one thin page trying to cover everything."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for home inspectors"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own market</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the directories taking your inspection calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

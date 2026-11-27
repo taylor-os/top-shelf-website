@@ -56,7 +56,7 @@ SPECS = [
         ("Will it sound like a robot to a nervous beginner?",
          "It sounds natural and welcoming, and it never pretends to be a human when it is not. Someone working up the nerve for their first class mostly wants to know they can get in, which class to start with, and that a real studio has them booked, and a friendly reply beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your class schedule, your intro offer, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many inquiries your current phone setup is quietly letting slip.")],
+         "Setup is included with no separate onboarding fee. We configure your class schedule, your intro offer, your hours, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for yoga studios"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -64,7 +64,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new students while you <em>teach</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and DMs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Yoga Studios ================================
 {
@@ -102,7 +102,7 @@ SPECS = [
         ("Can it track class packs and remind students to use them?",
          "Yes. A class pack running low or close to expiring triggers a reminder, so the classes a student prepaid for actually get used and the pack gets repurchased instead of quietly written off. Memberships and gift cards are tracked against the right student the same way."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your students, build your intro-conversion, onboarding, and win-back sequences, and connect it to your calls and schedule, so it is working in days. Start with a free audit and we will show you where students are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your students, build your intro-conversion, onboarding, and win-back sequences, and connect it to your calls and schedule, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for yoga studios"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -110,21 +110,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn intro offers into <em>memberships that stay</em>",
-    "cta_sub": "Get a free audit of how many of your intro offers never converted and how many members have quietly stopped showing up, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== Marketing for Yoga Studios ==============================
-# ============================ Websites & SEO for Yoga Studios ============================
+# ============================ Websites for Yoga Studios ============================
 {
     "slug": "websites-seo-for-yoga-studios",
     "trade_slug": "yoga_studios", "trade_plural": "yoga studios",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Yoga Studios",
-    "title": "Websites & SEO for Yoga Studios | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Yoga Studios",
+    "breadcrumb_leaf": "Websites for Yoga Studios",
+    "title": "Websites for Yoga Studios | Top Shelf Business Solutions",
+    "og_title": "Websites for Yoga Studios",
     "meta_desc": "A yoga studio website built for SEO ranks for beginner yoga and yoga-near-me, shows the class schedule and intro offer, and books a first class in one tap.",
-    "service_schema_name": "Websites & SEO for Yoga Studios",
+    "service_schema_name": "Websites for Yoga Studios",
     "eyebrow": "For Yoga Studios",
-    "h1_html": "Websites &amp; SEO <em>for Yoga Studios</em>",
+    "h1_html": "Websites <em>for Yoga Studios</em>",
     "answer_block": "A yoga studio website built for SEO shows up for what a new student actually types, yoga near me, beginner yoga, hot or prenatal yoga in your area, puts the class schedule and intro offer front and center, and books a first class in one tap, so the student is yours, not a class-booking app's cut.",
     "sections": [
         {"h2_html": "A new student decides if your studio is <em>their place</em> before they walk in",
@@ -145,17 +145,17 @@ SPECS = [
         ("How is this different from paying a class-booking marketplace?",
          "A marketplace shows a newcomer ten studios at once and takes a cut of a sign-up that could have been yours directly, and it stops the day you stop paying. A website you own captures students that are yours alone, with no cut taken, and keeps working long after it is built."),
         ("Do I need a page for every style and neighborhood?",
-         "You start with the ones that matter most: your top styles or classes and your core areas. We build those pages first, around what people actually search and what you most want to fill, then expand, rather than spreading thin across everything at once."),
+         "You start with the ones that matter most: your top styles or classes and your core areas."),
         ("Most of my new students come from Instagram. Does a website even help?",
          "Yes, because social is where they first notice you, not where they finally decide. A clip catches the eye, but a newcomer checks your site, your schedule, and your reviews before they commit to a first class, and that is where a fast, welcoming, schedule-forward page with easy intro-offer booking turns a curious scroll into a booked mat."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms build more slowly and compound over the months that follow. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms build more slowly and compound over the months that follow. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for yoga studios"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own 'yoga near me' in <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and class-booking apps taking your students, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

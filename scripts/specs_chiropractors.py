@@ -46,7 +46,7 @@ SPECS = [
         ("Will it actually book the visit, or just take a message?",
          'It books. The new-patient exam lands on your real availability, and the patient gets a confirmation and reminder so the first visit shows. You get the details right away, and it flags anything unusual for your team to handle.'),
         ("How fast can it be answering?",
-         'Setup is included with no separate onboarding fee. We configure your intake questions, your schedule, and your insurance answers for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many new-patient calls your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your intake questions, your schedule, and your insurance answers for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for chiropractors"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new patients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many new-patient calls your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== CRM for Chiropractors ==============================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from the software I already chart in?",
          'Charting software records the visit. It does not reach back out to a patient who stopped coming, remind you who is due, or tell you which lead is going cold. The CRM does all of that on a schedule, so the recurring visits actually show up instead of depending on anyone remembering.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your patients, build your recall and follow-up sequences, and connect it to your calls and schedule, so it is working in days. Start with a free audit and we will show you where visits are slipping away today.')],
+         'Setup is included with no separate onboarding fee. We bring in your patients, build your recall and follow-up sequences, and connect it to your calls and schedule, so it is working in days.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for chiropractors"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,22 +100,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting patients and leads <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your past patients and unbooked leads are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ Marketing for Chiropractors ============================
-# ========================= Websites & SEO for Chiropractors =========================
+# ========================= Websites for Chiropractors =========================
 {
     "slug": "websites-seo-for-chiropractors",
     "trade_slug": "chiropractors", "trade_plural": "chiropractors",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Chiropractors",
-    "title": "Websites & SEO for Chiropractors | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Chiropractors",
+    "breadcrumb_leaf": "Websites for Chiropractors",
+    "title": "Websites for Chiropractors | Top Shelf Business Solutions",
+    "og_title": "Websites for Chiropractors",
     "meta_desc": "A chiropractor website built for SEO ranks for chiropractor near me and back pain in your city, then books the new patient in one tap, not a directory.",
-    "service_schema_name": "Websites & SEO for Chiropractors",
+    "service_schema_name": "Websites for Chiropractors",
     "eyebrow": "For Chiropractors",
-    "h1_html": "Websites &amp; SEO <em>for Chiropractors</em>",
-    "answer_block": "A chiropractor website built for SEO ranks for what a person in pain types, chiropractor near me, back pain, sciatica, your city, shows up in the map pack for the towns you serve, and lets them book a new-patient visit in one tap, so the patient is yours instead of a directory renting your calls back to you.",
+    "h1_html": "Websites <em>for Chiropractors</em>",
+    "answer_block": "A chiropractor website built for SEO ranks for what a person in pain types, chiropractor near me, back pain, sciatica, your city, and lets them book a new-patient visit in one tap, so the patient is yours instead of a directory renting your calls back to you.",
     "sections": [
         {"h2_html": "The directories are renting you back <em>your own patients</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a chiropractor in your town and the top of the page is often a big health directory or a booking middleman, not the local office. Those sites publish thousands of pages and have years of authority behind them, so when a person in pain searches, they land there first, pick from a list that may put the offices paying the most on top, and book through a platform that treats your own patient as a lead it owns. Your site not ranking is not a vanity problem. It is the reason a new patient who should have found you directly gets routed through a directory that lines your competitors up beside you and takes a cut of a relationship that could have lasted years.</p>'},
@@ -139,13 +139,13 @@ SPECS = [
         ("Most of my new patients are in acute pain. Does a website even help?",
          'Especially then. A person in pain searches on their phone in the moment, and the chiropractor who shows up with a fast page, real reviews, and one-tap booking gets them. A site built for that moment is exactly what captures the new patient.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for chiropractors"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories taking your new patients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

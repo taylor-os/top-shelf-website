@@ -54,7 +54,7 @@ SPECS = [
         ("Can it tell a patient whether their glasses or contacts are ready?",
          "Yes, the routine status calls that tie up the optical are exactly what it takes off your team. It can confirm an order is in or still being worked on the way you tell it to, and hand anything unusual to a person, so nobody has to leave the counter to answer the phone."),
         ("How fast can it be answering?",
-         "Setup is included with no separate onboarding fee. We configure your questions, your vision-plan answers, and your scheduling rules for you, so it is picking up in days, not weeks. Start with a free audit and we will show you how many calls your front desk is missing while it is on the optical floor.")],
+         "Setup is included with no separate onboarding fee. We configure your questions, your vision-plan answers, and your scheduling rules for you, so it is picking up in days, not weeks.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for optometrists"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -62,7 +62,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending exams and eyewear to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in your new-patient calls: how many roll to voicemail and book elsewhere while your front desk is on the optical floor, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Optometrists ================================
 {
@@ -100,7 +100,7 @@ SPECS = [
         ("Is patient data kept private?",
          "Yes. Patient information is handled with the care a medical office is held to and stays inside your systems, and it is always yours to export. You control what the CRM stores and what each message says."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your patients, build your recall and reorder sequences, and connect it to your phones and calendar, so it is working in days. Start with a free audit and we will show you where recall is slipping today.")],
+         "Setup is included with no separate onboarding fee. We bring in your patients, build your recall and reorder sequences, and connect it to your phones and calendar, so it is working in days.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for optometrists"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -108,21 +108,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting recall and reorders <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap in your recall and reactivation: how many patients overdue for an exam or a contact-lens reorder are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== Marketing for Optometrists ==============================
-# ========================= Websites & SEO for Optometrists =========================
+# ========================= Websites for Optometrists =========================
 {
     "slug": "websites-seo-for-optometrists",
     "trade_slug": "optometrists", "trade_plural": "optometrists",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Optometrists",
-    "title": "Websites & SEO for Optometrists | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Optometrists",
+    "breadcrumb_leaf": "Websites for Optometrists",
+    "title": "Websites for Optometrists | Top Shelf Business Solutions",
+    "og_title": "Websites for Optometrists",
     "meta_desc": "An optometry website built for SEO ranks for eye exam near me and optometrist near me, showcases your frames, and books the exam instead of a directory.",
-    "service_schema_name": "Websites & SEO for Optometrists",
+    "service_schema_name": "Websites for Optometrists",
     "eyebrow": "For Optometrists",
-    "h1_html": "Websites &amp; SEO <em>for Optometrists</em>",
+    "h1_html": "Websites <em>for Optometrists</em>",
     "answer_block": "An optometry website built for SEO ranks for what a patient searches, eye exam near me, optometrist near me, and the frames and contacts you sell, showcases your optical, and books the exam the moment they land, so the patient is yours instead of a directory renting your own patients back to you.",
     "sections": [
         {"h2_html": "A patient trusting you with their eyes judges your practice by your <em>website in seconds</em>",
@@ -147,13 +147,13 @@ SPECS = [
         ("Do I need a page for every service and brand?",
          "You start with the ones that matter most, the exam searches and the eyewear you want more of, then expand. A focused set of strong exam, optical, and location pages ranks better than one thin page trying to cover everything at once."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for optometrists"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the directories taking your new-patient searches, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

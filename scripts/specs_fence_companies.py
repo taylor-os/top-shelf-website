@@ -59,7 +59,7 @@ SPECS = [
         ("Can it answer the HOA and property-line questions homeowners ask?",
          "It takes down what the homeowner knows, their HOA rules, where they think the line runs, whether they have a survey, so nothing is lost, and it is upfront that you will confirm the details at the measure. A homeowner gets a real, helpful answer instead of a voicemail, and your estimator arrives already knowing what to check."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your lead rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for fence companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -67,7 +67,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing fence jobs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many estimate calls your current setup is letting slip through the gap, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Fence Companies =========================
 {
@@ -105,7 +105,7 @@ SPECS = [
         ("How is this different from just keeping notes in my phone?",
          "A phone full of contacts does not follow up, does not remember which yard is due for a repair, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat work and the quotes you already sent actually turn into booked jobs."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gap where jobs are going cold today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for fence companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -113,21 +113,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Fence Companies =======================
-# ==================== Websites & SEO for Fence Companies ====================
+# ==================== Websites for Fence Companies ====================
 {
     "slug": "websites-seo-for-fence-companies",
     "trade_slug": "fence_companies", "trade_plural": "fence companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Fence Companies",
-    "title": "Websites & SEO for Fence Companies | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Fence Companies",
+    "breadcrumb_leaf": "Websites for Fence Companies",
+    "title": "Websites for Fence Companies | Top Shelf Business Solutions",
+    "og_title": "Websites for Fence Companies",
     "meta_desc": "A fence company website built for SEO ranks for fence company near me and your city, shows a gallery of clean work, and captures the estimate request directly.",
-    "service_schema_name": "Websites & SEO for Fence Companies",
+    "service_schema_name": "Websites for Fence Companies",
     "eyebrow": "For Fence Companies",
-    "h1_html": "Websites &amp; SEO <em>for Fence Companies</em>",
+    "h1_html": "Websites <em>for Fence Companies</em>",
     "answer_block": "A fence company website built for SEO ranks for the searches a homeowner makes when planning a fence, fence company near me, privacy fence, fence installation in your city, shows the gallery and reviews that let them picture the work in their own yard, and captures the estimate request straight to you instead of a lead-seller.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -150,15 +150,15 @@ SPECS = [
         ("Do I really need a photo gallery on the site?",
          "For a fence company, yes. A homeowner is buying a look they will live behind for years, and photos of your finished fences in the styles you build, sorted so they can find the one they are imagining, are often what turn a visitor into an estimate request."),
         ("Do I need to rank for every town I serve?",
-         "You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent fence searches, then expand, rather than spreading thin across a whole metro at once."),
+         "You rank for the ones that matter most first."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for fence companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your estimates, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

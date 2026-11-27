@@ -165,7 +165,7 @@ def faq(p):
 
 def final_cta(p, d):
     h2 = p.get("cta_h2", f"Get a free audit of your {esc(d['trade_plural'])[:-1] if d['trade_plural'].endswith('s') else esc(d['trade_plural'])} business")
-    sub = p.get("cta_sub", "We will show you exactly where calls, leads, and jobs are slipping away, whether you work with us or not. No credit card, never a call center.")
+    sub = p.get("cta_sub", "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.")
     return f'''<section class="section rule-top">
   <div class="container" style="text-align:center">
     <h2 class="display display-lg reveal">{h2}</h2>
@@ -185,8 +185,8 @@ def jsonld(p, d, slug):
         {"@type": "ListItem", "position": 2, "name": d["hub_name"], "item": f"{SITE}/{d['hub_slug']}"},
         {"@type": "ListItem", "position": 3, "name": h1, "item": f"{SITE}/{slug}.html"}]}
     service = {"@context": "https://schema.org", "@type": "Service",
-               "name": p.get("service_schema_name", f"Business software and marketing for {d['trade_plural']}"),
-               "serviceType": p.get("service_schema_name", f"Business software and marketing for {d['trade_plural']}"),
+               "name": p.get("service_schema_name", f"Business software and websites for {d['trade_plural']}"),
+               "serviceType": p.get("service_schema_name", f"Business software and websites for {d['trade_plural']}"),
                "description": p["meta_desc"],
                "provider": {"@type": "ProfessionalService", "@id": f"{SITE}/#business", "name": "Top Shelf Business Solutions",
                             "telephone": "+1-469-833-3033", "email": "contact@topshelfsolutions.io", "url": f"{SITE}/"},

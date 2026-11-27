@@ -46,7 +46,7 @@ SPECS = [
         ("Will it sound like a robot to a nervous first-time client?",
          'It answers naturally and warmly, and it is upfront rather than pretending to be a person. Someone anxious about a first treatment mostly needs to feel that a real, professional spa has them, and a calm reply that answers the question beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your treatment menu, your consult types, your calendar, and how it greets a caller, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your treatment menu, your consult types, your calendar, and how it greets a caller, so it is answering in days, not weeks.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for med spas"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing consults to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and after-hours inquiries your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Med Spas ================================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from the booking tool I already use?",
          'A booking calendar records appointments. It does not watch treatment cycles, follow up on a client who drifted off, flag a package that is going unused, or reactivate someone you have not seen in a year. The CRM does all of that on a schedule, so the repeat revenue actually shows up instead of depending on memory.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your clients, build your reminder and reactivation sequences around your real treatment cycles, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where rebookings are slipping today.')],
+         'Setup is included with no separate onboarding fee. We bring in your clients, build your reminder and reactivation sequences around your real treatment cycles, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for med spas"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,21 +100,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting clients and cycles <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your past clients and treatment cycles are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== Marketing for Med Spas ==============================
-# ========================= Websites & SEO for Med Spas =========================
+# ========================= Websites for Med Spas =========================
 {
     "slug": "websites-seo-for-med-spas",
     "trade_slug": "med_spas", "trade_plural": "med spas",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Med Spas",
-    "title": "Websites & SEO for Med Spas | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Med Spas",
+    "breadcrumb_leaf": "Websites for Med Spas",
+    "title": "Websites for Med Spas | Top Shelf Business Solutions",
+    "og_title": "Websites for Med Spas",
     "meta_desc": "A med spa website built for SEO ranks for botox and med spa near me, looks premium enough to trust with your face, and books the consult before they leave.",
-    "service_schema_name": "Websites & SEO for Med Spas",
+    "service_schema_name": "Websites for Med Spas",
     "eyebrow": "For Med Spas",
-    "h1_html": "Websites &amp; SEO <em>for Med Spas</em>",
+    "h1_html": "Websites <em>for Med Spas</em>",
     "answer_block": "A med spa website built for SEO ranks for what a new client searches, botox near me, med spa and your city, laser hair removal, looks polished enough that someone trusts you with their face, and makes booking a consult effortless the moment they land, so the client is yours instead of a booking marketplace taking a cut.",
     "sections": [
         {"h2_html": "They are trusting you with their face, and your <em>site is the proof</em>",
@@ -139,13 +139,13 @@ SPECS = [
         ("Can clients book right from the site?",
          'Yes. The site puts a clear way to book a consult front and center, so a ready client locks in a time in a tap instead of leaving a voicemail she second-guesses by morning, and every booking lands in your CRM against the right client.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for med spas"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the marketplaces and directories taking your clients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

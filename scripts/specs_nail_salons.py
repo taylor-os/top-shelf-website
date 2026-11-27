@@ -55,7 +55,7 @@ SPECS = [
         ("Will it sound like a robot to someone calling to book?",
          "It answers naturally and warmly, and it is upfront rather than pretending to be a person. A caller mostly wants to know she can get in and that a real salon has her booked, and a friendly reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your techs, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many calls and messages your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your techs, your hours, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for nail salons"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -63,7 +63,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing booked chairs to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many booking calls, texts, and same-day requests your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Nail Salons ================================
 {
@@ -101,7 +101,7 @@ SPECS = [
         ("Can it handle loyalty punch cards, packages, no-shows, and cancellations?",
          "Yes. Loyalty rewards and prepaid packages are tracked against the right client, automatic reminders cut no-shows, and when someone cancels at the last minute it can text a waitlist to fill the opening before that chair sits empty."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back reminders, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where visits are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your clients, build your rebooking and win-back reminders, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for nail salons"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -109,21 +109,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting regulars <em>fall off your cadence</em>",
-    "cta_sub": "Get a free audit of how many of your clients are overdue to rebook or have quietly stopped coming in, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= Marketing for Nail Salons =============================
-# ========================= Websites & SEO for Nail Salons =========================
+# ========================= Websites for Nail Salons =========================
 {
     "slug": "websites-seo-for-nail-salons",
     "trade_slug": "nail_salons", "trade_plural": "nail salons",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Nail Salons",
-    "title": "Websites & SEO for Nail Salons | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Nail Salons",
+    "breadcrumb_leaf": "Websites for Nail Salons",
+    "title": "Websites for Nail Salons | Top Shelf Business Solutions",
+    "og_title": "Websites for Nail Salons",
     "meta_desc": "A nail salon website built for SEO doubles as a nail-art portfolio, ranks for gel manicure and pedicure near me, and lets clients book or walk in same day.",
-    "service_schema_name": "Websites & SEO for Nail Salons",
+    "service_schema_name": "Websites for Nail Salons",
     "eyebrow": "For Nail Salons",
-    "h1_html": "Websites &amp; SEO <em>for Nail Salons</em>",
+    "h1_html": "Websites <em>for Nail Salons</em>",
     "answer_block": "A nail salon website built for SEO works as a nail-art portfolio first, a fast, photo-forward gallery of your real sets that ranks for gel manicure, dip powder, and pedicure near me, surfaces your walk-in openings, and takes the booking directly, so the client and the booking are yours instead of a marketplace's cut.",
     "sections": [
         {"h2_html": "Your website is a <em>nail-art portfolio</em> first",
@@ -155,6 +155,6 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Make your work the reason she <em>books you</em>",
-    "cta_sub": "Get a free audit of how your website, your photos, and your local search stack up against the salons and booking apps near you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

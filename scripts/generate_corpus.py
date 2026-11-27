@@ -141,7 +141,7 @@ def build_aside(spec, toc):
   </div>
   <div class="aside-card aside-cta reveal">
     <h3>Try the CRM</h3>
-    <p>See what your current setup is missing, whether you work with us or not.</p>
+    <p>Try the CRM and see how it answers calls, books jobs, and follows up on every lead.</p>
     <a href="contact.html" class="btn btn-gold btn-sm">Try the CRM <span class="arr">&rarr;</span></a>
     <a href="tel:+14698333033" class="btn btn-line btn-sm">Call (469) 833-3033</a>
     <a href="booking.html" class="btn btn-line btn-sm">Book a 15-minute call</a>
@@ -275,7 +275,7 @@ SPECS = [{
         ("Is this going to sound like a robot to my clients?",
          'It answers naturally and professionally, and it is upfront rather than pretending to be a person. Most callers care about one thing, that someone picked up and is handling their request, which beats a voicemail box every time. You can hear how it handles a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included and there is no separate onboarding fee. We configure the questions, your calendar, and the buyer and seller flows for you, so it is answering your calls in days, not weeks. Start with a free audit and we will show you exactly what your current setup is missing.')],
+         'Setup is included and there is no separate onboarding fee. We configure the questions, your calendar, and the buyer and seller flows for you, so it is answering your calls in days, not weeks.')],
     "related": [
         ("industry-real-estate.html", "Everything Top Shelf does for real estate agents"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -283,7 +283,7 @@ SPECS = [{
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing clients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and leads your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 }]
 
 # additional per-trade specs: corpus_specs.py (realtor) + any scripts/specs_*.py (trade batches)

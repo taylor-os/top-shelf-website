@@ -46,7 +46,7 @@ SPECS = [
         ("Is patient information handled carefully?",
          'Yes. It is built to treat what a caller shares with the discretion a dental office is held to, collecting only what it needs to book the visit and keeping it inside your systems. You control what it asks and what it stores.'),
         ("How fast can it be answering?",
-         'Setup is included with no separate onboarding fee. We configure your questions, your insurance answers, and your scheduling rules for you, so it is picking up in days, not weeks. Start with a free audit and we will show you how many calls your front desk is missing right now.')],
+         'Setup is included with no separate onboarding fee. We configure your questions, your insurance answers, and your scheduling rules for you, so it is picking up in days, not weeks.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for dentists"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending new patients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit that finds the gap in your new-patient calls: how many roll to voicemail and book elsewhere while your front desk is chairside, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Dentists ================================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("Is patient data kept private?",
          'Yes. Patient information is handled with the care a dental office is held to and stays inside your systems, and it is always yours to export. You control what the CRM stores and what each message says.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your patients, build your recall and treatment-follow-up sequences, and connect it to your phones and calendar, so it is working in days. Start with a free audit and we will show you where production is slipping today.')],
+         'Setup is included with no separate onboarding fee. We bring in your patients, build your recall and treatment-follow-up sequences, and connect it to your phones and calendar, so it is working in days.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for dentists"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,21 +100,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting recall and treatment <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap in your recall and unscheduled treatment: how many patients and accepted cases are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =========================== Marketing for Dentists ===========================
-# ========================= Websites & SEO for Dentists =========================
+# ========================= Websites for Dentists =========================
 {
     "slug": "websites-seo-for-dentists",
     "trade_slug": "dentists", "trade_plural": "dentists",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Dentists",
-    "title": "Websites & SEO for Dentists | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Dentists",
+    "breadcrumb_leaf": "Websites for Dentists",
+    "title": "Websites for Dentists | Top Shelf Business Solutions",
+    "og_title": "Websites for Dentists",
     "meta_desc": "A dental website built for SEO ranks for dentist near me and the services you offer, and turns a new patient in pain into a booking instead of a directory.",
-    "service_schema_name": "Websites & SEO for Dentists",
+    "service_schema_name": "Websites for Dentists",
     "eyebrow": "For Dentists",
-    "h1_html": "Websites &amp; SEO <em>for Dentists</em>",
+    "h1_html": "Websites <em>for Dentists</em>",
     "answer_block": "A dental website built for SEO ranks for what a new patient types when they need care, dentist near me, emergency dentist, and the treatments you offer, shows up on the map for the towns you cover, and captures the patient the moment they land, so the booking is yours, not a directory's.",
     "sections": [
         {"h2_html": "A patient in pain judges your practice by your <em>website in seconds</em>",
@@ -139,13 +139,13 @@ SPECS = [
         ("Do I need a page for every treatment I offer?",
          'You start with the ones that matter most, the emergencies and the treatments you want to grow, then expand. A focused set of strong service and location pages ranks better than one thin page trying to cover everything at once.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for dentists"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-dentists.html", "Where every new-patient lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the practices taking your new-patient searches, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

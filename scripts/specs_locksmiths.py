@@ -46,7 +46,7 @@ SPECS = [
         ("Is it going to sound like a robot to a stranded caller?",
          'It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone locked out in a parking lot at night mostly needs to know a real locksmith is on the way and roughly when, and a steady voice that gives an ETA beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your triage questions, your calendar, and your emergency rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for locksmiths"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing lockouts to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== CRM for Locksmiths ==============================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of contacts does not follow up, does not remember which account is due for a turnover rekey, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat work actually shows up instead of depending on you to remember.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers and accounts, build your follow-up sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers and accounts, build your follow-up sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for locksmiths"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,22 +100,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and accounts <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and repeat accounts are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ Marketing for Locksmiths ============================
-# ========================= Websites & SEO for Locksmiths =========================
+# ========================= Websites for Locksmiths =========================
 {
     "slug": "websites-seo-for-locksmiths",
     "trade_slug": "locksmiths", "trade_plural": "locksmiths",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Locksmiths",
-    "title": "Websites & SEO for Locksmiths | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Locksmiths",
+    "breadcrumb_leaf": "Websites for Locksmiths",
+    "title": "Websites for Locksmiths | Top Shelf Business Solutions",
+    "og_title": "Websites for Locksmiths",
     "meta_desc": "A locksmith website built for SEO ranks for locksmith near me and car lockout, and captures the caller instead of a national dispatcher or lead-seller.",
-    "service_schema_name": "Websites & SEO for Locksmiths",
+    "service_schema_name": "Websites for Locksmiths",
     "eyebrow": "For Locksmiths",
-    "h1_html": "Websites &amp; SEO <em>for Locksmiths</em>",
-    "answer_block": "A locksmith website built for SEO ranks for the searches a stranded person types, locksmith near me, car lockout, emergency locksmith, rekey, shows up in the map pack for the towns you cover, and captures the caller directly, so the job is yours instead of a national dispatcher or a lead-seller renting back your own calls.",
+    "h1_html": "Websites <em>for Locksmiths</em>",
+    "answer_block": "A locksmith website built for SEO ranks for the searches a stranded person types, locksmith near me, car lockout, emergency locksmith, rekey, and captures the caller directly, so the job is yours instead of a national dispatcher or a lead-seller renting back your own calls.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a locksmith in your town and the top of the page is often a national call center, a directory, or a pay-per-lead service, not the local shop. Those operations publish thousands of pages and carry years of authority, so when someone searches, they land there first, call a number, and that lead gets sold, sometimes to three locksmiths at once, sometimes back to you for a fee out of your own margin, and sometimes dispatched to whatever unvetted tech is nearest, which is where the price-gouging horror stories come from. Your site not ranking is not a vanity problem. It is the reason a call you should have gotten for free gets sold to you, or handed to a stranger working under a name that is not yours.</p>'},
@@ -135,17 +135,17 @@ SPECS = [
         ("How is this different from paying for leads?",
          'A pay-per-lead service rents you a call that it also sells to your competitors or dispatches to a stranger, and it stops the day you stop paying. A website you own captures calls that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every job.'),
         ("Do I need to rank for every town I serve?",
-         'You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent searches, then expand, rather than spreading thin across a whole metro at once.'),
+         'You rank for the ones that matter most first.'),
         ("Most of my calls are emergency lockouts. Does a website even help?",
          'Especially then. A lockout search happens on a phone the moment someone is stranded, and the locksmith who shows up in the map pack with a tap-to-call button, a real address, and honest reviews gets the call. A site built for that moment is exactly what captures it, and it wins the commercial research jobs too.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for locksmiths"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and call centers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

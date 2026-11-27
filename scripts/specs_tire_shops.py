@@ -55,7 +55,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          "It answers naturally and is upfront instead of pretending to be a person. A driver who just wants to know you have their size and can get them in today cares that the call was answered and the quote was straight, not that a receptionist picked up. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We load your sizes, your pricing rules, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+         "Setup is included with no separate onboarding fee. We load your sizes, your pricing rules, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for tire shops"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -63,7 +63,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending tire buyers to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many price-and-availability calls and same-day flats your current phone setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ CRM for Tire Shops ============================
 {
@@ -101,7 +101,7 @@ SPECS = [
         ("Does it handle fleet accounts?",
          "Yes. You can group a fleet account and its vehicles together, keep the sizes and service history for each truck or van in one place, and reach the account on a schedule instead of waiting for a bad tire to bring one in. Those repeat, high-volume customers are exactly the ones worth managing this way."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where sales are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for tire shops"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -109,21 +109,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes, past customers, and fleet accounts are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Marketing for Tire Shops =========================
-# ====================== Websites & SEO for Tire Shops ======================
+# ====================== Websites for Tire Shops ======================
 {
     "slug": "websites-seo-for-tire-shops",
     "trade_slug": "tire_shops", "trade_plural": "tire shops",
     "hub_name": "Auto", "hub_slug": "industry-auto.html",
-    "breadcrumb_leaf": "Websites & SEO for Tire Shops",
-    "title": "Websites & SEO for Tire Shops | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Tire Shops",
+    "breadcrumb_leaf": "Websites for Tire Shops",
+    "title": "Websites for Tire Shops | Top Shelf Business Solutions",
+    "og_title": "Websites for Tire Shops",
     "meta_desc": "A tire shop website built for SEO ranks for tires near me and your city, shows the brands you carry, and books the appointment instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Tire Shops",
+    "service_schema_name": "Websites for Tire Shops",
     "eyebrow": "For Tire Shops",
-    "h1_html": "Websites &amp; SEO <em>for Tire Shops</em>",
+    "h1_html": "Websites <em>for Tire Shops</em>",
     "answer_block": "A tire shop website built for SEO ranks for what a driver searches when they need tires, tires near me and cheap tires in your city, shows the brands and sizes you carry, and lets them get a price or book a slot, so the sale comes to you instead of a directory renting your own calls back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -148,13 +148,13 @@ SPECS = [
         ("Do people really book tires online?",
          "Plenty do, especially for a planned set rather than a roadside flat. When someone can see the brands you carry and pick a mounting slot without a phone call, many will, and the ones with a same-day flat still get a tap-to-call button at the top."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for tire shops"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and tire portals taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

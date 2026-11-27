@@ -43,7 +43,7 @@ SPECS = [
         ("Is this going to sound like a robot to my customers?",
          "It answers naturally and professionally, and it is upfront rather than pretending to be a person. When someone has no power, what they care about is that a real process is handling their call instead of a voicemail box. You can hear how it takes a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included and there is no separate onboarding fee. We configure the triage questions, your calendar, and the emergency-versus-routine flows for you, so it is answering your calls in days, not weeks. Start with a free audit and we will show you exactly what your current setup is missing.")],
+         "Setup is included and there is no separate onboarding fee. We configure the triage questions, your calendar, and the emergency-versus-routine flows for you, so it is answering your calls in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for electricians"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -51,7 +51,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing emergency calls to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================= CRM for Electricians =================================
 {
@@ -89,7 +89,7 @@ SPECS = [
         ("Do I keep my customer list if I stop?",
          "Yes. Your customers and notes are in your name and exportable any time. You own the list, you are not renting access to your own business."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, set up the quote-follow-up sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, set up the quote-follow-up sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for electricians"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -97,7 +97,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting good quotes <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ Online Booking for Electricians ============================
 {
@@ -135,7 +135,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          "It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. Someone who booked themselves and got a reminder is far more likely to be there than a loosely agreed callback."),
         ("How fast can it be live?",
-         "Setup is included, no separate fee. We connect your calendar, set up your appointment types and rules, and put the link on your site and Google profile, so it is taking bookings in days. Start with a free audit and we will show you where you are losing planned jobs today.")],
+         "Setup is included, no separate fee. We connect your calendar, set up your appointment types and rules, and put the link on your site and Google profile, so it is taking bookings in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for electricians"),
         ("solution-booking.html", "How the online booking system works"),
@@ -143,7 +143,7 @@ SPECS = [
         ("crm-for-electricians.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let customers book the easy jobs <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many planned jobs your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =========================== Review Software for Electricians ===========================
 {
@@ -181,7 +181,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          "You find out immediately instead of weeks later, and the software helps you post a calm, professional response. One thoughtful reply to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a perfect record would."),
         ("How long until it is running?",
-         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days. Start with a free audit and we will show you how your reputation stacks up against the electricians you compete with.")],
+         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for electricians"),
         ("solution-reviews.html", "How the review system works"),
@@ -189,20 +189,20 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Turn finished jobs into <em>your next call</em>",
-    "cta_sub": "Get a free audit of how your online reputation compares to the electricians you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ============================ Websites & SEO for Electricians ============================
+# ============================ Websites for Electricians ============================
 {
     "slug": "websites-seo-for-electricians",
     "trade_slug": "electricians", "trade_plural": "electricians",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Electricians",
-    "title": "Websites & SEO for Electricians | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Electricians",
+    "breadcrumb_leaf": "Websites for Electricians",
+    "title": "Websites for Electricians | Top Shelf Business Solutions",
+    "og_title": "Websites for Electricians",
     "meta_desc": "An electrician website built for SEO ranks for electrician near me in your city and captures the call directly, instead of losing it to a directory or a competitor.",
-    "service_schema_name": "Websites & SEO for Electricians",
+    "service_schema_name": "Websites for Electricians",
     "eyebrow": "For Electricians",
-    "h1_html": "Websites &amp; SEO <em>for Electricians</em>",
+    "h1_html": "Websites <em>for Electricians</em>",
     "answer_block": "An electrician website built for SEO ranks for electrician near me and your city, shows up in local search when someone has no power or needs a panel upgrade, and captures the call the moment they land, so the lead belongs to you instead of a directory or a paid competitor.",
     "sections": [
         {"h2_html": "The directories are not competing with you, they are <em>selling your call to your competitors</em>",
@@ -227,14 +227,14 @@ SPECS = [
         ("I already have a website. Why do I need another?",
          "A template site that does not rank and does not capture calls is not doing the job. This one is built to rank for the services and neighborhoods you want and to turn visitors into calls and quotes in your own CRM, not just sit there."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for electricians"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the calls in <em>your own city</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories selling your calls to everyone else, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== Marketing for Electricians ==============================
 # ============================= Automation for Electricians =============================
@@ -273,7 +273,7 @@ SPECS = [
         ("What happens to quotes and leads that go quiet?",
          "They get a scheduled follow-up instead of being forgotten. You set how long a quote or lead should sit before it gets another nudge, so old opportunities keep getting a reason to come back instead of sitting in a list."),
         ("How long does setup take?",
-         "Setup is included with no separate fee. We build the quote, reminder, and follow-up sequences around how you already work, so it is running within days. Start with a free audit and we will show you what is currently falling through during your busy weeks.")],
+         "Setup is included with no separate fee. We build the quote, reminder, and follow-up sequences around how you already work, so it is running within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for electricians"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -281,6 +281,6 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a job <em>slip in a busy week</em>",
-    "cta_sub": "Get a free audit of what is currently falling through the cracks between your quotes, your reminders, and your schedule, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

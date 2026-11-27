@@ -53,7 +53,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          'It answers naturally and professionally, and it is upfront instead of pretending to be a person. A homeowner lining up painters mostly wants to know someone picked up and will come look at the job, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your qualifying questions, your calendar, and your booking rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for painters"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -61,7 +61,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing estimates to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and estimates your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Painters ================================
 {
@@ -99,7 +99,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of contacts does not follow up, does not remember who is due for the next room or the exterior, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat work actually shows up instead of depending on you to remember.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and seasonal sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gap where jobs are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and seasonal sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for painters"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -107,7 +107,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================== Online Booking for Painters ==========================
 {
@@ -145,7 +145,7 @@ SPECS = [
         ("Will it cut down on no-shows?",
          'It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A homeowner who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback.'),
         ("How fast can it be live?",
-         'Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site, profile, and photos, so it is taking bookings in days. Start with a free audit and we will find the gap where routine estimates are slipping through today.')],
+         'Setup is included, no separate fee. We connect your calendar, set up your job types and rules, and put the link on your site, profile, and photos, so it is taking bookings in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for painters"),
         ("solution-booking.html", "How the online booking system works"),
@@ -153,7 +153,7 @@ SPECS = [
         ("crm-for-painters.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let homeowners book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many estimates your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Review Software for Painters =========================
 {
@@ -191,7 +191,7 @@ SPECS = [
         ("What if a homeowner regrets the color they chose?",
          'You will see it the moment the review posts instead of hearing it secondhand, and the software helps you answer with a calm, professional reply that offers to make it right. A thoughtful response sitting under a wall of glowing reviews often does more to win a cautious shopper than a flawless record ever could, because it shows how you handle the rare job that slips.'),
         ("How does this help me book more estimates?",
-         'A listing full of recent, photo-backed reviews raises you in the local map pack and gives a shopper the confidence to pick you over a cheaper unknown. Getting started costs nothing extra: we hook up your Google listing, dial in the timing, and trigger each ask off a closed job, then a free audit shows where your online reputation stands next to the painters you bid against.')],
+         'A listing full of recent, photo-backed reviews raises you in the local map pack and gives a shopper the confidence to pick you over a cheaper unknown. Getting started costs nothing extra: we hook up your Google listing, dial in the timing, and trigger each ask off a closed job.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for painters"),
         ("solution-reviews.html", "How the review system works"),
@@ -199,21 +199,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let your finished work <em>book the next job</em>",
-    "cta_sub": "Get a free audit of where your reviews and Google listing stand next to the painters bidding against you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ========================= Websites & SEO for Painters =========================
+# ========================= Websites for Painters =========================
 {
     "slug": "websites-seo-for-painters",
     "trade_slug": "painters", "trade_plural": "painters",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Painters",
-    "title": "Websites & SEO for Painters | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Painters",
+    "breadcrumb_leaf": "Websites for Painters",
+    "title": "Websites for Painters | Top Shelf Business Solutions",
+    "og_title": "Websites for Painters",
     "meta_desc": "A painting company website built for SEO ranks for house painters near me and your city, and captures the estimate directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Painters",
+    "service_schema_name": "Websites for Painters",
     "eyebrow": "For Painters",
-    "h1_html": "Websites &amp; SEO <em>for Painters</em>",
-    "answer_block": "A painting company website built for SEO ranks for the searches a homeowner types, house painters near me, interior painting, exterior painters in your city, shows up in the map pack for the towns you cover, and captures the estimate the moment they land, so the job belongs to you instead of a directory or a lead-seller renting your own leads back to you.",
+    "h1_html": "Websites <em>for Painters</em>",
+    "answer_block": "A painting company website built for SEO ranks for the searches a homeowner types, house painters near me, interior painting, exterior painters in your city, and captures the estimate the moment they land, so the job belongs to you instead of a directory or a lead-seller renting your own leads back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own leads</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a painter in your town and the top of the page is often a directory, a national booking middleman, or a pay-per-lead service, not the local shop. Those sites publish thousands of pages and have years of authority behind them, so when a homeowner searches, they land there first, fill out a form, and that lead gets sold, often to three or four painters at once who then race to underbid each other. Your site not ranking is not a vanity problem. It is the reason a homeowner you could have had for free turns into a lead you pay for and split with your competitors.</p>'},
@@ -235,16 +235,16 @@ SPECS = [
         ("Does showing my past work really matter that much?",
          'For painting, yes. It is a visual trade, and a homeowner choosing between bids is reassured most by real before-and-after photos of homes like theirs. Those photos also give search engines specific, genuine content about the work you do and where, which a stock-photo template never will.'),
         ("Do I need to rank for every town I serve?",
-         'You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent searches, then expand, rather than spreading thin across a whole metro at once.'),
+         'You rank for the ones that matter most first.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will find the gap between where your current site, or lack of one, stands and where the searches actually are.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for painters"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-painters.html", "Where every captured lead lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your leads, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =========================== Marketing for Painters ===========================
 # =========================== Automation for Painters ===========================
@@ -283,7 +283,7 @@ SPECS = [
         ("Can it handle deposits and progress payments?",
          'Yes. Painting gets paid in stages, and the system sends polite, automatic reminders when a deposit, a progress payment, or the balance is due, so the money keeps pace with the work without an awkward call. You set the amounts and the timing.'),
         ("How long does setup take?",
-         'Setup is included with no separate fee. We build the reminder, on-my-way, payment, and follow-up sequences around how you already run your day, so it is working within days. Start with a free audit and we will find the gap where things are slipping between your calls, your crews, and your calendar.')],
+         'Setup is included with no separate fee. We build the reminder, on-my-way, payment, and follow-up sequences around how you already run your day, so it is working within days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for painters"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -291,6 +291,6 @@ SPECS = [
         ("online-booking-for-painters.html", "How the visits these remind about get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a customer <em>wonder what happens next</em>",
-    "cta_sub": "Get a free audit of what is currently slipping between your calls, your crews, and your follow-ups, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

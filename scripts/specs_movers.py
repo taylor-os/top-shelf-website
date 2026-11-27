@@ -46,7 +46,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          'It answers naturally and is upfront instead of pretending to be a person. Someone about to trust a crew with everything they own mostly wants to know a real company is handling it, and a steady voice that takes the details beats a voicemail box every time. You can hear it handle a live call before you decide.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.')],
+         'Setup is included with no separate onboarding fee. We configure your questions, your calendar, and your booking rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for movers"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -54,7 +54,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing booked moves to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many quote calls and booked weekends your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Movers ================================
 {
@@ -92,7 +92,7 @@ SPECS = [
         ("How is this different from just having their number in my phone?",
          'A phone full of contacts does not follow up, does not remember who is due to move again, and does not tell you which estimate is going cold. The CRM does all of that on a schedule, so the repeat work and the quotes you already gave actually turn into booked moves.'),
         ("How long until it is set up?",
-         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where moves are slipping through today.')],
+         'Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and referral sequences, and connect it to your calls and calendar, so it is working in days.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for movers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -100,22 +100,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting estimates and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your estimates and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================= Marketing for Movers =============================
-# ========================== Websites & SEO for Movers ==========================
+# ========================== Websites for Movers ==========================
 {
     "slug": "websites-seo-for-movers",
     "trade_slug": "movers", "trade_plural": "movers",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Movers",
-    "title": "Websites & SEO for Movers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Movers",
+    "breadcrumb_leaf": "Websites for Movers",
+    "title": "Websites for Movers | Top Shelf Business Solutions",
+    "og_title": "Websites for Movers",
     "meta_desc": "A moving company website built for SEO ranks for movers near me and your city, and earns the trust of a customer handing strangers everything they own.",
-    "service_schema_name": "Websites & SEO for Movers",
+    "service_schema_name": "Websites for Movers",
     "eyebrow": "For Movers",
-    "h1_html": "Websites &amp; SEO <em>for Movers</em>",
-    "answer_block": "A moving company website built for SEO ranks for the searches people make when planning a move, movers near me, local movers, long-distance moving, shows up in the map pack for the towns you cover, and earns the trust of someone handing strangers everything they own, so the move is yours instead of a lead-seller's.",
+    "h1_html": "Websites <em>for Movers</em>",
+    "answer_block": "A moving company website built for SEO ranks for the searches people make when planning a move, movers near me, local movers, long-distance moving, and earns the trust of someone handing strangers everything they own, so the move is yours instead of a lead-seller's.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a mover in your town and the top of the page is often a directory, a national booking middleman, or a moving-lead marketplace, not the local company. Those sites publish thousands of pages and carry years of authority, so when someone searches, they land there first, fill out a form, and that lead gets sold, sometimes to several movers at once, sometimes back to you for a fee out of your own margin. Moving is one of the worst trades for this; whole businesses exist only to catch your customers first and sell them on. Your site not ranking is not a vanity problem. It is the reason a call you should have had for free gets sold to you, or handed to three competitors right alongside you.</p>'},
@@ -135,17 +135,17 @@ SPECS = [
         ("How is this different from buying moving leads?",
          'A lead marketplace rents you a customer it also sells to your competitors, and it stops the day you stop paying. A website you own captures quote requests that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every move.'),
         ("Do I need to rank for every town I serve?",
-         'You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent searches, then expand, rather than spreading thin across a whole metro at once.'),
+         'You rank for the ones that matter most first.'),
         ("Why does the site itself matter so much for a mover?",
          'Because a customer is about to trust a crew with everything they own. Before they call, they read your site to see whether you look established, licensed, and reviewed. A clear, honest site with real photos and an easy quote form is often what decides between you and the next company on the list.'),
         ("How long until it starts ranking?",
-         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for movers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the marketplaces and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

@@ -58,7 +58,7 @@ SPECS = [
         ("Can it handle calls from employers about physicals or drug screens?",
          "Yes. A call from a local business about pre-employment physicals, drug screens, or a worker hurt on the job is routed to the right person and captured in your CRM, so a standing occupational-health account never sits forgotten in voicemail during a busy afternoon."),
         ("How fast can it be answering?",
-         "Setup is included with no separate onboarding fee. We configure your hours, your services, your insurance answers, and your check-in links for you, so it is picking up in days, not weeks. Start with a free audit and we will show you how many calls your front desk is missing while it is with walk-ins.")],
+         "Setup is included with no separate onboarding fee. We configure your hours, your services, your insurance answers, and your check-in links for you, so it is picking up in days, not weeks.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for urgent care clinics"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -66,7 +66,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing walk-ins to <em>a busy signal</em>",
-    "cta_sub": "Get a free audit that finds the gap in your patient calls: how many roll to voicemail and drive to the next clinic or an emergency room while your front desk is with walk-ins, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================ CRM for Urgent Care ================================
 {
@@ -104,7 +104,7 @@ SPECS = [
         ("Is patient data kept private?",
          "Yes. Patient and employee information is handled with the care a medical office is held to and stays inside your systems, and it is always yours to export. You control what the CRM stores and what each message says."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your patients and employer accounts, build your follow-up sequences, and connect it to your phones and check-in, so it is working in days. Start with a free audit and we will show you which accounts and patients are going unworked today.")],
+         "Setup is included with no separate onboarding fee. We bring in your patients and employer accounts, build your follow-up sequences, and connect it to your phones and check-in, so it is working in days.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for urgent care clinics"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -112,21 +112,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting employer accounts <em>go cold</em>",
-    "cta_sub": "Get a free audit that finds the gap in your occupational-health accounts and patient follow-up: how many employer relationships and past patients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================== Marketing for Urgent Care ==============================
-# ========================= Websites & SEO for Urgent Care =========================
+# ========================= Websites for Urgent Care =========================
 {
     "slug": "websites-seo-for-urgent-care",
     "trade_slug": "urgent_care", "trade_plural": "urgent care clinics",
     "hub_name": "Medical & Dental", "hub_slug": "industry-medical-dental.html",
-    "breadcrumb_leaf": "Websites & SEO for Urgent Care",
-    "title": "Websites & SEO for Urgent Care | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Urgent Care",
+    "breadcrumb_leaf": "Websites for Urgent Care",
+    "title": "Websites for Urgent Care | Top Shelf Business Solutions",
+    "og_title": "Websites for Urgent Care",
     "meta_desc": "An urgent care website built for SEO ranks for urgent care near me and open now, shows your hours, wait, and services, and lets patients check in online.",
-    "service_schema_name": "Websites & SEO for Urgent Care",
+    "service_schema_name": "Websites for Urgent Care",
     "eyebrow": "For Urgent Care",
-    "h1_html": "Websites &amp; SEO <em>for Urgent Care</em>",
+    "h1_html": "Websites <em>for Urgent Care</em>",
     "answer_block": "An urgent care website built for SEO ranks for what a sick or hurt patient types, urgent care near me, open now, walk-in clinic, and the services they need, shows your hours, wait, and insurances at a glance, and lets them hold a spot in one tap, so the visit is yours instead of a directory's.",
     "sections": [
         {"h2_html": "A sick or hurt patient decides in <em>seconds, on a phone</em>",
@@ -151,13 +151,13 @@ SPECS = [
         ("Do I need a page for every service I offer?",
          "You start with the ones that matter most, the near-me and open-now searches, your top services, and a page for occupational health so employers can find you, then expand. A focused set of strong service and location pages ranks better than one thin page trying to cover everything."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-medical-dental.html", "Everything Top Shelf does for urgent care clinics"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search for <em>urgent care near me</em>",
-    "cta_sub": "Get a free audit that finds the gap between your website and the directories and hospital systems taking your urgent care searches, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

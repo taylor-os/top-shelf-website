@@ -49,7 +49,7 @@ SPECS = [
         ("Is it going to sound like a robot to someone who just had a wreck?",
          "It answers naturally and calmly, and it is upfront instead of pretending to be a person. Someone shaken after a collision mostly needs to know a real shop is handling it, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your intake questions, your estimate schedule, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your intake questions, your estimate schedule, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -57,7 +57,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing wrecks to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many estimate calls and after-accident jobs your current phone setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Auto Body Shops =========================
 {
@@ -95,7 +95,7 @@ SPECS = [
         ("How is this different from my estimating system?",
          "Most estimating and management systems store the file but do not chase the work. This follows up on cold estimates, nudges past customers, and tells you who has gone quiet, on a schedule, so the deferred and referral work actually shows up instead of depending on someone to remember."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up sequences, and connect it to your calls and estimates, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up sequences, and connect it to your calls and estimates, so it is working in days.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -103,22 +103,22 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting estimates and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your estimates and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Auto Body Shops ======================
-# =================== Websites & SEO for Auto Body Shops ===================
+# =================== Websites for Auto Body Shops ===================
 {
     "slug": "websites-seo-for-auto-body-shops",
     "trade_slug": "auto_body_shops", "trade_plural": "auto body shops",
     "hub_name": "Auto", "hub_slug": "industry-auto.html",
-    "breadcrumb_leaf": "Websites & SEO for Auto Body Shops",
-    "title": "Websites & SEO for Auto Body Shops | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Auto Body Shops",
+    "breadcrumb_leaf": "Websites for Auto Body Shops",
+    "title": "Websites for Auto Body Shops | Top Shelf Business Solutions",
+    "og_title": "Websites for Auto Body Shops",
     "meta_desc": "An auto body shop website built for SEO ranks for body shop near me and collision repair, and captures the estimate request directly, not a lead-seller.",
-    "service_schema_name": "Websites & SEO for Auto Body Shops",
+    "service_schema_name": "Websites for Auto Body Shops",
     "eyebrow": "For Auto Body Shops",
-    "h1_html": "Websites &amp; SEO <em>for Auto Body Shops</em>",
-    "answer_block": "An auto body shop website built for SEO ranks for the searches a driver makes right after a wreck, body shop near me, collision repair, auto body estimate, and shows up in the map pack for the towns you cover, so the car comes to you instead of a directory renting your own estimate requests back to you.",
+    "h1_html": "Websites <em>for Auto Body Shops</em>",
+    "answer_block": "An auto body shop website built for SEO ranks for the searches a driver makes right after a wreck, body shop near me, collision repair, auto body estimate, so the car comes to you instead of a directory renting your own estimate requests back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own estimate requests</em>",
          "body_html": '<p style="color:var(--ink-2);line-height:1.85;max-width:64ch">Search for a body shop in your town and the top of the page is often a directory, a national booking middleman, or a pay-per-lead service, not the local shop. Those sites publish thousands of pages and have years of authority behind them, so when a driver searches, they land there first, fill out an estimate request, and that lead gets sold, sometimes to several shops at once, sometimes back to you for a fee out of your own margin. Your site not ranking is not a vanity problem. It is the reason an estimate request you should have gotten for free gets sold to you, or handed to whoever is paying that week.</p><p style="color:var(--ink-2);line-height:1.85;max-width:64ch;margin-top:1rem">It is worse for collision work than for most trades. The driver filling out that form has no loyalty yet and no easy way to tell one shop from another, so the request gets shopped around and the job goes to whoever the middleman routes it to, not the shop that does the best paint or the cleanest panel work. A site of your own turns that same search into a call that lands with you and nobody else, and it keeps the customer, the vehicle, and the claim in your hands from the first ring.</p>'},
@@ -138,17 +138,17 @@ SPECS = [
         ("How is this different from paying for leads?",
          "A pay-per-lead service rents you an estimate request that it also sells to other shops, and it stops the day you stop paying. A website you own captures calls and estimate requests that are yours alone and keeps working long after it is built, without a per-lead fee coming out of every job."),
         ("Do I need to rank for every town I serve?",
-         "You rank for the ones that matter most first. We build pages for your core service areas and the highest-intent collision searches, then expand, rather than spreading thin across a whole metro at once."),
+         "You rank for the ones that matter most first."),
         ("Do people really request a body estimate online?",
          "More and more do, especially when they can describe the damage and attach a photo of it in a couple of taps. A photo-based estimate request on a fast site books cars that a plain contact form would have lost, and the drivers who would rather talk it through still get a tap-to-call button."),
         ("How long until it starts ranking?",
-         "The tight local and collision searches can start moving within weeks, while the broadest terms build over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "The tight local and collision searches can start moving within weeks, while the broadest terms build over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for auto body shops"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your estimate requests, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

@@ -48,7 +48,7 @@ SPECS = [
         ("Will it sound like a robot to a stressed homeowner?",
          "It answers naturally and professionally, and it is upfront rather than pretending to be a person. Someone standing next to a door that will not open mostly wants to know an appointment is set and help is coming, which beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included and there is no separate onboarding fee. We configure the triage questions, your calendar, and your service area for you, so it is answering your calls in days, not weeks. Start with a free audit and we will show you how many calls your current setup is missing.")],
+         "Setup is included and there is no separate onboarding fee. We configure the triage questions, your calendar, and your service area for you, so it is answering your calls in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -56,7 +56,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending emergencies to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and same-day jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== CRM for Garage Door Companies ========================
 {
@@ -94,7 +94,7 @@ SPECS = [
         ("Do I keep my data if I change software later?",
          "Yes. Your customers and notes are in your name and exportable any time, so you are never locked in. You are not renting access to your own customer list."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, build the follow-up sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will find the gaps where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, build the follow-up sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -102,7 +102,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your open quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Online Booking for Garage Door Companies ====================
 {
@@ -140,7 +140,7 @@ SPECS = [
         ("Will it cut down on no-shows and wasted trips?",
          "It helps. Automatic confirmations and reminders by text and email are the single biggest lever on no-shows, and every booking includes them. A homeowner who booked themselves and got a reminder is far more likely to be home than a loosely agreed callback."),
         ("How fast can it be live?",
-         "Setup is included, no separate fee. We connect your calendar, set up your visit types and service-area rules, and put the link on your site and Google profile, so it is taking bookings in days. Start with a free audit and we will show you where you are losing non-urgent jobs today.")],
+         "Setup is included, no separate fee. We connect your calendar, set up your visit types and service-area rules, and put the link on your site and Google profile, so it is taking bookings in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-booking.html", "How the online booking system works"),
@@ -148,7 +148,7 @@ SPECS = [
         ("crm-for-garage-door-companies.html", "The CRM every booking is logged into"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Let homeowners book you <em>while you work</em>",
-    "cta_sub": "Get a free audit of how many non-urgent jobs your current callback process is costing you, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ==================== Review Software for Garage Door Companies ====================
 {
@@ -186,7 +186,7 @@ SPECS = [
         ("What happens if I get a bad review?",
          "You find out immediately instead of weeks later, and the software helps you post a calm, professional response. One thoughtful reply to a critical review, sitting under a wall of genuine positive ones, often reassures the next reader more than a perfect record would."),
         ("How long until it is running?",
-         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days. Start with a free audit and we will show you how your rating stacks up against the companies you compete with.")],
+         "Setup is included with no separate fee. We connect your Google profile, set the timing and the message, and tie it to your completed jobs, so requests start going out in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-reviews.html", "How the review system works"),
@@ -194,20 +194,20 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Win the <em>side-by-side comparison</em>",
-    "cta_sub": "Get a free audit of how your online rating compares to the garage door companies you compete with, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
-# ==================== Websites & SEO for Garage Door Companies ====================
+# ==================== Websites for Garage Door Companies ====================
 {
     "slug": "websites-seo-for-garage-door-companies",
     "trade_slug": "garage-door-companies", "trade_plural": "garage door companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Garage Door Companies",
-    "title": "Websites & SEO for Garage Door Companies | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Garage Door Companies",
+    "breadcrumb_leaf": "Websites for Garage Door Companies",
+    "title": "Websites for Garage Door Companies | Top Shelf Business Solutions",
+    "og_title": "Websites for Garage Door Companies",
     "meta_desc": "A garage door company website built for SEO ranks for garage door repair near me and captures the emergency call, instead of handing it to a pay-per-lead middleman.",
-    "service_schema_name": "Websites & SEO for Garage Door Companies",
+    "service_schema_name": "Websites for Garage Door Companies",
     "eyebrow": "For Garage Door Companies",
-    "h1_html": "Websites &amp; SEO <em>for Garage Door Companies</em>",
+    "h1_html": "Websites <em>for Garage Door Companies</em>",
     "answer_block": "A garage door company website built for SEO ranks for the searches homeowners actually make, like garage door repair near me, shows up in local results before the pay-per-lead sites, and captures the call the moment someone lands, so the traffic and the jobs belong to you instead of a lead middleman selling the same call to three companies.",
     "sections": [
         {"h2_html": "The lead sites are not competing with you, they are <em>selling you your own calls</em>",
@@ -232,14 +232,14 @@ SPECS = [
         ("My current site never brings me calls. Why would this?",
          "Usually because the current site does not rank for local searches and hides the phone number. This one is built to rank for the areas you serve and to turn a visitor into a call or a booked job in your CRM, not just to look nice."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("crm-for-garage-door-companies.html", "Where every captured call lands and gets followed up"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search for <em>garage door repair near you</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the lead sites sending your calls somewhere else, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================== Marketing for Garage Door Companies ========================
 # ======================== Automation for Garage Door Companies ========================
@@ -278,7 +278,7 @@ SPECS = [
         ("Are automatic review requests allowed?",
          "Yes. Asking every customer for an honest review is fine and encouraged. The request simply goes out at the right moment with a one-tap link; it never filters out unhappy customers or pays for reviews."),
         ("How long does setup take?",
-         "Setup is included with no separate fee. We build the reminder, follow-up, and review sequences around how you already work, so it is running within days. Start with a free audit and we will find the gaps where jobs and quotes are falling through today.")],
+         "Setup is included with no separate fee. We build the reminder, follow-up, and review sequences around how you already work, so it is running within days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for home services"),
         ("solution-automation.html", "How the automation and workflow system works"),
@@ -286,6 +286,6 @@ SPECS = [
         ("online-booking-for-garage-door-companies.html", "How the visits these reminders cover get booked"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Never let a job <em>go quiet</em>",
-    "cta_sub": "Get a free audit of what is currently falling through the cracks between your jobs, your quotes, and your calendar, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

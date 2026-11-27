@@ -57,7 +57,7 @@ SPECS = [
         ("Is it going to sound like a robot?",
          "It answers naturally and is upfront rather than pretending to be a person. A homeowner who just wants their house washed mostly needs to know a real company is handling it and someone will come give a price, and a steady voice that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your questions, and your calendar for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your questions, and your calendar for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pressure washing companies"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -65,7 +65,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing estimates to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many estimate calls and jobs your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ============================ CRM for Pressure Washing ============================
 {
@@ -103,7 +103,7 @@ SPECS = [
         ("Can it handle my commercial and HOA accounts?",
          "Yes. Recurring accounts, their rotation, and what is due live in the CRM, so a monthly storefront or a quarterly HOA route stays on schedule and gets invoiced instead of slipping because you lost track of when you were last there."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pressure washing companies"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -111,21 +111,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting estimates and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your estimates and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================== Marketing for Pressure Washing ==========================
-# ======================= Websites & SEO for Pressure Washing =======================
+# ======================= Websites for Pressure Washing =======================
 {
     "slug": "websites-seo-for-pressure-washing",
     "trade_slug": "pressure_washing", "trade_plural": "pressure washing companies",
     "hub_name": "Home Services", "hub_slug": "industry-home-services.html",
-    "breadcrumb_leaf": "Websites & SEO for Pressure Washing",
-    "title": "Websites & SEO for Pressure Washing | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Pressure Washing",
+    "breadcrumb_leaf": "Websites for Pressure Washing",
+    "title": "Websites for Pressure Washing | Top Shelf Business Solutions",
+    "og_title": "Websites for Pressure Washing",
     "meta_desc": "A pressure washing website built for SEO ranks for pressure washing near me and house washing in your city, and captures the quote directly, not a lead-seller.",
-    "service_schema_name": "Websites & SEO for Pressure Washing",
+    "service_schema_name": "Websites for Pressure Washing",
     "eyebrow": "For Pressure Washing",
-    "h1_html": "Websites &amp; SEO <em>for Pressure Washing</em>",
+    "h1_html": "Websites <em>for Pressure Washing</em>",
     "answer_block": "A pressure washing website built for SEO ranks for the searches a homeowner makes when the house looks dirty, pressure washing near me, house washing, driveway and roof cleaning in your city, shows off your before-and-after work, and captures the quote request directly, so the job is yours instead of a lead-seller renting it back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own calls</em>",
@@ -150,13 +150,13 @@ SPECS = [
         ("Can visitors request a quote right from the site?",
          "Yes. The site is built so a visitor can request a quote in a tap, describe or photograph the surface, and enter their address, so a lead comes in ready for you to price instead of leaving a voicemail they will forget. It lands straight in your CRM."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months, and it helps to be climbing before the spring rush. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months, and it helps to be climbing before the spring rush. Setup is included with no separate fee.")],
     "related": [
         ("industry-home-services.html", "Everything Top Shelf does for pressure washing companies"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your calls, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

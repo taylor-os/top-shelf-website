@@ -58,7 +58,7 @@ SPECS = [
         ("Is it going to give the caller legal advice or promise their debt will be wiped out?",
          'No, and this matters. It answers, reassures, and captures the facts; it never advises on the case, never tells a caller whether to file Chapter 7 or Chapter 13, and never promises that any debt will be discharged. Every legal question and every decision about taking a matter stays with your attorneys. Someone ashamed and frightened mostly needs to feel that a real firm is handling it without judgment, and a calm voice that gets the details beats a voicemail box.'),
         ("How fast can it be running?",
-         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your urgent-case rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.')],
+         'Setup is included with no separate onboarding fee. We build your intake questions, your booking, and your urgent-case rules for you, so it is answering in days, not weeks.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for bankruptcy attorneys"),
         ("solution-ai-phone.html", "How the AI phone and intake system works"),
@@ -66,7 +66,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending your most anxious callers to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls and after-hours consultations your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Bankruptcy Attorneys =========================
 {
@@ -112,21 +112,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting frightened clients <em>slip away</em>",
-    "cta_sub": "Get a free audit of how many of your consultations, stalled files, and past clients are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ====================== Marketing for Bankruptcy Attorneys ======================
-# =================== Websites & SEO for Bankruptcy Attorneys ===================
+# =================== Websites for Bankruptcy Attorneys ===================
 {
     "slug": "websites-seo-for-bankruptcy-attorneys",
     "trade_slug": "bankruptcy_attorneys", "trade_plural": "bankruptcy attorneys",
     "hub_name": "Legal", "hub_slug": "industry-legal.html",
-    "breadcrumb_leaf": "Websites & SEO for Bankruptcy Attorneys",
-    "title": "Websites & SEO for Bankruptcy Attorneys | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Bankruptcy Attorneys",
+    "breadcrumb_leaf": "Websites for Bankruptcy Attorneys",
+    "title": "Websites for Bankruptcy Attorneys | Top Shelf Business Solutions",
+    "og_title": "Websites for Bankruptcy Attorneys",
     "meta_desc": "A bankruptcy attorney website built for SEO ranks for Chapter 7 and stop-garnishment searches in your city and turns a private, ashamed researcher into a call.",
-    "service_schema_name": "Websites & SEO for Bankruptcy Attorneys",
+    "service_schema_name": "Websites for Bankruptcy Attorneys",
     "eyebrow": "For Bankruptcy Attorneys",
-    "h1_html": "Websites &amp; SEO <em>for Bankruptcy Attorneys</em>",
+    "h1_html": "Websites <em>for Bankruptcy Attorneys</em>",
     "answer_block": "A bankruptcy attorney website built for SEO ranks for what a person types when the debt becomes unmanageable, a Chapter 7 attorney near me, how to stop a garnishment, a bankruptcy lawyer in your city, and meets them with a calm, private, plain-language page that turns an ashamed researcher into a consultation that belongs to your firm.",
     "sections": [
         {"h2_html": "Your site is the first proof you will treat them <em>without judgment</em>",
@@ -151,13 +151,13 @@ SPECS = [
         ("How is this different from paying for leads or a directory?",
          'A pay-per-lead service or directory rents you a contact it also sells to other firms, and it goes dark the day you stop paying. A website your firm owns keeps the consultation to itself and goes on ranking for years after it is built, with nothing skimmed off a retainer a struggling client is already stretching to cover.'),
         ("How long until it starts ranking?",
-         'The narrow, local, and question-based searches can begin to move within weeks; the broader and more competitive terms take longer and build over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.')],
+         'The narrow, local, and question-based searches can begin to move within weeks; the broader and more competitive terms take longer and build over months. Setup is included with no separate fee.')],
     "related": [
         ("industry-legal.html", "Everything Top Shelf does for bankruptcy attorneys"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the bankruptcy searches in <em>your own city</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your consultations, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

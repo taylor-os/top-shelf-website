@@ -49,7 +49,7 @@ SPECS = [
         ("Will it sound like a robot to someone thinking about joining?",
          "It sounds natural and welcoming, and it never pretends to be a human when it is not. Someone deciding whether to join mostly wants to know they can get in, what it costs, and that a real gym has them booked, and a friendly reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your membership options, your class schedule, your hours, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many membership inquiries your current phone setup is quietly letting slip.")],
+         "Setup is included with no separate onboarding fee. We configure your membership options, your class schedule, your hours, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -57,7 +57,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new members to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and after-hours messages your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ================================== CRM for Gyms ==================================
 {
@@ -95,7 +95,7 @@ SPECS = [
         ("Can it handle class bookings and no-shows?",
          "Yes. It sends class confirmations and reminders that cut no-shows and late cancels, and it can offer an open spot to the waitlist when someone drops, so a limited class stays full instead of running with empty space."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your members, build your trial-conversion, onboarding, and win-back sequences, and connect it to your calls and schedule, so it is working in days. Start with a free audit and we will show you where members are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your members, build your trial-conversion, onboarding, and win-back sequences, and connect it to your calls and schedule, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -103,21 +103,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting trials and members <em>slip away</em>",
-    "cta_sub": "Get a free audit of how many of your trials never converted and how many members have quietly stopped showing up, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # =============================== Marketing for Gyms ===============================
-# ============================= Websites & SEO for Gyms =============================
+# ============================= Websites for Gyms =============================
 {
     "slug": "websites-seo-for-gyms",
     "trade_slug": "gyms", "trade_plural": "gyms",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Gyms",
-    "title": "Websites & SEO for Gyms | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Gyms",
+    "breadcrumb_leaf": "Websites for Gyms",
+    "title": "Websites for Gyms | Top Shelf Business Solutions",
+    "og_title": "Websites for Gyms",
     "meta_desc": "A gym website built for SEO ranks for gym near me and the classes you run, sells the membership up front, and lets a prospect start a free trial in one tap.",
-    "service_schema_name": "Websites & SEO for Gyms",
+    "service_schema_name": "Websites for Gyms",
     "eyebrow": "For Gyms",
-    "h1_html": "Websites &amp; SEO <em>for Gyms</em>",
+    "h1_html": "Websites <em>for Gyms</em>",
     "answer_block": "A gym website built for SEO ranks for the searches someone makes when they are ready to start, gym near me and the classes you run, sells the membership, and lets them book a tour or a free trial in one tap, so the member belongs to you instead of a class-booking app taking a cut of your own sign-ups.",
     "sections": [
         {"h2_html": "A prospect decides if your gym is <em>their place</em> before they walk in",
@@ -138,17 +138,17 @@ SPECS = [
         ("How is this different from paying a class-booking marketplace?",
          "A marketplace shows a prospect ten gyms at once and takes a cut of a sign-up that could have been yours directly, and it stops the day you stop paying. A website you own captures members that are yours alone, with no cut taken, and keeps working long after it is built."),
         ("Do I need a page for every class and neighborhood?",
-         "You start with the ones that matter most: your top classes or programs and your core areas. We build those pages first, around what people actually search and what you most want to fill, then expand, rather than spreading thin across everything at once."),
+         "You start with the ones that matter most: your top classes or programs and your core areas."),
         ("Most of my new members come from social. Does a website even help?",
          "Yes, because social is where they first notice you, not where they finally decide. Social catches the eye, but a prospect checks your site, your schedule, and your reviews before they commit to a membership, and that is where a fast, honest, photo-forward page with easy trial booking turns a curious scroll into a walk-in."),
         ("How long until it starts ranking?",
-         "The local, specific searches can begin moving in a matter of weeks, while the broader terms build more slowly and compound over the months that follow. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "The local, specific searches can begin moving in a matter of weeks, while the broader terms build more slowly and compound over the months that follow. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for gyms"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own neighborhood</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and class-booking apps taking your members, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

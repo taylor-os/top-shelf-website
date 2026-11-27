@@ -52,7 +52,7 @@ SPECS = [
         ("Is it going to sound like a robot to my customers?",
          "It answers naturally and is upfront instead of pretending to be a person. A customer who just wants to know a real detailer can get to their car cares that the call was answered and the details were caught, not that a receptionist picked up. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your calendar, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you what your current phone setup is missing.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your calendar, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for auto detailers"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -60,7 +60,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop sending bookings to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many booking and quote calls your current phone setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Auto Detailers =========================
 {
@@ -98,7 +98,7 @@ SPECS = [
         ("How is this different from just having customers in my phone?",
          "A phone full of contacts does not follow up, does not know whose coating is due for its wash, and does not tell you which quote is going cold. The CRM does all of that on a schedule, so the repeat and deferred work actually shows up instead of depending on you to remember."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days. Start with a free audit and we will show you where jobs are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your customers and vehicles, build your follow-up and reminder sequences, and connect it to your calls and calendar, so it is working in days.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for auto detailers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -106,21 +106,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting quotes and customers <em>go cold</em>",
-    "cta_sub": "Get a free audit of how many of your quotes and past customers are going unworked right now, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ======================= Marketing for Auto Detailers =======================
-# ==================== Websites & SEO for Auto Detailers ====================
+# ==================== Websites for Auto Detailers ====================
 {
     "slug": "websites-seo-for-auto-detailers",
     "trade_slug": "auto_detailing", "trade_plural": "auto detailers",
     "hub_name": "Auto", "hub_slug": "industry-auto.html",
-    "breadcrumb_leaf": "Websites & SEO for Auto Detailers",
-    "title": "Websites & SEO for Auto Detailers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Auto Detailers",
+    "breadcrumb_leaf": "Websites for Auto Detailers",
+    "title": "Websites for Auto Detailers | Top Shelf Business Solutions",
+    "og_title": "Websites for Auto Detailers",
     "meta_desc": "An auto detailing website built for SEO ranks for detailing near me and ceramic coating, and books the job directly instead of a lead-seller.",
-    "service_schema_name": "Websites & SEO for Auto Detailers",
+    "service_schema_name": "Websites for Auto Detailers",
     "eyebrow": "For Auto Detailers",
-    "h1_html": "Websites &amp; SEO <em>for Auto Detailers</em>",
+    "h1_html": "Websites <em>for Auto Detailers</em>",
     "answer_block": "An auto detailing website built for SEO ranks for what a car owner searches when they want their car detailed, detailing near me, mobile detailing, ceramic coating in your city, shows the before-and-after work that convinces them, and lets them book in a couple of taps instead of a directory renting your bookings back to you.",
     "sections": [
         {"h2_html": "The lead-sellers are not competing with you, they are <em>renting you back your own bookings</em>",
@@ -145,13 +145,13 @@ SPECS = [
         ("I am a mobile detailer. Does a website still help?",
          "Even more. Without a storefront, your site and your Google presence are how customers find you at all, and a fast site that shows your work, makes your service area obvious, and lets someone book you to their driveway is what turns a search into a job on your route."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks; broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-auto.html", "Everything Top Shelf does for auto detailers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search results for <em>your own town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and lead-sellers taking your bookings, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]

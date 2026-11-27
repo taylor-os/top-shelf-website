@@ -54,7 +54,7 @@ SPECS = [
         ("Will it sound like a robot to someone thinking about hiring me?",
          "It sounds natural and encouraging, and it never pretends to be a person when it is not. Someone deciding whether to invest in a trainer mostly wants to know they can get in, how starting works, and that a real coach has them booked, and a warm reply that captures the details beats a voicemail box every time. You can hear it handle a live call before you decide."),
         ("How fast can it be running?",
-         "Setup is included with no separate onboarding fee. We configure your services, your rates, your consult process, and your booking rules for you, so it is answering in days, not weeks. Start with a free audit and we will show you how many inquiries your current setup is quietly letting slip.")],
+         "Setup is included with no separate onboarding fee. We configure your services, your rates, your consult process, and your booking rules for you, so it is answering in days, not weeks.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for personal trainers"),
         ("solution-ai-phone.html", "How the AI phone and chat system works"),
@@ -62,7 +62,7 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop losing new clients to <em>voicemail</em>",
-    "cta_sub": "Get a free audit of how many calls, texts, and after-hours messages your current setup is missing, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= CRM for Personal Trainers =========================
 {
@@ -100,7 +100,7 @@ SPECS = [
         ("Can it track packages and prompt renewals?",
          "Yes. Session blocks, packages, and prepaid coaching are tracked against the right client, so you can see who is running low and the CRM can prompt the next block before the current one runs out, instead of a client quietly finishing and drifting away."),
         ("How long until it is set up?",
-         "Setup is included with no separate onboarding fee. We bring in your clients, build your consult-follow-up, retention, and win-back sequences, and connect it to your calls and schedule, so it is working in days. Start with a free audit and we will show you where clients are slipping through today.")],
+         "Setup is included with no separate onboarding fee. We bring in your clients, build your consult-follow-up, retention, and win-back sequences, and connect it to your calls and schedule, so it is working in days.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for personal trainers"),
         ("solution-crm.html", "How the CRM and follow-up system works"),
@@ -108,21 +108,21 @@ SPECS = [
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Stop letting consults and clients <em>slip away</em>",
-    "cta_sub": "Get a free audit of how many of your consults never signed and how many clients have quietly stopped booking, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 # ========================= Marketing for Personal Trainers =========================
-# ======================= Websites & SEO for Personal Trainers =======================
+# ======================= Websites for Personal Trainers =======================
 {
     "slug": "websites-seo-for-personal-trainers",
     "trade_slug": "personal_trainers", "trade_plural": "personal trainers",
     "hub_name": "Salon, Spa & Fitness", "hub_slug": "industry-salon-spa-fitness.html",
-    "breadcrumb_leaf": "Websites & SEO for Personal Trainers",
-    "title": "Websites & SEO for Personal Trainers | Top Shelf Business Solutions",
-    "og_title": "Websites & SEO for Personal Trainers",
+    "breadcrumb_leaf": "Websites for Personal Trainers",
+    "title": "Websites for Personal Trainers | Top Shelf Business Solutions",
+    "og_title": "Websites for Personal Trainers",
     "meta_desc": "A personal trainer website built for SEO ranks for personal trainer near me and your specialty, and lets a client book a free consult in one tap.",
-    "service_schema_name": "Websites & SEO for Personal Trainers",
+    "service_schema_name": "Websites for Personal Trainers",
     "eyebrow": "For Personal Trainers",
-    "h1_html": "Websites &amp; SEO <em>for Personal Trainers</em>",
+    "h1_html": "Websites <em>for Personal Trainers</em>",
     "answer_block": "A personal trainer website built for SEO ranks for the searches someone makes when they want a coach, personal trainer near me and your specialty, shows your credibility and honest results, and lets them book a free consult in one tap, so the client is yours instead of a training marketplace taking a cut of your own sign-ups.",
     "sections": [
         {"h2_html": "A client picks the trainer before they ever <em>book the consult</em>",
@@ -143,17 +143,17 @@ SPECS = [
         ("How is this different from paying a training marketplace?",
          "A marketplace shows a prospect ten trainers at once and takes a cut of a client who could have been yours directly, and it stops the day you stop paying. A website you own captures clients that are yours alone, with no cut taken, and keeps working long after it is built."),
         ("Do I need a page for every specialty and neighborhood?",
-         "You start with the ones that matter most: your main kind of coaching and your core areas. We build those pages first, around what people actually search and the clients you most want, then expand, rather than spreading thin across everything at once."),
+         "You start with the ones that matter most: your main kind of coaching and your core areas."),
         ("Most of my clients come from social and referrals. Does a website even help?",
          "Yes, because that is where they decide, not just where they notice you. Social and a friend's referral get your name in front of them, but a prospect checks your site, your reviews, and how you coach before they commit, and that is where a fast, honest, easy-to-book page turns a curious look into a booked consult."),
         ("How long until it starts ranking?",
-         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee, and a free audit will show you where your current site, or lack of one, stands today.")],
+         "Local, specific searches can start moving within weeks, while broader terms take longer and compound over months. Setup is included with no separate fee.")],
     "related": [
         ("industry-salon-spa-fitness.html", "Everything Top Shelf does for personal trainers"),
         ("solution-websites-seo.html", "How the website and SEO system works"),
         ("booking.html", "Book a 15-minute call to see it"),
         ("contact.html", "Get your free business audit")],
     "cta_h2_html": "Own the search for <em>a trainer in your town</em>",
-    "cta_sub": "Get a free audit of how your website and local search presence compare to the directories and training apps taking your clients, whether you work with us or not. No credit card, never a call center.",
+    "cta_sub": "Try the CRM and see how it answers calls, books jobs, and follows up on every lead. No credit card, never a call center.",
 },
 ]
