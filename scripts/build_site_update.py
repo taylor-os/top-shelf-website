@@ -96,8 +96,9 @@ CARDS_CSS = """/* PAIR-CARDS:start (scripts/build_site_update.py) */
 #cc .c-pair{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--shadow);overflow:hidden;transition:border-color 200ms ease}
 #cc .c-pair-shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px 12px 0}
 #cc .c-pair-shots figure{margin:0;min-width:0}
-#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line-2);background:var(--bg-2);color:var(--muted);font-size:.75rem}
-#cc .c-pair-shots figcaption{margin-top:7px;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+#cc .c-pair-scr{margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:3px;background:var(--bg-2);color:var(--muted);font-size:.75rem}
+#cc .c-pair-shots figcaption{margin-top:9px;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 #cc .c-pair-body{display:flex;flex-direction:column;gap:2px;flex:1;padding:14px 18px 18px}
 #cc .c-pair-ind{font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
 #cc .c-pair h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em}
@@ -125,8 +126,8 @@ def cards_section():
         lis.append(
             '        <li class="c-pair c-rv">\n'
             '          <div class="c-pair-shots">\n'
-            '            <figure><img src="%s" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the %s sample website"><figcaption>%s</figcaption></figure>\n'
-            '            <figure><img src="%s" width="1440" height="900" loading="lazy" decoding="async" alt="%s sample CRM, %s screen"><figcaption>%s</figcaption></figure>\n'
+            '            <figure><div class="c-pair-scr"><img src="%s" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the %s sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>%s</figcaption></figure>\n'
+            '            <figure><div class="c-pair-scr"><img src="%s" width="1440" height="900" loading="lazy" decoding="async" alt="%s sample CRM, %s screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>%s</figcaption></figure>\n'
             '          </div>\n'
             '          <div class="c-pair-body">\n'
             '            <p class="c-pair-ind">%s</p>\n'
@@ -195,12 +196,16 @@ PAGE_CSS = """<style id="focus-css">
 .fx-list h3{font-family:var(--sans);font-weight:500;font-size:1.05rem;color:var(--ink);margin:0 0 .3rem;line-height:1.4}
 .fx-list p{font-size:.93rem;color:var(--ink-2);line-height:1.7;margin:0}
 .fx-shot{margin:0;min-width:0}
-.fx-shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--hairline-strong);box-shadow:0 30px 70px -40px rgba(0,0,0,.9);background:var(--surface)}
-.fx-shot.is-m img{max-width:300px;margin-inline:auto;border-radius:30px}
+.fx-shot img,.fx-site img{display:block;width:100%;height:auto;background:var(--surface)}
+.fx-lap-scr{margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+.fx-lap-scr img{border-radius:3px}
+.fx-lap-base{position:relative;height:9px;margin-top:2px;background:linear-gradient(#2c2721,#120f0c 60%,#080706);border-top:1px solid rgba(201,168,106,.65);border-radius:1px 1px 12px 12px/1px 1px 8px 8px;box-shadow:0 30px 60px -22px rgba(201,168,106,.28)}
+.fx-lap-base::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15%;height:3px;border-radius:0 0 7px 7px;background:#050505}
+.fx-phone{max-width:300px;margin-inline:auto;padding:4px;border-radius:20px;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75),0 36px 70px -28px rgba(0,0,0,.85)}
+.fx-phone img{border-radius:16px}
 .fx-shot figcaption{margin:1rem auto 0;max-width:46ch;font-size:.86rem;color:var(--ink-3);line-height:1.6;text-align:center}
 .fx-shot figcaption b{display:block;font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
 .fx-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.fx-thumbs img{border-radius:10px}
 .fx-checks{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.95rem}
 .fx-checks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:.8rem;color:var(--ink-2);line-height:1.6}
 .fx-checks svg{width:19px;height:19px;color:var(--gold);margin-top:.2rem}
@@ -222,7 +227,8 @@ PAGE_CSS = """<style id="focus-css">
 .fx-gallery{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .fx-site{display:flex;flex-direction:column;border:1px solid var(--hairline);border-radius:16px;background:var(--surface);overflow:hidden;transition:border-color .3s}
 .fx-site:hover{border-color:var(--hairline-strong)}
-.fx-site img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--hairline);background:var(--surface-2);color:var(--ink-3);font-size:.8rem}
+.fx-site-shot{padding:18px 16px 6px}
+.fx-site img{aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--surface-2);color:var(--ink-3);font-size:.8rem}
 .fx-site-body{display:flex;flex-direction:column;gap:.2rem;padding:1.1rem 1.25rem 1.3rem;flex:1}
 .fx-site-tag{align-self:flex-start;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--hairline-strong);border-radius:999px;padding:.25rem .6rem;margin-bottom:.5rem}
 .fx-site-ind{font-size:.8rem;color:var(--ink-3)}
@@ -306,8 +312,15 @@ def closing(eyebrow, title_html, body):
 def figure(slug, file, extra_cls=""):
     path, cap, biz, mobile = screen(slug, file)
     w, h = (585, 1266) if mobile else (1440, 900)
-    return ('<figure class="fx-shot%s%s"><img src="%s" width="%d" height="%d" loading="lazy" decoding="async" alt="%s"><figcaption><b>Sample screen &middot; %s</b>%s</figcaption></figure>'
-            % (" is-m" if mobile else "", extra_cls, path, w, h, at(biz + ": " + cap), t(biz), t(cap)))
+    im = '<img src="%s" width="%d" height="%d" loading="lazy" decoding="async" alt="%s">' % (path, w, h, at(biz + ": " + cap))
+    dev = '<div class="fx-phone">%s</div>' % im if mobile else lap(im)
+    return ('<figure class="fx-shot%s%s">%s<figcaption><b>Sample screen &middot; %s</b>%s</figcaption></figure>'
+            % (" is-m" if mobile else "", extra_cls, dev, t(biz), t(cap)))
+
+
+def lap(im):
+    """Laptop C, the owner's approved frame."""
+    return '<div class="fx-lap"><div class="fx-lap-scr">%s</div><div class="fx-lap-base" aria-hidden="true"></div></div>' % im
 
 
 def set_meta(src, desc):
@@ -471,9 +484,11 @@ def websites_top(old):
         if "slug" in p:
             links += '<a href="%s">%s</a>' % (at(industry_href(p)), t(CONTENT["home"]["sections"]["pairs"]["card_link_label"]))
         sites.append(
-            '      <li class="fx-site reveal"><img src="%s" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the %s sample website">'
+            '      <li class="fx-site reveal"><div class="fx-site-shot">%s</div>'
             '<div class="fx-site-body"><span class="fx-site-tag">Sample website</span><span class="fx-site-ind">%s</span><h3>%s</h3>'
-            '<p class="fx-site-links">%s</p></div></li>' % (site_shot(p), at(p["business"]), t(label), t(p["business"]), links))
+            '<p class="fx-site-links">%s</p></div></li>' % (
+                lap('<img src="%s" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the %s sample website">'
+                    % (site_shot(p), at(p["business"]))), t(label), t(p["business"]), links))
     s = w["samples"]
     return (hero(old, w["eyebrow"], em(w["h1"], "sends every lead to your CRM."), w["sub"])
             + '  </div>\n</section>\n\n'

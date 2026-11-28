@@ -80,7 +80,9 @@ def hint_rel(hint):
 SIZES = {"desktop": (1440, 900), "website": (1200, 750), "phone": (585, 1266)}
 
 
-def frame(R, found, kind, alt, label, cls="", eager=False):
+def frame(R, found, kind, alt, label, cls="", eager=False, cap="top"):
+    """Laptop C / Phone C (the owner's approved frames). The label is a chip outside the screen:
+    below a phone; above a laptop, or below it with cap="bottom" where something sits above it."""
     ok, rel = found
     w, h = SIZES[kind]
     if ok:
@@ -88,10 +90,15 @@ def frame(R, found, kind, alt, label, cls="", eager=False):
         inner = f'<img src="{R}{rel}" alt="{e(alt)}" width="{w}" height="{h}" {load_attr} decoding="async">'
     else:
         inner = f'<div class="ph" role="img" aria-label="{e(alt)}"><span>{e(label)}<br><small>Image on the way</small></span></div>'
+    screen = f'<div class="screen" style="aspect-ratio:{w}/{h}">{inner}</div>'
+    tag = f'<figcaption class="tag">{e(label)}</figcaption>'
     if kind == "phone":
-        return f'<figure class="phone {cls}"><span class="tag">{e(label)}</span><div class="screen" style="aspect-ratio:{w}/{h}">{inner}</div></figure>'
-    return (f'<figure class="browser {cls}"><div class="bar"><i></i><i></i><i></i><span class="tag">{e(label)}</span></div>'
-            f'<div class="screen" style="aspect-ratio:{w}/{h}">{inner}</div></figure>')
+        return f'<figure class="phone {cls}"><div class="phone-body">{screen}</div>{tag}</figure>'
+    if cap == "bottom":
+        return (f'<figure class="laptop cap-b {cls}"><div class="lap-screen">{screen}</div>'
+                f'<div class="lap-base" aria-hidden="true"></div>{tag}</figure>')
+    return (f'<figure class="laptop {cls}">{tag}<div class="lap-screen">{screen}</div>'
+            f'<div class="lap-base" aria-hidden="true"></div></figure>')
 
 
 def logo(R):
@@ -250,8 +257,8 @@ def pair_stage(R, p, eager=False):
     m = first_screen(p["slug"], "phone")
     biz = p["business"]
     web = frame(R, web_rel(p), "website", f"{biz} sample website home page", ps["card_website_label"], "st-web", eager)
-    crm = (frame(R, crm_rel(p["slug"], d["file"]), "desktop", f"{biz} sample CRM: {d['role']}", ps["card_crm_label"], "st-crm", eager)
-           if d else frame(R, (False, ""), "desktop", f"{biz} sample CRM", ps["card_crm_label"], "st-crm"))
+    crm = (frame(R, crm_rel(p["slug"], d["file"]), "desktop", f"{biz} sample CRM: {d['role']}", ps["card_crm_label"], "st-crm", eager, "bottom")
+           if d else frame(R, (False, ""), "desktop", f"{biz} sample CRM", ps["card_crm_label"], "st-crm", cap="bottom"))
     ph = frame(R, crm_rel(p["slug"], m["file"]), "phone", f"{biz} sample CRM: {m['role']}", "Sample", "st-phone") if m else ""
     flow = ('<svg class="flow" viewBox="0 0 120 60" aria-hidden="true"><path d="M4 8 C 60 8, 60 52, 112 52" fill="none" '
             'stroke="currentColor" stroke-width="2" stroke-dasharray="5 5"/><path d="M106 46 L114 52 L106 58" fill="none" '

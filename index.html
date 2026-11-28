@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261128a">
+<link rel="stylesheet" href="assets/site.css?v=20261128b">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QCCJ3HP11"></script>
 <script>
@@ -264,8 +264,8 @@
 #cc .c-panel-x{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);cursor:pointer}
 #cc .c-panel-x svg{width:14px;height:14px}
 #cc .c-p-stage{position:relative;margin-bottom:22px}
-#cc .c-p-stage .c-win{border-radius:12px}
-#cc .c-p-stage .c-win-bar{height:24px}
+#cc .c-p-stage .c-win{position:relative;margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+#cc .c-p-stage .c-win img{border-radius:3px}
 #cc .c-p-stage .c-phone{width:min(250px,70%);margin:0 auto;padding:8px;border-radius:38px}
 #cc .c-p-stage .c-phone img{border-radius:30px}
 #cc .c-view-p{margin:0 0 18px}
@@ -314,8 +314,9 @@ body.drawer-open{overflow:hidden}
 #cc .c-pair{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--shadow);overflow:hidden;transition:border-color 200ms ease}
 #cc .c-pair-shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px 12px 0}
 #cc .c-pair-shots figure{margin:0;min-width:0}
-#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line-2);background:var(--bg-2);color:var(--muted);font-size:.75rem}
-#cc .c-pair-shots figcaption{margin-top:7px;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+#cc .c-pair-scr{margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:3px;background:var(--bg-2);color:var(--muted);font-size:.75rem}
+#cc .c-pair-shots figcaption{margin-top:9px;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 #cc .c-pair-body{display:flex;flex-direction:column;gap:2px;flex:1;padding:14px 18px 18px}
 #cc .c-pair-ind{font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
 #cc .c-pair h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em}
@@ -509,8 +510,8 @@ body.drawer-open{overflow:hidden}
       <ul class="c-pairs">
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/everline-home-services-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Everline Home Services sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/home-services/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Everline Home Services sample CRM, Owner · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/everline-home-services-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Everline Home Services sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/home-services/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Everline Home Services sample CRM, Owner · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Home Services</p>
@@ -521,8 +522,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/bramlett-motor-co-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Bramlett Motor Co. sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/car-lots/1-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Bramlett Motor Co. sample CRM, Owner · Home screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/bramlett-motor-co-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Bramlett Motor Co. sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/car-lots/1-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Bramlett Motor Co. sample CRM, Owner · Home screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Car Lots</p>
@@ -533,8 +534,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/apex-auto-werks-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Apex Auto Werks sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/auto-repair/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Apex Auto Werks sample CRM, Owner · Service today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/apex-auto-werks-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Apex Auto Werks sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/auto-repair/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Apex Auto Werks sample CRM, Owner · Service today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Auto Repair</p>
@@ -545,8 +546,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/kestrel-lane-detail-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Kestrel Lane Detail Co. sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/auto-detailing/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Kestrel Lane Detail Co. sample CRM, Owner · Home screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/kestrel-lane-detail-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Kestrel Lane Detail Co. sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/auto-detailing/1-owner-home-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Kestrel Lane Detail Co. sample CRM, Owner · Home screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Auto Detailing</p>
@@ -557,8 +558,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/elena-marsh-realty-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Elena Marsh Real Estate sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/real-estate/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Elena Marsh Real Estate sample CRM, Agent · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/elena-marsh-realty-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Elena Marsh Real Estate sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/real-estate/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Elena Marsh Real Estate sample CRM, Agent · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Real Estate</p>
@@ -569,8 +570,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/larkspur-strength-club-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Larkspur Strength Club sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/fitness/1-dashboard-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Larkspur Strength Club sample CRM, Owner · Dashboard screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/larkspur-strength-club-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Larkspur Strength Club sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/fitness/1-dashboard-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Larkspur Strength Club sample CRM, Owner · Dashboard screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Gyms &amp; Fitness</p>
@@ -581,8 +582,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/lumen-wellness-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Lumen Wellness sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/salon-spa/1-owner-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Lumen Wellness sample CRM, Owner · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/lumen-wellness-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Lumen Wellness sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/salon-spa/1-owner-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Lumen Wellness sample CRM, Owner · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Salon &amp; Spa</p>
@@ -593,8 +594,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/ember-and-oak-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Ember &amp; Oak sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/restaurants/1-tonight-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Ember &amp; Oak sample CRM, Owner · Tonight screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/ember-and-oak-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Ember &amp; Oak sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/restaurants/1-tonight-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Ember &amp; Oak sample CRM, Owner · Tonight screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Restaurants &amp; Bars</p>
@@ -605,8 +606,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/brightwater-dental-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Brightwater Dental sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/medical-dental/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Brightwater Dental sample CRM, Dentist · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/brightwater-dental-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Brightwater Dental sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/medical-dental/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Brightwater Dental sample CRM, Dentist · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Medical &amp; Dental</p>
@@ -617,8 +618,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/halcourt-vale-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Halcourt &amp; Vale sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/legal/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Halcourt &amp; Vale sample CRM, Attorney · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/halcourt-vale-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Halcourt &amp; Vale sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/legal/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Halcourt &amp; Vale sample CRM, Attorney · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Law Firms</p>
@@ -629,8 +630,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/field-and-fawn-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Field &amp; Fawn sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/retail/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Field &amp; Fawn sample CRM, Owner · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/field-and-fawn-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Field &amp; Fawn sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/retail/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Field &amp; Fawn sample CRM, Owner · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Retail &amp; Local Shops</p>
@@ -641,8 +642,8 @@ body.drawer-open{overflow:hidden}
         </li>
         <li class="c-pair c-rv">
           <div class="c-pair-shots">
-            <figure><img src="assets/img/websites/wellspring-animal-hospital-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Wellspring Animal Hospital sample website"><figcaption>Sample website</figcaption></figure>
-            <figure><img src="assets/img/crm/industries/vet/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Wellspring Animal Hospital sample CRM, Doctor · Today screen"><figcaption>Sample CRM</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/websites/wellspring-animal-hospital-home-d.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the Wellspring Animal Hospital sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample website</figcaption></figure>
+            <figure><div class="c-pair-scr"><img src="assets/img/crm/industries/vet/1-today-d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Wellspring Animal Hospital sample CRM, Doctor · Today screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>Sample CRM</figcaption></figure>
           </div>
           <div class="c-pair-body">
             <p class="c-pair-ind">Vet Clinics</p>
@@ -777,7 +778,7 @@ body.drawer-open{overflow:hidden}
     <div class="c-panel-top"><span class="c-panel-eye">Inside the CRM</span><button class="c-panel-x" id="panel-x" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
     <div class="c-view c-view-p" role="group" aria-label="Show the screen as"><button type="button" data-v="d" aria-pressed="true">Desktop</button><button type="button" data-v="m" aria-pressed="false">Mobile</button></div>
     <div class="c-p-stage" id="p-stage">
-      <div class="c-win c-vd"><span class="c-win-bar" aria-hidden="true"><i></i><i></i><i></i></span><img id="p-d" width="720" height="540" alt=""></div>
+      <div class="c-win c-vd"><img id="p-d" width="720" height="540" alt=""></div><div class="c-lap-base" aria-hidden="true"></div>
       <div class="c-phone c-vmo"><img id="p-m" width="585" height="1266" alt=""></div>
     </div>
     <h3 id="p-title"></h3>
@@ -853,7 +854,7 @@ body.drawer-open{overflow:hidden}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/site.js?v=20261126a"></script>
-<script src="assets/see-your-business.js?v=20261127a"></script>
+<script src="assets/see-your-business.js?v=20261128a"></script>
 <script>
 (function(){
   var cc=document.getElementById('cc'); cc.classList.add('c-js');

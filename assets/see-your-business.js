@@ -74,8 +74,12 @@ function css(){
   '.syb-note{font-size:13px;color:'+C.ink3+'}'+
   '.syb-shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}'+
   '.syb-shots figure{margin:0}'+
-  '.syb-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:10px;border:1px solid '+C.line+';background:'+C.surface+';color:'+C.ink3+';font-size:12px}'+
-  '.syb-shots figcaption{margin-top:7px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:'+C.gold+'}'+
+  /* Laptop C, the owner's approved frame: dark screen with a gold hairline, base bar under it */
+  '.syb-scr{margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}'+
+  '.syb-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:3px;background:'+C.surface+';color:'+C.ink3+';font-size:12px}'+
+  '.syb-base{position:relative;height:9px;margin-top:2px;background:linear-gradient(#2c2721,#120f0c 60%,#080706);border-top:1px solid rgba(201,168,106,.65);border-radius:1px 1px 12px 12px/1px 1px 8px 8px;box-shadow:0 30px 60px -22px rgba(201,168,106,.28)}'+
+  '.syb-base::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15%;height:3px;border-radius:0 0 7px 7px;background:#050505}'+
+  '.syb-shots figcaption{margin-top:9px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:'+C.gold+'}'+
   '.syb-acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}'+
   '.syb-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;font:500 15px/1 '+FB+';text-decoration:none;border:1px solid transparent;transition:background-color .2s,border-color .2s}'+
   '.syb-gold{background:'+C.gold+';color:'+C.ground+'}.syb-gold:hover{background:'+C.goldBright+'}'+
@@ -105,8 +109,8 @@ function build(){
     '<div class="syb-show" aria-live="polite">'+
       '<div class="syb-biz"><h3 id="syb-biz"></h3><span class="syb-note">'+esc(TEXT.note)+'</span></div>'+
       '<div class="syb-shots">'+
-        '<figure><img id="syb-web" width="1200" height="750" alt=""><figcaption>'+esc(TEXT.web)+'</figcaption></figure>'+
-        '<figure><img id="syb-crm" width="1440" height="900" alt=""><figcaption>'+esc(TEXT.crm)+'</figcaption></figure>'+
+        '<figure><div class="syb-scr"><img id="syb-web" width="1200" height="750" alt=""></div><div class="syb-base" aria-hidden="true"></div><figcaption>'+esc(TEXT.web)+'</figcaption></figure>'+
+        '<figure><div class="syb-scr"><img id="syb-crm" width="1440" height="900" alt=""></div><div class="syb-base" aria-hidden="true"></div><figcaption>'+esc(TEXT.crm)+'</figcaption></figure>'+
       '</div>'+
       '<div class="syb-acts"><a class="syb-btn syb-gold" href="'+TEXT.ctaHref+'">'+esc(TEXT.cta)+'</a>'+
       '<a class="syb-btn syb-line" id="syb-more" href="#">'+esc(TEXT.more)+'</a>'+

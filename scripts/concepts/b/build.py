@@ -68,27 +68,28 @@ def split_words(text):
 def img(src, alt, w, h, lazy=True):
     return (f'<img src="{src}" alt="{e(alt)}" width="{w}" height="{h}"'
             f'{" loading=\"lazy\"" if lazy else ""} decoding="async"'
-            ' onerror="this.parentNode.classList.add(\'is-missing\')">')
+            ' onerror="this.closest(\'.dev\').classList.add(\'is-missing\')">')
+
+
+# Laptop C / Phone C, the owner's approved frames. The label is a chip under the device, never on the screen.
+def laptop(kind, src, alt, w, h, label, lazy, cls):
+    lab = f'<figcaption class="chip">{e(label)}</figcaption>' if label else ""
+    return (f'<figure class="dev dev-lap {kind} {cls}" data-missing="{e(alt)}">'
+            f'<div class="lap-screen">{img(src, alt, w, h, lazy)}</div><div class="lap-base" aria-hidden="true"></div>{lab}</figure>')
 
 
 def desk(src, alt, label="", lazy=True, cls=""):
-    lab = f'<figcaption class="chip">{e(label)}</figcaption>' if label else ""
-    return (f'<figure class="dev dev-desk {cls}" data-missing="{e(alt)}">'
-            f'<div class="dev-bar" aria-hidden="true"><i></i><i></i><i></i></div>'
-            f'{img(src, alt, 1440, 900, lazy)}{lab}</figure>')
+    return laptop("dev-desk", src, alt, 1440, 900, label, lazy, cls)
 
 
 def phone(src, alt, label="", lazy=True, cls=""):
     lab = f'<figcaption class="chip">{e(label)}</figcaption>' if label else ""
     return (f'<figure class="dev dev-phone {cls}" data-missing="{e(alt)}">'
-            f'{img(src, alt, 585, 1266, lazy)}{lab}</figure>')
+            f'<div class="phone-body">{img(src, alt, 585, 1266, lazy)}</div>{lab}</figure>')
 
 
 def browser(src, alt, label="", lazy=True, cls=""):
-    lab = f'<figcaption class="chip">{e(label)}</figcaption>' if label else ""
-    return (f'<figure class="dev dev-browser {cls}" data-missing="{e(alt)}">'
-            f'<div class="dev-bar" aria-hidden="true"><i></i><i></i><i></i><span></span></div>'
-            f'{img(src, alt, 1200, 750, lazy)}{lab}</figure>')
+    return laptop("dev-browser", src, alt, 1200, 750, label, lazy, cls)
 
 
 def shot(cx, slug, s, lazy=True, cls=""):

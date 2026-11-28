@@ -254,9 +254,9 @@ STRIP_CSS = """<style id="crm-strip-css">
 .crm-strip figcaption{margin-top:.9rem;font-size:.82rem;color:var(--ink-3);text-align:center}
 .crm-strip figure.cbi-lapfig{flex:1 1 0}
 .crm-strip img{display:block;width:100%;height:auto}
-.cbi-win{margin:0 6%;padding:6px 6px 9px;background:#060606;border-radius:12px 12px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
+.cbi-win{margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
 .cbi-win img{border-radius:3px}
-.cbi-lap-base{position:relative;height:8px;margin-top:2px;background:linear-gradient(#2c2721,#120f0c 60%,#080706);border-top:1px solid rgba(201,168,106,.65);border-radius:1px 1px 12px 12px/1px 1px 8px 8px}
+.cbi-lap-base{position:relative;height:9px;margin-top:2px;background:linear-gradient(#2c2721,#120f0c 60%,#080706);border-top:1px solid rgba(201,168,106,.65);border-radius:1px 1px 12px 12px/1px 1px 8px 8px;box-shadow:0 30px 60px -22px rgba(201,168,106,.28)}
 .cbi-lap-base::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15%;height:3px;border-radius:0 0 7px 7px;background:#050505}
 .cbi-phone{padding:4px;border-radius:20px;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75),0 36px 70px -28px rgba(0,0,0,.85)}
 .cbi-phone img{border-radius:16px}
@@ -360,9 +360,8 @@ def build_strips():
         s = p.read_text(encoding="utf-8")
         assert s.count("<!-- crm-screens-slot -->") == 1, page
         s = SLOT_RE.sub(lambda m: "<!-- crm-screens-slot -->\n" + block + "\n<!-- /crm-screens-slot -->", s)
-        if page != "industry-custom.html":
-            s = re.sub(r'<style id="crm-strip-css">.*?</style>\n', "", s, flags=re.S)
-            s = s.replace("</head>", STRIP_CSS + "</head>", 1)
+        s = re.sub(r'<style id="crm-strip-css">.*?</style>\n', "", s, flags=re.S)
+        s = s.replace("</head>", STRIP_CSS + "</head>", 1)
         p.write_text(s, encoding="utf-8", newline="\n")
 
 

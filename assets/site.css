@@ -1085,15 +1085,14 @@ body.drawer-open .ts-callbar{ display:none !important; } /* don't overlap the op
 
 /* ===================== Demo-site showcase (industry pages) ===================== */
 .demoshow{ position:relative; max-width:880px; margin:clamp(2.6rem,5vw,4rem) auto 0; padding-bottom:clamp(18px,4vw,38px); }
-.demoshow-browser{ margin:0; border:1px solid var(--hairline); border-radius:10px; overflow:hidden; background:var(--surface); box-shadow:0 50px 110px -42px rgba(0,0,0,.8); }
-.demoshow-bar{ display:flex; gap:7px; align-items:center; padding:11px 15px; background:var(--surface-2); border-bottom:1px solid var(--hairline-soft); }
-.demoshow-bar i{ width:9px; height:9px; border-radius:50%; background:var(--hairline-strong); }
-.demoshow-bar i:first-child{ background:rgba(201,168,106,.5); }
-.demoshow-browser img{ display:block; width:100%; height:auto; }
-.demoshow-phone{ margin:0; position:absolute; right:clamp(-8px,-1vw,0px); bottom:0; width:22%; max-width:188px; padding:6px;
-  background:linear-gradient(160deg,#241d14,#0d0a06); border-radius:24px; box-shadow:0 30px 62px -18px rgba(0,0,0,.9), 0 0 0 1px var(--hairline); }
-.demoshow-phone::before{ content:""; position:absolute; top:11px; left:50%; transform:translateX(-50%); width:30%; height:4px; border-radius:2px; background:rgba(255,255,255,.22); z-index:2; }
-.demoshow-phone img{ display:block; width:100%; height:auto; border-radius:18px; }
+/* device frames: the approved Laptop C (thin black screen, gold hairline, base) + Phone C (squared, gold edge) */
+.demoshow-browser{ position:relative; margin:0 6%; padding:7px 7px 10px; background:#060606; border-radius:13px 13px 3px 3px; overflow:hidden; box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9); }
+.demoshow-browser img{ display:block; width:100%; height:auto; border-radius:3px; }
+.demoshow-lapbase{ position:relative; height:9px; margin-top:2px; background:linear-gradient(#2c2721,#120f0c 60%,#080706); border-top:1px solid rgba(201,168,106,.65); border-radius:1px 1px 12px 12px/1px 1px 8px 8px; box-shadow:0 30px 60px -22px rgba(201,168,106,.28); }
+.demoshow-lapbase::before{ content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); width:15%; height:3px; border-radius:0 0 7px 7px; background:#050505; }
+.demoshow-phone{ margin:0; position:absolute; z-index:2; right:clamp(-8px,-1vw,0px); bottom:0; width:22%; max-width:188px; padding:4px;
+  background:#040404; border-radius:20px; box-shadow:0 0 0 1px rgba(201,168,106,.75),0 36px 70px -28px rgba(0,0,0,.85); }
+.demoshow-phone img{ display:block; width:100%; height:auto; border-radius:16px; }
 .demoshow-actions{ text-align:center; margin-top:clamp(2rem,3.5vw,3rem); }
 .demo-cta{ display:inline-flex; align-items:center; gap:.65rem; padding:1rem 2rem; cursor:pointer;
   font-family:var(--sans); font-weight:600; font-size:1rem; letter-spacing:.005em; color:#160f06;

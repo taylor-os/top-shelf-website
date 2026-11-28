@@ -348,7 +348,7 @@ def test_popup_replaced():
         s = read(path)
         if "gap-quiz.js" in s:
             old.append(rel(path))
-        if "assets/see-your-business.js?v=20261127a" in s:
+        if "assets/see-your-business.js?v=20261128a" in s:
             loaders.append(rel(path))
     assert not old, "%d pages still load gap-quiz.js: %s" % (len(old), old[:10])
     assert len(loaders) >= 684, len(loaders)

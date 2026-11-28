@@ -95,6 +95,19 @@ def screen_img(r, p, s):
     return img(r, s["rel"], alt, 585 if phone else 1440, 1266 if phone else 900, "phone" if phone else "desk")
 
 
+# Laptop C / Phone C, the owner's approved frames (gold hairline).
+def laptop(inner, cls=""):
+    return f'<div class="laptop {cls}"><div class="lap-screen">{inner}</div><div class="lap-base" aria-hidden="true"></div></div>'
+
+
+def phone_dev(inner, cls=""):
+    return f'<div class="phone {cls}"><div class="phone-body">{inner}</div></div>'
+
+
+def device(r, p, s, cls=""):
+    return (phone_dev if s["device"] == "phone" else laptop)(screen_img(r, p, s), cls)
+
+
 PAIR_BY_SLUG = {p["slug"]: p for p in PAIRS}
 
 
@@ -256,8 +269,8 @@ def build_home():
     hero_art = ""
     if desk and phone:
         hero_art = (f'<figure class="hero-art">{label_sample()}'
-                    f'<div class="taped tilt-l">{screen_img("{R}", first, desk)}</div>'
-                    f'<div class="taped tilt-r over">{screen_img("{R}", first, phone)}</div>'
+                    f'{laptop(screen_img("{R}", first, desk))}'
+                    f'{phone_dev(screen_img("{R}", first, phone), "over")}'
                     f'<figcaption><em>{e(first["business"])}</em>, {e(desk["role"])}. {e(desk["caption"])}</figcaption></figure>')
     cards = "".join(f'<li><h3>{e(c["title"])}</h3><p>{e(c["body"])}</p></li>' for c in s["crm"]["cards"])
     pairs = []
@@ -268,8 +281,8 @@ def build_home():
         pairs.append(
             f'<li class="pair"><p class="kicker">{e(p["industry_label"])}</p>'
             f'<h3><a href="{{C}}industries.html#{p["slug"]}">{e(p["business"])}</a></h3>'
-            f'<div class="pair-shots"><figure><span class="label">{e(s["pairs"]["card_website_label"])}</span>{website_img("{R}", p)}</figure>'
-            f'<figure><span class="label">{e(s["pairs"]["card_crm_label"])}</span>{crm_html}</figure></div>'
+            f'<div class="pair-shots"><figure><span class="label">{e(s["pairs"]["card_website_label"])}</span>{laptop(website_img("{R}", p))}</figure>'
+            f'<figure><span class="label">{e(s["pairs"]["card_crm_label"])}</span>{laptop(crm_html)}</figure></div>'
             f'<p class="pair-links"><a href="{{C}}industries/{p["slug"]}-website.html">Website</a>'
             f'<a href="{{C}}industries/{p["slug"]}-crm.html">CRM</a></p></li>')
     picks = [x for x in C["crm"]["faq"] if x["q"] in s["faq"]["pick"]]
@@ -330,7 +343,7 @@ def build_crm():
             if hit:
                 p, s = hit
                 fig = (f'<figure class="g-fig {"is-phone" if s["device"] == "phone" else ""}">{label_sample("Sample screen")}'
-                       f'<div class="frame">{screen_img("{R}", p, s)}</div>'
+                       f'{device("{R}", p, s)}'
                        f'<figcaption><em>{e(p["business"])}</em>, {e(s["role"])}. {e(s["caption"])}</figcaption></figure>')
                 break
         if not fig:  # no screen for this group: show the 12 trades as a contents list
@@ -378,7 +391,7 @@ def build_websites():
     cards = []
     for p in PAIRS:
         cards.append(
-            f'<li class="site-card"><figure>{label_sample("Sample website")}<div class="frame">{website_img("{R}", p)}</div></figure>'
+            f'<li class="site-card"><figure>{label_sample("Sample website")}{laptop(website_img("{R}", p))}</figure>'
             f'<p class="kicker">{e(p["industry_label"])}</p><h3>{e(p["business"])}</h3>'
             f'<p>{e(ind(p["slug"])["website_intro"])}</p>'
             f'<p class="pair-links"><a href="{{R}}{p["website_dir"]}/index.html">Open the sample site</a>'
@@ -388,7 +401,7 @@ def build_websites():
         shot = "assets/img/websites/linewright-mobile-dent-home-d.webp"
         im = img("{R}", shot, "Sample website: Linewright Mobile Dent Co. home page", 1200, 900) if exists(shot) else ""
         cards.append(
-            f'<li class="site-card"><figure>{label_sample("Sample website")}<div class="frame">{im}</div></figure>'
+            f'<li class="site-card"><figure>{label_sample("Sample website")}{laptop(im)}</figure>'
             f'<p class="kicker">Auto</p><h3>Linewright Mobile Dent Co.</h3><p>{e(w["samples"]["extra_note"])}</p>'
             f'<p class="pair-links"><a href="{{R}}{extra_dir}/index.html">Open the sample site</a></p></li>')
     body = f"""
@@ -436,9 +449,9 @@ def build_industries():
   <h2><span class="aday">A day at</span> {e(p['business'])}</h2>
   <p class="pull">{e(pull(d['headline']))}</p></header>
   <div class="spread">
-    <figure class="taped tilt-l">{label_sample('Sample website')}{website_img('{R}', p)}
+    <figure>{label_sample('Sample website')}{laptop(website_img('{R}', p))}
       <figcaption><a href="{{C}}industries/{p['slug']}-website.html">The website</a></figcaption></figure>
-    <figure class="taped tilt-r">{label_sample('Sample CRM')}{crm_html}
+    <figure>{label_sample('Sample CRM')}{laptop(crm_html)}
       <figcaption><a href="{{C}}industries/{p['slug']}-crm.html">The CRM</a></figcaption></figure>
   </div>
   <div class="day-copy"><p>{e(d['crm_intro'])}</p><ul class="checks">{gets}</ul>
@@ -470,7 +483,7 @@ def build_industry_pages():
         gets = "".join(f"<li>{e(x)}</li>" for x in d["what_owners_get"])
         if sc:
             def fig(s, cls):
-                return (f'<figure class="shot {cls}"><div class="frame">{screen_img("{R}", p, s)}</div>'
+                return (f'<figure class="shot {cls}">{device("{R}", p, s)}'
                         f'<figcaption><span class="role">{e(s["role"])}</span> {e(s["caption"])}</figcaption></figure>')
             desks = "".join(fig(s, "is-desk") for s in sc if s["device"] != "phone")
             phones = "".join(fig(s, "is-phone") for s in sc if s["device"] == "phone")
@@ -494,7 +507,7 @@ def build_industry_pages():
   <div><h2>What owners get</h2><ul class="checks">{gets}</ul>{ctas()}</div>
   <a class="pairbox" href="{{C}}industries/{p['slug']}-website.html">
     <span class="kicker">The same business</span><span class="h3">{e(poss(p['business']))} website</span>
-    <span class="pb-img">{website_img('{R}', p)}</span><span class="more">See the website</span></a>
+    <div class="pb-img">{laptop(website_img('{R}', p))}</div><span class="more">See the website</span></a>
 </div></section>
 <section class="band"><div class="wrap">{next_link(n)}</div></section>"""
         page(f"industries/{p['slug']}-crm.html", f"A day at {p['business']} · sample CRM (Concept C)",
@@ -512,8 +525,8 @@ def build_industry_pages():
   <p class="pair-links"><a href="{{R}}{p['website_dir']}/index.html">Open the live sample site</a></p>
 </div></section>
 <section class="band"><div class="wrap site-spread">
-  <figure class="taped tilt-l wide">{label_sample('Sample website')}{website_img('{R}', p, 'd')}</figure>
-  <figure class="taped tilt-r narrowfig">{label_sample('Sample website')}{website_img('{R}', p, 'm')}</figure>
+  <figure class="wide">{label_sample('Sample website')}{laptop(website_img('{R}', p, 'd'))}</figure>
+  <figure class="narrowfig">{label_sample('Sample website')}{phone_dev(website_img('{R}', p, 'm'))}</figure>
 </div></section>
 <section class="band alt"><div class="wrap split">
   <div class="split-head"><p class="bigprice"><span class="circled">$499{CIRCLE}</span></p>
@@ -524,7 +537,7 @@ def build_industry_pages():
   <div><h2>{e(C['home']['sections']['websites']['h'])}</h2><p class="lede">{e(C['home']['sections']['websites']['body'])}</p>{ctas()}</div>
   <a class="pairbox" href="{{C}}industries/{p['slug']}-crm.html">
     <span class="kicker">The same business</span><span class="h3">{e(poss(p['business']))} CRM</span>
-    <span class="pb-img">{crm_tile}</span><span class="more">See the CRM</span></a>
+    <div class="pb-img">{laptop(crm_tile)}</div><span class="more">See the CRM</span></a>
 </div></section>"""
         page(f"industries/{p['slug']}-website.html", f"{p['business']} · sample website (Concept C)",
              d["website_intro"], body, "industries.html")
