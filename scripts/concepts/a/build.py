@@ -480,6 +480,12 @@ def websites_body(P, R):
 
 
 # ---------------------------------------------------------------- industries hub
+def pitch(headline):
+    """'Car lots: every lead, deal and payment in one place' -> 'Every lead, deal and payment in one place' (the card already names the industry)."""
+    rest = headline.split(": ", 1)[-1]
+    return rest[:1].upper() + rest[1:]
+
+
 def industries_body(P, R):
     ind = C["industries"]
     ps = C["home"]["sections"]["pairs"]
@@ -493,7 +499,7 @@ def industries_body(P, R):
   <header class="hub-head"><span class="hub-swatch" aria-hidden="true"></span><div>
     <h2 class="hub-ind">{e(p["industry_label"])}</h2>
     <p class="hub-biz">Sample business: <strong>{e(p["business"])}</strong></p></div></header>
-  <p class="hub-line">{e(ind["per_industry"][p["slug"]]["headline"])}</p>
+  <p class="hub-line">{e(pitch(ind["per_industry"][p["slug"]]["headline"]))}</p>
   <div class="hub-pair">{web}{crm}</div>
   <div class="panel-links"><a class="btn sm" href="{P}industries/{p["slug"]}-crm.html">See the CRM</a><a class="btn sm ghost" href="{P}industries/{p["slug"]}-website.html">See the website</a></div>
 </article>''')

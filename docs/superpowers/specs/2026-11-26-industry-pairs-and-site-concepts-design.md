@@ -87,3 +87,6 @@ Rule for "same look": each CRM theme is regenerated from its website's brand col
 - Exact palettes per concept; motion level; which competitor ideas each concept borrows (cited in the concept's notes).
 - Names and stories for the 3 new sample websites, following the program BRIEF format, matched to the existing CRM businesses.
 - Persona details for the customer agents.
+
+
+> **Update 2026-11-28:** the owner confirmed review requests can be set to send automatically when a job is finalized ("It can be set up so when the job is finalized it automatically sends a review request"). Copy now says they go out on their own, with one-tap manual sending also available. Earlier lines in this doc that limit it to "one tap" are superseded.

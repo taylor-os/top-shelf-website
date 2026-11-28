@@ -246,3 +246,6 @@ Key: (a) in the facts file · (b) in the code but not in facts, needs Taylor's O
 7. **Plain outcome words, not AI hype.**
 
 Don't copy unsourced growth percentages, "#1" badges or customer counts.
+
+
+> **Update 2026-11-28:** the owner confirmed review requests can be set to send automatically when a job is finalized ("It can be set up so when the job is finalized it automatically sends a review request"). Copy now says they go out on their own, with one-tap manual sending also available. Earlier lines in this doc that limit it to "one tap" are superseded.
