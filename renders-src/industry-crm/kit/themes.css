@@ -2,7 +2,7 @@
    Load after kit.css. Staff pages: <body class="t-<industry>">. Customer pages: <body class="cx t-<industry>">.
    Dark themes: car-lots, auto-repair, auto-detailing, fitness, restaurants. Light: the rest.
    Customer pages use the paired website's fonts where a theme sets them; staff pages keep Figtree. */
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600&family=Jost:wght@400;500;600&family=Manrope:wght@400;500;600&family=Nunito+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Quicksand:wght@400;500;600&family=Sora:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500;600&family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600&family=Jost:wght@400;500;600&family=Manrope:wght@400;500;600&family=Nunito+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Quicksand:wght@400;500;600&family=Sora:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap");
 body.cx :is(h1, h2, h3, .cx-name) { font-family: var(--font-head, var(--font)); }
 
 /* ---- home-services · light · chrome #0b1b2b · accent #f6a623 · button #f6a623 ---- */
@@ -181,6 +181,8 @@ body.cx.t-car-lots {
   --cx-muted: #938c7f;
   --cx-faint: #6b665d;
   --cx-line: #3a3a3d;
+  --font-head: "Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 /* ---- auto-repair · dark · chrome #0e0f12 · accent #e23b2e · button #c42e22 ---- */

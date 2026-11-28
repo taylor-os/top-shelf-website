@@ -1,7 +1,8 @@
 """Homepage screenshots of the sample websites for the industry cards, pop-up and concepts.
-Usage: python scripts/shoot_websites.py [dir ...]   (needs `python -m http.server 8203` from the repo root)
+Usage: python scripts/shoot_websites.py [dir ...]   (opens the static pages as file:// URLs; no server needed)
 Writes assets/img/websites/<dir>-home-d.webp (1440x900 view, 1200 wide) and -home-m.webp (390x844 view, 585 wide)."""
 import sys, os
+from pathlib import Path
 from playwright.sync_api import sync_playwright
 from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,7 +15,7 @@ with sync_playwright() as p:
         for tag, vp, scale, width in (("d", (1440, 900), 1, 1200), ("m", (390, 844), 2, 585)):
             pg = b.new_page(viewport={"width": vp[0], "height": vp[1]}, device_scale_factor=scale)
             pg.emulate_media(reduced_motion="reduce")
-            pg.goto(f"http://127.0.0.1:8203/websites/{d}/index.html", wait_until="load")
+            pg.goto(Path(ROOT, "websites", d, "index.html").as_uri(), wait_until="load")
             pg.add_style_tag(content=REVEAL); pg.wait_for_timeout(1200)
             raw = os.path.join(OUT, f"_{d}-{tag}.png"); pg.screenshot(path=raw); pg.close()
             im = Image.open(raw).convert("RGB"); im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)

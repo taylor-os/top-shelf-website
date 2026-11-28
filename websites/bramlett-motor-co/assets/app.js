@@ -57,12 +57,13 @@
     reveals.forEach(function (el) { io.observe(el); });
   }
 
-  /* Hero: cars roll in, back row drifts slower than the front on scroll */
-  if (hasGSAP && !reduce && $(".hero__art")) {
-    gsap.from("#lot-front", { x: 40, opacity: 0, duration: 1.1, ease: "power3.out", delay: .15 });
-    gsap.from("#lot-back", { x: -30, opacity: 0, duration: 1.2, ease: "power3.out", delay: .3 });
-    gsap.to("#lot-lights", { y: 24, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
-    gsap.to("#lot-back", { y: 14, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+  /* Photo parallax: hero and night-lot backgrounds drift slower than the page */
+  if (hasGSAP && !reduce) {
+    $$("[data-parallax]").forEach(function (el) {
+      var host = el.parentElement, night = host.classList.contains("night");
+      gsap.fromTo(el, { yPercent: night ? -5 : 0 }, { yPercent: night ? 5 : 14, ease: "none",
+        scrollTrigger: { trigger: host, start: night ? "top bottom" : "top top", end: "bottom top", scrub: true } });
+    });
   }
 
   /* "How are you paying?" segmented control */

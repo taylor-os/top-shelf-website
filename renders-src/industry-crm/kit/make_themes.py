@@ -62,7 +62,7 @@ PALETTES = {
     "car-lots": dict(mode="dark", canvas="#111113", panel="#1a1a1d", side="#09090a", accent="#c9a34e",
         ink="#f4efe4", ink2="#ddd6c8", muted="#aca596", muted2="#938c7f", faint="#6b665d",
         grad=("#e3c378", "#c9a34e", "#a9873b"), on_accent="#17130a", edge="rgb(201 163 78 / .35)",
-        cx_accent="#c9a34e", cx_ink="#17130a"),
+        cx_accent="#c9a34e", cx_ink="#17130a", fonts=("Archivo", "Figtree")),
     "auto-repair": dict(mode="dark", canvas="#15171b", panel="#1d2026", side="#0e0f12", accent="#e23b2e",
         ink="#f5f7f9", ink2="#d5dbe2", muted="#aeb6bf", muted2="#8a929b", faint="#5f6670",
         grad=("#e23b2e", "#c42e22", "#a62518"), on_accent="#ffffff", edge="rgb(226 59 46 / .45)", bar="#2c313a",
