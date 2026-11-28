@@ -171,7 +171,7 @@ def page(path, title, desc, body, active=""):
     with open(dest, encoding="utf-8") as f:
         html = f.read()
     html = html.replace(
-        "family=Plus+Jakarta+Sans:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500",
+        "family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@500",
         "family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500")
     if 'class="quote"' in html:
         html = html.replace(f"<p>{e(SAMPLE_NOTE)}</p>", f"<p>{e(SAMPLE_NOTE)} {e(QUOTE_NOTE)}</p>", 1)
