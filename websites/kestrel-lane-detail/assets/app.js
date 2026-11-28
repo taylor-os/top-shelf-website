@@ -1,4 +1,4 @@
-/* Kestrel Lane Detail Co. | sample site. Lenis + GSAP (optional), hero light streak, size pricing, before/after, booking form.
+/* Kestrel Lane Detail Co. | sample site. Lenis + GSAP (optional), hero glare, size pricing, booking form.
    Reduced-motion and no-JS safe: every price is in the HTML; JS only switches and totals. */
 (function () {
   "use strict";
@@ -73,24 +73,19 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---- Hero: light streak follows the pointer; GSAP entrance ---- */
+  /* ---- Hero: the glare follows the pointer on desktop; the photo drifts as you scroll ---- */
   var hero = document.querySelector(".hero");
   if (hero && !reduce) {
-    var streak = hero.querySelector(".streak"), art = hero.querySelector(".panel-art");
-    if (streak && art && finePointer) {
+    if (finePointer) {
       hero.addEventListener("pointermove", function (e) {
-        var r = art.getBoundingClientRect(), p = (e.clientX - r.left) / r.width;
+        var r = hero.getBoundingClientRect(), p = (e.clientX - r.left) / r.width;
         hero.classList.add("tracking");
-        streak.style.transform = "translateX(" + Math.round(-200 + p * 1500) + "px)";
+        hero.style.setProperty("--glare-x", Math.round(-100 + p * 260) + "%");
       });
-      hero.addEventListener("pointerleave", function () { hero.classList.remove("tracking"); streak.style.transform = ""; });
+      hero.addEventListener("pointerleave", function () { hero.classList.remove("tracking"); });
     }
-    if (hasGSAP) {
-      gsap.from(".hero h1", { y: 34, opacity: 0, duration: 1.1, ease: "power3.out" });
-      gsap.from(".hero .lede, .hero__actions, .hero__facts", { y: 20, opacity: 0, duration: .9, delay: .2, stagger: .08, ease: "power3.out" });
-      gsap.from(".booked", { y: 40, opacity: 0, duration: 1, delay: .45, ease: "power3.out" });
-      gsap.from(".bead-layer use", { scale: 0, opacity: 0, duration: .7, delay: .3, stagger: { each: .025, from: "random" }, ease: "back.out(2)" });
-      gsap.to(".panel-art", { yPercent: 8, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+    if (hasGSAP && window.matchMedia("(min-width: 861px)").matches) {
+      gsap.to(".hero__media", { yPercent: 10, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     }
   }
 
@@ -111,27 +106,6 @@
       box.querySelectorAll("[data-book-link]").forEach(function (a) { a.setAttribute("href", "book.html?package=full&size=" + size); });
     }
     btns.forEach(function (b) { b.addEventListener("click", function () { pick(b.getAttribute("data-size")); }); });
-  });
-
-  /* ---- Before / after ---- */
-  document.querySelectorAll(".ba").forEach(function (ba) {
-    var input = ba.querySelector("input[type=range]"), touched = false;
-    function set(v) { ba.style.setProperty("--pos", v + "%"); }
-    input.addEventListener("input", function () { touched = true; set(input.value); });
-    if (!reduce && "IntersectionObserver" in window) {
-      var bio = new IntersectionObserver(function (en) {
-        if (!en[0].isIntersecting) return; bio.disconnect();
-        var t0 = null;
-        (function sweep(ts) {
-          if (touched) return;
-          if (!t0) t0 = ts;
-          var p = Math.min((ts - t0) / 2200, 1), v = 50 + 30 * Math.sin(p * Math.PI * 2) * (1 - p);
-          set(v); input.value = Math.round(v);
-          if (p < 1) requestAnimationFrame(sweep); else { set(50); input.value = 50; }
-        })(performance.now());
-      }, { threshold: 0.5 });
-      bio.observe(ba);
-    }
   });
 
   /* ---- Booking form ---- */
@@ -182,7 +156,8 @@
       out("fine").textContent = pkg ? "Your " + money(deposit(total)) + " deposit holds this time and comes off your bill. The rest, " + money(total - deposit(total)) + ", is due at pickup." : "The deposit is 25% of your booking. It holds your time and comes off your bill.";
     };
     form.addEventListener("change", update);
-    form.addEventListener("input", update);
+    // Radios and checkboxes fire input and change; running update twice would wipe the "no longer fits" note.
+    form.addEventListener("input", function (e) { if (e.target.type !== "radio" && e.target.type !== "checkbox") update(); });
     update();
 
     form.addEventListener("submit", function (e) {
