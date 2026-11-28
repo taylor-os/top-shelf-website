@@ -76,7 +76,7 @@ def website_img(r, p, kind="d"):
     alt = f"Sample website: {p['business']} home page, {'phone' if kind == 'm' else 'desktop'} view"
     if not exists(rel):
         return placeholder(p, alt)
-    return img(r, rel, alt, 1200 if kind == "d" else 585, 900 if kind == "d" else 1266)
+    return img(r, rel, alt, 1200 if kind == "d" else 585, 750 if kind == "d" else 1266)
 
 
 def screens(slug):

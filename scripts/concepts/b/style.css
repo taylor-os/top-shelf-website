@@ -97,6 +97,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .dev-phone{border-radius:34px;padding:7px;max-width:300px}
 .dev-phone img{border-radius:27px}
 .chip{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);font:500 .68rem/1.2 var(--mono);letter-spacing:.04em;color:var(--text);background:rgba(6,7,13,.82);border:1px solid var(--line2);border-radius:99px;padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dev-phone .chip{right:12px;white-space:normal;text-align:center;border-radius:12px}
 .is-missing{min-height:200px;display:grid;place-items:center}
 .is-missing img{display:none}
 .is-missing::after{content:"Sample on the way";font:500 .8rem/1.3 var(--mono);color:var(--muted);padding:20px;text-align:center}
@@ -104,7 +105,11 @@ ul,ol{margin:0;padding:0;list-style:none}
 .dev-desk.is-missing,.dev-browser.is-missing{aspect-ratio:16/10.4}
 
 /* hero stage */
-.hero-stage{position:relative;max-width:1180px;margin:clamp(48px,7vw,90px) auto 0;padding:0 20px;perspective:1600px}
+.hero-stage{position:relative;z-index:1;max-width:1180px;margin:clamp(48px,7vw,90px) auto 0;padding:0 20px;perspective:1600px}
+/* room below the stage for the phone that hangs past the desk, so the hero never slices it */
+.hero:not(.hero-page){padding-bottom:clamp(68px,8vw,112px)}
+/* the hero phone is small, so its label sits under it in one line instead of covering its screen */
+.hero-phone .chip{top:calc(100% + 10px);bottom:auto;left:auto;right:0;width:max-content;max-width:none;white-space:nowrap}
 .hero-desk{transform-origin:50% 100%;box-shadow:0 60px 140px -40px rgba(139,124,255,.45),0 40px 90px -30px #000}
 .hero-phone{position:absolute;right:clamp(8px,4vw,60px);bottom:-8%;width:clamp(120px,21%,250px)}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:min(22%,150px);background:linear-gradient(transparent,var(--bg));pointer-events:none}
@@ -262,7 +267,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .picker a{display:block;white-space:nowrap;text-decoration:none;color:var(--text);font-size:.9rem;padding:8px 14px;border:1px solid var(--line2);border-radius:99px}
 .picker a:hover{border-color:var(--acc-hi)}
 @media (max-width:759px){.picker{top:96px}.picker-l{display:none}}
-.ind{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line);scroll-margin-top:140px}
+.ind{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line);scroll-margin-top:200px}
+#main{scroll-margin-top:110px}
 .ind:first-child{border-top:0;padding-top:0}
 .ind-head{max-width:760px}
 .ind-head h2{margin-top:10px}

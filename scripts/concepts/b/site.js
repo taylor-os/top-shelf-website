@@ -45,8 +45,8 @@
       rotateX: 0, scale: 1, y: 0, ease: "none",
       scrollTrigger: { trigger: ".hero-stage", start: "top 95%", end: "top 25%", scrub: 0.6 }
     });
-    gsap.fromTo(".hero-phone", { y: 120 }, {
-      y: -40, ease: "none",
+    gsap.fromTo(".hero-phone", { y: 0 }, {
+      y: -100, ease: "none",
       scrollTrigger: { trigger: ".hero-stage", start: "top 90%", end: "bottom top", scrub: 0.6 }
     });
   }

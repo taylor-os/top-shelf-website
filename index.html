@@ -136,15 +136,15 @@
 @media (min-width:1001px){
 #cc .c-t-paid{flex-direction:row;align-items:flex-end;gap:40px}
 #cc .c-t-paid .c-tile-copy{flex:0 1 34rem;align-self:center}
-#cc .c-t-paid .c-shot.c-ph{margin:36px 150px 0 auto}
+#cc .c-t-paid .c-shot.c-ph{margin:36px 150px 22px auto}
 #cc .c-t-paid .c-shot.c-d{flex:0 0 auto;margin:76px 120px 0 auto}
 }
 #cc .c-shot{position:relative;margin:auto 18px 0;overflow:hidden;border-radius:12px 12px 0 0;background:var(--win);box-shadow:0 0 0 1px rgba(var(--sh),.1)}
 #cc .c-shot img{position:absolute;max-width:none;width:var(--z,100%);left:calc(var(--x,0%) * -1);top:0}
 #cc .c-shot.c-d{aspect-ratio:var(--ar,16/9)}
-#cc .c-shot.c-ph{margin:auto auto 0;border-radius:30px 30px 0 0;padding:8px 8px 0;background:var(--black)}
-#cc .c-shot.c-ph img{position:static;width:100%;border-radius:23px 23px 0 0}
-#cc .c-shot.c-ph{height:380px;width:min(260px,70%)}
+#cc .c-shot.c-ph{margin:auto auto 22px;border-radius:30px;padding:8px;background:var(--black)}
+#cc .c-shot.c-ph img{position:static;width:100%;border-radius:23px}
+#cc .c-shot.c-ph{width:min(260px,70%)}
 @media (max-width:1000px){
 #cc .c-t-calls,#cc .c-t-disp,#cc .c-t-est,#cc .c-t-rev,#cc .c-t-paid{grid-column:span 12}
 }
@@ -304,8 +304,8 @@ body.drawer-open{overflow:hidden}
 #cc .c-lap-base::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15%;height:3px;border-radius:0 0 7px 7px;background:#050505}
 #cc .c-phone,#cc .c-stage .c-phone,#cc .c-p-stage .c-phone{padding:4px;border-radius:20px;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75),0 36px 70px -28px rgba(0,0,0,.85)}
 #cc .c-phone img,#cc .c-stage .c-phone img,#cc .c-p-stage .c-phone img{border-radius:16px}
-#cc .c-shot.c-ph{padding:4px 4px 0;border-radius:20px 20px 0 0;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75)}
-#cc .c-shot.c-ph img{border-radius:16px 16px 0 0}
+#cc .c-shot.c-ph{padding:4px;border-radius:20px;background:#040404;box-shadow:0 0 0 1px rgba(201,168,106,.75)}
+#cc .c-shot.c-ph img{border-radius:16px}
 #cc .c-stage .c-phone{left:-3.5%}
 @media (max-width:900px){#cc .c-stage .c-phone{left:-1%}}
 
