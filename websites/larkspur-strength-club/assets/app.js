@@ -1,10 +1,18 @@
-/* Larkspur Strength Club: Lenis + GSAP motion, drawer, reveals, schedule filter, demo form. Reduced-motion and no-JS safe. */
+/* Larkspur Strength Club: Lenis + GSAP motion, header state, drawer, reveals,
+   schedule filter, demo form. Reduced-motion and no-JS safe. */
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var hasGSAP = window.gsap && window.ScrollTrigger;
+  var hasGSAP = !!(window.gsap && window.ScrollTrigger);
 
-  /* Lenis smooth scroll, synced to GSAP when present */
+  /* Hero headline and photo settle in once the page is ready */
+  var heroes = document.querySelectorAll(".hero, .phero");
+  function ready() { heroes.forEach(function (h) { h.classList.add("is-ready"); }); }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { requestAnimationFrame(ready); });
+  else requestAnimationFrame(ready);
+  setTimeout(ready, 1200);
+
+  /* Lenis smooth scroll, synced to GSAP */
   var lenis = null;
   if (window.Lenis && !reduce) {
     lenis = new Lenis({ duration: 1.05, smoothWheel: true });
@@ -18,10 +26,27 @@
     }
   }
 
-  /* Hero barbell drifts as you scroll past it */
-  if (hasGSAP && !reduce && document.querySelector(".hero__bar")) {
+  /* Photos drift a little slower than the page (the wrapper is oversized, so no edge shows) */
+  if (hasGSAP && !reduce && window.matchMedia("(min-width: 900px)").matches) {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".hero__bar", { yPercent: -12, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+    document.querySelectorAll(".parallax").forEach(function (el) {
+      var host = el.closest(".hero, .phero, .band, .plans-band") || el.parentNode;
+      var top = host.classList.contains("hero") || host.classList.contains("phero");
+      gsap.fromTo(el, { yPercent: top ? 0 : -6 }, {
+        yPercent: 6, ease: "none",
+        scrollTrigger: { trigger: host, start: top ? "top top" : "top bottom", end: "bottom top", scrub: true }
+      });
+    });
+  }
+
+  /* Header turns solid once you leave the top of the page */
+  var header = document.querySelector(".header");
+  if (header && "IntersectionObserver" in window) {
+    var mark = document.createElement("div");
+    mark.setAttribute("aria-hidden", "true");
+    mark.style.cssText = "position:absolute;top:0;left:0;width:1px;height:48px;pointer-events:none";
+    document.body.prepend(mark);
+    new IntersectionObserver(function (en) { header.classList.toggle("is-solid", !en[0].isIntersecting); }).observe(mark);
   }
 
   /* Mobile drawer */
@@ -34,7 +59,7 @@
     drawer.setAttribute("aria-hidden", open ? "false" : "true");
     document.body.style.overflow = open ? "hidden" : "";
     if (openBtn) openBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    if (lenis) open ? lenis.stop() : lenis.start();
+    if (lenis) { if (open) lenis.stop(); else lenis.start(); }
     if (open && closeBtn) requestAnimationFrame(function () { closeBtn.focus(); });
     else if (!open && openBtn && drawer.contains(document.activeElement)) openBtn.focus();
   }
@@ -63,8 +88,12 @@
       document.querySelectorAll(".slot").forEach(function (s) {
         s.classList.toggle("is-hidden", type !== "all" && s.getAttribute("data-type") !== type);
       });
+      document.querySelectorAll(".day").forEach(function (d) {
+        d.toggleAttribute("data-empty", !d.querySelector(".slot:not(.is-hidden)"));
+      });
       var status = document.querySelector("[data-filter-status]");
       if (status) status.textContent = type === "all" ? "Showing every class." : "Showing " + btn.textContent.trim() + " only.";
+      if (hasGSAP) ScrollTrigger.refresh();
     });
   });
 

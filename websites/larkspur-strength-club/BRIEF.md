@@ -38,19 +38,19 @@ Weekly schedule copied from the CRM "Classes" week screen:
 ## Voice
 Plain, direct, a coach talking at the front desk. Short sentences. No hype, no "transform your life". Uses the CRM's words: member, class, booking, check-in, membership, plan. Never: customer, client (except PT), appointment, subscription, CrossFit, WOD.
 
-## Theme / art direction
-- **Palette (fixed by the CRM):** ink `#0e0f10`, charcoal `#161719`, slab `#202226`, chalk `#ECE7DF` (text), steel `#9A9DA3` (muted text), orange `#e0702e` (accent; buttons carry ink text for AA).
-- **Type:** Big Shoulders Display (condensed, industrial, plate-stamp feel) for display; Archivo for body; IBM Plex Mono for times and capacities.
-- **Signature:** a side-on loaded barbell drawn in SVG across the home hero; plates slide onto the sleeves on load. Knurl-texture rules (CSS crosshatch) divide sections, like the grip on a bar.
-- **Logo:** hand-built SVG. A vertical bar with stacked plates that shrink toward the top: a plate tree that also reads as a larkspur flower spike. Wordmark in Big Shoulders.
-- **Art:** SVG/CSS only. Bold geometric plates, bars and rings. No photography, no paid generation, no downloads.
-- **Motion:** Lenis + GSAP (program stack), hero plate load-in, soft reveals. `prefers-reduced-motion` turns all of it off.
+## Theme / art direction (photo rebuild, 2026-11-27)
+- **Palette (CRM family):** chrome `#0e0f10` (header, footer, drawer), page `#161719`, panel `#1e2023`, ink `#f2efe9` (text), muted `#aba69d`, orange `#e0702e` (accent; buttons carry `#0e0f10` text for AA). Dark only.
+- **Type:** Sofia Sans Extra Condensed (800/900, uppercase) for display; Schibsted Grotesk for body. Times and capacities use tabular figures.
+- **Shape:** sharp corners everywhere. The phone frame around the member-app screen is the only rounded shape.
+- **Logo:** hand-built SVG plate tree (unchanged). Wordmark in Sofia Sans Extra Condensed.
+- **Art:** original photography in `assets/img/` (each with a `-sm` 900px variant): full-bleed photo heroes on every page, a sticky portrait beside the class list, a wide photo under the first-class steps, and photo CTA bands. `app-screen.webp` is the CRM's member-app screen (labelled "Sample screen with sample data"). No photo is captioned with a person's name.
+- **Motion:** Lenis + GSAP. Hero headline lines rise and the photo settles on load; photos drift slower than the page on desktop; sections and photos reveal on scroll (photos with a clip wipe). `prefers-reduced-motion` turns all of it off; with no JS everything is visible.
 
 ## Proof
 None invented. No reviews, ratings, member counts or stats on the site.
 
 ## Pages (5)
-1. **index.html, Home:** hero (barbell, headline, Try a class, hours/address strip) → the five classes with capacity → how starting works (a real 4-step sequence) → member app (a sample screen copied from the CRM's member app) → the two plans → three coaches → CTA.
+1. **index.html, Home:** hero (deadlift photo, headline, Try a class) → hours/address strip → the five classes with capacity → how starting works (a real 4-step sequence) → member app (a sample screen copied from the CRM's member app) → the two plans → three coaches → CTA.
 2. **classes.html, Classes:** class types with times, coaches and capacity → weekly schedule with a class-type filter (Sat 8:00 AM Barbell Club shows "Coach to be announced") → when a class is full / your first class → CTA.
 3. **memberships.html, Memberships:** two plans (sample prices) → personal training → how billing works → questions → CTA.
 4. **coaches.html, Coaches:** coaches with what they teach → owner and front desk → CTA.
@@ -59,4 +59,4 @@ None invented. No reviews, ratings, member counts or stats on the site.
 **Global:** sticky header (logo, Home · Classes · Memberships · Coaches · Visit, phone, "Try a class"). Footer: explore, visit, contact, and a visible "Sample website" note with the Top Shelf credit.
 
 ## Assets
-- `assets/logo-mark.svg` (hand-built), `assets/styles.css`, `assets/app.js`, `assets/topshelf-logo.png` (copied from another sample site).
+- `assets/logo-mark.svg` (hand-built), `assets/styles.css`, `assets/app.js`, `assets/topshelf-logo.png` (copied from another sample site), `assets/img/*.webp` (photos plus the member-app screen).

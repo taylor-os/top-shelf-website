@@ -2,7 +2,7 @@
    Load after kit.css. Staff pages: <body class="t-<industry>">. Customer pages: <body class="cx t-<industry>">.
    Dark themes: car-lots, auto-repair, auto-detailing, fitness, restaurants. Light: the rest.
    Customer pages use the paired website's fonts where a theme sets them; staff pages keep Figtree. */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500;600&family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600&family=Jost:wght@400;500;600&family=Manrope:wght@400;500;600&family=Nunito+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Quicksand:wght@400;500;600&family=Sora:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500;600&family=Fraunces:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=Jost:wght@400;500;600&family=Manrope:wght@400;500;600&family=Nunito+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Quicksand:wght@400;500;600&family=Schibsted+Grotesk:wght@400;500;600&family=Sofia+Sans+Extra+Condensed:wght@400;500;600&family=Sora:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap");
 body.cx :is(h1, h2, h3, .cx-name) { font-family: var(--font-head, var(--font)); }
 
 /* ---- home-services · light · chrome #0b1b2b · accent #f6a623 · button #f6a623 ---- */
@@ -277,11 +277,11 @@ body.cx.t-auto-repair {
 /* ---- auto-detailing · dark · chrome #030406 · accent #3b8eff · button #2563eb ---- */
 body.t-auto-detailing {
   color-scheme: dark;
-  --b-50: 19 31 49;
-  --b-100: 23 41 67;
-  --b-200: 28 56 95;
-  --b-300: 35 74 129;
-  --b-400: 46 105 186;
+  --b-50: 17 30 47;
+  --b-100: 20 40 66;
+  --b-200: 26 54 93;
+  --b-300: 33 73 128;
+  --b-400: 45 104 186;
   --b-500: 59 142 255;
   --b-600: 90 160 255;
   --b-700: 122 178 255;
@@ -296,19 +296,19 @@ body.t-auto-detailing {
   --focus: #3b8eff;
   --canvas: #07090d;
   --sink: #050609;
-  --well: #1b1f25;
-  --panel: #0f131a;
+  --well: #181d24;
+  --panel: #0c1118;
   --panel-edge: rgba(255, 255, 255, .06);
   --panel-2: rgba(255, 255, 255, .04);
-  --head: #171b22;
-  --hatch: #22262c;
+  --head: #151920;
+  --hatch: #1f242a;
   --tint: rgba(255, 255, 255, .07);
-  --line: #272b31;
+  --line: #24292f;
   --line-soft: rgba(255, 255, 255, .07);
-  --line-strong: #44474c;
+  --line-strong: #41454b;
   --shadow: 0 10px 30px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .04);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, .3);
-  --ink: #eaf0f7;
+  --ink: #eef3fb;
   --ink-2: #cbd5e1;
   --muted: #9aa7b8;
   --muted-2: #8290a3;
@@ -319,17 +319,17 @@ body.t-auto-detailing {
   --bar: #102036;
   --tabbar: #030406;
   --dock-bg: #030406;
-  --on-em: #eaf0f7;
-  --on-em-dim: rgb(234 240 247 / .74);
-  --on-em-faint: rgb(234 240 247 / .52);
+  --on-em: #eef3fb;
+  --on-em-dim: rgb(238 243 251 / .74);
+  --on-em-faint: rgb(238 243 251 / .52);
   --em-line: rgba(255, 255, 255, .1);
   --nav-on-bg: rgb(59 142 255 / .16);
   --nav-on-ink: #7ab2ff;
   --band-edge: rgb(59 142 255 / .35);
   --band-btn-bg: #2563eb;
   --band-btn-ink: #ffffff;
-  --bubble-out: #1c385f;
-  --bubble-out-ink: #eaf0f7;
+  --bubble-out: #1a365d;
+  --bubble-out-ink: #eef3fb;
   --green: #34d399;
   --green-soft: rgb(52 211 153 / 0.16);
   --amber: #fbbf24;
@@ -353,21 +353,23 @@ body.cx.t-auto-detailing {
   --accent-ink: #04101f;
   --accent-soft: rgb(79 156 255 / 0.16);
   --cx-bg: #07090d;
-  --cx-card: #0f131a;
-  --cx-ink: #eaf0f7;
+  --cx-card: #0c1118;
+  --cx-ink: #eef3fb;
   --cx-ink-2: #cbd5e1;
   --cx-muted: #8290a3;
   --cx-faint: #55637a;
-  --cx-line: #31343a;
+  --cx-line: #2e3238;
+  --font-head: "Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 /* ---- fitness · dark · chrome #0e0f10 · accent #e0702e · button #e0702e ---- */
 body.t-fitness {
   color-scheme: dark;
-  --b-50: 51 41 37;
-  --b-100: 67 47 38;
-  --b-200: 90 57 39;
-  --b-300: 118 69 40;
+  --b-50: 49 40 36;
+  --b-100: 65 46 37;
+  --b-200: 88 56 38;
+  --b-300: 117 68 40;
   --b-400: 166 88 43;
   --b-500: 224 112 46;
   --b-600: 229 135 79;
@@ -383,19 +385,19 @@ body.t-fitness {
   --focus: #e0702e;
   --canvas: #161719;
   --sink: #0f1012;
-  --well: #2b2c2f;
-  --panel: #202124;
+  --well: #292b2e;
+  --panel: #1e2023;
   --panel-edge: rgba(255, 255, 255, .06);
   --panel-2: rgba(255, 255, 255, .04);
-  --head: #28292c;
-  --hatch: #323336;
+  --head: #26282b;
+  --hatch: #303235;
   --tint: rgba(255, 255, 255, .07);
-  --line: #36373a;
+  --line: #343639;
   --line-soft: rgba(255, 255, 255, .07);
-  --line-strong: #515254;
+  --line-strong: #505153;
   --shadow: 0 10px 30px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .04);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, .3);
-  --ink: #f2f2f0;
+  --ink: #f2efe9;
   --ink-2: #d6d6d2;
   --muted: #a9a9a4;
   --muted-2: #91918c;
@@ -406,17 +408,17 @@ body.t-fitness {
   --bar: #38261d;
   --tabbar: #0e0f10;
   --dock-bg: #0e0f10;
-  --on-em: #f2f2f0;
-  --on-em-dim: rgb(242 242 240 / .74);
-  --on-em-faint: rgb(242 242 240 / .52);
+  --on-em: #f2efe9;
+  --on-em-dim: rgb(242 239 233 / .74);
+  --on-em-faint: rgb(242 239 233 / .52);
   --em-line: rgba(255, 255, 255, .1);
   --nav-on-bg: rgb(224 112 46 / .16);
   --nav-on-ink: #ea9e71;
   --band-edge: rgb(224 112 46 / .4);
   --band-btn-bg: #e0702e;
   --band-btn-ink: #180a03;
-  --bubble-out: #5a3927;
-  --bubble-out-ink: #f2f2f0;
+  --bubble-out: #583826;
+  --bubble-out-ink: #f2efe9;
   --green: #34d399;
   --green-soft: rgb(52 211 153 / 0.16);
   --amber: #fbbf24;
@@ -440,12 +442,14 @@ body.cx.t-fitness {
   --accent-ink: #180a03;
   --accent-soft: rgb(224 112 46 / 0.16);
   --cx-bg: #161719;
-  --cx-card: #202124;
-  --cx-ink: #f2f2f0;
+  --cx-card: #1e2023;
+  --cx-ink: #f2efe9;
   --cx-ink-2: #d6d6d2;
   --cx-muted: #91918c;
   --cx-faint: #666662;
-  --cx-line: #3f4043;
+  --cx-line: #3e3f42;
+  --font-head: "Sofia Sans Extra Condensed", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 /* ---- restaurants · dark · chrome #0e0c0b · accent #e8722a · button #e8722a ---- */

@@ -7,14 +7,17 @@
 <meta name="description" content="Coached group strength classes and open gym in Rowlett, TX. Start with Intro / Foundations, a small first class with Coach Malik. Call 123-456-7890.">
 <link rel="canonical" href="https://www.topshelfsolutions.io/websites/larkspur-strength-club/">
 <meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0e0f10">
 <meta property="og:title" content="Larkspur Strength Club | Rowlett, TX">
-<meta property="og:description" content="Coached group strength classes and open gym in Rowlett, TX.">
+<meta property="og:description" content="Coached group strength classes and open gym in Rowlett, TX. Start with Intro / Foundations, a small first class with Coach Malik. Call 123-456-7890.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.topshelfsolutions.io/websites/larkspur-strength-club/">
+<meta property="og:image" content="https://www.topshelfsolutions.io/websites/larkspur-strength-club/assets/img/hero.webp">
 <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/img/hero-sm.webp" imagesrcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 2000w" imagesizes="100vw">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Sofia+Sans+Extra+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script>document.documentElement.className += " js";</script>
 </head>
@@ -29,17 +32,12 @@
 </g></defs></svg>
 
 <header class="header">
-  <div class="header__inner">
-    <a href="index.html" class="brand" aria-label="Larkspur Strength Club, home">
-      <img src="assets/logo-mark.svg" alt="" class="brand__mark" width="28" height="34">
-      <span class="brand__name">Larkspur<small>Strength Club</small></span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html" aria-current="page">Home</a><a href="classes.html">Classes</a><a href="memberships.html">Memberships</a><a href="coaches.html">Coaches</a><a href="visit.html">Visit</a>
-    </nav>
+  <div class="wrap header__inner">
+    <a href="index.html" class="brand" aria-label="Larkspur Strength Club, home"><img src="assets/logo-mark.svg" alt="" class="brand__mark" width="26" height="31"><span class="brand__name">Larkspur<small>Strength Club</small></span></a>
+    <nav class="nav" aria-label="Primary"><a href="index.html" aria-current="page">Home</a><a href="classes.html">Classes</a><a href="memberships.html">Memberships</a><a href="coaches.html">Coaches</a><a href="visit.html">Visit</a></nav>
     <div class="header__cta">
       <a href="tel:+11234567890" class="header__phone">123-456-7890</a>
-      <a href="visit.html" class="btn btn--orange">Try a class</a>
+      <a href="visit.html" class="btn btn--accent">Try a class</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
     </div>
   </div>
@@ -47,122 +45,73 @@
 
 <div class="drawer" id="drawer" aria-hidden="true">
   <div class="drawer__top">
-    <span class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark" width="28" height="34"><span class="brand__name">Larkspur<small>Strength Club</small></span></span>
+    <span class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark" width="26" height="31"><span class="brand__name">Larkspur<small>Strength Club</small></span></span>
     <button class="drawer__close" aria-label="Close menu">&times;</button>
   </div>
-  <nav aria-label="Mobile">
-    <a href="index.html" aria-current="page">Home</a><a href="classes.html">Classes</a><a href="memberships.html">Memberships</a><a href="coaches.html">Coaches</a><a href="visit.html">Visit</a>
-  </nav>
+  <nav aria-label="Mobile"><a href="index.html" aria-current="page">Home</a><a href="classes.html">Classes</a><a href="memberships.html">Memberships</a><a href="coaches.html">Coaches</a><a href="visit.html">Visit</a></nav>
   <div class="drawer__foot">
     <a href="tel:+11234567890" class="drawer__phone">123-456-7890</a>
-    <a href="visit.html" class="btn btn--orange btn--block">Try a class</a>
+    <a href="visit.html" class="btn btn--accent btn--block">Try a class</a>
   </div>
 </div>
 
 <main id="main">
 <section class="hero">
-  <div class="container hero__copy">
-    <span class="eyebrow">Rowlett, TX · Group classes and open gym</span>
-    <h1>Coached strength <span>for Rowlett.</span></h1>
-    <p class="hero__sub">Larkspur Strength Club runs coached group classes and an open gym. Everyone starts with Intro / Foundations, a class of eight at most where Coach Malik teaches the basics. After that, you can join the rest of the schedule.</p>
-    <div class="hero__actions">
-      <a href="visit.html" class="btn btn--orange">Try a class <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a href="classes.html" class="btn btn--line">See the schedule</a>
-    </div>
-  </div>
-  <svg class="hero__bar bar-load" viewBox="0 0 1200 220" aria-hidden="true" focusable="false">
-    <defs><pattern id="knurl" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#5a5e65"/><rect width="2" height="6" fill="#43464c"/><rect width="6" height="2" fill="#43464c"/></pattern></defs>
-    <rect x="0" y="214" width="1200" height="2" fill="#2e3136"/>
-    <rect x="20" y="104" width="1160" height="12" rx="3" fill="#5a5e65"/>
-    <rect x="390" y="104" width="420" height="12" fill="url(#knurl)"/>
-    <rect x="30" y="99" width="250" height="22" rx="4" fill="#8a8e95"/>
-    <rect x="920" y="99" width="250" height="22" rx="4" fill="#8a8e95"/>
-    <rect x="276" y="84" width="16" height="52" rx="3" fill="#b9bcc1"/>
-    <rect x="908" y="84" width="16" height="52" rx="3" fill="#b9bcc1"/>
-    <g class="bar-l">
-      <g class="bar-plate" style="--i:0"><rect x="232" y="8" width="40" height="204" rx="8" fill="#e0702e"/><rect x="241" y="22" width="22" height="176" rx="5" fill="none" stroke="#0e0f10" stroke-opacity=".28" stroke-width="2"/></g>
-      <g class="bar-plate" style="--i:1"><rect x="188" y="8" width="40" height="204" rx="8" fill="#e0702e"/><rect x="197" y="22" width="22" height="176" rx="5" fill="none" stroke="#0e0f10" stroke-opacity=".28" stroke-width="2"/></g>
-      <g class="bar-plate" style="--i:2"><rect x="150" y="38" width="34" height="144" rx="7" fill="#2b2e33" stroke="#e0702e" stroke-width="2"/></g>
-      <g class="bar-plate" style="--i:3"><rect x="120" y="64" width="26" height="92" rx="6" fill="#ECE7DF"/></g>
-      <g class="bar-plate" style="--i:4"><rect x="100" y="88" width="16" height="44" rx="3" fill="#b9bcc1"/></g>
-    </g>
-    <g class="bar-r">
-      <g class="bar-plate" style="--i:0"><rect x="928" y="8" width="40" height="204" rx="8" fill="#e0702e"/><rect x="937" y="22" width="22" height="176" rx="5" fill="none" stroke="#0e0f10" stroke-opacity=".28" stroke-width="2"/></g>
-      <g class="bar-plate" style="--i:1"><rect x="972" y="8" width="40" height="204" rx="8" fill="#e0702e"/><rect x="981" y="22" width="22" height="176" rx="5" fill="none" stroke="#0e0f10" stroke-opacity=".28" stroke-width="2"/></g>
-      <g class="bar-plate" style="--i:2"><rect x="1016" y="38" width="34" height="144" rx="7" fill="#2b2e33" stroke="#e0702e" stroke-width="2"/></g>
-      <g class="bar-plate" style="--i:3"><rect x="1054" y="64" width="26" height="92" rx="6" fill="#ECE7DF"/></g>
-      <g class="bar-plate" style="--i:4"><rect x="1084" y="88" width="16" height="44" rx="3" fill="#b9bcc1"/></g>
-    </g>
-  </svg>
-  <div class="container hero__facts mono">
-    <span><b>Weekdays</b> 5:00 AM to 10:00 PM</span>
-    <span><b>Find us</b> 4410 Bayside Commons Dr, Rowlett</span>
-    <span><b>Call</b> <a href="tel:+11234567890">123-456-7890</a></span>
+  <div class="media"><div class="parallax"><img src="assets/img/hero.webp" srcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 2000w" sizes="100vw" width="2000" height="1131" alt="An athlete sets up for a deadlift in a dim gym lit by low sun" fetchpriority="high"></div></div>
+  <div class="wrap hero__copy">
+    <h1><span class="line"><span>Coached strength</span></span><span class="line"><span>in <span class="accent">Rowlett.</span></span></span></h1>
+    <p class="lede rise">Group classes and an open gym. Everyone starts with Intro / Foundations, eight people at most with Coach Malik.</p>
+    <div class="actions rise"><a href="visit.html" class="btn btn--accent">Try a class <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="classes.html#schedule" class="btn btn--ghost">See the schedule</a></div>
   </div>
 </section>
-<div class="knurl" aria-hidden="true"></div>
+
+<section class="facts" aria-label="Hours and location">
+  <div class="wrap">
+    <div class="facts__item"><b>Weekdays</b><span>5:00 AM to 10:00 PM</span></div>
+    <div class="facts__item"><b>Front desk</b><span>6:00 AM to 9:00 PM</span></div>
+    <div class="facts__item"><b>Find us</b><span>4410 Bayside Commons Dr, Rowlett</span></div>
+    <div class="facts__item"><b>Call</b><a href="tel:+11234567890">123-456-7890</a></div>
+  </div>
+</section>
 
 <section class="section">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">The classes</span>
-      <h2>Five classes, each with a coach</h2>
-      <p>Every class has a set number of spots, so the coach can keep an eye on everyone in the room.</p>
-    </div>
-    <div class="grid grid-5" data-reveal>
-      <article class="ctype">
-        <span class="tag tag--orange">60 min</span>
-        <h3>Strength &amp; Conditioning</h3>
-        <p>Barbell lifts and conditioning in the same hour. It runs early mornings and evenings on weekdays.</p>
-        <div class="ctype__cap"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Up to 16 people</div>
-      </article>
-      <article class="ctype">
-        <span class="tag">45 min</span>
-        <h3>HIIT 45</h3>
-        <p>Hard intervals for forty-five minutes. You'll find it in the morning, at noon and in the evening on weekdays.</p>
-        <div class="ctype__cap"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Up to 16 people</div>
-      </article>
-      <article class="ctype">
-        <span class="tag">Lifting</span>
-        <h3>Barbell Club</h3>
-        <p>Time under the bar, working on the lifts themselves. Weekdays at 4:30 PM and Saturdays at 8:00 AM.</p>
-        <div class="ctype__cap"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Up to 12 people</div>
-      </article>
-      <article class="ctype">
-        <span class="tag">Recovery</span>
-        <h3>Mobility</h3>
-        <p>Slower work on how well you move. Tuesday and Thursday mornings, plus Sunday at 9:00 AM.</p>
-        <div class="ctype__cap"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Up to 20 people</div>
-      </article>
-      <article class="ctype">
-        <span class="tag tag--orange">Start here</span>
-        <h3>Intro / Foundations</h3>
-        <p>Your first class. Coach Malik takes a small group through the basics on Tuesday and Thursday at 7:30 PM and Saturday at 9:00 AM.</p>
-        <div class="ctype__cap"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Up to 8 people</div>
-      </article>
+  <div class="wrap board">
+    <div class="board__photo" data-reveal="photo"><img src="assets/img/squat.webp" srcset="assets/img/squat-sm.webp 900w, assets/img/squat.webp 1792w" sizes="(min-width: 900px) 40vw, 100vw" width="1792" height="2240" alt="A member holds a loaded barbell across her back at the bottom of a squat" loading="lazy" decoding="async"></div>
+    <div>
+      <div class="head" data-reveal>
+        <h2>Five classes. A coach in every one.</h2>
+        <p>Every class has a set number of spots, so the coach can keep an eye on everyone in the room.</p>
+      </div>
+      <ul class="classlist" data-reveal>
+      <li><h3>Strength &amp; Conditioning</h3><p>An hour of barbell lifts and conditioning. Weekday mornings and evenings, plus Saturday at 10:00 AM.</p><div class="cap"><b>16</b><span>spots</span></div></li>
+      <li><h3>HIIT 45</h3><p>Forty-five minutes of hard intervals. Weekdays at noon and 6:30 PM, and 9:00 AM on Monday, Wednesday and Friday.</p><div class="cap"><b>16</b><span>spots</span></div></li>
+      <li><h3>Barbell Club</h3><p>Time under the bar, working on the lifts themselves. Weekdays at 4:30 PM and Saturday at 8:00 AM.</p><div class="cap"><b>12</b><span>spots</span></div></li>
+      <li><h3>Mobility</h3><p>Slower work on how well you move. Tuesday, Thursday and Sunday at 9:00 AM.</p><div class="cap"><b>20</b><span>spots</span></div></li>
+      <li class="start"><h3>Intro / Foundations</h3><p>Your first class. Coach Malik takes a small group through the basics on Tuesday and Thursday at 7:30 PM and Saturday at 9:00 AM.</p><div class="cap"><b>8</b><span>spots</span></div></li>
+      </ul>
+      <p style="margin:28px 0 0" data-reveal><a href="classes.html" class="textlink">See the full week <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
     </div>
   </div>
 </section>
 
-<section class="section section--ink">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Your first class</span>
-      <h2>How starting works</h2>
-    </div>
+<section class="section" style="padding-top:0">
+  <div class="wrap"><div class="head" data-reveal>
+    <h2>How your first class works</h2>
+  </div></div>
+  <div class="steps-photo" data-reveal="photo"><img src="assets/img/senior.webp" srcset="assets/img/senior-sm.webp 900w, assets/img/senior.webp 2000w" sizes="100vw" width="2000" height="1328" alt="A coach crouches beside an older member as he holds a kettlebell in a goblet squat" loading="lazy" decoding="async"></div>
+  <div class="wrap steps-wrap">
     <ol class="steps" data-reveal>
-      <li><h3>Ask for an intro</h3><p>Fill in the short form on the Visit page or call 123-456-7890. Pick Tuesday or Thursday at 7:30 PM, or Saturday at 9:00 AM.</p></li>
-      <li><h3>Get our text</h3><p>We text you the time and your coach. If you need to change it, reply to that text.</p></li>
-      <li><h3>Show up ready</h3><p>Wear shoes you can move in and bring water. Parking is free and right out front.</p></li>
-      <li><h3>Pick a plan</h3><p>After the intro, choose Unlimited classes or the Monthly open gym plan. The front desk can set it up for you.</p></li>
+      <li><span class="n">01</span><h3>Ask for an intro</h3><p>Use the short form on the Visit page or call 123-456-7890. Pick Tuesday or Thursday at 7:30 PM, or Saturday at 9:00 AM.</p></li>
+      <li><span class="n">02</span><h3>Get our text</h3><p>We text you the time and your coach. Need to change it? Reply to that text.</p></li>
+      <li><span class="n">03</span><h3>Show up ready</h3><p>Wear shoes you can move in and bring water. Parking is free and right out front.</p></li>
+      <li><span class="n">04</span><h3>Pick a plan</h3><p>After the intro, choose Unlimited classes or the Monthly open gym plan. The front desk can set it up for you.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div data-reveal>
-      <span class="eyebrow">The member app</span>
+<section class="section section--chrome">
+  <div class="wrap app">
+    <div class="app__copy" data-reveal>
       <h2>Book classes from your phone</h2>
       <p class="lede">Members book in the Larkspur app. It shows how many spots are left in each class and holds the check-in code you show at the front desk.</p>
       <ul class="ticks">
@@ -171,87 +120,88 @@
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Your membership and the date you're paid through are in the app too.</li>
       </ul>
     </div>
-    <figure data-reveal style="margin:0">
-      <div class="phone" role="img" aria-label="Sample member app screen listing four of today's classes, each with a Book button">
-        <div class="phone__top"><span class="phone__chip">LS</span>Larkspur Strength Club</div>
-        <div class="phone__card">
-          <h4>Classes today</h4>
-          <div class="phone__row"><b>9:00 AM</b><span>Mobility<small>Coach Erin · 13 spots left</small></span><span class="phone__book">Book</span></div>
-          <div class="phone__row"><b>12:00 PM</b><span>HIIT 45<small>Coach Erin · 5 spots left</small></span><span class="phone__book">Book</span></div>
-          <div class="phone__row"><b>4:30 PM</b><span>Barbell Club<small>Coach Malik · 3 spots left</small></span><span class="phone__book">Book</span></div>
-          <div class="phone__row"><b>6:30 PM</b><span>HIIT 45<small>Coach Dez · 4 spots left</small></span><span class="phone__book">Book</span></div>
-        </div>
+    <figure class="app__visual" data-reveal>
+      <div class="app__stage">
+      <div class="app__photo"><img src="assets/img/desk.webp" srcset="assets/img/desk-sm.webp 900w, assets/img/desk.webp 2000w" sizes="(min-width: 900px) 45vw, 90vw" width="2000" height="1328" alt="A member checks in at the front desk" loading="lazy" decoding="async"></div>
+      <div class="phone"><img src="assets/img/app-screen.webp" width="585" height="1266" loading="lazy" decoding="async" alt="Sample member app screen: the member's next booked class, a check-in code, and today's classes with the spots left in each"></div>
       </div>
-      <figcaption class="phone__cap">Sample screen with sample data</figcaption>
+      <figcaption class="app__cap">Sample screen with sample data</figcaption>
     </figure>
   </div>
 </section>
-<div class="knurl" aria-hidden="true"></div>
 
-<section class="section section--ink">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Memberships</span>
+<section class="plans-band section">
+  <div class="media"><div class="parallax"><img src="assets/img/dawn.webp" srcset="assets/img/dawn-sm.webp 900w, assets/img/dawn.webp 2000w" sizes="100vw" width="2000" height="1131" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="wrap">
+    <div class="head" data-reveal>
       <h2>Two plans</h2>
       <p>Both bill monthly to the card on file.</p>
     </div>
-    <div class="grid grid-2" data-reveal>
-      <article class="plan"><span class="tag">Open gym</span><h3>Monthly</h3><p class="muted">Train on your own whenever the gym is open.</p><a href="memberships.html" class="btn btn--line">See what's included</a></article>
-      <article class="plan plan--feat"><span class="tag tag--orange">Classes</span><h3>Unlimited classes</h3><p class="muted">Book any class on the schedule from the app.</p><a href="memberships.html" class="btn btn--orange">See what's included</a></article>
+    <p class="sample-note" data-reveal>Sample prices from the gym's demo screens.</p>
+    <div class="plans" data-reveal>
+      <article class="plan">
+        <span class="plan__kind">Open gym</span>
+        <h3>Monthly</h3>
+        <div class="price"><b>$59</b><span>a month</span></div>
+        <div class="plan__fee">Plus a $25 sign-up fee</div>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Train on your own whenever the gym is open.</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Check in with the code in your member app.</li>
+        </ul>
+        <a href="memberships.html" class="btn btn--ghost">Plan details</a>
+      </article>
+      <article class="plan plan--feat">
+        <span class="plan__kind">Classes</span>
+        <h3>Unlimited classes</h3>
+        <div class="price"><b>$119</b><span>a month</span></div>
+        <div class="plan__fee">No sign-up fee</div>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Book any class on the schedule from the app.</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Give 30 days' notice when you want to cancel.</li>
+        </ul>
+        <a href="memberships.html" class="btn btn--ghost">Plan details</a>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Coaches</span>
-      <h2>Who you'll lift with</h2>
+  <div class="wrap">
+    <div class="head" data-reveal><h2>Who you'll lift with</h2></div>
+    <div class="team">
+      <div class="team__photo" data-reveal="photo"><img src="assets/img/coach.webp" srcset="assets/img/coach-sm.webp 900w, assets/img/coach.webp 2000w" sizes="(min-width: 900px) 55vw, 100vw" width="2000" height="1328" alt="A coach cheers on a member during a kettlebell swing" loading="lazy" decoding="async"></div>
+      <div data-reveal>
+        <ul class="roster">
+          <li><h3>Malik Odom</h3><span class="role">Head coach</span><p>Teaches every Intro / Foundations class, so Malik is the first coach you'll meet.</p></li>
+          <li><h3>Dez Fuller</h3><span class="role">Coach</span><p>Coaches the evening Strength &amp; Conditioning and HIIT 45 classes.</p></li>
+          <li><h3>Erin Sato</h3><span class="role">Coach</span><p>Teaches Mobility and the morning and midday HIIT 45 classes.</p></li>
+        </ul>
+        <a href="coaches.html" class="textlink">Meet the whole team <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
-    <div class="grid grid-3" data-reveal>
-      <article class="coach">
-        <svg class="coach__plate" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#e0702e"/><circle cx="42" cy="42" r="31" fill="none" stroke="#0e0f10" stroke-opacity=".3" stroke-width="2"/><circle cx="42" cy="42" r="19" fill="#0e0f10"/><text x="42" y="49" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="20" fill="#f0874a">MO</text></svg>
-        <div><h3>Malik Odom</h3><div class="coach__role">Head coach</div><p>Teaches every Intro / Foundations class, so Malik is the first coach you'll meet.</p></div>
-      </article>
-      <article class="coach">
-        <svg class="coach__plate" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#e0702e"/><circle cx="42" cy="42" r="31" fill="none" stroke="#0e0f10" stroke-opacity=".3" stroke-width="2"/><circle cx="42" cy="42" r="19" fill="#0e0f10"/><text x="42" y="49" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="20" fill="#f0874a">DF</text></svg>
-        <div><h3>Dez Fuller</h3><div class="coach__role">Coach</div><p>Coaches the evening Strength &amp; Conditioning and HIIT 45 classes.</p></div>
-      </article>
-      <article class="coach">
-        <svg class="coach__plate" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#e0702e"/><circle cx="42" cy="42" r="31" fill="none" stroke="#0e0f10" stroke-opacity=".3" stroke-width="2"/><circle cx="42" cy="42" r="19" fill="#0e0f10"/><text x="42" y="49" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="20" fill="#f0874a">ES</text></svg>
-        <div><h3>Erin Sato</h3><div class="coach__role">Coach</div><p>Teaches Mobility and the morning and midday HIIT 45 classes.</p></div>
-      </article>
-    </div>
-    <p style="margin-top:1.6rem" data-reveal><a href="coaches.html" class="btn btn--line">Meet the whole team <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
 
-<section class="section section--tight">
-  <div class="container">
-    <div class="cta" data-reveal>
-      <div>
-        <h2>Start with Intro / Foundations</h2>
-        <p>It's eight people at most with one coach. Ask for a spot and we'll text you to confirm it.</p>
-      </div>
-      <div class="cta__actions">
-        <a href="visit.html" class="btn btn--ink">Try a class</a>
-        <a href="tel:+11234567890" class="btn btn--line btn--ghost-ink"><svg aria-hidden="true"><use href="#i-phone"/></svg>123-456-7890</a>
-      </div>
-    </div>
+<section class="band">
+  <div class="media" style="--pos:50% 60%;--pos-m:50% 58%"><div class="parallax"><img src="assets/img/chalk.webp" srcset="assets/img/chalk-sm.webp 900w, assets/img/chalk.webp 1792w" sizes="100vw" width="1792" height="2240" alt="Chalked hands gripping a barbell" loading="lazy" decoding="async"></div></div>
+  <div class="wrap band__copy" data-reveal>
+    <h2>Start with Intro / Foundations</h2>
+    <p>Eight people at most, one coach. Ask for a spot and we'll text you to confirm it.</p>
+    <div class="actions"><a href="visit.html" class="btn btn--accent">Try a class <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="tel:+11234567890" class="btn btn--ghost"><svg aria-hidden="true"><use href="#i-phone"/></svg>123-456-7890</a></div>
   </div>
 </section>
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark" width="28" height="34"><span class="brand__name">Larkspur<small>Strength Club</small></span></a>
+        <a href="index.html" class="brand"><img src="assets/logo-mark.svg" alt="" class="brand__mark" width="26" height="31"><span class="brand__name">Larkspur<small>Strength Club</small></span></a>
         <p>Coached group classes and open gym in Rowlett, TX.</p>
       </div>
       <div class="footer__col"><h4>Explore</h4><a href="classes.html">Classes</a><a href="memberships.html">Memberships</a><a href="coaches.html">Coaches</a><a href="visit.html">Try a class</a></div>
       <div class="footer__col"><h4>Hours</h4><dl class="hours"><dt>Weekdays</dt><dd>5:00 AM to 10:00 PM</dd><dt>Front desk</dt><dd>6:00 AM to 9:00 PM</dd><dt>Weekends</dt><dd>Class times only</dd></dl></div>
-      <div class="footer__col"><h4>Contact</h4><address>4410 Bayside Commons Dr<br>Rowlett, TX 75088<br><a href="tel:+11234567890">123-456-7890</a><br><a href="mailto:contact@larkspurstrengthclub.com">contact@larkspurstrengthclub.com</a></address></div>
+      <div class="footer__col"><h4>Visit</h4><address>4410 Bayside Commons Dr<br>Rowlett, TX 75088<br><a href="tel:+11234567890">123-456-7890</a><br><a href="mailto:contact@larkspurstrengthclub.com">contact@larkspurstrengthclub.com</a></address></div>
     </div>
     <div class="footer__bottom">
       <span>&copy; <span data-year>2026</span> Larkspur Strength Club</span>
@@ -259,10 +209,10 @@
     </div>
   </div>
   <div class="footer__sample">
-    <div class="container">
+    <div class="wrap">
       <strong>Sample website</strong>
-      <a href="https://www.topshelfsolutions.io/" target="_blank" rel="noopener"><img src="assets/topshelf-logo.png" alt="Top Shelf Business Solutions" width="114" height="40"></a>
-      <p style="margin:0">Top Shelf Business Solutions built this sample site. The gym, its people and its prices are made up. Want one like it for your business?</p>
+      <a href="https://www.topshelfsolutions.io/" target="_blank" rel="noopener"><img src="assets/topshelf-logo.png" alt="Top Shelf Business Solutions" width="97" height="34"></a>
+      <p>Top Shelf Business Solutions built this sample site. The gym, its people and its prices are made up. Want one like it for your business?</p>
     </div>
   </div>
 </footer>

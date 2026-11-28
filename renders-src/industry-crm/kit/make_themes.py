@@ -51,8 +51,8 @@ DARK_SEM = dict(green="#34d399", green_ink="#6ee7b7", amber="#fbbf24", amber_ink
 # Optional: deep = how far b-600..b-950 darken toward black in a light theme (default DEEP); a bright accent
 # (amber, teal) needs more so its text shades stay AA. fonts = (heading, body) Google Fonts families for the
 # customer pages (body.cx) only, copied from the paired website in pairs.json; staff pages keep Figtree.
-# Every palette except car-lots, auto-detailing and fitness is taken from its paired website's styles.css
-# (those three sites are being built to these palettes).
+# Every palette is taken from its paired website's styles.css (car-lots, auto-detailing and fitness were rebuilt
+# 2026-11-27 with photos; their colors and fonts here match those rebuilds).
 PALETTES = {
     "home-services": dict(mode="light", canvas="#f6f3ee", panel="#ffffff", side="#0b1b2b", band="#0e2740", accent="#f6a623",
         ink="#0b1b2b", ink2="#2f3d4a", muted="#3c4a57", muted2="#5a6976", faint="#a3aeb8",
@@ -67,14 +67,14 @@ PALETTES = {
         ink="#f5f7f9", ink2="#d5dbe2", muted="#aeb6bf", muted2="#8a929b", faint="#5f6670",
         grad=("#e23b2e", "#c42e22", "#a62518"), on_accent="#ffffff", edge="rgb(226 59 46 / .45)", bar="#2c313a",
         cx_accent="#f0604f", cx_ink="#0e0f12", fonts=("Space Grotesk", "Inter")),
-    "auto-detailing": dict(mode="dark", canvas="#07090d", panel="#0f131a", side="#030406", accent="#3b8eff",
-        ink="#eaf0f7", ink2="#cbd5e1", muted="#9aa7b8", muted2="#8290a3", faint="#55637a",
+    "auto-detailing": dict(mode="dark", canvas="#07090d", panel="#0c1118", side="#030406", accent="#3b8eff",
+        ink="#eef3fb", ink2="#cbd5e1", muted="#9aa7b8", muted2="#8290a3", faint="#55637a",
         grad=("#3f87f2", "#2563eb", "#1d4ed8"), on_accent="#ffffff", edge="rgb(59 142 255 / .35)",
-        cx_accent="#4f9cff", cx_ink="#04101f"),
-    "fitness": dict(mode="dark", canvas="#161719", panel="#202124", side="#0e0f10", accent="#e0702e",
-        ink="#f2f2f0", ink2="#d6d6d2", muted="#a9a9a4", muted2="#91918c", faint="#666662",
+        cx_accent="#4f9cff", cx_ink="#04101f", fonts=("Archivo", "Hanken Grotesk")),
+    "fitness": dict(mode="dark", canvas="#161719", panel="#1e2023", side="#0e0f10", accent="#e0702e",
+        ink="#f2efe9", ink2="#d6d6d2", muted="#a9a9a4", muted2="#91918c", faint="#666662",
         grad=("#f08a45", "#e0702e", "#c95e1f"), on_accent="#180a03", edge="rgb(224 112 46 / .4)",
-        cx_accent="#e0702e", cx_ink="#180a03"),
+        cx_accent="#e0702e", cx_ink="#180a03", fonts=("Sofia Sans Extra Condensed", "Schibsted Grotesk")),
     "restaurants": dict(mode="dark", canvas="#141110", panel="#221c18", side="#0e0c0b", accent="#e8722a",
         ink="#f4ece2", ink2="#dcd3c6", muted="#c4bbae", muted2="#a0978b", faint="#6e655c",
         grad=("#f29a5b", "#e8722a", "#cf5f1f"), on_accent="#1a0f08", edge="rgb(228 180 88 / .4)",
