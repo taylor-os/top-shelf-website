@@ -387,3 +387,17 @@ figure { margin: 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* industries hub: the industry leads each card */
+.ind-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.ind-jump a { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--line); background: #fff;
+  font: 700 1rem/1.2 var(--display); color: var(--ink); text-decoration: none; letter-spacing: -.01em; transition: border-color .2s, box-shadow .2s; }
+.ind-jump a:hover, .ind-jump a:focus-visible { border-color: var(--ind); box-shadow: 0 6px 18px -10px var(--ind); }
+.ind-jump a i { width: 10px; height: 10px; border-radius: 50%; background: var(--ind); flex: none; }
+.hub-head { display: flex; gap: 14px; align-items: stretch; }
+.hub-swatch { flex: none; width: 8px; border-radius: 8px; background: var(--ind); }
+.hub-ind { font-size: clamp(1.75rem, 2.6vw, 2.35rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.05; }
+.hub-biz { font-size: .9375rem; color: var(--ink-2); margin-top: 8px; }
+.hub-biz strong { color: var(--ink); font-weight: 600; }
+.hub-card > p.hub-line { font-size: 1.0625rem; color: var(--ink); margin: 14px 0 18px; }
+@media (max-width: 640px) { .ind-jump a { font-size: .9375rem; padding: 9px 14px; } }

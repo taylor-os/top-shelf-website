@@ -489,16 +489,19 @@ def industries_body(P, R):
         crm = (frame(R, crm_rel(p["slug"], d["file"]), "desktop", f"{p['business']} sample CRM: {d['role']}", ps["card_crm_label"], "hub-crm")
                if d else frame(R, (False, ""), "desktop", f"{p['business']} sample CRM", ps["card_crm_label"], "hub-crm"))
         web = frame(R, web_rel(p), "website", f"{p['business']} sample website", ps["card_website_label"], "hub-web")
-        cards.append(f'''<article class="hub-card" id="{p["slug"]}">
+        cards.append(f'''<article class="hub-card" id="{p["slug"]}" style="--ind:{p["brand"]["accent"]}">
+  <header class="hub-head"><span class="hub-swatch" aria-hidden="true"></span><div>
+    <h2 class="hub-ind">{e(p["industry_label"])}</h2>
+    <p class="hub-biz">Sample business: <strong>{e(p["business"])}</strong></p></div></header>
+  <p class="hub-line">{e(ind["per_industry"][p["slug"]]["headline"])}</p>
   <div class="hub-pair">{web}{crm}</div>
-  <p class="eyebrow">{e(p["industry_label"])}</p>
-  <h2 class="h3">{e(p["business"])}</h2>
-  <p>{e(ind["per_industry"][p["slug"]]["headline"])}</p>
   <div class="panel-links"><a class="btn sm" href="{P}industries/{p["slug"]}-crm.html">See the CRM</a><a class="btn sm ghost" href="{P}industries/{p["slug"]}-website.html">See the website</a></div>
 </article>''')
+    jump = "".join(f'<a href="#{p["slug"]}" style="--ind:{p["brand"]["accent"]}"><i aria-hidden="true"></i>{e(p["industry_label"])}</a>' for p in PAIRS)
     cu = C["custom"]
     return f'''<section class="hero hero-plain"><div class="wrap">
   <p class="eyebrow">{e(ps["eyebrow"])}</p><h1 class="h1-sm">{e(ind["h1"])}</h1><p class="lede">{e(ind["sub"])}</p>
+  <nav class="ind-jump" aria-label="Jump to an industry">{jump}</nav>
 </div></section>
 <section class="sec tight"><div class="wrap"><div class="hub-grid">{"".join(cards)}</div></div></section>
 <section class="sec band"><div class="wrap band-in"><h2>{e(cu["h"])}</h2><p>{e(cu["body"])}</p>{ctas(R)}</div></section>'''
