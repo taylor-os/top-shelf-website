@@ -28,7 +28,7 @@ Never says: guaranteed approval, everyone approved, no credit check, buy now pay
 - **Type:** Archivo, variable width at ~112%, weight 750, for display headings; Figtree (the CRM's face) for body, 400 to 800.
 - **Rebuild (2026-11-27):** photo-led. Full-bleed photo heroes on every page (`assets/img/*.webp` + `-sm` 900px), each listing has its own photo (`car-<model>.webp`, matching body style and paint, no badges or plates, uncropped 3:2), noted on the page as sample photos. The SVG car art below is retired.
 - **Shape rule:** buttons and inputs 10px radius, cards 16px, chips full pill.
-- **Visuals:** hand-built SVG only. Side-profile vector cars (sedan, SUV, truck, box hatch) tinted per listing, no badges, no logos, no plates (profile view). Hero is the lot at night under bulb strings.
+- **Visuals:** original Higgsfield photos (2026-11-27): one badge-free, plate-free photo per listing in its listed paint, a debadged dusk-lot hero, the lot at night, the finance office, the key handover, a family pickup and a car being prepped. No visible signage or logos.
 - **Motion:** Lenis smooth scroll, GSAP hero parallax, IntersectionObserver reveals, gentle bulb glow. All off under `prefers-reduced-motion`.
 
 ## Pages (5)
@@ -54,11 +54,11 @@ Never says: guaranteed approval, everyone approved, no credit check, buy now pay
 | 2014 Toyota Camry SE | Car | 26-0221 | 151,300 | $8,495 | Burgundy |
 | 2012 Honda Civic LX | Car | 26-0203 | 158,200 | $7,995 | Tan |
 
-Rogue, Soul, Camry and Equinox carry the CRM's stock numbers, miles and prices.
+Soul (#26-0207) and Equinox (#26-0214, $11,995, on hold) match the CRM screens; the other listings are site-only samples.
 
 ## Assets
 - **Logo:** hand-built SVG key-tag mark (gold tag, graphite "B") `assets/logo-mark.svg` + HTML wordmark.
-- **Art:** inline SVG car symbols and the hero lot scene. No photography, no paid generation, no downloads.
+- **Art:** photos in `assets/img/` (WebP with -sm variants). The old SVG car art is retired.
 
 ## Known gaps / decisions
 - Phone is the program's 123-456-7890, not the CRM's (972) 555-0148 lot line.
