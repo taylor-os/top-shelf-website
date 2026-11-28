@@ -31,7 +31,7 @@ def files(slug):
 
 
 def img(slug, fn, alt, lazy=True, cls=""):
-    w, h = (1440, 900) if fn.endswith("-d.webp") else (585, 1266)
+    w, h = (1600, 900) if fn.endswith("-d.webp") else (585, 1266)
     return (f'<img src="assets/img/crm/industries/{slug}/{fn}" width="{w}" height="{h}"'
             f'{" loading=\"lazy\"" if lazy else ""} decoding="async" alt="{e(alt)}"{cls}>')
 
@@ -99,7 +99,7 @@ CSS = """
 .cbi-stage{position:sticky;top:190px;min-width:0}
 .cbi-sample{position:absolute;top:0;left:0;z-index:2;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:.3rem .65rem;border:1px solid var(--hairline-strong);border-radius:999px;background:rgba(11,9,6,.8)}
 .cbi-shot[hidden]{display:none}
-.cbi-dev{aspect-ratio:16/10.2;display:flex;align-items:center;justify-content:center;padding-top:2.2rem}
+.cbi-dev{aspect-ratio:16/9.2;display:flex;align-items:center;justify-content:center;padding-top:2.2rem}
 .cbi-dev a{display:block;border-radius:inherit}
 .cbi-dev img{display:block;max-width:100%;height:auto}
 .cbi-lap{width:100%}

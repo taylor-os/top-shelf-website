@@ -97,7 +97,7 @@ CARDS_CSS = """/* PAIR-CARDS:start (scripts/build_site_update.py) */
 #cc .c-pair-shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px 12px 0}
 #cc .c-pair-shots figure{margin:0;min-width:0}
 #cc .c-pair-scr{margin:0 6%;padding:7px 7px 10px;background:#060606;border-radius:13px 13px 3px 3px;box-shadow:0 0 0 1px rgba(201,168,106,.6),0 40px 80px -40px rgba(0,0,0,.9)}
-#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:3px;background:var(--bg-2);color:var(--muted);font-size:.75rem}
+#cc .c-pair-shots img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:top;border-radius:3px;background:var(--bg-2);color:var(--muted);font-size:.75rem}
 #cc .c-pair-shots figcaption{margin-top:9px;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 #cc .c-pair-body{display:flex;flex-direction:column;gap:2px;flex:1;padding:14px 18px 18px}
 #cc .c-pair-ind{font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
@@ -126,8 +126,8 @@ def cards_section():
         lis.append(
             '        <li class="c-pair c-rv">\n'
             '          <div class="c-pair-shots">\n'
-            '            <figure><div class="c-pair-scr"><img src="%s" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the %s sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>%s</figcaption></figure>\n'
-            '            <figure><div class="c-pair-scr"><img src="%s" width="1440" height="900" loading="lazy" decoding="async" alt="%s sample CRM, %s screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>%s</figcaption></figure>\n'
+            '            <figure><div class="c-pair-scr"><img src="%s" width="1200" height="675" loading="lazy" decoding="async" alt="Home page of the %s sample website"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>%s</figcaption></figure>\n'
+            '            <figure><div class="c-pair-scr"><img src="%s" width="1600" height="900" loading="lazy" decoding="async" alt="%s sample CRM, %s screen"></div><div class="c-lap-base" aria-hidden="true"></div><figcaption>%s</figcaption></figure>\n'
             '          </div>\n'
             '          <div class="c-pair-body">\n'
             '            <p class="c-pair-ind">%s</p>\n'
@@ -228,7 +228,7 @@ PAGE_CSS = """<style id="focus-css">
 .fx-site{display:flex;flex-direction:column;border:1px solid var(--hairline);border-radius:16px;background:var(--surface);overflow:hidden;transition:border-color .3s}
 .fx-site:hover{border-color:var(--hairline-strong)}
 .fx-site-shot{padding:18px 16px 6px}
-.fx-site img{aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--surface-2);color:var(--ink-3);font-size:.8rem}
+.fx-site img{aspect-ratio:16/9;object-fit:cover;object-position:top;background:var(--surface-2);color:var(--ink-3);font-size:.8rem}
 .fx-site-body{display:flex;flex-direction:column;gap:.2rem;padding:1.1rem 1.25rem 1.3rem;flex:1}
 .fx-site-tag{align-self:flex-start;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--hairline-strong);border-radius:999px;padding:.25rem .6rem;margin-bottom:.5rem}
 .fx-site-ind{font-size:.8rem;color:var(--ink-3)}
@@ -311,7 +311,7 @@ def closing(eyebrow, title_html, body):
 
 def figure(slug, file, extra_cls=""):
     path, cap, biz, mobile = screen(slug, file)
-    w, h = (585, 1266) if mobile else (1440, 900)
+    w, h = (585, 1266) if mobile else (1600, 900)
     im = '<img src="%s" width="%d" height="%d" loading="lazy" decoding="async" alt="%s">' % (path, w, h, at(biz + ": " + cap))
     dev = '<div class="fx-phone">%s</div>' % im if mobile else lap(im)
     return ('<figure class="fx-shot%s%s">%s<figcaption><b>Sample screen &middot; %s</b>%s</figcaption></figure>'
@@ -487,7 +487,7 @@ def websites_top(old):
             '      <li class="fx-site reveal"><div class="fx-site-shot">%s</div>'
             '<div class="fx-site-body"><span class="fx-site-tag">Sample website</span><span class="fx-site-ind">%s</span><h3>%s</h3>'
             '<p class="fx-site-links">%s</p></div></li>' % (
-                lap('<img src="%s" width="1200" height="750" loading="lazy" decoding="async" alt="Home page of the %s sample website">'
+                lap('<img src="%s" width="1200" height="675" loading="lazy" decoding="async" alt="Home page of the %s sample website">'
                     % (site_shot(p), at(p["business"]))), t(label), t(p["business"]), links))
     s = w["samples"]
     return (hero(old, w["eyebrow"], em(w["h1"], "sends every lead to your CRM."), w["sub"])

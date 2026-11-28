@@ -77,7 +77,7 @@ def hint_rel(hint):
     return crm_rel(slug, file) + ("desktop" if file.endswith("-d.webp") else "phone", p)
 
 
-SIZES = {"desktop": (1440, 900), "website": (1200, 750), "phone": (585, 1266)}
+SIZES = {"desktop": (1600, 900), "website": (1200, 675), "phone": (585, 1266)}
 
 
 def frame(R, found, kind, alt, label, cls="", eager=False, cap="top"):

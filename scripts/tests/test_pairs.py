@@ -24,7 +24,7 @@ def test_content_prices():
     for price in ["$99", "$199", "$50", "$499"]:
         assert price in text, price
     for banned in ["$299", "$899", "$2,500", "$1,500", "$495", "Essentials",
-                   "Platinum", "free audit", "Local SEO", "automatic review"]:
+                   "Platinum", "free audit", "Local SEO"]:
         assert banned.lower() not in text.lower(), banned
 
 

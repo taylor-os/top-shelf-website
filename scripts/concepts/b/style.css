@@ -102,7 +102,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .is-missing .lap-screen,.is-missing .lap-base,.is-missing .phone-body,.is-missing .chip{display:none}
 .is-missing::after{content:"Sample on the way";font:500 .8rem/1.3 var(--mono);color:var(--muted);padding:20px;text-align:center}
 .dev-phone.is-missing{aspect-ratio:585/1266}
-.dev-desk.is-missing,.dev-browser.is-missing{aspect-ratio:16/10.4}
+.dev-desk.is-missing,.dev-browser.is-missing{aspect-ratio:16/9.4}
 
 /* hero stage */
 .hero-stage{position:relative;z-index:1;max-width:1180px;margin:clamp(48px,7vw,90px) auto 0;padding:0 20px;perspective:1600px}

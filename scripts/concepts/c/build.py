@@ -76,7 +76,7 @@ def website_img(r, p, kind="d"):
     alt = f"Sample website: {p['business']} home page, {'phone' if kind == 'm' else 'desktop'} view"
     if not exists(rel):
         return placeholder(p, alt)
-    return img(r, rel, alt, 1200 if kind == "d" else 585, 750 if kind == "d" else 1266)
+    return img(r, rel, alt, 1200 if kind == "d" else 585, 675 if kind == "d" else 1266)
 
 
 def screens(slug):
@@ -92,7 +92,7 @@ def screen_img(r, p, s):
     if not s["ok"]:
         return placeholder(p, alt)
     phone = s["device"] == "phone"
-    return img(r, s["rel"], alt, 585 if phone else 1440, 1266 if phone else 900, "phone" if phone else "desk")
+    return img(r, s["rel"], alt, 585 if phone else 1600, 1266 if phone else 900, "phone" if phone else "desk")
 
 
 # Laptop C / Phone C, the owner's approved frames (gold hairline).
@@ -399,7 +399,7 @@ def build_websites():
     extra_dir = "websites/linewright-mobile-dent"
     if exists(f"{extra_dir}/index.html"):
         shot = "assets/img/websites/linewright-mobile-dent-home-d.webp"
-        im = img("{R}", shot, "Sample website: Linewright Mobile Dent Co. home page", 1200, 900) if exists(shot) else ""
+        im = img("{R}", shot, "Sample website: Linewright Mobile Dent Co. home page", 1200, 675) if exists(shot) else ""
         cards.append(
             f'<li class="site-card"><figure>{label_sample("Sample website")}{laptop(im)}</figure>'
             f'<p class="kicker">Auto</p><h3>Linewright Mobile Dent Co.</h3><p>{e(w["samples"]["extra_note"])}</p>'

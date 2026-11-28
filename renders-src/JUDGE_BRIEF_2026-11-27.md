@@ -13,7 +13,7 @@ Written by the Manager, not by any builder. Grade against what Taylor (the owner
 
 ## Hard rules (fail if broken)
 - No invented stats, testimonials, reviews or claims. Prices/claims only from `C:\Users\taylo\Agentic-OS\vault\platter\facts\top-shelf-business-solutions.json` ($99/mo 1-10 users, $199/mo 11-25, $50/mo phone line, $499 website, no contract, no setup fee).
-- Review requests are "one tap after every job", never "automatic"/"automatically".
+- Review requests may be described as going out on their own when a job is finalized (owner-confirmed 2026-11-28), or by hand with one tap.
 - No em dashes in new copy. Copy reads human (humanizer standard).
 - Every sample screen and sample site is labelled as a sample. No real names; never "Sarah Laos" or "Ready Real Estate".
 - Current site keeps black and gold + DM Serif Display / DM Sans. Concepts may use any palette/font but keep the Top Shelf logo initials and style.

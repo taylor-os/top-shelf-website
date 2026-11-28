@@ -1,6 +1,6 @@
 """Homepage screenshots of the sample websites for the industry cards, pop-up and concepts.
 Usage: python scripts/shoot_websites.py [dir ...]   (opens the static pages as file:// URLs; no server needed)
-Writes assets/img/websites/<dir>-home-d.webp (1440x900 view, 1200 wide) and -home-m.webp (390x844 view, 585 wide)."""
+Writes assets/img/websites/<dir>-home-d.webp (1600x900 view, saved 1200x675, 16:9) and -home-m.webp (390x844 view, 585 wide)."""
 import sys, os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -12,7 +12,7 @@ REVEAL = "[data-reveal],.reveal,.rv{opacity:1!important;transform:none!important
 with sync_playwright() as p:
     b = p.chromium.launch()
     for d in dirs:
-        for tag, vp, scale, width in (("d", (1440, 900), 1, 1200), ("m", (390, 844), 2, 585)):
+        for tag, vp, scale, width in (("d", (1600, 900), 1, 1200), ("m", (390, 844), 2, 585)):
             pg = b.new_page(viewport={"width": vp[0], "height": vp[1]}, device_scale_factor=scale)
             pg.emulate_media(reduced_motion="reduce")
             pg.goto(Path(ROOT, "websites", d, "index.html").as_uri(), wait_until="load")

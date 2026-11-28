@@ -79,7 +79,7 @@ def laptop(kind, src, alt, w, h, label, lazy, cls):
 
 
 def desk(src, alt, label="", lazy=True, cls=""):
-    return laptop("dev-desk", src, alt, 1440, 900, label, lazy, cls)
+    return laptop("dev-desk", src, alt, 1600, 900, label, lazy, cls)
 
 
 def phone(src, alt, label="", lazy=True, cls=""):
@@ -89,7 +89,7 @@ def phone(src, alt, label="", lazy=True, cls=""):
 
 
 def browser(src, alt, label="", lazy=True, cls=""):
-    return laptop("dev-browser", src, alt, 1200, 750, label, lazy, cls)
+    return laptop("dev-browser", src, alt, 1200, 675, label, lazy, cls)
 
 
 def shot(cx, slug, s, lazy=True, cls=""):

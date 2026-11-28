@@ -1,7 +1,7 @@
 """Export the approved industry CRM screens to the site as WebP.
 
 renders-src/industry-crm/screens/<slug>/<name>.jpg  ->  assets/img/crm/industries/<slug>/<name>.webp
-Desktop screens stay 1440 wide, phone screens 585 wide. Slugs and files come from
+Desktop screens are 1600x900 (16:9), phone screens 585x1266. Slugs and files come from
 renders-src/industry-crm/captions.json, so a new industry only needs a captions entry.
 Usage: python scripts/export_crm_webp.py [slug ...]
 """

@@ -12,7 +12,7 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP = ("demo", "websites", "preview", "node_modules", ".git")
 TAG_RE = re.compile(r'<script src="assets/(?:gap-quiz|see-your-business)\.js(?:\?v=[^"]*)?"></script>')
-NEW = '<script src="assets/see-your-business.js?v=20261128a"></script>'
+NEW = '<script src="assets/see-your-business.js?v=20261128b"></script>'
 
 
 def pages():

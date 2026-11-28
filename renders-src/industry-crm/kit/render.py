@@ -1,6 +1,6 @@
 """Render a kit page to the site's screenshot format.
 
-  python render.py <page.html> <out.jpg> d|m      one page (d = desktop 1440x900 @2x, m = phone 390x844 @3x)
+  python render.py <page.html> <out.jpg> d|m      one page (d = desktop 1600x900 @2x, 16:9, m = phone 390x844 @3x)
   python render.py --all <folder>                 every *-d.html / *-m.html in <folder>, written beside it as .jpg
   add --no-strip to skip the sample strip (used for side-by-side checks against the real captures)
 
@@ -14,11 +14,11 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from playwright.sync_api import sync_playwright
 
-FINAL = {"d": (1440, 900), "m": (585, 1266)}
+FINAL = {"d": (1600, 900), "m": (585, 1266)}
 STRIP = {"d": 24, "m": 30}  # final-image pixels (phone: 20 CSS px at 1.5 final px per CSS px)
 CSS_STRIP = {"d": 24, "m": 20}
 DEVICES = {
-    "d": dict(viewport={"width": 1440, "height": 900}, device_scale_factor=2),
+    "d": dict(viewport={"width": 1600, "height": 900}, device_scale_factor=2),
     "m": dict(viewport={"width": 390, "height": 844}, device_scale_factor=3, is_mobile=True, has_touch=True),
 }
 STRIP_TEXT = "Sample screens \u00b7 sample data, not a real business"

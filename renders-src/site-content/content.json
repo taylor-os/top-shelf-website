@@ -1,5 +1,5 @@
 {
-  "_note": "Shared copy for the updated Top Shelf site and concepts A to D. Every claim traces to the facts file (vault/platter/facts/top-shelf-business-solutions.json). Research (b) items are left out on purpose. Review requests are worded as one tap after every job. Unanswered buyer questions point to the demo call. Prose went through the humanizer pass.",
+  "_note": "Shared copy for the updated Top Shelf site and concepts A to D. Every claim traces to the facts file (vault/platter/facts/top-shelf-business-solutions.json). Research (b) items are left out on purpose. Review requests go out on their own when a job is finalized (owner-confirmed 2026-11-28), or by hand with one tap. Unanswered buyer questions point to the demo call. Prose went through the humanizer pass.",
   "brand": {
     "name": "Top Shelf Business Solutions",
     "short_name": "Top Shelf",
@@ -35,7 +35,7 @@
           {"title": "Get paid from their phone", "body": "Text the invoice. Your customer taps the link and pays by card, right there."},
           {"title": "Estimates by text", "body": "Send the estimate before you leave the driveway. The customer reads it on their phone."},
           {"title": "Book and dispatch", "body": "Customers book online. You see every job on one board, and your tech sends an on-my-way text with one tap."},
-          {"title": "More reviews", "body": "One tap after every job texts your review link. You can see who has been asked and who left one."}
+          {"title": "More reviews", "body": "When a job is finalized, your review link goes out by text on its own. You can see who has been asked and who left one."}
         ],
         "link_label": "See everything the CRM does",
         "link_href": "solution-crm.html"
@@ -141,7 +141,7 @@
         "title": "More reviews",
         "intro": "Happy customers forget to leave a review unless someone asks while the job is still fresh.",
         "benefits": [
-          {"title": "One tap after every job", "body": "Tap once and your review link goes to the customer by text. It takes a few seconds, so it actually gets done.", "screen_hint": "owner-home"},
+          {"title": "Asked when the job is done", "body": "Set it up once and the CRM texts your review link as soon as a job is finalized, so nobody has to remember. You can still send one by hand with a tap.", "screen_hint": "owner-home"},
           {"title": "See who has been asked", "body": "You can see who got a request and who left a review, and write your replies in the app.", "screen_hint": "owner-home"}
         ]
       },
@@ -159,7 +159,7 @@
         "Your tech taps once and the customer gets an on-my-way text.",
         "The job is done, and the invoice goes out by text before the truck leaves.",
         "The customer pays by card from that same text.",
-        "One more tap sends your review link.",
+        "The job is closed out and your review link goes to the customer on its own.",
         "The estimate you wrote in the driveway is already in the customer's texts."
       ]
     },
@@ -174,7 +174,7 @@
         "Your phone line is on, with the number you have now or a new one",
         "Your team has their logins (up to 10 people on the $99 plan)",
         "Your online booking page is taking appointments",
-        "Your review link is ready for the one-tap request",
+        "Your review requests are set to go out when a job is finalized",
         "Your first estimate or invoice has gone out by text"
       ]
     },
@@ -208,7 +208,7 @@
       {"q": "When do I get paid after a customer pays by card?", "a": "We go over payout timing on your demo call."},
       {"q": "Can I send estimates?", "a": "Yes. You build the estimate from the customer's record and send it by text. The customer reads it on their phone and can find it again in their customer hub."},
       {"q": "Does it answer the phone when I'm busy?", "a": "Yes. The AI receptionist answers and books the job. If a call still slips by, the caller gets a text back right away."},
-      {"q": "Does it get me more reviews?", "a": "One tap after every job texts your review link to the customer. You can see who has been asked and who left a review."},
+      {"q": "Does it get me more reviews?", "a": "Yes. Once it is set up, the CRM texts your review link to the customer as soon as a job is finalized, and you can also send one by hand with a tap. You can see who has been asked and who left a review."},
       {"q": "Does it work on my phone?", "a": "Your customers do their part from a phone: booking, reading estimates and paying invoices by text. Your crew can send on-my-way texts and invoices from the field. We show you how it looks on your own phone during the demo call."},
       {"q": "Do my techs only see their own jobs?", "a": "We go over who on your team sees what on your demo call."},
       {"q": "Does it connect to QuickBooks?", "a": "Ask us on your demo call and we'll tell you straight how it fits with what you use for your books."},
