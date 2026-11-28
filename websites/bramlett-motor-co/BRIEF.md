@@ -26,7 +26,7 @@ Never says: guaranteed approval, everyone approved, no credit check, buy now pay
 - **World:** the lot after dark under a string of bulbs. Graphite ground, warm gold light. Same palette as the CRM.
 - **Palette:** graphite `#09090a` (page) / `#111113` (chrome) / `#18181b` (raised), line `#2a2a2e`; **gold** `#c9a34e` (light `#dcbd72`); ink `#f1ede4`, muted `#a9a59c`.
 - **Type:** Archivo, variable width at ~112%, weight 750, for display headings; Figtree (the CRM's face) for body, 400 to 800.
-- **Rebuild (2026-11-27):** photo-led. Full-bleed photo heroes on every page (`assets/img/*.webp` + `-sm` 900px), listings use the sedan/SUV photos with varied crops ("Photos show the body style, not the exact car"); Silverado and Soul get a lit typographic plate. The SVG car art below is retired.
+- **Rebuild (2026-11-27):** photo-led. Full-bleed photo heroes on every page (`assets/img/*.webp` + `-sm` 900px), each listing has its own photo (`car-<model>.webp`, matching body style and paint, no badges or plates, uncropped 3:2), noted on the page as sample photos. The SVG car art below is retired.
 - **Shape rule:** buttons and inputs 10px radius, cards 16px, chips full pill.
 - **Visuals:** hand-built SVG only. Side-profile vector cars (sedan, SUV, truck, box hatch) tinted per listing, no badges, no logos, no plates (profile view). Hero is the lot at night under bulb strings.
 - **Motion:** Lenis smooth scroll, GSAP hero parallax, IntersectionObserver reveals, gentle bulb glow. All off under `prefers-reduced-motion`.

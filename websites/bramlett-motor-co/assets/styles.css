@@ -161,20 +161,13 @@ input,select,textarea{caret-color:var(--gold-l)}
   transition:transform .4s var(--ease-out),border-color .3s,box-shadow .4s var(--ease-out)}
 .car:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:0 26px 50px -28px rgba(0,0,0,.9)}
 .car[hidden]{display:none}
-.car__media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#141416}
-.car__media img{width:100%;height:100%;object-fit:cover;transform:var(--tf,scale(1));transition:transform .8s var(--ease-out)}
-.car:hover .car__media img{transform:var(--tf,scale(1)) scale(1.04)}
+.car__media{position:relative;aspect-ratio:3/2;overflow:hidden;background:#141416}
+/* photos are 3:2 like the box, and the car runs nearly edge to edge, so no zoom or crop: every bumper stays in frame */
+.car__media img{width:100%;height:100%;object-fit:cover;transition:filter .5s var(--ease-out)}
+.car:hover .car__media img{filter:brightness(1.08)}
 .car__tag{position:absolute;left:.8rem;top:.8rem;z-index:2;font-size:.74rem;font-weight:700;letter-spacing:.02em;color:var(--ink);
   background:rgba(9,9,10,.78);border:1px solid rgba(241,237,228,.16);padding:.28rem .65rem;border-radius:var(--r-pill)}
 .car__hold{position:absolute;right:.8rem;top:.8rem;z-index:2;font-size:.74rem;font-weight:800;color:var(--chrome);background:var(--gold);padding:.28rem .65rem;border-radius:var(--r-pill)}
-/* body types with no matching photo: a lit, typographic plate under a string of bulbs */
-.car__plate{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.2rem 1.3rem;
-  background:radial-gradient(120% 80% at 50% -10%,rgba(220,189,114,.24),rgba(201,163,78,.05) 45%,transparent 70%),linear-gradient(180deg,#1b1b1e,#0e0e10)}
-.car__plate::before{content:"";position:absolute;left:8%;right:8%;top:24%;height:8px;
-  background:radial-gradient(circle,rgba(242,213,138,.95) 0 2.5px,rgba(242,213,138,.18) 3px,transparent 5px) 0 50%/11.11% 8px repeat-x}
-.car__plate::after{content:"";position:absolute;left:8%;right:8%;top:calc(24% + 4px);height:1px;background:rgba(241,237,228,.12)}
-.car__plate b{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:clamp(1.6rem,2.4vw,2rem);line-height:1;color:var(--ink);letter-spacing:-.02em}
-.car__plate span{margin-top:.5rem;font-size:.88rem;color:var(--muted)}
 .car__body{display:flex;flex-direction:column;flex:1;padding:1.15rem 1.25rem 1.25rem}
 .car__yr{font-size:.86rem;font-weight:600;color:var(--gold-l);font-variant-numeric:tabular-nums}
 .car__name{font-family:var(--font);font-stretch:100%;font-size:1.16rem;font-weight:700;letter-spacing:-.01em;margin-top:.15rem;line-height:1.25}
